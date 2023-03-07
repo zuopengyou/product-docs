@@ -1,11 +1,5 @@
 # 网络同步原理和结构
 
-| 修改日期            | 修改人 | 修改内容               | 所属编辑器版本 |
-| ------------------- | ------ | ---------------------- | -------------- |
-| 2022 年 10 月 08 日 | 侯苍慧 | 文档创建               | 通用           |
-| 2022 年 10 月 11 日 | 侯苍慧 | 新增 replicated        | 通用           |
-| 2022 年 10 月 16 日 | 侯苍慧 | 补充编辑器中英版本截图 | 通用           |
-
 <strong>阅读本文大概需要 15 分钟</strong>
 
 <strong>想要理解网络同步的原理，首先要确定几个问题方向</strong>
@@ -14,9 +8,9 @@
 2. 网络同步都同步什么？
 3. 如何实现网络同步？
 
-# 什么是客户端和服务端
+## 什么是客户端和服务端
 
-## 1.1 客户端（Client）
+### 1.1 客户端（Client）
 
 <strong>客户端</strong>（Client）或称为用户端，是指与服务器相对应，为客户提供本地服务的程序。除了一些只在本地运行的应用程序之外，一般安装在普通的终端上，需要与服务端互相配合运行。
 
@@ -28,7 +22,7 @@
 
 而不连接服务器，将游戏逻辑、数据等存储在本地的就被称之为<strong>单机游戏</strong>
 
-## 1.2 服务端（Server）
+### 1.2 服务端（Server）
 
 <strong>服务端：</strong>是为客户端服务的，服务的内容诸如向客户端提供资源，保存客户端数据。是实现游戏特色化的重要途径，也是最直接可以通过游戏表现出来的技术，比如你要修改某个 NPC 的参数，重加载后，在游戏内立刻体现出来。
 
@@ -60,7 +54,7 @@ eg:
 
 在编辑器中，理解网络同步之前，首先需要理解一个功能<strong>“静态”</strong>
 
-## 2.1 静态（Static）
+### 2.1 静态（Static）
 
 ![](static/boxcnBGCg5MaBgSbDtePxk2tCRe.png)
 
@@ -80,7 +74,7 @@ eg：
 
 而棋子则需要进行动态创建、销毁等操作，故棋子一般为非静态对象
 
-## 客户端(C)、服务端(S)、双端(C&S)的区别
+### 客户端(C)、服务端(S)、双端(C&S)的区别
 
 ![](static/boxcnUuKAKDCutnbUnVukbINa2f.png)
 
@@ -94,7 +88,7 @@ eg：
 
 客户端（Client）、服务端（Server）、双端（Server and Client）三种模式，
 
-## 2.2 客户端（Client）
+### 2.2 客户端（Client）
 
 网络状态被设置为客户端的对象，只会在客户端创建，服务端不会创建，也不会同步
 
@@ -106,7 +100,7 @@ eg：
 
 音效、特效等，只需要在客户端执行创建、播放、停止等操作
 
-## 2.3 服务端（Server）
+### 2.3 服务端（Server）
 
 网络状态被设置为服务端的对象，只会在服务端创建，客户端不会创建，也不会同步
 
@@ -118,7 +112,7 @@ eg：
 
 客户端不需要存储和判断 NPC 的锚点对象，当寻路的时候，只需要请求服务端发送 NPC 的锚点所在坐标信息、或直接返回其寻路的路径即可
 
-## 2.4 双端（Server and Client）
+### 2.4 双端（Server and Client）
 
 网络状态被设置为双端的对象，会在服务端先加载并创建
 
@@ -134,11 +128,11 @@ eg：
 
 它们的坐标、颜色、碰撞等交互都需要实时判断且同步
 
-# 如何实现网络同步
+## 如何实现网络同步
 
-## 3.1 客户端 ---> 服务端
+### 3.1 客户端 ---> 服务端
 
-### 3.1.1 客户端发送
+#### 3.1.1 客户端发送
 
 /**
 
@@ -150,7 +144,7 @@ eg：
 
 function dispatchToServer(eventName: string, ...params: unknown[]): DispatchEventResult;
 
-```
+``` ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise<void> {
     
@@ -185,7 +179,7 @@ protected async onStart(): Promise<void> {
 
 ![](static/boxcnX8yBMN8W4pCNsEkJFqzZie.png)
 
-### 3.1.2 服务端监听
+#### 3.1.2 服务端监听
 
 /**
 
@@ -198,7 +192,7 @@ protected async onStart(): Promise<void> {
 
 function AddClientListener(eventName: string, listener: (player: Gameplay.Player, ...params: unknown[]) => void): EventListener;
 
-```
+``` ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise<void> {
     
@@ -233,9 +227,9 @@ protected async onStart(): Promise<void> {
 
 ![](static/boxcnBXFespqzAAn2WuwOMtCvVg.png)
 
-## 3.2 服务端 ---> 客户端
+### 3.2 服务端 ---> 客户端
 
-### 3.2.1 服务端发送 - 单一客户端
+#### 3.2.1 服务端发送 - 单一客户端
 
 /** 服务器发送事件给指定客户端
 
@@ -247,7 +241,7 @@ protected async onStart(): Promise<void> {
 
 function dispatchToClient(player: Gameplay.Player, eventName: string, ...params: unknown[]): DispatchEventResult;
 
-```
+``` ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise<void> {
 
@@ -299,7 +293,7 @@ protected async onStart(): Promise<void> {
 
 ![](static/boxcnJkMRzw7x5NwNbTYZja3Clm.png)
 
-### 3.2.2 服务端发送 - 所有客户端
+#### 3.2.2 服务端发送 - 所有客户端
 
 /** 服务器发送事件给所有客户端（以 Player 为中心的同屏范围）
 
@@ -311,7 +305,7 @@ protected async onStart(): Promise<void> {
 
 function dispatchToAllClient(player: Gameplay.Player, eventName: string, ...params: unknown[]): DispatchEventResult;
 
-```
+``` ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise<void> {
 
@@ -367,7 +361,7 @@ protected async onStart(): Promise<void> {
 
 ![](static/boxcnTlGly7IJadX7kFfWrIhmkb.png)
 
-### 3.2.4 客户端监听
+#### 3.2.4 客户端监听
 
 /**
 
@@ -379,8 +373,8 @@ protected async onStart(): Promise<void> {
 */
 
 function AddServerListener(eventName: string, listener: ((...params: unknown[]) => void)): EventListener;
-
-```
+ 
+``` ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise<void> {
 
@@ -436,11 +430,11 @@ protected async onStart(): Promise<void> {
 
 ![](static/boxcnKoHcvY6ingMsk9ZHLPrW2g.png)
 
-# 使用 replicated 实现属性同步
+## 使用 replicated 实现属性同步
 
 eg：
 
-```
+``` ts
 @Core.Class
 export default class NewScript0 extends Core.Script {
 
@@ -506,7 +500,7 @@ export default class NewScript0 extends Core.Script {
 
 ![](static/boxcnwQuYPcPp7JCfOHVLYPK5Ke.png)
 
-### 注意事项：
+#### 注意事项：
 
 - 使用类必须使用 Class 或 GameObject 注解标注
 - 必须派生自 Script 或 GameObject 类型
