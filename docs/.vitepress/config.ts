@@ -33,6 +33,24 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   ],
   themeConfig: {
     logo: '/logo.png',
+    sidebar: [
+      {
+        text: 'Index',
+        items: [
+          { text: '电脑配置', link: '/doccnBbvKZOJu5PrxBvc5sjy9tb.md' },
+          { text: '数据存储', link: '/EFuqd7fYSoBW2UxoBhtcJBWSnNb.md' },
+          { text: '脚本的生命周期', link: '/NLALdufpZo2GKrx3fzfcLRGanRd.md' },
+          {
+            text: '单机游戏开发注意事项',
+            link: '/OJBkdoADvooBbLxM6hPcfyxInHe.md'
+          },
+          {
+            text: '网络同步原理和结构',
+            link: '/RGF0ddYCroefzNxWUiAc6ex4nxf.md'
+          }
+        ]
+      }
+    ],
     // algolia: {
     //   appId: 'I2PHYUBLCN',
     //   apiKey: '62ee775311415d26549e0e30fef5aa38',
