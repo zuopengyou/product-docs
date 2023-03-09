@@ -49,11 +49,11 @@ Static objects are frequently encountered in game development, quite literally, 
 
 That is, all objects that are checked as static are not dynamically changeable.
 
-<video src="public/动态创建.avi"></video>
+<video src="docs/public/动态创建.avi"></video>
 
 This also means that static objects only need to be created on both the server and the client without needing any network synchronization, etc.
 
-<video src="public/测试视频.mp4"></video>
+<video src="docs/public/测试视频.mp4"></video>
 
 
 Example Cases:
