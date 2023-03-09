@@ -48,11 +48,13 @@ As shown above, if you check the box "Static", then that object is a static obje
 Static objects are frequently encountered in game development, quite literally, it means that the current object is static and immobile.
 
 That is, all objects that are checked as static are not dynamically changeable.
-![](public/动态创建.avi)
+
+<video src="public/动态创建.avi"></video>
 
 This also means that static objects only need to be created on both the server and the client without needing any network synchronization, etc.
 
-![](public/测试视频.mp4)
+<video src="public/测试视频.mp4"></video>
+
 
 Example Cases:
 
