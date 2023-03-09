@@ -11,7 +11,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
 
 export default defineConfigWithTheme<DefaultTheme.Config>({
   ignoreDeadLinks: true,
-  title: 'API',
+  title: '文档',
   appearance: false,
   description: '口袋方舟编辑器的产品文档',
   outDir: '../dist',
@@ -67,7 +67,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://meta.feishu.cn/wiki/wikcnmY0MQweLdbnlywkJJiDucd'
       },
       {
-        text: 'API 文档',
+        text: 'API',
         link: 'https://api-docs.ark.online/'
       },
       {
