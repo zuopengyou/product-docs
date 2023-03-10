@@ -25,7 +25,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         items: [
           // { text: 'System Requirements', link: '/System Requirements.md' }
         ]
-      }
+      },
       {
         text: 'Editor',
         items: dealItem('Editor')
@@ -57,7 +57,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       {
         text: 'Localization',
         items: dealItem('Localization')
-      },
+      }
     ],
     // algolia: {
     //   appId: 'I2PHYUBLCN',
