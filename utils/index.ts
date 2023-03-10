@@ -1,13 +1,15 @@
 import { readdirSync, readJSONSync } from 'fs-extra'
+import * as fs from 'fs-extra'
 import * as path from 'path'
 import { DefaultTheme } from '../viteTheme/shared'
+import { globSync } from 'glob'
 
-/**根据文件夹生成对应的子类 */
+/** 根据文件夹生成对应的子类 */
 export function dealItem(dir: string) {
   const p = `./docs/${dir}`
   const paths = readdirSync(p)
   return paths.map((name) => {
-    return { text: getMdNameInfo(name).name, link: `/groups/${name}` }
+    return { text: name.split('.')[0], link: `/${dir}/${name}` }
   })
 }
 
@@ -123,3 +125,35 @@ function getMdNameInfo(mdName: string) {
     namespace: infos.at(0)!
   }
 }
+
+/**
+ * ``` 处理为 ts 模式
+ */
+export function tsCodeDeal(filePath: string) {
+  if (fs.existsSync(filePath)) {
+    const filestr = fs.readFileSync(filePath, 'utf-8')
+    // const reg = /^```[\n\r][a-zA-Z0-9/\\u4e00-\u9fa5-()"\n]*?```\n/g
+    const reg = /```(\n[\s\S]+?```)/g
+    // const ex = reg.exec(filestr)
+    // console.log(ex?.[0], ex)
+    const newStr = filestr.replace(reg, '```ts$1')
+    console.log(newStr)
+    fs.writeFileSync(filePath, newStr, 'utf-8')
+  }
+}
+
+function whilePath() {
+  const g = globSync('./docs/**/*.md', {
+    ignore: {
+      childrenIgnored(p) {
+        return ['.vitepress', 'public'].includes(p.name)
+      }
+    }
+  })
+  g.forEach((path) => {
+    tsCodeDeal(path)
+  })
+}
+// tsCodeDeal()
+
+whilePath()

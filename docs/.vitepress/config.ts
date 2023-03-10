@@ -15,39 +15,39 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   appearance: false,
   description: '口袋方舟编辑器的产品文档',
   outDir: '../dist',
-  head: [
-    ['link', { rel: 'icon', href: '/favicon_kd.ico' }]
-    // [
-    //   'script',
-    //   {},
-    //   `
-    //         var _hmt = _hmt || [];
-    //     (function() {
-    //       var hm = document.createElement("script");
-    //       hm.src = "https://hm.baidu.com/hm.js?5629eb7e7272f7af14f1b8ef288c5f57";
-    //       var s = document.getElementsByTagName("script")[0];
-    //       s.parentNode.insertBefore(hm, s);
-    //     })();
-    // `
-    // ]
-  ],
+  head: [['link', { rel: 'icon', href: '/favicon_kd.ico' }]],
   themeConfig: {
     logo: '/logo.png',
     sidebar: [
       {
-        text: 'Index',
+        text: 'Editor',
+        items: dealItem('Editor')
+      },
+      {
+        text: 'Gameplay Objects',
+        items: dealItem('Gameplay Objects')
+      },
+      {
+        text: 'Motion Control Objects',
+        items: dealItem('Motion Control Objects')
+      },
+      {
+        text: 'Resource',
+        items: dealItem('Resource')
+      },
+      {
+        text: 'UI',
+        items: dealItem('UI')
+      },
+      {
+        text: 'World Objects',
+        items: dealItem('World Objects')
+      },
+      {
+        text: 'System Requirements',
+        link: '/System Requirements.md',
         items: [
-          { text: '电脑配置', link: '/doccnBbvKZOJu5PrxBvc5sjy9tb.md' },
-          { text: '数据存储', link: '/EFuqd7fYSoBW2UxoBhtcJBWSnNb.md' },
-          { text: '脚本的生命周期', link: '/NLALdufpZo2GKrx3fzfcLRGanRd.md' },
-          {
-            text: '单机游戏开发注意事项',
-            link: '/OJBkdoADvooBbLxM6hPcfyxInHe.md'
-          },
-          {
-            text: '网络同步原理和结构',
-            link: '/RGF0ddYCroefzNxWUiAc6ex4nxf.md'
-          }
+          // { text: 'System Requirements', link: '/System Requirements.md' }
         ]
       }
     ],
@@ -75,7 +75,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       }
     ],
-    outline: [2, 3],
+    outline: [1, 3],
     editLink: {
       pattern:
         'https://github.com/prodigytech-doc/product-docs/tree/main/docs/:path',
