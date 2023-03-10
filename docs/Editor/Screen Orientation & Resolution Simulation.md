@@ -18,31 +18,31 @@
 
 ## <strong>功能入口</strong>
 
-![](static/boxcnzZq8iFKn0yAl9GEj6spozg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnzZq8iFKn0yAl9GEj6spozg.png)
 
 ## <strong>面板说明</strong>
 
-![](static/boxcnhNGdoW0SOuvGHoo1ceMkCe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhNGdoW0SOuvGHoo1ceMkCe.png)
 
 - <strong>添加分辨率</strong>
 - Step.1 点击添加分辨率按钮打开自定义分辨率弹窗。
 
-![](static/boxcnkM1zALksjUDlRtAoHqkHQg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnkM1zALksjUDlRtAoHqkHQg.png)
 
 - Step.2 在自定义分辨率弹窗内填写名称、尺寸。
 
-![](static/boxcnw0P6IVYEOaMGOcnoeIrMTb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnw0P6IVYEOaMGOcnoeIrMTb.png)
 
 - Step.3 点击确认，即可添加分辨率。
 
-![](static/boxcnCJ12h44ihmebVRUovQ6lMb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnCJ12h44ihmebVRUovQ6lMb.png)
 
 - <strong>分辨率列表</strong>
 
   - 分辨率列表中包含默认的<strong>主视口平铺</strong>及开发者添加的<strong>自定义分辨率</strong>，点击某个分辨率进行切换。
   - 开发者添加的自定义分辨率可删除。
 
-![](static/boxcnag1agTgdCXdOg2HG6wa30f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnag1agTgdCXdOg2HG6wa30f.png)
 
 ## <strong>使用效果</strong>
 
@@ -50,17 +50,17 @@
 
 主视口会根据视口大小和选择的分辨率，在视口内划分可操作区域和无效操作区域。
 
-![](static/boxcnGqrhL1ABVgs1MjO1G63Ybe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGqrhL1ABVgs1MjO1G63Ybe.png)
 
 - <strong>PIE</strong>
 
 PIE 窗口会根据选择分辨率的长宽比例，自适应调整窗口大小。
 
-![](static/boxcnWqNLaw6dJDEbLwfwx7Db4D.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWqNLaw6dJDEbLwfwx7Db4D.png)
 
 （16:9）
 
-![](static/boxcnaw7gWOoo6Dmwwh3bGG0BKd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnaw7gWOoo6Dmwwh3bGG0BKd.png)
 
 （4:3）
 
@@ -72,13 +72,13 @@ PIE 窗口会根据选择分辨率的长宽比例，自适应调整窗口大小�
 
 ## <strong>功能入口</strong>
 
-![](static/boxcno5RL6f6sUv41PwicO2ksWg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcno5RL6f6sUv41PwicO2ksWg.png)
 
 ## <strong>面板说明</strong>
 
 点击左侧选项，切换为竖屏模式；点击右侧选项，切换为横屏模式。
 
-![](static/boxcnK83MrDT8z1VEMOS0fqNCid.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnK83MrDT8z1VEMOS0fqNCid.png)
 
 ## <strong>使用效果</strong>
 
@@ -86,11 +86,11 @@ PIE 窗口会根据选择分辨率的长宽比例，自适应调整窗口大小�
 
 主视口会根据横竖屏和分辨率设置，在视口内划分可操作区域和无效操作区域。
 
-![](static/boxcnkQ7hiAdGDmMtNFvOTxFL1q.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnkQ7hiAdGDmMtNFvOTxFL1q.png)
 
 （横屏）
 
-![](static/boxcnqRKiTBt7u5ZlkRWvTYMBAf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnqRKiTBt7u5ZlkRWvTYMBAf.png)
 
 （竖屏）
 
@@ -98,11 +98,11 @@ PIE 窗口会根据选择分辨率的长宽比例，自适应调整窗口大小�
 
 PIE 窗口会根据横竖屏和分辨率设置，自适应调整窗口大小。
 
-![](static/boxcnhys18zFlPgyQtbQzjga1gg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhys18zFlPgyQtbQzjga1gg.png)
 
 （横屏）
 
-![](static/boxcn6KnQ3D91AJu7Tc4TJ8wWSg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6KnQ3D91AJu7Tc4TJ8wWSg.png)
 
 （竖屏）
 
@@ -110,11 +110,11 @@ PIE 窗口会根据横竖屏和分辨率设置，自适应调整窗口大小。
 
 Mobile 会根据设置的横屏模式/竖屏模式展现发布的游戏。
 
-![](static/boxcnK17DEEE0fnY4GY2ImnhA5b.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnK17DEEE0fnY4GY2ImnhA5b.png)
 
 （横屏）
 
-![](static/boxcncaxaMBitpVqWk2pbU2v5kc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncaxaMBitpVqWk2pbU2v5kc.png)
 
 （竖屏）
 

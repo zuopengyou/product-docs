@@ -46,7 +46,7 @@
     }
 ```
 
-![](static/boxcnkyGNLzh4cbMWzFkIwtsNSe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnkyGNLzh4cbMWzFkIwtsNSe.png)
 
 ### onDestroy(): void
 
@@ -70,7 +70,7 @@
     }
 ```
 
-![](static/boxcnguNorGpn9ekkuIPqgC9MNd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnguNorGpn9ekkuIPqgC9MNd.png)
 
 # UI 脚本中其他的生命周期事件
 
@@ -126,7 +126,7 @@
 
 图中执行顺序为 onAwake-创建 UI -> onAdded-添加 UI 到 canvas -> onRemoved-执行 UI 的 destroyObject()
 
-![](static/boxcn8aKkDjKOXDHuD5Z2sOX7jd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8aKkDjKOXDHuD5Z2sOX7jd.png)
 
 ### onShow(...params: any[]): void
 
@@ -162,7 +162,7 @@
 
 下图调用顺序为 UI.UIManager.instance 内函数方法： onAwake-创建 UI -> OnShow-使用 showUI 函数 ->OnHide-使用 hideUI 函数 >OnShow-使用 showUI 函数
 
-![](static/boxcn1CJWQvaOQORO1sLthmMWQe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1CJWQvaOQORO1sLthmMWQe.png)
 
 # 输入事件
 
@@ -218,11 +218,11 @@
     }
 ```
 
-![](static/boxcnGJdGQiUw0VFs7NULLBIKvH.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGJdGQiUw0VFs7NULLBIKvH.png)
 
 下图调用顺序为 ： onTouchStarted-手指或鼠标按下 -> onTouchMoved-手指或鼠标滑动 ->onTouchEnded-手指或鼠标释放
 
-![](static/boxcn22706nIk2m1wCI9UyMZQ5d.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn22706nIk2m1wCI9UyMZQ5d.png)
 
 ### onMouseEnter(InGemotry :UI.Geometry,InPointerEvent:UI.PointerEvent) :UI.EventReply
 
@@ -274,6 +274,6 @@
 
 下图调用顺序为 ： onMouseEnter-鼠标进入此 UI 范围内 -> onMouseWheel-滑动鼠标滚轮 ->onMouseLeave-鼠标离开此 UI 范围内
 
-![](static/boxcnrmYbmJ6GMIyhzrK8iSIx4c.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrmYbmJ6GMIyhzrK8iSIx4c.png)
 
 <strong>onDragDetected\onDragOver\onDrop\onDragEnter\onDragLeave\onDragCancelled 这 6 个 UI 拖拽事件目前功能上不完善，后续会进行优化，建议暂时不要使用</strong>

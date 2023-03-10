@@ -15,7 +15,7 @@
 
 后处理在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是后处理，资源 ID 为 21151。
 
-![](static/boxcn1sNsEnFpOmt8LnwfQI43Sh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1sNsEnFpOmt8LnwfQI43Sh.png)
 
 # 后处理 都包含什么
 
@@ -90,127 +90,127 @@
 
 1. <strong>将</strong><strong>后处理</strong><strong>拖入场景并自定义它的各种属性。</strong>
 
-![](static/boxcnXXC3a5d0ZO4XJTDy26R8hd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnXXC3a5d0ZO4XJTDy26R8hd.png)
 
 - 后处理-色调映射
 
 色调映射功能的目的是将广泛的高动态范围（HDR）颜色映射到显示器能够输出的低动态范围（LDR）。这是后期处理的最后一个阶段，经过法线渲染后，这个过程在后期处理期间执行。你可以将色调映射的过程想象成一种模拟胶片对光线的反应的方法(属性范围 0~100)：
 
-![](static/boxcn2qiown5SLGCK3t7LJU4Heb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2qiown5SLGCK3t7LJU4Heb.png)
 
-![](static/boxcni1fbpwiy21ce38TRoDUPub.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcni1fbpwiy21ce38TRoDUPub.png)
 
 - 后处理-泛光
 
 设置物体的泛光效果，光晕能使光源等明亮物体产生辉光效果（属性范围 0~8）
 
-![](static/boxcnUTkP0BXXBLGxQCfarSBYVh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnUTkP0BXXBLGxQCfarSBYVh.png)
 
-![](static/boxcnOtFWPOHAQyIxmhyovk2Jrd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOtFWPOHAQyIxmhyovk2Jrd.png)
 
 - 后处理-全局饱和度
 
 该属性调整所表现的颜色（色调）的强度（纯度）。饱和度越高，颜色看起来越接近原色（红色、绿色、蓝色），饱和度降低时，颜色的灰色或褪色效果变得明显。（属性范围 0~2）
 
-![](static/boxcn0b3Qdh90NkZyfyMPMYhf4c.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0b3Qdh90NkZyfyMPMYhf4c.png)
 
-![](static/boxcnm3dnGOowNOkvFScfVLoIhc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnm3dnGOowNOkvFScfVLoIhc.png)
 
 - 后处理-全局对比度
 
 该属性将调节场景中光线和深色值的色调范围。降低强度会去除高亮，让图像显得更亮，营造出一种褪色效果，而强度提升会加强高亮，让整体图像变暗。（属性范围 0.2~5）
 
-![](static/boxcnHSyAUUcqQkzqXRElAr9Xzc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHSyAUUcqQkzqXRElAr9Xzc.png)
 
-![](static/boxcn5IjbFVbnmpjsFkD8liQo3f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5IjbFVbnmpjsFkD8liQo3f.png)
 
 - 后处理-全局伽马值
 
 该属性将调节图像中间色调的亮度以准确重现颜色。降低或增大该值会让图像呈现出褪色或过暗的效果。（属性范围 0~5）
 
-![](static/boxcnLmkd9D5SXbeKhdcGkrsGmh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnLmkd9D5SXbeKhdcGkrsGmh.png)
 
-![](static/boxcn1Z3rENq07Ip0f1EL5dPbTf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1Z3rENq07Ip0f1EL5dPbTf.png)
 
 - 后处理-LDR 饱和度
 
 设置低动态范围图片的饱和度（属性范围 0~2）
 
-![](static/boxcn0O5zngXnyX8NWxdEvYKowd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0O5zngXnyX8NWxdEvYKowd.png)
 
-![](static/boxcnVmlPCBqRgozggytQXyZm3f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnVmlPCBqRgozggytQXyZm3f.png)
 
 - 后处理-LDR 对比度
 
 设置低动态范围图片的对比度（属性范围 0.2~5）
 
-![](static/boxcnoW1aC0rjNUGc5D6sUf6Vbd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoW1aC0rjNUGc5D6sUf6Vbd.png)
 
-![](static/boxcnDj7nBQ1urpmGBZwTyn6Suh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnDj7nBQ1urpmGBZwTyn6Suh.png)
 
 - 后处理-LDR 伽马值
 
 设置低动态范围图片的伽马值（属性范围 0~5）
 
-![](static/boxcn0mCpIwrnvOt9zpeWw9vXzd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0mCpIwrnvOt9zpeWw9vXzd.png)
 
-![](static/boxcngmzX1WE1hFg2ht6MyFLgMe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcngmzX1WE1hFg2ht6MyFLgMe.png)
 
 - 后处理-HDR 饱和度
 
 设置高动态范围图片的饱和度（属性范围 0~2）
 
-![](static/boxcnooKA9stufPpNmJ3Jz8tTae.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnooKA9stufPpNmJ3Jz8tTae.png)
 
-![](static/boxcnpUUZzWxIiYiog6bqJ7w8Ue.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnpUUZzWxIiYiog6bqJ7w8Ue.png)
 
 - 后处理-HDR 对比度
 
 设置高动态范围图片的对比度 （属性范围 0.2~5）
 
-![](static/boxcnfZngIayA7el1WcWjMtduSd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfZngIayA7el1WcWjMtduSd.png)
 
-![](static/boxcnMVzbm7SApLkHWJjLfSidna.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMVzbm7SApLkHWJjLfSidna.png)
 
 - 后处理-HDR 伽马值
 
 设置高动态范围图片的伽马值（属性范围 0~5）
 
-![](static/boxcnCa1U4pJo4Ej1MB3ymkIdJd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnCa1U4pJo4Ej1MB3ymkIdJd.png)
 
-![](static/boxcnvmnbABs7DuDgqK8f6PID5d.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnvmnbABs7DuDgqK8f6PID5d.png)
 
 - 后处理-LUT 颜色查找表百分比
 
 LUT 颜色值查找表百分比是一种控制颜色校正效果的比例因子(属性范围 0~100)
 
-![](static/boxcnrPBwET7BZQpcBINKO20pd7.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrPBwET7BZQpcBINKO20pd7.png)
 
-![](static/boxcn58t6oK7zKd50vAU9O2DyLf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn58t6oK7zKd50vAU9O2DyLf.png)
 
 - 后处理-LUT 颜色查找表纹理
 
 LUT 颜色查找表纹理用作颜色校正的查找表的 LUT 纹理
 
-![](static/boxcnHpWI3XMuzmaT5xClPgdyCc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHpWI3XMuzmaT5xClPgdyCc.png)
 
-![](static/boxcnSdg4UWJvyLKB2XxSzs5wnP.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSdg4UWJvyLKB2XxSzs5wnP.png)
 
 - 后处理-环境光遮蔽强度
 
 环境光遮蔽强度是一种近似计算因遮蔽而造成的光线衰减的效果。通常是在标准全局光照的基础上增添细微效果，例如让角落、裂缝或其他生物变暗，以形成一种更加自然真实的视觉效果（属性范围 0~1）
 
-![](static/boxcneRsI7tZ5nEOcRoPFU6Gmjd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcneRsI7tZ5nEOcRoPFU6Gmjd.png)
 
-![](static/boxcnE9wgA6f0rvGVr6Fz9WHe4c.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnE9wgA6f0rvGVr6Fz9WHe4c.png)
 
 - 后处理-环境光遮蔽半径
 
 设置环境光遮蔽的半径范围（属性范围 0.1~500）
 
-![](static/boxcnLqRZYfGs00nU2AXJnHwokg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnLqRZYfGs00nU2AXJnHwokg.png)
 
-![](static/boxcnrp9jxssVgAsFb3wQMLcaUb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrp9jxssVgAsFb3wQMLcaUb.png)
 
 - 后处理-动态模糊
 
@@ -220,79 +220,79 @@ LUT 颜色查找表纹理用作颜色校正的查找表的 LUT 纹理
 
 设置 LDR 与 HDR 的范围（属性范围-1~1）
 
-![](static/boxcnEeOLlqqOylDh3Ww3sAVwwb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnEeOLlqqOylDh3Ww3sAVwwb.png)
 
-![](static/boxcnVKE1LpR3ul9s9Mb8RWwBBc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnVKE1LpR3ul9s9Mb8RWwBBc.png)
 
 - 后处理-色调映射斜率
 
 调整用于色调映射的 S 曲线的斜率，较大值将使斜率更大（更深），较低值将使斜率更小（更浅）
 
-![](static/boxcn3s3IRy8UvyO5meWFHi2zae.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn3s3IRy8UvyO5meWFHi2zae.png)
 
-![](static/boxcnb7M8eqIQKxF7nTtI0AnHdc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnb7M8eqIQKxF7nTtI0AnHdc.png)
 
 - 后处理-色调映射低位阈值
 
 调整色调映射中的深色(属性范围 0~1）
 
-![](static/boxcnpSuGFSHE4CDW9fzoKr6I99.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnpSuGFSHE4CDW9fzoKr6I99.png)
 
-![](static/boxcnE8mHqSjb658BidD1f6Ad83.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnE8mHqSjb658BidD1f6Ad83.png)
 
 - 后处理-色调映射高位阈值
 
 调整色调映射中的亮色(属性范围 0~1)
 
-![](static/boxcnerR0laErzZhrbQh0rcaSTc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnerR0laErzZhrbQh0rcaSTc.png)
 
-![](static/boxcnQVwgKZY9zv6wH2foHuPDZd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQVwgKZY9zv6wH2foHuPDZd.png)
 
 - 后处理-色调映射暗部裁剪
 
 色调映射暗部裁剪设置交叉位置，也就是黑色开始切断数值的位置。一般来说，这个值 不应该调整(属性范围 0~1)
 
-![](static/boxcnLf5gQIw3WmgB8p2LjIL3je.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnLf5gQIw3WmgB8p2LjIL3je.png)
 
-![](static/boxcnbIL6X1NH1J2ubo6jwr9TOd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbIL6X1NH1J2ubo6jwr9TOd.png)
 
 - 后处理-色调映射亮部裁剪
 
 色调映射亮部裁剪设置交叉位置，也就是白色开始切断数值的位置。大多数情况下，变化都比较微妙(属性范围 0~1)
 
-![](static/boxcnNxXQFsFpfm7U7eTquZtKOe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnNxXQFsFpfm7U7eTquZtKOe.png)
 
-![](static/boxcnNwziqNuZpX6hJ8BElyF8ae.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnNwziqNuZpX6hJ8BElyF8ae.png)
 
 - 后处理-曝光补偿
 
 曝光补偿曝光的对数调整，仅在指定色调映射器的情况下使用。设为 0 时，没有调整；设为-1 时，为两倍暗，设为-2 时，为四倍暗，设为 1 时，为两倍亮，设为 2 时，为四倍亮。(属性范围-15~15)
 
-![](static/boxcnPeni0ASFPIPNlTxb0sowzb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnPeni0ASFPIPNlTxb0sowzb.png)
 
-![](static/boxcnFGTU8HqyJef1p6cbtTbFNc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFGTU8HqyJef1p6cbtTbFNc.png)
 
 - 后处理-曝光最小亮度
 
 曝光最小亮度自动曝光的最小亮度，用于限定眼部可适应的最低亮度。值必须小于 0，并且必须大于或等于 最大亮度（Max Brightness）。合适的值应为接近 0 的正值，并应在黑暗的光照条件下调整。例如，若该值过小，则图像会显得太亮。若值过大，则图像会显得太暗。实际值取决于所使用内容的 HDR 范围。若最小亮度（Min Brightness）等于最大亮度（Max Brightness），自动曝光将禁用。(属性范围-10~20)
 
-![](static/boxcnSU90K8t2izAurIujhy97yb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSU90K8t2izAurIujhy97yb.png)
 
-![](static/boxcnoEc91RZFNpKMntj6T9KlBb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoEc91RZFNpKMntj6T9KlBb.png)
 
 - 后处理-曝光最大亮度
 
 曝光最大亮度自动曝光的最大亮度，用于限定眼部可适应的最高亮度。值必须大于 0，并且必须大于或等于 最小亮度（Min Brightness）。合适的值应为正值（2 是不错的起始值），并将在明亮的光照条件调整。例如，若该值过小，则图像会显得太亮。若值过大，则图像会显得太暗。实际值取决于所使用内容的 HDR 范围。若最大亮度（Max Brightness）等于最小亮度（Min Brightness），自动曝光将禁用。(属性范围-10~20)
 
-![](static/boxcn1dBFwgXJMCXghrtSTg5HUc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1dBFwgXJMCXghrtSTg5HUc.png)
 
-![](static/boxcnVlbdqri05dj65PtpD6JMyd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnVlbdqri05dj65PtpD6JMyd.png)
 
 - 描边设置-描边颜色
 
 描边颜色设置描边的颜色
 
-![](static/boxcn5CVECus63vEohQffhBtTTa.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5CVECus63vEohQffhBtTTa.png)
 
 - 描边设置-描边宽度
 
@@ -306,7 +306,7 @@ LUT 颜色查找表纹理用作颜色校正的查找表的 LUT 纹理
 
 1. 将”后处理“功能对象拖入优先加载栏，或者在代码中预加载后处理的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
 
-![](static/boxcny1SVyyMERmxr7tvSu5y9Fh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcny1SVyyMERmxr7tvSu5y9Fh.png)
 
 ```ts
 @MWCore.MWProperty()

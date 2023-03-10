@@ -56,9 +56,9 @@ eg:
 
 ## 2.1 静态（Static）
 
-![](static/boxcnBGCg5MaBgSbDtePxk2tCRe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnBGCg5MaBgSbDtePxk2tCRe.png)
 
-![](static/boxcntPx5dImKvkaJrNjJH8FsDf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntPx5dImKvkaJrNjJH8FsDf.png)
 
 如上图所示，勾选“<strong>StaticStatus（静态状态）</strong>”即该对象为静态对象，反之则为非静态对象
 
@@ -76,13 +76,13 @@ eg：
 
 ## 客户端(C)、服务端(S)、双端(C&S)的区别
 
-![](static/boxcnUuKAKDCutnbUnVukbINa2f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnUuKAKDCutnbUnVukbINa2f.png)
 
-![](static/boxcnSSEiJox833KuozpWvkblae.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSSEiJox833KuozpWvkblae.png)
 
-![](static/boxcn8w8hBcIjH9Ya8Uahu3MHsg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8w8hBcIjH9Ya8Uahu3MHsg.png)
 
-![](static/boxcnOZisUkv5dKM1L7KcWLZi6d.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOZisUkv5dKM1L7KcWLZi6d.png)
 
 如上两张图所示，可通过上两种方式将对象的“<strong>NetStatus（网络状态）</strong>”网络状态设置为
 
@@ -177,7 +177,7 @@ protected async onStart(): Promise<void> {
 }
 ```
 
-![](static/boxcnX8yBMN8W4pCNsEkJFqzZie.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnX8yBMN8W4pCNsEkJFqzZie.png)
 
 ### 3.1.2 服务端监听
 
@@ -225,7 +225,7 @@ protected async onStart(): Promise<void> {
 }
 ```
 
-![](static/boxcnBXFespqzAAn2WuwOMtCvVg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnBXFespqzAAn2WuwOMtCvVg.png)
 
 ## 3.2 服务端 ---> 客户端
 
@@ -291,7 +291,7 @@ protected async onStart(): Promise<void> {
 }
 ```
 
-![](static/boxcnJkMRzw7x5NwNbTYZja3Clm.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJkMRzw7x5NwNbTYZja3Clm.png)
 
 ### 3.2.2 服务端发送 - 所有客户端
 
@@ -359,7 +359,7 @@ protected async onStart(): Promise<void> {
 }
 ```
 
-![](static/boxcnTlGly7IJadX7kFfWrIhmkb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTlGly7IJadX7kFfWrIhmkb.png)
 
 ### 3.2.4 客户端监听
 
@@ -428,7 +428,7 @@ protected async onStart(): Promise<void> {
 }
 ```
 
-![](static/boxcnKoHcvY6ingMsk9ZHLPrW2g.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKoHcvY6ingMsk9ZHLPrW2g.png)
 
 # 使用 replicated 实现属性同步
 
@@ -498,7 +498,7 @@ export default class NewScript0 extends Core.Script {
 }
 ```
 
-![](static/boxcnwQuYPcPp7JCfOHVLYPK5Ke.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwQuYPcPp7JCfOHVLYPK5Ke.png)
 
 ### 注意事项：
 

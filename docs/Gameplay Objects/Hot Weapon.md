@@ -15,7 +15,7 @@
 
 热武器在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是热武器，资源 ID 为 20638。
 
-![](static/boxcneG6x0SdKL88h7BS59faJVb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcneG6x0SdKL88h7BS59faJVb.png)
 
 # 热武器 都包含什么
 
@@ -248,7 +248,7 @@
 
 ### <strong>将能力对象拖入场景，开关它的组件，并自定义组件的各种属性：</strong>
 
-![](static/boxcncwml14jlGPUVkWYmJ9Gk3g.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncwml14jlGPUVkWYmJ9Gk3g.png)
 
 <strong>发射组件（必须开启）：</strong>
 
@@ -258,7 +258,7 @@
   - 单发：每次执行开火时，发射 1 次后停火。
   - 连发：每次执行开火时，发射“连发次数”次后停火。
 
-![](static/boxcn4HXrBLtY9Jxf6wG9DRiqJc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4HXrBLtY9Jxf6wG9DRiqJc.png)
 
 - 全自动：每次执行开火时持续发射，直到手动调用停火或者弹夹子弹为 0；
 - 发射间隔：热武器发射两发子弹的最小间隔时间
@@ -268,17 +268,17 @@
 
   - <del>发射偏移调整</del>
 
-![](static/boxcn2CKUkut5WnmnOk5X1mXy2g.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2CKUkut5WnmnOk5X1mXy2g.png)
 
-![](static/boxcnS6N0G1YqoRqEX1PZguF7Eg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnS6N0G1YqoRqEX1PZguF7Eg.png)
 
 <strong>发射精度组件（可选）：</strong>
 
 开发者可以对射击范围进行设置，更改上图锥形范围半径，调整射击精准度。
 
-![](static/boxcnMRdcJ04WVvwLzgonCFmdGd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMRdcJ04WVvwLzgonCFmdGd.png)
 
-![](static/boxcn80Wfls3UHo9jQFCWwVdgUh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn80Wfls3UHo9jQFCWwVdgUh.png)
 
 - 散布范围设置：默认散布范围半径
 - 最大散布范围：最大散布范围半径
@@ -286,7 +286,7 @@
 - 范围收缩速度：散布范围收缩的速度
 - 范围扩张速度：散布范围扩展的速度
 
-![](static/boxcn82v6Pi4R94Y8oNSKO8iHie.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn82v6Pi4R94Y8oNSKO8iHie.png)
 
 <strong>瞄准组件（可选）：</strong>
 
@@ -298,15 +298,15 @@
 
 <del>瞄准镜倍率</del>
 
-![](static/boxcnGW4zozFvzEiL8s3BOBp2xo.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGW4zozFvzEiL8s3BOBp2xo.png)
 
 - 第三人称：
 
 摄像机距离调整：瞄准时摄像机杆的长度变化
 
-![](static/boxcnC8oxLBPbhpgia266vilu1f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnC8oxLBPbhpgia266vilu1f.png)
 
-![](static/boxcnfonMpQUFlV7E3KEYAwNG2f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfonMpQUFlV7E3KEYAwNG2f.png)
 
 <strong>上膛组件（可选）：</strong>
 
@@ -314,14 +314,14 @@
 - 上膛时间：上膛动作完成的时间
 - 发射后上膛：勾选后每次发射后会自动进行一次上膛（默认是换弹后才进行上膛）
 
-![](static/boxcn2UlKbgKj0mMWu0iQXyVSUb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2UlKbgKj0mMWu0iQXyVSUb.png)
 
 <strong>换弹组件（可选）：</strong>
 
 - 换弹动作绑定：热武器换弹时播放绑定的动作（资源库拖拽）
 - 换弹时间：换弹动作完成的时间
 
-![](static/boxcn5Rj5kfu9kRUNAg6bnrL8Ff.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5Rj5kfu9kRUNAg6bnrL8Ff.png)
 
 <strong>后坐力组件：</strong>
 
@@ -330,17 +330,17 @@
 - 水平抖动最小值/最大值：热武器发射时，摄像机会基于开火时摄像机位置，进行水平方向的旋转，在单次开火后，摄像机会回到水平偏移后的位置，即摄像机水平抖动是一个表现，并不会影响枪械的最终位置
 - 垂直抖动最小值/最大值：热武器发射时，摄像机会基于开火时摄像机位置，进行垂直方向的旋转，在单次开火后，摄像机会回到垂直偏移后的位置，即摄像机垂直抖动是一个表现，并不会影响枪械的最终位置
 
-![](static/boxcnKRIJjhXgEdtOYtLH29Vfif.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKRIJjhXgEdtOYtLH29Vfif.png)
 
 ### 添加热武器实体表现，控制脚本
 
 热武器对象默认动态，挂载的模型只需要注意关闭碰撞。
 
-![](static/boxcnFbEoWjaLePvtZOU7JrPclf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFbEoWjaLePvtZOU7JrPclf.png)
 
 将热武器需要用到的特效挂在下方，等热武器执行相应功能时获取并进行对应的操作
 
-![](static/boxcnSvbboWWivLHY92zLQW1lmg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSvbboWWivLHY92zLQW1lmg.png)
 
 ### <strong>在脚本中通过热武器对象提供的接口对它进行控制，做出各种行为。</strong>
 

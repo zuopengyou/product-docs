@@ -4,9 +4,9 @@
 
 在编辑器中，我们为世界对象中的环境光提供了简洁的属性选项，用户可根据需求调整环境光的强度和色调，制作出明朗或昏暗、白色或其他颜色的环境光效果。
 
-![](static/boxcnr5oFqcseRIKaf1OqhGiiZg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnr5oFqcseRIKaf1OqhGiiZg.png)
 
-![](static/boxcnfSyvbtkg557F2phSGUqMXf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfSyvbtkg557F2phSGUqMXf.png)
 
 # 如何编辑环境光？
 
@@ -16,25 +16,25 @@
 
 通过对环境光基础属性的修改，来自定义环境光
 
-![](static/boxcneK5flKIoCdEejVcuWRRgsP.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcneK5flKIoCdEejVcuWRRgsP.png)
 
-![](static/boxcnqGGIBMaYODiCwFQRvzFRvh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnqGGIBMaYODiCwFQRvzFRvh.png)
 
 ## 2.1. 环境光强度
 
 环境光强度是照射在整个世界的环境光的强弱程度；数值越低环境光越弱，数值越高环境光越强
 
-![](static/boxcnQd5oHe3ZVO2M2OiF4afsEb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQd5oHe3ZVO2M2OiF4afsEb.png)
 
 <div style="text-align: center">环境光强度为0.2时：整个世界的光线昏暗</div>
 
-![](static/boxcnfCUxIGrFgD1q10xtp75v4e.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfCUxIGrFgD1q10xtp75v4e.png)
 
 <div style="text-align: center">环境光强度为1.0时：整个世界的光线明亮</div>
 
 <div style="text-align: center"></div>
 
-![](static/boxcnTKgP9yaU8FXdpkYOHOdV5d.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTKgP9yaU8FXdpkYOHOdV5d.png)
 
 <div style="text-align: center">环境光强度为6.0时：整个世界的光线过于耀眼</div>
 
@@ -42,17 +42,17 @@
 
 环境光色调是照射在整个世界的环境光的色调；可根据开发者的喜好进行调整。
 
-![](static/boxcn0GnDJ5L2BzhRh4XuJ9M2if.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0GnDJ5L2BzhRh4XuJ9M2if.png)
 
 <div style="text-align: center">环境光色调为红 FF000000</div>
 
-![](static/boxcn2J8VnxHGjMHKmIhcA6lnTe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2J8VnxHGjMHKmIhcA6lnTe.png)
 
 <div style="text-align: center">环境光色调为绿 00FF0000</div>
 
 <div style="text-align: center"></div>
 
-![](static/boxcn5qCeuMZ2z8ekhcq1Emoqnc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5qCeuMZ2z8ekhcq1Emoqnc.png)
 
 <div style="text-align: center">环境光色调为蓝 0000FF00</div>
 
@@ -65,8 +65,8 @@
 
 捕获场景较为消耗性能，建议只能周期性的、触发性的使用捕获场景。
 
-![](static/boxcnIGppjuTY3S6p85eV92Wbxd.png)
-![](static/boxcn8wzwLBgydfNLRCD3lnHLCd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIGppjuTY3S6p85eV92Wbxd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8wzwLBgydfNLRCD3lnHLCd.png)
 
 ```ts
                         捕获场景                                                       指定立方体贴图场景

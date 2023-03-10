@@ -19,13 +19,13 @@
 
 在编辑器右侧【逻辑资源】选项中，找到【游戏功能对象】，点击其中的【交互物】，拖拽到主视口，即可完成创建
 
-![](static/boxcnxUwwu3JMjInvCM0osPkt2d.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxUwwu3JMjInvCM0osPkt2d.png)
 
 - <strong>step.2</strong>
 
 在属性面板中设置交互物参数。
 
-![](static/boxcnF5gL6MmOuhdycRDR0kec6d.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnF5gL6MmOuhdycRDR0kec6d.png)
 
 | 区域类型     | 说明                                                                                           |
 | ------------ | ---------------------------------------------------------------------------------------------- |
@@ -71,13 +71,13 @@ export default class NewScript extends MWCore.MWScript {
 
 使用不同的静态模型和角色动作姿态，可以制作出各种交互行为。
 
-![](static/boxcnGFBgyPLuSVXqY9ZrrcEz6f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGFBgyPLuSVXqY9ZrrcEz6f.png)
 
-![](static/boxcncDmSsOU9IGvcwhr2Sz7FOc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncDmSsOU9IGvcwhr2Sz7FOc.png)
 
 # 使用交互物的注意事项与建议
 
-![](static/boxcnQ5rHwRglX4CQgCeuxOv2Nb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQ5rHwRglX4CQgCeuxOv2Nb.png)
 
 交互物对象的红色箭头代表角色的正面朝向，蓝色箭头代表角色头顶朝向。可根据配合使用的静态模型样式，通过调整交互物相对旋转来契合动作姿态的表现。
 

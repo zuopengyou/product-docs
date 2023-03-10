@@ -15,7 +15,7 @@
 
 区域效果在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是区域效果，资源 ID 为 14197。
 
-![](static/boxcnwLCt9Y1TQ6GHUrErNF8e3g.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwLCt9Y1TQ6GHUrErNF8e3g.png)
 
 # 区域效果 都包含什么
 
@@ -70,11 +70,11 @@
 
 效果表现：要播放的特效，可直接将特效资源拖入框中
 
-![](static/boxcnoezbfH1o6xpLDpLk0vDLvg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoezbfH1o6xpLDpLk0vDLvg.png)
 
 1. <strong>创建控制区域效果的脚本，可以拖入对象栏，也可以挂在区域效果底下。</strong>
 
-![](static/boxcnfa0FhgtxOXZcnGFD3by9pe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfa0FhgtxOXZcnGFD3by9pe.png)
 
 1. <strong>在脚本中使用区域效果对象提供的接口对它进行控制：播放/停止播放特效，获取区域内的所有对象并返回对象数组。</strong>
 

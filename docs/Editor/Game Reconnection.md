@@ -21,13 +21,13 @@
 
   - 当判断出现断线情况时会执行 10 秒的自动重连，重连成功可继续游戏，重连失败则会与服务器断开连接。重连过程在游戏中如下图
 
-![](static/boxcnEsntM2nQim8e7Dvo89BVVc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnEsntM2nQim8e7Dvo89BVVc.png)
 
 - <strong>与服务器断开连接</strong>
 
   - 当重连 10 秒依旧无法连接服务器时，会与服务器断开连接。玩家可选择退出游戏或重新连接
 
-![](static/boxcnae0qE3i029MVhES7G5wXKg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnae0qE3i029MVhES7G5wXKg.png)
 
 # 如何合理利用 / 使用断线重连
 

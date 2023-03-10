@@ -12,9 +12,9 @@
 
 # 文本属性-文本
 
-![](static/boxcnszRhmLcMi1xEspl71LjyVh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnszRhmLcMi1xEspl71LjyVh.png)
 
-![](static/boxcnBJYRWHDtYh7DL8z7mJ6NnM.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnBJYRWHDtYh7DL8z7mJ6NnM.png)
 
 ###### 文本
 
@@ -25,21 +25,21 @@
 - 修改文字的字体大小
 - 示意图：
 
-![](static/boxcnY3ZzYncURlLNcROLqLw6df.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnY3ZzYncURlLNcROLqLw6df.gif)
 
 ###### 字体间距
 
 - 修改文字之间的间隔距离
 - 示意图：
 
-![](static/boxcnJ28CsjgGjYeW39YydkQuLf.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJ28CsjgGjYeW39YydkQuLf.gif)
 
 ###### 行距系数
 
 - 修改每一行之间的间隔距离
 - 示意图：
 
-![](static/boxcnk3sYbYlPTAh3wvDj4koadd.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnk3sYbYlPTAh3wvDj4koadd.gif)
 
 ###### 水平显示
 
@@ -55,7 +55,7 @@
 
     - 不会自动换行，并且溢出组件边界的内容不会被剪裁
 
-![](static/boxcnQQeZ7r6NNQJsBuQkqD4tre.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQQeZ7r6NNQJsBuQkqD4tre.gif)
 
 ###### 自适应文本框
 
@@ -68,59 +68,59 @@
     - 【字体描边宽度】描边宽度较小或【阴影偏移】偏移值较小的情况下不会超出文本框，可同时使用
   - 关闭【自适应文本框】功能后会退回开启自适应之前的【字体大小】
 
-![](static/boxcnHCXXuNLqTTbmiWRDPh9bhh.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHCXXuNLqTTbmiWRDPh9bhh.gif)
 
 - 使用场景：将游戏内中文批量翻译成英文，为了避免翻译后的英文会比中文长，导致超出文本框，可以开启【自适应文本框】，自动计算合适的文本大小；例如下图中，将字号大小为 58 号的汉字内容更换成英文后，英文的字号大小自动调整为 48 号
 
-![](static/boxcnYFXa0nT4Bz237DFXBtMQPN.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYFXa0nT4Bz237DFXBtMQPN.gif)
 
 # 文本属性-样式
 
-![](static/boxcnM0ugvMv54RGWJFWl21Tf1e.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnM0ugvMv54RGWJFWl21Tf1e.png)
 
-![](static/boxcnNzzo095210JkN89yP17Upz.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnNzzo095210JkN89yP17Upz.png)
 
 ###### 字形
 
 - 修改文字的字形（请注意，目前编辑器仅支持修改英文字形，汉字等其他语言暂不支持修改字形）
 - 示意图：
 
-![](static/boxcnCpOCRjLoU3K0Cnt9Ro0oLc.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnCpOCRjLoU3K0Cnt9Ro0oLc.gif)
 
 ###### 删除线
 
 - 修改文字是否添加删除线
 - 示意图：
 
-![](static/boxcnSszoYp9ahGpe8CC6HXJlFh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSszoYp9ahGpe8CC6HXJlFh.png)
 
 ###### 下划线
 
 - 修改文字是否添加下划线
 - 示意图：
 
-![](static/boxcnIMnw7EL2D8quIXjvGQcWFd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIMnw7EL2D8quIXjvGQcWFd.png)
 
 ###### 字体颜色
 
 - 修改文字的字体颜色
 - 示意图：
 
-![](static/boxcnGNYTD3NnwPHhPI0DiQPZb8.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGNYTD3NnwPHhPI0DiQPZb8.gif)
 
 ###### 阴影颜色
 
 - 修改文字的阴影颜色，凸显文字的立体感
 - 示意图：
 
-![](static/boxcnwMLeQzP8XeFS9Q7G0SaOPh.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwMLeQzP8XeFS9Q7G0SaOPh.gif)
 
 ###### 阴影偏移
 
 - 修改文字的阴影的相对位置
 - 示意图：
 
-![](static/boxcno9jQBkFBnL4xx2mtF1u1Mh.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcno9jQBkFBnL4xx2mtF1u1Mh.gif)
 
 ###### 水平对齐
 
@@ -147,21 +147,21 @@
   - 文本内容以文本框垂直方向的下侧靠齐的对齐方式
 - 示意图：
 
-![](static/boxcnFLDlG3pel88Gc2Oxt1gVUe.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFLDlG3pel88Gc2Oxt1gVUe.gif)
 
 ###### 字体描边颜色
 
 - 修改字体描边的颜色。
 - 示意图：
 
-![](static/boxcnqCquMTysKNUqQysZS72UGf.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnqCquMTysKNUqQysZS72UGf.gif)
 
 ###### 字体描边宽度
 
 - 修改字体描边的宽度。
 - 示意图：
 
-![](static/boxcnZuS9q7PczOtpDOYCEYx4ZH.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZuS9q7PczOtpDOYCEYx4ZH.gif)
 
 # 如何使用文本？
 
@@ -172,7 +172,7 @@
 
 - 首先我们先创建一个 UI，并拖入文本组件。保存后，拖入主编辑器的对象列表中，生成 UI。
 
-![](static/boxcnj00PR4jM0IeVWzTzfGAAKf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnj00PR4jM0IeVWzTzfGAAKf.png)
 
 - 然后我们开始编写脚本的逻辑，找到当前角色并获取到角色的速度。
 - 我们再创建一个脚本，找到咱们的 UI 文本组件，并且接受上面的速度事件，将获取到的角色速度显示在文本组件上。最后将这个脚本拖入 Root 目录下，完成与 UI 的绑定。
@@ -220,6 +220,6 @@ export default class UIDefault extends UI.UIBehavior{
 
 - 示意图：
 
-![](static/boxcn5HapDZ4FTzKt0PvM8jxXjf.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5HapDZ4FTzKt0PvM8jxXjf.gif)
 
 - 工程项目：

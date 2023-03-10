@@ -10,7 +10,7 @@
 
 - 变换/对齐/通用/渲染属性请见 [UI 组件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
 
-![](static/boxcnzxsOzfWhfgd3V1WSJYEqnb.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnzxsOzfWhfgd3V1WSJYEqnb.gif)
 
 # 如何使用调色板？
 

@@ -15,7 +15,7 @@
 
 投掷物在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是投掷物，资源 ID 为 14090。
 
-![](static/boxcnIExYwDnwEfYUSypOPAMEId.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIExYwDnwEfYUSypOPAMEId.png)
 
 # 投掷物 都包含什么
 
@@ -67,11 +67,11 @@
 
 碰撞长度：胶囊体碰撞长度
 
-![](static/boxcn5tHeGqGMreaKtTmE6Bj9Bd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5tHeGqGMreaKtTmE6Bj9Bd.png)
 
 1. <strong>创建控制投掷物的脚本，可以拖入对象栏。投掷物默认是动态（对象机制强制同步，只有动态才能使用，关于动静态的更多含义请参照其他文档），所以可以也可以</strong><strong>直接</strong><strong>挂在投掷物底下。</strong>
 
-![](static/boxcnQDXgmcPRfl32HmcDqIvvZd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQDXgmcPRfl32HmcDqIvvZd.png)
 
 1. <strong>通过对象提供的接口对投掷物进行控制，无需 bindPlayer（接口暂未废弃）</strong>
 
@@ -164,7 +164,7 @@ project.onProjectileInterrupt.add(() => {
 });
 ```
 
-![](static/boxcnFq0jWnXWFGrOJRKUbh4p8d.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFq0jWnXWFGrOJRKUbh4p8d.png)
 
 ```ts
 // 修改投掷物参数
@@ -181,7 +181,7 @@ project.simulatePhysics = true;
 
 1. 将投掷物功能对象拖入优先加载栏，或者在代码中预加载投掷物的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
 
-![](static/boxcn4Aq9lpcPicJHYgG5mnA9md.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4Aq9lpcPicJHYgG5mnA9md.png)
 
 ```ts
 @MWCore.MWProperty()

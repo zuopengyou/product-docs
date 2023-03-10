@@ -12,9 +12,9 @@
 
 # 进度条属性-滑动设置
 
-![](static/boxcnHKEAR3vBCE0aQQKrsu5jAe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHKEAR3vBCE0aQQKrsu5jAe.png)
 
-![](static/boxcnaq4v6A6CApIaiIcccoNGNf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnaq4v6A6CApIaiIcccoNGNf.png)
 
 ###### 填充类型
 
@@ -35,7 +35,7 @@
   - 从下到上填充图片的效果。
   - 示意图：
 
-![](static/boxcnMS9l1t5CRVZnjR4YJc04h1.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMS9l1t5CRVZnjR4YJc04h1.gif)
 
 ###### 滑动最小值
 
@@ -64,7 +64,7 @@
 
   - 示意图：
 
-![](static/boxcnTYIe9rM8FlqjMwJKFl4dke.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTYIe9rM8FlqjMwJKFl4dke.gif)
 
 ###### 条厚度
 
@@ -76,15 +76,15 @@
     - 修改【变换】-【大小】时，只会改变进度条滑动填充图片和滑动背景图片渲染图形的长度，并不会改变其宽度
   - 3.修改滑动按钮图片大小应使用【滑动按钮图片】-【图片大小】
 
-![](static/boxcnhkpK45mqaE3EK8hPGSn3hJ.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhkpK45mqaE3EK8hPGSn3hJ.gif)
 
 【滑动设置】-【条厚度】
 
-![](static/boxcnwtfzphqdjT9EY0SkdlBkkc.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwtfzphqdjT9EY0SkdlBkkc.gif)
 
 【变换】-【大小】
 
-![](static/boxcnKLl7D9Kdm2wUcEwe6kx5cd.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKLl7D9Kdm2wUcEwe6kx5cd.gif)
 
 【样式】-【滑动按钮图片】-【图片大小】
 
@@ -92,13 +92,13 @@
 
   - 示意图：
 
-![](static/boxcnrVwwaRlMZnrIB2g61pfRX8.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrVwwaRlMZnrIB2g61pfRX8.gif)
 
 # 进度条属性-样式
 
-![](static/boxcn5xRKJIBI5F54Ek3JN2eQye.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5xRKJIBI5F54Ek3JN2eQye.png)
 
-![](static/boxcngsDipK0kf5GPtFp3A3Q3Xf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcngsDipK0kf5GPtFp3A3Q3Xf.png)
 
 ###### 滑动填充图片
 
@@ -110,9 +110,9 @@
 
   - 锚点类型：可以选择中心或者两侧，用于修改锚点在按钮图片的具体位置
 
-![](static/boxcn8Ip5e1uOVJ1NzpQvUWCi7f.jpg)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8Ip5e1uOVJ1NzpQvUWCi7f.jpg)
 
-![](static/boxcnrY2JQUtJuBA0fTh3dsGtod.jpg)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrY2JQUtJuBA0fTh3dsGtod.jpg)
 
 ```ts
          中心锚点在按钮图片正中心                       两侧锚点在图片两侧，图片不会超出进度条范围
@@ -123,16 +123,16 @@
   - 锚点类型为中心时，偏移值为 X 像素即让按钮图片整体向右偏移 X 像素，偏移值为-X 像素即让按钮图片整体向左偏移 X 像素
   - 锚点类型为两侧时，偏移值为 X 像素即让按钮图片可滑动的最左位置和最右位置整体素，偏移值为-X 像素即让按钮图片的最左位置和最右位置整体向内偏移 X 像素
 
-![](static/boxcnvuvGza0ltwHdjVPNBHjAXe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnvuvGza0ltwHdjVPNBHjAXe.png)
 
-![](static/boxcn8LggdkVE3nqfxk3QM3HZBd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8LggdkVE3nqfxk3QM3HZBd.png)
 
 ###### 滑动背景图片
 
 - 修改的是进度条在未填充的背景效果。图片属性请见【UI 组件-图片】
 - 示意图：
 
-![](static/boxcnamAhT67NK0uOhjjqm1Hfbd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnamAhT67NK0uOhjjqm1Hfbd.png)
 
 # 如何使用进度条？
 
@@ -142,11 +142,11 @@
 
 - 首先我们需要用 UI 编辑器制作一个面板，然后将进度条等 UI 组件放置在面板上，如图
 
-![](static/boxcnrCZY6uUJxUVMcQmacGQLnd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrCZY6uUJxUVMcQmacGQLnd.png)
 
 - 然后把对应的音效文件拖入优先加载内，并把与脚本进行绑定好的 UI 文件拖入对象列表中
 
-![](static/boxcnAXUw2YPuiVNlLsSChKrO6f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnAXUw2YPuiVNlLsSChKrO6f.png)
 
 - 脚本示例：
 

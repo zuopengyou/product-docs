@@ -16,7 +16,7 @@
 
 - 目前 UI 编辑器提供了两种按钮组件，分别是【按钮】和【文本按钮】
 
-![](static/boxcnuCCgxFyTP2SrbWkzWPZcOb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnuCCgxFyTP2SrbWkzWPZcOb.png)
 
 - 【按钮】与【文本按钮】的区别在于配置按钮文字样式更加灵活，具体区别如下：
 
@@ -24,11 +24,11 @@
   - 【按钮】可以成为【文本】的父级对象，并且不限制可挂载【文本】子级对象的个数；而【文本按钮】不可挂载任何子级对象
   - 除此之外，【按钮】的其他属性与【文本按钮】完全相同
 
-![](static/boxcnbJR2DogUEktW2V89BCSDNb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbJR2DogUEktW2V89BCSDNb.png)
 
 【文本按钮】的文字配置方法
 
-![](static/boxcnOikAmAp2CTAfCmMAl5ga7e.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOikAmAp2CTAfCmMAl5ga7e.png)
 
 【按钮】的文字配置方法
 
@@ -55,7 +55,7 @@
 - 点击按钮后，按钮的变化效果。
 - 示意图：
 
-![](static/boxcn0BRsIYKGSDXdk8qhLKKK1b.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0BRsIYKGSDXdk8qhLKKK1b.gif)
 
 ###### 禁用图片
 
@@ -65,7 +65,7 @@
   -
 - 示意图：
 
-![](static/boxcnw5y8xtFgCJfQUo0qfepV62.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnw5y8xtFgCJfQUo0qfepV62.gif)
 
 # 
 
@@ -99,14 +99,14 @@ export default class UIDefault extends UI.UIBehavior{
 
 - 示意图：
 
-![](static/boxcnw1gnt8Yj1oFn6Hz8qcsw6N.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnw1gnt8Yj1oFn6Hz8qcsw6N.gif)
 
 ##### 示例二：制作按钮选中态
 
 - 当界面中存在多个同级按钮时，我们需要通过按钮的选中状态来区分我们选择了哪个按钮。接下来我们尝试制作性别选择菜单中按钮的选中态效果。
 - 首先在 UI 编辑器中拼好以下 UI 组件：
 
-![](static/boxcnho3U7lYTpR0Jnhn1QtZVzb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnho3U7lYTpR0Jnhn1QtZVzb.png)
 
 - 我们要明确按钮只有两种状态，分别是选中状态和未选中状态，所以我们可以利用三目运算符，判断按钮是否处于选中状态，来设置按钮的样式。
 - 示例脚本：
@@ -157,7 +157,7 @@ export default class UIDefault extends UI.UIBehavior{
 
 - 示意图：
 
-![](static/boxcncN6X8J7UwoM4XtWQUXFJ5g.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncN6X8J7UwoM4XtWQUXFJ5g.gif)
 
 以上两个示例的工程项目：
 
@@ -165,7 +165,7 @@ export default class UIDefault extends UI.UIBehavior{
 
 - 我们依据上面的思路制作多页签的选中态，首先在 UI 编辑器中拼好以下 UI 组件：
 
-![](static/boxcnTSApe41sqG5a5djp40MKbe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTSApe41sqG5a5djp40MKbe.png)
 
 - 多页签与性别的区别就是具有更多的选择。这个时候我们可能需要使用 switch 语句进行判断，然后我们找到对应的 UI 按键，并通过点击事件，更改 switch 所判断的条件，即可完成多页签的选中态
 - 关于如何制作使用容器制作页签面板，整理 UI 组件并使其方便管理，请参考 UI 组件-容器部分的思路
@@ -258,6 +258,6 @@ export default class activity extends activity_generate {
 
 - 示意图：
 
-![](static/boxcnwQg1Pv8mqmSF3t3XJFkw8c.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwQg1Pv8mqmSF3t3XJFkw8c.gif)
 
 - 工程项目：

@@ -15,7 +15,7 @@
 
 初生点在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是初生点，资源 ID 为 109。
 
-![](static/boxcnPCgToswN1JuKabIZ0rwyRR.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnPCgToswN1JuKabIZ0rwyRR.png)
 
 # 初生点 都包含什么
 
@@ -29,7 +29,7 @@
 
 每个工程中场景里自带一个初生点，位置是世界原点（0， 0，0），世界正方向旋转是（0，0，0）
 
-![](static/boxcnuDyd2mzpkqhzbLbjR0e91b.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnuDyd2mzpkqhzbLbjR0e91b.png)
 
 初生点 Z 轴位置<strong>不可低于 45</strong>，否则角色会刷新到地板下方，持续下坠。
 

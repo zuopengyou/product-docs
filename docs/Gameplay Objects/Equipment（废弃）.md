@@ -15,7 +15,7 @@
 
 装备在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是装备，资源 ID 为 2696。
 
-![](static/boxcnQzwXIfmrjrBoja6JkfZUuc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQzwXIfmrjrBoja6JkfZUuc.png)
 
 # 装备 都包含什么
 
@@ -66,25 +66,25 @@
 
 装备对象下自带一个拾取触发器，用于自动拾取。装备对象默认静态，记住取消静态状态才能使用。取消后所有挂载的对象自动都会取消静态。
 
-![](static/boxcn4ajIHQtvU0N4jz13G3K3Bf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4ajIHQtvU0N4jz13G3K3Bf.png)
 
 在装备对象下挂载想要的模型和其他对象
 
-![](static/boxcnx5hFEFphCGaSvgGDfZ2hQc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnx5hFEFphCGaSvgGDfZ2hQc.png)
 
 修改模型的相对位置，旋转和大小使模型表现正确。<strong>注意模型关闭碰撞</strong>
 
-![](static/boxcnbJFtvq0uT4C8B3IHzQKvWe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbJFtvq0uT4C8B3IHzQKvWe.png)
 
-![](static/boxcnccyszf7a0Wf7aCw1wT0cKg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnccyszf7a0Wf7aCw1wT0cKg.png)
 
 设置装备的设置它的功能属性和资源 ID
 
-![](static/boxcntkmBUlZvD5M8OulfKTa1Mf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntkmBUlZvD5M8OulfKTa1Mf.png)
 
 1. <strong>创建控制装备对象的脚本，可以拖入对象栏，或在取消默认静态后挂载在装备对象下</strong>
 
-![](static/boxcn3lGtyvHUpeysFMfOuBlm9g.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn3lGtyvHUpeysFMfOuBlm9g.png)
 
 1. <strong>在脚本中通过装备对象提供的接口对它进行控制，做出各种行为。</strong>
 
@@ -189,7 +189,7 @@ setInterval(() => {
 
 1. 将“能力对象”功能对象拖入优先加载栏，或者在代码中预加载能力对象的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
 
-![](static/boxcnIG0zM6GvyD8dWFeKIw1fYc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIG0zM6GvyD8dWFeKIw1fYc.png)
 
 ```ts
 @MWCore.MWProperty()

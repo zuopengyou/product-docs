@@ -15,7 +15,7 @@
 
 能力对象在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是能力对象，资源 ID 为 21378。
 
-![](static/boxcnyo0szQhyhr0ZFli22RQOUd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnyo0szQhyhr0ZFli22RQOUd.png)
 
 # 能力对象 都包含什么
 
@@ -96,17 +96,17 @@ AbilityState 接口
 
 可转向：该状态下角色是否可以改变朝向
 
-![](static/boxcnyXHHbBfEzVW7yEhGAxvsCd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnyXHHbBfEzVW7yEhGAxvsCd.png)
 
 1. <strong>创建控制能力对象的脚本，可以拖入对象栏。能力对象默认是动态（对象机制强制同步，只有动态才能使用，关于动静态的更多含义请参照其他文档），</strong><strong>所以也可以</strong><strong>直接</strong><strong>挂在能力对象底下。</strong>
 
-![](static/boxcnC0a5nC0RmLi5v4hzqEnppf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnC0a5nC0RmLi5v4hzqEnppf.png)
 
 1. <strong>在脚本中给能力对象绑定 Player 后，通过对象提供的接口对能力对象进行控制，改变它的状态。</strong>
 
-![](static/boxcn6ZzW6WAqfCNXMz5xJ8ftZf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6ZzW6WAqfCNXMz5xJ8ftZf.png)
 
-![](static/boxcnA6ORIsfqRJ75PJqzPM3CIg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnA6ORIsfqRJ75PJqzPM3CIg.png)
 
 ```ts
 // 通过GUID异步获取能力对象，保证能力对象获取到后对它进行操作
@@ -199,7 +199,7 @@ if(ability.whetherReady()) {
 }
 ```
 
-![](static/boxcnLQTU189dsW6EWoEj9nig8e.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnLQTU189dsW6EWoEj9nig8e.png)
 
 ```ts
 // 给能力对象提供的回调中绑定执行函数
@@ -281,9 +281,9 @@ ability.onAbilityStateChanged.bind(() => {
 });
 ```
 
-![](static/boxcnCR3pUKNiS4WzhLJ7JxtDHb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnCR3pUKNiS4WzhLJ7JxtDHb.png)
 
-![](static/boxcnjGIMcqLnVvBlZPKSwYMbT2.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjGIMcqLnVvBlZPKSwYMbT2.png)
 
 ```ts
 // 收到本地消息，切换能力状态, 并获取状态信息打印
@@ -340,13 +340,13 @@ setInterval(() => {
 }, 100);
 ```
 
-![](static/boxcn2OuAwDEFHvHcdVvwhjXQqc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2OuAwDEFHvHcdVvwhjXQqc.png)
 
 ### 在代码中动态生成
 
 1. 将“能力对象”功能对象拖入优先加载栏，或者在代码中预加载能力对象的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
 
-![](static/boxcnD5aiXfJSvoej7ucmqf3yRg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnD5aiXfJSvoej7ucmqf3yRg.png)
 
 ```ts
 @MWCore.MWProperty()

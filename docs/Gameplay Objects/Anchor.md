@@ -14,7 +14,7 @@
 
 空锚点在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是空锚点，资源 ID 为 25782。
 
-![](static/boxcnAWNoJO2dqmcKP1FTqMOlof.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnAWNoJO2dqmcKP1FTqMOlof.png)
 
 # 空锚点 都包含什么
 
@@ -26,17 +26,17 @@
 
 1. <strong>将空锚点拖入场景</strong>
 
-![](static/boxcnR7KREpOcGve18dIyhvQH3c.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnR7KREpOcGve18dIyhvQH3c.png)
 
 1. <strong>将希望修改锚点的对象挂载到空锚点下方，选中空锚点，工作区内显示所有子物体整体包围盒</strong>
 
-![](static/boxcn3MJx7FUKeDlmlEwCDFbakd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn3MJx7FUKeDlmlEwCDFbakd.png)
 
 1. <strong>修改子对象的 Transform 使空锚点与期望锚点位置重合</strong>
 
 空锚点提供两个快捷选项来获取自身相对子对象的偏移值：自动居中和顶点吸附。中点和顶点都是以空锚点底下挂载的所有对象的整体来计算的。此外还提供锚点偏移输入使用户自定义锚点位置并可视化于工作区中。该值对修改子对象相对位置有参考意义（取反后赋值到子对象）。同时该功能方便在工作区以新锚点位置对挂载子对象进行统一操作。
 
-![](static/boxcnuZwZH9ddnSu5RUygrasYRb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnuZwZH9ddnSu5RUygrasYRb.png)
 
 配置过程如下所示：
 
@@ -46,15 +46,15 @@
 
 修改锚点后：模型插入插槽后表现正确
 
-![](static/boxcnWIXUrlhudio3ioBvKkz1Rb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWIXUrlhudio3ioBvKkz1Rb.png)
 
-![](static/boxcnjHFPIvmtolYi0ZqEZEXPwb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjHFPIvmtolYi0ZqEZEXPwb.png)
 
 ### 在代码中动态生成空锚点
 
 1. 将空锚点功能对象拖入优先加载栏，或者在代码中预加载空锚点的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
 
-![](static/boxcnrg0UvniZk28hfpIcsuAV6b.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrg0UvniZk28hfpIcsuAV6b.png)
 
 ```ts
 @MWCore.MWProperty()

@@ -37,13 +37,13 @@ a 使用[相对冲量]时，需要考虑受力对象的施加力，比如角色�
 | 矢量力 | 向某个方向施加一定大小的力； |
 | 径向力 | 以圆心向外施加一定大小的力； |
 
-![](static/boxcnf1UQc5D27sRsOuRYdYuesb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnf1UQc5D27sRsOuRYdYuesb.png)
 
 # 如何使用冲量对象
 
 在编辑器左侧【逻辑资源】选项中，找到【运动功能对象】，点击其中的【冲量对象】，拖拽到主视口中，即可完成创建。
 
-![](static/boxcnOfEfBpSelABVK28fK1LCXf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOfEfBpSelABVK28fK1LCXf.png)
 
 # 冲量对象高级使用方法
 

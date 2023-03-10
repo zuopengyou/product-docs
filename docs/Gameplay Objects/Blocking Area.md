@@ -15,7 +15,7 @@
 
 禁行区在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是禁行区，资源 ID 为 117。
 
-![](static/boxcn6SQO23y9h8OiEwugoPZnaf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6SQO23y9h8OiEwugoPZnaf.png)
 
 # 禁行区 都包含什么
 
@@ -40,11 +40,11 @@
 
 1. <strong>将</strong><strong>禁行区</strong><strong>拖入场景并自定义它的位移、旋转、缩放。</strong>
 
-![](static/boxcnNE4bAcaxY0w5b88zKd4eDb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnNE4bAcaxY0w5b88zKd4eDb.png)
 
 1. <strong>创建控制禁行区的脚本，可以拖入对象栏。禁行区默认为静态，取消勾选静态状态后，脚本也可以挂在禁行区底下。</strong>
 
-![](static/boxcnqwDMZ5AjQfdFg4xYQa3Vdb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnqwDMZ5AjQfdFg4xYQa3Vdb.png)
 
 1. 在脚本中给禁行区设置权限，操作它对角色的阻挡效果
 
@@ -178,7 +178,7 @@ private launch(pro: GamePlay.Projectile) {
 
 1. 将禁行区功能对象拖入优先加载栏，或者在代码中预加载禁行区的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
 
-![](static/boxcnHv4zRfb3z9u40RvJMOhLWg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHv4zRfb3z9u40RvJMOhLWg.png)
 
 ```ts
 @MWCore.MWProperty()

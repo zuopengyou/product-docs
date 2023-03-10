@@ -8,3 +8,4 @@ test.*
 .DS_Store
 static
 .static-cdn-lib
+.static-cdn-lib.json

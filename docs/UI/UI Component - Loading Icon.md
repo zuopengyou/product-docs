@@ -12,9 +12,9 @@
 
 # 加载图属性
 
-![](static/boxcn6Qbx3hqC6rqPSHeu1p47iw.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6Qbx3hqC6rqPSHeu1p47iw.png)
 
-![](static/boxcnHef13XPCNxShFmcQZUjvnh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHef13XPCNxShFmcQZUjvnh.png)
 
 - 图片数量
 
@@ -23,7 +23,7 @@
 
   - 功能说明：加载图中的图片旋转速度
 
-![](static/boxcnvu4tg6E8Bnp2EvYkeJQtSf.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnvu4tg6E8Bnp2EvYkeJQtSf.gif)
 
 - 图片资源
 

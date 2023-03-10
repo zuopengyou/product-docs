@@ -34,7 +34,7 @@
 
 编辑器主视口中绿色区域部分为可 AI 寻路区域，通过右上方显示菜单功能，可打开/关闭主视口寻路区域的显示与隐藏。
 
-![](static/PZgnbl4mzoWsHpxBWYicEYJNnbd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/PZgnbl4mzoWsHpxBWYicEYJNnbd.png)
 
 - <strong>step.2</strong>
 
@@ -44,11 +44,11 @@
 
 请勿修改寻路区域的相关旋转属性，以免出现寻路计算异常情况。
 
-![](static/In9abyKeuoWuwjx9DpOcDBApnKe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/In9abyKeuoWuwjx9DpOcDBApnKe.png)
 
-![](static/MrwjbXr7toOajQxaeV1cp0ewnJd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/MrwjbXr7toOajQxaeV1cp0ewnJd.png)
 
-![](static/Me8bbtk4BotxKixyR8CcA2tCnQc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/Me8bbtk4BotxKixyR8CcA2tCnQc.png)
 
 - <strong>step.3</strong>
 
@@ -56,32 +56,32 @@
 
 设置参数以需要使用寻路功能的对象为参照，比如默认大小的角色或 NPC 使用寻路时，寻路参数可以直接使用默认值，以保证角色或 NPC 对象导航时不会被阻挡。如果是体形较大或较小的对象使用寻路，可以适当调整胶囊半径、高度等参数，使寻路区域计算更加精准。
 
-![](static/GC9EbbWEWosIKexg5CYc8NOYnkc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/GC9EbbWEWosIKexg5CYc8NOYnkc.png)
 
 # 如何使用寻路区域修饰
 
 在创建寻路区域后，图中可寻路的区域内有 AB 两个路口允许通行。
 
-![](static/D0D7bj8tFooxC0x6eHKct8Uknvh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/D0D7bj8tFooxC0x6eHKct8Uknvh.png)
 
 - <strong>step.1</strong>
 
 在编辑器左侧【游戏功能对象】选项中，找到【寻路区域修饰】，拖拽到主视口，放置在 A 路口。
 
-![](static/H0twbFvexo8fF7xApFbcgE7Jn3e.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/H0twbFvexo8fF7xApFbcgE7Jn3e.png)
 
 - <strong>step.2</strong>
 
 通过修改寻路动态修改区域的类型属性，可以改变寻路区域是否允许通行。
 
-![](static/K494b51ABo7zwtxrolpc6u4Pnnd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/K494b51ABo7zwtxrolpc6u4Pnnd.png)
 
 | 区域类型  | 说明                                                                                                                                                                                                                                                                                                                                                            |
 | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Null      | 无效区-会在此处绘制出一个不可通行的区域，AI 无法通过寻路功能经过该区域。<br/>![](static/T933bFm9to1SYwxYukPcB8rSnRf.png)                                                                                                                                                                                                                                        |
-| Default   | 默认区-AI 可以在该区域内正常使用寻路功能。<br/>![](static/HTtvbCzLooCYBmxnHPFcfckmn9d.png)                                                                                                                                                                                                                                                                      |
-| LowHeight | 低高度区-代表这是一个因不符合条件而无法通行的区域，可用于高度较低的区域，例如桥底、洞穴等场景，寻路区域不会在此空间内产生寻路数据。<br/><br/>![](static/Fqa3bJFIvoh6wVxU4IlcJ5FGnt4.png)                                                                                                                                                                        |
-| Obstacle  | 障碍区-代表这是一个需要符合通过条件的区域，只有当前寻路区域内没有其他可行动的路线时，才会考虑经过这里。<br/><br/>当寻路区域内有多条可通往目标点的路径时，AI 会避开障碍区进行寻路。<br/>![](static/NHE8bo5Ltoxxcpx08cncfmO1nob.png)<br/><br/>当寻路区域内仅有一条可通往目标点的路径时，AI 会穿过障碍区进行寻路。<br/>![](static/Lp1Kb35SEoZRwdxCSBacxnoYnWd.png) |
+| Null      | 无效区-会在此处绘制出一个不可通行的区域，AI 无法通过寻路功能经过该区域。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/T933bFm9to1SYwxYukPcB8rSnRf.png)                                                                                                                                                                                                                                        |
+| Default   | 默认区-AI 可以在该区域内正常使用寻路功能。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/HTtvbCzLooCYBmxnHPFcfckmn9d.png)                                                                                                                                                                                                                                                                      |
+| LowHeight | 低高度区-代表这是一个因不符合条件而无法通行的区域，可用于高度较低的区域，例如桥底、洞穴等场景，寻路区域不会在此空间内产生寻路数据。<br/><br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/Fqa3bJFIvoh6wVxU4IlcJ5FGnt4.png)                                                                                                                                                                        |
+| Obstacle  | 障碍区-代表这是一个需要符合通过条件的区域，只有当前寻路区域内没有其他可行动的路线时，才会考虑经过这里。<br/><br/>当寻路区域内有多条可通往目标点的路径时，AI 会避开障碍区进行寻路。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/NHE8bo5Ltoxxcpx08cncfmO1nob.png)<br/><br/>当寻路区域内仅有一条可通往目标点的路径时，AI 会穿过障碍区进行寻路。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/Lp1Kb35SEoZRwdxCSBacxnoYnWd.png) |
 
 # 如何让主角（Player）使用寻路区域
 
@@ -131,7 +131,7 @@ export default class PlayerMoveTo extends Core.Script {
 
 在场景中创建一个人形对象
 
-![](static/I4epbyRNToqjlYx9cpQcaE2vnDi.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/I4epbyRNToqjlYx9cpQcaE2vnDi.png)
 
 - <strong>step.3</strong>
 
@@ -186,15 +186,15 @@ export default class NewScript1 extends Core.Script {
 
 1.在[世界设置]-[寻路设置]中打开动态寻路；
 
-![](static/Cly0bNOUuo8uWYxcEthcmhRGnpg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/Cly0bNOUuo8uWYxcEthcmhRGnpg.png)
 
 2.在场景中放置寻路动态修饰区对象做为路障；
 
-![](static/Y836b9ftwoSFZqxQa64ccaLMn8b.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/Y836b9ftwoSFZqxQa64ccaLMn8b.png)
 
 3.将寻路动态修饰区属性设置为默认
 
-![](static/OxwGbuJVKoqRQDxmYCOc4fLqnSb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/OxwGbuJVKoqRQDxmYCOc4fLqnSb.png)
 
 4.创建一个脚本，来动态控制寻路动态修饰区
 
@@ -235,6 +235,6 @@ export default class Nav extends Core.Script {
 
 在编辑器的视口设置中，可以开启/关闭显示主场景中的寻路区域；
 
-![](static/Lyo2bhaVNonfAax3Kd3cbOZ6nhh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/Lyo2bhaVNonfAax3Kd3cbOZ6nhh.png)
 
 寻路区域最大使用面积不要超过 21 平方千米

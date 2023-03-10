@@ -72,7 +72,7 @@
 
 在编辑器左侧【游戏功能对象】选项中，找到【运动功能对象】，点击其中的【运动器】，拖拽到主视口中想要实现运动效果的对象子级，即可完成创建。
 
-![](static/boxcnIfVMD8DhAuFXv26FiRaqhb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIfVMD8DhAuFXv26FiRaqhb.png)
 
 # 运动器高级使用方法
 
@@ -142,4 +142,4 @@ setTimeout(() => {
 
 在[本地资源库]-[预制体]-[机关]分类资源中，提供了部分运动器机关资源，可以直接拖拽到场景中使用。
 
-![](static/boxcn0ehbljCTDTyZ9xtueRiFzb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0ehbljCTDTyZ9xtueRiFzb.png)

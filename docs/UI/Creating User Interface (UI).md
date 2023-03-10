@@ -8,22 +8,22 @@
 
 <strong>游戏界面</strong>指游戏软件的用户界面，包括游戏画面中的按钮、动画、文字、声音、窗口等与游戏用户直接或间接接触的游戏设计元素。
 
-![](static/boxcn6TY4Vc2JZhdHggVhlFS6Yd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6TY4Vc2JZhdHggVhlFS6Yd.png)
 
 # 如何创建游戏界面？
 
 - 首先在工程内容库中创建新的 UI 文件：点击工程内容的 UI 页签，点击新建 UI 按钮
 
-![](static/boxcnL9xvf1LdabFWSFxh1QMtdp.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnL9xvf1LdabFWSFxh1QMtdp.png)
 
 - 然后双击打开新创建的 UI 文件，会弹出 UI 编辑器
 - 我们可以在 UI 编辑器中制作理想的游戏界面，并点击保存，即可保存此 UI 文件
 
-![](static/boxcnpDtLBcodQqBpzQqxjwbeSm.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnpDtLBcodQqBpzQqxjwbeSm.png)
 
 #### UI 编辑器模块说明：
 
-![](static/boxcnIm5u7XnzhGW34v31eqf49c.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIm5u7XnzhGW34v31eqf49c.png)
 
 - UI 编辑器包括工具栏、系统 UI 组件和自定义 UI 列表、设计器、对象列表、属性面板、本地资源库、脚本列表：
 
@@ -43,7 +43,7 @@
 - 我们在分析出一个 UI 的所有基本组件后，就可以将相应的组件拖入主视口内进行拼接 UI。
 - 例如我们想要拼接一个选择性别的界面。
 
-![](static/boxcncPgfJH6lGczWN9Wjdebwrh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncPgfJH6lGczWN9Wjdebwrh.png)
 
 - 首先我们拖入一个图片组件，作为界面的背景。
 
@@ -51,7 +51,7 @@
   - 将对齐修改为水平方向为中心对齐，垂直方向为顶端对齐，方便界面适配；
   - 设置图片的样式。将资源库中的 UI 资源拖入到图片中，修改图片表现样式。
 
-![](static/boxcnjhS4e0az18uIVaDsAX8H7c.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjhS4e0az18uIVaDsAX8H7c.png)
 
 - 其次我们拖入一个文本组件，作为界面的文字介绍。
 
@@ -60,7 +60,7 @@
   - 设置文本内容，将文本修改为“请选择你的性别”，大小设置为 24；
   - 设置文本样式，将文本颜色修改为黑色，对齐方式修改为居中。
 
-![](static/boxcnO4gd8PpMWzg4X2PzC6zwSd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnO4gd8PpMWzg4X2PzC6zwSd.png)
 
 - 然后我们拖入三个按钮组件，作为性别选项和确认功能的 UI，这样就完成了初步的 UI 拼接。
 
@@ -69,7 +69,7 @@
   - 再拖入一个文本组件挂在确认按钮下，并将文本修改为“确认”，大小设置为 24；
   - 设置按钮的图片样式，将资源库中的 UI 资源拖入到图片中，修改图片。
 
-![](static/boxcnQnNwHToBWXzeIjU3tl7vgd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQnNwHToBWXzeIjU3tl7vgd.png)
 
 #### 
 
@@ -83,15 +83,15 @@
 
   - 使用这种方式不需要在脚本中编写如何添加 UI，进入游戏后，对象列表中存在的 UI 对象会自动添加到游戏场景中
 
-![](static/boxcnDCCIrwapz8gnFltfstOTxg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnDCCIrwapz8gnFltfstOTxg.png)
 
 - 如果想要为 UI 文件编写逻辑（例如用按钮执行跳跃/选择性别），首先我们需要创建一个新的 UI 脚本。
 
-![](static/boxcnEqnvluM4lJdtqUaPiSyKRb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnEqnvluM4lJdtqUaPiSyKRb.png)
 
 - 打开刚才拼好的 UI 文件，在其根目录 Root 的属性下，将 UI 脚本拖入属性栏，完成 UI 脚本与 UI 文件的绑定。
 
-![](static/boxcnAUFsMbAzA2Eo0bup5Hv2ab.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnAUFsMbAzA2Eo0bup5Hv2ab.png)
 
 - 最后点击 UI 编辑器菜单栏的【打开脚本】按钮，或者双击【工程内容】-【脚本】中新建的 UI 脚本，打开此 UI 文件所绑定的 UI 脚本，就可以编写相关的 UI 逻辑。
 
@@ -166,23 +166,23 @@ export default class NewScript extends Core.Script {
   - 在前文中，我们使用 findChildByPath 函数用路径到了 UI 对象中的各个 UI 组件；
   - 而除了用 findChildByPath 函数逐一获取 UI 组件，还可以使用 UI 编辑器工具栏中的【导出所有脚本】和【UI 脚本模板】功能高效的自动导出获取 UI 组件的脚本
 
-![](static/boxcng1SWYDyTQp5WUnmK1f81ff.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcng1SWYDyTQp5WUnmK1f81ff.png)
 
-![](static/boxcnQJcOIgIJLPK4d9bWmE0H2g.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQJcOIgIJLPK4d9bWmE0H2g.png)
 
 - 导出所有脚本：
 
   - 点击【导出所有脚本】按钮后，会弹出提示已导出成功的弹窗，同时把项目中所有 UI 文件内以小写开头的 UI 组件信息自动导入到名称为"UI 文件名-generate"的脚本中完成声明，这些脚本将存放在 ui-generate 文件夹内
 
-![](static/boxcnGNDeKEB6oA6FQhxVsxWcxd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGNDeKEB6oA6FQhxVsxWcxd.png)
 
-![](static/boxcnrtRy3RmdRV7R8KWBaEzSRe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrtRy3RmdRV7R8KWBaEzSRe.png)
 
-![](static/boxcnRyKZ441cQ81iUbw5NkFswc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnRyKZ441cQ81iUbw5NkFswc.png)
 
 - 完成导出后，请将 UI 文件所绑定的 UI 脚本修改为继承"UI 文件名-generate"脚本，之后就可以在 UI 文件所绑定的 UI 脚本中直接使用 UI 组件，无需再逐个使用 findChildByPath 函数获取 UI 组件
 
-![](static/boxcnmKvJyUYoYNgMLjfXCgixTb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmKvJyUYoYNgMLjfXCgixTb.png)
 
 - 注意请勿在"UI 文件名-generate"脚本内编写逻辑，每次执行【导出所有脚本】会重新导出所有 UI 组件信息，并且覆盖掉当前 ui-generate 文件夹内的全部脚本
 - UI 脚本模板：

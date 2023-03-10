@@ -10,7 +10,7 @@
 
 # 编辑器设置都包含什么
 
-![](static/boxcn6VgmSEWaoMU2YCWIUuVqvc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6VgmSEWaoMU2YCWIUuVqvc.png)
 
 # 如何使用编辑器设置
 
@@ -23,9 +23,9 @@
 
 重力设置是设定当前世界内场景空间的重力值
 
-![](static/boxcnB6Hj8Nz93OWaYgSo9K1fsd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnB6Hj8Nz93OWaYgSo9K1fsd.png)
 
-![](static/boxcn6y6O0BRK9neLGHGgoo6qxd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6y6O0BRK9neLGHGgoo6qxd.png)
 
 - <strong>重力模式</strong>
 
@@ -44,9 +44,9 @@
 
 玩家设置是设置当前工程游戏一个游戏房间内的<strong>玩家数量上限</strong>与<strong>预留玩家数量</strong>
 
-![](static/boxcnJm3D9cOmWY9w5qI4GVnSsb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJm3D9cOmWY9w5qI4GVnSsb.png)
 
-![](static/boxcna4Pia7KqwXtj8RwpqQK5Dg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcna4Pia7KqwXtj8RwpqQK5Dg.png)
 
 - <strong>玩家数量上限</strong>
 
@@ -85,9 +85,9 @@
 
 自动备份是指工程文件开启自动备份功能后，每达到设置的备份时间间隔进行的自动备份操作。
 
-![](static/boxcniy3Vif9tz6i55bp4Iqi1Ib.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcniy3Vif9tz6i55bp4Iqi1Ib.png)
 
-![](static/boxcnExp9Y8McIBIiS1IpoWHKUg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnExp9Y8McIBIiS1IpoWHKUg.png)
 
 - <strong>自动备份开关</strong>
 
@@ -106,7 +106,7 @@
 
 - 支持用户自定义更改文件保存路径
 
-![](static/boxcn1r412aF9zRbEs92Xc2W4Wg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1r412aF9zRbEs92Xc2W4Wg.png)
 
 ### 3.2.2 快捷键
 
@@ -123,9 +123,9 @@
 - <strong>旋转模式</strong>：R
 - <strong>工具模式切换</strong>（三种模式间的相互切换）：空格键
 
-![](static/boxcn0qIfkm9tbAtjaKnQv8IuAk.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0qIfkm9tbAtjaKnQv8IuAk.png)
 
-![](static/boxcnjhZCe6YyZGvbzOOCqqkyHh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjhZCe6YyZGvbzOOCqqkyHh.png)
 
 #### 3.2.2.2 对象操作
 
@@ -149,9 +149,9 @@
 - <strong>移动对象至摄像机所在位置</strong>：Ctrl+W
 - <strong>旋转对象至摄像机所对朝向</strong>：Ctrl+E
 
-![](static/boxcnjy9JDcFUNnZuWgwwEJTtvc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjy9JDcFUNnZuWgwwEJTtvc.png)
 
-![](static/boxcnnfWdDlP4uJmhXay87dzeib.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnfWdDlP4uJmhXay87dzeib.png)
 
 #### 3.2.2.3 测试
 
@@ -160,9 +160,9 @@
 - <strong>出生点运行</strong>（起始位置为出生点的运行模式）：F5
 - <strong>摄像机运行</strong>（起始位置为摄像机位置的运行模式）：F6
 
-![](static/boxcnbYV6zGqYDgJU6s5ozi4vCe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbYV6zGqYDgJU6s5ozi4vCe.png)
 
-![](static/boxcn95AQjYING0DeeNBk578zEe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn95AQjYING0DeeNBk578zEe.png)
 
 #### 3.2.2.4 摄像机移动
 
@@ -177,9 +177,9 @@
 - <strong>FOV 放大</strong>（摄像机视角推进）：RightMouse+C
 - <strong>FOV 缩小</strong>（摄像机视角推远）：RightMouse+Z
 
-![](static/boxcn7VGDeGhQWZbjhptyzLEyef.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn7VGDeGhQWZbjhptyzLEyef.png)
 
-![](static/boxcnIYOMNBLwBwrTjCcCv9XY9f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIYOMNBLwBwrTjCcCv9XY9f.png)
 
 #### 3.2.2.5 其他
 
@@ -187,7 +187,7 @@
 
 - <strong>新建</strong>（退出当前工程编辑界面，返回工程选择界面，新建空工程）：Ctrl+Alt+N
 
-![](static/boxcnfURZeUurZiQXq3l5Gu0fqg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfURZeUurZiQXq3l5Gu0fqg.png)
 
 ### 3.3.3 语言设置
 
@@ -198,9 +198,9 @@
   - 中文
   - 英文
 
-![](static/boxcnv2k7LcUDfXf7UsNy6zwQff.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnv2k7LcUDfXf7UsNy6zwQff.png)
 
-![](static/boxcnV7q197ClcHbLyeZywxKtIb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnV7q197ClcHbLyeZywxKtIb.png)
 
 ### 3.3.4 画质分级模拟
 
@@ -212,9 +212,9 @@
 
   - 开发者可以在主视口、PIE 下模拟不同画质分级的显示效果。
 
-![](static/boxcnMG86zORxZHJDvOZcNhmpMb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMG86zORxZHJDvOZcNhmpMb.png)
 
-![](static/boxcnyIFMyR8cr4SCGpVcvxLVbe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnyIFMyR8cr4SCGpVcvxLVbe.png)
 
 Editor 画质分级模拟中分为<strong>GPU</strong>性能分级和<strong>CPU</strong>性能分级。
 
@@ -233,7 +233,7 @@ Editor 画质分级模拟中分为<strong>GPU</strong>性能分级和<strong>CPU
     - 9 级（匹配用户约 2%）
     - 电影画质
 
-![](static/boxcny3SRjS7s3KJykoXEMKZ7Ze.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcny3SRjS7s3KJykoXEMKZ7Ze.png)
 
 - <strong>CPU 性能分级</strong>
 
@@ -250,7 +250,7 @@ Editor 画质分级模拟中分为<strong>GPU</strong>性能分级和<strong>CPU
     - 9 级（匹配用户约 7%）
     - 电影画质（匹配用户约 1%）
 
-![](static/boxcnIZYn5ZZVb7gobzaOpd56Lh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIZYn5ZZVb7gobzaOpd56Lh.png)
 
 - Editor 画质模拟中，GPU 性能分级和 CPU 性能分级<strong>默认为电影画质</strong>。
 
@@ -262,9 +262,9 @@ Editor 画质分级模拟中分为<strong>GPU</strong>性能分级和<strong>CPU
 
   - 新增 Mobile 备用画质，在玩家的机型没有匹配到画质时，启动开发者自定义的备用画质。
 
-![](static/boxcnnqqjOD2UDiU5GNmGoTnSCc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnqqjOD2UDiU5GNmGoTnSCc.png)
 
-![](static/boxcnn8wc9KiL2tBMhLWPw17BlX.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnn8wc9KiL2tBMhLWPw17BlX.png)
 
 - GPU 性能分级和 CPU 性能分级选项<strong>同上</strong>
 - Mobile 备用画质中，GPU 性能分级和 CPU 性能分级<strong>默认为 1 级</strong>。

@@ -15,7 +15,7 @@
 
 游泳区域在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是游泳区域，资源 ID 为 SwimmingVolume。
 
-![](static/boxcnklFus3V8nCK4WifzRBToth.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnklFus3V8nCK4WifzRBToth.png)
 
 # 游泳区域 都包含什么
 
@@ -40,13 +40,13 @@
 
 流体摩擦力：角色在游泳区域内的摩擦力，影响角色移动的加速度
 
-![](static/boxcnr8sJkckAKL6jAXzrLm2APh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnr8sJkckAKL6jAXzrLm2APh.png)
 
 1. <strong>创建控制游泳区域的脚本，可以拖入对象栏，也可以挂在游泳区域底下。</strong>
 
 如果是挂在<strong>游泳区域</strong>底下，可能会出现提示：挂载失败，脚本无法挂载到消静态对象上，将状态修改为动态即可。关于动静态的更多含义请参照其他文档。
 
-![](static/boxcn9hT5cYmMMIqI7WmoDMqxFd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9hT5cYmMMIqI7WmoDMqxFd.png)
 
 1. <strong>控制角色上浮下沉，获取角色游泳状态</strong>
 
@@ -105,7 +105,7 @@ export default class VehicleTS extends Core.Script {
 
 1. 将游泳区域拖入优先加载栏，或者在代码中预加载游泳区域的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
 
-![](static/boxcn215NoQaq16yYmMniS2xmKf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn215NoQaq16yYmMniS2xmKf.png)
 
 ```ts
 @Core.Property()

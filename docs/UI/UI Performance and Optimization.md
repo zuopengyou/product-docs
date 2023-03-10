@@ -8,27 +8,27 @@
 
 OPPOA57 屏幕分辨率为：1280x720，而下面两张图原始分辨率分别为：3380x1565 和 1280x593；当贴图分辨率大于手机实际分辨率时，将不会有任何效果提升，因此建议单张贴图分辨率建议不超过 1280x720。
 
-![](static/boxcnvOwQWe1TzgZeWMvaXHd28b.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnvOwQWe1TzgZeWMvaXHd28b.png)
 
-![](static/boxcn8tCSUwh1oQxgZqTvPys90f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8tCSUwh1oQxgZqTvPys90f.png)
 
 ### 尽量贴近屏幕真实显示尺寸制作贴图尺寸
 
 下图中左上角的骷髅图标实际显示尺寸是 107x101。
 
-![](static/boxcnyyZchl73WSuPdimKYdSH3e.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnyyZchl73WSuPdimKYdSH3e.png)
 
 而这张贴图的原始尺寸是 324x324，就这张贴图而言，实际会有约 10 倍的内存多余占用。因此，建议尽量贴近屏幕真实显示尺寸制作贴图尺寸。
 
-![](static/boxcnr8rarmHbqRUh26vYjtTFuh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnr8rarmHbqRUh26vYjtTFuh.png)
 
 ### 合理使用拆分重用原则
 
 左图是一张整图，而这张整图可以使用右图进行【旋转】拼接成左一图；由此可见，合理的拆分重用一张整图能节省内存。
 
-![](static/boxcn1tFiEncnmtzaeVZXGOvc8b.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1tFiEncnmtzaeVZXGOvc8b.png)
 
-![](static/boxcnbqvJnnlmh4rUfVVL8mLRHb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbqvJnnlmh4rUfVVL8mLRHb.png)
 
 ### 合理使用图片的绘制类型
 
@@ -40,29 +40,29 @@ OPPOA57 屏幕分辨率为：1280x720，而下面两张图原始分辨率分别�
 
 以下这些图都是一个游戏中的不同 UI 贴图（类似的还有很多）。
 
-![](static/boxcnXR3ZqZ39u4Ca4v7NxZUlhe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnXR3ZqZ39u4Ca4v7NxZUlhe.png)
 
 3324x1378
 
-![](static/boxcnYxdSfwalshTJxWLcN6uERe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYxdSfwalshTJxWLcN6uERe.png)
 
 1734x1370
 
-![](static/boxcnefOnO2Meec4bdkRR493foh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnefOnO2Meec4bdkRR493foh.png)
 
 1734x1370
 
-![](static/boxcnp1MEeq9tv9xKEivrhvmUGc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnp1MEeq9tv9xKEivrhvmUGc.png)
 
 1734x1370
 
 而事实上，只需要用到下面两张图，并且合理利用拆分重用原则、九宫格绘制类型、再加上修改图片颜色就可以组合出上面所有图的样子，这将能节省上千倍的内存占用。
 
-![](static/boxcndGDbw669P12PWiGFKqNowh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcndGDbw669P12PWiGFKqNowh.png)
 
 198x127
 
-![](static/boxcnxNFo7sw0Tu8SPMqxEUCHEb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxNFo7sw0Tu8SPMqxEUCHEb.png)
 
 100x100
 

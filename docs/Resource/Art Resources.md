@@ -1,6 +1,6 @@
 # 美术资源
 
-![](static/boxcnKOHfF61LEUAcfBGDB0mi1g.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKOHfF61LEUAcfBGDB0mi1g.png)
 
 # 美术资源简介
 
@@ -16,13 +16,13 @@
 - 主编辑器运行时从本地资源库拖拽至视口或者对象管理器内
 ```
 
-![](static/boxcnUKeT5bGPMzo8tsjv4rPPRb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnUKeT5bGPMzo8tsjv4rPPRb.png)
 
 ```ts
 - 脚本、动态加载调用
 ```
 
-![](static/boxcnVBcIzW21ImimJerhEO2Yyg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnVBcIzW21ImimJerhEO2Yyg.png)
 
 # 本地资源库使用指南
 
@@ -32,7 +32,7 @@
 - 本地资源库常驻在编辑器主界面左侧
 ```
 
-![](static/boxcntxWyYCUMS8Z4j7uGZ0Kuzc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntxWyYCUMS8Z4j7uGZ0Kuzc.png)
 
 ## 本地资源库功能说明
 
@@ -56,7 +56,7 @@
 - 没有骨骼信息，不具备播放动画功能的模型资源，例如房屋、砖石、自然景观等
 ```
 
-![](static/boxcnsPubTIHILoUMnKvH4gUjWh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnsPubTIHILoUMnKvH4gUjWh.png)
 
 ## 骨骼模型
 
@@ -64,7 +64,7 @@
 - 带有骨骼信息，开发者可通过脚本等程序方式控制播放动画的模型资源，例如载具、动物、怪物等
 ```
 
-![](static/boxcnt69NNic0QowhMhyisfpqrc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnt69NNic0QowhMhyisfpqrc.png)
 
 ## 预制体
 
@@ -72,7 +72,7 @@
 - 预制体是开发者根据设计目的，在编辑器中使用模型、特效、UI、脚本等资源进行组合制作的高级资源，本身可能带有功能，也可能是静态模型组合而成
 ```
 
-![](static/boxcnOvVGmTQKdIvJJcOiKVExph.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOvVGmTQKdIvJJcOiKVExph.png)
 
 ## 材质
 
@@ -82,7 +82,7 @@
 - 材质不可以单独存在，必须依赖模型，具体表现由搭配的贴图决定
 ```
 
-![](static/boxcnvX8s0xug8zYU8SQU3po3ac.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnvX8s0xug8zYU8SQU3po3ac.png)
 
 ## 场景贴图
 
@@ -94,7 +94,7 @@
 - 场景贴图只可拖拽至场景物件中的材质的贴图插槽上使用
 ```
 
-![](static/boxcnu8odDwuOl1kzIcmZrMXrPh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnu8odDwuOl1kzIcmZrMXrPh.png)
 
 ## UI 贴图
 
@@ -106,7 +106,7 @@
 - UI贴图只可拖拽至UI编辑器中使用
 ```
 
-![](static/boxcnQro9586enyIgnwoTrd7RQf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQro9586enyIgnwoTrd7RQf.png)
 
 ## 天空球贴图
 
@@ -116,7 +116,7 @@
 - 天空球贴图不可以单独存在，只可拖拽至天空盒对象中使用
 ```
 
-![](static/boxcnzXLRHfGQAJNskhseVgPHZd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnzXLRHfGQAJNskhseVgPHZd.png)
 
 ## 动画姿态
 
@@ -126,7 +126,7 @@
 - 当前版本中动画姿态只可通过脚本调用
 ```
 
-![](static/boxcnZ8GqDe1usK7c5t0w8Oqv7c.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZ8GqDe1usK7c5t0w8Oqv7c.png)
 
 ## 动画
 
@@ -136,7 +136,7 @@
 - 动画不可以单独存在，只可拖拽至角色编辑器中使用
 ```
 
-![](static/boxcn9BfIhJnU7HFWrETjFZCjKh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9BfIhJnU7HFWrETjFZCjKh.png)
 
 ## 粒子特效
 
@@ -144,7 +144,7 @@
 - 带有粒子系统的特效资源，可以拖拽至场景里使用，也可以通过脚本、预制体等工具与其他资源或者逻辑一起使用
 ```
 
-![](static/boxcnTZzxSYxbWtZIMyGsfF13Fu.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTZzxSYxbWtZIMyGsfF13Fu.png)
 
 ## 音效
 
@@ -152,7 +152,7 @@
 - 声音资源，可以拖拽至场景里使用，也可以通过脚本、预制体等工具与其他资源或者逻辑一起使用
 ```
 
-![](static/boxcnBF9ZVVN2KRyYHJGf8zBttc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnBF9ZVVN2KRyYHJGf8zBttc.png)
 
 ## 角色换装资源
 
@@ -160,4 +160,4 @@
 - 角色部位资源，可以拖拽至场景里使用，也可以通过脚本、预制体等工具与其他资源或者逻辑一起使用，主要应用在角色编辑器中
 ```
 
-![](static/boxcneqXFfLavNnRsdg1mXruhzc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcneqXFfLavNnRsdg1mXruhzc.png)

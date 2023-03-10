@@ -12,11 +12,11 @@
 
 1. 功能入口：工具栏——游戏本地化
 
-![](static/boxcn9yC6ibcjdp0OW1zCyYAuMg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9yC6ibcjdp0OW1zCyYAuMg.png)
 
 - 收集文本：
 
-![](static/boxcnm8IcZ1HNQ0pPVpfx0X5VPb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnm8IcZ1HNQ0pPVpfx0X5VPb.png)
 
 - 收集所有的 key，并更新当前配置表的 key
 
@@ -27,7 +27,7 @@
 
   - 方法一：勾选 UI 组件的本地化
 
-![](static/boxcnYjwSCkCXjw9JC0rfB4PUZe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYjwSCkCXjw9JC0rfB4PUZe.png)
 
 ```ts
 - 备注：老项目用以下脚本刷一下使得UI组件自动录入本地化字段
@@ -35,7 +35,7 @@
   - 使用方法：放入MetaworldSaved目录下，运行将刷新所有项目
 ```
 
-![](static/boxcns3Wgsow10ns5CHpCOLoKge.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcns3Wgsow10ns5CHpCOLoKge.png)
 
 ```ts
 - 方法二：通过Util.LanguageUtil.locText("Key")函数来使得此文本能够本地化
@@ -47,7 +47,7 @@
 
   - 选择一种语言后，下方文本配置表显示对应语言的配置
 
-![](static/boxcnDxewExYl6qHcGM5LxTsttg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnDxewExYl6qHcGM5LxTsttg.png)
 
 - 第一版暂时只做了中、英、葡萄牙语，若有需求后续可添加
 - 自动翻译：将所有当前所选支持语言下未配置的文本进行自动翻译，当前版本暂不支持
@@ -58,7 +58,7 @@
   - 配置信息为左侧 key 值的翻译，若不翻译，则在游戏中默认显示 key 值本身
 - 页码逻辑：
 
-![](static/boxcn8INbpN923cbMxoEMykYudg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8INbpN923cbMxoEMykYudg.png)
 
 - 点击向前/向后按钮，页码向前/向后加一
 - 点击页码，跳转至该页码
@@ -68,11 +68,11 @@
   - 若输入数字超过当前页码范围，点击空白处时则不生效，并清空输入
 - 若当前转换文本下存在 XX 条未翻译的文本，弹窗左下角显示“剩余 XX 条待配置的信息”
 
-![](static/boxcnSiDS1eBEmYtwT80RStXi5e.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSiDS1eBEmYtwT80RStXi5e.png)
 
 - 若当前转换文本下所有 key 值均被翻译，表格显示“当前语言已全部配置”
 
-![](static/boxcnxVlpubTWTB1Hk4Go87Ezbe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxVlpubTWTB1Hk4Go87Ezbe.png)
 
 - 配置表的导入与导出
 
@@ -94,20 +94,20 @@
 - 导入将覆盖编辑器中的语言表
 - eg：将下表导入后语言配置表显示如图
 
-![](static/boxcnGoezQm2sbdaC2WinZY3EOe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGoezQm2sbdaC2WinZY3EOe.png)
 
-![](static/boxcnj3bcxFvQ6LaTpb78zOJrih.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnj3bcxFvQ6LaTpb78zOJrih.png)
 
-![](static/boxcnHzI8sek4mjItTNm6Gzn1Sf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHzI8sek4mjItTNm6Gzn1Sf.png)
 
-![](static/boxcn09tD8H3li0Ee5Iqh7arxUe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn09tD8H3li0Ee5Iqh7arxUe.png)
 
 - 应用、取消按钮
 
   - 点击应用按钮，将配置信息保存至工程
   - 点击取消按钮，将校验有无未保存的配置项，如果没有则退出，如果有则弹出弹窗提示
 
-![](static/boxcnUNCZFJS4GNIzsedpJCki1b.jpg)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnUNCZFJS4GNIzsedpJCki1b.jpg)
 
 ```ts
 - 点击确认按钮，关闭本地化页面，并清空未保存的所有配置项
@@ -129,11 +129,11 @@
 
 配置表信息如下：
 
-![](static/boxcnJs7qiotdVcD6ZP0bslLfjb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJs7qiotdVcD6ZP0bslLfjb.png)
 
-![](static/boxcnaFqrmed5zdVI1po4tkudDc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnaFqrmed5zdVI1po4tkudDc.png)
 
-![](static/boxcnKfAg17OJM5McyYtfqA76Wb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKfAg17OJM5McyYtfqA76Wb.png)
 
 对应逻辑代码如下：
 
@@ -155,7 +155,7 @@ Util.LanguageUtil.useLocalizedLanguage(LanguageType.Chinese)
 
 配置表信息如下：
 
-![](static/boxcnV80dktg8mwGzJ4PX4il62e.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnV80dktg8mwGzJ4PX4il62e.png)
 
 对应逻辑代码如下：
 

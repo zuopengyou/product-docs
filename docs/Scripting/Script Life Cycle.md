@@ -123,11 +123,11 @@ export default class TestScript extends Core.Script {
 
 ### 客户端 Log：
 
-![](static/boxcnncIR1zRDmK2U2Ck6batn8d.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnncIR1zRDmK2U2Ck6batn8d.png)
 
 ### 服务端 Log：
 
-![](static/boxcnwGBQL0XZ63UlqF45xdBYId.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwGBQL0XZ63UlqF45xdBYId.png)
 
 # 如何合理利用脚本的生命周期
 

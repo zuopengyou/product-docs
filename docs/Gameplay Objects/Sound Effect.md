@@ -8,9 +8,9 @@
 
 【音效对象】是在项目中播放音频的对象。编辑器为资源库中的每个音频资源分配一个唯一的资源 ID，你可以将它指定给一个【音效对象】来播放。你可以自定义【音效对象】的相关属性使音频资源按照预想的方式进行播放，例如将它设置为在游戏开始后自动播放。你也可以通过脚本调用 API 去播放。在【资源库】中可以搜索并使用各种免费的音频资源，将音频资源拖入场景后会自带一个对应的【音效对象】。你也可以在【游戏功能对象】栏目中找到【音效对象】。
 
-![](static/boxcnWNk5utylw9r12irv6Fx2sc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWNk5utylw9r12irv6Fx2sc.png)
 
-![](static/boxcnBeROIotVZU6Dsd3VLFfJTe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnBeROIotVZU6Dsd3VLFfJTe.png)
 
 # 创建音效对象
 
@@ -20,19 +20,19 @@
 
 1. 在【资源库】中搜索你想要的音频资源或者在功能对象中找到【音效对象】
 
-![](static/boxcnVOqSGY0Ro1xRTngreNfuxc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnVOqSGY0Ro1xRTngreNfuxc.png)
 
-![](static/boxcnSl3AnRtbypz3aR3oC1aRTg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSl3AnRtbypz3aR3oC1aRTg.png)
 
 1. 将对象拖入到场景中或者【对象管理器】下
 
-![](static/boxcn8C5yhiwnmoW7VUNHlILdpg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8C5yhiwnmoW7VUNHlILdpg.png)
 
 1. 在右侧【对象管理器】中【对象】栏找到对应的【音效对象】并进行自定义
 
-![](static/boxcnnfp1ZlH8S2LuSeJC2rotac.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnfp1ZlH8S2LuSeJC2rotac.png)
 
-![](static/boxcnEq9zgni1arVWe7MPoErYQg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnEq9zgni1arVWe7MPoErYQg.png)
 
 ## 通过脚本创建：
 
@@ -49,7 +49,7 @@ if(SystemUtil.isClient()) {
 
 此处我们也可以通过 `spawnGameObject` 接口生成，但是需要将对应音频资源拖入【优先加载栏】或者将音频资源进行【预加载】来保证生成后我们不需要等待音频资源下载超时而导致后续代码失效。
 
-![](static/boxcnSLOMTOGU5hXf7OlUKIcuWg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSLOMTOGU5hXf7OlUKIcuWg.png)
 
 ```ts
 // 预加载资源，将下列代码粘贴到脚本中的onStart方法之前
@@ -73,7 +73,7 @@ preloadAssets: string = "12721"
 
 在【对象管理器】中【对象】栏找到对应的【音效对象】，选中后我们可以查看它的属性面板，通过属性面板我们可以修改【音效对象】的部分属性。如果不想在脚本中去操作【音效对象】，那么你可以在属性面板上勾选【自动启用】和【循环播放】并修改其他属性，那么当游戏运行时该【音效对象】就会自动循环播放。
 
-![](static/boxcn1S05OlfWWdC47A7anD9xYf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1S05OlfWWdC47A7anD9xYf.png)
 
 ## 音效时长
 
@@ -140,7 +140,7 @@ audio.play();
 
 音效内径 `innerRadius` 和音效外径 `outerRadius` 确定用户从空间音效感知音量的范围。这两个属性需要开启音效空间化 `spatialization` 才能生效。对于空间音效，音效内径 `innerRadius` 是当客户端的收听者远离【音效对象】时，音频音量开始减小的最小距离。即在音效内径以内，音量不会发生衰减。音效外径 `outerRadius` 属性是客户端收听者可以从听到声音的最大距离。即在音效外径以外，用户听不见声音。在音量内径 `innerRadius` 和音量外径 `outerRadius` 之间，音频音量按照音效的音量衰减方式 `attenuationDistanceModel` 属性进行衰减。
 
-![](static/boxcnNLj7pztQvgplUYAmABi3Nd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnNLj7pztQvgplUYAmABi3Nd.png)
 
 ## 音量比例
 
@@ -170,7 +170,7 @@ audio.audioAsset = "13827";
 
 1. 选中【音效对象】后右键点击【复制对象 ID】获取它的 GUID。此处注意区分音频资源的 GUID 和【音效对象】的 GUID，这两个指代的不是同一个对象。
 
-![](static/boxcnFZ5H2P2F4ka5V3HjfY0CAe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFZ5H2P2F4ka5V3HjfY0CAe.png)
 
 1. 在脚本的 onStart 方法中添加下列代码：代码将异步查找 ID 对应的对象并以【音效对象】进行接收。
 
@@ -184,13 +184,13 @@ if(SystemUtil.isClient()) {
 
 1. 选中【音效对象】，在属性面板中将静态状态取消
 
-![](static/boxcnZeqpEyAQeTftWBvgKNiiHf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZeqpEyAQeTftWBvgKNiiHf.png)
 
 1. 将脚本挂载到【音效对象】下方，此时会弹出脚本网络状态提示，点击确认即可
 
-![](static/boxcnS7tNpbmrXbOwNrCapLqAYb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnS7tNpbmrXbOwNrCapLqAYb.png)
 
-![](static/boxcn8gvExoOHQthSHdplfu4cCe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8gvExoOHQthSHdplfu4cCe.png)
 
 1. 在脚本的 onStart 方法中添加下列代码：代码获取脚本挂载的对象并以【音效对象】进行接收
 

@@ -20,15 +20,15 @@
 
 - <strong>step.1</strong> 选择一个载具骨骼模型对象，将其拖拽至主视口。
 
-![](static/boxcnau77aBiuReFEZWY25151lb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnau77aBiuReFEZWY25151lb.png)
 
 - <strong>step.2</strong> 在游戏功能对象 - 常用逻辑对象中选择“四轮载具”，将其拖拽至载具对象的子级。
 
-![](static/boxcnnnTRULxe1TLVMNnhaI2IWb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnnTRULxe1TLVMNnhaI2IWb.png)
 
 - <strong>step.3</strong> 设置四轮载具对象属性。
 
-![](static/boxcneJNZc7PwoHMJ0ex4MUfmVg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcneJNZc7PwoHMJ0ex4MUfmVg.png)
 
 | 属性            | 说明                                                                                                                    |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -50,15 +50,15 @@
 
 交互物放置在车座上，用来设置角色驾驶位置；
 
-![](static/LTDsbLzsLovyVGxcU7qcISUWnUh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/LTDsbLzsLovyVGxcU7qcISUWnUh.png)
 
 - <strong>step.5</strong> 创建一个新的 UI
 
-![](static/WSXxbkPxno8ovXxQ5Vlc0PjHn6c.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/WSXxbkPxno8ovXxQ5Vlc0PjHn6c.png)
 
 - <strong>step.6</strong> 创建控制载具的 UI 控件，对每个控件重新命名
 
-![](static/boxcn3fsLB3KTTOHQpQdbwWagCb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn3fsLB3KTTOHQpQdbwWagCb.png)
 
 - <strong>step.7 </strong>打开 UI 控制器脚本
 
@@ -276,13 +276,13 @@ export default class Vehicle4WServer extends Core.Script {
 
 - <strong>Step.9</strong>将脚本和 UI 拖拽至四轮载具逻辑对下子级
 
-![](static/TNyibKEDoox48QxIqt8clq24n9c.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/TNyibKEDoox48QxIqt8clq24n9c.png)
 
 - <strong>Step.10 </strong>调整载具摄像机
 
 选中载具摄像机，在主视口中可以调整摄像机位置，在使用四轮载具时，可以主动切换角色摄像机与四轮载具摄像机来使用。
 
-![](static/RyZKbZ1GYomXPhx7u2DcTuTknSh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/RyZKbZ1GYomXPhx7u2DcTuTknSh.png)
 
 - <strong>Step.11</strong> 运行四轮载具
 

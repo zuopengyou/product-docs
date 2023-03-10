@@ -15,7 +15,7 @@
 
 触发器在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是触发器，资源 ID 为 113。
 
-![](static/boxcn98U2h8T6lwVPeEm9MD3OJf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn98U2h8T6lwVPeEm9MD3OJf.png)
 
 # 触发器 都包含什么
 
@@ -46,15 +46,15 @@
 
 1. <strong>将触发器拖入场景并自定义它的各种属性包括父类属性：位移旋转缩放，和私有属性：形状。</strong>
 
-![](static/boxcnMtNNcbMLrPutzVqXd0QPgc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMtNNcbMLrPutzVqXd0QPgc.png)
 
 1. <strong>创建控制触发器的脚本，可以拖入对象栏，也可以挂在触发器底下。</strong>
 
-![](static/boxcnY7WoKJy706QTZ6uy0JQRRd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnY7WoKJy706QTZ6uy0JQRRd.png)
 
 <strong>如果是挂在触发器底下，可能会出现提示：挂载失败，脚本无法挂载到消静态对象上，将状态修改为动态即可。关于动静态的更多含义请参照其他文档。</strong>
 
-![](static/boxcnhm5XKv85ANxZoEBU32VGRt.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhm5XKv85ANxZoEBU32VGRt.png)
 
 1. <strong>在脚本中给触发器添加 进入 & 离去 事件，当对象进入时就会执行事件中的代码。此处我执行的是在控制台打印进去离去消息，同时通知本地 UI 进行展示。</strong>
 
@@ -135,7 +135,7 @@ setInterval(() => {
 
 1. 将触发器功能对象拖入优先加载栏，或者在代码中预加载触发器的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
 
-![](static/boxcn3FRkXhUavdfieicZUteVKh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn3FRkXhUavdfieicZUteVKh.png)
 
 ```ts
 @MWCore.MWProperty()
