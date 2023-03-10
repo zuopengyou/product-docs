@@ -13,7 +13,7 @@
 
 ### <strong>函数：</strong>
 
-#### <strong>getChildren() : Array<GameObject></strong>
+#### <strong>getChildren() : Array`<GameObject>`</strong>
 
 获取所有子物体()
 
@@ -60,7 +60,7 @@ let goByfind = Core.GameObject.find("GameObjectGUID");
 let myTrigger = Core.GameObject.find("TriggerObjGUID") as Gameplay.BoxTrigger;
 ```
 
-#### <strong>asyncFind(guid: string) : Promise<GameObject></strong>
+#### <strong>asyncFind(guid: string) : Promise`<GameObject>`</strong>
 
 异步查找当前物体 ( 物体的 GUID )
 
@@ -70,7 +70,7 @@ let myTrigger = Core.GameObject.find("TriggerObjGUID") as Gameplay.BoxTrigger;
 @Core.Class
 export default class GetObj extends Core.Script {
     
-    protected async OnStart(): Promise<void> {
+    protected async OnStart(): Promise`<void>` {
 
        let goByAsyfind = await Core.GameObject.asyncFind("GameObjectGUID");
 
@@ -81,7 +81,7 @@ export default class GetObj extends Core.Script {
 
 <strong>使用异步加载时，需要 await 修饰符，且将异步修饰符（async）包含至函数</strong>
 
-#### <strong>getGameObjectsByName(name: string) : Array<GameObject></strong>
+#### <strong>getGameObjectsByName(name: string) : Array`<GameObject>`</strong>
 
 通过名字查找所有物体 ( 物体名字 )
 
@@ -113,7 +113,7 @@ export default class GetObj extends Core.Script {
 let goByName = Core.GameObject.getGameObjectByName("GameObjectName");
 ```
 
-#### <strong>findGameObjectByTag(InTag: string) : Array<GameObject></strong>
+#### <strong>findGameObjectByTag(InTag: string) : Array`<GameObject>`</strong>
 
 通过自定义 Tag 获取 GameObject ( )
 

@@ -45,7 +45,7 @@ export default class NewScript extends MWCore.MWScript {
     preloadAssets = "4175";
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    protected async onStart(): Promise<void> {
+    protected async onStart(): Promise`<void>` {
         //获取当前角色
         let player = GamePlay.getCurrentPlayer();
 

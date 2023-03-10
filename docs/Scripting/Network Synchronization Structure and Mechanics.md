@@ -146,7 +146,7 @@ function dispatchToServer(eventName: string, ...params: unknown[]): DispatchEven
 
 ```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-protected async onStart(): Promise<void> {
+protected async onStart(): Promise`<void>` {
     
     // 客户端执行
     if(SystemUtil.isClient()) {
@@ -194,7 +194,7 @@ function AddClientListener(eventName: string, listener: (player: Gameplay.Player
 
 ```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-protected async onStart(): Promise<void> {
+protected async onStart(): Promise`<void>` {
     
     // 客户端执行
     if(SystemUtil.isClient()) {
@@ -243,7 +243,7 @@ function dispatchToClient(player: Gameplay.Player, eventName: string, ...params:
 
 ```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-protected async onStart(): Promise<void> {
+protected async onStart(): Promise`<void>` {
 
     // 客户端执行
     if(SystemUtil.isClient()) {
@@ -307,7 +307,7 @@ function dispatchToAllClient(player: Gameplay.Player, eventName: string, ...para
 
 ```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-protected async onStart(): Promise<void> {
+protected async onStart(): Promise`<void>` {
 
     // 客户端执行
     if(SystemUtil.isClient()) {
@@ -376,7 +376,7 @@ function AddServerListener(eventName: string, listener: ((...params: unknown[]) 
 
 ```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-protected async onStart(): Promise<void> {
+protected async onStart(): Promise`<void>` {
 
     // 客户端执行
     if(SystemUtil.isClient()) {
@@ -446,7 +446,7 @@ export default class NewScript0 extends Core.Script {
     }
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    protected async onStart(): Promise<void> {
+    protected async onStart(): Promise`<void>` {
 
         // 客户端执行
         if(SystemUtil.isClient()) {

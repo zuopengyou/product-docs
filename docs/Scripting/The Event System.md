@@ -292,7 +292,7 @@ export default class TestEvents extends Core.Script {
     //声明一个计数变量
     public temp:number;
 
-    protected async onStart(): Promise<void> {
+    protected async onStart(): Promise`<void>` {
 
         //初始化计数变量为0
         this.temp = 0;

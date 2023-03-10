@@ -300,7 +300,7 @@ export default class TestEvents extends Core.Script {
     //声明一个计数变量
     public temp:number;
 
-    protected async onStart(): Promise<void> {
+    protected async onStart(): Promise`<void>` {
 
         //初始化计数变量为0
         this.temp = 0;
@@ -354,4 +354,4 @@ export default class TestEvents extends Core.Script {
 
 在使用异步的时候，要将函数添加 async 标识
 
-例：protected async onStart(): Promise<void> { }
+例：protected async onStart(): Promise`<void>` { }

@@ -98,7 +98,7 @@
 export default class PlayerMoveTo extends Core.Script {
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    protected async onStart(): Promise<void> {
+    protected async onStart(): Promise`<void>` {
 
         let player = await Gameplay.asyncGetCurrentPlayer();
         let loc = new Type.Vector(0, 2020, 350);  //设定一个目标点
@@ -142,7 +142,7 @@ export default class PlayerMoveTo extends Core.Script {
 export default class NewScript1 extends Core.Script {
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    protected async onStart(): Promise<void> {
+    protected async onStart(): Promise`<void>` {
 
         let AI = this.gameObject as Gameplay.Humanoid;
         let loc = new Type.Vector(1920, 0, 300)//设定一个目标点
@@ -203,7 +203,7 @@ export default class NewScript1 extends Core.Script {
 export default class Nav extends Core.Script {
     
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    protected async onStart(): Promise<void> {
+    protected async onStart(): Promise`<void>` {
         let player = Gameplay.getCurrentPlayer();
         let targetLocation = new Type.Vector(1940, -3400, 0);
 

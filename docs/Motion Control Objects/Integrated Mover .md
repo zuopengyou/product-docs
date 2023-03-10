@@ -101,7 +101,7 @@ IntegratedMoverOg.enable = true;            //启动运动器，运行工程查�
 export default class NewScript extends Core.Script {
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    protected async onStart(): Promise<void> {
+    protected async onStart(): Promise`<void>` {
         let IntegratedMover = this.gameObject as Gameplay.PhysicsIntegratedMover;
 
         //运动器首次启动时回调事件，只执行一次。
