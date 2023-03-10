@@ -93,7 +93,7 @@
 
 创建一个脚本，使用 moveTo()方法控制角色进行自动寻路
 
-```
+```ts
 @Core.Class
 export default class PlayerMoveTo extends Core.Script {
 
@@ -137,7 +137,7 @@ export default class PlayerMoveTo extends Core.Script {
 
 创建一个脚本，使用 moveTo()方法控制人形对象进行自动寻路
 
-```
+```ts
 @Core.Class
 export default class NewScript1 extends Core.Script {
 
@@ -198,7 +198,7 @@ export default class NewScript1 extends Core.Script {
 
 4.创建一个脚本，来动态控制寻路动态修饰区
 
-```
+```ts
 @Core.Class
 export default class Nav extends Core.Script {
     

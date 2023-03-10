@@ -144,7 +144,7 @@ eg：
 
 function dispatchToServer(eventName: string, ...params: unknown[]): DispatchEventResult;
 
-```
+```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise<void> {
     
@@ -192,7 +192,7 @@ protected async onStart(): Promise<void> {
 
 function AddClientListener(eventName: string, listener: (player: Gameplay.Player, ...params: unknown[]) => void): EventListener;
 
-```
+```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise<void> {
     
@@ -241,7 +241,7 @@ protected async onStart(): Promise<void> {
 
 function dispatchToClient(player: Gameplay.Player, eventName: string, ...params: unknown[]): DispatchEventResult;
 
-```
+```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise<void> {
 
@@ -305,7 +305,7 @@ protected async onStart(): Promise<void> {
 
 function dispatchToAllClient(player: Gameplay.Player, eventName: string, ...params: unknown[]): DispatchEventResult;
 
-```
+```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise<void> {
 
@@ -374,7 +374,7 @@ protected async onStart(): Promise<void> {
 
 function AddServerListener(eventName: string, listener: ((...params: unknown[]) => void)): EventListener;
 
-```
+```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise<void> {
 
@@ -434,7 +434,7 @@ protected async onStart(): Promise<void> {
 
 eg：
 
-```
+```ts
 @Core.Class
 export default class NewScript0 extends Core.Script {
 

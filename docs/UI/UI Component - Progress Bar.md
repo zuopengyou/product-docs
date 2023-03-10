@@ -114,7 +114,7 @@
 
 ![](static/boxcnrY2JQUtJuBA0fTh3dsGtod.jpg)
 
-```
+```ts
          中心锚点在按钮图片正中心                       两侧锚点在图片两侧，图片不会超出进度条范围
 ```
 
@@ -150,7 +150,7 @@
 
 - 脚本示例：
 
-```
+```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
     Character: Gameplay.Character;

@@ -108,7 +108,7 @@
 
 ![](static/boxcnvncZmzqCJQjlxlRcA9lYlb.png)
 
-```
+```ts
 - 此时各文件存于各自的目录下
 ```
 
@@ -144,7 +144,7 @@
 
 ![](static/boxcnXLvo8qStJZCydWy9Mf3pme.png)
 
-```
+```ts
 - 切换编辑状态及编辑对象时，点击保存提示弹窗中【保存】按钮
 ```
 
@@ -169,7 +169,7 @@
 
   - 通过 API 动态生成预制体引用对象
 
-```
+```ts
 /*动态生成预制体引用对象，GUID为本地资源库或工程内容中预制体GUID(需要预加载资源)*/
 Core.GameObject.spawnGameObject("GUID")
 
@@ -185,7 +185,7 @@ Core.GameObject.asyncSpawnGameObject("GUID")
 
 ![](static/boxcnGklAUKt00uFTyqWaUKztvg.png)
 
-```
+```ts
 - 删除引用对象：删除此预制体的同时，删除此预制体在场景中的引用对象
 
 - 解除引用关系：删除此预制体，但保留场景中的对象，使其变为普通对象，不再依赖于原预制体文件
@@ -228,7 +228,7 @@ Core.GameObject.asyncSpawnGameObject("GUID")
 
 ![](static/boxcna46w6Z9azlsXcbHTD4x5zh.png)
 
-```
+```ts
     - 重命名：选择重命名，导入时将导入的文件自动重命名导入
 
       - 对于脚本类型而言，若重命名修改的脚本正在被其他脚本引用，则树状结构中显示引用此脚本的脚本文件，并在此脚本后显示文本：“该脚本引用了xxx.ts，导入后请手动修改”
@@ -236,7 +236,7 @@ Core.GameObject.asyncSpawnGameObject("GUID")
 
 ![](static/boxcnVons4asag0pOtEiDhkZ3Df.png)
 
-```
+```ts
   - 若与当前工程中的文件无冲突，则分两种情况
 
     - 新增：当前工程没有与该文件冲突的文件，显示<strong>绿色new标识</strong>

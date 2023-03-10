@@ -22,7 +22,7 @@
 - 原多人联网游戏逻辑中，所有使用【if(isServer){...}else{...}】、【if(isClient){...}else{...}】的逻辑将都只会执行第一个 if
 - 【Client1&Host】端 isServer 永远为 true
 
-```
+```ts
 //此处永远为true，只执行if
 if(SystemUtil.isServer())
 {
@@ -44,7 +44,7 @@ else{//永远不会执行
 
 <strong>以上逻辑可以改成如下格式</strong>
 
-```
+```ts
 if(SystemUtil.isServer()){
     //...
 }

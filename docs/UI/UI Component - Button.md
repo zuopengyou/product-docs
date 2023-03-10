@@ -76,7 +76,7 @@
 - 首先我们需要制作一个跳跃按钮的 UI，然后将 UI 与脚本进行绑定，随后编写脚本，脚本中要找到对应的 UI 组件，点击 UI 组件时实现跳跃。
 - 示例脚本：
 
-```
+```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
     Character: Gameplay.Character;
@@ -111,7 +111,7 @@ export default class UIDefault extends UI.UIBehavior{
 - 我们要明确按钮只有两种状态，分别是选中状态和未选中状态，所以我们可以利用三目运算符，判断按钮是否处于选中状态，来设置按钮的样式。
 - 示例脚本：
 
-```
+```ts
 //性别选择的方法
     SexSelected(button_boy: UI.Button,button_girl:UI.Button) {
         //是否为男性？是的话，男性按钮图案为“120373”，不是的话，男性按钮图案为“120783”；女性按钮则完全相反
@@ -123,7 +123,7 @@ export default class UIDefault extends UI.UIBehavior{
 - 然后我们找到对应的 UI 按键，并通过点击事件，更改是否为男性的属性，然后执行性别的方法即可完成男女选中态的切换。（注意在点击之前也要执行一遍方法，初始化默认性别）
 - 示例脚本：
 
-```
+```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
     IsMan:boolean = false;
@@ -171,7 +171,7 @@ export default class UIDefault extends UI.UIBehavior{
 - 关于如何制作使用容器制作页签面板，整理 UI 组件并使其方便管理，请参考 UI 组件-容器部分的思路
 - 示例脚本：
 
-```
+```ts
 import activity_generate from "./ui-generate/activity_generate";
 
 /** 页签选择枚举 */

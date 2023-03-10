@@ -96,7 +96,7 @@
 - 然后将 UI 与脚本进行绑定。随后编写脚本。
 - 示例脚本：
 
-```
+```ts
 export default class NewUIScript extends UI.UIBehavior{
 
     IsExchange:Boolean;

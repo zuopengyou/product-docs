@@ -100,7 +100,7 @@
 
 脚本示例：
 
-```
+```ts
 //找到对应的UI文件
         const base = (this.uiObject) as UI.UserWidget;
         //找到容器

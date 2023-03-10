@@ -346,7 +346,7 @@
 
 装备热武器：
 
-```
+```ts
 // 热武器对象装备需要先去服务端装备，然后返回客户端再次装备。
 this.equipOnServer(chara); //这里推荐使用RPC函数在同脚本直接进行双端通信
 
@@ -371,7 +371,7 @@ private equipOnClient(chara: GamePlay.Character) {
 
 卸载热武器：
 
-```
+```ts
 
 ```
 

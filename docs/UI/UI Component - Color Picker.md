@@ -16,7 +16,7 @@
 
 - 脚本示例：
 
-```
+```ts
 //设置调色板按钮图片
 ColorPick.ImageByGuid="45155";
 

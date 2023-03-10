@@ -48,7 +48,7 @@
 
 1. 在脚本中给禁行区设置权限，操作它对角色的阻挡效果
 
-```
+```ts
 // 通过GUID异步获取对象，保证对象获取到后对它进行操作
 MWCore.GameObject.asyncFind("230F0F9745C50B66FDD9228466DB4FC3").then((obj) => {
 
@@ -130,7 +130,7 @@ private status(block: GamePlay.BlockingArea) {
 
 1. <strong>通过接口对禁行区进行其他操作：让投掷物也能通过（投掷物相关具体请查看投掷物文档说明）</strong>
 
-```
+```ts
 MWCore.GameObject.asyncFind("230F0F9745C50B66FDD9228466DB4FC3").then((obj) => {
     // 监听本地事件，对投掷物可通过
     Events.addLocalListener("switchProjectileActorCanPass", () => {
@@ -180,21 +180,21 @@ private launch(pro: GamePlay.Projectile) {
 
 ![](static/boxcnHv4zRfb3z9u40RvJMOhLWg.png)
 
-```
+```ts
 @MWCore.MWProperty()
 preloadAssets: string = "117";
 ```
 
 1. 动态 spawn 禁行区后通过与上述代码一样对它进行操作
 
-```
+```ts
 // 异步spawn，没有找到资源时会下载后在生成
 MWCore.GameObject.asyncSpawnGameObject("117").then((obj) => {
     let block = obj as GamePlay.BlockingArea;
 }
 ```
 
-```
+```ts
 // 普通spawn生成，没有优先加载或预加载资源则无法生成
 let block = MWCore.GameObject.spawnGameObject("117") as GamePlay.BlockingArea;
 ```

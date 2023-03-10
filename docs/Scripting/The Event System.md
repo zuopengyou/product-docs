@@ -29,7 +29,7 @@
 
 例如当用户按下了'K'按键：
 
-```
+```ts
 Util.InputUtil.onKeyDown(Type.Keys.K,()=>{
 
     console.log(`The user presses the K key`);
@@ -45,7 +45,7 @@ Util.InputUtil.onKeyDown(Type.Keys.K,()=>{
 
 例如当用户抬起了'K'按键：
 
-```
+```ts
 Util.InputUtil.onKeyUp(Type.Keys.K,()=>{
 
     console.log(`The user lifted the K key`);
@@ -61,7 +61,7 @@ Util.InputUtil.onKeyUp(Type.Keys.K,()=>{
 
 例如当用户按住了'K'按键：
 
-```
+```ts
 Util.InputUtil.onKeyPress(Type.Keys.K,()=>{
 
     console.log(`The user holds down the K key`);
@@ -82,7 +82,7 @@ Util.InputUtil.onKeyPress(Type.Keys.K,()=>{
 
 例如当用户按下了某个按钮，在其他脚本中需要监听其事件
 
-```
+```ts
 Events.addLocalListener("onXXXButtonClick",()=>{
 
     console.log(`The user pressed the XXX button`);
@@ -98,7 +98,7 @@ Events.addLocalListener("onXXXButtonClick",()=>{
 
 例如当服务端通知客户端玩家升级
 
-```
+```ts
 Events.addServerListener("LevelUp",(lv:number)=>{
 
     console.log(`User upgraded to level ===> ${lv}`);      
@@ -116,7 +116,7 @@ Events.addServerListener("LevelUp",(lv:number)=>{
 
 例如当玩家发动攻击
 
-```
+```ts
 Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 
     console.log(`The player(${player.guid}) uses skill ${skills} to launch an attack.`);
@@ -134,7 +134,7 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 
 例如服务端需要广播玩家进入房间的信息时
 
-```
+```ts
 Events.addPlayerJoinedListener((player:Gameplay.Player)=>{
 
     console.log(`The player(${player.guid}) enters the room`);
@@ -150,7 +150,7 @@ Events.addPlayerJoinedListener((player:Gameplay.Player)=>{
 
 例如服务端需要广播玩家离开房间的信息时
 
-```
+```ts
 Events.addPlayerLeftListener((player:Gameplay.Player)=>{
 
     console.log(`Players(${player.guid}) leave the room`);
@@ -166,7 +166,7 @@ Events.addPlayerLeftListener((player:Gameplay.Player)=>{
 
 此脚本可编写如下，<strong>此事件只能在本地派发</strong>
 
-```
+```ts
 Events.dispatchLocal("onXXXButtonClick");
 ```
 
@@ -176,7 +176,7 @@ Events.dispatchLocal("onXXXButtonClick");
 
 此脚本可编写如下，<strong>此事件只能在客户端派发</strong>
 
-```
+```ts
 let skills:number = 6; 
 Events.dispatchToServer("Attack",skills);
 ```
@@ -191,7 +191,7 @@ Events.dispatchToServer("Attack",skills);
 
 此脚本可编写如下，<strong>此事件只能在服务端派发</strong>
 
-```
+```ts
 Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 
     console.log(`The player(${player.guid}) uses skill ${skills} to launch an attack.`);
@@ -210,7 +210,7 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 
 此脚本可编写如下，<strong>此事件只能在服务端派发</strong>
 
-```
+```ts
 Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 
     console.log(`The player(${player.guid}) uses skill ${skills} to launch an attack.`);
@@ -229,7 +229,7 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 
 此脚本可编写如下，<strong>此事件只能在服务端派发</strong>
 
-```
+```ts
 Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 
     console.log(`The player(${player.guid}) uses skill ${skills} to launch an attack.`);
@@ -246,7 +246,7 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 
 对应 [2.1.2 - 1](https://meta.feishu.cn/wiki/wikcnVCCqmlaOhhI3tpeuy42Hvh#EQIial)，<strong>此事件只能在本地派发</strong>
 
-```
+```ts
 Events.dispatchLocal("eventName");
 ```
 
@@ -282,7 +282,7 @@ Events.dispatchLocal("eventName");
 
 示例如下：
 
-```
+```ts
 @Core.Class
 export default class TestEvents extends Core.Script {
 

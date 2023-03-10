@@ -29,7 +29,7 @@
 
 ![](static/boxcnYjwSCkCXjw9JC0rfB4PUZe.png)
 
-```
+```ts
 - 备注：老项目用以下脚本刷一下使得UI组件自动录入本地化字段
 
   - 使用方法：放入MetaworldSaved目录下，运行将刷新所有项目
@@ -37,7 +37,7 @@
 
 ![](static/boxcns3Wgsow10ns5CHpCOLoKge.png)
 
-```
+```ts
 - 方法二：通过Util.LanguageUtil.locText("Key")函数来使得此文本能够本地化
 
   - 备注：该函数返回key本身，一般用于标识代码中出现的新文本；
@@ -109,7 +109,7 @@
 
 ![](static/boxcnUNCZFJS4GNIzsedpJCki1b.jpg)
 
-```
+```ts
 - 点击确认按钮，关闭本地化页面，并清空未保存的所有配置项
 
 - 点击取消按钮，取消该操作
@@ -137,7 +137,7 @@
 
 对应逻辑代码如下：
 
-```
+```ts
 Util.LanguageUtil.useLocalizedLanguage(LanguageType.Chinese)
         //初始化为中文
         Util.InputUtil.onKeyDown(Type.Keys.One,()=>{
@@ -159,7 +159,7 @@ Util.LanguageUtil.useLocalizedLanguage(LanguageType.Chinese)
 
 对应逻辑代码如下：
 
-```
+```ts
 const Btn = base.findChildByPath("MWCanvas/MWButton_TsButton")as UI.StaleButton;
 Btn.onPressed.add(() => {
             Btn.text =  Util.LanguageUtil.locText("Ts---Button")

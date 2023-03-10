@@ -118,7 +118,7 @@
 
 - 然后编写脚本，动态生成其他 UI 组件并添加为滚动框内容器的子级，这里生成一张图片组件作为示例；运行游戏后，点击按钮就能看到动态生成的 UI 组件出现在滚动框内部了
 
-```
+```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
     Character: Gameplay.Character;

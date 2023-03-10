@@ -19,7 +19,7 @@
 
 <strong>推荐使用 asyncFind 替代</strong>
 
-```
+```ts
 let goList = this.gameObject.getChildren();
 goList.forEach(element => {
     console.log(`${this.gameObject.name} | ${element.name}`);
@@ -32,7 +32,7 @@ goList.forEach(element => {
 
 根据名字获取子物体 ( 物体名字 )
 
-```
+```ts
 let childrenObj = this.gameObject.getChildByName("MyChildrenName");
 ```
 
@@ -40,7 +40,7 @@ let childrenObj = this.gameObject.getChildByName("MyChildrenName");
 
 根据 GUID 获取子物体 ( 物体 GUID )
 
-```
+```ts
 let childrenObjByGUID = this.gameObject.getChildByGuid("MyChildrenGUID");
 ```
 
@@ -52,7 +52,7 @@ let childrenObjByGUID = this.gameObject.getChildByGuid("MyChildrenGUID");
 
 可查找所有继承自 Core.GameObject 的对象
 
-```
+```ts
 //find GameObject
 let goByfind = Core.GameObject.find("GameObjectGUID");
 
@@ -66,7 +66,7 @@ let myTrigger = Core.GameObject.find("TriggerObjGUID") as Gameplay.BoxTrigger;
 
 可查找所有继承自 Core.GameObject 的对象
 
-```
+```ts
 @Core.Class
 export default class GetObj extends Core.Script {
     
@@ -85,7 +85,7 @@ export default class GetObj extends Core.Script {
 
 通过名字查找所有物体 ( 物体名字 )
 
-```
+```ts
 @Core.Class
 export default class GetObj extends Core.Script {
     
@@ -109,7 +109,7 @@ export default class GetObj extends Core.Script {
 
 <strong>返回第一个查找到的对象，如有多个同名对象，随机返回一个</strong>
 
-```
+```ts
 let goByName = Core.GameObject.getGameObjectByName("GameObjectName");
 ```
 
@@ -117,7 +117,7 @@ let goByName = Core.GameObject.getGameObjectByName("GameObjectName");
 
 通过自定义 Tag 获取 GameObject ( )
 
-```
+```ts
 @Core.Class
 export default class GetObj extends Core.Script {
     
@@ -141,7 +141,7 @@ export default class GetObj extends Core.Script {
 
 复制对象（返回对象 : GameObject）
 
-```
+```ts
 let goClone = this.gameObject.Clone();
 ```
 
@@ -151,7 +151,7 @@ let goClone = this.gameObject.Clone();
 
 根据 GUID 构造一个 GameObject ( 资源的 GUID , 是否同步 )
 
-```
+```ts
 @Core.Class
 export default class GetObj extends Core.Script {
 

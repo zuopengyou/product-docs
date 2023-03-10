@@ -56,14 +56,14 @@
 
 ![](static/boxcnrg0UvniZk28hfpIcsuAV6b.png)
 
-```
+```ts
 @MWCore.MWProperty()
 preloadAssets: string = "25782";
 ```
 
 1. 动态 spawn 空锚点，调用接口将对象 attach 到空锚点上
 
-```
+```ts
 // 普通spawn生成，没有优先加载或预加载资源则无法生成
 let anchor= MWCore.GameObject.spawnGameObject("25782") as GamePlay.Anchor;
 

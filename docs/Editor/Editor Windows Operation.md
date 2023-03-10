@@ -234,19 +234,19 @@
 
 ![](static/boxcnSM55P5JTEM2LBWbCUcRdDg.png)
 
-```
+```ts
 - 对齐轴：按世界/本地坐标进行对齐，坐标轴可进行多选
 ```
 
 ![](static/boxcn4dNlzQJU3DieDAWfHl50Wb.png)
 
-```
+```ts
 - 参考系：
 ```
 
 ![](static/boxcnPQO1mQrtDkQ0753ZUagMfq.png)
 
-```
+```ts
   - 选择范围：按照所选对象形成的包围盒进行对齐
 
   - 活跃对象：默认为最后一个选择的对象，以此对象为参考系
@@ -256,7 +256,7 @@
 
 ![](static/boxcnYi28ez5mTHS0z0XNLxsRhd.png)
 
-```
+```ts
 - 对齐：当所有选项均被选择后，对齐按钮高亮，鼠标hover至对齐工具面板中，主视口显示对齐轴/面/点
 ```
 
@@ -601,7 +601,7 @@
 
 ![](static/boxcnwQqa5KxwKhoQrLJVKsjFcf.png)
 
-```
+```ts
 - <strong>修改后</strong>，工程内容预制体界面出现保存按钮
 ```
 
@@ -829,7 +829,7 @@
 
 ![](static/boxcnRGK3veGoaz4mkYJnT4HW9d.png)
 
-```
+```ts
 - 在预制体<strong>进入实例状态后</strong>，该选项出现
 
 - 将此在对象管理器中修改过的预制体另存为一个新预制体，工程内容将新增此预制体，对象管理器中原预制体也同步更新为此新预制体

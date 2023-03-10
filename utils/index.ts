@@ -132,12 +132,8 @@ function getMdNameInfo(mdName: string) {
 export function tsCodeDeal(filePath: string) {
   if (fs.existsSync(filePath)) {
     const filestr = fs.readFileSync(filePath, 'utf-8')
-    // const reg = /^```[\n\r][a-zA-Z0-9/\\u4e00-\u9fa5-()"\n]*?```\n/g
     const reg = /```(\n[\s\S]+?```)/g
-    // const ex = reg.exec(filestr)
-    // console.log(ex?.[0], ex)
     const newStr = filestr.replace(reg, '```ts$1')
-    console.log(newStr)
     fs.writeFileSync(filePath, newStr, 'utf-8')
   }
 }
@@ -156,4 +152,4 @@ function whilePath() {
 }
 // tsCodeDeal()
 
-whilePath()
+// whilePath()

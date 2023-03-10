@@ -36,7 +36,7 @@
 
 创建新的脚本，编写交互物逻辑。
 
-```
+```ts
 @MWCore.MWClass
 export default class NewScript extends MWCore.MWScript {
 

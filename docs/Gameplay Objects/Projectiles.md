@@ -75,7 +75,7 @@
 
 1. <strong>通过对象提供的接口对投掷物进行控制，无需 bindPlayer（接口暂未废弃）</strong>
 
-```
+```ts
 if(GamePlay.isClient()) {
     let player = await GamePlay.asyncGetCurrentPlayer();
     let chara = player.character;
@@ -109,7 +109,7 @@ if(GamePlay.isClient()) {
 
 RPC 函数：
 
-```
+```ts
 @MWCore.MWFunction(MWCore.MWServer)
 private launch(project: GamePlay.Projectile) {
     project.launch();
@@ -128,7 +128,7 @@ private pause(project: GamePlay.Projectile) {
 
 1. <strong>通过接口对投掷物进行其他操作</strong>
 
-```
+```ts
 // 添加开始重叠回调，控制台打印信息并通知客户端修改显示
 project.onProjectileBeginOverlap.add(() => {
     console.error("BeginOverlap");
@@ -166,7 +166,7 @@ project.onProjectileInterrupt.add(() => {
 
 ![](static/boxcnFq0jWnXWFGrOJRKUbh4p8d.png)
 
-```
+```ts
 // 修改投掷物参数
 project.initailSpeed = 1000;
 project.collisionLength = 0.01;
@@ -183,14 +183,14 @@ project.simulatePhysics = true;
 
 ![](static/boxcn4Aq9lpcPicJHYgG5mnA9md.png)
 
-```
+```ts
 @MWCore.MWProperty()
 preloadAssets: string = "14090";
 ```
 
 1. 动态 spawn 投掷物后设置参数，添加回调，挂载对象，调用接口对它进行操作
 
-```
+```ts
 // 动态spawn投掷物
 let project = MWCore.GameObject.spawnGameObject("14090",true) as GamePlay.Projectile;
 

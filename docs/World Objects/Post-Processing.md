@@ -308,21 +308,21 @@ LUT 颜色查找表纹理用作颜色校正的查找表的 LUT 纹理
 
 ![](static/boxcny1SVyyMERmxr7tvSu5y9Fh.png)
 
-```
+```ts
 @MWCore.MWProperty()
 preloadAssets: string = "21151";
 ```
 
 1. 动态 spawn 后处理，通过上面介绍的接口修改其属性
 
-```
+```ts
 // 异步spawn，没有找到资源时会下载后在生成
 MWCore.GameObject.asyncSpawnGameObject("21151").then((obj) => {
     let p = obj as GamePlay.PostProcess;
 }
 ```
 
-```
+```ts
 // 普通spawn生成，没有优先加载或预加载资源则无法生成
 let p = MWCore.GameObject.spawnGameObject("21151") as GamePlay.PostProcess;
 ```

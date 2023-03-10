@@ -193,7 +193,7 @@
 
 - 在脚本中使用 UI.MaskButton 类实现遮罩的逻辑
 
-```
+```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior {
     Character: Gameplay.Character;

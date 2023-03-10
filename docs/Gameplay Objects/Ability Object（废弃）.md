@@ -108,7 +108,7 @@ AbilityState 接口
 
 ![](static/boxcnA6ORIsfqRJ75PJqzPM3CIg.png)
 
-```
+```ts
 // 通过GUID异步获取能力对象，保证能力对象获取到后对它进行操作
 MWCore.GameObject.asyncFind("3E410E6B43BBF0DA711BEDB8257E01B0").then((obj) => {
 
@@ -186,7 +186,7 @@ MWCore.GameObject.asyncFind("3E410E6B43BBF0DA711BEDB8257E01B0").then((obj) => {
 
 1. <strong>通过接口对</strong><strong>能力对象</strong><strong>进行其他操作</strong>
 
-```
+```ts
 // 如果能力对象准备好后派送本地消息：能力对象已准备好, 并打印能力对象的状态数组长度
 
 console.error("guid " + ability.whetherReady());
@@ -201,7 +201,7 @@ if(ability.whetherReady()) {
 
 ![](static/boxcnLQTU189dsW6EWoEj9nig8e.png)
 
-```
+```ts
 // 给能力对象提供的回调中绑定执行函数
 
 
@@ -285,7 +285,7 @@ ability.onAbilityStateChanged.bind(() => {
 
 ![](static/boxcnjGIMcqLnVvBlZPKSwYMbT2.png)
 
-```
+```ts
 // 收到本地消息，切换能力状态, 并获取状态信息打印
 Events.addLocalListener("SwitchTo", (index: number) => {
     let state = ability.getAbilityStateByIndex(index);
@@ -320,7 +320,7 @@ Events.addLocalListener("remove", (id: number) => {
 });
 ```
 
-```
+```ts
 // 周期打印StateDetails
 setInterval(() => {
     
@@ -348,14 +348,14 @@ setInterval(() => {
 
 ![](static/boxcnD5aiXfJSvoej7ucmqf3yRg.png)
 
-```
+```ts
 @MWCore.MWProperty()
 preloadAssets: string = "21378";
 ```
 
 1. 动态 spawn 能力对象
 
-```
+```ts
 // 异步spawn，没有找到资源时会下载后在生成
 MWCore.GameObject.asyncSpawnGameObject("21378").then((obj) => {
     let ability= obj as GamePlay.AbilityObj;
@@ -379,7 +379,7 @@ MWCore.GameObject.asyncSpawnGameObject("21378").then((obj) => {
 }
 ```
 
-```
+```ts
 // 普通spawn生成，没有优先加载或预加载资源则无法生成
 let ability = MWCore.GameObject.spawnGameObject("21378") as GamePlay.AbilityObj;
 ```

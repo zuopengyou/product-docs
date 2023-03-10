@@ -58,7 +58,7 @@
 
 1. <strong>在脚本中给触发器添加 进入 & 离去 事件，当对象进入时就会执行事件中的代码。此处我执行的是在控制台打印进去离去消息，同时通知本地 UI 进行展示。</strong>
 
-```
+```ts
 // 如果是挂载在触发器下的脚本可以通过这个方法获取触发器
 let tri = this.gameObject as GamePlay.Trigger;
 
@@ -73,7 +73,7 @@ tri.onLeave.add(() => {
 });
 ```
 
-```
+```ts
 // GUID可通过在对象栏中右键点击触发器进行复制
 // 通过GUID异步获取触发器，保证触发器获取到后给触发器添加进去事件和离去事件
 MWCore.GameObject.asyncFind("652787664C5BDFAE90982EB020D86EA3").then((obj) => {
@@ -92,7 +92,7 @@ MWCore.GameObject.asyncFind("652787664C5BDFAE90982EB020D86EA3").then((obj) => {
 
 1. <strong>通过接口对触发器进行其他操作</strong>
 
-```
+```ts
 // 收到本地消息，重新设置触发器大小并切换触发器形状
 Events.addLocalListener("ChangeShape", () => {
 
@@ -137,21 +137,21 @@ setInterval(() => {
 
 ![](static/boxcn3FRkXhUavdfieicZUteVKh.png)
 
-```
+```ts
 @MWCore.MWProperty()
 preloadAssets: string = "113";
 ```
 
 1. 动态 spawn 触发器
 
-```
+```ts
 // 异步spawn，没有找到资源时会下载后在生成
 MWCore.GameObject.asyncSpawnGameObject("113").then((obj) => {
     let tri = obj as GamePlay.Trigger;
 }
 ```
 
-```
+```ts
 // 普通spawn生成，没有优先加载或预加载资源则无法生成
 let tri = MWCore.GameObject.spawnGameObject("113") as GamePlay.Trigger;
 ```

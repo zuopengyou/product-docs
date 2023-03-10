@@ -49,7 +49,7 @@ a 使用[相对冲量]时，需要考虑受力对象的施加力，比如角色�
 
 #### 冲量对象回调
 
-```
+```ts
 let impulse = this.gameObject as GamePlay.MWImpulse;   //获取场景中的冲量对象
 let player = GamePlay.getCurrentPlayer();              //获取场景中的角色
 
@@ -63,7 +63,7 @@ impulse.onImpulseEnter.add(()=>{
 
 #### 冲量对象动态开关
 
-```
+```ts
 /*
 冲量对象提供了setImpulseEnabled()，可以动态设置冲量力开关，合理的使用这一接口，可以实现类如炸弹爆炸的效果；
 */

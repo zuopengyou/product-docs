@@ -34,7 +34,7 @@
   - 使用 asyncSetCustomData()的方法进行数据进行存储时，可以通过自定义的键值对同一个数据进行管理。
   - 对使用自定义索引值进行存储的数据，使用 asyncGetCustomData()进行数据读取。
 
-```
+```ts
 //数据存储
     SaveCustomData(value) {
         //在服务器端执行
@@ -79,7 +79,7 @@
   - 数据存储时，会将角色作为唯一标识，同一个角色在同一游戏中，会自动使用新数据覆盖原有数据。
   - 对使用角色对象进行存储的数据，使用 asyncGetPlayerData()进行数据读取。
 
-```
+```ts
 //数据存储
     SavePlayerData(playerValue:Gameplay.Player,scoreValue:number) {
         //在服务器端执行

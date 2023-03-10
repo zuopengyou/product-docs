@@ -178,7 +178,7 @@
 - 我们再创建一个脚本，找到咱们的 UI 文本组件，并且接受上面的速度事件，将获取到的角色速度显示在文本组件上。最后将这个脚本拖入 Root 目录下，完成与 UI 的绑定。
 - 示例脚本：
 
-```
+```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
     Character: Gameplay.Character;

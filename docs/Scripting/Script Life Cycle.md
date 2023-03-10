@@ -6,7 +6,7 @@
 
 生命周期就是指一个对象从诞生到死亡
 
-```
+```ts
   生命周期（Life Cycle）的概念应用很广泛，特别是在政治、经济、环境、技术、社会等诸多领域经常出现，其基本涵义可以通俗地理解为“从摇篮到坟墓”（Cradle-to-Grave）的整个过程。
 
   而对于脚本而言，生命周期代表着一个脚本从激活（Activate）到销毁（Destroy）的全过程，也代表着代码中脚本函数的执行过程与执行顺序。
@@ -38,7 +38,7 @@
 
 默认编辑器不会开启脚本 OnUpdate 的生命周期，需要开发者自行调用
 
-```
+```ts
 this. bUseUpdate = true;
 ```
 
@@ -50,7 +50,7 @@ this. bUseUpdate = true;
 
 ### 脚本示例：
 
-```
+```ts
 @Core.Class
 export default class TestScript extends Core.Script {
     protected onStart(): void {
@@ -139,7 +139,7 @@ export default class TestScript extends Core.Script {
 
 <strong>脚本示例：</strong>
 
-```
+```ts
 @Core.Class
 export default class TestScript extends Core.Script {
 
@@ -194,7 +194,7 @@ export default class TestScript extends Core.Script {
 
 例：在做连击的判断中，需要对计时器做终止或重新计时的需求，此时 setTimeout 无法满足
 
-```
+```ts
 @Core.Class
 export default class TestScript extends Core.Script {
 
@@ -290,7 +290,7 @@ export default class TestScript extends Core.Script {
 
 <strong>代码示例：</strong>
 
-```
+```ts
 @Core.Class
 export default class TestEvents extends Core.Script {
 

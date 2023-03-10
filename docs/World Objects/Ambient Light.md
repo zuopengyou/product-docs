@@ -68,7 +68,7 @@
 ![](static/boxcnIGppjuTY3S6p85eV92Wbxd.png)
 ![](static/boxcn8wzwLBgydfNLRCD3lnHLCd.png)
 
-```
+```ts
                         捕获场景                                                       指定立方体贴图场景
 ```
 

@@ -97,7 +97,7 @@
 
   - 例如实现一个跳跃按钮的简单逻辑：
 
-```
+```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior {
     Character: Gameplay.Character;
@@ -126,7 +126,7 @@ export default class UIDefault extends UI.UIBehavior {
 
 - 使用 createUIByName 函数创建想要添加的 UI 文件为自定义 UI 组件，然后使用 addChild 函数将自定义 UI 组件挂在当前 UI 对象下的某个容器中，从而实现 UI 动态加载到游戏场景中。
 
-```
+```ts
 //比如在UI脚本中创建一个自定义UI组件，并挂在UI对象的某个容器下
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior {
@@ -148,7 +148,7 @@ export default class UIDefault extends UI.UIBehavior {
 
 - 还有另一种方法是把项目中的 UI 文件动态创建并直接添加到画面中，不需要挂在已有 UI 对象内的某个容器下。使用这种创建方法时，需要将 UI 游戏逻辑编写在所创建的 UI 文件绑定的 UI 脚本中，类似于方式一。
 
-```
+```ts
 //比如在普通脚本中实例化一个UI文件作为新的UI对象
 @Core.Class
 export default class NewScript extends Core.Script {
@@ -189,7 +189,7 @@ export default class NewScript extends Core.Script {
 
   - 点击【UI 脚本模板】按钮后，会打开脚本模板文件，在执行【导出所有脚本】时，会按照此脚本模板文件中的规则在"UI 文件名-generate"脚本中填充代码，便于批量生成重复代码
 
-```
+```ts
 ${Import}
 
  @UI.UICallOnly('${UIPath}')
@@ -221,7 +221,7 @@ ${Import}
 11. ${Button_Path} ：可以替换为当前组件的路径，${Button_Start}${Button_Path}${Button_End}，这样就会替换重复生成时，当前写入的组件的 path 路径。(其他组件同理)
 12. ${Button_HideStart}this.${Button}...Any Code;${Button_HideEnd} ：会把所有没有导出的 Button 都填入到这个规则里。比如：脚本没有导出了两个 Button 变量 b1 和 b2 那么就会生成如下代码(其他组件同理)
 
-```
+```ts
 //例如根据模板：
 ${Button_Start}this.${Button}.onClicked.add(()=>{})${Button_End}
 //自动生成的脚本：

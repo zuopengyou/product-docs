@@ -82,7 +82,7 @@
 
 #### 动态创建运动器
 
-```
+```ts
 /*
 端通过spawnGameObject()动态创建运动器，需要注意被绑定的对象是双端状态时，需要在双端创建运动器；被绑定的对象是客端户时，需要在对应的客户端进行创建。
 */
@@ -96,7 +96,7 @@ IntegratedMoverOg.enable = true;            //启动运动器，运行工程查�
 
 #### 运动器回调事件使用方法
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -124,7 +124,7 @@ export default class NewScript extends Core.Script {
 
 #### 运动器重置接口使用方法
 
-```
+```ts
 /**
 运动器重置接口moverReset()可以将正在运行的运动器重置回初始状态，并可以通过执行回调重新设置运动器参数
 */

@@ -62,7 +62,7 @@
 
 - <strong>step.7 </strong>打开 UI 控制器脚本
 
-```
+```ts
 @UI.UICallOnly('')
 export default class NewUIScript extends UI.UIBehavior {
 
@@ -140,7 +140,7 @@ export default class NewUIScript extends UI.UIBehavior {
 
 - <strong>step.8 </strong>创建四轮载具 TS 脚本
 
-```
+```ts
 @Core.Class
 export default class Vehicle4WServer extends Core.Script {
 

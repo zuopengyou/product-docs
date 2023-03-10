@@ -11,7 +11,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
     }
@@ -25,7 +25,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //5s后设置为开启每帧触发onUpdate，默认情况下不调用onUpdate函数
@@ -54,7 +54,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         let behavior=UI.findUIBehaviour(this.uiWidgetBase)
@@ -80,7 +80,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /** 
      * 场景创建时或prefab实例化时调用，仅执行一次
      * 在onStart函数调用之前
@@ -96,7 +96,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /** 
      * 构造UI文件成功后，onStart之后 
      * 对于UI的根节点的添加操作，进行调用
@@ -113,7 +113,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /** 
      * 构造UI文件成功后，onAdded之后
      * 对于UI的根节点的移除操作，进行调用
@@ -134,7 +134,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /**
      * 设置显示时触发，手动设置显示或者UIManager调用show时触发
      */
@@ -151,7 +151,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /**
      * 设置显示时触发，手动设置显示或者UIManager调用show时触发
      */
@@ -172,7 +172,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /**
      * 当这个UI界面是可以接收事件的时候
      * 手指或者鼠标触发一次Touch时触发
@@ -192,7 +192,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /**
      * 手指或者鼠标在UI界面上移动时
      */
@@ -208,7 +208,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /**
      * 手指或者鼠标离开UI界面时
      */
@@ -230,7 +230,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /**
      * 当鼠标进入此UI范围内时会触发此函数
      */
@@ -246,7 +246,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /**
      * 当鼠标离开此UI 的范围时会触发此函数
      */
@@ -262,7 +262,7 @@
 
 <strong>示例：</strong>
 
-```
+```ts
 /**
      * 在此UI上面滑动鼠标滚轮会执行此函数
      */    

@@ -41,7 +41,7 @@ X 轴 Y 轴旋转则不可点击修改，已做屏蔽
 
 1. 动态 spawn 初生点
 
-```
+```ts
 // 普通spawn生成，没有优先加载或预加载资源则无法生成
 let playerStart= MWCore.GameObject.spawnGameObject("109") as GamePlay.PlayerStart;
 

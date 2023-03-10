@@ -88,7 +88,7 @@
 
 1. <strong>在脚本中通过装备对象提供的接口对它进行控制，做出各种行为。</strong>
 
-```
+```ts
 // 通过GUID异步获取对象，保证能力对象获取到后对它进行操作
 MWCore.GameObject.asyncFind("84B13A57478850313C476BA894B7750B").then((obj) => {
 
@@ -118,7 +118,7 @@ MWCore.GameObject.asyncFind("84B13A57478850313C476BA894B7750B").then((obj) => {
 
 1. <strong>通过接口对装备进行其他操作，例如添加行为</strong><strong>回调</strong><strong>函数，当行为发生时执行相应的逻辑。修改装备属性，获取装备持有人等等；</strong>
 
-```
+```ts
 // 装备拾取回调，通知本地UI打印信息
 equipment.onPickupEquipmentDelegate.add(() => {
     let s = "";
@@ -191,14 +191,14 @@ setInterval(() => {
 
 ![](static/boxcnIG0zM6GvyD8dWFeKIw1fYc.png)
 
-```
+```ts
 @MWCore.MWProperty()
 preloadAssets: string = "2696";
 ```
 
 1. 动态 spawn 装备
 
-```
+```ts
 if(GamePlay.isClient()) {
     let player = await GamePlay.asyncGetCurrentPlayer();
     let chara = player.character;
@@ -311,7 +311,7 @@ if(GamePlay.isClient()) {
 }
 ```
 
-```
+```ts
 // 普通spawn生成，没有优先加载或预加载资源则无法生成
 let equipment = MWCore.GameObject.spawnGameObject("2696") as GamePlay.Equipment;
 ```

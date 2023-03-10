@@ -50,7 +50,7 @@
 
 1. <strong>控制角色上浮下沉，获取角色游泳状态</strong>
 
-```
+```ts
 @Core.Class
 export default class VehicleTS extends Core.Script {
 
@@ -107,21 +107,21 @@ export default class VehicleTS extends Core.Script {
 
 ![](static/boxcn215NoQaq16yYmMniS2xmKf.png)
 
-```
+```ts
 @Core.Property()
 preloadAssets: string = "12683";
 ```
 
 1. 动态 spawn 游泳区域
 
-```
+```ts
 // 异步spawn，没有找到资源时会下载后在生成
 Core.GameObject.asyncSpawnGameObject("12683").then((obj) => {
     let pool = obj as Gameplay.SwimmingVolume;
 })
 ```
 
-```
+```ts
 // 普通spawn生成，没有优先加载或预加载资源则无法生成
 let pool = Core.GameObject.spawnGameObject("SwimmingVolume") as Gameplay.SwimmingVolume;
 ```

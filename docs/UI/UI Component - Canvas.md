@@ -194,7 +194,7 @@
 
 - 示例脚本：
 
-```
+```ts
 import activity_generate from "./ui-generate/activity_generate";
 
 /** 页签选择枚举 */
