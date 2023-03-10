@@ -20,8 +20,19 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     logo: '/logo.png',
     sidebar: [
       {
+        text: 'System Requirements',
+        link: '/System Requirements.md',
+        items: [
+          // { text: 'System Requirements', link: '/System Requirements.md' }
+        ]
+      }
+      {
         text: 'Editor',
         items: dealItem('Editor')
+      },
+      {
+        text: 'UI',
+        items: dealItem('UI')
       },
       {
         text: 'Gameplay Objects',
@@ -32,24 +43,21 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         items: dealItem('Motion Control Objects')
       },
       {
-        text: 'Resource',
-        items: dealItem('Resource')
-      },
-      {
-        text: 'UI',
-        items: dealItem('UI')
-      },
-      {
         text: 'World Objects',
         items: dealItem('World Objects')
       },
       {
-        text: 'System Requirements',
-        link: '/System Requirements.md',
-        items: [
-          // { text: 'System Requirements', link: '/System Requirements.md' }
-        ]
-      }
+        text: 'Scripting',
+        items: dealItem('Scripting')
+      },
+      {
+        text: 'Resource',
+        items: dealItem('Resource')
+      },
+      {
+        text: 'Localization',
+        items: dealItem('Localization')
+      },
     ],
     // algolia: {
     //   appId: 'I2PHYUBLCN',
