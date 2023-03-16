@@ -76,11 +76,11 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/K494b51ABo7zwtxrolpc6u4Pnnd.png)
 
-| 区域类型  | 说明                                                                                                                                                                                                                                                                                                                                                            |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Null      | 无效区-会在此处绘制出一个不可通行的区域，AI 无法通过寻路功能经过该区域。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/T933bFm9to1SYwxYukPcB8rSnRf.png)                                                                                                                                                                                                                                        |
-| Default   | 默认区-AI 可以在该区域内正常使用寻路功能。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/HTtvbCzLooCYBmxnHPFcfckmn9d.png)                                                                                                                                                                                                                                                                      |
-| LowHeight | 低高度区-代表这是一个因不符合条件而无法通行的区域，可用于高度较低的区域，例如桥底、洞穴等场景，寻路区域不会在此空间内产生寻路数据。<br/><br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/Fqa3bJFIvoh6wVxU4IlcJ5FGnt4.png)                                                                                                                                                                        |
+| 区域类型  | 说明 |
+| --------- | ------------ |
+| Null      | 无效区-会在此处绘制出一个不可通行的区域，AI 无法通过寻路功能经过该区域。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/T933bFm9to1SYwxYukPcB8rSnRf.png) |
+| Default   | 默认区-AI 可以在该区域内正常使用寻路功能。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/HTtvbCzLooCYBmxnHPFcfckmn9d.png) |
+| LowHeight | 低高度区-代表这是一个因不符合条件而无法通行的区域，可用于高度较低的区域，例如桥底、洞穴等场景，寻路区域不会在此空间内产生寻路数据。<br/><br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/Fqa3bJFIvoh6wVxU4IlcJ5FGnt4.png) |
 | Obstacle  | 障碍区-代表这是一个需要符合通过条件的区域，只有当前寻路区域内没有其他可行动的路线时，才会考虑经过这里。<br/><br/>当寻路区域内有多条可通往目标点的路径时，AI 会避开障碍区进行寻路。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/NHE8bo5Ltoxxcpx08cncfmO1nob.png)<br/><br/>当寻路区域内仅有一条可通往目标点的路径时，AI 会穿过障碍区进行寻路。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/Lp1Kb35SEoZRwdxCSBacxnoYnWd.png) |
 
 ## 如何让主角（Player）使用寻路区域
