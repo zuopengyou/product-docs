@@ -1,85 +1,126 @@
 # 空锚点
 
-| 修改日期           | 修改内容 | 所属编辑器版本 |
-| ------------------ | -------- | -------------- |
-| 2022 年 9 月 28 日 | 文档创建 | 015            |
+<strong>阅读本文预计 5 分钟</strong>
 
-<strong>阅读本文预计 10 分钟</strong>
+使用【空锚点】来解决场景搭建和对象挂载中由于对象的锚点固定导致根据锚点进行的旋转，缩放无法满足需求的情况。
 
-本文概述了空锚点的工作机制，展示在编辑器创建并使用空锚点的过程和空锚点在游戏中的应用。教程内容包含空锚点功能对象的属性面板，类对象属性和接口以及一个示例工程。
+# 空锚点对象
 
-# 什么是空锚点
+通常情况下资源库中的对象锚点都是固定的，而以锚点为基础执行对象变换经常不满足需求。【空锚点】提供用户去自定义对象锚点位置的功能，利用【空锚点】对象本身作为对象的锚点来使用。而且通过<strong>自动居中，顶点吸附和手动偏移</strong>3 种偏移方式，提升【空锚点】作为父对象时在编辑状态下的操作便捷性。【空锚点】在工程内作为父对象存在时，【场景】内显示所有子对象所产生的的包围盒。你可以在【本地资源库】中的【游戏功能对象】栏中找到【空锚点】。
 
-空锚点是一个提供无内容根节点的对象，给开发者可以自定义对象锚点位置的功能。空锚点可以帮助开发者解决由于各类资源对象中锚点不统一而导致操作它们交互或者修改 Transform 时表现不正确的问题。例如某些枪械模型锚点在枪口，导致角色拾取枪械时枪口插入角色手部插槽而不是枪把。
+![](static/boxcn48mTUDmOIKT5WW7ZB1wpgg.png)
 
-空锚点在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是空锚点，资源 ID 为 25782。
+# 创建空锚点
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnAWNoJO2dqmcKP1FTqMOlof.png)
+## 通过放置资源创建：
 
-# 空锚点 都包含什么
+【空锚点】对象本身作为一个游戏对象可以存在于游戏场景中。你可以从【本地资源库】中将【空锚点】拖入【场景】或者【对象管理器】来自动生成一个【空锚点】对象。
 
-空锚点作为一个无内容对象没有自己的属性和接口，它只是单纯继承父类 GameObject。关于父类 GameObject 见”游戏对象“文档。
+1. 在【本地资源库】中找到【空锚点】
 
-# 如何合理利用 / 使用 空锚点
+![](static/boxcn2fAXn0y7xK0SlEaAgpTZJd.png)
 
-### <strong>在编辑器工作区中</strong><strong>直接</strong><strong>使用：</strong>
+1. 将对象拖入到【场景】中或者【对象管理器】下
 
-1. <strong>将空锚点拖入场景</strong>
+![](static/boxcnP6Skc3UPbkT1Tfsjsiy6hg.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnR7KREpOcGve18dIyhvQH3c.png)
+1. 在右侧【对象管理器】中【对象】栏找到对应的【初生点对象】并自定义锚点变换和锚点偏移。
 
-1. <strong>将希望修改锚点的对象挂载到空锚点下方，选中空锚点，工作区内显示所有子物体整体包围盒</strong>
+![](static/boxcni3LZHnvclYcg5IrbJwZXUh.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn3MJx7FUKeDlmlEwCDFbakd.png)
+![](static/boxcnlL9anQjc19eOygoNeka8gA.png)
 
-1. <strong>修改子对象的 Transform 使空锚点与期望锚点位置重合</strong>
+## 通过脚本创建：
 
-空锚点提供两个快捷选项来获取自身相对子对象的偏移值：自动居中和顶点吸附。中点和顶点都是以空锚点底下挂载的所有对象的整体来计算的。此外还提供锚点偏移输入使用户自定义锚点位置并可视化于工作区中。该值对修改子对象相对位置有参考意义（取反后赋值到子对象）。同时该功能方便在工作区以新锚点位置对挂载子对象进行统一操作。
+通过脚本你也可以在游戏运行时通过【资源库】中的资源 ID 使用 `asyncSpawn` 接口动态生成一个【空锚点】对象来使用。【空锚点】的资源 ID 为“Anchor”。在【工程内容】下的脚本目录中新建一个脚本文件，将脚本拖入【对象管理器】中【对象】栏。选中脚本进行编辑，将下列示例代码替换脚本中的 `onStart` 方法：异步生成一个【空锚点】对象，打开双端同步，位置为默认（0，0，0），旋转为默认（0，0，0），缩放倍数为默认（1，1，1）。打印生成【初生点】对象的 guid。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnuZwZH9ddnSu5RUygrasYRb.png)
-
-配置过程如下所示：
-
-1. <strong>空锚点作为挂载对象的根节点提供交互的起点</strong>
-
-修改锚点前：模型插入插槽后表现不正确
-
-修改锚点后：模型插入插槽后表现正确
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWIXUrlhudio3ioBvKkz1Rb.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjHFPIvmtolYi0ZqEZEXPwb.png)
-
-### 在代码中动态生成空锚点
-
-1. 将空锚点功能对象拖入优先加载栏，或者在代码中预加载空锚点的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrg0UvniZk28hfpIcsuAV6b.png)
-
-```ts
-@MWCore.MWProperty()
-preloadAssets: string = "25782";
+```
+protected async onStart(): Promise<void> {
+    if(SystemUtil.isServer()) {
+        let anchor = await Core.GameObject.asyncSpawn({guid: "Anchor", replicates: true}) as Gameplay.PlayerStart;
+        console.log("anchor guid " + anchor.guid);
+    }
+}
 ```
 
-1. 动态 spawn 空锚点，调用接口将对象 attach 到空锚点上
+此处我们也可以通过 `spawn` 接口生成，但是需要将【空锚点】拖入【优先加载栏】或者将【空锚点】进行【预加载】来保证生成后我们不需要等待资源下载而导致后续代码失效。
 
-```ts
-// 普通spawn生成，没有优先加载或预加载资源则无法生成
-let anchor= MWCore.GameObject.spawnGameObject("25782") as GamePlay.Anchor;
+![](static/boxcnhjRiPOleEHS9tRriYHuWab.png)
 
-// 异步spawn生成
-let anchor= await MWCore.GameObject.asyncSpawnGameObject("25782") as GamePlay.Anchor;
-
-
-let mesh = MWCore.GameObject.spawnGameObject("20809") as GamePlay.StaticMesh;
-mesh.attachToGameObject(anchor);
-mesh.setRelativeLocation(Type.Vector.zero); // 新锚点的相对位置
-mesh.setRelativeRotation(Type.Rotation.zero); // 新锚点的相对旋转
+```
+// 预加载资源，将下列代码粘贴到脚本中的onStart方法之前
+@Core.Property()
+preloadAssets: string = "Anchor"；
 ```
 
-# 
+设定锚点偏移并不会改变【空锚点】对象实际的 Transform 值。但是锚点偏移会影响执行变换时【空锚点】对象的枢轴点。
 
-# 使用 空锚点 的注意事项与建议
+# 自定义空锚点偏移
 
-1. 空锚点默认拖出来是静态但一般都会需要修改它，所以建议修改为动态。
-2. 锚点偏移设置的功能有歧义，后续对齐后再更新
+【空锚点】对象的偏移将决定执行变换时【空锚点】对象的枢轴点。
+
+<strong>居中</strong>：执行变换时以子对象包围盒的中心作为枢轴点进行移动，旋转，缩放。
+
+<strong>顶点</strong>：执行变换时以子对象包围盒的顶点作为枢轴点进行移动，旋转，缩放。
+
+<strong>自定义偏移</strong>：执行变换时以【空锚点】偏移后位置作为枢轴点进行移动，旋转，缩放。
+
+# 使用空锚点
+
+锚点偏移只作用于编辑态，运行态【空锚点】执行变换时仍然以自身实际值为准。在代码中空锚点只有普通父对象的作用。
+
+## 获取空锚点对象
+
+### 【对象管理器】中【对象】栏下的【初生点对象】：
+
+<strong>使用</strong><strong>asyncFind</strong><strong>接口通过【初生点对象】的 GUID 去获取：</strong>
+
+1. 选中【空锚点】对象后右键点击【复制对象 ID】获取它的 GUID。注意区分对象 ID 与资源 ID 的区别。
+
+![](static/boxcnEJB10niCEqQ5KHUtrtjw0c.png)
+
+1. 将【属性面板】中【基础属性】类中的【静态状态】取消勾选，静态对象不执行脚本逻辑。
+
+![](static/boxcnsjxYBbzeCmqEoYqy9kiFRf.png)
+
+![](static/boxcnP4ohpf4AuMXgsx0NKXiPsg.png)
+
+1. 在脚本的 onStart 方法中添加下列代码：代码将异步查找 ID 对应的对象并以【空锚点】对象进行接收。
+
+```
+if(SystemUtil.isServer()) {
+    let anchor = await Core.GameObject.asyncFind("3819014E") as Gameplay.Anchor;
+    console.log("anchor guid " + anchor .guid);
+}
+```
+
+<strong>使用脚本挂载的方式进行获取：</strong>
+
+1. 选中【空锚点】对象，在属性面板中将静态状态取消
+
+![](static/boxcnXXtQ6WHL9ojiLOxa5kzlyc.png)
+
+![](static/boxcnnkAu7tpGE82al946ls561e.png)
+
+1. 将脚本挂载到【空锚点】对象下方
+
+![](static/boxcnd3vwPiWtnHQ8OHfcs5fILh.png)
+
+1. 在脚本的 onStart 方法中添加下列代码：代码获取脚本挂载的对象并以【空锚点】对象进行接收
+
+```
+let anchor = this.gameObject as Gameplay.Anchor ;
+```
+
+### 动态生成的【初生点对象】：
+
+下列示例代码替换脚本中的 `onStart` 方法：示例代码在客户端往 `asyncSpawn` 接口（中传入【空锚点】的资源 ID“Anchor”异步生成了一个对应的【空锚点】对象。
+
+```
+protected async onStart(): Promise<void> {
+    if(SystemUtil.isServer()) {
+        let anchor = await Core.GameObject.asyncSpawn({guid: "Anchor", replicates: true}) as Gameplay.PlayerStart;
+        console.log("anchor guid " + anchor.guid);
+    }
+}
+```
