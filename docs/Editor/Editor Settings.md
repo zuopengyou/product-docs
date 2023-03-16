@@ -1,12 +1,11 @@
 # 编辑器各设置
 
 <strong>阅读本文预计 30 分钟</strong>
-
 <strong>本文概述了编辑器顶部菜单栏 - 设置内的可设置项</strong>
 
 # 什么是编辑器设置
 
-编辑器设置板块主要是为了方便开发者制作游戏，满足开发者对编辑器操作的定制化需求，针对编辑器基础功能提供的可设定项
+> 编辑器设置板块主要是为了方便开发者制作游戏，满足开发者对编辑器操作的定制化需求，针对编辑器基础功能提供的可设定项。
 
 # 编辑器设置都包含什么
 
@@ -17,15 +16,13 @@
 - 点击编辑器右上角 “设置” 图标按钮，呼出设置窗口，进入<strong>设置</strong>界面
 - 设置界面内所有可设定项 <strong>均为选择后即时生效</strong>
 
-## 3.1 世界设置
+## 世界设置
 
-### 3.1.1 环境设置 - 重力
+### 环境设置-重力
 
 重力设置是设定当前世界内场景空间的重力值
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnB6Hj8Nz93OWaYgSo9K1fsd.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6y6O0BRK9neLGHGgoo6qxd.png)
 
 - <strong>重力模式</strong>
 
@@ -40,18 +37,16 @@
   - 可自定义设定当前场景空间重力值
   - 重力值大小不做限制
 
-### 3.1.2 玩家设置
+### 玩家设置
 
 玩家设置是设置当前工程游戏一个游戏房间内的<strong>玩家数量上限</strong>与<strong>预留玩家数量</strong>
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJm3D9cOmWY9w5qI4GVnSsb.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcna4Pia7KqwXtj8RwpqQK5Dg.png)
-
 - <strong>玩家数量上限</strong>
 
   - 什么是玩家数量上限？
-
+  - 
     - 即一个房间内可支持的最大玩家数量
   - 玩家数量上限设置规则
 
@@ -79,15 +74,13 @@
           - 最大玩家数量为 30，则预留玩家数量最大可设置为 10
           - 最大玩家数量为 10，则预留玩家数量最大可设置为 9
 
-## 3.2 编辑器设置
+## 编辑器设置
 
-### 3.2.1 自动备份
+### 自动备份
 
 自动备份是指工程文件开启自动备份功能后，每达到设置的备份时间间隔进行的自动备份操作。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcniy3Vif9tz6i55bp4Iqi1Ib.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnExp9Y8McIBIiS1IpoWHKUg.png)
 
 - <strong>自动备份开关</strong>
 
@@ -108,13 +101,13 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1r412aF9zRbEs92Xc2W4Wg.png)
 
-### 3.2.2 快捷键
+### 快捷键
 
 支持编辑器各个基本操作的快捷键设定
 
 （Tips：快捷键仅在英文输入法状态下生效）
 
-#### 3.2.2.1 操作模式
+#### 操作模式
 
 编辑器共有移动、缩放、旋转三种操作模式，支持修改三种操作模式的快捷键设置。
 
@@ -125,9 +118,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0qIfkm9tbAtjaKnQv8IuAk.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjhZCe6YyZGvbzOOCqqkyHh.png)
-
-#### 3.2.2.2 对象操作
+#### 对象操作
 
 针对编辑器对象的各个基本操作，支持修改各个操作模式的快捷键设置。
 
@@ -151,9 +142,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjy9JDcFUNnZuWgwwEJTtvc.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnfWdDlP4uJmhXay87dzeib.png)
-
-#### 3.2.2.3 测试
+#### 测试
 
 针对编辑器快速运行模式的快捷键设定
 
@@ -162,9 +151,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbYV6zGqYDgJU6s5ozi4vCe.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn95AQjYING0DeeNBk578zEe.png)
-
-#### 3.2.2.4 摄像机移动
+#### 摄像机移动
 
 针对编辑器主视口 - 摄像机移动的快捷键设定
 
@@ -179,9 +166,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn7VGDeGhQWZbjhptyzLEyef.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIYOMNBLwBwrTjCcCv9XY9f.png)
-
-#### 3.2.2.5 其他
+#### 其他
 
 针对编辑器其他版块的快捷键设定
 
@@ -189,7 +174,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfURZeUurZiQXq3l5Gu0fqg.png)
 
-### 3.3.3 语言设置
+### 语言设置
 
 支持用户切换编辑器语言
 
@@ -200,9 +185,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnv2k7LcUDfXf7UsNy6zwQff.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnV7q197ClcHbLyeZywxKtIb.png)
-
-### 3.3.4 画质分级模拟
+### 画质分级模拟
 
 #### Editor 画质模式
 
@@ -213,8 +196,6 @@
   - 开发者可以在主视口、PIE 下模拟不同画质分级的显示效果。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMG86zORxZHJDvOZcNhmpMb.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnyIFMyR8cr4SCGpVcvxLVbe.png)
 
 Editor 画质分级模拟中分为<strong>GPU</strong>性能分级和<strong>CPU</strong>性能分级。
 
@@ -233,8 +214,6 @@ Editor 画质分级模拟中分为<strong>GPU</strong>性能分级和<strong>CPU
     - 9 级（匹配用户约 2%）
     - 电影画质
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcny3SRjS7s3KJykoXEMKZ7Ze.png)
-
 - <strong>CPU 性能分级</strong>
 
   - CPU 性能分级的下拉菜单包括<strong>1-9 级</strong>、<strong>电影画质</strong>以及<strong>每个分级匹配到的用户数占比</strong>
@@ -250,8 +229,6 @@ Editor 画质分级模拟中分为<strong>GPU</strong>性能分级和<strong>CPU
     - 9 级（匹配用户约 7%）
     - 电影画质（匹配用户约 1%）
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIZYn5ZZVb7gobzaOpd56Lh.png)
-
 - Editor 画质模拟中，GPU 性能分级和 CPU 性能分级<strong>默认为电影画质</strong>。
 
 #### Mobile 备用画质
@@ -263,8 +240,6 @@ Editor 画质分级模拟中分为<strong>GPU</strong>性能分级和<strong>CPU
   - 新增 Mobile 备用画质，在玩家的机型没有匹配到画质时，启动开发者自定义的备用画质。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnqqjOD2UDiU5GNmGoTnSCc.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnn8wc9KiL2tBMhLWPw17BlX.png)
 
 - GPU 性能分级和 CPU 性能分级选项<strong>同上</strong>
 - Mobile 备用画质中，GPU 性能分级和 CPU 性能分级<strong>默认为 1 级</strong>。
