@@ -15,7 +15,7 @@
 - 双击工程内容中的任意 UI 文件，点击 UI 编辑器工具栏的【按键绑定】按钮后，打开【按键绑定】菜单，开发者可以在此菜单直接将移动端 UI（包括摇杆、摄像机滑动区、按钮）绑定或覆盖到键鼠键位上
 - 每个 UI 文件的按键绑定菜单会自动读取该 UI 文件内所有的摇杆、摄像机滑动区、按钮、按钮（废弃）这四类 UI 控件
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnuSXwPA9zT2bIOvFYbhS1kc.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnuSXwPA9zT2bIOvFYbhS1kc.png)
 
 - 对于摄像机滑动区、按钮、按钮（废弃）：点击/释放/按住绑定的键鼠按键就会触发点击/释放/按住对应 UI 控件
 - 对于摇杆：支持绑定摇杆的上下左右四个方向和仅按下/抬起，
@@ -24,7 +24,7 @@
   - 仅按下/抬起：按下绑定的键鼠按键会触发摇杆的按下抬起事件，但摇杆的当前值保持在（0,0）不变
   - 使用场景：为了实现一边开火一边转动摄像机来瞄准，射击游戏中的开火键推荐使用摇杆控件；而如果需要为 PC 端提供控制方案，可以将开火摇杆的仅按下/抬起绑定在鼠标左键，这样，玩家可以按住鼠标右键拖动或者直接拖动鼠标（鼠标锁定时）来转动摄像机进行瞄准，并使用左键触发摇杆完成开火
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnhmdpZQxxnjfkGIrqSvmxfe.gif)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnhmdpZQxxnjfkGIrqSvmxfe.gif)
 
 - 点击菜单中的按钮可以更换绑定，点击重置按钮可以恢复到默认绑定键位
 
@@ -44,7 +44,7 @@ Util.InputUtil.unbindButton(Type.Keys.Up)
 
 - 为了满足开发者针对 PC 游戏端的不同需求，比如希望某个摄像机滑动区/摇杆是否可以被鼠标点击，因此在 MWUIVirtualJoystickPanel 和 MWUITouchPad 类中提供了是否被鼠标控制的接口，编辑器内也可以在摄像机滑动区/摇杆属性面板中勾选此属性
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnGgX88e45wIi9fPbNj6s2Sc.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnGgX88e45wIi9fPbNj6s2Sc.png)
 
 - 此功能的使用场景请见 [UI 组件-摇杆](https://meta.feishu.cn/wiki/wikcn3gWEoxEgKwAzgYPBl2zeCc?table=tblDgsts19OW2IJA) 和 [UI 组件-摄像机滑动区](https://meta.feishu.cn/wiki/wikcnlsPgoUkmlLTnCwO3vuRCLc?table=tblDgsts19OW2IJA)
 
@@ -67,9 +67,9 @@ let bool2 = joystick.controlByMouseEnable
 - 预设 UI 文件包括左侧的摇杆、右侧的摄像机滑动区和右下的三个按钮（跳跃/攻击/交互）
 - 预设 UI 脚本文件内包括控制点击跳跃按钮可以实现人物跳跃的逻辑
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnSVMmjt7W9I5jC799sLcjsb.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnSVMmjt7W9I5jC799sLcjsb.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcn4IzaVy9OridnZrlxhVBg2g.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcn4IzaVy9OridnZrlxhVBg2g.png)
 
 | 按键     | 行动             | 对应的预设 UI 控件 |
 | -------- | ---------------- | ------------------ |

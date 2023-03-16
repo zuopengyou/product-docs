@@ -12,17 +12,17 @@
 
 在编辑器右上角【世界】中，找到【摄像机】，点击后在右下属性列表中修改摄像机的属性
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcn4ujiEwJWC0u4EKxa2yKuie.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcn4ujiEwJWC0u4EKxa2yKuie.png)
 
 #### 基础属性
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcn9lVsqINIcZ0geOrCtAm5af.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcn9lVsqINIcZ0geOrCtAm5af.png)
 
 - **距离调整：**
 
   - 摄像机与摄像机插槽之间存在一定距离，这个距离称为弹簧臂长度，改变摄像机之间的距离，就是改变弹簧臂的长度。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnOUNH5RuhI6Fj9nbjzrIwHc.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnOUNH5RuhI6Fj9nbjzrIwHc.png)
 
 弹簧臂长度（即距离调整）示意图
 
@@ -44,7 +44,7 @@
 
 如果需要使用正交视角（例如制作拥有 3D 效果的 2D 休闲游戏），推荐使用**视场=35（或更小）**，并同时调整**摄像机距离、位置、角度**等参数来模拟正交视角
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcncR0w9JXgVNeqC4oSS4oMJg.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcncR0w9JXgVNeqC4oSS4oMJg.png)
 
 - **是否有摄像机碰撞**
 
@@ -74,7 +74,7 @@
 
 #### 摄像机变换（API：cameraRelativeTransform）和弹簧臂变换（API：cameraSystemRelativeTransform）
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnaXZFfxHIBWZFa2uZhVysBe.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnaXZFfxHIBWZFa2uZhVysBe.png)
 
 - **摄像机变换-相对位置**
 
@@ -98,13 +98,13 @@
 
   - 设定弹簧臂角度，即摄像机相对弹簧臂挂点角度，在游戏中拖动屏幕转动视角就相当于动态调整此属性，因此该属性仅在摄像机朝向模式为固定朝向和跟随朝向时生效，用于制作俯视角游戏；摄像机变换-相对旋转相比于此属性不同的是仅改变摄像机角度，不改变弹簧臂角度
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcn4IxXADbu33kLiS4vFrB22g.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcn4IxXADbu33kLiS4vFrB22g.png)
 
 弹簧臂变换-相对旋转（0,-30,0）
 
 摄像机变换-相对旋转（0,0,0）
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnpqyKSzZZP74GNLvumSKLx2.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnpqyKSzZZP74GNLvumSKLx2.png)
 
 弹簧臂变换-相对旋转（0,0,0）
 
@@ -112,7 +112,7 @@
 
 #### 摄像机模式
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnuljqIXpolWbPKvoVNm3Ajc.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnuljqIXpolWbPKvoVNm3Ajc.png)
 
 - **摄像机模式**
 
@@ -133,17 +133,17 @@
 
   - 如果开启真实效果，摄像机会跟随角色模型头部移动，模拟角色移动时跟随头部上下抖动的画面，用于制作第一视角游戏；如果关闭真实效果，摄像机会跟随角色胶囊体移动，不会跟着头部上下抖动
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnmECwvCy14YAH914x6PobWb.gif)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnmECwvCy14YAH914x6PobWb.gif)
 
 关闭真实效果
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnp6HpYNCLuXB1PUKraYfOEc.gif)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnp6HpYNCLuXB1PUKraYfOEc.gif)
 
 开启真实效果
 
 #### 摄像机位置
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnGloPN25Rqq3paEnTXLIUug.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnGloPN25Rqq3paEnTXLIUug.png)
 
 - **摄像机位置模式**
 
@@ -159,13 +159,13 @@
 
 关闭固定摄像机 Z 轴方向
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnlkgUBGMikCrTnmUwjCxHKN.gif)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnlkgUBGMikCrTnmUwjCxHKN.gif)
 
 开启固定摄像机 Z 轴方向
 
 #### 摄像机朝向
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnFm8N3CRyvbFTmEpfXUGxhg.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnFm8N3CRyvbFTmEpfXUGxhg.png)
 
 - **摄像机朝向模式**
 
@@ -181,7 +181,7 @@
   - 摄像机向下旋转时的最大角度，防止旋转至角色模型上方，导致穿模效果。
   - 范围：0~90°  数值越大，可旋转的角度越大。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnKh5HB410OoxfCelWMrDMth.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnKh5HB410OoxfCelWMrDMth.png)
 
 限制角度示意图
 

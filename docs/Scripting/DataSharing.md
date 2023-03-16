@@ -42,19 +42,19 @@ let data3 = await DataStorage.asyncGetCustomData("coin");
 
 - 我们在发布完游戏，并通过审核后，打开开发者平台，找到存档管理列表。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnTlNSqwT4chVzV0pCdAjOFh.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnTlNSqwT4chVzV0pCdAjOFh.png)
 
 - 然后选择我们的游戏名，定位我们所要找的游戏存档。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnHpVNAyHu9EAxMRRL9fvB4c.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnHpVNAyHu9EAxMRRL9fvB4c.png)
 
 - 接下来数据类型选择自定义。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnP0gTVAgSPf9onxMY7091xd.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnP0gTVAgSPf9onxMY7091xd.png)
 
 - 最后根据 key 进行搜索，或直接点击搜索按钮，就可以看到我们游戏中存储的所有的数据啦！
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnDi0RyxBzoJkRPBXNg9PFMb.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnDi0RyxBzoJkRPBXNg9PFMb.png)
 
 - 注意：平台上的游戏数据需要等实际游戏的运行后，即执行了数据存储的游戏逻辑后，开发者平台上面才会存在相应的数据。
 
@@ -62,7 +62,7 @@ let data3 = await DataStorage.asyncGetCustomData("coin");
 
 - 找到授权管理按钮，并点击打开游戏授权的管理界面。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnK6q9I67GPYgrzFipQMkCWh.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnK6q9I67GPYgrzFipQMkCWh.png)
 
 - 点击添加按钮，添加授权游戏。
 
@@ -71,7 +71,7 @@ let data3 = await DataStorage.asyncGetCustomData("coin");
   - 授权游戏：被授权的游戏，可以填写 gameid 指定某些游戏
   - 状态：开启授权或关闭授权
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnw91nIKk7sVs30sbSUf0sdc.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnw91nIKk7sVs30sbSUf0sdc.png)
 
 ##### 2.4 其他游戏读取并修改共享数据
 

@@ -12,7 +12,7 @@
 
 ## 摄像机滑动区属性
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnKATbfX6YFgTCcmzzVeq2O9.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnKATbfX6YFgTCcmzzVeq2O9.png)
 
 ###### 灵敏度比例
 
@@ -91,4 +91,4 @@ TouchPad.visibility=0
 
 - 在属性面板中也可以调整摄像机滑动区的可见性和可用性
 
-![](https://wstatic-a1.233leyuan.com/productdocs/boxcnL6gjWtqhHNUqe9Atpm12fc.png)
+![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnL6gjWtqhHNUqe9Atpm12fc.png)
