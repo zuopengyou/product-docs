@@ -57,7 +57,7 @@
 
 修改 UI 控件 Z 系数和 UI 对象层级的脚本示例：
 
-```
+```ts
 //修改某个UI控件或者自定义UI的z系数
 btn.zorder=0
 //修改UI对象层级
@@ -174,7 +174,7 @@ this.uiobject.zorder=0
 
 - UI 控件的名称，方便用户在脚本中进行调用。
 
-```
+```ts
 //找到对应的UI文件
 let base = MWDesignerUI.MWUIUserWidget.Get(this.uiObject)
 //找到对应的按钮

@@ -35,7 +35,7 @@
 
 首先我们将触发器对象放置在场景中，然后绑定以下脚本即可实现动态创建非玩家对象
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -73,7 +73,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -103,7 +103,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -139,7 +139,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -178,7 +178,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -274,7 +274,7 @@ NPC 通常分为剧情 NPC，战斗 NPC，服务 NPC 以及兼具多种功能的
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -316,7 +316,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 

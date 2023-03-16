@@ -154,6 +154,9 @@ export function init() {
     }
   })
   g.forEach((path) => {
+    console.log('path', path)
     tsCodeDeal(path)
   })
 }
+
+init()

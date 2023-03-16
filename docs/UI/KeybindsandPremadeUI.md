@@ -34,7 +34,7 @@
 
 **脚本示例：**
 
-```
+```ts
 const JumpBtn = this.uiWidgetBase.findChildByPath('MWCanvas/MWButton_Jump') as UI.Button
 //绑定按键
 Util.InputUtil.bindButton(Type.Keys.Up,JumpBtn)
@@ -50,7 +50,7 @@ Util.InputUtil.unbindButton(Type.Keys.Up)
 
 **脚本示例：**
 
-```
+```ts
 let touchpad=this.uiWidgetBase.findChildByPath('MWCanvas/MWUITouchPad_1') as UI.TouchPad
 let joystick=this.uiWidgetBase.findChildByPath('MWCanvas/MWUIVirtualJoystickPanel_1') as UI.VirtualJoystickPanel
 //设置摇杆和摄像机滑动区可以被鼠标点击
@@ -89,7 +89,7 @@ let bool2 = joystick.controlByMouseEnable
 
 **脚本示例：**
 
-```
+```ts
 //设置为不允许玩家切换鼠标锁定状态
 Util.InputUtil.setCanBeLockMouse(false)
 //设置为允许玩家切换鼠标锁定状态

@@ -33,7 +33,7 @@
 
 ####### 示例一：制作动态调节灵敏度的摄像机滑动区
 
-```
+```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
     Character: Gameplay.Character;
@@ -71,7 +71,7 @@ export default class UIDefault extends UI.UIBehavior{
 
   - 调整可用性为不可用
 
-```
+```ts
 let TouchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as UI.TouchPad
 //调整摄像机滑动区的可用性为不可用
 TouchPad.isEnabled=false
@@ -81,7 +81,7 @@ TouchPad.isEnabled=true
 
 - 调整可见性为隐藏/折叠/可见不可交互也都可以使摄像机滑动区不可使用
 
-```
+```ts
 let touchpad=MWGameUI.MWUITouchPad.get(base.findChildByPath("MWCanvas/MWUITouchPad_1"));
 //调整摄像机滑动区的可见性为折叠，1234这四种可见性都会使摄像机滑动区不可使用
 TouchPad.visibility=1

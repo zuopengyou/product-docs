@@ -36,7 +36,7 @@
 
 通过脚本你也可以在游戏运行时通过【资源库】中的资源 ID 动态生成一个【初生点对象】来使用。【初生点对象】的资源 ID 为“PlayerStart”。在【工程内容】下的脚本目录中新建一个脚本文件，将脚本拖入【对象管理器】中【对象】栏。选中脚本进行编辑，将下列示例代码替换脚本中的 `onStart` 方法：异步生成一个【初生点】对象，关闭双端同步，位置为默认（0，0，0），旋转为默认（0，0，0），缩放倍数为默认（1，1，1）。打印生成【初生点】对象的 guid。
 
-```
+```ts
 protected async onStart(): Promise<void> {
     if(SystemUtil.isServer()) {
         let spawnPoint = await Core.GameObject.asyncSpawn({guid: "PlayerStart", replicates: false}) as Gameplay.PlayerStart;
@@ -49,7 +49,7 @@ protected async onStart(): Promise<void> {
 
 ![](static/AeZObSghso01zcxNdlGcX1h1npd.png)
 
-```
+```ts
 // 预加载资源，将下列代码粘贴到脚本中的onStart方法之前
 @Core.Property()
 preloadAssets: string = "PlayerStart"；
@@ -99,7 +99,7 @@ preloadAssets: string = "PlayerStart"；
 
 1. 在脚本的 onStart 方法中添加下列代码：代码将异步查找 ID 对应的对象并以【初生点对象】进行接收。
 
-```
+```ts
 if(SystemUtil.isServer()) {
     let spawnPoint = await Core.GameObject.asyncFind("06D5DBFC") as Gameplay.PlayerStart;
     console.log("spawnPoint 的guid是 " + spawnPoint.guid);
@@ -120,7 +120,7 @@ if(SystemUtil.isServer()) {
 
 1. 在脚本的 onStart 方法中添加下列代码：代码获取脚本挂载的对象并以【初生点对象】进行接收
 
-```
+```ts
 if(SystemUtil.isServer()) {
     let spawnPoint = this.gameObject as Gameplay.PlayerStart;
 }
@@ -130,7 +130,7 @@ if(SystemUtil.isServer()) {
 
 将下列示例代码添加到脚本的 onstart 方法中：示例代码在客户端往 `asyncSpawn` 接口（中传入初生点的资源 ID“PlayerStart”异步生成了一个对应的【初生点对象】。
 
-```
+```ts
 if(SystemUtil.isServer()) {
     let spawnPoint = await Core.GameObject.asyncSpawn({guid: "PlayerStart", replicates: false}) as Gameplay.PlayerStart;
     console.log("spawnPoint 的guid是 " + spawnPoint.guid);

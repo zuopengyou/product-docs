@@ -136,7 +136,7 @@
 
 - 示例脚本：
 
-```
+```ts
 export default class WeaponUI extends WeaponUI_Generate {
     protected onStart() {
         
@@ -191,7 +191,7 @@ export default class WeaponUI extends WeaponUI_Generate {
 
 - 示例脚本：
 
-```
+```ts
 export default class AbilityUIControl extends UI.UIBehavior {
     player: Gameplay.Player;
     _Joystick: UI.VirtualJoystickPanel;

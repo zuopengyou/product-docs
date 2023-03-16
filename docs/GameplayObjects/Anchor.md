@@ -34,7 +34,7 @@
 
 通过脚本你也可以在游戏运行时通过【资源库】中的资源 ID 使用 `asyncSpawn` 接口动态生成一个【空锚点】对象来使用。【空锚点】的资源 ID 为“Anchor”。在【工程内容】下的脚本目录中新建一个脚本文件，将脚本拖入【对象管理器】中【对象】栏。选中脚本进行编辑，将下列示例代码替换脚本中的 `onStart` 方法：异步生成一个【空锚点】对象，打开双端同步，位置为默认（0，0，0），旋转为默认（0，0，0），缩放倍数为默认（1，1，1）。打印生成【初生点】对象的 guid。
 
-```
+```ts
 protected async onStart(): Promise<void> {
     if(SystemUtil.isServer()) {
         let anchor = await Core.GameObject.asyncSpawn({guid: "Anchor", replicates: true}) as Gameplay.PlayerStart;
@@ -47,7 +47,7 @@ protected async onStart(): Promise<void> {
 
 ![](static/boxcnhjRiPOleEHS9tRriYHuWab.png)
 
-```
+```ts
 // 预加载资源，将下列代码粘贴到脚本中的onStart方法之前
 @Core.Property()
 preloadAssets: string = "Anchor"；
@@ -87,7 +87,7 @@ preloadAssets: string = "Anchor"；
 
 1. 在脚本的 onStart 方法中添加下列代码：代码将异步查找 ID 对应的对象并以【空锚点】对象进行接收。
 
-```
+```ts
 if(SystemUtil.isServer()) {
     let anchor = await Core.GameObject.asyncFind("3819014E") as Gameplay.Anchor;
     console.log("anchor guid " + anchor .guid);
@@ -108,7 +108,7 @@ if(SystemUtil.isServer()) {
 
 1. 在脚本的 onStart 方法中添加下列代码：代码获取脚本挂载的对象并以【空锚点】对象进行接收
 
-```
+```ts
 let anchor = this.gameObject as Gameplay.Anchor ;
 ```
 
@@ -116,7 +116,7 @@ let anchor = this.gameObject as Gameplay.Anchor ;
 
 下列示例代码替换脚本中的 `onStart` 方法：示例代码在客户端往 `asyncSpawn` 接口（中传入【空锚点】的资源 ID“Anchor”异步生成了一个对应的【空锚点】对象。
 
-```
+```ts
 protected async onStart(): Promise<void> {
     if(SystemUtil.isServer()) {
         let anchor = await Core.GameObject.asyncSpawn({guid: "Anchor", replicates: true}) as Gameplay.PlayerStart;

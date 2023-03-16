@@ -40,7 +40,7 @@
 
 首先我们将触发器对象放置在场景中，然后绑定以下脚本即可实现一个限制移动的陷阱。
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -82,7 +82,7 @@ export default class NewScript extends Core.Script {
 
 实现步骤：首先我们将触发器对象放置在场景中，然后绑定以下脚本即可实现一个加速区域。
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -118,7 +118,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -149,7 +149,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -182,7 +182,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -213,7 +213,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -256,7 +256,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -306,7 +306,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -344,7 +344,7 @@ export default class NewScript extends Core.Script {
 
 首先我们将触发器对象放置在场景中，然后绑定以下脚本即可实现一个溜冰场的区域。
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -376,7 +376,7 @@ export default class NewScript extends Core.Script {
 
 实现步骤：依旧以实现溜冰场的区域为例，因为角色受到两种摩擦力的影响才能停下来，所以在做溜冰场效果时，需要将两种摩擦力都减少至适当值，才能够实现溜冰效果。
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -430,7 +430,7 @@ export default class NewScript extends Core.Script {
 
 首先我们将触发器对象放置在场景中，然后绑定以下脚本即可实现一个飞行区域。
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -468,7 +468,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -508,7 +508,7 @@ export default class NewScript extends Core.Script {
 
 然后绑定以下脚本即可实现一个游泳区域。
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -540,7 +540,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -582,7 +582,7 @@ export default class NewScript extends Core.Script {
 
 实现步骤：首先我们将触发器对象放置在场景中，然后绑定以下脚本即可实现一个下蹲区域。
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -630,7 +630,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -678,7 +678,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -712,7 +712,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -740,7 +740,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class TickScript extends Core.Script {
 
@@ -772,7 +772,7 @@ export default class TickScript extends Core.Script {
 
 实现步骤：首先我们将触发器对象放置在场景中，然后绑定以下脚本即可实现一个限制跳跃的陷阱。
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -806,7 +806,7 @@ export default class NewScript extends Core.Script {
 
 实现步骤：首先我们将触发器对象放置在场景中，然后绑定以下脚本即可实现一个跳跃板的功能。或者也可以利用此功能做蹦蹦床等功能。
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -843,7 +843,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -939,7 +939,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class TSa extends Core.Script {
 
@@ -1069,7 +1069,7 @@ export default class TSa extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -1113,7 +1113,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -1145,7 +1145,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class NewScript extends Core.Script {
 
@@ -1179,7 +1179,7 @@ export default class NewScript extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class stanceTest extends Core.Script {
 
@@ -1228,7 +1228,7 @@ export default class stanceTest extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 
 export default class SpawnGO extends Core.Script {
@@ -1270,7 +1270,7 @@ export default class SpawnGO extends Core.Script {
 
 示例脚本：
 
-```
+```ts
 @Core.Class
 export default class stanceTest extends Core.Script {
 

@@ -191,7 +191,7 @@
 
 - 脚本示例：
 
-```
+```ts
 fireButton.onJoyStickDown.add(() => {
     //按下摇杆进入第一人称瞄准视角，并开启真实效果
     Gameplay.getCurrentPlayer().character.cameraSystem.switchCameraMode(0,true)
