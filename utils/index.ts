@@ -8,12 +8,6 @@ import { globSync } from 'glob'
 export function dealItem(dir: string) {
   const p = `./docs/${dir}`
   const paths = readdirSync(p)
-  console.log(dir)
-  console.log(
-    paths.map((name) => {
-      return { text: name.split('.')[0], link: `/${dir}/${name}` }
-    })
-  )
   return paths.map((name) => {
     return { text: name.split('.')[0], link: `/${dir}/${name}` }
   })
@@ -154,9 +148,6 @@ export function init() {
     }
   })
   g.forEach((path) => {
-    console.log('path', path)
     tsCodeDeal(path)
   })
 }
-
-init()
