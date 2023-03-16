@@ -8,27 +8,27 @@
 | 2023 年 1 月 3 日   | 增加寻路动态修饰区效果显示说明<br/>修改 API 接口使用  | v0.20          |
 | 2023 年 2 月 21 日  | 增加动态修改寻路使用说明<br/>增加寻路计算参数使用说明 | v0.22          |
 
-<strong>阅读本文预计 10 分钟</strong>
+**阅读本文预计 10 分钟**
 
-<strong>本文概述了如何在编辑器中，使用寻路区域功能对象和寻路动态修饰区功能对象，实现角色自动寻路的效果。</strong>
+**本文概述了如何在编辑器中，使用寻路区域功能对象和寻路动态修饰区功能对象，实现角色自动寻路的效果。**
 
-# 什么是寻路系统
+## 什么是寻路系统
 
 寻路系统包含了寻路区域功能对象和寻路动态修饰区功能对象，在关卡中通过寻路区域功能对象绘制出一个可供角色或人形对象按自定义要求进行移动行为的区域，并可以通过寻路动态修饰区功能对象在游戏运行时，动态修改可通行的区域范围。
 
-# 寻路系统都包含什么
+## 寻路系统都包含什么
 
-<strong>寻路区域</strong>
+**寻路区域**
 
 寻路区域功能对象作用是在场景中绘制一块供角色或人形对象进行 AI 寻路的区域。
 
-<strong>寻路动态修饰区</strong>
+**寻路动态修饰区**
 
 寻路动态修饰区功能对象作用是在可寻路区域内，创建一块可在运行时，通过脚本逻辑运态修改该区域是否可进行 AI 寻路的区域。
 
-# 如何使用寻路区域
+## 如何使用寻路区域
 
-- <strong>step.1</strong>
+- **step.1**
 
 在编辑器左侧【游戏功能对象】选项中，找到【寻路区域】，拖拽到主视口，即可完成创建。
 
@@ -36,7 +36,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/PZgnbl4mzoWsHpxBWYicEYJNnbd.png)
 
-- <strong>step.2</strong>
+- **step.2**
 
 寻路区域被创建后，会自动分配到对象列表中的寻路区域分组内，通过属性面板可以修改寻路区域属性，使用相对缩放属性来改变寻路区域的大小。
 
@@ -50,7 +50,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/Me8bbtk4BotxKixyR8CcA2tCnQc.png)
 
-- <strong>step.3</strong>
+- **step.3**
 
 寻路区域对象在属性面板中新增寻路设置参数，可以通过调节参数来改变寻路区域计算结果。
 
@@ -58,19 +58,19 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/GC9EbbWEWosIKexg5CYc8NOYnkc.png)
 
-# 如何使用寻路区域修饰
+## 如何使用寻路区域修饰
 
 在创建寻路区域后，图中可寻路的区域内有 AB 两个路口允许通行。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/D0D7bj8tFooxC0x6eHKct8Uknvh.png)
 
-- <strong>step.1</strong>
+- **step.1**
 
 在编辑器左侧【游戏功能对象】选项中，找到【寻路区域修饰】，拖拽到主视口，放置在 A 路口。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/H0twbFvexo8fF7xApFbcgE7Jn3e.png)
 
-- <strong>step.2</strong>
+- **step.2**
 
 通过修改寻路动态修改区域的类型属性，可以改变寻路区域是否允许通行。
 
@@ -83,13 +83,13 @@
 | LowHeight | 低高度区-代表这是一个因不符合条件而无法通行的区域，可用于高度较低的区域，例如桥底、洞穴等场景，寻路区域不会在此空间内产生寻路数据。<br/><br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/Fqa3bJFIvoh6wVxU4IlcJ5FGnt4.png)                                                                                                                                                                        |
 | Obstacle  | 障碍区-代表这是一个需要符合通过条件的区域，只有当前寻路区域内没有其他可行动的路线时，才会考虑经过这里。<br/><br/>当寻路区域内有多条可通往目标点的路径时，AI 会避开障碍区进行寻路。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/NHE8bo5Ltoxxcpx08cncfmO1nob.png)<br/><br/>当寻路区域内仅有一条可通往目标点的路径时，AI 会穿过障碍区进行寻路。<br/>![](https://wstatic-a1.233leyuan.com/productdocs/static/Lp1Kb35SEoZRwdxCSBacxnoYnWd.png) |
 
-# 如何让主角（Player）使用寻路区域
+## 如何让主角（Player）使用寻路区域
 
-- <strong>step.1</strong>
+- **step.1**
 
 创建一个寻路区域【参见 3.如何使用寻路区域】
 
-- <strong>step.2</strong>
+- **step.2**
 
 创建一个脚本，使用 moveTo()方法控制角色进行自动寻路
 
@@ -121,19 +121,19 @@ export default class PlayerMoveTo extends Core.Script {
 }
 ```
 
-# 如何让人形对象（Humanoid）使用寻路区域
+## 如何让人形对象（Humanoid）使用寻路区域
 
-- <strong>step.1</strong>
+- **step.1**
 
 创建一个寻路区域【参见 3.如何使用寻路区域】
 
-- <strong>step.2</strong>
+- **step.2**
 
 在场景中创建一个人形对象
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/I4epbyRNToqjlYx9cpQcaE2vnDi.png)
 
-- <strong>step.3</strong>
+- **step.3**
 
 创建一个脚本，使用 moveTo()方法控制人形对象进行自动寻路
 
@@ -166,9 +166,9 @@ export default class NewScript1 extends Core.Script {
 }
 ```
 
-# 
+## 
 
-# 动态修改寻路数据方法
+## 动态修改寻路数据方法
 
 在编辑器菜单栏[设置]功能中增加了[寻路设置]属性，可以设置是否开启动态寻路功能。动态寻路开启后，可以通过脚本在游戏运行时动态设置寻路动态修饰区状态。
 
@@ -229,9 +229,9 @@ export default class Nav extends Core.Script {
 }
 ```
 
-### 
+#### 
 
-# 使用寻路系统的注意事项与建议
+## 使用寻路系统的注意事项与建议
 
 在编辑器的视口设置中，可以开启/关闭显示主场景中的寻路区域；
 

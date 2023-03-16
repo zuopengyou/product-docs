@@ -5,26 +5,26 @@
 | 2022 年 10 月 10 日 | 高健   | 文档创建 | V0.15          |
 | 2022 年 12 月 14 日 | 董佳维 | 文档更新 | V0.18          |
 
-<strong>阅读本文预计 10 分钟</strong>
+**阅读本文预计 10 分钟**
 
 为了让开发者了解如何制作、调试和发布横屏/竖屏游戏，本文主要介绍了以下内容：
 
 1. 分辨率模拟功能
 2. 横竖屏功能
 
-# 分辨率模拟功能
+## 分辨率模拟功能
 
 开发者可以通过分辨率模拟功能在编辑状态和 PIE 状态下调试不同分辨率下的游戏效果。
 
-## <strong>功能入口</strong>
+### **功能入口**
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnzZq8iFKn0yAl9GEj6spozg.png)
 
-## <strong>面板说明</strong>
+### **面板说明**
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhNGdoW0SOuvGHoo1ceMkCe.png)
 
-- <strong>添加分辨率</strong>
+- **添加分辨率**
 - Step.1 点击添加分辨率按钮打开自定义分辨率弹窗。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnkM1zALksjUDlRtAoHqkHQg.png)
@@ -37,22 +37,22 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnCJ12h44ihmebVRUovQ6lMb.png)
 
-- <strong>分辨率列表</strong>
+- **分辨率列表**
 
-  - 分辨率列表中包含默认的<strong>主视口平铺</strong>及开发者添加的<strong>自定义分辨率</strong>，点击某个分辨率进行切换。
+  - 分辨率列表中包含默认的**主视口平铺**及开发者添加的**自定义分辨率**，点击某个分辨率进行切换。
   - 开发者添加的自定义分辨率可删除。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnag1agTgdCXdOg2HG6wa30f.png)
 
-## <strong>使用效果</strong>
+### **使用效果**
 
-- <strong>主视口</strong>
+- **主视口**
 
 主视口会根据视口大小和选择的分辨率，在视口内划分可操作区域和无效操作区域。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGqrhL1ABVgs1MjO1G63Ybe.png)
 
-- <strong>PIE</strong>
+- **PIE**
 
 PIE 窗口会根据选择分辨率的长宽比例，自适应调整窗口大小。
 
@@ -64,25 +64,25 @@ PIE 窗口会根据选择分辨率的长宽比例，自适应调整窗口大小�
 
 （4:3）
 
-# 横竖屏功能
+## 横竖屏功能
 
 游戏在手机平台上区分为横屏模式与竖屏模式。
 
 开发者可以通过横竖屏功能在编辑状态、PIE 状态下调试制作的游戏，游戏发布后也将以此为标识，设置其在手机平台的横竖屏模式。
 
-## <strong>功能入口</strong>
+### **功能入口**
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcno5RL6f6sUv41PwicO2ksWg.png)
 
-## <strong>面板说明</strong>
+### **面板说明**
 
 点击左侧选项，切换为竖屏模式；点击右侧选项，切换为横屏模式。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnK83MrDT8z1VEMOS0fqNCid.png)
 
-## <strong>使用效果</strong>
+### **使用效果**
 
-- <strong>主视口</strong>
+- **主视口**
 
 主视口会根据横竖屏和分辨率设置，在视口内划分可操作区域和无效操作区域。
 
@@ -94,7 +94,7 @@ PIE 窗口会根据选择分辨率的长宽比例，自适应调整窗口大小�
 
 （竖屏）
 
-- <strong>PIE</strong>
+- **PIE**
 
 PIE 窗口会根据横竖屏和分辨率设置，自适应调整窗口大小。
 
@@ -106,7 +106,7 @@ PIE 窗口会根据横竖屏和分辨率设置，自适应调整窗口大小。
 
 （竖屏）
 
-- <strong>Mobile</strong>
+- **Mobile**
 
 Mobile 会根据设置的横屏模式/竖屏模式展现发布的游戏。
 
@@ -118,7 +118,7 @@ Mobile 会根据设置的横屏模式/竖屏模式展现发布的游戏。
 
 （竖屏）
 
-# 注意事项与建议
+## 注意事项与建议
 
 编辑器默认为横屏模式，提供了横屏模式下的角色控制 UI、角色摄像机参数。
 
@@ -126,7 +126,7 @@ Mobile 会根据设置的横屏模式/竖屏模式展现发布的游戏。
 
 当分辨率为主视口平铺时，不支持切换横竖屏。
 
-# 项目案例
+## 项目案例
 
 - 横屏 demo
 - 竖屏 demo

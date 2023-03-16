@@ -1,18 +1,18 @@
 # 预制体功能说明
 
-<strong>阅读本文大概需要 20 分钟</strong>
+**阅读本文大概需要 20 分钟**
 
 为了开发者更好的了解与使用预制体，本文主要包含以下 3 个内容：
 
 （1）预制体简介（2）预制体使用指南（3）使用注意事项
 
-# 预制体简介
+## 预制体简介
 
-## 预制体是什么
+### 预制体是什么
 
 - 预制体是开发者根据设计目的，在编辑器中使用模型、特效、UI、脚本等资源进行组合制作的高级类资源
 
-## 预制体的应用场景
+### 预制体的应用场景
 
 - 编辑状态下重复创建结构、功能相同的场景对象和游戏逻辑对象
 
@@ -28,17 +28,17 @@
 
 （运行状态下动态创建）
 
-## 预制体基础规则
+### 预制体基础规则
 
-- <strong>预制体结构</strong>
+- **预制体结构**
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnY362BcnTsQQcPL98Io67Hf.png)
 
 - 预制体均包含一个自动创建的预制体头结点
 - 预制体头结点下为预制体子对象，子对象间可以是平级、父子级结构关系
-- <strong>预制体引用对象</strong>
+- **预制体引用对象**
 
-  - 编辑状态下将预制体拖拽挂载至主视口、对象管理器中的操作称为<strong>预制体引用</strong>，生成的对象称为<strong>预制体引用对象</strong>
+  - 编辑状态下将预制体拖拽挂载至主视口、对象管理器中的操作称为**预制体引用**，生成的对象称为**预制体引用对象**
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhsN5M3zEUZUHeA2sVbh4ld.png)
 
@@ -48,27 +48,27 @@
 
 （修改任意节点的属性）
 
-- <strong>预制体引用状态</strong>
+- **预制体引用状态**
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjzK50c1xyOmm4c4JXvChRf.png)
 
 - 普通状态
 
-  - 预制体引用对象未进行过结构修改的情况下称为<strong>普通状态（对象树中紫色形式显示）</strong>
-  - 对于同一个预制体文件而言，使用<strong>实例状态</strong>下的“<strong>以预制体引用对象更新预制体功能</strong>”，预制体本身结构修改可以向全部普通状态预制体引用对象进行<strong>同步</strong>（本质上修改了.prefab 文件）
+  - 预制体引用对象未进行过结构修改的情况下称为**普通状态（对象树中紫色形式显示）**
+  - 对于同一个预制体文件而言，使用**实例状态**下的“**以预制体引用对象更新预制体功能**”，预制体本身结构修改可以向全部普通状态预制体引用对象进行**同步**（本质上修改了.prefab 文件）
 
 （同步结构修改）
 
 - 实例状态
 
-  - 预制体引用对象进行过<strong>结构修改</strong>的情况称为实例状态（对象树中<strong>黄色</strong>形式显示）
-  - 预制体本身的任何修改都<strong>不会</strong>自动向实例状态预制体引用对象进行同步
+  - 预制体引用对象进行过**结构修改**的情况称为实例状态（对象树中**黄色**形式显示）
+  - 预制体本身的任何修改都**不会**自动向实例状态预制体引用对象进行同步
 
-# 预制体使用指南
+## 预制体使用指南
 
-## 预制体的创建与存储
+### 预制体的创建与存储
 
-- <strong>新建预制体</strong>
+- **新建预制体**
 
   - 方法 1：点击工具栏中【新建】菜单下的【新建预制体】按钮
 
@@ -78,7 +78,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9Bmp1nIqNhqZ3TSyFlqHxh.png)
 
-- <strong>已有对象生成为预制体</strong>
+- **已有对象生成为预制体**
 
   - 方法 1：选中对象管理器中对象，点击右键菜单中【生成为预制体】，将选中对象及其子对象生成为预制体
 
@@ -96,13 +96,13 @@
 
 - 若选中的对象为同父节点且不包含预制体引用的对象，将选中对象及其子对象生成为新预制体，在工程内容-预制体根目录下创建预制体文件夹，在该文件夹中定位并选中预制体
 - 对象管理器中该对象及其子对象变更为预制体引用对象
-- <strong>预制体的存储</strong>
+- **预制体的存储**
 
   - 工程内容-预制体分类中存储着当前工程下所有的预制体资源
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnUy0z6rBLtCAHgjL9165dvd.png)
 
-- 每个预制体以单独的 prefab 文件存在，其所<strong>引用</strong>的脚本、UI、材质均分别存于对应的文件类型下，<strong>不会与 prefab 文件整合</strong>
+- 每个预制体以单独的 prefab 文件存在，其所**引用**的脚本、UI、材质均分别存于对应的文件类型下，**不会与 prefab 文件整合**
 
   - 名为“示例”的预制体中引用了名为“DefaultUI”的 UI 文件和名为“test”的脚本文件，锥体 1 引用了名为“新建材质”的材质文件
 
@@ -118,9 +118,9 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnXimx5brqoviqOXz4j9UQqf.png)
 
-## 预制体的编辑
+### 预制体的编辑
 
-- <strong>预制体编辑视口中进行编辑</strong>
+- **预制体编辑视口中进行编辑**
 
   - 入口 1：在工程内容中选中某预制体，点击右键菜单中【编辑】或双击预制体文件，可在预制体编辑视口中打开选中预制体进行编辑
 
@@ -136,7 +136,7 @@
 
 （通过对象管理器打开预制体进行编辑）
 
-- <strong>保存预制体修改</strong>
+- **保存预制体修改**
 
   - 预制体编辑视口中保存
 
@@ -157,15 +157,15 @@
 - 点击某预制体右键菜单中【以预制体引用对象更新预制体】，将当前在对象管理器中对预制体引用对象的修改保存
 - 点击某预制体右键菜单中【另存为新预制体】，将当前在对象管理器中对预制体引用对象的修改另存为新预制体
 
-## 预制体的使用
+### 预制体的使用
 
-- <strong>编辑状态</strong>
+- **编辑状态**
 
   - 拖拽至对象管理器及主视口中创建预制体引用对象
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjOIRlnQ8Nuj12afd0z6EQg.png)
 
-- <strong>运行状态</strong>
+- **运行状态**
 
   - 通过 API 动态生成预制体引用对象
 
@@ -177,7 +177,7 @@ Core.GameObject.spawnGameObject("GUID")
 Core.GameObject.asyncSpawnGameObject("GUID")
 ```
 
-## 预制体的删除
+### 预制体的删除
 
 - 当工程内容中的预制体时，将校验场景中是否含有该预制体的引用对象
 
@@ -195,22 +195,22 @@ Core.GameObject.asyncSpawnGameObject("GUID")
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJgOA8Raod912urXxpbKoNc.png)
 
-- 删除预制体文件夹时，显示二次确认弹窗，点击确认后，将对文件夹中的所有预制体执行“<strong>删除引用对象</strong>”逻辑
+- 删除预制体文件夹时，显示二次确认弹窗，点击确认后，将对文件夹中的所有预制体执行“**删除引用对象**”逻辑
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhO189ai1LVtrybbD5shAwf.png)
 
-## 预制体的导入、导出
+### 预制体的导入、导出
 
-- <strong>导出预制体</strong>
+- **导出预制体**
 
   - 在工程内容-预制体分类下选中某预制体，点击右键菜单中【导出】按钮，在资源管理器中选择导出路径后将该预制体打包导出
-  - 将该<strong>预制体描述文件（.prefab 文件）</strong>以及<strong>所有其引用的文件</strong>全部导出，并保证文件之间的相对路径不变
+  - 将该**预制体描述文件（.prefab 文件）**以及**所有其引用的文件**全部导出，并保证文件之间的相对路径不变
 
     - 若脚本/UI 中引用了其他脚本，多次引用的脚本及路径信息一并导出，保证相对路径不变
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmQqEtXaHNDMlVv80vX1fig.png)
 
-- <strong>导入预制体</strong>
+- **导入预制体**
 
   - 点击工程内容-预制体分类下【导入预制体】按钮，在资源管理器中选择要导入的预制体后将预制体导入
 
@@ -239,21 +239,21 @@ Core.GameObject.asyncSpawnGameObject("GUID")
 ```ts
   - 若与当前工程中的文件无冲突，则分两种情况
 
-    - 新增：当前工程没有与该文件冲突的文件，显示<strong>绿色new标识</strong>
+    - 新增：当前工程没有与该文件冲突的文件，显示**绿色new标识**
 
     - 忽略：当前工程存在一个完全相同的文件，此时不显示任何标识与操作
 ```
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmaVXqJmPvRnRIU9UlEcOrS.png)
 
-## 解除预制体
+### 解除预制体
 
 - 在对象管理器中，右键预制体头结点，提供解除预制体操作
 - 该操作能够将预制体引用对象变为普通对象（紫色——白色）
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfC9Rw249yC5efo4RiCR6ab.png)
 
-# 使用预制体功能的注意事项与建议
+## 使用预制体功能的注意事项与建议
 
 动态生成预制体时需注意预制体为非静态，满足动态生成的运行环境要求
 

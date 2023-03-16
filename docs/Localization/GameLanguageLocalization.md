@@ -1,14 +1,14 @@
 # 游戏语言本地化
 
-<strong>阅读本文大约需要 10 分钟</strong>
+**阅读本文大约需要 10 分钟**
 
 本文讲述了本地化的含义、使用方法与流程。
 
-# 什么是本地化
+## 什么是本地化
 
 本地化是指让编辑器制作的游戏在某些条件下显示不同的语种，此处的条件由开发者自行控制（可以根据不同 windows 语言自动显示对应语种，也可以做到 UI 中让玩家手动切换语言，可以实现开发者想要的逻辑）
 
-# 本地化功能的使用
+## 本地化功能的使用
 
 1. 功能入口：工具栏——游戏本地化
 
@@ -123,7 +123,7 @@
 | ----------------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------- | ------------------ |
 | Util.LanguageUtil.useLocalizedLanguage<br/>（Type：LanguageType）：void | LanguageType 存在 Chinese、English、<br/>Portuguese 三个值 | callback：<br/>isSuccessed：boolean | 设置游戏使用的语言 |
 
-# 简单示例
+## 简单示例
 
 1. 示例一：点击键盘 1、2、3，将某一按钮切换为中/英/法语
 
@@ -166,9 +166,9 @@ Btn.onPressed.add(() => {
         });
 ```
 
-<strong>Util.LanguageUtil.getLocTextValue(“key”)函数</strong>
+**Util.LanguageUtil.getLocTextValue(“key”)函数**
 
-- 除上述设置语言的函数 Util.LanguageUtil.useLocalizedLanguage 与标记本地化的函数 Util.LanguageUtil.locText("Key")之外；我们还提供了 Util.LanguageUtil.getLocTextValue(“key”)函数，该函数的作用是：<strong>返回该 key 在此语言环境下的 value</strong>；
+- 除上述设置语言的函数 Util.LanguageUtil.useLocalizedLanguage 与标记本地化的函数 Util.LanguageUtil.locText("Key")之外；我们还提供了 Util.LanguageUtil.getLocTextValue(“key”)函数，该函数的作用是：**返回该 key 在此语言环境下的 value**；
 - 一般来说，对于静态设置且不涉及到拼接的文本来说，无需用到 getLocTextValue 函数，直接 UI 组件.text=Util.LanguageUtil.locText("key")就可以使此 UI 组件的文本属性本地化，对应的配置为 key 的多语言配置；
 
-但如果涉及到字符串<strong>拼接或动态拼接</strong>时，仅用 Util.LanguageUtil.locText("key")函数是无法实现的，需要用 Util.LanguageUtil.getLocTextValue(“key”)函数进行拼接
+但如果涉及到字符串**拼接或动态拼接**时，仅用 Util.LanguageUtil.locText("key")函数是无法实现的，需要用 Util.LanguageUtil.getLocTextValue(“key”)函数进行拼接

@@ -1,16 +1,16 @@
 # 创建游戏界面 (UI)
 
-<strong>阅读本文大概需要 15 分钟</strong>
+**阅读本文大概需要 15 分钟**
 
 本文概述了游戏界面开发的整体流程，包括如何创建 UI，以及如何将 UI 添加到游戏中。
 
-# 什么是游戏界面？
+## 什么是游戏界面？
 
-<strong>游戏界面</strong>指游戏软件的用户界面，包括游戏画面中的按钮、动画、文字、声音、窗口等与游戏用户直接或间接接触的游戏设计元素。
+**游戏界面**指游戏软件的用户界面，包括游戏画面中的按钮、动画、文字、声音、窗口等与游戏用户直接或间接接触的游戏设计元素。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6TY4Vc2JZhdHggVhlFS6Yd.png)
 
-# 如何创建游戏界面？
+## 如何创建游戏界面？
 
 - 首先在工程内容库中创建新的 UI 文件：点击工程内容的 UI 页签，点击新建 UI 按钮
 
@@ -21,7 +21,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnpDtLBcodQqBpzQqxjwbeSm.png)
 
-#### UI 编辑器模块说明：
+##### UI 编辑器模块说明：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIm5u7XnzhGW34v31eqf49c.png)
 
@@ -35,7 +35,7 @@
   - 本地资源库：展示本地资源库中的所有 UI 贴图资源，方便拖拽到组件更换资源。
   - 脚本列表：展示工程内容中的所有脚本，方便拖拽到根目录 Root 的属性中。
 
-# 如何使用 UI 编辑器拼接 UI？
+## 如何使用 UI 编辑器拼接 UI？
 
 - 首先我们要理解 UI 的基础组件都有哪些？
 
@@ -71,13 +71,13 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQnNwHToBWXzeIjU3tl7vgd.png)
 
-#### 
+##### 
 
-# 如何将 UI 添加到游戏场景中？
+## 如何将 UI 添加到游戏场景中？
 
 - 在完成拼接 UI 后，我们将进行学习如何实现将 UI 添加到游戏场景中，并且能执行我们写在脚本中的逻辑。
 
-#### <strong>方式一：在编辑器中将 UI 文件拖入场景</strong>
+##### **方式一：在编辑器中将 UI 文件拖入场景**
 
 - 在主编辑器中，直接将 UI 文件拖入游戏场景中或对象列表中，就可以把 UI 文件实例化为 UI 对象；
 
@@ -122,7 +122,7 @@ export default class UIDefault extends UI.UIBehavior {
 
 - 由于在编辑器中被拖入对象列表中的 UI 文件已实例化为 UI 对象，游戏开始后所绑定的 UI 脚本内编写的逻辑会在游戏中执行，只要玩家点击跳跃按钮就能使角色跳起来了。
 
-#### 方式二 ：在脚本中将 UI 文件创建为自定义 UI 组件，并挂在已有的 UI 对象内
+##### 方式二 ：在脚本中将 UI 文件创建为自定义 UI 组件，并挂在已有的 UI 对象内
 
 - 使用 createUIByName 函数创建想要添加的 UI 文件为自定义 UI 组件，然后使用 addChild 函数将自定义 UI 组件挂在当前 UI 对象下的某个容器中，从而实现 UI 动态加载到游戏场景中。
 
@@ -159,7 +159,7 @@ export default class NewScript extends Core.Script {
     }
 ```
 
-# （进阶）如何使用 UI 脚本导出功能代替手动获取 UI 组件？
+## （进阶）如何使用 UI 脚本导出功能代替手动获取 UI 组件？
 
 - 只有获取到 UI 组件之后，才能继续编写 UI 组件的游戏逻辑：
 

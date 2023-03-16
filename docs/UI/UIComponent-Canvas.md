@@ -1,16 +1,16 @@
 # UI 组件-容器
 
-<strong>阅读本文大概需要 15 分钟</strong>
+**阅读本文大概需要 15 分钟**
 
 本文概述了 UI 组件—容器的各项属性以及使用方法。
 
-# 什么是容器?
+## 什么是容器?
 
-<strong>容器</strong>是承载其他 UI 组件的背景板，UI 组件也必须依托于容器才能显示和产生作用。
+**容器**是承载其他 UI 组件的背景板，UI 组件也必须依托于容器才能显示和产生作用。
 
 - 变换/对齐/通用/渲染属性请见 [UI 组件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
 
-# 容器属性-布局
+## 容器属性-布局
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcndWr09C5ra5oh6gdkKCkR2g.png)
 
@@ -22,21 +22,21 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4V8N1j9wLi8gqGJweYl2qg.png)
 
-####### 自动布局
+######## 自动布局
 
 - 开启自动布局功能，将容器内所有子项的 UI 组件有序的排列成一排。
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmTJ2mNKZI4Go3UkLxrqAFe.png)
 
-####### 网格布局
+######## 网格布局
 
 - 根据容器大小将其子项的 UI 组件进行自动换行。
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHIxN8R3rEltxMBxNyTsXvh.png)
 
-####### 容器类型
+######## 容器类型
 
 - 水平布局
 
@@ -52,7 +52,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcndTrAYxQqsQ8LDeMJUYwvNc.png)
 
-####### 排列规则
+######## 排列规则
 
 - 左上对齐
 
@@ -85,14 +85,14 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnBEYyIEEq2vlbZ77zbhwCQc.gif)
 
-####### 间隔
+######## 间隔
 
 - 容器中 UI 组件的相距间隔
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmMXoiVC5secAajnMCXogFh.gif)
 
-####### 子项排列规则
+######## 子项排列规则
 
 - 启用自动布局后，容器内所有子对象默认会根据从上到下，从左到右的顺序进行排序；如果希望修改这些子对象的排序规则，可以修改子项排列规则的水平排序和垂直排序属性。
 - 水平排序
@@ -126,7 +126,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6lenGSS6jci4DuzdnJlupb.png)
 
-####### 自适应规则
+######## 自适应规则
 
 - 水平适应
 
@@ -148,7 +148,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncA6nH9CpQgflWEkT4XT8Qh.gif)
 
-####### 边缘间距
+######## 边缘间距
 
 - 左边距
 
@@ -168,9 +168,9 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnlHQpKpDRl69wymJ0x5g0Dd.png)
 
-# 如何使用容器？
+## 如何使用容器？
 
-##### 示例一：通过容器的自动布局，使 UI 组件有规律排序
+###### 示例一：通过容器的自动布局，使 UI 组件有规律排序
 
 - 举例说明：很多情况下我们需要创建整齐的 UI 组件，下面左图中活动页签按钮就需要进行竖向的垂直排列，而下面右图的活动奖励内容需要水平排列；
 - 想实现这样的效果，我们可以把底部的容器设置开启自动布局，并且把 UI 组件挂在在这个容器下，就可以实现快捷的自动布局了
@@ -182,7 +182,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIcbGxhE4k66RF7UCzY5Usc.gif)
 
-##### 示例二：制作活动页签的面板，用于整理 UI 组件并使其方便管理
+###### 示例二：制作活动页签的面板，用于整理 UI 组件并使其方便管理
 
 - 举例说明：下面我们制作简单的活动面板，该面板有 4 种活动。点击每个活动页签的按钮点击后，右边的活动详情就会切换到不同的内容；
 

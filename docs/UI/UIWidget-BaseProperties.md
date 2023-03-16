@@ -1,36 +1,36 @@
 # UI 控件的基础属性
 
-<strong>阅读本文大概需要 15 分钟</strong>
+**阅读本文大概需要 15 分钟**
 
 本文概述了 UI 控件的变换、对齐、通用、渲染这四类基础属性的使用方法。
 
-# 什么是 UI 控件以及基础属性？
+## 什么是 UI 控件以及基础属性？
 
-<strong>UI 控件</strong>是搭建游戏界面时能够用到的基础控件，在 UI 编辑器中我们会提供了容器、图片、按钮、文本、输入框、进度条、滚动框、摇杆、摄像机滑动区等控件。
+**UI 控件**是搭建游戏界面时能够用到的基础控件，在 UI 编辑器中我们会提供了容器、图片、按钮、文本、输入框、进度条、滚动框、摇杆、摄像机滑动区等控件。
 
-<strong>基础属性</strong>是指每种 UI 控件都包含的<strong>变换、对齐、通用、渲染这四类属性。</strong>
+**基础属性**是指每种 UI 控件都包含的**变换、对齐、通用、渲染这四类属性。**
 
 在每种控件的具体介绍文档中，我们会说明各个控件其他属性的作用和使用方法。
 
-# 变换
+## 变换
 
 ![](static/boxcn950nr4JyqJ3p6YhE1venJh.png)
 
-####### 坐标-位置
+######## 坐标-位置
 
 - 修改 UI 控件在主视口的显示位置
 - 示意图：
 
 ![](static/boxcnBWIN3NBaul6bBT66rDgi1c.gif)
 
-####### 坐标-大小
+######## 坐标-大小
 
 - 修改 UI 控件在主视口的显示大小
 - 示意图：
 
 ![](static/boxcn8aI4US7tX0TrfCa2Jgn8ec.gif)
 
-####### 角度
+######## 角度
 
 - 修改 UI 控件在主视口的旋转角度，正数为顺时针旋转，负数为逆时针旋转。
 - 以渲染锚点为旋转中心，渲染锚点的设置方法见下文【渲染】-【渲染锚点】
@@ -39,7 +39,7 @@
 
 ![](static/boxcnKb7yeaNrSwU4vUguR32reh.gif)
 
-####### Z 系数
+######## Z 系数
 
 - 修改 UI 控件的层级，系数越大层级越高。
 - UI 控件的层级逻辑：同一父级下的各控件层级由 Z 系数决定，Z 系数相同时由对象列表上下顺序决定，对象列表中位于更下方下的控件显示在上层；任何子级控件都显示在其父级控件上层
@@ -64,14 +64,14 @@ btn.zorder=0
 this.uiobject.zorder=0
 ```
 
-####### 溢出隐藏
+######## 溢出隐藏
 
 - 超过容器的大小范围时，是否隐藏超过范围的内容
 - 示意图：
 
 ![](static/boxcnxHnqEzLP0HGoHBBf5WHzQe.gif)
 
-####### 自动大小
+######## 自动大小
 
 - 选择自动大小后，UI 控件的大小还原至初始大小
 
@@ -80,11 +80,11 @@ this.uiobject.zorder=0
 
 ![](static/boxcni3iz3T97mbMsdg5XsA3obj.gif)
 
-# 对齐
+## 对齐
 
 ![](static/boxcnOtFGmHz6ebeVQUKCJMNlab.png)
 
-####### 对齐
+######## 对齐
 
 - 是指根据父级的拉伸/位移进行 UI 布局的对齐方式，方便对不同机型进行 UI 适配。
 - 水平方向
@@ -148,7 +148,7 @@ this.uiobject.zorder=0
 
 ![](static/boxcnp9b8MMxFAA3WRDmxWgWEzf.gif)
 
-######### 示例：
+########## 示例：
 
 - 如果想摇杆/摄像机控件大小按玩家屏幕比例自动变化，推荐摇杆/摄像机控件的对齐方式=自适应
 
@@ -166,11 +166,11 @@ this.uiobject.zorder=0
 
 ![](static/boxcnkgUkiytPtSG1DUZjVdj6Ah.png)
 
-# 通用
+## 通用
 
 ![](static/boxcnToqu5TdGSUvNFZbGNkRFKh.png)
 
-####### 名字
+######## 名字
 
 - UI 控件的名称，方便用户在脚本中进行调用。
 
@@ -181,14 +181,14 @@ let base = MWDesignerUI.MWUIUserWidget.Get(this.uiObject)
 let Btn = MWDesignerUI.MWUIButton.Get(base.FindChildByPath("MWCanvas/Button_1"));
 ```
 
-####### 可用性
+######## 可用性
 
 - UI 控件是否可以与用户进行交互式修改；
 
   - 当设置为不可用时，该控件进入禁用模式，外观会按照禁用模式下的相关设置进行改变。
   - 无论是否可用，UI 控件的可见性为可见时，所有操作都无法穿透此控件
 
-####### 可见性
+######## 可见性
 
 - Visible（可见）
 
@@ -230,7 +230,7 @@ let Btn = MWDesignerUI.MWUIButton.Get(base.FindChildByPath("MWCanvas/Button_1"))
 
 ![](static/boxcn1x4VVn4xEqPqeT18AX56bf.gif)
 
-# 渲染
+## 渲染
 
 ![](static/boxcniS5OiyIJtN1thMOBjeWGAf.png)
 
@@ -238,7 +238,7 @@ let Btn = MWDesignerUI.MWUIButton.Get(base.FindChildByPath("MWCanvas/Button_1"))
 
   - 修改渲染倾斜度、渲染缩放、渲染偏移的 UI 控件将无法使用 UI 编辑器的对齐辅助线功能
 
-####### 渲染锚点
+######## 渲染锚点
 
 - 渲染锚点是 UI 控件进行形变和位移时，所依据的中心点位置。
 
@@ -248,14 +248,14 @@ let Btn = MWDesignerUI.MWUIButton.Get(base.FindChildByPath("MWCanvas/Button_1"))
 | Y=0.5         | ![](static/boxcngD34tlceB26EenqyPl3tDc.png) | ![](static/boxcnnScmI6DAhjTp2BYuB8IbXb.png) | ![](static/boxcnlsETwfrgKXayqx89XbW5bg.png) |
 | Y=1           | ![](static/boxcnucEsopY12Ger7OSjZgjqsb.png) | ![](static/boxcnFiUl26nv83vfWc96ok4pwC.png) | ![](static/boxcnj1povWrJtRyMOzcaVvUQTg.png) |
 
-####### 渲染倾斜度
+######## 渲染倾斜度
 
 - 以渲染锚点为中心，进行横向倾斜和纵向倾斜
 - 示意图：
 
 ![](static/boxcnNQCNh2I8QRCuf2nTuKxyUb.png)
 
-####### 渲染缩放
+######## 渲染缩放
 
 - 以渲染锚点为中心，进行 UI 控件的缩放。
 - 举例说明：将 UI 控件放入容器中，进行自动布局后，如果修改的是 Transform 的大小，则自动布局的将会根据图形的变化而变化，而如果修改的是渲染缩放，则自动布局不会发生改变。
@@ -263,7 +263,7 @@ let Btn = MWDesignerUI.MWUIButton.Get(base.FindChildByPath("MWCanvas/Button_1"))
 
 ![](static/boxcnYvMbJuX50TzganW8w3WHXd.png)
 
-####### 渲染透明
+######## 渲染透明
 
 - 渲染透明主要用于统一处理成组的 UI 控件，方便操作与管理。
 - 举例说明：将容器内所有 UI 控件不透明度都降低至完全透明，并且仍可交互
@@ -271,11 +271,11 @@ let Btn = MWDesignerUI.MWUIButton.Get(base.FindChildByPath("MWCanvas/Button_1"))
 
 ![](static/boxcnLjY7JfWZzWsHSyUo7ERpQf.gif)
 
-####### 渲染偏移
+######## 渲染偏移
 
 - 渲染偏移主要用于设置渲染出的图形与 UI 控件的相对位置。
 
-####### 渲染空白大小
+######## 渲染空白大小
 
 - 渲染空白大小主要设置渲染出的图形与 UI 控件的相对大小。
 - 组合举例说明：制作一个可点击范围的大小和位置与实际渲染不同的按钮。

@@ -5,23 +5,23 @@
 | 2022 年 4 月 10 日  | 胡光齐 | 文档创建     | v0.8           |
 | 2022 年 10 月 10 日 | 由作鹏 | 更新使用说明 | v0.15          |
 
-<strong>阅读本文预计 15 分钟</strong>
+**阅读本文预计 15 分钟**
 
-<strong>本文概述了编辑器中交互物的相关定义及使用方法。</strong>
+**本文概述了编辑器中交互物的相关定义及使用方法。**
 
-# 什么是交互物
+## 什么是交互物
 
 交互物可以将角色或人形对象约束到自身位置，并执行一个新的角色姿态，通常用于坐椅、驾驶位等需要固定角色位置和姿态的情况中。
 
-# 如何使用交互物
+## 如何使用交互物
 
-- <strong>step.1</strong>
+- **step.1**
 
 在编辑器右侧【逻辑资源】选项中，找到【游戏功能对象】，点击其中的【交互物】，拖拽到主视口，即可完成创建
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxUwwu3JMjInvCM0osPkt2d.png)
 
-- <strong>step.2</strong>
+- **step.2**
 
 在属性面板中设置交互物参数。
 
@@ -32,7 +32,7 @@
 | 交互姿态绑定 | 当角色或人形对象，与交互物发生交互行为时，所播放的角色动作姿态 GUID；                          |
 | 交互插槽绑定 | 当角色或人形对象，与交互物发生交互行为时，所连接的角色插槽位置，默认与角色根骨骼插槽进行连接； |
 
-- <strong>step.3</strong>
+- **step.3**
 
 创建新的脚本，编写交互物逻辑。
 
@@ -67,7 +67,7 @@ export default class NewScript extends MWCore.MWScript {
 }
 ```
 
-- <strong>step.4</strong>
+- **step.4**
 
 使用不同的静态模型和角色动作姿态，可以制作出各种交互行为。
 
@@ -75,7 +75,7 @@ export default class NewScript extends MWCore.MWScript {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncDmSsOU9IGvcwhr2Sz7FOc.png)
 
-# 使用交互物的注意事项与建议
+## 使用交互物的注意事项与建议
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQ5rHwRglX4CQgCeuxOv2Nb.png)
 
@@ -83,4 +83,4 @@ export default class NewScript extends MWCore.MWScript {
 
 交互物对象自身不带触发逻辑，所以通常情况下需要一个触发条件以激活交互逻辑，例如通过键盘事件、或者使用触发器对象来满足这个条件。
 
-# 项目案例
+## 项目案例

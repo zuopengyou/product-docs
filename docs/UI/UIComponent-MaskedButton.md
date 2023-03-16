@@ -1,12 +1,12 @@
 # UI 组件-遮罩按钮
 
-<strong>阅读本文大概需要 15 分钟</strong>
+**阅读本文大概需要 15 分钟**
 
 本文概述了 UI 组件—遮罩按钮的各项属性以及使用方法。
 
-# 什么是遮罩按钮？
+## 什么是遮罩按钮？
 
-<strong>遮罩按钮</strong>是一种遮挡、遮盖部分图像内容，并显示特定区域的图像内容的 UI 组件；可用于实现技能冷却按钮、特殊形状按钮的遮罩效果；也可以不作为按钮，而用于场景过度、图片切割等效果。
+**遮罩按钮**是一种遮挡、遮盖部分图像内容，并显示特定区域的图像内容的 UI 组件；可用于实现技能冷却按钮、特殊形状按钮的遮罩效果；也可以不作为按钮，而用于场景过度、图片切割等效果。
 
 - 示意图：
 
@@ -16,7 +16,7 @@
 
   - 注意：如果不作为按钮使用时，请将可见性修改为可见不可交互仅自身（SelfHitTestInvisible）
 
-# 遮罩按钮属性
+## 遮罩按钮属性
 
 - 遮罩类型
 
@@ -26,9 +26,9 @@
 
 本文为了清晰描述修改各项属性时，遮罩图片和普通图片（底图）各自的变化效果，图例中的遮罩图片和普通图片（底图）分别选用了不同的图片；
 
-实际使用时，如果仅想实现按钮技能冷却的遮罩效果，<strong>推荐遮罩图片选用和普通图片（底图）相同的图片资源，并使用不同的图片颜色和透明度</strong>
+实际使用时，如果仅想实现按钮技能冷却的遮罩效果，**推荐遮罩图片选用和普通图片（底图）相同的图片资源，并使用不同的图片颜色和透明度**
 
-##### 2.1 扇形遮罩
+###### 2.1 扇形遮罩
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn17giITI7Ut6FFqVz3jbozd.png)
 
@@ -92,7 +92,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn44PWRdSTpN89Iyk08QnCJg.gif)
 
-##### 2.2 圆形遮罩
+###### 2.2 圆形遮罩
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnY8WMuK6iEGbP6BAr7xM1jf.png)
 
@@ -149,7 +149,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhRMq5OT7QwABPqdLYgSsng.gif)
 
-##### 2.3 圆角矩形遮罩
+###### 2.3 圆角矩形遮罩
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2hC5uFpTsPfUoCMKc6jDxg.png)
 
@@ -183,9 +183,9 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn7JHJBwDXMhvYLvp2Vivmhg.gif)
 
-# 如何使用遮罩按钮？
+## 如何使用遮罩按钮？
 
-###### 示例一：制作能时钟显示 CD 的技能按钮
+####### 示例一：制作能时钟显示 CD 的技能按钮
 
 在 UI 编辑器中设置好遮罩按钮组件和文本组件，并设置好技能图片（普通图片/按压图片/禁用图片/遮罩图片都要设置）
 

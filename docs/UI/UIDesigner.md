@@ -1,18 +1,18 @@
 # UI 编辑器设计功能
 
-<strong>阅读本文大概需要 10 分钟</strong>
+**阅读本文大概需要 10 分钟**
 
 本文概述了如何使用分布/对齐/居置、设计器顶部工具等其他 UI 编辑器内的常用功能。
 
-# 分布/对齐/居置功能
+## 分布/对齐/居置功能
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFKS3vKAnigQFdYaUYFc2td.png)
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnw75HafyNQQjv2DbrwG1lgf.png)
 
-#### 分布
+##### 分布
 
-<strong>分布</strong>是将已选的所有对象在水平/垂直方向上均匀排布
+**分布**是将已选的所有对象在水平/垂直方向上均匀排布
 
 - 横向分布
 
@@ -26,9 +26,9 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnsblqwIES7qiysQjKgV0idb.gif)
 
-#### 对齐
+##### 对齐
 
-<strong>对齐</strong>是将已选的多个对象的边界点/中心点，对齐到第一个选择的对象的某边缘线/中心线，不受各自的父级容器的影响
+**对齐**是将已选的多个对象的边界点/中心点，对齐到第一个选择的对象的某边缘线/中心线，不受各自的父级容器的影响
 
 - 上/下/左/右对齐
 
@@ -42,9 +42,9 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1P8ettM6iemWjizcsH5JLh.gif)
 
-#### 居置
+##### 居置
 
-<strong>居置</strong>是将已选的多个对象的边界点/中心点，对齐到各自直属父级的某边缘线/中心线，与选取顺序无关
+**居置**是将已选的多个对象的边界点/中心点，对齐到各自直属父级的某边缘线/中心线，与选取顺序无关
 
 - 居上/下/左/右
 
@@ -58,9 +58,9 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnE3bOho3jn6KYxqPgeN3Uc.gif)
 
-### 
+#### 
 
-# 设计器顶部工具
+## 设计器顶部工具
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntdLzd6m4tERkCs3HblEdYd.png)
 
@@ -73,7 +73,7 @@
   - Shift+ 方向键移动的单位大小
   - Ctrl+ 方向键移动的单位大小
 
-# 右键菜单
+## 右键菜单
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntrK5rpjc6o4Op6PxIKDnge.png)
 

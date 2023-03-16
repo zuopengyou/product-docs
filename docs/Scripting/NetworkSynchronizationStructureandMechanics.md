@@ -1,32 +1,32 @@
 # 网络同步原理和结构
 
-<strong>阅读本文大概需要 15 分钟</strong>
+**阅读本文大概需要 15 分钟**
 
-<strong>想要理解网络同步的原理，首先要确定几个问题方向</strong>
+**想要理解网络同步的原理，首先要确定几个问题方向**
 
 1. 网络同步是谁和谁同步？
 2. 网络同步都同步什么？
 3. 如何实现网络同步？
 
-# 什么是客户端和服务端
+## 什么是客户端和服务端
 
-## 1.1 客户端（Client）
+### 1.1 客户端（Client）
 
-<strong>客户端</strong>（Client）或称为用户端，是指与服务器相对应，为客户提供本地服务的程序。除了一些只在本地运行的应用程序之外，一般安装在普通的终端上，需要与服务端互相配合运行。
+**客户端**（Client）或称为用户端，是指与服务器相对应，为客户提供本地服务的程序。除了一些只在本地运行的应用程序之外，一般安装在普通的终端上，需要与服务端互相配合运行。
 
-<strong>游戏客户端：</strong>游戏客户端是将游戏中的很多资源储存起来的软件。玩家通过客户端输入指令，客户端翻译成数据发送给服务器，服务器处理完给出结果，然后再由客户端翻译成图形化表现出来告诉玩家。可以说，客户端是一个玩家和服务器之间的中介。
+**游戏客户端：**游戏客户端是将游戏中的很多资源储存起来的软件。玩家通过客户端输入指令，客户端翻译成数据发送给服务器，服务器处理完给出结果，然后再由客户端翻译成图形化表现出来告诉玩家。可以说，客户端是一个玩家和服务器之间的中介。
 
 简而言之，对于游戏研发来说，客户端是运行在玩家终端设备中的游戏程序
 
-游戏数据或游戏规则被存储或运行在服务器中的就是<strong>网络游戏</strong>
+游戏数据或游戏规则被存储或运行在服务器中的就是**网络游戏**
 
-而不连接服务器，将游戏逻辑、数据等存储在本地的就被称之为<strong>单机游戏</strong>
+而不连接服务器，将游戏逻辑、数据等存储在本地的就被称之为**单机游戏**
 
-## 1.2 服务端（Server）
+### 1.2 服务端（Server）
 
-<strong>服务端：</strong>是为客户端服务的，服务的内容诸如向客户端提供资源，保存客户端数据。是实现游戏特色化的重要途径，也是最直接可以通过游戏表现出来的技术，比如你要修改某个 NPC 的参数，重加载后，在游戏内立刻体现出来。
+**服务端：**是为客户端服务的，服务的内容诸如向客户端提供资源，保存客户端数据。是实现游戏特色化的重要途径，也是最直接可以通过游戏表现出来的技术，比如你要修改某个 NPC 的参数，重加载后，在游戏内立刻体现出来。
 
-<strong>游戏服务端：</strong>就是为游戏客户端服务的，服务的内容包含为客户端提供登录，保存游戏玩家资料，提供玩家在线游戏，这也是和单机游戏的区别。游戏客户端的登陆，需要服务端的授权，举例：游戏服务端向玩家提供登陆器，而登陆器就是连接服务端的必须工具，登陆器也可以理解为服务端的授权文件。
+**游戏服务端：**就是为游戏客户端服务的，服务的内容包含为客户端提供登录，保存游戏玩家资料，提供玩家在线游戏，这也是和单机游戏的区别。游戏客户端的登陆，需要服务端的授权，举例：游戏服务端向玩家提供登陆器，而登陆器就是连接服务端的必须工具，登陆器也可以理解为服务端的授权文件。
 
 如上所述，服务端承载着重大的责任，它存储着所有客户端的资源与数据，甚至是游戏逻辑
 
@@ -50,17 +50,17 @@ eg:
 
 判断后将结果同步至房间内其他客户端
 
-# 网络同步结构
+## 网络同步结构
 
-在编辑器中，理解网络同步之前，首先需要理解一个功能<strong>“静态”</strong>
+在编辑器中，理解网络同步之前，首先需要理解一个功能**“静态”**
 
-## 2.1 静态（Static）
+### 2.1 静态（Static）
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnBGCg5MaBgSbDtePxk2tCRe.png)
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntPx5dImKvkaJrNjJH8FsDf.png)
 
-如上图所示，勾选“<strong>StaticStatus（静态状态）</strong>”即该对象为静态对象，反之则为非静态对象
+如上图所示，勾选“**StaticStatus（静态状态）**”即该对象为静态对象，反之则为非静态对象
 
 静态对象在游戏研发中经常会遇到，字面意思，它代表当前对象为静止的、不动的
 
@@ -74,7 +74,7 @@ eg：
 
 而棋子则需要进行动态创建、销毁等操作，故棋子一般为非静态对象
 
-## 客户端(C)、服务端(S)、双端(C&S)的区别
+### 客户端(C)、服务端(S)、双端(C&S)的区别
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnUuKAKDCutnbUnVukbINa2f.png)
 
@@ -84,11 +84,11 @@ eg：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOZisUkv5dKM1L7KcWLZi6d.png)
 
-如上两张图所示，可通过上两种方式将对象的“<strong>NetStatus（网络状态）</strong>”网络状态设置为
+如上两张图所示，可通过上两种方式将对象的“**NetStatus（网络状态）**”网络状态设置为
 
 客户端（Client）、服务端（Server）、双端（Server and Client）三种模式，
 
-## 2.2 客户端（Client）
+### 2.2 客户端（Client）
 
 网络状态被设置为客户端的对象，只会在客户端创建，服务端不会创建，也不会同步
 
@@ -100,7 +100,7 @@ eg：
 
 音效、特效等，只需要在客户端执行创建、播放、停止等操作
 
-## 2.3 服务端（Server）
+### 2.3 服务端（Server）
 
 网络状态被设置为服务端的对象，只会在服务端创建，客户端不会创建，也不会同步
 
@@ -112,13 +112,13 @@ eg：
 
 客户端不需要存储和判断 NPC 的锚点对象，当寻路的时候，只需要请求服务端发送 NPC 的锚点所在坐标信息、或直接返回其寻路的路径即可
 
-## 2.4 双端（Server and Client）
+### 2.4 双端（Server and Client）
 
 网络状态被设置为双端的对象，会在服务端先加载并创建
 
 客户端先加载，等待服务端的指令进行创建，然后建立通信
 
-<strong>数据同步以服务端为主</strong>
+**数据同步以服务端为主**
 
 通常会将需要多端同步（多个客户端同步）的对象设置为双端
 
@@ -128,11 +128,11 @@ eg：
 
 它们的坐标、颜色、碰撞等交互都需要实时判断且同步
 
-# 如何实现网络同步
+## 如何实现网络同步
 
-## 3.1 客户端 ---> 服务端
+### 3.1 客户端 ---> 服务端
 
-### 3.1.1 客户端发送
+#### 3.1.1 客户端发送
 
 /**
 
@@ -179,7 +179,7 @@ protected async onStart(): Promise`<void>` {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnX8yBMN8W4pCNsEkJFqzZie.png)
 
-### 3.1.2 服务端监听
+#### 3.1.2 服务端监听
 
 /**
 
@@ -227,9 +227,9 @@ protected async onStart(): Promise`<void>` {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnBXFespqzAAn2WuwOMtCvVg.png)
 
-## 3.2 服务端 ---> 客户端
+### 3.2 服务端 ---> 客户端
 
-### 3.2.1 服务端发送 - 单一客户端
+#### 3.2.1 服务端发送 - 单一客户端
 
 /** 服务器发送事件给指定客户端
 
@@ -293,7 +293,7 @@ protected async onStart(): Promise`<void>` {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJkMRzw7x5NwNbTYZja3Clm.png)
 
-### 3.2.2 服务端发送 - 所有客户端
+#### 3.2.2 服务端发送 - 所有客户端
 
 /** 服务器发送事件给所有客户端（以 Player 为中心的同屏范围）
 
@@ -361,7 +361,7 @@ protected async onStart(): Promise`<void>` {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTlGly7IJadX7kFfWrIhmkb.png)
 
-### 3.2.4 客户端监听
+#### 3.2.4 客户端监听
 
 /**
 
@@ -430,7 +430,7 @@ protected async onStart(): Promise`<void>` {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKoHcvY6ingMsk9ZHLPrW2g.png)
 
-# 使用 replicated 实现属性同步
+## 使用 replicated 实现属性同步
 
 eg：
 
@@ -500,7 +500,7 @@ export default class NewScript0 extends Core.Script {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwQuYPcPp7JCfOHVLYPK5Ke.png)
 
-### 注意事项：
+#### 注意事项：
 
 - 使用类必须使用 Class 或 GameObject 注解标注
 - 必须派生自 Script 或 GameObject 类型

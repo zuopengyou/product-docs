@@ -5,19 +5,19 @@
 | 2022 年 10 月 12 日 | 文档创建 | 通用           |
 |                     |          |                |
 
-<strong>阅读本文大概需要 10 分钟</strong>
+**阅读本文大概需要 10 分钟**
 
-# 使用与加载资源的方式及示例
+## 使用与加载资源的方式及示例
 
-## 1.1  获取场景中已经存在的对象
+### 1.1  获取场景中已经存在的对象
 
-### <strong>函数：</strong>
+#### **函数：**
 
-#### <strong>getChildren() : Array`<GameObject>`</strong>
+##### **getChildren() : Array`<GameObject>`**
 
 获取所有子物体()
 
-<strong>推荐使用 asyncFind 替代</strong>
+**推荐使用 asyncFind 替代**
 
 ```ts
 let goList = this.gameObject.getChildren();
@@ -26,9 +26,9 @@ goList.forEach(element => {
 });
 ```
 
-#### 
+##### 
 
-#### <strong>getChildByName(name: string) : GameObject</strong>
+##### **getChildByName(name: string) : GameObject**
 
 根据名字获取子物体 ( 物体名字 )
 
@@ -36,7 +36,7 @@ goList.forEach(element => {
 let childrenObj = this.gameObject.getChildByName("MyChildrenName");
 ```
 
-#### <strong>getChildByGuid(guid: string) : GameObject</strong>
+##### **getChildByGuid(guid: string) : GameObject**
 
 根据 GUID 获取子物体 ( 物体 GUID )
 
@@ -44,9 +44,9 @@ let childrenObj = this.gameObject.getChildByName("MyChildrenName");
 let childrenObjByGUID = this.gameObject.getChildByGuid("MyChildrenGUID");
 ```
 
-### <strong>静态函数：</strong>
+#### **静态函数：**
 
-#### <strong>find(guid: string) : GameObject</strong>
+##### **find(guid: string) : GameObject**
 
 查找当前物体 ( 物体的 GUID )
 
@@ -60,7 +60,7 @@ let goByfind = Core.GameObject.find("GameObjectGUID");
 let myTrigger = Core.GameObject.find("TriggerObjGUID") as Gameplay.BoxTrigger;
 ```
 
-#### <strong>asyncFind(guid: string) : Promise`<GameObject>`</strong>
+##### **asyncFind(guid: string) : Promise`<GameObject>`**
 
 异步查找当前物体 ( 物体的 GUID )
 
@@ -79,9 +79,9 @@ export default class GetObj extends Core.Script {
 }
 ```
 
-<strong>使用异步加载时，需要 await 修饰符，且将异步修饰符（async）包含至函数</strong>
+**使用异步加载时，需要 await 修饰符，且将异步修饰符（async）包含至函数**
 
-#### <strong>getGameObjectsByName(name: string) : Array`<GameObject>`</strong>
+##### **getGameObjectsByName(name: string) : Array`<GameObject>`**
 
 通过名字查找所有物体 ( 物体名字 )
 
@@ -103,17 +103,17 @@ export default class GetObj extends Core.Script {
 }
 ```
 
-#### <strong>getGameObjectByName(name: string) : GameObject</strong>
+##### **getGameObjectByName(name: string) : GameObject**
 
 通过名字查找物体 ( 物体名字 )
 
-<strong>返回第一个查找到的对象，如有多个同名对象，随机返回一个</strong>
+**返回第一个查找到的对象，如有多个同名对象，随机返回一个**
 
 ```ts
 let goByName = Core.GameObject.getGameObjectByName("GameObjectName");
 ```
 
-#### <strong>findGameObjectByTag(InTag: string) : Array`<GameObject>`</strong>
+##### **findGameObjectByTag(InTag: string) : Array`<GameObject>`**
 
 通过自定义 Tag 获取 GameObject ( )
 
@@ -135,9 +135,9 @@ export default class GetObj extends Core.Script {
 }
 ```
 
-## 1.2 克隆场景中已经存在的对象
+### 1.2 克隆场景中已经存在的对象
 
-#### <strong>Clone() : GameObject</strong>
+##### **Clone() : GameObject**
 
 复制对象（返回对象 : GameObject）
 
@@ -145,9 +145,9 @@ export default class GetObj extends Core.Script {
 let goClone = this.gameObject.Clone();
 ```
 
-## 1.3 在场景中生成资源库内的对象
+### 1.3 在场景中生成资源库内的对象
 
-#### <strong>SpawnGameObject(assetId: string, bInReplicates?: boolean) : GameObject</strong>
+##### **SpawnGameObject(assetId: string, bInReplicates?: boolean) : GameObject**
 
 根据 GUID 构造一个 GameObject ( 资源的 GUID , 是否同步 )
 
@@ -172,31 +172,31 @@ export default class GetObj extends Core.Script {
 }
 ```
 
-使用<strong>SpawnGameObject</strong>函数时，所需生成的资源 ID 需要 preload
+使用**SpawnGameObject**函数时，所需生成的资源 ID 需要 preload
 
 使用方法如上，在脚本中添加即可
 
-<strong>    @Core.Property()</strong>
+**    @Core.Property()**
 
-<strong>    preloadAssets = "AssetID,EffectAssetID";</strong>
+**    preloadAssets = "AssetID,EffectAssetID";**
 
-## [1.4 在场景中生成预制体（Prefab）对象](https://meta.feishu.cn/wiki/wikcnwUnCTbhvEDchl5oqeF89lf)
+### [1.4 在场景中生成预制体（Prefab）对象](https://meta.feishu.cn/wiki/wikcnwUnCTbhvEDchl5oqeF89lf)
 
-# 使用与加载资源方式的区别
+## 使用与加载资源方式的区别
 
-最本质的区别就是<strong>获取(Get)</strong>和<strong>新建(New)</strong>
+最本质的区别就是**获取(Get)**和**新建(New)**
 
-## 2.1  使用资源
+### 2.1  使用资源
 
-<strong>1.1</strong><strong> 内所有函数的方式都是获取资源（Get）</strong>即为<strong>使用资源</strong>
+**1.1**** 内所有函数的方式都是获取资源（Get）**即为**使用资源**
 
 使用资源会将该对象的内存地址指向所使用的变量
 
 不会产生新的内存消耗
 
-## 2.2  加载资源
+### 2.2  加载资源
 
-<strong>1.2</strong><strong>、</strong><strong>1.3</strong><strong>、 </strong><strong>1.4</strong><strong> 内所有函数的方式都是新建资源（New）</strong>即为<strong>加载资源</strong>
+**1.2****、****1.3****、 ****1.4**** 内所有函数的方式都是新建资源（New）**即为**加载资源**
 
 加载资源会向编辑器申请一块新的内存用来存储新的对象
 
@@ -204,31 +204,31 @@ export default class GetObj extends Core.Script {
 
 建议将逻辑中需要频繁重复新建、销毁的对象做成对象池，避免内存的过多消耗
 
-# 使用与加载资源时的注意事项
+## 使用与加载资源时的注意事项
 
-<strong>通过父节点获取对象只能写在 Server 端，Client 端目前不维护父子节点关系</strong>
+**通过父节点获取对象只能写在 Server 端，Client 端目前不维护父子节点关系**
 
-<strong>若逻辑需求一定要在客户端判断父子节点关系，可做成接口在服务端验证</strong>
+**若逻辑需求一定要在客户端判断父子节点关系，可做成接口在服务端验证**
 
-<strong>频繁创建、销毁对象时最好做一个对象池管理（例如子弹）</strong>
+**频繁创建、销毁对象时最好做一个对象池管理（例如子弹）**
 
-<strong>以减少程序内存与执行效率的开销</strong>
+**以减少程序内存与执行效率的开销**
 
-<strong>获取到的所有资源对象在使用前请进行判空处理，防止代码跑火车</strong>
+**获取到的所有资源对象在使用前请进行判空处理，防止代码跑火车**
 
-<strong>需要动态加载的资源（资源库中的资源），需</strong><strong>要先 preload（预加载），否则会无法创建</strong>
+**需要动态加载的资源（资源库中的资源），需****要先 preload（预加载），否则会无法创建**
 
 @Core.Property()
 
 preloadAssets = "资源 ID";
 
-<strong>补充：</strong>
+**补充：**
 
 方法一：可通过 AssetUtil.asyncDownloadAsset 的方式将资源异步加载到工程中
 
 方法二：可以将需要动态加载的资源拖拽到优先加载中进行标记（原理同 preload）
 
-<strong>同步与异步查找对象的使用方式建议（find & asyncFind）</strong>
+**同步与异步查找对象的使用方式建议（find & asyncFind）**
 
 在代码执行过程中
 
@@ -236,15 +236,15 @@ preloadAssets = "资源 ID";
 
 若不重要则使用同步加载
 
-<strong>异步加载会使代码执行暂时阻塞，待加载完毕再执行剩余逻辑</strong>
+**异步加载会使代码执行暂时阻塞，待加载完毕再执行剩余逻辑**
 
-<strong>异步加载案例：</strong>
+**异步加载案例：**
 
 场景一跳转至场景二时，我们可以使用 UI 遮挡场景加载的过程
 
 使用异步加载等待反馈，待场景内所有资源加载完毕，再取消 UI 遮挡
 
-<strong>同步加载案例：</strong>
+**同步加载案例：**
 
 当我们需要同时初始化很多资源，且资源并非及时使用的时候
 

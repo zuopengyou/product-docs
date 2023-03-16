@@ -1,18 +1,18 @@
 # UI 组件-调色板
 
-<strong>阅读本文大概需要 5 分钟</strong>
+**阅读本文大概需要 5 分钟**
 
 本文概述了 UI 组件—调色板的各项属性以及使用方法。
 
-# 什么是调色板？
+## 什么是调色板？
 
-通过<strong>调色板</strong>组件，玩家可以在游戏中选择颜色。
+通过**调色板**组件，玩家可以在游戏中选择颜色。
 
 - 变换/对齐/通用/渲染属性请见 [UI 组件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnzxsOzfWhfgd3V1WSJYEqnb.gif)
 
-# 如何使用调色板？
+## 如何使用调色板？
 
 - 脚本示例：
 

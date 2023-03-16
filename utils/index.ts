@@ -144,7 +144,8 @@ export function tsCodeDeal(filePath: string) {
   }
 }
 
-export function whilePath() {
+/** .md 文件初始化处理 */
+export function init() {
   const g = globSync('./docs/**/*.md', {
     ignore: {
       childrenIgnored(p) {
@@ -156,14 +157,3 @@ export function whilePath() {
     tsCodeDeal(path)
   })
 }
-// tsCodeDeal()
-
-// whilePath()
-dealItem('Editor')
-dealItem('UI')
-dealItem('GameplayObjects')
-dealItem('MotionControlObjects')
-dealItem('WorldObjects')
-dealItem('Scripting')
-dealItem('Resource')
-dealItem('Localization')

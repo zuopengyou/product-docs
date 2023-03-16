@@ -1,16 +1,16 @@
 # 按键绑定（针对 PC 端）及预设 UI
 
-<strong>阅读本文大概需要 10 分钟</strong>
+**阅读本文大概需要 10 分钟**
 
 本文概述了如何使用按键绑定和鼠标锁定功能快捷设置 PC 游戏端玩家的控制方案，以及如何使用新建项目的预设 UI。
 
-# 什么是按键绑定？
+## 什么是按键绑定？
 
-<strong>按键绑定</strong>是指开发者在制作游戏时，可以在移动端 UI 基础上完成按键绑定，高效快捷的设置 PC 游戏端玩家的控制方案，而不需要重新设计一套 PC 端 UI，玩家在游戏中键盘鼠标操作将会映射到对应的移动端 UI 上；
+**按键绑定**是指开发者在制作游戏时，可以在移动端 UI 基础上完成按键绑定，高效快捷的设置 PC 游戏端玩家的控制方案，而不需要重新设计一套 PC 端 UI，玩家在游戏中键盘鼠标操作将会映射到对应的移动端 UI 上；
 
-<strong>预设 UI</strong>是指编辑器为新建项目提供的一套可修改的移动端预设 UI，及对应的 PC 端按键绑定。
+**预设 UI**是指编辑器为新建项目提供的一套可修改的移动端预设 UI，及对应的 PC 端按键绑定。
 
-# UI 编辑器内的【按键绑定】菜单
+## UI 编辑器内的【按键绑定】菜单
 
 - 双击工程内容中的任意 UI 文件，点击 UI 编辑器工具栏的【按键绑定】按钮后，打开【按键绑定】菜单，开发者可以在此菜单直接将移动端 UI（包括摇杆、摄像机滑动区、按钮）绑定或覆盖到键鼠键位上
 - 每个 UI 文件的按键绑定菜单会自动读取该 UI 文件内所有的摇杆、摄像机滑动区、按钮、按钮（废弃）这四类 UI 控件
@@ -28,11 +28,11 @@
 
 - 点击菜单中的按钮可以更换绑定，点击重置按钮可以恢复到默认绑定键位
 
-# 键鼠绑定相关 API
+## 键鼠绑定相关 API
 
 - 除了 UI 编辑器内的按键绑定菜单，开发者也可以使用脚本自定义控制方案，或者覆盖默认键位
 
-<strong>脚本示例：</strong>
+**脚本示例：**
 
 ```
 const JumpBtn = this.uiWidgetBase.findChildByPath('MWCanvas/MWButton_Jump') as UI.Button
@@ -48,7 +48,7 @@ Util.InputUtil.unbindButton(Type.Keys.Up)
 
 - 此功能的使用场景请见 [UI 组件-摇杆](https://meta.feishu.cn/wiki/wikcn3gWEoxEgKwAzgYPBl2zeCc?table=tblDgsts19OW2IJA) 和 [UI 组件-摄像机滑动区](https://meta.feishu.cn/wiki/wikcnlsPgoUkmlLTnCwO3vuRCLc?table=tblDgsts19OW2IJA)
 
-<strong>脚本示例：</strong>
+**脚本示例：**
 
 ```
 let touchpad=this.uiWidgetBase.findChildByPath('MWCanvas/MWUITouchPad_1') as UI.TouchPad
@@ -61,7 +61,7 @@ let bool1 = touchpad.controlByMouseEnable
 let bool2 = joystick.controlByMouseEnable
 ```
 
-# 新建项目的预设 UI 控制方案
+## 新建项目的预设 UI 控制方案
 
 - 为新建项目提供一个预设 UI 文件，并且绑定了一套键鼠默认键位，作为默认的控制方案
 - 预设 UI 文件包括左侧的摇杆、右侧的摄像机滑动区和右下的三个按钮（跳跃/攻击/交互）
@@ -82,12 +82,12 @@ let bool2 = joystick.controlByMouseEnable
 | 鼠标左键 | 攻击/热武器开火  | MWButton_Attack    |
 | F        | 交互/触发键      | MWButton_Interact  |
 
-# PC 端鼠标锁定功能及 API
+## PC 端鼠标锁定功能及 API
 
 - PC 游戏端允许使用鼠标锁定功能，玩家按 Shift 可以切换鼠标锁定，鼠标锁定情况下隐藏鼠标，转动鼠标直接旋转镜头和人物朝向，这样可以同时解放左键和右键留给其他角色行动，比如实现 PC 射击游戏常见的右键瞄准 + 左键射击
 - 开发者可以在脚本中控制是否允许玩家切换鼠标锁定状态
 
-<strong>脚本示例：</strong>
+**脚本示例：**
 
 ```
 //设置为不允许玩家切换鼠标锁定状态

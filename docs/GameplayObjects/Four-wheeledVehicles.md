@@ -6,27 +6,27 @@
 | 2022 年 10 月 8 日  | 更新使用说明 | v0.15          |
 | 2022 年 11 月 15 日 | 更新使用说明 | v0.18          |
 
-<strong>阅读本文预计 15 分钟</strong>
+**阅读本文预计 15 分钟**
 
-<strong>本文概述了如何在编辑器中，通过使用四轮载具逻辑对象快速创建一个四轮载具。</strong>
+**本文概述了如何在编辑器中，通过使用四轮载具逻辑对象快速创建一个四轮载具。**
 
-# 什么是四轮载具
+## 什么是四轮载具
 
 四轮载具是编辑器提供的逻辑对象功能，用于快速实现一个具有模拟物理特性的四轮载具。
 
-# 四轮载具都包含什么
+## 四轮载具都包含什么
 
-# 如何合理利用 / 使用 四轮载具
+## 如何合理利用 / 使用 四轮载具
 
-- <strong>step.1</strong> 选择一个载具骨骼模型对象，将其拖拽至主视口。
+- **step.1** 选择一个载具骨骼模型对象，将其拖拽至主视口。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnau77aBiuReFEZWY25151lb.png)
 
-- <strong>step.2</strong> 在游戏功能对象 - 常用逻辑对象中选择“四轮载具”，将其拖拽至载具对象的子级。
+- **step.2** 在游戏功能对象 - 常用逻辑对象中选择“四轮载具”，将其拖拽至载具对象的子级。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnnTRULxe1TLVMNnhaI2IWb.png)
 
-- <strong>step.3</strong> 设置四轮载具对象属性。
+- **step.3** 设置四轮载具对象属性。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcneJNZc7PwoHMJ0ex4MUfmVg.png)
 
@@ -44,7 +44,7 @@
 | 转向角度        | 设置轮胎的可转向角度                                                                                                    |
 | 轮胎半径        | 设置轮胎的物理碰撞盒半径                                                                                                |
 
-- <strong>step.4</strong> 创建触发器和交互物
+- **step.4** 创建触发器和交互物
 
 触发器放置到角色上下车的位置，用于判断是否激活角色上车逻辑；
 
@@ -52,15 +52,15 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/LTDsbLzsLovyVGxcU7qcISUWnUh.png)
 
-- <strong>step.5</strong> 创建一个新的 UI
+- **step.5** 创建一个新的 UI
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/WSXxbkPxno8ovXxQ5Vlc0PjHn6c.png)
 
-- <strong>step.6</strong> 创建控制载具的 UI 控件，对每个控件重新命名
+- **step.6** 创建控制载具的 UI 控件，对每个控件重新命名
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn3fsLB3KTTOHQpQdbwWagCb.png)
 
-- <strong>step.7 </strong>打开 UI 控制器脚本
+- **step.7 **打开 UI 控制器脚本
 
 ```ts
 @UI.UICallOnly('')
@@ -138,7 +138,7 @@ export default class NewUIScript extends UI.UIBehavior {
 }
 ```
 
-- <strong>step.8 </strong>创建四轮载具 TS 脚本
+- **step.8 **创建四轮载具 TS 脚本
 
 ```ts
 @Core.Class
@@ -274,19 +274,19 @@ export default class Vehicle4WServer extends Core.Script {
 }
 ```
 
-- <strong>Step.9</strong>将脚本和 UI 拖拽至四轮载具逻辑对下子级
+- **Step.9**将脚本和 UI 拖拽至四轮载具逻辑对下子级
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/TNyibKEDoox48QxIqt8clq24n9c.png)
 
-- <strong>Step.10 </strong>调整载具摄像机
+- **Step.10 **调整载具摄像机
 
 选中载具摄像机，在主视口中可以调整摄像机位置，在使用四轮载具时，可以主动切换角色摄像机与四轮载具摄像机来使用。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/RyZKbZ1GYomXPhx7u2DcTuTknSh.png)
 
-- <strong>Step.11</strong> 运行四轮载具
+- **Step.11** 运行四轮载具
 
-# 使用四轮载具的注意事项与建议
+## 使用四轮载具的注意事项与建议
 
 载具对象必须一个骨骼模型，才能进行运动，推荐使用编辑器自带的载具对象。
 
@@ -296,4 +296,4 @@ export default class Vehicle4WServer extends Core.Script {
 
 四轮载具在设定了实际控制角色后，才可以正常使用。
 
-#
+##

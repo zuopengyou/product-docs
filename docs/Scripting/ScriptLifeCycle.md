@@ -1,8 +1,8 @@
 # 脚本的生命周期
 
-<strong>阅读本文大概需要 15 分钟</strong>
+**阅读本文大概需要 15 分钟**
 
-# 什么是生命周期
+## 什么是生命周期
 
 生命周期就是指一个对象从诞生到死亡
 
@@ -12,27 +12,27 @@
   而对于脚本而言，生命周期代表着一个脚本从激活（Activate）到销毁（Destroy）的全过程，也代表着代码中脚本函数的执行过程与执行顺序。
 ```
 
-# 脚本的生命周期包括什么
+## 脚本的生命周期包括什么
 
-### onStart( ) : void
+#### onStart( ) : void
 
 当脚本被实例后，会在第一帧更新之前调用 OnStart 函数
 
-<strong>注：编辑器在为任何脚本调用 OnUpdate 等函数之前，将在所有脚本上调用 OnStart 函数</strong>
+**注：编辑器在为任何脚本调用 OnUpdate 等函数之前，将在所有脚本上调用 OnStart 函数**
 
-### onUpdate(dt : number) : void
+#### onUpdate(dt : number) : void
 
 编辑器会在游戏每帧调用一次 OnUpdate 函数
 
 这是用于帧更新的主要函数
 
-<strong>注：其中（dt : number）为时间差值，表示当前帧与上一帧的延迟 / 秒</strong>
+**注：其中（dt : number）为时间差值，表示当前帧与上一帧的延迟 / 秒**
 
-### onDestroy( ) : void
+#### onDestroy( ) : void
 
 脚本存在的最后一帧执行完，且在 OnUpdate 函数执行完毕后，调用此函数
 
-### bUseUpdate : boolean
+#### bUseUpdate : boolean
 
 控制编辑器是否开启 OnUpdate 函数的调用
 
@@ -42,13 +42,13 @@
 this. bUseUpdate = true;
 ```
 
-### isRunningClient( ) : boolean
+#### isRunningClient( ) : boolean
 
 判断当前脚本是否执行在客户端，反之则运行在服务端
 
 有关编辑器客户端与服务端的区别，请看[网络同步原理和结构](https://meta.feishu.cn/wiki/wikcn9Bc049Ov1P1DLYjQdDAG1f)
 
-### 脚本示例：
+#### 脚本示例：
 
 ```ts
 @Core.Class
@@ -121,23 +121,23 @@ export default class TestScript extends Core.Script {
 }
 ```
 
-### 客户端 Log：
+#### 客户端 Log：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnncIR1zRDmK2U2Ck6batn8d.png)
 
-### 服务端 Log：
+#### 服务端 Log：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwGBQL0XZ63UlqF45xdBYId.png)
 
-# 如何合理利用脚本的生命周期
+## 如何合理利用脚本的生命周期
 
-### 初始化
+#### 初始化
 
 1）通常会将对象属性（例如：位置、状态等）的初始化做成一个函数，放在 Onstart 中执行
 
 2）来自服务器或者客户端的事件的监听，很多时候会写在 OnStart 函数中
 
-<strong>脚本示例：</strong>
+**脚本示例：**
 
 ```ts
 @Core.Class
@@ -178,7 +178,7 @@ export default class TestScript extends Core.Script {
 }
 ```
 
-### onUpdate 的函数‘潜规则’
+#### onUpdate 的函数‘潜规则’
 
 1）尽量减少在 onUpdate 函数中写循环逻辑、递归
 
@@ -280,15 +280,15 @@ export default class TestScript extends Core.Script {
 }
 ```
 
-### 关闭监听（disconnectListener）
+#### 关闭监听（disconnectListener）
 
 通常在 onStart 函数中或者在 UI 脚本中，我们会大量的使用 addListener 来监听事件
 
 但是在该脚本所对应的对象被销毁（Destroy）的时候，其注册在系统内的监听事件并没有被关闭
 
-所以，我们可以在生命周期中的<strong>onDestroy</strong>函数中增加关闭事件监听的逻辑
+所以，我们可以在生命周期中的**onDestroy**函数中增加关闭事件监听的逻辑
 
-<strong>代码示例：</strong>
+**代码示例：**
 
 ```ts
 @Core.Class
@@ -340,15 +340,15 @@ export default class TestEvents extends Core.Script {
 }
 ```
 
-# 编写脚本时有关生命周期的注意事项
+## 编写脚本时有关生命周期的注意事项
 
-### 开启 onUpdate 函数
+#### 开启 onUpdate 函数
 
-<strong>useUpdate 的值默认为 false</strong>
+**useUpdate 的值默认为 false**
 
 必须手动修改 useUpdate 为 true 时，onUpdate 函数才会执行
 
-### 异步函数
+#### 异步函数
 
 在 onStart 中，我们经常使用异步寻找等函数或语法
 
