@@ -36,15 +36,15 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       },
       {
         text: 'Gameplay Objects',
-        items: dealItem('Gameplay Objects')
+        items: dealItem('GameplayObjects')
       },
       {
         text: 'Motion Control Objects',
-        items: dealItem('Motion Control Objects')
+        items: dealItem('MotionControlObjects')
       },
       {
         text: 'World Objects',
-        items: dealItem('World Objects')
+        items: dealItem('WorldObjects')
       },
       {
         text: 'Scripting',
@@ -83,7 +83,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       }
     ],
-    outline: [1, 3],
+    outline: [2, 4],
     editLink: {
       pattern:
         'https://github.com/prodigytech-doc/product-docs/tree/main/docs/:path',

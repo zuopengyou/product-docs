@@ -8,6 +8,12 @@ import { globSync } from 'glob'
 export function dealItem(dir: string) {
   const p = `./docs/${dir}`
   const paths = readdirSync(p)
+  console.log(dir)
+  console.log(
+    paths.map((name) => {
+      return { text: name.split('.')[0], link: `/${dir}/${name}` }
+    })
+  )
   return paths.map((name) => {
     return { text: name.split('.')[0], link: `/${dir}/${name}` }
   })
@@ -138,7 +144,7 @@ export function tsCodeDeal(filePath: string) {
   }
 }
 
-function whilePath() {
+export function whilePath() {
   const g = globSync('./docs/**/*.md', {
     ignore: {
       childrenIgnored(p) {
@@ -153,3 +159,11 @@ function whilePath() {
 // tsCodeDeal()
 
 // whilePath()
+dealItem('Editor')
+dealItem('UI')
+dealItem('GameplayObjects')
+dealItem('MotionControlObjects')
+dealItem('WorldObjects')
+dealItem('Scripting')
+dealItem('Resource')
+dealItem('Localization')
