@@ -9,7 +9,7 @@
 - 在角色教程的文档中，我们学习到非玩家角色，即在游戏中不受真人玩家控制的游戏角色被称为 NPC，NPC 一般是有计算机控制且具有一套行为模式的角色。那么如何制作 NPC 呢？这篇教程将会指导你制作 NPC。
 - 非玩家对象将角色逻辑和形象分离，它兼有基础人形形象，高级人形形象以及多足形象。
 
-![](static/boxcn6hgi8mTpj4jg0pfFvmeaSd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcn6hgi8mTpj4jg0pfFvmeaSd.png)
 
 - **基础人形形象**：是人形的整体形象，只能更换整体外观形象。主要用于具有一定行为的人形 NPC，适合同屏人数较多时使用。
 - **高级人形形象**：是完全模拟玩家主角的形象与功能，可以与主角一样更换身体部位和装饰等。但性能方面相对与基础人形形象消耗较多，为了有效降低游戏的性能消耗，建议在同屏情况下少量使用。
@@ -25,7 +25,7 @@
 
 3.最后在非玩家对象的属性面板中进行编辑设置。
 
-![](static/boxcnSj89XqyVOqmYEpYDcNwdU1.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnSj89XqyVOqmYEpYDcNwdU1.png)
 
 ##### 方式二 ：动态生成非玩家对象
 
@@ -133,7 +133,7 @@ export default class NewScript extends Core.Script {
 
 示意图：
 
-![](static/boxcnOZjCgv5gWKNcKePP1cSkGh.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnOZjCgv5gWKNcKePP1cSkGh.gif)
 
 ##### 多足形象播放动画
 
@@ -170,7 +170,7 @@ export default class NewScript extends Core.Script {
 
 示意图：
 
-![](static/boxcn0XvfyqOiWrqTeDJXwMzpCf.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcn0XvfyqOiWrqTeDJXwMzpCf.gif)
 
 #### 动态修改形象
 
@@ -264,11 +264,11 @@ NPC 通常分为剧情 NPC，战斗 NPC，服务 NPC 以及兼具多种功能的
 
 1.首先将人形对象的游戏对象拖入场景内，创建 AI 角色
 
-![](static/boxcnd5OThPAM0ct0KQvkMLhD6d.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnd5OThPAM0ct0KQvkMLhD6d.png)
 
 2.然后将寻路区域拖入场景内，并设定适当的寻路区域的范围，可以方便 NPC 移动。
 
-![](static/boxcnL7Vocy6AALCN3PhkTCHBte.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnL7Vocy6AALCN3PhkTCHBte.png)
 
 3.最后新建脚本，编写寻路逻辑（记得挂载脚本哦！）
 
@@ -306,7 +306,7 @@ export default class NewScript extends Core.Script {
 
 示意图：
 
-![](static/boxcnUlCxTJNAVvErhLdQZa9NYf.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnUlCxTJNAVvErhLdQZa9NYf.gif)
 
 ##### 宠物跟随
 

@@ -12,26 +12,26 @@
 
 在【本地资源库】-【游戏功能对象】列表中找到【点光源】，将其拖入到场景中，即完成了点光源的创建。
 
-![](static/boxcnBj8k8cFAFy2KsR7PCULqch.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnBj8k8cFAFy2KsR7PCULqch.png)
 
 然后我们在对象管理器中找到点光源对象，并点击它，就可以在属性面板(默认右下角)中编辑点光源。点光源有若干定制化属性，以下展开介绍：
 
-![](static/boxcnikVLNF1REgFRvwzzfvoxZC.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnikVLNF1REgFRvwzzfvoxZC.png)
 
 #### 1、强度
 
 - 开发者可通过滑动滚轮调整点光源的光源强度。
 - 数值范围：0-160。
 
-![](static/boxcnQaOeiovbqmDY8DcPsLDWMe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnQaOeiovbqmDY8DcPsLDWMe.png)
 
 强度为 0 时候的地面
 
-![](static/boxcn47hLTc8l40Gb2QQ3UeIQMq.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcn47hLTc8l40Gb2QQ3UeIQMq.png)
 
 强度为 1 时候的地面
 
-![](static/boxcnBSJSsURTJ1Id5rtHLlu68d.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnBSJSsURTJ1Id5rtHLlu68d.png)
 
 强度为 100 时候的地面
 
@@ -39,7 +39,7 @@
 
 开发者可选择点光源的颜色。
 
-![](static/boxcnAPfTPekBx0y3REt4TtGAAb.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnAPfTPekBx0y3REt4TtGAAb.png)
 
 颜色选择
 

@@ -12,7 +12,7 @@
 
 ## 摇杆属性- 摇杆设置
 
-![](static/boxcnMolQooNGMahQNolHMdMhlc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnMolQooNGMahQNolHMdMhlc.png)
 
 ###### 摇杆类型
 
@@ -25,36 +25,36 @@
 - 功能说明：调整摇杆在控件中的位置
 - 示意图：
 
-![](static/boxcn4W0hKGzOIPU0kXQdT9RrAc.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcn4W0hKGzOIPU0kXQdT9RrAc.gif)
 
 - 如果【摇杆位置】设置的 X 或 Y 值 ≥0 且 ≤1，摇杆图形相对与摇杆控件左上角的相对位置/摇杆控件的大小=（X,Y），会根据这个（X,Y）的比例来决定其渲染在整个摇杆控件的哪个位置
 
   - 如果摇杆控件使用上下对齐/左右对齐/自适应，父级大小变化后，摇杆图形会跟随摇杆控件大小变化而调整位置
   - 占据较大范围的摇杆控件，为了适配不同比例的屏幕，推荐【摇杆位置】使用 X 和 Y 值 ≥0 且 ≤1
 
-![](static/boxcnCBWvhRhOmoM9G8vwY42BOc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnCBWvhRhOmoM9G8vwY42BOc.png)
 
-![](static/boxcn4jrLjEVbma8R7888xWXgmc.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcn4jrLjEVbma8R7888xWXgmc.gif)
 
 - 如果【摇杆位置】设置的 X/Y 值在大于 1，那么摇杆图形相对与摇杆控件左上角的相对位置=（X,Y），实际渲染出来的摇杆图形会与摇杆控件的左上角保持相对位置固定为（X,Y）
 
-![](static/boxcnQYhoHXlNdb68qsNbEYg0Hf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnQYhoHXlNdb68qsNbEYg0Hf.png)
 
-![](static/boxcn5Z2ty6EUmrlwyAEG0Ch3xe.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcn5Z2ty6EUmrlwyAEG0Ch3xe.gif)
 
 ###### 摇杆背景大小
 
 - 功能说明：调整摇杆背景图片的大小
 - 示意图：
 
-![](static/boxcn8g6is5VCikllVgSoI9bRsf.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcn8g6is5VCikllVgSoI9bRsf.gif)
 
 ###### 摇杆中心大小
 
 - 功能说明：调整摇杆中心图片的大小；需注意摇杆背景图片和摇杆中心图片的大小决定了屏幕可见的摇杆图片大小，而该控件的可操作范围大小是由参数变换-坐标-大小决定的
 - 示意图：
 
-![](static/boxcnRvA1k822N96G1nvsFc3jcc.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnRvA1k822N96G1nvsFc3jcc.gif)
 
 ###### 灵敏度比例
 
@@ -69,7 +69,7 @@
 - 功能说明：不使用摇杆后，摇杆变为淡隐状态所需时间。
 - 示意图：
 
-![](static/boxcnRCXcVpgC4X0AXKwXfMm63e.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnRCXcVpgC4X0AXKwXfMm63e.gif)
 
 ###### 淡隐不透明度
 
@@ -80,14 +80,14 @@
 - 功能说明：不使用摇杆后，摇杆从使用位置回归初始位置时所需时间。
 - 示意图：
 
-![](static/boxcnUspEzqHDfSlSQB3poJbW7b.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnUspEzqHDfSlSQB3poJbW7b.gif)
 
 ###### 固定摇杆位置
 
 - 功能说明：当固定摇杆位置时，摇杆位置不会改变，如下图；当不固定摇杆位置时，摇杆位置会移动到玩家首次触摸摇杆控件的位置，如上图
 - 示意图：
 
-![](static/boxcnYvKaOpJDQvExNBvsz5wuYd.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnYvKaOpJDQvExNBvsz5wuYd.gif)
 
 ###### 是否被鼠标控制
 
@@ -100,11 +100,11 @@
 - 更多关于键鼠按键绑定的介绍请见[按键绑定（针对 PC 端）及预设 UI](https://meta.feishu.cn/wiki/wikcnbLtkdMsqC0yIyekyl22zle)
 - 示意图：
 
-![](static/boxcnl6Djl0iO85KMr8UhHvPjCb.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnl6Djl0iO85KMr8UhHvPjCb.gif)
 
 ## 摇杆属性-样式
 
-![](static/boxcnoc8BWWLPGba0ah1DHIEO8g.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnoc8BWWLPGba0ah1DHIEO8g.png)
 
 ###### 摇杆背景图片
 
@@ -112,7 +112,7 @@
 - 按下时图片和禁用时图片相关属性的作用是：在摇杆处于按下状态/禁用状态时，使摇杆背景图片产生不同的效果，类似于按钮的过渡模式。
 - 示意图：
 
-![](static/boxcn7SEU5SPW7F55lA4YS8Zosb.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcn7SEU5SPW7F55lA4YS8Zosb.gif)
 
 ###### 摇杆中心图片
 
@@ -120,7 +120,7 @@
 - 按下时图片和禁用时图片相关属性的作用是：在摇杆处于按下状态/禁用状态时，使摇杆中心图片产生不同的效果，类似于按钮的过渡模式。
 - 示意图：
 
-![](static/boxcnaBrJ171JOO9K33EfOpJqyf.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcnaBrJ171JOO9K33EfOpJqyf.gif)
 
 ## 如何使用摇杆？
 
@@ -132,7 +132,7 @@
 
   - 首先我们将摇杆模式设置为【摄像机控制】，然后编写脚本
 
-![](static/boxcn8X9tfyKwc7av8K3mFEilrc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcn8X9tfyKwc7av8K3mFEilrc.png)
 
 - 示例脚本：
 
@@ -187,7 +187,7 @@ export default class WeaponUI extends WeaponUI_Generate {
 
   - 首先我们将摇杆模式设置为【无】，然后自行编写拖动摇杆后的逻辑
 
-![](static/boxcng54JtH5zXfw2NiRXjCjNNo.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/boxcng54JtH5zXfw2NiRXjCjNNo.png)
 
 - 示例脚本：
 

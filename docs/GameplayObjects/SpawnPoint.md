@@ -8,9 +8,9 @@
 
 【初生点对象】是在项目中决定玩家角色初次生成或重新生成位置与朝向的对象。每个项目创建时都会自带一个【初生点对象】，你可以在【对象管理器】中找到它：BP_PlayerStart。此外你也可以在【游戏功能对象】栏目中找到【初生点对象】，并将它拖入场景中。当场景中存在多个【初生点对象】时，玩家角色会在其中随机选择一个作为生成或者刷新的位置。
 
-![](static/BE1kbUFYCoCqBkxLhpGcls1nnUh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/BE1kbUFYCoCqBkxLhpGcls1nnUh.png)
 
-![](static/AVk4bPRa9om5DFxVFXpckdGpnzc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/AVk4bPRa9om5DFxVFXpckdGpnzc.png)
 
 ## 创建初生点
 
@@ -20,17 +20,17 @@
 
 1. 在【本地资源库】中找到【初生点对象】
 
-![](static/TnWCbzo8ioisIyxDY0jcutPmn2b.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/TnWCbzo8ioisIyxDY0jcutPmn2b.png)
 
 1. 将对象拖入到场景中或者【对象管理器】下
 
-![](static/K7KFbtlSBoZlWWxvUUbcudd6nsg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/K7KFbtlSBoZlWWxvUUbcudd6nsg.png)
 
 1. 在右侧【对象管理器】中【对象】栏找到对应的【初生点对象】并自定义位置和旋转（仅 z 轴）。
 
-![](static/Bf4UbPbnuoYetBxyAsqcIia8ncg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/Bf4UbPbnuoYetBxyAsqcIia8ncg.png)
 
-![](static/BWdGbj5Vuo1OwSxsvfFcLSYNnec.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/BWdGbj5Vuo1OwSxsvfFcLSYNnec.png)
 
 ### 通过脚本创建：
 
@@ -47,7 +47,7 @@ protected async onStart(): Promise<void> {
 
 此处我们也可以通过 `spawn` 接口生成，但是需要将【初生点对象】拖入【优先加载栏】或者将【初生点对象】进行【预加载】来保证生成后我们不需要等待资源下载而导致后续代码失效。
 
-![](static/AeZObSghso01zcxNdlGcX1h1npd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/AeZObSghso01zcxNdlGcX1h1npd.png)
 
 ```ts
 // 预加载资源，将下列代码粘贴到脚本中的onStart方法之前
@@ -67,21 +67,21 @@ preloadAssets: string = "PlayerStart"；
 
 在【对象管理器】中【对象】栏找到对应的【初生点对象】，选中后我们可以查看它的属性面板，通过属性面板我们可以修改【初生点对象】的坐标和旋转（仅 z 轴）。一般来说【初生点对象】不需要在脚本中操作，当游戏运行时玩家角色会随机在场景中选择一个初生点作为刷新的位置。
 
-![](static/R27ob82PHokXkkx95mccW3VInRa.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/R27ob82PHokXkkx95mccW3VInRa.png)
 
 ### 初生点位置
 
 玩家生成的位置是由【初生点对象】的位置决定的，你可以直接在【对象管理器】中【对象】栏选中【初生点对象】，在【属性面板】中找到【变换】，改变初生点的【位置】属性，就能改变玩家生成的位置。
 
-![](static/Nxo0buiwFoscxixhEIjck6dFnBg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/Nxo0buiwFoscxixhEIjck6dFnBg.png)
 
 ### 初生点旋转
 
 玩家生成的朝向是直接由初生点的朝向决定的，你可以【对象管理器】中【对象】栏选中【初生点对象】，在【属性面板】中找到【变换】，改变初生点的【旋转】属性，就能改变玩家生成的位置。同时【初生点对象】的朝向在场景中会通过一个蓝色小箭头进行提示：
 
-![](static/FGUtb0RrpojnhzxmPdRcDIoSn76.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/FGUtb0RrpojnhzxmPdRcDIoSn76.png)
 
-![](static/Fp7EbegXboahrexG8LfcOK9WnQa.gif)
+![](https://wstatic-a1.233leyuan.com/productdocs/Fp7EbegXboahrexG8LfcOK9WnQa.gif)
 
 【初生点对象】其实并没有自己的私有属性，它的位置属性和旋转属性都是是继承自父类 `GameObject`。【初生点对象】的【旋转】属性中 X、Y 的值不可修改，这是因为角色修改 X，Y 旋转会产生不可预料的问题。【初生点对象】的【缩放】属性也不可修改。
 
@@ -95,7 +95,7 @@ preloadAssets: string = "PlayerStart"；
 
 1. 选中【初生点对象】后右键点击【复制对象 ID】获取它的 GUID。注意区分对象 ID 与资源 ID 的区别。
 
-![](static/AFUebOV8Wo8jcGxV1PicVBURnOd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/AFUebOV8Wo8jcGxV1PicVBURnOd.png)
 
 1. 在脚本的 onStart 方法中添加下列代码：代码将异步查找 ID 对应的对象并以【初生点对象】进行接收。
 
@@ -110,13 +110,13 @@ if(SystemUtil.isServer()) {
 
 1. 选中【初生点对象】，在属性面板中将静态状态取消
 
-![](static/QuTubxtYfo9hgOx9SuacoCienKc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/QuTubxtYfo9hgOx9SuacoCienKc.png)
 
 1. 将脚本挂载到【初生点对象】下方，此时会弹出脚本网络状态提示，点击确认即可
 
-![](static/MCNib5rBfo2JaExL3Alcx5vCn5f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/MCNib5rBfo2JaExL3Alcx5vCn5f.png)
 
-![](static/MCnvbNcfFoOdQUxKRWWcgQwzn5b.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/MCnvbNcfFoOdQUxKRWWcgQwzn5b.png)
 
 1. 在脚本的 onStart 方法中添加下列代码：代码获取脚本挂载的对象并以【初生点对象】进行接收
 
