@@ -16,7 +16,7 @@
 
 在对象管理器中的【世界】对象中，找到并点击【角色】对象后，即可通过属性面板编辑角色的默认属性。
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnTUQVq3iLdwfXTeRaoiD78f.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTUQVq3iLdwfXTeRaoiD78f.png)
 
 ##### 方式二 ：
 
@@ -28,7 +28,7 @@
 
 ##### 3.1  基础属性
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcn0ZJaAS411W9eGhXqImABOe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0ZJaAS411W9eGhXqImABOe.png)
 
 ###### 3.1.1 是否可移动
 
@@ -418,7 +418,7 @@ export default class NewScript extends Core.Script {
 
 ##### 3.2  飞行属性
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnSiHfmgIhxGkOh6owyzLRBh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSiHfmgIhxGkOh6owyzLRBh.png)
 
 ###### 3.2.1 最大飞行速度
 
@@ -494,7 +494,7 @@ export default class NewScript extends Core.Script {
 
 ##### 3.3  游泳属性
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnOhAuq5yp1CuMJJUZ86do8g.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOhAuq5yp1CuMJJUZ86do8g.png)
 
 ###### 3.3.1 最大游泳速度
 
@@ -504,7 +504,7 @@ export default class NewScript extends Core.Script {
 
 实现步骤：首先我们将游泳区域对象放置在场景中
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnaB9vWXBTYTqPBbod610BJc.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnaB9vWXBTYTqPBbod610BJc.png)
 
 然后绑定以下脚本即可实现一个游泳区域。
 
@@ -566,7 +566,7 @@ export default class NewScript extends Core.Script {
 
 ##### 3.4  下蹲属性
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnFAdeaWeuhYy7fCyR431hrf.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFAdeaWeuhYy7fCyR431hrf.png)
 
 ###### 3.4.1 是否可以下蹲
 
@@ -620,7 +620,7 @@ export default class NewScript extends Core.Script {
 
 ##### 3.5  下落属性
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnlYyFM7SLPgdJ9hkjPlNMge.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnlYyFM7SLPgdJ9hkjPlNMge.png)
 
 ###### 3.5.1 最大下落速度
 
@@ -762,7 +762,7 @@ export default class TickScript extends Core.Script {
 
 ##### 3.6  跳跃属性
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnmmD3SRy3F9PNGpY826knzh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmmD3SRy3F9PNGpY826knzh.png)
 
 ###### 3.6.1 是否可跳跃
 
@@ -865,7 +865,7 @@ export default class NewScript extends Core.Script {
 
 ##### 3.7  形象设置
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnvRI1GXzQkIdtbV43SnJByd.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnvRI1GXzQkIdtbV43SnJByd.png)
 
 ###### 3.7.1 使用平台角色形象
 
@@ -879,7 +879,7 @@ export default class NewScript extends Core.Script {
 
 ##### 3.8  角色描边
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnJX1hLq8xQatQQdNjwBvylg.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJX1hLq8xQatQQdNjwBvylg.png)
 
 ###### 3.8.1 被遮挡时开启描边
 
@@ -899,11 +899,11 @@ export default class NewScript extends Core.Script {
 
 ##### 3.9 角色形象设置
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcnkdef2G67K5G4mhw74DsIeh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnkdef2G67K5G4mhw74DsIeh.png)
 
 ###### 3.9.1 外观类型
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcn97XXV6SsF9tW9QPQDSuefe.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn97XXV6SsF9tW9QPQDSuefe.png)
 
 属性说明：外观类型根据角色外观形象进行得划分，分为【基础人形形象】/【高级人形形象】/【多足形象】。
 
@@ -915,7 +915,7 @@ export default class NewScript extends Core.Script {
 
 ###### 3.9.2 体型类型
 
-![](https://wstatic-a1.233leyuan.com/static/productdocs/boxcn8d3J2zZyQXoHplNBWzarse.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8d3J2zZyQXoHplNBWzarse.png)
 
 属性说明：体型类型是外观类型之下具有相同功能的不同外形的形象，也就是说体型类型是相同外观类型下得更加详细得类型划分。
 
