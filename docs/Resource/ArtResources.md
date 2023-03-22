@@ -1,8 +1,8 @@
-# 美术资源
+# 资源
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKOHfF61LEUAcfBGDB0mi1g.png)
 
-## 美术资源简介
+## 资源简介
 
 ### 美术资源是什么
 
