@@ -108,9 +108,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnvncZmzqCJQjlxlRcA9lYlb.png)
 
-```ts
 - 此时各文件存于各自的目录下
-```
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOkQ82fz9b99zOLluAU3qqd.png)
 
@@ -144,9 +142,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnXLvo8qStJZCydWy9Mf3pme.png)
 
-```ts
 - 切换编辑状态及编辑对象时，点击保存提示弹窗中【保存】按钮
-```
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKnYwTaGciy7DZFYs3MxgCb.png)
 
@@ -185,11 +181,9 @@ Core.GameObject.asyncSpawnGameObject("GUID")
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGklAUKt00uFTyqWaUKztvg.png)
 
-```ts
 - 删除引用对象：删除此预制体的同时，删除此预制体在场景中的引用对象
 
 - 解除引用关系：删除此预制体，但保留场景中的对象，使其变为普通对象，不再依赖于原预制体文件
-```
 
 - 若没有引用对象，则显示二次确认弹窗
 
@@ -228,21 +222,17 @@ Core.GameObject.asyncSpawnGameObject("GUID")
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcna46w6Z9azlsXcbHTD4x5zh.png)
 
-```ts
-    - 重命名：选择重命名，导入时将导入的文件自动重命名导入
+- 重命名：选择重命名，导入时将导入的文件自动重命名导入
 
-      - 对于脚本类型而言，若重命名修改的脚本正在被其他脚本引用，则树状结构中显示引用此脚本的脚本文件，并在此脚本后显示文本：“该脚本引用了xxx.ts，导入后请手动修改”
-```
+ - 对于脚本类型而言，若重命名修改的脚本正在被其他脚本引用，则树状结构中显示引用此脚本的脚本文件，并在此脚本后显示文本：“该脚本引用了xxx.ts，导入后请手动修改”
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnVons4asag0pOtEiDhkZ3Df.png)
 
-```ts
   - 若与当前工程中的文件无冲突，则分两种情况
 
     - 新增：当前工程没有与该文件冲突的文件，显示**绿色new标识**
 
     - 忽略：当前工程存在一个完全相同的文件，此时不显示任何标识与操作
-```
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmaVXqJmPvRnRIU9UlEcOrS.png)
 
