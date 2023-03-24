@@ -12,7 +12,7 @@
     "lvl2": ".content h2",
     "lvl3": ".content h3",
     "content": ".content p, .content li",
-    "type": {
+    "docstype": {
       "selector": "",
       "defaultValue": "product-docs"
     }
@@ -23,8 +23,5 @@
     ".next-and-prev-link",
     ".table-of-contents"
   ],
-  "custom_settings": {
-    "attributesForFaceting": ["type"]
-  },
   "js_render": true
 }
