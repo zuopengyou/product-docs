@@ -11,10 +11,7 @@
     "lvl1": ".content h1",
     "lvl2": ".content h2",
     "lvl3": ".content h3",
-    "content": ".content p, .content li",
-    "docstype": {
-      "default_value": "product-docs"
-    }
+    "content": ".content p, .content li"
   },
   "selectors_exclude": [
     "aside",
