@@ -23,5 +23,8 @@
     ".next-and-prev-link",
     ".table-of-contents"
   ],
+  "custom_settings": {
+    "attributesForFaceting": ["docs"]
+  },
   "js_render": true
 }
