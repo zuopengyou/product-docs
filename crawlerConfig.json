@@ -1,19 +1,21 @@
 {
-  "index_name": "api-docs_prodigytech",
-  "start_urls": [
-    "https://api-docs.ark.online/"
-  ],
+  "index_name": "all-docs",
+  "start_urls": ["http://docs.ark.online/"],
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {
     "lvl0": {
-      "selector": "",
+      "selector": ".VPSidebarGroup .items .active span",
       "defaultValue": "Documentation"
     },
     "lvl1": ".content h1",
     "lvl2": ".content h2",
     "lvl3": ".content h3",
-    "content": ".content p, .content li"
+    "content": ".content p, .content li",
+    "type": {
+      "selector": "",
+      "defaultValue": "product-docs"
+    }
   },
   "selectors_exclude": [
     "aside",
@@ -21,5 +23,8 @@
     ".next-and-prev-link",
     ".table-of-contents"
   ],
+  "custom_settings": {
+    "attributesForFaceting": ["type"]
+  },
   "js_render": true
 }
