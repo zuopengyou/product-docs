@@ -11,7 +11,11 @@
     "lvl1": ".content h1",
     "lvl2": ".content h2",
     "lvl3": ".content h3",
-    "content": ".content p, .content li"
+    "content": ".content p, .content li",
+    "docs": {
+      "selector": "",
+      "default_value": "product-docs"
+    }
   },
   "selectors_exclude": [
     "aside",
