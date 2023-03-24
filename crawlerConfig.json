@@ -13,7 +13,6 @@
     "lvl3": ".content h3",
     "content": ".content p, .content li",
     "docstype": {
-      "selector": "",
       "defaultValue": "product-docs"
     }
   },
