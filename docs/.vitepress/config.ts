@@ -174,7 +174,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       apiKey: 'f691939e4fa8b414f92c84c288d2097a',
       indexName: 'all-docs',
       searchParameters: {
-        facetFilters: ['docs:api-docs']
+        // facetFilters: ['docs:product-docs']
+        // facetFilters: ['tags:product-docs']
         // facetFilters: ['lvl3:c']
       }
     },
