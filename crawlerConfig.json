@@ -1,20 +1,45 @@
 {
   "index_name": "all-docs",
-  "start_urls": ["http://docs.ark.online/"],
+  "start_urls": [
+    {
+      "url": "http://docs.ark.online/",
+      "selectors_key": "product-docs"
+    },
+    {
+      "url": "http://api-docs-024.ark.online/",
+      "selectors_key": "api-docs"
+    }
+  ],
   "rateLimit": 8,
   "maxDepth": 10,
   "selectors": {
-    "lvl0": {
-      "selector": ".VPSidebarGroup .items .active span",
-      "default_value": "Documentation"
+    "product-docs": {
+      "lvl0": {
+        "selector": ".VPSidebarGroup .items .active span",
+        "default_value": "Documentation"
+      },
+      "lvl1": ".content h1",
+      "lvl2": ".content h2",
+      "lvl3": ".content h3",
+      "content": ".content p, .content li",
+      "docs": {
+        "selector": "",
+        "default_value": "product-docs"
+      }
     },
-    "lvl1": ".content h1",
-    "lvl2": ".content h2",
-    "lvl3": ".content h3",
-    "content": ".content p, .content li",
-    "docs": {
-      "selector": "",
-      "default_value": "product-docs"
+    "api-docs": {
+      "lvl0": {
+        "selector": ".VPSidebarGroup .items .active span",
+        "default_value": "Documentation"
+      },
+      "lvl1": ".content h1",
+      "lvl2": ".content h2",
+      "lvl3": ".content h3",
+      "content": ".content p, .content li",
+      "docs": {
+        "selector": "",
+        "default_value": "api-docs"
+      }
     }
   },
   "selectors_exclude": [
