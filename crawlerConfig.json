@@ -3,11 +3,13 @@
   "start_urls": [
     {
       "url": "http://docs.ark.online/",
-      "selectors_key": "product-docs"
+      "selectors_key": "product-docs",
+      "tags": ["product-docs"]
     },
     {
       "url": "http://api-docs-024.ark.online/",
-      "selectors_key": "api-docs"
+      "selectors_key": "api-docs",
+      "tags": ["api-docs"]
     }
   ],
   "rateLimit": 8,
