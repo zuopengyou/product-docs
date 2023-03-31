@@ -173,10 +173,20 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       appId: '89BNK6UU0A',
       apiKey: 'f691939e4fa8b414f92c84c288d2097a',
       indexName: 'all-docs',
-      searchParameters: {
-        // facetFilters: ['docs:product-docs']
-        // facetFilters: ['tags:product-docs']
-        // facetFilters: ['lvl3:c']
+      project: {
+        active: 'product-docs',
+        arr: [
+          {
+            key: 'product-docs',
+            facetFilters: ['tags:product-docs'],
+            name: '产品手册'
+          },
+          {
+            key: 'api-docs',
+            facetFilters: ['tags:api-docs'],
+            name: 'API文档'
+          }
+        ]
       }
     },
     siteTitle: '文档',
