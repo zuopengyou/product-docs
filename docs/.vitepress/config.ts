@@ -170,9 +170,12 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       }
     ],
     algolia: {
-      appId: '89BNK6UU0A',
-      apiKey: 'f691939e4fa8b414f92c84c288d2097a',
-      indexName: 'all-docs',
+      // appId: '89BNK6UU0A',
+      // apiKey: 'f691939e4fa8b414f92c84c288d2097a',
+      // indexName: 'all-docs',
+      appId: 'I2PHYUBLCN',
+      apiKey: '62ee775311415d26549e0e30fef5aa38',
+      indexName: 'api-docs_prodigytech',
       project: {
         active: 'product-docs',
         arr: [
