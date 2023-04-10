@@ -192,15 +192,15 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         ]
       }
     },
-    siteTitle: '文档',
+    siteTitle: '产品手册',
     nav: [
       {
-        text: '官网',
+        text: '创作者',
         link: 'https://creator.ark.online/'
       },
       {
         text: '教程',
-        link: 'https://meta.feishu.cn/wiki/wikcnmY0MQweLdbnlywkJJiDucd'
+        link: 'https://learning.ark.online/'
       },
       {
         text: 'API',
