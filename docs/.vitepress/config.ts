@@ -11,7 +11,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
 
 export default defineConfigWithTheme<DefaultTheme.Config>({
   ignoreDeadLinks: true,
-  title: '文档',
+  title: '产品手册',
   appearance: false,
   description: '口袋方舟编辑器的产品文档',
   outDir: '../dist',
