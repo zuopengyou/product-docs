@@ -30,6 +30,7 @@
 | 单程运动时间                       | linearRepeatTime     | [重复执行]二级属性，填入时间(秒)后，对象运动到达指定时间，自动执行反向运动    |
 | 到达后停顿时间                     | linearRepeatDelay    | [重复执行]二级属性，填入时间(秒)后，对象达到终点后，停顿 N 秒开始执行反向运动 |
 | 返程后停顿时间                     | linearReturnDelay    | [重复执行]二级属性，填入时间(秒)后，对象返回起点后，停顿 N 秒开始执行反向运动 |
+
 <video controls src="https://cdn.233xyx.com/athena/online/5cef83d287ae4cfb8789d101ef3b406b.mp4"></video>
 
 ### 旋转设置
@@ -42,6 +43,7 @@
 | 单程运动时间                       | rotationRepeatTime     | [重复执行]二级属性，填入时间(秒)后，对象运动到达指定时间，自动执行反向运动    |
 | 到达后停顿时间                     | rotationRepeatDelay    | [重复执行]二级属性，填入时间(秒)后，对象达到终点后，停顿 N 秒开始执行反向运动 |
 | 返程后停顿时间                     | rotationReturnDelay    | [重复执行]二级属性，填入时间(秒)后，对象返回起点后，停顿 N 秒开始执行反向运动 |
+
 <video controls src="https://cdn.233xyx.com/athena/online/b29e8921f2244fa1b346a5aec46c2a32.mp4"></video>
 
 ### 缩放设置
@@ -54,6 +56,7 @@
 | 单程运动时间                       | scaleRepeatTime     | [重复执行]二级属性，填入时间(秒)后，对象运动到达指定时间，自动执行反向运动    |
 | 到达后停顿时间                     | scaleRepeatDelay    | [重复执行]二级属性，填入时间(秒)后，对象达到终点后，停顿 N 秒开始执行反向运动 |
 | 返程后停顿时间                     | scaleReturnDelay    | [重复执行]二级属性，填入时间(秒)后，对象返回起点后，停顿 N 秒开始执行反向运动 |
+
 <video controls src="https://cdn.233xyx.com/athena/online/eafa9da98cff4542b6f18ab27014a2ca.mp4"></video>
 
 ### 单摆设置
@@ -63,6 +66,7 @@
 | 速度        | swingSpeed           |设置各轴方向上的运动速度|
 | 延时启动时间 | swingDelayStartTime  | 设置首次运行时的延迟启动时间                                                                                               |
 | 摆动角度     | swingAngle           | 设置摆动一侧的最大角度，需要注意在同时设置了多个轴方向的摆动时，会出现摆动幅度异常的情况，推荐只使用一个轴方向上进行摆动。 |
+
 <video controls src="https://cdn.233xyx.com/athena/online/310492b3b66e409bbcc87808bb924f1d.mp4"></video>
 
 ## 如何创建运动器
