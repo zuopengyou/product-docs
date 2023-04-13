@@ -13,9 +13,8 @@
 ## 编辑器窗口都包含什么
 
 - 编辑器窗口由顶部页签、菜单栏、工具栏、资源库、主视口、对象管理器、工程内容、属性面板八个部分组成。
-- 默认位置如下图
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnw6dJGrF0hyEGbOslUsbu1d.png)
+![](https://cdn.233xyx.com/1681295515083_975.jpg)
 
 ## 如何合理利用/使用编辑器各个窗口
 
