@@ -1,18 +1,18 @@
-# UI 组件-遮罩按钮
+# UI 控件-遮罩按钮
 
 **阅读本文大概需要 15 分钟**
 
-本文概述了 UI 组件—遮罩按钮的各项属性以及使用方法。
+本文概述了 UI 控件—遮罩按钮的各项属性以及使用方法。
 
 ## 什么是遮罩按钮？
 
-**遮罩按钮**是一种遮挡、遮盖部分图像内容，并显示特定区域的图像内容的 UI 组件；可用于实现技能冷却按钮、特殊形状按钮的遮罩效果；也可以不作为按钮，而用于场景过度、图片切割等效果。
+**遮罩按钮**是一种遮挡、遮盖部分图像内容，并显示特定区域的图像内容的 UI 控件；可用于实现技能冷却按钮、特殊形状按钮的遮罩效果；也可以不作为按钮，而用于场景过度、图片切割等效果。
 
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTB5Q4G2flxf04mpnAGmSJT.gif)
 
-- 变换/对齐/通用/渲染属性请见 [UI 组件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
+- 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
 
   - 注意：如果不作为按钮使用时，请将可见性修改为可见不可交互仅自身（SelfHitTestInvisible）
 
@@ -28,14 +28,14 @@
 
 实际使用时，如果仅想实现按钮技能冷却的遮罩效果，**推荐遮罩图片选用和普通图片（底图）相同的图片资源，并使用不同的图片颜色和透明度**
 
-###### 2.1 扇形遮罩
+#### 2.1 扇形遮罩
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn17giITI7Ut6FFqVz3jbozd.png)
 
 - 普通图片/遮罩图片
 
-  - 即遮罩按钮组件的底图和遮罩图，可以修改两张图的素材、颜色、透明度
-  - 普通图片的绘制类型目前是针对整个遮罩组件的，也会影响遮罩图片的效果
+  - 即遮罩按钮控件的底图和遮罩图，可以修改两张图的素材、颜色、透明度
+  - 普通图片的绘制类型目前是针对整个遮罩控件的，也会影响遮罩图片的效果
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1F31G5X3UYh6xROkJKdubc.gif)
 
@@ -92,13 +92,13 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn44PWRdSTpN89Iyk08QnCJg.gif)
 
-###### 2.2 圆形遮罩
+#### 2.2 圆形遮罩
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnY8WMuK6iEGbP6BAr7xM1jf.png)
 
 - 普通图片/遮罩图片
 
-  - 即遮罩按钮组件底图和遮罩图，可以修改两张图的素材、颜色、透明度
+  - 即遮罩按钮控件底图和遮罩图，可以修改两张图的素材、颜色、透明度
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZQadG3fLIO1lRURmJHnPEc.gif)
 
@@ -133,7 +133,7 @@
 
 - 外圈百分值
 
-  - 用于调整外圈大小，即组件对角线上外圈到中心的距离/组件对角线长度的百分值；在此值为 1-√2/2（约 0.293）时，未被外圈遮挡部分刚好成为内切于组件边界的圆形
+  - 用于调整外圈大小，即控件对角线上外圈到中心的距离/控件对角线长度的百分值；在此值为 1-√2/2（约 0.293）时，未被外圈遮挡部分刚好成为内切于控件边界的圆形
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnLGbFpYsFDQfk6CegFLuxFd.gif)
 
@@ -149,7 +149,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhRMq5OT7QwABPqdLYgSsng.gif)
 
-###### 2.3 圆角矩形遮罩
+#### 2.3 圆角矩形遮罩
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2hC5uFpTsPfUoCMKc6jDxg.png)
 
@@ -161,7 +161,7 @@
 
 - 矩形边距 X/Y
 
-  - 将普通图片在 X 轴和 Y 轴两个方向上进行裁剪，该属性调整 X 轴和 Y 轴两个方向上，被裁剪部分占组件大小的比例，该属性越大，裁剪的比例越大
+  - 将普通图片在 X 轴和 Y 轴两个方向上进行裁剪，该属性调整 X 轴和 Y 轴两个方向上，被裁剪部分占控件大小的比例，该属性越大，裁剪的比例越大
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcndfbp5YdKyng6pWe6pl8kyI.gif)
 
@@ -185,9 +185,9 @@
 
 ## 如何使用遮罩按钮？
 
-####### 示例一：制作能时钟显示 CD 的技能按钮
+### 示例一：制作能时钟显示 CD 的技能按钮
 
-在 UI 编辑器中设置好遮罩按钮组件和文本组件，并设置好技能图片（普通图片/按压图片/禁用图片/遮罩图片都要设置）
+在 UI 编辑器中设置好遮罩按钮控件和文本控件，并设置好技能图片（普通图片/按压图片/禁用图片/遮罩图片都要设置）
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnsljuEqhdXeZ5otGFl7cqPc.png)
 
