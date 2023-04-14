@@ -46,7 +46,7 @@ Util.InputUtil.unbindButton(Type.Keys.Up)
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGgX88e45wIi9fPbNj6s2Sc.png)
 
-- 此功能的使用场景请见 [UI 组件-摇杆](https://meta.feishu.cn/wiki/wikcn3gWEoxEgKwAzgYPBl2zeCc?table=tblDgsts19OW2IJA) 和 [UI 组件-摄像机滑动区](https://meta.feishu.cn/wiki/wikcnlsPgoUkmlLTnCwO3vuRCLc?table=tblDgsts19OW2IJA)
+- 此功能的使用场景请见 [UI 控件-摇杆](https://docs.ark.online/UI/UIWidget-Joystick.html) 和 [UI 控件-摄像机滑动区](https://docs.ark.online/UI/UIWidget-Touchpad.html)
 
 **脚本示例：**
 
