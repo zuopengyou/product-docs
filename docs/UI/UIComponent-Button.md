@@ -9,8 +9,8 @@
 **按钮**是任何游戏界面中最重要和最普遍的交互 UI 控件。按钮是图片 + 文本相结合的效果，并且与图片和文本有最明显差异是：可以进行点击交互，并发送事件等。
 
 - 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://docs.ark.online/UI/UIWidget-BaseProperties.html)
-- 文本属性请见 [3.文本](https://meta.feishu.cn/wiki/wikcnjx5c6jhvAQa8yJYGxmq9Lc) （仅文本按钮有此属性分组）
-- 样式属性和过渡模式属性中的图片属性部分请见 [2.图片](https://meta.feishu.cn/wiki/wikcnFg4z5zLX0puYIncTBIJGtf)
+- 文本属性请见 [UI 控件-文本](https://docs.ark.online/UI/UIComponent-Text.html) （仅文本按钮有此属性分组）
+- 样式属性和过渡模式属性中的图片属性部分请见 [UI 控件-图片](https://docs.ark.online/UI/UIComponent-Image.html)
 
 ## 【按钮】和【文本按钮】的区别
 
