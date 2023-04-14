@@ -62,8 +62,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-摇杆', link: '/UI/UIWidget-Joystick.md' },
           { text: 'UI控件-摄像机滑动区', link: '/UI/UIWidget-Touchpad.md' },
           { text: 'UI控件-加载图', link: '/UI/UIComponent-LoadingIcon.md' },
-          { text: 'UI控件-富文本', link: '/UI/Rich-text.md' }, 
           { text: 'UI控件-调色板', link: '/UI/UIComponent-ColorPicker.md' },
+          { text: '富文本', link: '/UI/Rich-text.md' }, 
           { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
           {
             text: '按键绑定（针对PC端）及预设UI',
