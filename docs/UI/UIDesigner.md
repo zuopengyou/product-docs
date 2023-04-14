@@ -8,9 +8,8 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFKS3vKAnigQFdYaUYFc2td.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnw75HafyNQQjv2DbrwG1lgf.png)
 
-##### 分布
+#### 分布
 
 **分布**是将已选的所有对象在水平/垂直方向上均匀排布
 
@@ -26,7 +25,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnsblqwIES7qiysQjKgV0idb.gif)
 
-##### 对齐
+#### 对齐
 
 **对齐**是将已选的多个对象的边界点/中心点，对齐到第一个选择的对象的某边缘线/中心线，不受各自的父级容器的影响
 
@@ -42,7 +41,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1P8ettM6iemWjizcsH5JLh.gif)
 
-##### 居置
+#### 居置
 
 **居置**是将已选的多个对象的边界点/中心点，对齐到各自直属父级的某边缘线/中心线，与选取顺序无关
 
@@ -58,7 +57,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnE3bOho3jn6KYxqPgeN3Uc.gif)
 
-#### 
+
 
 ## 设计器顶部工具
 
@@ -77,11 +76,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntrK5rpjc6o4Op6PxIKDnge.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnM1h5VetC1lKkBnvYvCbP4b.png)
-
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnh9iwYKJ00AjykYRXpePDCc.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwVeFUcNFqXEBhOvI5KacWg.png)
 
 - 设计器或者对象列表内单击右键可以打开右键菜单，右键菜单的功能包括：
 
