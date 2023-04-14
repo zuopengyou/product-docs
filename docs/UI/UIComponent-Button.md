@@ -38,7 +38,7 @@
 
 ## 按钮属性-过渡模式
 
-####### 是否有过渡模式
+#### 是否有过渡模式
 
 - 勾选后，将开启按钮的过渡模式，并展开按压图片和禁用图片的相关设置；在按压或者禁用按钮时，按钮可以显示不同的状态
 
@@ -50,19 +50,16 @@
 
     - 无论按钮是否可用，是否按压，按钮都固定展示普通图片样式
 
-####### 按压图片
+#### 按压图片
 
 - 点击按钮后，按钮的变化效果。
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0BRsIYKGSDXdk8qhLKKK1b.gif)
 
-####### 禁用图片
+#### 禁用图片
 
 - 按钮不可用的情况下，按钮的变化效果。
-
-  -
-  -
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnw5y8xtFgCJfQUo0qfepV62.gif)
@@ -71,7 +68,7 @@
 
 ## 如何使用按钮？
 
-###### 示例一：制作跳跃按钮
+### 示例一：制作跳跃按钮
 
 - 首先我们需要制作一个跳跃按钮的 UI，然后将 UI 与脚本进行绑定，随后编写脚本，脚本中要找到对应的 UI 控件，点击 UI 控件时实现跳跃。
 - 示例脚本：
@@ -101,7 +98,7 @@ export default class UIDefault extends UI.UIBehavior{
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnw1gnt8Yj1oFn6Hz8qcsw6N.gif)
 
-###### 示例二：制作按钮选中态
+### 示例二：制作按钮选中态
 
 - 当界面中存在多个同级按钮时，我们需要通过按钮的选中状态来区分我们选择了哪个按钮。接下来我们尝试制作性别选择菜单中按钮的选中态效果。
 - 首先在 UI 编辑器中拼好以下 UI 控件：
@@ -161,7 +158,7 @@ export default class UIDefault extends UI.UIBehavior{
 
 以上两个示例的工程项目：
 
-###### **示例三：制作活动页签选择按钮**
+### **示例三：制作活动页签选择按钮**
 
 - 我们依据上面的思路制作多页签的选中态，首先在 UI 编辑器中拼好以下 UI 控件：
 
