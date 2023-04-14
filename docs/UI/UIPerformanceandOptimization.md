@@ -68,7 +68,7 @@ OPPOA57 屏幕分辨率为：1280x720，而下面两张图原始分辨率分别�
 
 #### 推荐使用 Collapsed 隐藏 UI 而不是 Hidden
 
-在调整 UI 组件的可见性时，推荐使用 Collapsed 来隐藏 UI，因为 Hidden 在隐藏后依然占据布局空间（Layout Space），而 Collpsed 隐藏后不占用布局空间，因此在隐藏后不会进行 Prepass 的计算，性能优于 Hidden；合理选择更好的可见性模式可以有效优化性能。
+在调整 UI 控件的可见性时，推荐使用 Collapsed 来隐藏 UI，因为 Hidden 在隐藏后依然占据布局空间（Layout Space），而 Collpsed 隐藏后不占用布局空间，因此在隐藏后不会进行 Prepass 的计算，性能优于 Hidden；合理选择更好的可见性模式可以有效优化性能。
 
 ```ts
 //UI节点显示规则

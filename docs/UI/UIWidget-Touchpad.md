@@ -8,17 +8,17 @@
 
 **摄像机滑动区**是一种不可见的交互区域，在摄像机滑动区内可以通过滑动屏幕的方式，控制摄像机镜头转向。
 
-- 变换/对齐/通用/渲染属性请见 [UI 组件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
+- 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://docs.ark.online/UI/UIWidget-BaseProperties.html)
 
 ## 摄像机滑动区属性
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKATbfX6YFgTCcmzzVeq2O9.png)
 
-###### 灵敏度比例
+#### 灵敏度比例
 
 - 功能说明：此属性数值越大，摄像机滑动区的灵敏度越高
 
-###### 是否被鼠标控制
+#### 是否被鼠标控制
 
 - 功能说明：设置此摄像机滑动区是否允许被鼠标控制，此属性只作用于 PC 端，不会影响移动端
 - 在为 PC 游戏端玩家设计控制方案时，为了避免按键绑定与直接点击 UI 相互冲突，需要合理的运用此项属性，例如：
@@ -31,7 +31,7 @@
 
 ## 如何使用摄像机滑动区？
 
-####### 示例一：制作动态调节灵敏度的摄像机滑动区
+### 示例一：制作动态调节灵敏度的摄像机滑动区
 
 ```ts
 @UI.UICallOnly('')
@@ -63,9 +63,13 @@ export default class UIDefault extends UI.UIBehavior{
 }
 ```
 
-- 示意图：
+- 示意视频：
+<video controls src="https://cdn.233xyx.com/1681463233045_362.mp4"></video>
 
-####### 示例二：动态调整摄像机滑动区是否可用
+- 工程文件：
+[点击下载](https://cdn.233xyx.com/1681463104869_856.7z)
+
+### 示例二：动态调整摄像机滑动区是否可用
 
 - 使摄像机滑动区不可用有两种方法
 
