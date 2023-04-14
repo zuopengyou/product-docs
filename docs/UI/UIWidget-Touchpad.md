@@ -8,7 +8,7 @@
 
 **摄像机滑动区**是一种不可见的交互区域，在摄像机滑动区内可以通过滑动屏幕的方式，控制摄像机镜头转向。
 
-- 变换/对齐/通用/渲染属性请见 [UI 组件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
+- 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://docs.ark.online/UI/UIWidget-BaseProperties.html)
 
 ## 摄像机滑动区属性
 
