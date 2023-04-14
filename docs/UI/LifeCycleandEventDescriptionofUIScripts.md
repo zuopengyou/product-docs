@@ -275,5 +275,3 @@
 下图调用顺序为 ： onMouseEnter-鼠标进入此 UI 范围内 -> onMouseWheel-滑动鼠标滚轮 ->onMouseLeave-鼠标离开此 UI 范围内
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrmYbmJ6GMIyhzrK8iSIx4c.png)
-
-**onDragDetected\onDragOver\onDrop\onDragEnter\onDragLeave\onDragCancelled 这 6 个 UI 拖拽事件目前功能上不完善，后续会进行优化，建议暂时不要使用**
