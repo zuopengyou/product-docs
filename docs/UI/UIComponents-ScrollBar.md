@@ -1,24 +1,22 @@
-# UI 组件-滚动框
+# UI 控件-滚动框
 
 **阅读本文大概需要 10 分钟**
 
-本文概述了 UI 组件—滚动框的各项属性以及使用方法。
+本文概述了 UI 控件—滚动框的各项属性以及使用方法。
 
 ## 什么是**滚动框**？
 
-**滚动框**是比较常用的滑动类型的容器组件，经常在界面不够放置所有内容时使用滚动框，通过滑动来展示所有内容。
+**滚动框**是比较常用的滑动类型的容器控件，经常在界面不够放置所有内容时使用滚动框，通过滑动来展示所有内容。
 
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOLK02sV1ecT9OtnS1rBPZz.gif)
 
-- 变换/对齐/通用/渲染属性请见 [UI 组件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
+- 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://docs.ark.online/UI/UIWidget-BaseProperties.html)
 
 ## 滚动框属性-滚动面板设置
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFun5JvW35J1Hs85yIxcMhe.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnpDgR3v1nCu7kLASx5M4zBg.png)
 
 ####### 滚动朝向
 
@@ -100,11 +98,9 @@
 
 ## 滚动框属性-样式设置
 
-- 这里修改的是滚动条的图片及样式。图片属性请见 [UI 组件-图片](https://meta.feishu.cn/wiki/wikcnFg4z5zLX0puYIncTBIJGtf)
+- 这里修改的是滚动条的图片及样式。图片属性请见 [UI 控件-图片](https://meta.feishu.cn/wiki/wikcnFg4z5zLX0puYIncTBIJGtf)
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4QjLI6cVQzLHcMgsy9UHAf.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnAR1Qq9ICKGClIPk0EjvG0c.png)
 
 ## 如何使用滚动框？
 
@@ -116,7 +112,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYp08CtOCzC0VcQJVk6cJmP.png)
 
-- 然后编写脚本，动态生成其他 UI 组件并添加为滚动框内容器的子级，这里生成一张图片组件作为示例；运行游戏后，点击按钮就能看到动态生成的 UI 组件出现在滚动框内部了
+- 然后编写脚本，动态生成其他 UI 控件并添加为滚动框内容器的子级，这里生成一张图片控件作为示例；运行游戏后，点击按钮就能看到动态生成的 UI 控件出现在滚动框内部了
 
 ```ts
 @UI.UICallOnly('')
@@ -130,9 +126,9 @@ export default class UIDefault extends UI.UIBehavior{
         const canvas = this.uiWidgetBase.findChildByPath('MWCanvas/ScrollBox/Canvas') as UI.Canvas
         //点击按钮,创建图片
         newBtn.onPressed.add(()=>{
-            //创建图片组件
+            //创建图片控件
             let image= UI.Image.newObject()
-            //把图片组件挂载滚动框下
+            //把图片控件挂载滚动框下
             canvas.addChild(image)
             image.slot.size=new Type.Vector2(225,225)
             image.imageGuid="76721"
