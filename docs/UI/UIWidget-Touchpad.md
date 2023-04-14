@@ -63,7 +63,11 @@ export default class UIDefault extends UI.UIBehavior{
 }
 ```
 
-- 示意图：
+- 示意视频：
+<video controls src="https://cdn.233xyx.com/1681463233045_362.mp4"></video>
+
+- 工程文件：
+[点击下载](https://cdn.233xyx.com/1681463104869_856.7z)
 
 ### 示例二：动态调整摄像机滑动区是否可用
 
