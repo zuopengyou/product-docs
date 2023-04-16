@@ -149,4 +149,4 @@ export default class UIDefault extends UI.UIBehavior{
 这里相当于实例化后的自定义UI控件的对齐方式，如果这里选择的是左右对齐+上下对齐，或者自定义对齐，自定义UI控件的大小和位置跟随父级自适应变化
 详见产品手册【UI控件的基础属性】中的【UI文件（自定义UI）的整体属性——Root属性】部分
 :::
-
+![](https://cdn.233xyx.com/1681467996265_583.png)
