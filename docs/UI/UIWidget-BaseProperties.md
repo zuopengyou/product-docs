@@ -87,11 +87,11 @@ this.uiobject.zorder=0
 #### 对齐
 
 - 是指根据父级的拉伸/位移进行 UI 布局的对齐方式，方便对不同机型进行 UI 适配。
-**水平方向**
 
-  - 靠左对齐
-父级无论如何变化，UI 控件依旧保持靠左边距的距离不变，且大小不变
-示意图：
+##### 水平方向**
+- 靠左对齐
+  父级无论如何变化，UI 控件依旧保持靠左边距的距离不变，且大小不变
+  示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZDllX6w9A90igPaRSH5f35.gif)
 
@@ -99,58 +99,58 @@ this.uiobject.zorder=0
 需要说明的是，在这一系列的演示动图中，白色图片并不是直接跟随游戏画面长宽比自适应变化的；白色图片的父级是上下对齐+左右对齐的Rootcanvas以及Root，Rootcanvas以及Root会自动跟随游戏画面长宽比变化填满屏幕，进而改变白色图片的位置和尺寸
 :::
 
-  - 靠右对齐
-父级无论如何变化，UI 控件依旧保持靠右边距的距离不变，且大小不变
-示意图：
+- 靠右对齐
+  父级无论如何变化，UI 控件依旧保持靠右边距的距离不变，且大小不变
+  示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9dmacbOvcxViETmJKhEeih.gif)
 
-  - 左右对齐
-父级无论如何变化，UI 控件依旧保持靠左边距和靠右边距的距离不变，大小会发生变化
-示意图：
+- 左右对齐
+  父级无论如何变化，UI 控件依旧保持靠左边距和靠右边距的距离不变，大小会发生变化
+  示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbYalFiZPrAV2FFIhskhPqh.gif)
 
-  - 中心对齐
-父级无论如何变化，水平方向上，UI 控件依旧保持和父级中心位置的相对距离不变，且大小不变
-示意图：
+- 中心对齐
+  父级无论如何变化，水平方向上，UI 控件依旧保持和父级中心位置的相对距离不变，且大小不变
+  示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHjkvN8PBa9bwBsexKWTo8d.gif)
 
-  - 自适应
-水平方向上，UI 控件会根据会根据父级的变化进行自适应的变化比例大小
-示意图：
-![](https://cdn.233xyx.com/1681612910124_593.gif)
+- 自适应
+  水平方向上，UI 控件会根据会根据父级的变化进行自适应的变化比例大小
+  示意图：
+  ![](https://cdn.233xyx.com/1681612910124_593.gif)
 
-**垂直方向**
+##### 垂直方向
 
-  - 靠上对齐
-父级无论如何变化，UI 控件依旧保持靠上边距的距离不变，且大小不变
-示意图：
+- 靠上对齐
+  父级无论如何变化，UI 控件依旧保持靠上边距的距离不变，且大小不变
+  示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnywBOu5DiFHLrYPGlO3jpWe.gif)
 
-  - 靠下对齐
-父级无论如何变化，UI 控件依旧保持靠下边距的距离不变，且大小不变
-示意图：
+- 靠下对齐
+  父级无论如何变化，UI 控件依旧保持靠下边距的距离不变，且大小不变
+  示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn02FUkSErKNs3HNQY9vwwze.gif)
 
-  - 上下对齐
-父级无论如何变化，UI 控件依旧保持靠上边距和靠下边距的距离不变，大小会发生变化
-示意图：
+- 上下对齐
+  父级无论如何变化，UI 控件依旧保持靠上边距和靠下边距的距离不变，大小会发生变化
+  示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIjAuQSkJWq9jPPHl6ZZO6g.gif)
 
-  - 中心对齐
-父级无论如何变化，垂直方向上，UI 控件依旧保持和父级中心位置的相对距离不变，且大小不变
-示意图：
+- 中心对齐
+  父级无论如何变化，垂直方向上，UI 控件依旧保持和父级中心位置的相对距离不变，且大小不变
+  示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcni8ioTU2U8FdbhczLx6jJge.gif)
 
-  - 自适应
-垂直方向上，UI 控件会根据会根据父级的变化进行自适应的变化比例大小，
-示意图：
+- 自适应
+  垂直方向上，UI 控件会根据会根据父级的变化进行自适应的变化比例大小，
+  示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnp9b8MMxFAA3WRDmxWgWEzf.gif)
 
@@ -165,7 +165,7 @@ this.uiobject.zorder=0
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFfFyjw2wlCzBbGVSr15Htf.gif)
 
 - 如果制作一个菜单，并不想其比例跟随玩家屏幕比例变化，推荐容纳菜单的容器控件对齐方式=中心对齐
-
+  
   - 这时，由于菜单大小固定不变，容器内部各控件的对齐方式不会各自大小产生影响，最终菜单的效果会和 UI 编辑器中相同
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnt6EAq9LBv1nlNjrbACuTkg.png)
