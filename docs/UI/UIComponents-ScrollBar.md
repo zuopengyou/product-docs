@@ -141,7 +141,7 @@ export default class UIDefault extends UI.UIBehavior{
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8b9vo8R52rBLLp9iRw0ZLc.gif)
 
-- 工程文件：
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467996644_155.7z)
 
 - 实际制作游戏时，背包/商店等菜单中的每个格子通常不是简单的一个UI控件，而是一个包含多个UI控件的自定义UI控件，建议把一个格子的元素放在一个单独的UI文件内，然后在脚本中动态将这个UI文件实例化为自定义UI控件并挂在容器下
 ::: tip
