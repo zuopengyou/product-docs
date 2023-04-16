@@ -24,17 +24,15 @@
   - 【按钮】可以成为【文本】的父级对象，并且不限制可挂载【文本】子级对象的个数；而【文本按钮】不可挂载任何子级对象
   - 除此之外，【按钮】的其他属性与【文本按钮】完全相同
 
+**【文本按钮】的文字配置方法**
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbJR2DogUEktW2V89BCSDNb.png)
 
-【文本按钮】的文字配置方法
+**【按钮】的文字配置方法**
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOikAmAp2CTAfCmMAl5ga7e.png)
 
-【按钮】的文字配置方法
-
 - 【按钮】的 API：UI.Button
-
-【文本按钮】的 API：UI.StaleButton
+- 【文本按钮】的 API：UI.StaleButton
 
 ## 按钮属性-过渡模式
 
