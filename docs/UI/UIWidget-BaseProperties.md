@@ -87,11 +87,11 @@ this.uiobject.zorder=0
 #### 对齐
 
 - 是指根据父级的拉伸/位移进行 UI 布局的对齐方式，方便对不同机型进行 UI 适配。
-- 水平方向
+**水平方向**
 
   - 靠左对齐
-  - 父级无论如何变化，UI 控件依旧保持靠左边距的距离不变，且大小不变
-  - 示意图：
+父级无论如何变化，UI 控件依旧保持靠左边距的距离不变，且大小不变
+示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZDllX6w9A90igPaRSH5f35.gif)
 
@@ -100,57 +100,57 @@ this.uiobject.zorder=0
 :::
 
   - 靠右对齐
-  - 父级无论如何变化，UI 控件依旧保持靠右边距的距离不变，且大小不变
-  - 示意图：
+父级无论如何变化，UI 控件依旧保持靠右边距的距离不变，且大小不变
+示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9dmacbOvcxViETmJKhEeih.gif)
 
   - 左右对齐
-  - 父级无论如何变化，UI 控件依旧保持靠左边距和靠右边距的距离不变，大小会发生变化
-  - 示意图：
+父级无论如何变化，UI 控件依旧保持靠左边距和靠右边距的距离不变，大小会发生变化
+示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbYalFiZPrAV2FFIhskhPqh.gif)
 
   - 中心对齐
-  - 父级无论如何变化，水平方向上，UI 控件依旧保持和父级中心位置的相对距离不变，且大小不变
-  - 示意图：
+父级无论如何变化，水平方向上，UI 控件依旧保持和父级中心位置的相对距离不变，且大小不变
+示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHjkvN8PBa9bwBsexKWTo8d.gif)
 
   - 自适应
-  - 水平方向上，UI 控件会根据会根据父级的变化进行自适应的变化比例大小
-  - 示意图：
+水平方向上，UI 控件会根据会根据父级的变化进行自适应的变化比例大小
+示意图：
 ![](https://cdn.233xyx.com/1681612910124_593.gif)
 
-- 垂直方向
+**垂直方向**
 
   - 靠上对齐
-  - 父级无论如何变化，UI 控件依旧保持靠上边距的距离不变，且大小不变
-  - 示意图：
+父级无论如何变化，UI 控件依旧保持靠上边距的距离不变，且大小不变
+示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnywBOu5DiFHLrYPGlO3jpWe.gif)
 
   - 靠下对齐
-  - 父级无论如何变化，UI 控件依旧保持靠下边距的距离不变，且大小不变
-  - 示意图：
+父级无论如何变化，UI 控件依旧保持靠下边距的距离不变，且大小不变
+示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn02FUkSErKNs3HNQY9vwwze.gif)
 
   - 上下对齐
-  - 父级无论如何变化，UI 控件依旧保持靠上边距和靠下边距的距离不变，大小会发生变化
-  - 示意图：
+父级无论如何变化，UI 控件依旧保持靠上边距和靠下边距的距离不变，大小会发生变化
+示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIjAuQSkJWq9jPPHl6ZZO6g.gif)
 
   - 中心对齐
-  - 父级无论如何变化，垂直方向上，UI 控件依旧保持和父级中心位置的相对距离不变，且大小不变
-  - 示意图：
+父级无论如何变化，垂直方向上，UI 控件依旧保持和父级中心位置的相对距离不变，且大小不变
+示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcni8ioTU2U8FdbhczLx6jJge.gif)
 
   - 自适应
-  - 垂直方向上，UI 控件会根据会根据父级的变化进行自适应的变化比例大小，
-  - 示意图：
+垂直方向上，UI 控件会根据会根据父级的变化进行自适应的变化比例大小，
+示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnp9b8MMxFAA3WRDmxWgWEzf.gif)
 
