@@ -97,7 +97,7 @@
   - 许多游戏中会使用鼠标左键作为开火键
   - 而编辑器的默认逻辑是直接点击 UI 的优先级高于按键绑定，也就是说如果摇杆控件在屏幕中占据较大范围，鼠标左键点击在摇杆控件范围内都将优先操控摇杆，而不会触发开火
   - 因此推荐较大范围的摇杆控件不勾选是否被鼠标控制；如果希望 PC 端玩家也能使用鼠标操控此摇杆，则需要勾选是否被鼠标控制
-- 更多关于键鼠按键绑定的介绍请见[按键绑定（针对 PC 端）及预设 UI](https://meta.feishu.cn/wiki/wikcnbLtkdMsqC0yIyekyl22zle)
+- 更多关于键鼠按键绑定的介绍请见[按键绑定（针对 PC 端）及预设 UI](https://docs.ark.online/UI/KeybindsandPremadeUI.html)
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnl6Djl0iO85KMr8UhHvPjCb.gif)
