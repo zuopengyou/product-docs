@@ -178,5 +178,5 @@ export default class UIDefault extends UI.UIBehavior{
 }
 ```
 
-- 示意视频：
-- 工程项目：
+- 示意视频：<video controls src="https://cdn.233xyx.com/1681612440566_544.mp4"></video>
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467995643_906.7z)

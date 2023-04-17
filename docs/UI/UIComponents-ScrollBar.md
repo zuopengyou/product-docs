@@ -141,4 +141,12 @@ export default class UIDefault extends UI.UIBehavior{
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8b9vo8R52rBLLp9iRw0ZLc.gif)
 
-- 工程文件：
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467996644_155.7z)
+
+- 实际制作游戏时，背包/商店等菜单中的每个格子通常不是简单的一个UI控件，而是一个包含多个UI控件的自定义UI控件，建议把一个格子的元素放在一个单独的UI文件内，然后在脚本中动态将这个UI文件实例化为自定义UI控件并挂在容器下
+::: tip
+此时需要注意：请将自定义UI文件-Root对齐方式设为靠左+靠上对齐，并把设计尺寸调整为所需要的大小
+这里相当于实例化后的自定义UI控件的对齐方式，如果这里选择的是左右对齐+上下对齐，或者自定义对齐，自定义UI控件的大小和位置跟随父级自适应变化
+详见产品手册【UI控件的基础属性】中的【UI文件（自定义UI）的整体属性——Root属性】部分
+:::
+![](https://cdn.233xyx.com/1681467996265_583.png)

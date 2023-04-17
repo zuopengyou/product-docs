@@ -97,7 +97,7 @@
   - 许多游戏中会使用鼠标左键作为开火键
   - 而编辑器的默认逻辑是直接点击 UI 的优先级高于按键绑定，也就是说如果摇杆控件在屏幕中占据较大范围，鼠标左键点击在摇杆控件范围内都将优先操控摇杆，而不会触发开火
   - 因此推荐较大范围的摇杆控件不勾选是否被鼠标控制；如果希望 PC 端玩家也能使用鼠标操控此摇杆，则需要勾选是否被鼠标控制
-- 更多关于键鼠按键绑定的介绍请见[按键绑定（针对 PC 端）及预设 UI](https://meta.feishu.cn/wiki/wikcnbLtkdMsqC0yIyekyl22zle)
+- 更多关于键鼠按键绑定的介绍请见[按键绑定（针对 PC 端）及预设 UI](https://docs.ark.online/UI/KeybindsandPremadeUI.html)
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnl6Djl0iO85KMr8UhHvPjCb.gif)
@@ -131,6 +131,7 @@
 - 这里我们想实现按住摇杆射击，同时拖动摇杆还能控制摄像机方向来进行扫射，松开摇杆停止射击：
 
   - 首先我们将摇杆模式设置为【摄像机控制】，然后编写脚本
+  - 推荐灵敏度比例为（0.08,0.06），横向转动比纵向转动的灵敏度稍高一些
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8X9tfyKwc7av8K3mFEilrc.png)
 
@@ -181,6 +182,11 @@ export default class WeaponUI extends WeaponUI_Generate {
 }
 ```
 
+- pc端效果：
+![](https://cdn.233xyx.com/1681614349826_342.gif)
+- 移动端效果：<video controls src="https://cdn.233xyx.com/1681614130168_428.mp4"></video>
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467995344_224.7z)
+
 ### 示例二：使用摇杆制作瞄准后发射的技能按钮
 
 - 这里我们想实现用摇杆控制角色面朝方向来进行瞄准，松开摇杆后发射技能：
@@ -225,6 +231,4 @@ export default class AbilityUIControl extends UI.UIBehavior {
 }
 ```
 
-- 示例效果：
-
-#######
+- 示例效果：<video controls src="https://cdn.233xyx.com/1681467994749_891.mp4"></video>
