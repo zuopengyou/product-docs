@@ -24,6 +24,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
+          { text: '安装需求', link: '/Editor/InstallationRequirements.md' },
           { text: '编辑器设置', link: '/Editor/EditorSettings.md' },
           { text: '编辑器窗口操作', link: '/Editor/EditorWindowsOperation.md' },
           {
