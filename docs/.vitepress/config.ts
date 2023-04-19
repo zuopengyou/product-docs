@@ -76,6 +76,15 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           }
         ]
       },
+       {
+        text: '物理',
+        collapsible: true,
+        collapsed: true,
+        items: [
+          { text: '物理对象', link: '/Physics/PhysicalObject.md' },
+          { text: '推进器', link: '/Physics/Propeller.md' }
+        ]
+      },
       {
         text: '游戏功能对象',
         collapsible: true,
