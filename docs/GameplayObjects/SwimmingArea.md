@@ -1,19 +1,15 @@
 # 游泳区域
 
-| 修改日期           | 修改内容 | 所属编辑器版本 |
-| ------------------ | -------- | -------------- |
-| 2022 年 9 月 28 日 | 文档创建 | 015            |
-|                    |          |                |
+::: tip **阅读本文预计 10 分钟**
+**本文概述了游泳区域的工作机制,展示在编辑器创建并使用游泳区域的过程和游泳区域在游戏中的应用.教程内容包含游泳区域功能对象的属性面板,类对象属性和接口以及一个示例工程.**
+:::
 
-**阅读本文预计 10 分钟**
-
-本文概述了游泳区域的工作机制，展示在编辑器创建并使用游泳区域的过程和游泳区域在游戏中的应用。教程内容包含游泳区域功能对象的属性面板，类对象属性和接口以及一个示例工程。
 
 ## 什么是游泳区域
 
-游泳区域是一个具有一定形状的一块区域，它用于将进入该区域的角色切换为游泳状态。开发者使用该对象在自己想要的区域，实现角色游泳效果。例如场景中的游泳池，河流湖泊和海洋都可以放置游泳区域。
+> 游泳区域是一个具有一定形状的一块区域，它用于将进入该区域的角色切换为游泳状态。开发者使用该对象在自己想要的区域实现角色游泳效果。例如场景中的游泳池，河流湖泊和海洋都可以放置游泳区域。
 
-游泳区域在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是游泳区域，资源 ID 为 SwimmingVolume。
+> 游泳区域在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是游泳区域，资源 ID 为 SwimmingVolume。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnklFus3V8nCK4WifzRBToth.png)
 
@@ -36,9 +32,9 @@
 
 #### 在编辑器工作区中直接使用：
 
-1. **将****游泳区域****拖入场景并自定义它的属性包括父类属性：位移旋转缩放，和****私有属性：流体摩擦力。**
+1. **将****游泳区域****拖入场景并自定义它的属性包括父类属性：位移旋转缩放
 
-流体摩擦力：角色在游泳区域内的摩擦力，影响角色移动的加速度
+流体摩擦力：角色在游泳区域内的摩擦力，影响角色移动的速度
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnr8sJkckAKL6jAXzrLm2APh.png)
 
@@ -102,28 +98,19 @@ export default class VehicleTS extends Core.Script {
 ```
 
 #### 在代码中动态生成
-
-1. 将游泳区域拖入优先加载栏，或者在代码中预加载游泳区域的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn215NoQaq16yYmMniS2xmKf.png)
-
 ```ts
-@Core.Property()
-preloadAssets: string = "12683";
+@Core.Class
+export default class NewScript extends Core.Script {
+
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    protected onStart(): void {
+
+        let pool = Core.GameObject.spawn({
+            guid:"SwimmingVolume",
+            replicates:true,
+            transform:new Type.Transform(Type.Vector.zero,Type.Rotation.zero,new Type.Vector(50,50,10))  //设置游泳区域的位置和大小
+        });
+    }
+}
 ```
-
-1. 动态 spawn 游泳区域
-
-```ts
-// 异步spawn，没有找到资源时会下载后在生成
-Core.GameObject.asyncSpawnGameObject("12683").then((obj) => {
-    let pool = obj as Gameplay.SwimmingVolume;
-})
-```
-
-```ts
-// 普通spawn生成，没有优先加载或预加载资源则无法生成
-let pool = Core.GameObject.spawnGameObject("SwimmingVolume") as Gameplay.SwimmingVolume;
-```
-
 ##
