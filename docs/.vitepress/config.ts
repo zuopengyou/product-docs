@@ -39,6 +39,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             link: '/Editor/ScreenOrientation&ResolutionSimulation.md'
           },
           { text: '游戏发布流程', link: '/Editor/GameReleaseProcess.md' },
+          { text: '接入社交功能', link: '/Editor/UseMGS.md' },
           { text: '角色编辑工具', link: '/Editor/CharacterEditor.md' }
         ]
       },
