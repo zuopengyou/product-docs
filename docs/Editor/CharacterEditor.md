@@ -21,7 +21,7 @@
 
 编辑状态下自定义游戏角色形象 ↓
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWQIZPOr6h8CPnMKtgbSuHb.png)
+![](https://cdn.233xyx.com/1681893764745_724.png)
 
 运行状态下自定义游戏角色形象 ↓（通过 API）
 
@@ -91,13 +91,13 @@
 
 双击工程内容中的角色形象数据文件，或点击右键菜单中的编辑选项。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhGKs8c7tGUJwrkJ9ehB7Gf.png)
+![](https://cdn.233xyx.com/1681892682811_139.png)
 
 **入口4：新建角色形象**
 
-在工具栏的新建中，选择新建角色，或在工程内容中点击创建形象。
+在工程内容的角色列表中，选择新建形象。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmlnEDiZidFdGm2VsaGW9Pg.png)
+![](https://cdn.233xyx.com/1681892682847_714.png)
 
 ### 2.2 角色编辑数据的保存与使用
 
@@ -105,15 +105,15 @@
 
   编辑 PLayer/人形对象/本地角色文件时，显示**保存**选项，点击保存后将编辑数据更新至 PLayer/人形对象/本地角色文件中。
 
-  ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnY2G7UGjIoBGG7fk8ZIdYwb.png)
+  ![](https://cdn.233xyx.com/1681894053196_854.png)
 
 - **另存为**
 
   点击另存为，将角色编辑数据**整体**或**组合**存储在工程内容的角色分类下。
 
-  ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQ6m0UDVD87fQmhe69Wkdaf.png)
+  ![](https://cdn.233xyx.com/1681894211079_867.png)
 
-  ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnpZoO1Pwn2eMaYTunt3Ysjd.png)
+  ![](https://cdn.233xyx.com/1681894053308_691.png)
 
 - **角色编辑数据说明**
 
@@ -152,10 +152,10 @@
 
   点击工程内容-角色分类下**导入角色形象数据**按钮，在资源管理器中选择要导入的文件后将数据导入。（可支持批量导入）
 
-  ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnqTpR1Hi4f7PW8x0RJTfHMc.png)
+  ![](https://cdn.233xyx.com/1681894053273_225.png)
 
 - **导出**
 
   在工程内容-角色分类下选中某个角色形象数据文件，点击右键菜单中**导出**按钮，在资源管理器中选择导出路径后将该数据导出。
 
-  ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWbwlwZrtnkNtF0jtJPqT6d.png)
+  ![](https://cdn.233xyx.com/1681894053239_544.png)
