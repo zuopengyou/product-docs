@@ -30,9 +30,6 @@
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbBBhj8LGZYH0HFvgiiGqlf.png)
 
 - 页签化后即可拖拽窗口至编辑器中各种位置，也可以单独拖拽成一个独立窗口
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9aNnRNUOOwnGJjD4rEP62c.png)
-
 - 若想隐藏选项卡，右键页签，点击“隐藏选项卡”即可
 - 右键同时支持关闭、关闭右方选项卡、关闭其他选项卡操作
 
@@ -874,36 +871,32 @@
 
 ##### 取色器
 
-- 点击图中的颜色区域，打开取色器
+* 点击图中的颜色区域，打开取色器
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMG9ICYB1bfQ8YGaKbDJEag.png)
+![](https://cdn.233xyx.com/1681959311438_968.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnV81F3jybV4B184sTQQflf.png)
+![](https://cdn.233xyx.com/1681959311710_690.png)
 
-- 颜色修改操作
-
-  - 取色器提供 RGBA 和 HSV**两种色彩模型，**一般来说，用户只需要调整 RGBA 或者 HSV 这两种色彩模型中的一个即可
-  - 方式一：修改 RGBA 与 HSV 数值，可按住拖拽或者双击输入
-  - 方式二：直接输入 16 进制颜色码
-  - 方式三：单击或按住拖拽取色盘
-
-    - 除了图中的圆形取色盘，点击下图按钮，可以切换至方形取色盘，用户可以根据自己的习惯进行选择
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn17bdTC3rLzUpghoStZls3f.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0DtJ0hgxYdku9LMuyiUqjc.png)
-
-- 新旧颜色对比
-
-  - 旧颜色是指当前此颜色属性使用的颜色，新颜色是当前取色盘里的颜色，目的是**方便对比**
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnibDZvuGfRFflC9oWltCfhe.png)
-
-- 自定义颜色
-
-  - 用户可以将颜色从右侧“新旧颜色”**拖拽**至取色器顶部进行保存，**方便复用**
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnuV7xN4YFqKjYJnDC7BXr0d.png)
+* 颜色修改操作
+  * 取色器提供RGBA和HSV **两种色彩模型，** 一般来说，用户只需要调整RGBA或者HSV这两种色彩模型中的一个即可
+  * 方式一：修改RGBA与HSV数值，可按住拖拽或者双击输入
+  * 方式二：直接输入16进制颜色码
+  * 方式三：单击或按住拖拽取色盘
+    * 除了图中的圆形取色盘，点击下图按钮，可以切换至方形取色盘，用户可以根据自己的习惯进行选择
+      ![](https://cdn.233xyx.com/1681959311521_635.png)![](https://cdn.233xyx.com/1681959311478_604.png)
+* 新旧颜色对比
+  * 旧颜色是指当前此颜色属性使用的颜色，新颜色是当前取色盘里的颜色，目的是**方便对比**
+    ![](https://cdn.233xyx.com/1681959311561_738.png)
+* 主题相关操作
+  * 主题用以存储常用颜色，相当于颜色的收藏夹，用户可以对主题中的颜色进行新增或者删除，也可以新建多个主题
+  * 点击右侧的下拉按钮，打开主题操作面板
+    ![](https://cdn.233xyx.com/1681959311603_937.png)
+  * 主题颜色的添加：用户可以将颜色从左侧“新旧颜色”**拖拽**至取色器下方颜色存储区域，被拖入的颜色将存储在一个主题中
+    ![](https://cdn.233xyx.com/1681959311358_825.png)![](https://cdn.233xyx.com/1681959311228_858.png)![](https://cdn.233xyx.com/1681959311400_859.png)
+  * 主题颜色的删除：打开主题显示界面，拖拽颜色方块时下方将出现回收站图标，将方块拖入图标中即可删除
+    ![](https://cdn.233xyx.com/1681959311644_181.png)
+  * 主题的新增、删除、重命名与拷贝：选中主题后，可对主题进行一系列操作，操作简单，此处不赘述
+    ![](https://cdn.233xyx.com/1681959311314_180.png)
 
 ##### 吸管
 
