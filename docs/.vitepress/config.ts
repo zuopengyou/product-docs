@@ -39,6 +39,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             link: '/Editor/ScreenOrientation&ResolutionSimulation.md'
           },
           { text: '游戏发布流程', link: '/Editor/GameReleaseProcess.md' },
+          { text: '接入社交功能', link: '/Editor/UseMGS.md' },
           { text: '角色编辑工具', link: '/Editor/CharacterEditor.md' }
         ]
       },
@@ -95,6 +96,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '四轮载具',
             link: '/GameplayObjects/Four-wheeledVehicles.md'
           },
+          { text: '高级轮式载具', link: '/GameplayObjects/AdvancedVehicle.md' },
           { text: '寻路系统', link: '/GameplayObjects/NavigationArea.md' },
           { text: '交互物', link: '/GameplayObjects/Interactors.md' },
           { text: '世界UI', link: '/GameplayObjects/WorldUI.md' },
@@ -164,8 +166,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '美术资源', link: '/Resource/ArtResources.md' },
-          { text: '资源上传工具', link: '/Resource/ResourceUploadTool.md' }
+          { text: '美术资源', link: '/Resource/ArtResources.md' }
         ]
       },
       {
