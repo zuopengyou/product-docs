@@ -59,9 +59,9 @@
 
 ```ts
 //修改某个UI控件或者自定义UI的z系数
-btn.zorder=0
+btn.zOrder=0
 //修改UI对象层级
-this.uiobject.zorder=0
+this.uiObject.zOrder=0
 ```
 
 #### 溢出隐藏
@@ -185,7 +185,7 @@ this.uiobject.zorder=0
 //找到对应的UI文件
 let base = DesignerUI.UIUserWidget.Get(this.uiObject)
 //找到对应的按钮
-let Btn = DesignerUI.UIButton.Get(base.FindChildByPath("Canvas/Button_1"));
+let btn = DesignerUI.UIButton.Get(base.FindChildByPath("Canvas/Button_1"));
 ```
 
 #### 可用性
