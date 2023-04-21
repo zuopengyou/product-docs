@@ -122,8 +122,8 @@ export default class UIDefault extends UI.UIBehavior{
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //找到对应的按钮和容器
-        const newBtn = this.uiWidgetBase.findChildByPath('MWCanvas/StaleButton') as UI.StaleButton
-        const canvas = this.uiWidgetBase.findChildByPath('MWCanvas/ScrollBox/Canvas') as UI.Canvas
+        const newBtn = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as UI.StaleButton
+        const canvas = this.uiWidgetBase.findChildByPath('Canvas/ScrollBox/Canvas') as UI.Canvas
         //点击按钮,创建图片
         newBtn.onPressed.add(()=>{
             //创建图片控件
