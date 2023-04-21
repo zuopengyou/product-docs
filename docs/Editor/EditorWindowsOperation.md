@@ -1,7 +1,8 @@
 # 主编辑器各窗口操作
 
-::: tip **本文涉及到的东西较多，建议用户分模块查看**
+::: tip 阅读本文预计 30 分钟。
 
+**本文涉及到的东西较多，建议用户分模块查看**
 **本文概述了编辑器各个窗口的常规操作**
 
 :::
@@ -96,7 +97,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoJoHhR0uznpiilaTnEPYTG.png)
 
-- 单击网格图标，可选择是否启用此功能；若不启用，则按**系统默认最小单位**执行操作命令**（该单位远小于下拉框中提供的单位）**
+- 单击网格图标，可选择是否启用此功能；若不启用，则按 **系统默认最小单位** 执行操作命令 **该单位远小于下拉框中提供的单位**
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrJMFKqfc4dCFH3Fct0Kzjc.png)
 
@@ -105,12 +106,10 @@
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoOfKI8AMvNlaJDtd3MHLPd.png)
 
 - 点击该图标，可切换主视口所使用的世界/本地轴向
-- 世界轴向：进行移动和旋转时，始终按照世界坐标进行，不随着物体的旋转而变化
-- 本地轴向：进行移动和旋转时，以所选物体为参考系进行
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnDel2XKjXTxXaWmrDEJgTdE.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8N8sYUjN1K8ssV8gXojpQb.png)
+|轴向|世界轴向|本地轴向|
+|说明|进行移动和旋转时，始终按照世界坐标进行，不随着物体的旋转而变化||
+|截图|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnDel2XKjXTxXaWmrDEJgTdE.png)|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8N8sYUjN1K8ssV8gXojpQb.png)|
 
 ##### 新建
 
@@ -131,7 +130,7 @@
 ![](https://cdn.233xyx.com/1681957472801_357.png)
 
 - 运行时会按照运行设置的条件运行
-- 端口：运行时的端口号，同一端口的玩家将进入服务器分配的同一空间中**（目前本地运行暂不支持多端口运行）**
+- 端口：运行时的端口号，同一端口的玩家将进入服务器分配的同一空间中 **目前本地运行暂不支持多端口运行**
 - 单机模式：勾选该模式后，玩家数量只能为 1，无法与他人联机
 - 玩家数量：**非单机模式下可选**，决定本地运行时的玩家人数
 - 起始位置：可选择是以场景中默认出生点运行（F5）还是以当前实际摄像机位置运行（F6）
@@ -148,7 +147,7 @@
 
 ![](https://cdn.233xyx.com/1681957693747_142.png)
 
-- 聊天区域可视：**在编辑阶段（非发布后）**是否在主视口中隐藏聊天区域（聊天区域为平台提供的通用聊天功能，在游戏发布至平台后会默认生成）
+- 聊天区域可视：**在编辑阶段**（非发布后）是否在主视口中隐藏聊天区域（聊天区域为平台提供的通用聊天功能，在游戏发布至平台后会默认生成）
 
 ![](https://cdn.233xyx.com/1681957783505_056.png)
 
@@ -231,31 +230,23 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSM55P5JTEM2LBWbCUcRdDg.png)
 
-```ts
 - 对齐轴：按世界/本地坐标进行对齐，坐标轴可进行多选
-```
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4dNlzQJU3DieDAWfHl50Wb.png)
 
-```ts
 - 参考系：
-```
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnPQO1mQrtDkQ0753ZUagMfq.png)
 
-```ts
   - 选择范围：按照所选对象形成的包围盒进行对齐
 
   - 活跃对象：默认为最后一个选择的对象，以此对象为参考系
 
     - 勾选此项后，可通过左键修改活跃对象，活跃对象的边框颜色为橙色
-```
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYi28ez5mTHS0z0XNLxsRhd.png)
 
-```ts
 - 对齐：当所有选项均被选择后，对齐按钮高亮，鼠标hover至对齐工具面板中，主视口显示对齐轴/面/点
-```
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJbWcx8pQ4XwprzkBR8QPzO.png)
 
@@ -598,9 +589,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwQqa5KxwKhoQrLJVKsjFcf.png)
 
-```ts
 - **修改后**，工程内容预制体界面出现保存按钮
-```
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZ59MhxS37NjatpO7cIfOVf.png)
 
@@ -826,11 +815,9 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnRGK3veGoaz4mkYJnT4HW9d.png)
 
-```ts
 - 在预制体**进入实例状态后**，该选项出现
 
 - 将此在对象管理器中修改过的预制体另存为一个新预制体，工程内容将新增此预制体，对象管理器中原预制体也同步更新为此新预制体
-```
 
 #### 属性面板
 
