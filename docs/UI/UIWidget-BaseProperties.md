@@ -183,9 +183,9 @@ this.uiobject.zorder=0
 
 ```ts
 //找到对应的UI文件
-let base = MWDesignerUI.MWUIUserWidget.Get(this.uiObject)
+let base = DesignerUI.UIUserWidget.Get(this.uiObject)
 //找到对应的按钮
-let Btn = MWDesignerUI.MWUIButton.Get(base.FindChildByPath("MWCanvas/Button_1"));
+let Btn = DesignerUI.UIButton.Get(base.FindChildByPath("Canvas/Button_1"));
 ```
 
 #### 可用性
