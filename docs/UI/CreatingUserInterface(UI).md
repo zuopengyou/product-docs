@@ -93,20 +93,20 @@
 ```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior {
-    Character: Gameplay.Character;
+    character: Gameplay.Character;
 
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
         //找到对应的跳跃按钮
-        const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
+        const jumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
         //点击跳跃按钮,异步获取人物后执行跳跃
-        JumpBtn.onPressed.add(()=>{
+        jumpBtn.onPressed.add(()=>{
                 Gameplay.asyncGetCurrentPlayer().then((player) => {
-                    this.Character = player.character;
+                    this.character = player.character;
                     //角色执行跳跃功能
-                    this.Character.jump();
+                    this.character.jump();
                 });
         })  
     }
@@ -123,15 +123,15 @@ export default class UIDefault extends UI.UIBehavior {
 //比如在UI脚本中创建一个自定义UI控件，并挂在UI对象的某个容器下
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior {
-    Character: Gameplay.Character;
+    character: Gameplay.Character;
     
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() {
         //通过路径找到按钮和容器
         const canvas_1=this.uiWidgetBase.findChildByPath('RootCanvas') as UI.Canvas
-        const Btn = (base.findChildByPath("RootCanvas/Button")) as UI.Button; 
+        const btn = (base.findChildByPath("RootCanvas/Button")) as UI.Button; 
         //点击此按钮后打开某个自定义UI
-        Btn.onPressed.add(() => {
+        btn.onPressed.add(() => {
             let uiprefab1= UI.createUIByName('/NewUI_1.ui') as UI.UserWidget
             canvas_1.addChild(uiprefab1)
         })
