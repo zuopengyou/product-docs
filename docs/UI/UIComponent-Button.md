@@ -124,8 +124,8 @@ export default class UIDefault extends UI.UIBehavior{
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //找到两个性别按钮
-        const button_girl = this.uiWidgetBase.findChildByPath('MWCanvas/button_girl') as UI.Button;
-        const button_boy = this.uiWidgetBase.findChildByPath('MWCanvas/button_boy') as UI.Button;
+        const button_girl = this.uiWidgetBase.findChildByPath('Canvas/button_girl') as UI.Button;
+        const button_boy = this.uiWidgetBase.findChildByPath('Canvas/button_boy') as UI.Button;
         
         //点击性别女按钮时，是否为男的条件就为否，并且执行一遍角色性别选择的方法
         button_girl.onPressed.add(() => {
