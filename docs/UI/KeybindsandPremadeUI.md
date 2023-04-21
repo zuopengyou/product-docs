@@ -35,14 +35,14 @@
 **脚本示例：**
 
 ```ts
-const JumpBtn = this.uiWidgetBase.findChildByPath('MWCanvas/MWButton_Jump') as UI.Button
+const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.Button
 //绑定按键
 Util.InputUtil.bindButton(Type.Keys.Up,JumpBtn)
 //解绑按键
 Util.InputUtil.unbindButton(Type.Keys.Up)
 ```
 
-- 为了满足开发者针对 PC 游戏端的不同需求，比如希望某个摄像机滑动区/摇杆是否可以被鼠标点击，因此在 MWUIVirtualJoystickPanel 和 MWUITouchPad 类中提供了是否被鼠标控制的接口，编辑器内也可以在摄像机滑动区/摇杆属性面板中勾选此属性
+- 为了满足开发者针对 PC 游戏端的不同需求，比如希望某个摄像机滑动区/摇杆是否可以被鼠标点击，因此在 VirtualJoystickPanel 和 TouchPad 类中提供了是否被鼠标控制的接口，编辑器内也可以在摄像机滑动区/摇杆属性面板中勾选此属性
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGgX88e45wIi9fPbNj6s2Sc.png)
 
@@ -51,8 +51,8 @@ Util.InputUtil.unbindButton(Type.Keys.Up)
 **脚本示例：**
 
 ```ts
-let touchpad=this.uiWidgetBase.findChildByPath('MWCanvas/MWUITouchPad_1') as UI.TouchPad
-let joystick=this.uiWidgetBase.findChildByPath('MWCanvas/MWUIVirtualJoystickPanel_1') as UI.VirtualJoystickPanel
+let touchpad=this.uiWidgetBase.findChildByPath('Canvas/UITouchPad_1') as UI.TouchPad
+let joystick=this.uiWidgetBase.findChildByPath('Canvas/UIVirtualJoystickPanel_1') as UI.VirtualJoystickPanel
 //设置摇杆和摄像机滑动区可以被鼠标点击
 touchpad.controlByMouseEnable(true)
 joystick.controlByMouseEnable(true)
