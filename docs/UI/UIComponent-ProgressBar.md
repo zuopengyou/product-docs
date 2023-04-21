@@ -161,7 +161,7 @@ export default class UIDefault extends UI.UIBehavior{
         this.canUpdate = false;
         
          //找到进度条
-         const progressbar = this.uiWidgetBase.findChildByPath('MWCanvas/ProgressBar') as UI.ProgressBar
+         const progressbar = this.uiWidgetBase.findChildByPath('Canvas/ProgressBar') as UI.ProgressBar
          //生成一个音效并播放
          let sound1 = Core.GameObject.spawnGameObject("4165") as Gameplay.Sound
          sound1.loop = true
