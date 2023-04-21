@@ -326,8 +326,8 @@ export default class activity extends activity_generate {
           this.canUpdate = false;
   
           //找到对应的按钮和容器
-          const newBtn = this.uiWidgetBase.findChildByPath('MWCanvas/StaleButton') as UI.StaleButton
-          const canvas = this.uiWidgetBase.findChildByPath('MWCanvas/Canvas') as UI.Canvas
+          const newBtn = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as UI.StaleButton
+          const canvas = this.uiWidgetBase.findChildByPath('Canvas/Canvas') as UI.Canvas
   
           //点击按钮,创建UI
           newBtn.onPressed.add(()=>{
