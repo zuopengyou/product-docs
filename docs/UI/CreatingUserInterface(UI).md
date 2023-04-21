@@ -100,7 +100,7 @@ export default class UIDefault extends UI.UIBehavior {
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
         //找到对应的跳跃按钮
-        const JumpBtn = this.uiWidgetBase.findChildByPath('MWCanvas/MWButton_Jump') as UI.StaleButton
+        const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
         //点击跳跃按钮,异步获取人物后执行跳跃
         JumpBtn.onPressed.add(()=>{
                 Gameplay.asyncGetCurrentPlayer().then((player) => {
