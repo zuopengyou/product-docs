@@ -184,7 +184,7 @@ export default class UIDefault extends UI.UIBehavior{
         //设置能否每帧触发onUpdate
         this.canUpdate = true;
         //找到对应的跳跃按钮
-        const JumpBtn = this.uiWidgetBase.findChildByPath('MWCanvas/MWButton_Jump') as UI.StaleButton
+        const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
         //点击跳跃按钮,异步获取人物后执行跳跃
         JumpBtn.onPressed.add(()=>{
             if (this.Character) {
@@ -204,7 +204,7 @@ export default class UIDefault extends UI.UIBehavior{
     * dt 两帧调用的时间差，毫秒
     */
     protected onUpdate(dt :number) {
-        const TextBlock = this.uiWidgetBase.findChildByPath('MWCanvas/TextBlock_2') as UI.TextBlock
+        const TextBlock = this.uiWidgetBase.findChildByPath('Canvas/TextBlock_2') as UI.TextBlock
     // 找到当前玩家角色
     Gameplay.asyncGetCurrentPlayer().then((player) => {
         this.Character = player.character;
