@@ -207,8 +207,8 @@ export default class UIDefault extends UI.UIBehavior {
         let cd_value = 5000;
 
         //找到对应的遮罩按钮和文本
-        const fanShape_0 = this.uiWidgetBase.findChildByPath('MWCanvas/MaskButton') as UI.MaskButton
-        const text_0 = this.uiWidgetBase.findChildByPath('MWCanvas/TextBlock_1') as UI.TextBlock
+        const fanShape_0 = this.uiWidgetBase.findChildByPath('Canvas/MaskButton') as UI.MaskButton
+        const text_0 = this.uiWidgetBase.findChildByPath('Canvas/TextBlock_1') as UI.TextBlock
         //需要先设置文本不可见
         text_0.visibility=1
         //创建变量记录剩余时间
