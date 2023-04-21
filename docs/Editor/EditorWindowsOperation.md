@@ -30,11 +30,6 @@
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbBBhj8LGZYH0HFvgiiGqlf.png)
 
 - 页签化后即可拖拽窗口至编辑器中各种位置，也可以单独拖拽成一个独立窗口
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn24NpEKA3rYfR8GPERSbrqh.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9aNnRNUOOwnGJjD4rEP62c.png)
-
 - 若想隐藏选项卡，右键页签，点击“隐藏选项卡”即可
 - 右键同时支持关闭、关闭右方选项卡、关闭其他选项卡操作
 
@@ -68,12 +63,13 @@
 
 ##### 帮助
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQC9c93IsAdy62Wz2GdInBc.png)
+![](https://cdn.233xyx.com/1681957412381_177.png)
 
 - 更新公告：查看此版本的更新内容
 - API 文档：查看各个 API 的使用方法
 - 官方教程：查看官方提供的各方面教程
 - 产品手册：查看编辑器各个模块、名词的作用和用法
+- 论坛：查看开发者提出的各种疑问与解答
 
 ##### 撤销&恢复
 
@@ -87,7 +83,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnJqqEH7Al2V9afJFtWXg2W.png)
 
-- 见[绘制模式](https://meta.feishu.cn/wiki/wikcnP6XaIl2ZZU8EXIYsiaBvDg)文档
+- 见[绘制模式](https://docs.ark.online/Editor/DrawMode.html)文档
 
 ##### transform 工具
 
@@ -130,7 +126,7 @@
 - 点击运行左侧图标，在本地运行游戏
 - 点击运行右侧下拉图标，打开运行设置界面
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnPRbXBV1faehYwg0X5gcETb.png)
+![](https://cdn.233xyx.com/1681957472801_357.png)
 
 - 运行时会按照运行设置的条件运行
 - 端口：运行时的端口号，同一端口的玩家将进入服务器分配的同一空间中**（目前本地运行暂不支持多端口运行）**
@@ -140,19 +136,19 @@
 
 ##### 显示
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcna9Cy989owIZF00JHHBh8If.png)
+![](https://cdn.233xyx.com/1681956998480_447.png)
 
 - 寻路区域可视：在主视口中是否可以看见“寻路区域”逻辑对象显示的具体**绿色**区域
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnUnypxYaOys7kC60OuyNlhg.png)
+![](https://cdn.233xyx.com/1681957927650_295.png)
 
 - 隐藏图标和线框：在主视口中是否可以看见图标和线框；快捷键：V
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIKorGRnET5nZuMKNXhJtWf.png)
+![](https://cdn.233xyx.com/1681957693747_142.png)
 
 - 聊天区域可视：**在编辑阶段（非发布后）**是否在主视口中隐藏聊天区域（聊天区域为平台提供的通用聊天功能，在游戏发布至平台后会默认生成）
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnlQcb0p8rMBGhEcxGqd9Whc.png)
+![](https://cdn.233xyx.com/1681957783505_056.png)
 
 ##### 分辨率
 
@@ -312,7 +308,7 @@
 4. 支持通过方向键切换预览资源
 5. 对于音效、动画等可以播放的资源，播放入口如下图所示
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxETZuTEGC8tGT4rUNPZ3Rd.png)
+![](https://cdn.233xyx.com/1681957109950_611.png)
 
 - 每次进入工程时，会花费几秒的时间从服务器拉取资源的相关信息，用以资源的展示、筛选和搜索操作
 
@@ -792,7 +788,7 @@
   - 仅在单选时可用，多选时不可用
   - 在该对象的**子级**创建一个指定的功能对象，方便对该对象处理游戏逻辑
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnldsx96zCpLnhXiMkUXhfKe.png)
+![](https://cdn.233xyx.com/1681957211590_811.png)
 
 - 对象聚焦：功能与主视口相同
 - 定位来源
@@ -875,36 +871,32 @@
 
 ##### 取色器
 
-- 点击图中的颜色区域，打开取色器
+* 点击图中的颜色区域，打开取色器
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMG9ICYB1bfQ8YGaKbDJEag.png)
+![](https://cdn.233xyx.com/1681959311438_968.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnV81F3jybV4B184sTQQflf.png)
+![](https://cdn.233xyx.com/1681959311710_690.png)
 
-- 颜色修改操作
-
-  - 取色器提供 RGBA 和 HSV**两种色彩模型，**一般来说，用户只需要调整 RGBA 或者 HSV 这两种色彩模型中的一个即可
-  - 方式一：修改 RGBA 与 HSV 数值，可按住拖拽或者双击输入
-  - 方式二：直接输入 16 进制颜色码
-  - 方式三：单击或按住拖拽取色盘
-
-    - 除了图中的圆形取色盘，点击下图按钮，可以切换至方形取色盘，用户可以根据自己的习惯进行选择
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn17bdTC3rLzUpghoStZls3f.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0DtJ0hgxYdku9LMuyiUqjc.png)
-
-- 新旧颜色对比
-
-  - 旧颜色是指当前此颜色属性使用的颜色，新颜色是当前取色盘里的颜色，目的是**方便对比**
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnibDZvuGfRFflC9oWltCfhe.png)
-
-- 自定义颜色
-
-  - 用户可以将颜色从右侧“新旧颜色”**拖拽**至取色器顶部进行保存，**方便复用**
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnuV7xN4YFqKjYJnDC7BXr0d.png)
+* 颜色修改操作
+  * 取色器提供RGBA和HSV **两种色彩模型，** 一般来说，用户只需要调整RGBA或者HSV这两种色彩模型中的一个即可
+  * 方式一：修改RGBA与HSV数值，可按住拖拽或者双击输入
+  * 方式二：直接输入16进制颜色码
+  * 方式三：单击或按住拖拽取色盘
+    * 除了图中的圆形取色盘，点击下图按钮，可以切换至方形取色盘，用户可以根据自己的习惯进行选择
+      ![](https://cdn.233xyx.com/1681959311521_635.png)![](https://cdn.233xyx.com/1681959311478_604.png)
+* 新旧颜色对比
+  * 旧颜色是指当前此颜色属性使用的颜色，新颜色是当前取色盘里的颜色，目的是**方便对比**
+    ![](https://cdn.233xyx.com/1681959311561_738.png)
+* 主题相关操作
+  * 主题用以存储常用颜色，相当于颜色的收藏夹，用户可以对主题中的颜色进行新增或者删除，也可以新建多个主题
+  * 点击右侧的下拉按钮，打开主题操作面板
+    ![](https://cdn.233xyx.com/1681959311603_937.png)
+  * 主题颜色的添加：用户可以将颜色从左侧“新旧颜色”**拖拽**至取色器下方颜色存储区域，被拖入的颜色将存储在一个主题中
+    ![](https://cdn.233xyx.com/1681959311358_825.png)![](https://cdn.233xyx.com/1681959311228_858.png)![](https://cdn.233xyx.com/1681959311400_859.png)
+  * 主题颜色的删除：打开主题显示界面，拖拽颜色方块时下方将出现回收站图标，将方块拖入图标中即可删除
+    ![](https://cdn.233xyx.com/1681959311644_181.png)
+  * 主题的新增、删除、重命名与拷贝：选中主题后，可对主题进行一系列操作，操作简单，此处不赘述
+    ![](https://cdn.233xyx.com/1681959311314_180.png)
 
 ##### 吸管
 
@@ -912,7 +904,7 @@
 
 - 部分对象存在吸管控件，常见的如物理约束，也可以在脚本中定义吸管
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxSmeVvd1z8u3OvsFLjna5e.png)
+![](https://cdn.233xyx.com/1681957350504_938.png)
 
 - 操作方式：单击图中吸管图标后，在主视口点击对象即可；同时还可以直接将对象从对象管理器中拖拽入框中
 - 对于已吸取的对象支持定位功能，方便找到所吸取的对象在对象管理器中的位置
