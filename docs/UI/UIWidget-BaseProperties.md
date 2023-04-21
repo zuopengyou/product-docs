@@ -47,7 +47,9 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnsBYkYpkrsluOy3GWoPU5cf.gif)
 
+::: tip
 这里请注意区分 UI 控件 Z 系数和 UI 对象层级的区别：UI 控件 Z 系数是用于修改某个 UI 对象中的某个控件或者自定义 UI 控件的层级，而 UI 对象层级是用于修改 UI 对象的整体层级，UI 对象层级的优先级高于 UI 控件 Z 系数
+:::
 
 - 两个处于不同 UI 对象中的 UI 控件，UI 对象层级更高的 UI 控件渲染在上层，与 UI 控件 Z 系数无关
 - 两个处于同一 UI 对象内的 UI 控件，UI 控件 Z 系数更大的控件渲染在上层
@@ -182,10 +184,8 @@ this.uiObject.zOrder=0
 - UI 控件的名称，方便用户在脚本中进行调用。
 
 ```ts
-//找到对应的UI文件
-let base = DesignerUI.UIUserWidget.Get(this.uiObject)
 //找到对应的按钮
-let btn = DesignerUI.UIButton.Get(base.FindChildByPath("Canvas/Button_1"));
+let btn = this.uiWidgetBase.findChildByPath('Canvas/btn') as UI.Button
 ```
 
 #### 可用性
