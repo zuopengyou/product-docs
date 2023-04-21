@@ -104,7 +104,7 @@
 //找到对应的UI文件
         const base = (this.uiObject) as UI.UserWidget;
         //找到容器
-        const canvas = (base.findChildByPath("MWCanvas")) as UI.Canvas; 
+        const canvas = (base.findChildByPath("Canvas")) as UI.Canvas; 
         //新建一个图片控件
         let image= UI.Image.newObject(canvas,"NewUI_1") as UI.Image
         //设置图片的位置、大小、资源
