@@ -77,6 +77,7 @@ this.uiobject.zorder=0
 
   - 例如文本控件开启自动大小将还原至文字内容的大小，图片控件开启自动大小将还原至图片-图片大小
   - 自动大小不能与对齐-自适应/上下对齐/左右对齐同时使用，如果启用自适应等对齐方式，将不能使用自动大小
+  - 为了避免冲突，对于文本控件，仅在水平显示=裁剪且不开启自适应文本框的情况下允许开启此选项
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcni3iz3T97mbMsdg5XsA3obj.gif)
 
