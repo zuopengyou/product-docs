@@ -94,6 +94,10 @@ IntegratedMoverOg.enable = true;            //启动运动器，运行工程查�
 通过设置运动器的[延迟启动时]、[停顿时间]属性，可以制作出复杂的组合运动效果。
 <video controls src="https://cdn.233xyx.com/athena/online/b91753572ec24831a04df3cde4ffb018.mp4"></video>
 
+::: warning **注意事项**
+**使用时只要将运动器放置在需要运动的对象子级即可，将运动对象开启物理模拟时，会优先计算物理模拟，出现运动效果异常情况。
+:::
+
 
 ### 运动器回调事件使用方法
 
@@ -144,3 +148,6 @@ setTimeout(() => {
 在[本地资源库]-[预制体]-[机关]分类资源中，提供了部分运动器机关资源，可以直接拖拽到场景中使用。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0ehbljCTDTyZ9xtueRiFzb.png)
+
+
+
