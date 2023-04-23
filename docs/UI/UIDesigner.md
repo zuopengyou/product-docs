@@ -9,7 +9,7 @@
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFKS3vKAnigQFdYaUYFc2td.png)
 
 
-#### 分布
+### 分布
 
 **分布**是将已选的所有对象在水平/垂直方向上均匀排布
 
@@ -25,7 +25,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnsblqwIES7qiysQjKgV0idb.gif)
 
-#### 对齐
+### 对齐
 
 **对齐**是将已选的多个对象的边界点/中心点，对齐到第一个选择的对象的某边缘线/中心线，不受各自的父级容器的影响
 
@@ -41,7 +41,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1P8ettM6iemWjizcsH5JLh.gif)
 
-#### 居置
+### 居置
 
 **居置**是将已选的多个对象的边界点/中心点，对齐到各自直属父级的某边缘线/中心线，与选取顺序无关
 
@@ -63,8 +63,8 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntdLzd6m4tERkCs3HblEdYd.png)
 
-- 调整 UIRoot 的尺寸大小
-- 调整 UIRoot 为横向/纵向
+- 调整此UI文件的设计尺寸大小
+- 调整此UI文件的设计尺寸大小为横向/纵向
 - 是否启用对齐到整数网格
 - 使用键盘方向键微调的单位大小
 

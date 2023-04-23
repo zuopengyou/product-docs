@@ -177,23 +177,23 @@
 ```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
-    Character: Gameplay.Character;
+    character: Gameplay.Character;
     speed:number
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //设置能否每帧触发onUpdate
         this.canUpdate = true;
         //找到对应的跳跃按钮
-        const JumpBtn = this.uiWidgetBase.findChildByPath('MWCanvas/MWButton_Jump') as UI.StaleButton
+        const jumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
         //点击跳跃按钮,异步获取人物后执行跳跃
-        JumpBtn.onPressed.add(()=>{
-            if (this.Character) {
-                this.Character.jump();
+        jumpBtn.onPressed.add(()=>{
+            if (this.character) {
+                this.character.jump();
             } else {
                 Gameplay.asyncGetCurrentPlayer().then((player) => {
-                    this.Character = player.character;
+                    this.character = player.character;
                     //角色执行跳跃功能
-                    this.Character.jump();
+                    this.character.jump();
                 });
             }
         })
@@ -204,11 +204,11 @@ export default class UIDefault extends UI.UIBehavior{
     * dt 两帧调用的时间差，毫秒
     */
     protected onUpdate(dt :number) {
-        const TextBlock = this.uiWidgetBase.findChildByPath('MWCanvas/TextBlock_2') as UI.TextBlock
+        const textBlock = this.uiWidgetBase.findChildByPath('Canvas/TextBlock_2') as UI.TextBlock
     // 找到当前玩家角色
     Gameplay.asyncGetCurrentPlayer().then((player) => {
-        this.Character = player.character;
-        TextBlock.text= this.Character.velocity.x+""
+        this.character = player.character;
+        textBlock.text= this.Character.velocity.x+""
     });
     }   
 }
@@ -218,4 +218,4 @@ export default class UIDefault extends UI.UIBehavior{
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5HapDZ4FTzKt0PvM8jxXjf.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467997418_661.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334747_525.7z)

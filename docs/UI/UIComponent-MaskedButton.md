@@ -196,7 +196,6 @@
 ```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior {
-    Character: Gameplay.Character;
 
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
@@ -207,8 +206,8 @@ export default class UIDefault extends UI.UIBehavior {
         let cd_value = 5000;
 
         //找到对应的遮罩按钮和文本
-        const fanShape_0 = this.uiWidgetBase.findChildByPath('MWCanvas/MaskButton') as UI.MaskButton
-        const text_0 = this.uiWidgetBase.findChildByPath('MWCanvas/TextBlock_1') as UI.TextBlock
+        const fanShape_0 = this.uiWidgetBase.findChildByPath('Canvas/MaskButton') as UI.MaskButton
+        const text_0 = this.uiWidgetBase.findChildByPath('Canvas/TextBlock_1') as UI.TextBlock
         //需要先设置文本不可见
         text_0.visibility=1
         //创建变量记录剩余时间
@@ -265,4 +264,4 @@ export default class UIDefault extends UI.UIBehavior {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9AFTdJsFiX5F90IIpErAkS.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467995959_969.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334554_722.7z)

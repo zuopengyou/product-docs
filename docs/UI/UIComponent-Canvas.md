@@ -124,7 +124,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6lenGSS6jci4DuzdnJlupb.png)
 
-##### 自适应规则
+#### 自适应规则
 
 - 水平适应
 
@@ -146,7 +146,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncA6nH9CpQgflWEkT4XT8Qh.gif)
 
-##### 边缘间距
+#### 边缘间距
 
 - 左边距
 
@@ -163,8 +163,6 @@
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjJSMrtjfu5HR29qyaRvPgc.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnlHQpKpDRl69wymJ0x5g0Dd.png)
 
 ## 如何使用容器？
 
@@ -302,7 +300,7 @@ export default class activity extends activity_generate {
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWCPp8wXO1mVZ86z3Wc53cb.gif)
 
 - 工程项目：
-  [点击下载](https://cdn.233xyx.com/1681462157665_532.7z)
+  [点击下载](https://cdn.233xyx.com/1682231334664_593.7z)
 
 ### 示例三：制作动态增加/移除自定义UI控件的自动布局面板
 
@@ -326,8 +324,8 @@ export default class activity extends activity_generate {
           this.canUpdate = false;
   
           //找到对应的按钮和容器
-          const newBtn = this.uiWidgetBase.findChildByPath('MWCanvas/StaleButton') as UI.StaleButton
-          const canvas = this.uiWidgetBase.findChildByPath('MWCanvas/Canvas') as UI.Canvas
+          const newBtn = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as UI.StaleButton
+          const canvas = this.uiWidgetBase.findChildByPath('Canvas/Canvas') as UI.Canvas
   
           //点击按钮,创建UI
           newBtn.onPressed.add(()=>{
@@ -397,4 +395,4 @@ export default class activity extends activity_generate {
 ![](https://cdn.233xyx.com/1681462157060_878.gif)
 
 * 工程项目：
-  [点击下载](https://cdn.233xyx.com/1681462156074_057.7z)
+  [点击下载](https://cdn.233xyx.com/1682231334857_402.7z)

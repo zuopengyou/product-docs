@@ -36,27 +36,26 @@
 ```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
-    Character: Gameplay.Character;
 
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
         
-        let Plus = this.uiWidgetBase.findChildByPath('MWCanvas/StaleButton') as UI.StaleButton
-        let Inc = this.uiWidgetBase.findChildByPath('MWCanvas/StaleButton_1') as UI.StaleButton
-        let TouchPad = this.uiWidgetBase.findChildByPath('MWCanvas/TouchPad') as UI.TouchPad
-        let text=this.uiWidgetBase.findChildByPath('MWCanvas/TextBlock') as UI.TextBlock
+        let plus = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as UI.StaleButton
+        let inc = this.uiWidgetBase.findChildByPath('Canvas/StaleButton_1') as UI.StaleButton
+        let touchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as UI.TouchPad
+        let text=this.uiWidgetBase.findChildByPath('Canvas/TextBlock') as UI.TextBlock
     
-        Plus.onClicked.add(()=>{ 
-            TouchPad.inputScale=(new Type.Vector2(1,1))
-            let num =TouchPad.inputScale
+        plus.onClicked.add(()=>{ 
+            touchPad.inputScale=(new Type.Vector2(1,1))
+            let num =touchPad.inputScale
             text.text=(num.toString())
         })
     
-        Inc.onClicked.add(()=>{ 
-            TouchPad.inputScale=(new Type.Vector2(0.2,0.2))
-            let num =TouchPad.inputScale
+        inc.onClicked.add(()=>{ 
+            touchPad.inputScale=(new Type.Vector2(0.2,0.2))
+            let num =touchPad.inputScale
             text.text=(num.toString())
         })  
     }
@@ -76,21 +75,21 @@ export default class UIDefault extends UI.UIBehavior{
   - 调整可用性为不可用
 
 ```ts
-let TouchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as UI.TouchPad
+let touchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as UI.TouchPad
 //调整摄像机滑动区的可用性为不可用
-TouchPad.isEnabled=false
+touchPad.isEnabled=false
 //调整摄像机滑动区的可用性为可用
-TouchPad.isEnabled=true
+touchPad.isEnabled=true
 ```
 
 - 调整可见性为隐藏/折叠/可见不可交互也都可以使摄像机滑动区不可使用
 
 ```ts
-let touchpad=MWGameUI.MWUITouchPad.get(base.findChildByPath("MWCanvas/MWUITouchPad_1"));
+let touchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as UI.TouchPad
 //调整摄像机滑动区的可见性为折叠，1234这四种可见性都会使摄像机滑动区不可使用
-TouchPad.visibility=1
+touchPad.visibility=1
 //调整摄像机滑动区的可见性为可见，即可以使用
-TouchPad.visibility=0
+touchPad.visibility=0
 ```
 
 - 在属性面板中也可以调整摄像机滑动区的可见性和可用性

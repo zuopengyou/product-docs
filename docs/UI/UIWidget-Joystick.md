@@ -208,7 +208,7 @@ export default class AbilityUIControl extends UI.UIBehavior {
 
     InitEvents() {
         //找到对应的摇杆
-        let _Joystick = this.uiWidgetBase.findChildByPath('MWCanvas/VirtualJoystickPanel') as UI.VirtualJoystickPanel
+        let _Joystick = this.uiWidgetBase.findChildByPath('Canvas/VirtualJoystickPanel') as UI.VirtualJoystickPanel
         //按下摇杆后调整FOV和灵敏度
         _Joystick.onJoyStickDown.add(() => {
             Gameplay.getCurrentPlayer().character.cameraSystem.cameraFOV=70

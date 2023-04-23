@@ -98,7 +98,7 @@
 
 ## 滚动框属性-样式设置
 
-- 这里修改的是滚动条的图片及样式。图片属性请见 [UI 控件-图片](https://meta.feishu.cn/wiki/wikcnFg4z5zLX0puYIncTBIJGtf)
+- 这里修改的是滚动条的图片及样式。图片属性请见 [UI 控件-图片](https://docs.ark.online/UI/UIComponent-Image.html)
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4QjLI6cVQzLHcMgsy9UHAf.png)
 
@@ -117,13 +117,12 @@
 ```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
-    Character: Gameplay.Character;
 
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //找到对应的按钮和容器
-        const newBtn = this.uiWidgetBase.findChildByPath('MWCanvas/StaleButton') as UI.StaleButton
-        const canvas = this.uiWidgetBase.findChildByPath('MWCanvas/ScrollBox/Canvas') as UI.Canvas
+        const newBtn = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as UI.StaleButton
+        const canvas = this.uiWidgetBase.findChildByPath('Canvas/ScrollBox/Canvas') as UI.Canvas
         //点击按钮,创建图片
         newBtn.onPressed.add(()=>{
             //创建图片控件
@@ -141,7 +140,7 @@ export default class UIDefault extends UI.UIBehavior{
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8b9vo8R52rBLLp9iRw0ZLc.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467996644_155.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334520_164.7z)
 
 - 实际制作游戏时，背包/商店等菜单中的每个格子通常不是简单的一个UI控件，而是一个包含多个UI控件的自定义UI控件，建议把一个格子的元素放在一个单独的UI文件内，然后在脚本中动态将这个UI文件实例化为自定义UI控件并挂在容器下
 ::: tip
