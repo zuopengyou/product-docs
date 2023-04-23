@@ -124,7 +124,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6lenGSS6jci4DuzdnJlupb.png)
 
-##### 自适应规则
+#### 自适应规则
 
 - 水平适应
 
@@ -146,7 +146,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncA6nH9CpQgflWEkT4XT8Qh.gif)
 
-##### 边缘间距
+#### 边缘间距
 
 - 左边距
 
@@ -163,8 +163,6 @@
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjJSMrtjfu5HR29qyaRvPgc.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnlHQpKpDRl69wymJ0x5g0Dd.png)
 
 ## 如何使用容器？
 
