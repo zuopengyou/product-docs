@@ -98,7 +98,7 @@
 
 ## 滚动框属性-样式设置
 
-- 这里修改的是滚动条的图片及样式。图片属性请见 [UI 控件-图片](https://meta.feishu.cn/wiki/wikcnFg4z5zLX0puYIncTBIJGtf)
+- 这里修改的是滚动条的图片及样式。图片属性请见 [UI 控件-图片](https://docs.ark.online/UI/UIComponent-Image.html)
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4QjLI6cVQzLHcMgsy9UHAf.png)
 
@@ -117,7 +117,6 @@
 ```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
-    Character: Gameplay.Character;
 
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
