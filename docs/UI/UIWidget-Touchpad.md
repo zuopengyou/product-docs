@@ -36,27 +36,26 @@
 ```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
-    Character: Gameplay.Character;
 
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
         
-        let Plus = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as UI.StaleButton
-        let Inc = this.uiWidgetBase.findChildByPath('Canvas/StaleButton_1') as UI.StaleButton
-        let TouchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as UI.TouchPad
+        let plus = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as UI.StaleButton
+        let inc = this.uiWidgetBase.findChildByPath('Canvas/StaleButton_1') as UI.StaleButton
+        let touchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as UI.TouchPad
         let text=this.uiWidgetBase.findChildByPath('Canvas/TextBlock') as UI.TextBlock
     
-        Plus.onClicked.add(()=>{ 
-            TouchPad.inputScale=(new Type.Vector2(1,1))
-            let num =TouchPad.inputScale
+        plus.onClicked.add(()=>{ 
+            touchPad.inputScale=(new Type.Vector2(1,1))
+            let num =touchPad.inputScale
             text.text=(num.toString())
         })
     
-        Inc.onClicked.add(()=>{ 
-            TouchPad.inputScale=(new Type.Vector2(0.2,0.2))
-            let num =TouchPad.inputScale
+        inc.onClicked.add(()=>{ 
+            touchPad.inputScale=(new Type.Vector2(0.2,0.2))
+            let num =touchPad.inputScale
             text.text=(num.toString())
         })  
     }
