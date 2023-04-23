@@ -3,14 +3,13 @@
 **阅读本文大概需要 15 分钟**
 
 本文概述了 UI 控件的变换、对齐、通用、渲染这四类基础属性的使用方法。
+在每种控件的具体介绍文档中，我们会说明各个控件其他属性的作用和使用方法。
 
 ## 什么是 UI 控件以及基础属性？
 
 **UI 控件**是搭建游戏界面时能够用到的基础控件，在 UI 编辑器中我们会提供了容器、图片、按钮、文本、输入框、进度条、滚动框、摇杆、摄像机滑动区等控件。
 
 **基础属性**是指每种 UI 控件都包含的**变换、对齐、通用、渲染这四类属性。**
-
-在每种控件的具体介绍文档中，我们会说明各个控件其他属性的作用和使用方法。
 
 ## 变换
 
@@ -157,17 +156,17 @@ this.uiObject.zOrder=0
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnp9b8MMxFAA3WRDmxWgWEzf.gif)
 
-#### 示例：
+#### 举例：不同情景下的对齐使用方式：
 
-- 如果想摇杆/摄像机控件大小按玩家屏幕比例自动变化，推荐摇杆/摄像机控件的对齐方式=自适应
+- 1.如果想摇杆/摄像机控件大小按玩家屏幕比例自动变化，推荐摇杆/摄像机控件的对齐方式=自适应
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnyl5gHztJWlpcx7cdQSPVBe.gif)
 
-- 如果制作自动计算高度的文本气泡，想让文本控件与容器的边距保持不变，推荐文本控件的对齐方式=上下 + 左右对齐
+- 2.如果制作自动计算高度的文本气泡，想让文本控件与容器的边距保持不变，推荐文本控件的对齐方式=上下 + 左右对齐
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFfFyjw2wlCzBbGVSr15Htf.gif)
 
-- 如果制作一个菜单，并不想其比例跟随玩家屏幕比例变化，推荐容纳菜单的容器控件对齐方式=中心对齐
+- 3.如果制作一个菜单，并不想其比例跟随玩家屏幕比例变化，推荐容纳菜单的容器控件对齐方式=中心对齐
   
   - 这时，由于菜单大小固定不变，容器内部各控件的对齐方式不会各自大小产生影响，最终菜单的效果会和 UI 编辑器中相同
 
@@ -197,7 +196,7 @@ let btn = this.uiWidgetBase.findChildByPath('Canvas/btn') as UI.Button
 
 #### 可见性
 
-- Visible（可见）
+- 可见（Visible）
 
   - 可见，并可以进行点击交互
   - 举例说明：两个重叠的按钮，Btn2 层级高于 Btn1，两个按钮均设置为可见，执行点击后则仅能点击到上层的按钮（Btn2）。
@@ -205,21 +204,22 @@ let btn = this.uiWidgetBase.findChildByPath('Canvas/btn') as UI.Button
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2ulI0omYzoFiuoyZr58sVd.gif)
 
-- Collapsed（折叠）
+- 折叠（Collapsed）
 
   - 不可见，不占用布局空间，不能进行点击交互
   - 布局空间：UI 控件的位置和大小，相当于减少控件的部分计算。
   - 举例说明：多个按钮进行放置在容器里，容器将他们自动布局，排列为垂直方式，其中将第二个按钮进行折叠，则表现为第二个按钮的位置将会被第三个按钮所替代。
   - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5Ko00T8aT1XjIvP6gKnIkg.png)
-
-- Hidden（隐藏）
+- 隐藏（Hidden）
 
   - 不可见，占用布局空间，不能进行点击交互
   - 举例说明：多个按钮进行放置在容器里，容器将他们自动布局，排列为垂直方式，其中将第二个按钮进行隐藏，则表现为第二个按钮的位置将会被预留出来，显示为空的状态。
-  - 示意图请见：可见性-折叠
-- HitTestInvisible（可见不可交互）
+  - 示意图：
+
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5Ko00T8aT1XjIvP6gKnIkg.png)
+
+- 可见不可交互（HitTestInvisible）
 
   - 可见，但无法进行点击交互，且层级中的子项也无法进行点击交互，所有操作会穿透此控件及其子项
   - 举例说明：容器里放 Btn1 和 Btn2，如果容器设置为可见不可交互，则 Btn1 和 Btn2 均不可点击。
@@ -228,11 +228,11 @@ let btn = this.uiWidgetBase.findChildByPath('Canvas/btn') as UI.Button
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGTjHuTSIyiM1ErPPAedNVh.gif)
 
-- SelfHitTestInvisible（可见不可交互仅自身）
+- 可见不可交互仅自身（SelfHitTestInvisible）
 
   - 可见，但无法进行点击交互，但不影响层级中的子项进行点击交互，所有操作会穿透此控件
   - 举例说明：容器里放 Btn1，如果容器设置为可见不可交互仅自身，则 Btn1 可被点击。
-  - 注意：虽然容器不可点击，但容器具有穿透效果，如果该容器层级下有一个按钮，则依旧可以点击到该按钮（点击判定由层级较高的按钮决定）
+  - 注意：虽然容器不可点击，但容器具有穿透效果，如果该容器层级下有一个按钮（不属于该容器的子级），则依旧可以点击到此按钮
   - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1x4VVn4xEqPqeT18AX56bf.gif)
@@ -291,35 +291,34 @@ let btn = this.uiWidgetBase.findChildByPath('Canvas/btn') as UI.Button
 
 ## UI文件（自定义UI）的整体属性——Root属性
 
+- 打开某个UI文件后，选中对象管理器中的Root，可以在对象属性面板中修改这个UI文件的整体属性
 ![](https://cdn.233xyx.com/1681459811547_635.png)
-
-* 打开某个UI文件后，选中对象管理器中的Root，可以在对象属性面板中修改这个UI文件的整体属性
 
 #### 变换/对齐/通用/渲染
 
-* 这四个分组的属性的用法与前文单个UI控件的这四个分组的属性完全相同，不再赘述
+- 这四个分组的属性的用法与前文单个UI控件的这四个分组的属性完全相同，不再赘述
   
-  * 例如调整Root的渲染透明度，就是此UI文件整体的渲染透明度
+  - 例如调整Root的渲染透明度，就是此UI文件整体的渲染透明度
     ![](https://cdn.233xyx.com/1681458030118_551.gif)
-  * 除了属性面板，还可以在脚本中找到UI.UIBehavior.uiWidgetBase或UIObject.uiWidgetBase来找到对应的UI对象的Root节点，进而调整UI对象的整体属性，uiWidgetBase与属性面板中的Root完全对应
-  * UI文件还可以作为自定义UI控件（即UI.UserWidget），在UI编辑器拖拽到其他UI文件里或者在脚本中动态添加到其他UI对象中，UI文件内root的变换/对齐/通用/渲染这四个分组的属性会自动应用到新建的自定义UI控件；**也就是说只需要修改一次UI文件root的属性，不需要每次创建自定义UI都设置一次**
+  - 除了属性面板，还可以在脚本中找到UI.UIBehavior.uiWidgetBase或UIObject.uiWidgetBase来找到对应的UI对象的Root节点，进而调整UI对象的整体属性，uiWidgetBase与属性面板中的Root完全对应
+  - UI文件还可以作为自定义UI控件（即UI.UserWidget），在UI编辑器拖拽到其他UI文件里或者在脚本中动态添加到其他UI对象中，UI文件内root的变换/对齐/通用/渲染这四个分组的属性会自动应用到新建的自定义UI控件；**也就是说只需要修改一次UI文件root的属性，不需要每次创建自定义UI都设置一次**
     ![](https://cdn.233xyx.com/athena/online/17068f7ebe604db6836835f1e394c538_11631157.webp)
-* 下面，我们来单独介绍一下Root对齐属性的用法，这部分较难理解，也比较容易出问题：
+- 下面，我们来单独介绍一下Root对齐属性的用法，这部分较难理解，也比较容易出问题：
   
-  * 用UI文件新创建自定义UI控件时会把原UI文件内最底部设计尺寸视为旧容器，然后再根据其创建时新父级容器的大小和位置，以及自定义UI控件的对齐方式（也就是UI文件Root中的对齐属性），来决定创建后的自定义UI控件的位置和大小
+  - 用UI文件新创建自定义UI控件时会把原UI文件内最底部设计尺寸视为旧容器，然后再根据其创建时新父级容器的大小和位置，以及自定义UI控件的对齐方式（也就是UI文件Root中的对齐属性），来决定创建后的自定义UI控件的位置和大小
     ![](https://cdn.233xyx.com/athena/online/c66331dfcd4146a08e4eb095e8538f3a_11631158.webp)
-  * 新创建的自定义UI控件内部的每个控件仍然根据各控件的对齐方式，自上而下的决定大小和位置
+  - 新创建的自定义UI控件内部的每个控件仍然根据各控件的对齐方式，自上而下的决定大小和位置
     ::: tip
     请注意这一点！新建UI文件root会默认设为上下对齐+左右对齐，这是为了UI文件用作全屏HUD时能够自适应玩家设备尺寸比例。
     但如果此UI文件作为自定义UI控件使用时，不希望自定义UI控件的大小和位置跟随父级自适应变化（比如制作背包中的某一个格子），务必把此UI文件root设置为靠左对齐+靠上对齐！
     :::
     ![](https://cdn.233xyx.com/athena/online/40c64a242c4046b9be12406b8c6cbce6_11631159.webp)![](https://cdn.233xyx.com/1681458030869_215.gif)
   
-  ![](https://cdn.233xyx.com/athena/online/1912e5e2670d43e6bc2e1b48d7d919ba_11631160.webp)![](https://cdn.233xyx.com/1681458030494_798.gif)
+    ![](https://cdn.233xyx.com/athena/online/1912e5e2670d43e6bc2e1b48d7d919ba_11631160.webp)![](https://cdn.233xyx.com/1681458030494_798.gif)
 
 #### TS脚本
 
-* 用于设置当前UI文件所绑定的UI脚本，可以将想绑定的UI脚本拖拽到这里完成绑定
+- 用于设置当前UI文件所绑定的UI脚本，可以将想绑定的UI脚本拖拽到这里完成绑定
 
 ![](https://cdn.233xyx.com/athena/online/a4f71b3c1758473c962a04715a9004f8_11631161.webp)
 
@@ -328,10 +327,10 @@ let btn = this.uiWidgetBase.findChildByPath('Canvas/btn') as UI.Button
 当此UI文件作为UI对象被添加到游戏画面中，或者作为自定义UI控件被添加到某个已有UI对象中，这个UI脚本里的逻辑将会执行。
 :::
 
-* 顺便为大家讲解一下另外两种在脚本中将UI脚本与UI对象绑定的用法：
-* **1.使用UICallOnly装饰器**
-  * 首先，在UI脚本中使用UICallOnly装饰器，标记UI脚本归属于哪个UI文件
-  * 然后，在另一个普通脚本/UI脚本中使用UI.UIManager.instance.show运行此UI脚本，此UI文件也会作为UI对象添加到游戏画面
+- 除了可以在编辑器拖拽完成绑定，还有两种在脚本中将UI脚本与UI对象绑定的用法：
+- **1.使用UICallOnly装饰器**
+  - 首先，在UI脚本中使用UICallOnly装饰器，标记UI脚本归属于哪个UI文件
+  - 然后，在另一个普通脚本/UI脚本中使用UI.UIManager.instance.show运行此UI脚本，此UI文件也会作为UI对象添加到游戏画面
 
 ```TypeScript
 @UI.UICallOnly('DefaultUI.ui')
@@ -361,9 +360,9 @@ export default class NewScript extends Core.Script {
 
 * **2.使用UI.createUI创建UI并且同时完成绑定**
 
-在普通脚本/UI脚本中都可以使用UI.createUI创建UI并同时完成绑定，然后使用addToViewport添加到画面，这种方法不需要使用UICallOnly装饰器
+- 在普通脚本/UI脚本中都可以使用UI.createUI创建UI并同时完成绑定，然后使用addToViewport添加到画面，这种方法不需要使用UICallOnly装饰器
 
-注意：使用UI.createUI时，参数中的UI脚本和UI文件绑定优先级最高，如果createUI参数中的UI脚本中用@UI.UICallOnly绑定了其他UI文件，其他UI文件会被覆盖；如果createUI参数中的UI文件挂载了其他UI脚本，其他UI脚本也会被覆盖
+- 注意：使用UI.createUI时，参数中的UI脚本和UI文件绑定优先级最高，如果createUI参数中的UI脚本中用@UI.UICallOnly绑定了其他UI文件，其他UI文件会被覆盖；如果createUI参数中的UI文件挂载了其他UI脚本，其他UI脚本也会被覆盖
 
 
 ```TypeScript
