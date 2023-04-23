@@ -14,8 +14,6 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOZaMDsHZ10veG8iHNcCDpT.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnfEl86wIvL8jByILMOXjba.png)
-
 #### 图片大小
 
 - 图片资源的初始大小，他的改变并不会影响实际效果。
@@ -32,15 +30,13 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncdWvlVMuyxTQz6U6HMvyZc.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1HLpdo25K95PPmGBY27NDh.png)
-
-#### 无
+##### 无
 
 - 不执行任何绘制工作，则效果为空。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnPlC9fvxqpqwOaYNgAv08nl.png)
 
-#### 九宫格
+##### 九宫格
 
 - 九宫格是将一张图分割为 9 块，四个角(1,3,7,9)在缩放的时候是保持大小不变，图块 2，8 仅当宽度变化时缩放宽度，图块 4，6 仅当高度变化时缩放高度，图块 5 当图片大小发生变化，宽度和高度都进行缩放。
 - 举例说明：当我们拉伸圆角矩形的图片时会导致图片失真。如果我们选择九宫格绘制模式，将(1,3,7,9)四个角固定，那么拉伸时就不会影响圆角的形状，也不会出现失真的情况。
@@ -51,7 +47,7 @@
 
 - 九宫格类型的图片边距单位是比例，比如左边距=0.5 时，1,4,7 三个图块的宽度为整张图片宽度的 0.5 倍。
 
-#### 边界绘制
+##### 边界绘制
 
 - 边界绘制也是将一张图分割为 9 块，四个角(1,3,7,9)在缩放的时候是保持大小不变，图块 2，8 仅当宽度变化时缩放宽度，图块 4，6 仅当高度变化时缩放高度，与九宫格不同的是扣掉了图块 5。
 
@@ -61,13 +57,13 @@
 
 - 边界绘制的图片边距单位是比例，比如左边距=0.5 时，1,4,7 三个块的宽度为整张图片宽度的 0.5 倍
 
-#### 图片
+##### 图片
 
 - 正常绘制一张图片
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnCG6OG8ZLNMCowBElsZU7xb.png)
 
-#### 九宫格（像素单位）
+##### 九宫格（像素单位）
 
 - 九宫格（像素单位）的效果与九宫格一样，只是图片边距属性的单位不同
 
