@@ -196,7 +196,6 @@
 ```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior {
-    Character: Gameplay.Character;
 
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
