@@ -300,7 +300,7 @@ export default class activity extends activity_generate {
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWCPp8wXO1mVZ86z3Wc53cb.gif)
 
 - 工程项目：
-  [点击下载](https://cdn.233xyx.com/1681462157665_532.7z)
+  [点击下载](https://cdn.233xyx.com/1682231334664_593.7z)
 
 ### 示例三：制作动态增加/移除自定义UI控件的自动布局面板
 
@@ -395,4 +395,4 @@ export default class activity extends activity_generate {
 ![](https://cdn.233xyx.com/1681462157060_878.gif)
 
 * 工程项目：
-  [点击下载](https://cdn.233xyx.com/1681462156074_057.7z)
+  [点击下载](https://cdn.233xyx.com/1682231334857_402.7z)
