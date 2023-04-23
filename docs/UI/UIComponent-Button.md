@@ -153,7 +153,7 @@ export default class UIDefault extends UI.UIBehavior{
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncN6X8J7UwoM4XtWQUXFJ5g.gif)
 
-- 以上两个示例的工程文件：[点击下载](https://cdn.233xyx.com/1681467997121_657.7z)
+- 以上两个示例的工程文件：[点击下载](https://cdn.233xyx.com/1682231334712_831.7z)
 
 ### **示例三：制作活动页签选择按钮**
 
@@ -254,4 +254,4 @@ export default class activity extends activity_generate {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwQg1Pv8mqmSF3t3XJFkw8c.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467996837_795.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334664_593.7z)
