@@ -14,7 +14,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntSDwiP56KZ602AahsNCnMg.png)
 
-- 字体大小、字体间距、水平显示请见 [3.文本](https://meta.feishu.cn/wiki/wikcnjx5c6jhvAQa8yJYGxmq9Lc) 。
+- 字体大小、字体间距、水平显示请见 [UI 控件-文本](https://docs.ark.online/UI/UIComponent-Text.html) 。
 
 #### 输入限制
 
@@ -38,17 +38,13 @@
 #### 只读
 
 - 该文本输入框是否可以更改，勾选则设置为只读无法更改
-- 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnRpThy8LkY4HSLHJbThcFOb.gif)
 
 ## 输入框属性-样式
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcneS75jSRDgBWTMoanPQbbBh.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnNjMMJqOTjylHkhsCyKc85b.png)
-
-- 字体类属性请见 [3.文本](https://meta.feishu.cn/wiki/wikcnjx5c6jhvAQa8yJYGxmq9Lc) 。
+- 字体类属性请见 [UI 控件-文本](https://docs.ark.online/UI/UIComponent-Text.html)。
 
 #### 内容颜色
 
@@ -60,8 +56,6 @@
 ## 输入框属性-内容限制
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnz7qV9htSuLVenIgm6c84bf.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1FC1DHgXtwl89Xxg5pWOWb.png)
 
 #### 内容限制
 
@@ -97,18 +91,18 @@
 ```ts
 export default class NewUIScript extends UI.UIBehavior{
 
-    IsExchange:Boolean;
+    isExchange:Boolean;
     //创建一个兑换成功或失败提示的方法：判断条件为是否兑换成功？
-    Tips (TipsText: UI.TextBlock) {
+    Tips (tipsText: UI.TextBlock) {
         //兑换成功，则显示兑换成功，兑换失败，则显示兑换码错误
-        this.IsExchange? TipsText.text="兑换成功" : TipsText.text="兑换码错误" ;
+        this.isExchange? tipsText.text="兑换成功" : tipsText.text="兑换码错误" ;
         //兑换成功，则文字显示为绿色，兑换失败，则文字显示为红色
-        this.IsExchange? TipsText.setFontColorByHex("00EA3FFF") : TipsText.setFontColorByHex("EA2400FF")
+        this.isExchange? tipsText.setFontColorByHex("00EA3FFF") : tipsText.setFontColorByHex("EA2400FF")
         //提示文字显示2秒后消失
         setTimeout(() => {
-            TipsText.visibility=2;
+            tipsText.visibility=2;
         }, 2000);
-        TipsText.visibility=0;
+        tipsText.visibility=0;
     }
 
     /** 
@@ -119,22 +113,22 @@ export default class NewUIScript extends UI.UIBehavior{
         this.canUpdate = false;
         this.layer = UI.UILayerMiddle;
          //找到对应的文本控件
-        let Text = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/InputBox') as UI.InputBox
-        let ConfirmBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/Button') as UI.Button
-        let TipsText = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/TextBlock_1') as UI.TextBlock
+        let text = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/InputBox') as UI.InputBox
+        let confirmBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/Button') as UI.Button
+        let tipsText = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/TextBlock_1') as UI.TextBlock
 
         //按下确认按钮后，检测码是否正确
-        ConfirmBtn.onPressed.add(() => {
-            if (Text.text == "111111") {
+        confirmBtn.onPressed.add(() => {
+            if (text.text == "111111") {
                 //兑换成功
-                this.IsExchange = true
+                this.isExchange = true
             }
             else{
                 //兑换失败
-                this.IsExchange = false
+                this.isExchange = false
             }
             //执行兑换成功或失败提示的方法
-            this.Tips (TipsText)
+            this.Tips (tipsText)
         });
     }
 }
