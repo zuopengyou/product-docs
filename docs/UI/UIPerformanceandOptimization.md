@@ -34,7 +34,7 @@ OPPOA57 屏幕分辨率为：1280x720，而下面两张图原始分辨率分别�
 
 灵活使用图片绘制类型中的九宫格和边界绘制，可以将一张 100x100 的图不失真的放大到任何大小。
 
-九宫格绘制类型演示，使用方法请见 [2.图片](https://meta.feishu.cn/wiki/wikcnAT3oxwkOtbE9jzsjo2xUyg) ：
+九宫格绘制类型演示，使用方法请见 [UI 控件-图片](https://docs.ark.online/UI/UIComponent-Image.html) ：
 
 示例：
 
@@ -89,9 +89,9 @@ OPPOA57 屏幕分辨率为：1280x720，而下面两张图原始分辨率分别�
 示例：
 
 ```ts
-const Btn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.Button
+const btn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.Button
 //隐藏 并且在布局中不占用大小，节省性能
-JumpBtn.visibility= UI.SlateVisibility.Collapsed
+btn.visibility= UI.SlateVisibility.Collapsed
 //隐藏 并且在布局中占用大小
-JumpBtn.visibility= UI.SlateVisibility.Hidden
+btn.visibility= UI.SlateVisibility.Hidden
 ```
