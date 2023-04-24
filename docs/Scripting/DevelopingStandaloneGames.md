@@ -13,7 +13,7 @@
 可简单的理解为编辑器的单机模式终端，即是客户端也是服务端
 
 ## 运行环境判断区别
-
+![](https://cdn.233xyx.com/athena/online/21986df277754b669435b129ca544991_11843124.webp)
 **如上图所示**
 
 - 原多人联网游戏逻辑中，所有使用【if(isServer){...}else{...}】、【if(isClient){...}else{...}】的逻辑将都只会执行第一个 if
@@ -52,7 +52,7 @@ if(SystemUtil.isClient()){
 ```
 
 ## 单机游戏模式对 RPC 的影响
-
+![](https://cdn.233xyx.com/athena/online/f1541ec971e343ae95db36bf2967c0ec_11843125.webp)
 **在单机游戏模式中，以【Client1&Host】端为例**
 
 主控端既是客户端又是服务端，故可以在客户端写服务端的代码
