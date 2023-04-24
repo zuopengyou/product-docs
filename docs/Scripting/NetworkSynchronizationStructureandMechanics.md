@@ -128,14 +128,14 @@ eg：
 ### 3.1 客户端 ---> 服务端
 
 #### 3.1.1 客户端发送
-::: 
+```ts 
 /**
 * 客户端发送事件给服务器
 * @param eventName 事件名
 * @param params 事件内容
 */
 function dispatchToServer(eventName: string, ...params: unknown[]): DispatchEventResult;
-:::
+```
 ```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise`<void>` {
@@ -172,7 +172,7 @@ protected async onStart(): Promise`<void>` {
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnX8yBMN8W4pCNsEkJFqzZie.png)
 
 #### 3.1.2 服务端监听
-::: 
+```ts
 /**
 * 服务器监听客户端发来的事件
 * @param eventName 事件名
@@ -180,7 +180,7 @@ protected async onStart(): Promise`<void>` {
 * @return EventListener
 */
 function AddClientListener(eventName: string, listener: (player: Gameplay.Player, ...params: unknown[]) => void): EventListener;
-:::
+```
 ```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise`<void>` {
@@ -219,14 +219,14 @@ protected async onStart(): Promise`<void>` {
 ### 3.2 服务端 ---> 客户端
 
 #### 3.2.1 服务端发送 - 单一客户端
-:::
+```ts
 /** 服务器发送事件给指定客户端
 * @param player 客户端
 * @param eventName 事件名
 * @param params 事件内容
 */
 function dispatchToClient(player: Gameplay.Player, eventName: string, ...params: unknown[]): DispatchEventResult;
-:::
+```
 ```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise`<void>` {
@@ -280,17 +280,14 @@ protected async onStart(): Promise`<void>` {
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJkMRzw7x5NwNbTYZja3Clm.png)
 
 #### 3.2.2 服务端发送 - 所有客户端
-
+```ts
 /** 服务器发送事件给所有客户端（以 Player 为中心的同屏范围）
-
 * @param player 客户端
 * @param eventName 事件名
 * @param params 事件内容
-
 */
-
 function dispatchToAllClient(player: Gameplay.Player, eventName: string, ...params: unknown[]): DispatchEventResult;
-
+```
 ```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise`<void>` {
@@ -348,18 +345,15 @@ protected async onStart(): Promise`<void>` {
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTlGly7IJadX7kFfWrIhmkb.png)
 
 #### 3.2.4 客户端监听
-
+```ts
 /**
-
 * 客户端监听服务器事件
 * @param eventName 事件名
 * @param listener 监听回调 params 事件内容
 * @return EventListener
-
 */
-
 function AddServerListener(eventName: string, listener: ((...params: unknown[]) => void)): EventListener;
-
+```
 ```ts
 /** 当脚本被实例后，会在第一帧更新前调用此函数 */
 protected async onStart(): Promise`<void>` {
