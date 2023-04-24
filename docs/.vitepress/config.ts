@@ -20,11 +20,20 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     logo: '/logo.png',
     sidebar: [
       {
+        text: 'index',
+        link: '/index.md',
+        collapsible: false,
+        collapsed: false,
+        items: [
+          { text: '手册介绍', link: '/index.md' },
+          { text: '安装需求', link: '/Editor/InstallationRequirements.md' }
+        ]
+      },
+      {
         text: '编辑器',
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '安装需求', link: '/Editor/InstallationRequirements.md' },
           { text: '编辑器设置', link: '/Editor/EditorSettings.md' },
           { text: '编辑器窗口操作', link: '/Editor/EditorWindowsOperation.md' },
           {
@@ -44,7 +53,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         ]
       },
       {
-        text: '用户界面',
+        text: 'UI',
         collapsible: true,
         collapsed: true,
         items: [
