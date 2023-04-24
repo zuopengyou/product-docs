@@ -6,17 +6,17 @@
 
 ## 什么是事件系统
 
-事件系统由**派发器（Dispatcher）**和**监听器（Listener）**构成。
+事件系统由派发器（Dispatcher）和监听器（Listener）构成。
 
 主要处理**用户输入状态传递、客户端与服务器的数据传递、**以及**本地脚本之间的数据传递。**
 
 ## 事件系统都包含什么
 
-### 2.1  客户端监听器
+### 客户端监听器
 
-#### 2.1.1   系统事件
+#### 系统事件
 
-##### 1）   用户键盘按下事件（onKeyDown）
+##### 用户键盘按下事件（onKeyDown）
 
 当用户在终端有按下操作时，系统会通知客户端事件触发
 
@@ -32,7 +32,7 @@ Util.InputUtil.onKeyDown(Type.Keys.K,()=>{
 });
 ```
 
-##### 2）  用户键盘抬起事件（onKeyUp）
+##### 用户键盘抬起事件（onKeyUp）
 
 当用户在终端有按键抬起操作时，系统会通知客户端事件触发
 
@@ -48,7 +48,7 @@ Util.InputUtil.onKeyUp(Type.Keys.K,()=>{
 });
 ```
 
-##### 3）  用户键盘按住事件（onKeyPress）
+##### 用户键盘按住事件（onKeyPress）
 
 当用户在终端按住某个按键时，系统会通知客户端事件触发
 
@@ -65,9 +65,9 @@ Util.InputUtil.onKeyPress(Type.Keys.K,()=>{
 });
 ```
 
-#### 2.1.2  自定义事件
+#### 自定义事件
 
-##### 1）   来自本地事件（LocalListener）
+##### 来自本地事件（LocalListener）
 
 **此事件只在本地触发**，适用于脚本间的数据传递
 
@@ -85,7 +85,7 @@ Events.addLocalListener("onXXXButtonClick",()=>{
 });
 ```
 
-##### 2）  来自服务端事件（ServerListener）
+##### 来自服务端事件（ServerListener）
 
 当服务端向客户端传递数据时，客户端可以通过此函数来监听事件
 
@@ -101,9 +101,9 @@ Events.addServerListener("LevelUp",(lv:number)=>{
 });
 ```
 
-### 2.2  服务端监听器
+### 服务端监听器
 
-#### 2.2.1   来自客户端事件（ClientListener）
+#### 来自客户端事件（ClientListener）
 
 当客户端向服务端传递数据时，服务器可以通过此函数来监听事件
 
@@ -119,9 +119,9 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 });
 ```
 
-#### 2.2.2  房间事件
+#### 房间事件
 
-##### 1）  玩家进入房间事件（PlayerJoinedListener）
+##### 玩家进入房间事件（PlayerJoinedListener）
 
 当玩家进入房间时，服务器会通知该服务端脚本
 
@@ -137,7 +137,7 @@ Events.addPlayerJoinedListener((player:Gameplay.Player)=>{
 });
 ```
 
-##### 2）  玩家离开房间事件（PlayerLeftListener）
+##### 玩家离开房间事件（PlayerLeftListener）
 
 当玩家离开房间时，服务器会通知该服务端脚本
 
@@ -153,9 +153,9 @@ Events.addPlayerLeftListener((player:Gameplay.Player)=>{
 });
 ```
 
-### 2.3  客户端派发器
+### 客户端派发器
 
-#### 2.3.1  派发事件到本地（dispatchLocal）
+#### 派发事件到本地（dispatchLocal）
 
 对应 [2.1.2 - 1](https://meta.feishu.cn/wiki/wikcnVCCqmlaOhhI3tpeuy42Hvh#EQIial)，当用户按下了某个按钮，在其他脚本中需要监听此事件
 
@@ -165,7 +165,7 @@ Events.addPlayerLeftListener((player:Gameplay.Player)=>{
 Events.dispatchLocal("onXXXButtonClick");
 ```
 
-#### 2.3.2  派发事件到服务端（dispatchToServer）
+#### 派发事件到服务端（dispatchToServer）
 
 对应 [2.2.1](https://meta.feishu.cn/wiki/wikcnVCCqmlaOhhI3tpeuy42Hvh#h5CbRe)，当用户使用某技能发动了攻击，需要通知服务端进行同步
 
@@ -176,9 +176,9 @@ let skills:number = 6;
 Events.dispatchToServer("Attack",skills);
 ```
 
-### 2.4  服务端派发器
+### 服务端派发器
 
-#### 2.4.1  派发事件到指定客户端（dispatchToClient）
+#### 派发事件到指定客户端（dispatchToClient）
 
 对应 [2.1.2 - 2](https://meta.feishu.cn/wiki/wikcnVCCqmlaOhhI3tpeuy42Hvh#hrruWG)，结合 [2.2.1](https://meta.feishu.cn/wiki/wikcnVCCqmlaOhhI3tpeuy42Hvh#h5CbRe)
 
@@ -199,7 +199,7 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 });
 ```
 
-#### 2.4.2  派发事件到房间内所有客户端（dispatchToAllRoomClient）
+#### 派发事件到房间内所有客户端（dispatchToAllRoomClient）
 
 同上情形，若想将该玩家的升级消息同步至房间内所有客户端
 
@@ -218,7 +218,7 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 });
 ```
 
-#### 2.4.3  派发事件到所有客户端（dispatchToAllClient）
+#### 派发事件到所有客户端（dispatchToAllClient）
 
 同上情形，若想将该玩家的升级消息同步至所有客户端
 
@@ -237,7 +237,7 @@ Events.addClientListener("Attack",(player:Gameplay.Player,skills:number)=>{
 });
 ```
 
-#### 2.4.4  派发事件到本地（dispatchLocal）
+#### 派发事件到本地（dispatchLocal）
 
 对应 [2.1.2 - 1](https://meta.feishu.cn/wiki/wikcnVCCqmlaOhhI3tpeuy42Hvh#EQIial)，**此事件只能在本地派发**
 
@@ -247,7 +247,7 @@ Events.dispatchLocal("eventName");
 
 ## 使用事件系统的注意事项与建议
 
-### 3.1  区分脚本的运行环境（客户端 or 服务端）
+### 区分脚本的运行环境（客户端 or 服务端）
 
 派发器与监听器有严格的运行环境要求
 
@@ -261,7 +261,7 @@ Events.dispatchLocal("eventName");
 
 **SystemUtil.isServer()****           --->        是否为服务端**
 
-### 3.2  服务端相关代码写在单独脚本中
+### 服务端相关代码写在单独脚本中
 
 由于编辑器的独特性，服务端与客户端可写在同一工程文件中
 
@@ -269,7 +269,7 @@ Events.dispatchLocal("eventName");
 
 建议将服务端的代码单独写在一个脚本中，便于快速定位问题
 
-### 3.3  对象销毁后关闭监听器与派发器
+### 对象销毁后关闭监听器与派发器
 
 事件系统中的派发器与监听器不会根据脚本的生命周期一起销毁
 
