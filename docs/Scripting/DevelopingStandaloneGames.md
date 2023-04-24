@@ -54,8 +54,7 @@ if(SystemUtil.isClient()){
 ## 单机游戏模式对 RPC 的影响
 ![](https://cdn.233xyx.com/athena/online/36e748a2d96e4e23a0f752095032c7a9_11843137.webp)
 
-::: tip 
-**在单机游戏模式中，以【Client1&Host】端为例**
+::: tip  **在单机游戏模式中，以【Client1&Host】端为例**
 
 主控端既是客户端又是服务端，故可以在客户端写服务端的代码
 
@@ -84,8 +83,6 @@ Events.addServerListener("xxx",(player:Gameplay.Player)=>{ });
 - dispatchToServer 指令，用 addClientListener 接的时候，是有 Player 参数的，这个指令在 LS 中没有改变，所以可通过 Player 来判断是否是自己发给自己，用来过滤信息
 - dispatchToClient、dispatchToAllClient 这两个指令原本不携带 Player 参数，则需要开发者手动在事件参数中做标识，用来过滤信息
 :::
-## 
-
 ## 单机游戏转多人联网游戏的注意事项
 
 - 运行环境判断的改变【SystemUtil.isServer()】【SystemUtil.isClient()】
