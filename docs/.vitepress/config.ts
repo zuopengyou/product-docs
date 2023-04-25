@@ -233,6 +233,16 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       {
         text: '论坛',
         link: 'https://forum.ark.online/'
+      },
+      {
+        text: '024 版本',
+        items: [
+          {
+            text: '025 版本',
+            link: 'https://docs-025.ark.online/',
+            path: true
+          }
+        ]
       }
     ],
     outline: [2, 4],
