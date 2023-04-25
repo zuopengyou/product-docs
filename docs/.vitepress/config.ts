@@ -20,6 +20,16 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     logo: '/logo.png',
     sidebar: [
       {
+        text: 'index',
+        link: '/index.md',
+        collapsible: false,
+        collapsed: false,
+        items: [
+          { text: '手册介绍', link: '/index.md' },
+          { text: '安装需求', link: '/Editor/InstallationRequirements.md' }
+        ]
+      },
+      {
         text: '编辑器',
         collapsible: true,
         collapsed: true,
@@ -38,11 +48,12 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             link: '/Editor/ScreenOrientation&ResolutionSimulation.md'
           },
           { text: '游戏发布流程', link: '/Editor/GameReleaseProcess.md' },
+          { text: '接入社交功能', link: '/Editor/UseMGS.md' },
           { text: '角色编辑工具', link: '/Editor/CharacterEditor.md' }
         ]
       },
       {
-        text: '用户界面',
+        text: 'UI',
         collapsible: true,
         collapsed: true,
         items: [
@@ -63,6 +74,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-摄像机滑动区', link: '/UI/UIWidget-Touchpad.md' },
           { text: 'UI控件-加载图', link: '/UI/UIComponent-LoadingIcon.md' },
           { text: 'UI控件-调色板', link: '/UI/UIComponent-ColorPicker.md' },
+          { text: '富文本', link: '/UI/Rich-text.md' },
           { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
           {
             text: '按键绑定（针对PC端）及预设UI',
@@ -76,6 +88,15 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         ]
       },
       {
+        text: '物理',
+        collapsible: true,
+        collapsed: true,
+        items: [
+          { text: '物理对象', link: '/Physics/PhysicalObject.md' },
+          { text: '推进器', link: '/Physics/Propeller.md' }
+        ]
+      },
+      {
         text: '游戏功能对象',
         collapsible: true,
         collapsed: true,
@@ -84,6 +105,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '四轮载具',
             link: '/GameplayObjects/Four-wheeledVehicles.md'
           },
+          { text: '高级轮式载具', link: '/GameplayObjects/AdvancedVehicle.md' },
           { text: '寻路系统', link: '/GameplayObjects/NavigationArea.md' },
           { text: '交互物', link: '/GameplayObjects/Interactors.md' },
           { text: '世界UI', link: '/GameplayObjects/WorldUI.md' },
@@ -152,10 +174,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         text: '资源',
         collapsible: true,
         collapsed: true,
-        items: [
-          { text: '美术资源', link: '/Resource/ArtResources.md' },
-          { text: '资源上传工具', link: '/Resource/ResourceUploadTool.md' }
-        ]
+        items: [{ text: '美术资源', link: '/Resource/ArtResources.md' }]
       },
       {
         text: '本地化',
@@ -185,6 +204,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             name: '产品手册'
           },
           {
+            key: 'learning-docs',
+            facetFilters: ['tags:learning-docs'],
+            name: '教程文档'
+          },
+          {
             key: 'api-docs',
             facetFilters: ['tags:api-docs'],
             name: 'API文档'
@@ -209,6 +233,16 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       {
         text: '论坛',
         link: 'https://forum.ark.online/'
+      },
+      {
+        text: '024 版本',
+        items: [
+          {
+            text: '025 版本',
+            link: 'https://docs-025.ark.online/',
+            path: true
+          }
+        ]
       }
     ],
     outline: [2, 4],

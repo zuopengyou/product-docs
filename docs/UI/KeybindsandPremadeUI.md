@@ -35,24 +35,24 @@
 **脚本示例：**
 
 ```ts
-const JumpBtn = this.uiWidgetBase.findChildByPath('MWCanvas/MWButton_Jump') as UI.Button
+const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.Button
 //绑定按键
 Util.InputUtil.bindButton(Type.Keys.Up,JumpBtn)
 //解绑按键
 Util.InputUtil.unbindButton(Type.Keys.Up)
 ```
 
-- 为了满足开发者针对 PC 游戏端的不同需求，比如希望某个摄像机滑动区/摇杆是否可以被鼠标点击，因此在 MWUIVirtualJoystickPanel 和 MWUITouchPad 类中提供了是否被鼠标控制的接口，编辑器内也可以在摄像机滑动区/摇杆属性面板中勾选此属性
+- 为了满足开发者针对 PC 游戏端的不同需求，比如希望某个摄像机滑动区/摇杆是否可以被鼠标点击，因此在 VirtualJoystickPanel 和 TouchPad 类中提供了是否被鼠标控制的接口，编辑器内也可以在摄像机滑动区/摇杆属性面板中勾选此属性
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGgX88e45wIi9fPbNj6s2Sc.png)
 
-- 此功能的使用场景请见 [UI 组件-摇杆](https://meta.feishu.cn/wiki/wikcn3gWEoxEgKwAzgYPBl2zeCc?table=tblDgsts19OW2IJA) 和 [UI 组件-摄像机滑动区](https://meta.feishu.cn/wiki/wikcnlsPgoUkmlLTnCwO3vuRCLc?table=tblDgsts19OW2IJA)
+- 此功能的使用场景请见 [UI 控件-摇杆](https://docs.ark.online/UI/UIWidget-Joystick.html) 和 [UI 控件-摄像机滑动区](https://docs.ark.online/UI/UIWidget-Touchpad.html)
 
 **脚本示例：**
 
 ```ts
-let touchpad=this.uiWidgetBase.findChildByPath('MWCanvas/MWUITouchPad_1') as UI.TouchPad
-let joystick=this.uiWidgetBase.findChildByPath('MWCanvas/MWUIVirtualJoystickPanel_1') as UI.VirtualJoystickPanel
+let touchpad=this.uiWidgetBase.findChildByPath('Canvas/UITouchPad_1') as UI.TouchPad
+let joystick=this.uiWidgetBase.findChildByPath('Canvas/UIVirtualJoystickPanel_1') as UI.VirtualJoystickPanel
 //设置摇杆和摄像机滑动区可以被鼠标点击
 touchpad.controlByMouseEnable(true)
 joystick.controlByMouseEnable(true)
@@ -63,28 +63,29 @@ let bool2 = joystick.controlByMouseEnable
 
 ## 新建项目的预设 UI 控制方案
 
-- 为新建项目提供一个预设 UI 文件，并且绑定了一套键鼠默认键位，作为默认的控制方案
-- 预设 UI 文件包括左侧的摇杆、右侧的摄像机滑动区和右下的三个按钮（跳跃/攻击/交互）
-- 预设 UI 脚本文件内包括控制点击跳跃按钮可以实现人物跳跃的逻辑
+- 为新建项目提供一个预设UI文件，并且绑定了一套键鼠默认键位，作为默认的控制方案
+- 预设UI文件包括左侧的摇杆、右侧的摄像机滑动区和右下的三个按钮（跳跃/攻击/交互）
+- 预设UI脚本文件内包括控制点击跳跃按钮可以实现跳跃、点击攻击/交互按钮播放动作的逻辑
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSVMmjt7W9I5jC799sLcjsb.png)
+![](https://cdn.233xyx.com/1681457046670_844.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4IzaVy9OridnZrlxhVBg2g.png)
+![](https://cdn.233xyx.com/1681457046832_053.png)
 
-| 按键     | 行动             | 对应的预设 UI 控件 |
-| -------- | ---------------- | ------------------ |
-| W        | 向前移动         | MWMobileJoyStick   |
-| S        | 向后移动         |                    |
-| A        | 向左移动         |                    |
-| D        | 向右移动         |                    |
-| 鼠标右键 | 旋转镜头（按住） | MWCamarSlideZone   |
-| 空格键   | 跳跃             | MWButton_Jump      |
-| 鼠标左键 | 攻击/热武器开火  | MWButton_Attack    |
-| F        | 交互/触发键      | MWButton_Interact  |
+| 按键               | 行动             | 对应的预设UI控件        |
+| -------------------- | ------------------ | ------------------------- |
+| **W**        | 向前移动         | VirtualJoystickPanel |
+| **S**        | 向后移动         |
+| **A**        | 向左移动         |
+| **D**        | 向右移动         |
+| **鼠标右键** | 旋转镜头（按住） | TouchPadDesigner |
+| **空格键**   | 跳跃             | Button_Jump |
+| **鼠标左键** | 攻击/热武器开火  | Button_Attack |
+| **F**        | 交互/触发键      | Button_Interact |
 
 ## PC 端鼠标锁定功能及 API
 
 - PC 游戏端允许使用鼠标锁定功能，玩家按 Shift 可以切换鼠标锁定，鼠标锁定情况下隐藏鼠标，转动鼠标直接旋转镜头和人物朝向，这样可以同时解放左键和右键留给其他角色行动，比如实现 PC 射击游戏常见的右键瞄准 + 左键射击
+![](https://cdn.233xyx.com/1681457046992_545.gif)
 - 开发者可以在脚本中控制是否允许玩家切换鼠标锁定状态
 
 **脚本示例：**

@@ -44,9 +44,9 @@
 
 ## 如何使用冲量对象
 
-在编辑器左侧【逻辑资源】选项中，找到【运动功能对象】，点击其中的【冲量对象】，拖拽到主视口中，即可完成创建。
+在本地资源库中搜索[冲量对象]，找到功能对象，，拖入到场景中即可完成创建。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOfEfBpSelABVK28fK1LCXf.png)
+![](https://cdn.233xyx.com/1681893626211_733.png)
 
 
 
