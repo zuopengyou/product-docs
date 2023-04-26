@@ -1,5 +1,4 @@
-import type { DefaultTheme } from '../../viteTheme/shared'
-import { dealConfigSidebar, dealItem } from '../../utils'
+import type { DefaultTheme } from 'metaapp-prodigytech-doc-theme'
 import { defineConfigWithTheme } from 'vitepress'
 
 export const sidebar: DefaultTheme.Config['sidebar'] = [
@@ -236,6 +235,9 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     docFooter: {
       prev: 'Pagina prior',
       next: 'Proxima pagina'
+    },
+    pandora: {
+      type: 'product'
     }
   }
 })
