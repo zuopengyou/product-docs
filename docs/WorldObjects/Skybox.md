@@ -4,100 +4,376 @@
 
 本文概述了如何修改天空球的基础属性，制作出各式各样、五彩缤纷的天空。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnb2Ge3avWEqm6Eet8aDnvOW.png)
+![](https://cdn.233xyx.com/1682503374812_699.png)
 
-### 什么是天空球？
+## 什么是天空球？
 
 编辑器中的天空球采用传统的天空球原理，将天空球分为顶层、上层、下层三部分，分别对应天空球图片的不同部分。天空盒位于编辑器三维世界的最外层，包裹编辑器区域内所有对象。
 
+<div style="text-align: center">天空球原理图</div>
+
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjrsN9inh5eV5qKLykMQIrd.png)
 
-天空球原理
 
-### 如何编辑天空球？
+## 如何编辑天空球？
 
-鼠标左键点击对象管理器(默认右上角)中的 BP_MWSysSkyBox 对象，即可在属性面板(默认右下角)中编辑天空球。
+鼠标左键点击对象管理器(默认右上角)中的SkyBox对象，即可在属性面板(默认右下角)中编辑天空球。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnN3X3mjJRq2DwGl10JYzzTc.png)
+![](https://cdn.233xyx.com/1682503386813_929.png)
 
 天空球主要构件有：天空球贴图、渐变效果、星星、太阳、月亮、云。以下展开介绍：
 
-#### 2.1. 天空球预设
+### 2.1. 天空球预设
 
-编辑器提供了 8 种常用的天空球预设效果，当选择其中一个预设效果时，下面其他的天空球基础属性将会自动刷新，并将其属性设置为预设的默认值。
+- 编辑器提供了8种常用的天空球预设效果，当选择其中一个预设效果时，下面其他的天空球基础属性将会自动刷新，并将其属性设置为预设的默认值。
+- 演示效果：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZBXXp5ZFD3Ve4Z5rnRbBSf.gif)
+<video controls src="https://cdn.233xyx.com/1682503398592_256.mp4"></video>
 
-#### 2.2. 天空球贴图
+- 实际应用：我们可以根据不同的环境切换不同的天空球预设，便捷的完成天空球的切换，而不需要每个参数都设置一遍。也可以通过预设功能，进行快速的还原。
+- 实现步骤：
+- 首先我们添加几个UI按钮，方便我们切换天空球预设，当然可以通过其他的机制进行切换。然后编写UI脚本。
 
-更改天空球贴图：从左侧资源管理器拖出要更换的天空球贴图，拖拽到右侧属性面板 → 天空球贴图处松开。
+```ts
+@UI.UICallOnly('')
+export default class UIDefault extends UI.UIBehavior {
+    Character: Gameplay.Character;
+    /* 解析资源ID列表 */
+    private resolveString(assetIds: string): string[] {
+        let assetIdArray: string[] = new Array<string>();
+        let assetId: string = "";
+        let s = assetIds.split("");
+        for (let a of s) {
+            if (a == ",") {
+                assetIdArray.push(assetId);
+                assetId = "";
+            } else {
+                assetId += a;
+            }
+        }
+        if (assetId) {
+            assetIdArray.push(assetId);
+        }
+        return assetIdArray;
+    }
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxOFRZVXPR1YZi5UFPx161k.gif)
+    /* 初始化资源 */
+    private initAssets(assetIds: string): void {
+        let assetIdArray = this.resolveString(assetIds);
+        for (let element of assetIdArray) {
+            Util.AssetUtil.asyncDownloadAsset(element)
+        }
+    }
 
-更改天空球贴图(后续更改贴图同理)
+    //声明天空球对象
+    sky:Gameplay.SkyBox;
 
-在确定了贴图之后，开发者还可以通过以下两种方式对天空进行再次编辑：
+    /** 仅在游戏时间对非模板实例调用一次 */
+    protected async onStart() {
+        //初始化动画资源 
+        this.initAssets("95777,61245")
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+
+        //找到对应的跳跃按钮
+        const JumpBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_Jump') as UI.Button
+        const AttackBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_Attack') as UI.Button
+        const InteractBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_Interact') as UI.Button
+
+        //找到对应的预设1按钮
+        const Preset1Btn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_1') as UI.Button
+        //找到对应的预设2按钮
+        const Preset2Btn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_2') as UI.Button
+        //找到对应的预设3按钮
+        const Preset3Btn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_3') as UI.Button
+        //找到对应的预设4按钮
+        const Preset4Btn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_4') as UI.Button
+        //找到对应的预设5按钮
+        const Preset5Btn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_5') as UI.Button
+        //找到对应的预设6按钮
+        const Preset6Btn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_6') as UI.Button
+        //找到对应的预设7按钮
+        const Preset7Btn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_7') as UI.Button
+        //找到对应的预设8按钮
+        const Preset8Btn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_8') as UI.Button
+
+        this.sky = await Core.GameObject.asyncFind("4B3D5D4C44CEB3DB0432A3BAD536C315") as Gameplay.SkyBox
+
+        //点击跳跃按钮,异步获取人物后执行跳跃
+        JumpBtn.onPressed.add(() => {
+            if (this.Character) {
+                this.Character.jump();
+            } else {
+                Gameplay.asyncGetCurrentPlayer().then((player) => {
+                    this.Character = player.character;
+                    //角色执行跳跃功能
+                    this.Character.jump();
+                });
+            }
+        })
+
+        //点击攻击按钮,异步获取人物后执行攻击动作
+        AttackBtn.onPressed.add(() => {
+            Gameplay.asyncGetCurrentPlayer().then((player) => {
+                this.Character = player.character;
+                //让动画只在上半身播放
+                let anim1 = player.character.loadAnimation("61245");
+                anim1.slot = Gameplay.AnimSlot.Upper;
+                //角色执行攻击动作
+                if (anim1.isPlaying) {
+                    return
+                } else {
+                    anim1.play();
+                }
+            });
+        })
+
+        //点击交互按钮,异步获取人物后执行交互动作
+        InteractBtn.onPressed.add(() => {
+            Gameplay.asyncGetCurrentPlayer().then((player) => {
+                this.Character = player.character;
+                //让动画只在上半身播放
+                let anim2 = player.character.loadAnimation("95777");
+                anim2.slot = Gameplay.AnimSlot.Upper;
+                //角色执行交互动作
+                if (anim2.isPlaying) {
+                    return
+                } else {
+                    anim2.play();
+                }
+            });
+
+        })
+
+        //点击按钮，切换天空球预设1
+        Preset1Btn.onPressed.add(() => {
+            this.sky.skyPreset = 0;
+        })
+        //点击按钮，切换天空球预设2
+        Preset2Btn.onPressed.add(() => {
+            this.sky.skyPreset = 1;
+        })
+        //点击按钮，切换天空球预设3
+        Preset3Btn.onPressed.add(() => {
+            this.sky.skyPreset = 2;
+        })
+        //点击按钮，切换天空球预设4
+        Preset4Btn.onPressed.add(() => {
+            this.sky.skyPreset = 3;
+        })
+        //点击按钮，切换天空球预设5
+        Preset5Btn.onPressed.add(() => {
+            this.sky.skyPreset = 4;
+        })
+        //点击按钮，切换天空球预设6
+        Preset6Btn.onPressed.add(() => {
+            this.sky.skyPreset = 5;
+        })
+        //点击按钮，切换天空球预设7
+        Preset7Btn.onPressed.add(() => {
+            this.sky.skyPreset = 6;
+        })
+        //点击按钮，切换天空球预设8
+        Preset8Btn.onPressed.add(() => {
+            this.sky.skyPreset = 7;
+        })
+    }
+
+}
+```
+
+- 效果图：
+
+<video controls src="https://cdn.233xyx.com/1682503424227_593.mp4"></video>
+
+### 2.2. 天空球贴图
+
+- 更改天空球贴图：从左侧资源管理器拖出要更换的天空球贴图，拖拽到右侧属性面板→天空球贴图处松开。
+- 效果图：
+
+<video controls src="https://cdn.233xyx.com/1682503451594_188.mp4"></video>
+
+- 相关接口：
+
+```ts
+//设置天空球贴图
+this.sky.skyDomeTextureAssetByID = "32676"
+```
+
+### 2.3. 天空球亮度
 
 - **天空球亮度：**可以改变天空自身发出的颜色亮度，数值为 0-100 之间。
+- 效果图：
+
+<video controls src="https://cdn.233xyx.com/1682503478216_081.mp4"></video>
+
+- 相关接口：
+
+```ts
+//设置天空球亮度
+this.sky.skyDomeIntensity = 1;
+```
+
+### 2.4. 天空球整体颜色
+
 - **天空球整体颜色：**可以改变天空球整体颜色，相当于在天空球上叠加了一层颜色滤镜。
+- 效果图：
 
-#### 2.3. 渐变效果
+<video controls src="https://cdn.233xyx.com/1682503497664_231.mp4"></video>
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnqpWy9HieWYRXND6rd1IP4b.png)
+- 相关接口：
+
+```ts
+//设置天空球整体为红色
+this.sky.skyDomeTint = new Type.LinearColor(255,0,0)
+```
+
+### 2.5. 渐变功能
+#### 2.5.1. 是否开启渐变效果
+
+![](https://cdn.233xyx.com/1682503517307_065.png)
 
 开启渐变效果时，开发者可对天空球顶层、上层和下层进行编辑。顶层、上层、下层的颜色将会与天空球整体颜色进行乘法。
+- 是否开启渐变效果：勾选后，渐变效果生效；若不勾选，开发者所选的天空球顶层/上层/下层颜色均不会生效。
+- 相关接口：
 
-- **是否开启渐变效果：**勾选后，渐变效果生效；若不勾选，开发者所选的天空球顶层/上层/下层颜色均不会生效。
+```ts
+//开启天空球渐变效果
+this.sky.skyDomeGradientEnable = true;
+//关闭天空球渐变效果
+this.sky.skyDomeGradientEnable = false;
+```
 
-  - **天空球顶层颜色：**天空球的 65-100% 部分，若开启渐变效果，将与天空球整体色调进行乘法。
-  - **天空球上层颜色：**天空球的 50-64% 部分，若开启渐变效果，将与天空球整体色调进行乘法。
-  - **天空球下层颜色：**天空球的 0-49% 部分，若开启渐变效果，将与天空球整体色调进行乘法。
-  - **地平线渐出：**影响地平线的渐变宽度，范围为 1-20。此值越小，两相邻部分之间的颜色交替部分越宽；此值越大，两相邻部分之间的颜色交替部分越窄。
+#### 2.5.2. 天空球顶层颜色
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnpJJbwok3KVMs2RwP5Hs3sf.png)
+- 天空球顶层颜色：天空球的65-100%部分，若开启渐变效果，将与天空球整体色调进行乘法。
+- 相关接口：
+
+```ts
+//设置天空球顶层颜色
+this.sky.skyDomeTopTint = new Type.LinearColor(255,0,0);
+```
+
+#### 2.5.3. 天空球上层颜色
+
+- 天空球上层颜色：天空球的50-64%部分，若开启渐变效果，将与天空球整体色调进行乘法。
+- 相关接口：
+
+```ts
+//设置天空球上层颜色
+this.sky.skyDomeHorizontalTint = new Type.LinearColor(255,0,0);
+```
+
+#### 2.5.4. 天空球下层颜色
+
+- 天空球下层颜色：天空球的0-49%部分，若开启渐变效果，将与天空球整体色调进行乘法。
+- 相关接口：
+
+```ts
+//设置天空球下层颜色
+this.sky.skyDomeBotTint = new Type.LinearColor(255,0,0);
+```
+
+#### 2.5.5. 地平线渐出
+
+- 地平线渐出：影响地平线的渐变宽度，范围为1-20。此值越小，两相邻部分之间的颜色交替部分越宽；此值越大，两相邻部分之间的颜色交替部分越窄。
+- 效果图：
 
 地平线渐出值为 1 时，上层（红）和下层（黄）的交替效果
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0txNcUVwMR1vwos89lgqde.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnpJJbwok3KVMs2RwP5Hs3sf.png)
 
 地平线渐出值为 20 时，上层（红）和下层（黄）的交替效果
 
-#### 2.4. 星星
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0txNcUVwMR1vwos89lgqde.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbWhzkEGmIbWdyC7kmW2pnf.png)
+- 实际应用：在用户选择了天空球贴图时，天空效果已经达到了预期效果，就不需要调整渐变效果，可以选择关闭渐变效果。如果不满足预期，则需要开启渐变效果，对天空球的效果进行微调。天空球贴图和渐变颜色会进行叠加。
+- 相关接口：
 
-- **是否开启星星：**开启时，可以修改星星的属性，并且天空球中将会添加星星效果；关闭时，星星不会出现在天空中。
+```ts
+//设置地平线渐出效果
+this.sky.skyDomeHorizontalFallOff = 10;
+```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnXxV09ljF4oH4IQ9IxvH1mg.png)
+### 2.6. 星星功能
+#### 2.6.1. 是否开启星星
 
-开启星星
+![](https://cdn.233xyx.com/1682503535583_495.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZnDkd6gxMCNFfhZBYal39g.png)
+- 是否开启星星：开启时，可以修改星星的属性，并且天空球中将会添加星星效果；关闭时，星星不会出现在天空中。
+<div style="text-align: center">开启星星</div>
 
-关闭星星效果
+![](https://cdn.233xyx.com/1682503547892_253.png)
 
-- **星星贴图：**改变星星贴图，可以改变星星的效果。
-- **星星亮度：**用以控制天空中所有星星的亮度，范围为 0-1。亮度越大，星星越明亮；亮度越小，星星越暗淡。
+<div style="text-align: center">关闭星星</div>
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcndtEHrqNb4fZJBvTbhhuCSb.png)
+![](https://cdn.233xyx.com/1682503558853_822.png)
+- 相关接口：
 
-亮度 0.5
+```ts
+//设置地平线渐出效果
+this.sky.skyDomeHorizontalFallOff = 10;
+```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnp5IYXfOC8wHuoQY7qAGwUj.png)
+#### 2.6.2. 星星贴图
 
-亮度 1.0
+- 星星贴图：改变星星贴图，可以改变星星的效果。
+- 相关接口：
 
-- **星星密度：**用以控制天空中星星的数量，范围为 0-100。密度越大，星星越多并且越小；密度越小，星星越小并且越大。
+```ts
+//设置天空球的星星贴图
+this.sky.starTextureAssetByID = "";
+```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn3mstn5r6wpvP5lqn81ieJf.png)
+**注意**目前我们仅有一种星星贴图，后续会添加更多贴图资源。
 
-密度 10
+#### 2.6.3. 星星亮度
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFtyi6x15SY7i7p9HDqSSEK.png)
+- 星星亮度：用以控制天空中所有星星的亮度，范围为0-1。亮度越大，星星越明亮；亮度越小，星星越暗淡。
 
-密度 50
+<div style="text-align: center">亮度 0.6</div>
 
-#### 2.5. 太阳
+![](https://cdn.233xyx.com/1682503571421_018.png)
+
+<div style="text-align: center">亮度 0.9</div>
+
+![](https://cdn.233xyx.com/1682503583457_187.png)
+
+- 相关接口：
+
+```ts
+//设置天空球的星星亮度
+this.sky.starIntensity = 1;
+```
+
+
+#### 2.6.4. 星星密度
+
+- 星星密度：用以控制天空中星星的数量，范围为0-100。密度越大，星星越多并且越小；密度越小，星星越小并且越大。
+
+<div style="text-align: center">密度10</div>
+
+![](https://cdn.233xyx.com/1682503595741_340.png)
+
+<div style="text-align: center">密度20</div>
+
+![](https://cdn.233xyx.com/1682503608986_950.png)
+
+- 相关接口：
+
+```ts
+//设置天空球的星星密度
+this.sky.starTiling = 10;
+```
+
+### 2.7. 太阳
+#### 2.7.1. 是否开启太阳
+
+
+
+
+
+
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSnzUsjRHe8NzJDaEIXItrd.png)
 
