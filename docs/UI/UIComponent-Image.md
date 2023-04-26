@@ -14,8 +14,6 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOZaMDsHZ10veG8iHNcCDpT.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnfEl86wIvL8jByILMOXjba.png)
-
 #### 图片大小
 
 - 图片资源的初始大小，他的改变并不会影响实际效果。
@@ -32,15 +30,13 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncdWvlVMuyxTQz6U6HMvyZc.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1HLpdo25K95PPmGBY27NDh.png)
-
-#### 无
+##### 无
 
 - 不执行任何绘制工作，则效果为空。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnPlC9fvxqpqwOaYNgAv08nl.png)
 
-#### 九宫格
+##### 九宫格
 
 - 九宫格是将一张图分割为 9 块，四个角(1,3,7,9)在缩放的时候是保持大小不变，图块 2，8 仅当宽度变化时缩放宽度，图块 4，6 仅当高度变化时缩放高度，图块 5 当图片大小发生变化，宽度和高度都进行缩放。
 - 举例说明：当我们拉伸圆角矩形的图片时会导致图片失真。如果我们选择九宫格绘制模式，将(1,3,7,9)四个角固定，那么拉伸时就不会影响圆角的形状，也不会出现失真的情况。
@@ -51,7 +47,7 @@
 
 - 九宫格类型的图片边距单位是比例，比如左边距=0.5 时，1,4,7 三个图块的宽度为整张图片宽度的 0.5 倍。
 
-#### 边界绘制
+##### 边界绘制
 
 - 边界绘制也是将一张图分割为 9 块，四个角(1,3,7,9)在缩放的时候是保持大小不变，图块 2，8 仅当宽度变化时缩放宽度，图块 4，6 仅当高度变化时缩放高度，与九宫格不同的是扣掉了图块 5。
 
@@ -61,13 +57,13 @@
 
 - 边界绘制的图片边距单位是比例，比如左边距=0.5 时，1,4,7 三个块的宽度为整张图片宽度的 0.5 倍
 
-#### 图片
+##### 图片
 
 - 正常绘制一张图片
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnCG6OG8ZLNMCowBElsZU7xb.png)
 
-#### 九宫格（像素单位）
+##### 九宫格（像素单位）
 
 - 九宫格（像素单位）的效果与九宫格一样，只是图片边距属性的单位不同
 
@@ -94,7 +90,7 @@
 
 ### 示例一：动态生成一张图片并设置绘制类型
 
-比如我们希望在游戏中使用这张图作为 UI 界面的底图（GUID：128701，原尺寸 252*120），并且希望将其尺寸改为正方形且放大，同时不希望改变图片外圈的宽度，这时候就需要使用九宫格绘制类型了；这些操作可以在属性面板中完成，而下面将演示如何在脚本中动态完成这些操作
+比如我们希望在游戏中使用这张图作为 UI 界面的底图（GUID：128701，原尺寸 252*120），并且希望将其尺寸改为正方形且放大，同时不希望改变图片外圈的宽度，导致轮廓变形（如下图），这时候就需要使用九宫格绘制类型了；这些操作可以在属性面板中完成，而下面将演示如何在脚本中动态完成这些操作
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnzjzd76fH7lYS6cfxoLX0Cb.png)
 
@@ -104,7 +100,7 @@
 //找到对应的UI文件
         const base = (this.uiObject) as UI.UserWidget;
         //找到容器
-        const canvas = (base.findChildByPath("MWCanvas")) as UI.Canvas; 
+        const canvas = (base.findChildByPath("Canvas")) as UI.Canvas; 
         //新建一个图片控件
         let image= UI.Image.newObject(canvas,"NewUI_1") as UI.Image
         //设置图片的位置、大小、资源
@@ -120,4 +116,4 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwwT0YO3QdL4dHWpjSMNLkf.png)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467995051_243.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334819_566.7z)

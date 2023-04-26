@@ -1,13 +1,14 @@
 # 脚本的生命周期
 
-**阅读本文大概需要 15 分钟**
-
+::: tip **阅读本文大概需要 15 分钟**
+:::
 ## 什么是生命周期
 
 生命周期就是指一个对象从诞生到死亡
 
 > 生命周期（Life Cycle）的概念应用很广泛，特别是在政治、经济、环境、技术、社会等诸多领域经常出现，其基本涵义可以通俗地理解为“从摇篮到坟墓”（Cradle-to-Grave）的整个过程。而对于脚本而言，生命周期代表着一个脚本从激活（Activate）到销毁（Destroy）的全过程，也代表着代码中脚本函数的执行过程与执行顺序。
   
+![](https://cdn.233xyx.com/athena/online/8db445bee7e24ff49777060d3d129449_11843170.webp)
 ## 脚本的生命周期包括什么
 
 #### onStart( ) : void
@@ -340,14 +341,14 @@ export default class TestEvents extends Core.Script {
 
 #### 开启 onUpdate 函数
 
-**useUpdate 的值默认为 false**
+::: tip **useUpdate 的值默认为 false**
 
 必须手动修改 useUpdate 为 true 时，onUpdate 函数才会执行
-
+:::
 #### 异步函数
-
-在 onStart 中，我们经常使用异步寻找等函数或语法
+::: tip 在 onStart 中，我们经常使用异步寻找等函数或语法
 
 在使用异步的时候，要将函数添加 async 标识
 
 例：protected async onStart(): Promise`<void>` { }
+:::

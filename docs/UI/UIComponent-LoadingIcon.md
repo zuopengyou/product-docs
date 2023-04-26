@@ -14,8 +14,6 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6Qbx3hqC6rqPSHeu1p47iw.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHef13XPCNxShFmcQZUjvnh.png)
-
 - 图片数量
 
   - 功能说明：加载图中包含的图片总数
@@ -27,4 +25,4 @@
 
 - 图片资源
 
-  - 功能说明：配置加载图所用的图片资源，图片相关属性介绍请见 [2.图片](https://meta.feishu.cn/wiki/wikcnFg4z5zLX0puYIncTBIJGtf)
+  - 功能说明：配置加载图所用的图片资源，图片相关属性介绍请见 [UI 控件-图片](https://docs.ark.online/UI/UIComponent-Image.html)

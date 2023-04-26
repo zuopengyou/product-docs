@@ -73,18 +73,18 @@
 ```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
-    Character: Gameplay.Character;
+    character: Gameplay.Character;
 
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //找到对应的跳跃按钮
-        const JumpBtn = this.uiWidgetBase.findChildByPath('MWCanvas/MWButton_Jump') as UI.StaleButton
+        const jumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
         //点击跳跃按钮,异步获取人物后执行跳跃
-        JumpBtn.onPressed.add(()=>{
+        jumpBtn.onPressed.add(()=>{
                 Gameplay.asyncGetCurrentPlayer().then((player) => {
-                    this.Character = player.character;
+                    this.character = player.character;
                     //角色执行跳跃功能
-                    this.Character.jump();
+                    this.character.jump();
                 });
             })   
     }
@@ -120,22 +120,22 @@ export default class UIDefault extends UI.UIBehavior{
 ```ts
 @UI.UICallOnly('')
 export default class UIDefault extends UI.UIBehavior{
-    IsMan:boolean = false;
+    isMan:boolean = false;
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //找到两个性别按钮
-        const button_girl = this.uiWidgetBase.findChildByPath('MWCanvas/button_girl') as UI.Button;
-        const button_boy = this.uiWidgetBase.findChildByPath('MWCanvas/button_boy') as UI.Button;
+        const button_girl = this.uiWidgetBase.findChildByPath('Canvas/button_girl') as UI.Button;
+        const button_boy = this.uiWidgetBase.findChildByPath('Canvas/button_boy') as UI.Button;
         
         //点击性别女按钮时，是否为男的条件就为否，并且执行一遍角色性别选择的方法
         button_girl.onPressed.add(() => {
-            this.IsMan = false;
+            this.isMan = false;
             this.SexSelected(button_boy, button_girl);
         });
     
         //点击性别男按钮时，是否为男的条件就为真，并且执行一遍角色性别选择的方法
         button_boy.onPressed.add(() => {
-            this.IsMan = true;
+            this.isMan = true;
             this.SexSelected(button_boy, button_girl);
         });
     }
@@ -143,8 +143,8 @@ export default class UIDefault extends UI.UIBehavior{
     //性别选择的方法
     SexSelected(button_boy: UI.Button,button_girl:UI.Button) {
         //是否为男性？是的话，男性按钮图案为“120373”，不是的话，男性按钮图案为“120783”；女性按钮则完全相反
-        this.IsMan ? button_boy.normalImageGuid="120373" : button_boy.normalImageGuid="120783";
-        this.IsMan ? button_girl.normalImageGuid="120783" : button_girl.normalImageGuid="120373";
+        this.isMan ? button_boy.normalImageGuid="120373" : button_boy.normalImageGuid="120783";
+        this.isMan ? button_girl.normalImageGuid="120783" : button_girl.normalImageGuid="120373";
     }
 }
 ```
@@ -153,7 +153,7 @@ export default class UIDefault extends UI.UIBehavior{
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncN6X8J7UwoM4XtWQUXFJ5g.gif)
 
-- 以上两个示例的工程文件：[点击下载](https://cdn.233xyx.com/1681467997121_657.7z)
+- 以上两个示例的工程文件：[点击下载](https://cdn.233xyx.com/1682231334712_831.7z)
 
 ### **示例三：制作活动页签选择按钮**
 
@@ -179,36 +179,36 @@ export enum PropSelect {
 @UI.UICallOnly('')
 export default class activity extends activity_generate {
     
-    PlayerPropSelect: PropSelect = PropSelect.Prop1;
+    playerPropSelect: PropSelect = PropSelect.Prop1;
 
     protected onStart() { 
         //点击页签按钮1时，页签选择为页签1，并且执行一遍页签选择的方法
         this.mBtn.onPressed.add(() => {
-            this.PlayerPropSelect = PropSelect.Prop1;
+            this.playerPropSelect = PropSelect.Prop1;
             this.Prop_Select(this.mBtn, this.mBtn1, this.mBtn2, this.mBtn3)
         });
 
         //点击页签按钮2时，页签选择为页签2，并且执行一遍页签选择的方法
         this.mBtn1.onPressed.add(() => {
-            this.PlayerPropSelect = PropSelect.Prop2;
+            this.playerPropSelect = PropSelect.Prop2;
             this.Prop_Select(this.mBtn, this.mBtn1, this.mBtn2, this.mBtn3)
         });
         //点击页签按钮3时，页签选择为页签3，并且执行一遍页签选择的方法
         this.mBtn2.onPressed.add(() => {
-            this.PlayerPropSelect = PropSelect.Prop3;
+            this.playerPropSelect = PropSelect.Prop3;
             this.Prop_Select(this.mBtn, this.mBtn1, this.mBtn2, this.mBtn3)
         });
 
         //点击页签按钮4时，页签选择为页签4，并且执行一遍页签选择的方法
         this.mBtn3.onPressed.add(() => {
-            this.PlayerPropSelect = PropSelect.Prop4;
+            this.playerPropSelect = PropSelect.Prop4;
             this.Prop_Select(this.mBtn, this.mBtn1, this.mBtn2, this.mBtn3)
         })
     }
 
     //创建一个页签选择的方法：判断条件为页签选择是哪个页签
     Prop_Select(Btn1: UI.StaleButton, Btn2: UI.StaleButton, Btn3: UI.StaleButton, Btn4: UI.StaleButton) {
-        switch (this.PlayerPropSelect) {
+        switch (this.playerPropSelect) {
             //页签选择为页签1时，按钮的颜色效果
             case PropSelect.Prop1:
                 {
@@ -254,4 +254,4 @@ export default class activity extends activity_generate {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwQg1Pv8mqmSF3t3XJFkw8c.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467996837_795.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334664_593.7z)

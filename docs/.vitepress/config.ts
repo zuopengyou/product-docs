@@ -19,11 +19,20 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     logo: '/logo.png',
     sidebar: [
       {
+        text: 'index',
+        link: '/index.md',
+        collapsible: false,
+        collapsed: false,
+        items: [
+          { text: '手册介绍', link: '/index.md' },
+          { text: '安装需求', link: '/Editor/InstallationRequirements.md' }
+        ]
+      },
+      {
         text: '编辑器',
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '安装需求', link: '/Editor/InstallationRequirements.md' },
           { text: '编辑器设置', link: '/Editor/EditorSettings.md' },
           { text: '编辑器窗口操作', link: '/Editor/EditorWindowsOperation.md' },
           {
@@ -43,7 +52,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         ]
       },
       {
-        text: '用户界面',
+        text: 'UI',
         collapsible: true,
         collapsed: true,
         items: [
@@ -223,6 +232,16 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       {
         text: '论坛',
         link: 'https://forum.ark.online/'
+      },
+      {
+        text: '024 版本',
+        items: [
+          {
+            text: '025 META',
+            link: 'https://docs-025.ark.online/',
+            path: true
+          }
+        ]
       }
     ],
     outline: [2, 4],
