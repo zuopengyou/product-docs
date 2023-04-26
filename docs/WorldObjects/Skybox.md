@@ -301,6 +301,7 @@ this.sky.skyDomeHorizontalFallOff = 10;
 ![](https://cdn.233xyx.com/1682503535583_495.png)
 
 - 是否开启星星：开启时，可以修改星星的属性，并且天空球中将会添加星星效果；关闭时，星星不会出现在天空中。
+
 <div style="text-align: center">开启星星</div>
 
 ![](https://cdn.233xyx.com/1682503547892_253.png)
@@ -308,6 +309,7 @@ this.sky.skyDomeHorizontalFallOff = 10;
 <div style="text-align: center">关闭星星</div>
 
 ![](https://cdn.233xyx.com/1682503558853_822.png)
+
 - 相关接口：
 
 ```ts
