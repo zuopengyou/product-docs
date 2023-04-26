@@ -4,7 +4,7 @@
 
 在编辑器中，我们为世界对象中的环境光提供了简洁的属性选项，用户可根据需求调整环境光的强度和色调，制作出明朗或昏暗、白色或其他颜色的环境光效果。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnr5oFqcseRIKaf1OqhGiiZg.png)
+![]()
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfSyvbtkg557F2phSGUqMXf.png)
 
