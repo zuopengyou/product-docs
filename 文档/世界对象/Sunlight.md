@@ -49,12 +49,15 @@ this.Light.pitchAngle = -30;
 - 属性说明：开发者可通过滑动滚轮调整光照强度。
 - 数值范围：0-100。
 <div style="text-align: center">强度为0时候的地面</div>
+
 ![](https://cdn.233xyx.com/1682496758313_708.PNG)
 
 <div style="text-align: center">强度为50时候的地面</div>
+
 ![](https://cdn.233xyx.com/1682496924716_543.PNG)
 
 <div style="text-align: center">强度为100时候的地面</div>
+
 ![](https://cdn.233xyx.com/1682496937447_114.PNG)
 
 - 相关接口：
@@ -104,9 +107,11 @@ this.Light.lightColor = new Type.LinearColor(255,240,200);
 - 投射阴影：是否启动阴影效果。
 
 <div style="text-align: center">有阴影</div>
+
 ![](https://cdn.233xyx.com/1682496962624_098.PNG)
 
 <div style="text-align: center">无阴影</div>
+
 ![](https://cdn.233xyx.com/1682496976042_699.PNG)
 
 - 阴影距离：影响阴影的视觉表现。
@@ -114,11 +119,13 @@ this.Light.lightColor = new Type.LinearColor(255,240,200);
   - 此值越大，图越模糊，阴影像素越大。
 
 <div style="text-align: center">阴影距离为5000</div>
+
 ![](https://cdn.233xyx.com/1682496995125_331.PNG)
 
 - 此值越小，图越清晰，阴影像素越小。
 
 <div style="text-align: center">阴影距离为1000</div>
+
 ![](https://cdn.233xyx.com/1682497007917_744.PNG)
 
 - 相关接口：
