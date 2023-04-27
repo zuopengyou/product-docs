@@ -149,3 +149,24 @@ export default class UIDefault extends UI.UIBehavior{
 详见产品手册【UI控件的基础属性】中的【UI文件（自定义UI）的整体属性——Root属性】部分
 :::
 ![](https://cdn.233xyx.com/1681467996265_583.png)
+
+### 示例二：制作用于滚动框中的按钮，使其支持点击且拖拽时滑动滚动框
+
+- 当滚动框中容纳了较多按钮时，我们会发现按在按钮上并拖拽时无法滑动滚动框
+
+![](https://cdn.233xyx.com/1682403771056_233.gif)
+
+- 如果在将滑动框内按钮的touchMethod(触摸模式) 修改为 UI.ButtonTouchMethod.PreciseTap(精准点击模式)，按下按钮并且拖拽时，会立刻取消按钮的按压状态并且改为操作滚动框滑动
+
+![](https://cdn.233xyx.com/1682403771023_876.gif)
+- 脚本示例：
+```ts
+    //修改按钮触摸模式
+    changeBtnMethod(): void {
+        for(let i = 1; i < 7; i++) {
+            (this["btn"+i] as UI.Button).touchMethod = UI.ButtonTouchMethod.PreciseTap;
+        }
+    }
+```
+
+- 工程文件：  [点击下载](https://cdn.233xyx.com/1682403770986_332.7z)
