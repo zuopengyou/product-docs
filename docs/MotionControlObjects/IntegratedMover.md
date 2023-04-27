@@ -77,7 +77,8 @@
 ### 动态创建运动器
 ```ts
 /*
-端通过spawnGameObject()动态创建运动器，需要注意被绑定的对象是双端状态时，需要在双端创建运动器；被绑定的对象是客端户时，需要在对应的客户端进行创建。
+端通过spawnGameObject()动态创建运动器，需要注意被绑定的对象是双端状态时，需要在服务端创建运动器；被绑定的对象是客端户时，需要在对应的客户端进行创建运动器；
+运动器创建后，要绑定到需要运动的对象子级，来驱使父级对象进行运动。
 */
 let og = Core.GameObject.find("3B158A4E") as Gameplay.StaticMesh;  //获取场景中需要运动的静态模型，需要确认该模型属性中已设置为非静态状态；
 let IntegratedMoverOg = Core.GameObject.spawnGameObject("PhysicsSports") as Gameplay.IntegratedMover;  //动态创建一个运动器功能对象
