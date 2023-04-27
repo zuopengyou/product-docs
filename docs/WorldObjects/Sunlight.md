@@ -20,7 +20,7 @@
 - 数值范围：【-180,180】
 - 演示效果：
 
-<video controls src="(https://cdn.233xyx.com/1682496673529_626.mp4)"></video>
+<video controls src="https://cdn.233xyx.com/1682496673529_626.mp4"></video>
 
 - 相关接口：
 
