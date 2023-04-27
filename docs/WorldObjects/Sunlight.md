@@ -35,7 +35,7 @@ this.Light.yawAngle = 30;
 - 数值范围：【-90,90】
 - 演示效果：
 
-<video controls src="(https://cdn.233xyx.com/1682496689797_482.mp4)"></video>
+<video controls src="https://cdn.233xyx.com/1682496689797_482.mp4"></video>
 
 - 相关接口：
 
@@ -177,4 +177,4 @@ this.Light.temperature = 4000;
 
 - 示意图：
 
-<video controls src="(https://cdn.233xyx.com/1682497111605_636.mp4)"></video>
+<video controls src="https://cdn.233xyx.com/1682497111605_636.mp4"></video>
