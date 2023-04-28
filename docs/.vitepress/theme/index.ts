@@ -12,12 +12,12 @@ export default {
     watch(route, () => {
       zoom?.detach()
       setTimeout(() => {
-        zoom = mediumZoom('img', { background: 'var(--vp-c-bg)' })
+        zoom = mediumZoom('.main img', { background: 'var(--vp-c-bg)' })
       })
     })
 
     onMounted(() => {
-      zoom = mediumZoom('img', { background: 'var(--vp-c-bg)' })
+      zoom = mediumZoom('.main img', { background: 'var(--vp-c-bg)' })
     })
   }
 }
