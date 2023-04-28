@@ -371,96 +371,262 @@ this.sky.starTiling = 10;
 ### 2.7. 太阳
 #### 2.7.1. 是否开启太阳
 
+![](https://cdn.233xyx.com/1682503622187_817.png)
 
+- 是否开启太阳：开启时，可以修改太阳的属性，并且天空球中将会添加太阳效果；关闭时，太阳不会出现在天空中，取而代之，天空中会显示为月亮，如果月亮也为关闭状态，则都不会显示。
 
+**＃注意＃** 当太阳和月亮同时开启的时，无论大小，永远只显示太阳。
 
+<video controls src="https://cdn.233xyx.com/1682503634129_159.mp4"></video>
 
+- 相关接口：
 
+```ts
+//开启太阳功能
+this.sky.sunEnable = true;
+//关闭太阳功能
+this.sky.sunEnable = false;
+```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSnzUsjRHe8NzJDaEIXItrd.png)
+#### 2.7.2. 太阳贴图
 
-- **是否开启太阳：**开启时，可以修改太阳的属性，并且天空球中将会添加太阳效果；关闭时，太阳不会出现在天空中。
+- 太阳贴图：改变太阳贴图，可以改变太阳的效果。
 
-**＃注意＃** 当太阳和月亮同时开启的时，无论大小，永远只显示太阳：
+<video controls src="https://cdn.233xyx.com/1682503647447_200.mp4"></video>
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnvjwgQBzW0cYIgOrnDkGMCb.gif)
+- 相关接口：
 
-- **太阳贴图：**改变太阳贴图，可以改变太阳的效果。
-- **太阳亮度：**用以控制天空中太阳的亮度，范围为 0-2000。亮度越大，太阳越明亮；亮度越小，太阳越暗淡。下图分别为亮度 0、200、2000 的太阳表现效果
+```ts
+//设置太阳的贴图
+this.sky.sunTextureAssetByID = "";
+```
+
+#### 2.7.3. 太阳亮度
+
+- 太阳亮度：用以控制天空中太阳的亮度，范围为0-2000。亮度越大，太阳越明亮；亮度越小，太阳越暗淡。下图分别为亮度0、200、2000的太阳表现效果。
+
+<div style="text-align: center">太阳亮度为0</div>
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnjyBXgmaGTUk9CzEpZUIPh.png)
 
+<div style="text-align: center">太阳亮度为200</div>
+
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnWLUBVwdV6yJVLid9ugwyb.png)
+
+<div style="text-align: center">太阳亮度为2000</div>
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnurpCXk4brlNWJbbEgupnbb.png)
 
-- **太阳颜色：**太阳的颜色。
-- **太阳大小：**太阳的大小，范围为 0-100。
+- 相关接口：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnm4btnrquxBU6jKR5sDdyTd.png)
+```ts
+//设置太阳光的强度
+this.sky.sunIntensity = 1;
+```
 
-大小为 10
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn7heIAyGt6kf0Bo5m4CAw0e.png)
+#### 2.7.4. 太阳颜色
 
-大小为 50
+- 太阳颜色：太阳的颜色。
 
-#### 2.6. 月亮
+<video controls src="https://cdn.233xyx.com/1682503668242_777.mp4"></video>
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnDipHjkPhIPtPrpN23GmFgc.png)
+- 相关接口：
 
-- **是否开启月亮：**开启时，可以修改月亮的属性，并且天空球中将会添加月亮效果；关闭时，月亮不会出现在天空中。
+```ts
+//设置太阳光的颜色
+this.sky.sunTint = new Type.LinearColor(255, 0, 0);
+```
 
-  - **月亮贴图：**改变月亮贴图，可以改变月亮的效果。
-  - **月亮亮度：**用以控制天空中月亮的亮度，范围为 0-2000。亮度越大，月亮越明亮；亮度越小，月亮越暗淡。下图分别为亮度 0、200、2000 的月亮表现效果
+#### 2.7.5. 太阳大小
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnsVyLf6tdnajtfzGFfvQgtg.png)
+- 太阳大小：太阳的大小，范围为0-100。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnRj2RAblzrqo8g6sWOzBemg.png)
+<video controls src="https://cdn.233xyx.com/1682503697707_583.mp4"></video>
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYtlf0gXXqNIwoALsoHfK1b.png)
+- 相关接口：
 
-- **月亮颜色：**月亮的颜色。
-- **月亮大小：**月亮的大小，范围为 0-100。
+```ts
+//设置太阳光大小
+this.sky.sunSize = 20;
+```
+### 2.8. 月亮
+#### 2.8.1. 是否开启月亮
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxd2OFbzGoDbrjWFH2ZpZvd.png)
+![](https://cdn.233xyx.com/1682503711191_434.png)
 
-大小为 10
+- 是否开启月亮：开启时，可以修改月亮的属性，并且天空球中将会添加月亮效果；关闭时，月亮不会出现在天空中。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmvBg131iiGdZafyfyIHYfb.png)
+**＃注意＃** 当太阳和月亮同时开启的时，无论大小，永远只显示太阳。
 
-大小为 50
+- 相关接口：
 
-#### 2.7. 云
+```ts
+//开启月亮功能
+this.sky.moonEnable = true;
+//关闭月亮功能
+this.sky.moonEnable = false;
+```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnAxtgXV2CdzxkJvBR8tbQLb.png)
+#### 2.8.2. 月亮贴图
 
-- **是否开启云：**开启时，可以修改云的属性，并且天空球中将会添加云效果；关闭时，云不会出现在天空中。
+- 月亮贴图：改变月亮贴图，可以改变月亮的效果。
 
-  - **云贴图：**改变云贴图，可以改变云的效果。
-  - **云透明度：**云的透明效果，范围为 0-1。透明度越小，云越透明；透明度越大，云越明显。
+<video controls src="https://cdn.233xyx.com/1682503723627_205.mp4"></video>
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxbGGwXd5RsCcXuSr4ZV6Zg.png)
+- 相关接口：
 
-透明度 0.2 的云
+```ts
+//月亮的贴图
+this.sky.moonTextureAssetByID = "";
+```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTABGkKRZQEpf8iLP1AvZec.png)
+#### 2.8.3. 月亮亮度
 
-透明度 0.8 的云
+- 月亮亮度：用以控制天空中月亮的亮度，范围为0-2000。亮度越大，月亮越明亮；亮度越小，月亮越暗淡。下图分别为亮度0、200、2000的月亮表现效果
 
-- **云颜色：**云的颜色。
-- **云密度：**云在天空中显示的密度范围，范围为 0-1。密度越大，云的样式就越”稀疏“；密度越小，云的样式就越“紧凑”。
+<div style="text-align: center">月亮亮度为0</div>
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHkfiqlbr7IvMMW28i1AjPh.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnjyBXgmaGTUk9CzEpZUIPh.png)
 
-密度 0.2 的云
+<div style="text-align: center">月亮亮度为200</div>
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnPw2AGYZNlKbtnOaHXyjU8b.png)
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnnWLUBVwdV6yJVLid9ugwyb.png)
 
-密度 0.8 的云
+<div style="text-align: center">月亮亮度为2000</div>
 
-- **云速度：**云在天空中的移动速度，范围为 0-10。速度越大，云的移动速度就越快；速度越小，云的移动速度就越慢。
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnurpCXk4brlNWJbbEgupnbb.png)
 
-速度为 10
+- 相关接口：
 
-### 如何通过 API 动态修改天空球的属性？
+```ts
+//设置月亮光的强度
+this.sky.moonIntensity = 1;
+```
+
+
+#### 2.8.4. 月亮颜色
+
+- 月亮颜色：月亮的颜色。
+
+<video controls src="https://cdn.233xyx.com/1682503749052_967.mp4"></video>
+
+- 相关接口：
+
+```ts
+//设置月亮的颜色
+this.sky.moonTint = new Type.LinearColor(255, 0, 0);
+```
+
+#### 2.8.5. 月亮大小
+
+- 月亮大小：月亮的大小，范围为0-100。
+
+<video controls src="https://cdn.233xyx.com/1682503763470_450.mp4"></video>
+
+- 相关接口：
+
+```ts
+//设置月亮大小
+this.sky.moonSize = 20;
+```
+
+### 2.9. 云
+#### 2.9.1. 是否开启云
+
+![](https://cdn.233xyx.com/1682503780829_589.png)
+
+- 是否开启云：开启时，可以修改云的属性，并且天空球中将会添加云效果；关闭时，云不会出现在天空中。
+
+- 相关接口：
+
+```ts
+//开启云功能
+this.sky.cloudEnable = true;
+//关闭云功能
+this.sky.cloudEnable = false;
+```
+
+#### 2.9.2. 云贴图
+
+- 云贴图：改变云贴图，可以改变云的效果。
+
+<video controls src="https://cdn.233xyx.com/1682503793529_983.mp4"></video>
+
+- 相关接口：
+
+```ts
+//设置云贴图
+this.sky.cloudTextureAssetByID = "";
+```
+
+#### 2.9.3. 云透明度
+
+- 云透明度：云的透明效果，范围为0-1。透明度越小，云越透明；透明度越大，云越明显。
+
+<div style="text-align: center">透明度0.2的云</div>
+
+![](https://cdn.233xyx.com/1682503812487_646.png)
+
+<div style="text-align: center">透明度0.8的云</div>
+
+![](https://cdn.233xyx.com/1682503823763_547.png)
+
+- 相关接口：
+
+```ts
+//设置云透明度
+this.sky.cloudOpacity = 1;
+```
+
+#### 2.9.4. 云颜色
+
+- 云颜色：云的颜色。
+
+<video controls src="https://cdn.233xyx.com/1682503833922_480.mp4"></video>
+
+- 相关接口：
+
+```ts
+//设置云的颜色
+this.sky.cloudTint = new Type.LinearColor(255, 0, 0);
+```
+#### 2.9.5. 云密度
+
+- 云密度：云在天空中显示的密度范围，范围为0-1。密度越大，云的样式就越”稀疏“；密度越小，云的样式就越“紧凑”。
+
+<div style="text-align: center">密度0.3的云</div>
+
+![](https://cdn.233xyx.com/1682503849986_851.png)
+
+<div style="text-align: center">密度0.8的云</div>
+
+![](https://cdn.233xyx.com/1682503862536_463.png)
+
+- 相关接口：
+
+```ts
+//设置云密度
+this.sky.cloudDensity = 1;
+```
+
+#### 2.9.6. 云速度
+
+- 云速度：云在天空中的移动速度，范围为0-10。速度越大，云的移动速度就越快；速度越小，云的移动速度就越慢。
+
+<div style="text-align: center">云速度为1</div>
+
+<video controls src="https://cdn.233xyx.com/1682503876717_865.mp4"></video>
+
+<div style="text-align: center">云速度为10</div>
+
+<video controls src="https://cdn.233xyx.com/1682503893006_980.mp4"></video>
+
+- 相关接口：
+
+```ts
+//设置云速度
+this.sky.cloudSpeed = 1;
+```
+
+## 3. 如何制作生成天空球贴图？
