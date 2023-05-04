@@ -162,10 +162,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '网络同步原理和结构',
             link: '/Scripting/NetworkSynchronizationStructureandMechanics.md'
           },
-          {
-            text: '接入社交功能(MGS)',
-            link: '/Scripting/EnablingSocialFeatures(MGS).md'
-          },
           { text: '共享数据', link: '/Scripting/DataSharing.md' }
         ]
       },
