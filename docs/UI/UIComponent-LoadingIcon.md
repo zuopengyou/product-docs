@@ -8,7 +8,7 @@
 
 **加载图**是一种用于制作正提示加载状态动画的控件。
 
-- 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
+- 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://docs.ark.online/UI/UIWidget-BaseProperties.html)
 
 ## 加载图属性
 
