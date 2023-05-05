@@ -12,7 +12,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTB5Q4G2flxf04mpnAGmSJT.gif)
 
-- 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
+- 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://docs.ark.online/UI/UIWidget-BaseProperties.html)
 
   - 注意：如果不作为按钮使用时，请将可见性修改为可见不可交互仅自身（SelfHitTestInvisible）
 
