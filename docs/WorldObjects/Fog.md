@@ -256,20 +256,6 @@ this.fog.fogHeightFalloff = 0.7;
 this.fog.fogInscatteringColor = new Type.LinearColor(255, 0, 0);
 ```
 
-#### 2.1 是否启用
-
-- 更改天空球贴图：从左侧资源管理器拖出要更换的天空球贴图，拖拽到右侧属性面板→天空球贴图处松开。
-- 效果图：
-
-<video controls src="https://cdn.233xyx.com/1682503451594_188.mp4"></video>
-
-- 相关接口：
-
-```ts
-//设置天空球贴图
-this.sky.skyDomeTextureAssetByID = "32676"
-```
-
 #### 2.7 雾最大透明度
 
 - 属性说明：控制雾的最大不透明度。值为1时雾完全不透明，值为0时雾基本不可见。
