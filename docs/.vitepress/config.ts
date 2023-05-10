@@ -181,6 +181,14 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             link: '/Localization/GameLanguageLocalization.md'
           }
         ]
+      },
+      {
+        text: 'Rlease Note',
+        collapsible: true,
+        collapsed: true,
+        items: [
+          { text: 'v024.0.2', link: '/ReleaseNote/024/V0.24.0.2.md' }
+        ]
       }
     ],
     algolia: {
