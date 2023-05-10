@@ -8,7 +8,7 @@
 
 **图片**是 2D 平面模式下显示的静态的高保真效果图，该图片内容可以替换。
 
-- 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://meta.feishu.cn/wiki/wikcn5pYngyHnkkrJlz8bLMhC9e)
+- 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://docs.ark.online/UI/UIWidget-BaseProperties.html)
 
 ## 图片属性-样式
 
