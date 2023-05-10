@@ -183,7 +183,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         ]
       },
       {
-        text: 'Rlease Note',
+        text: 'Release Note',
         collapsible: true,
         collapsed: true,
         items: [
