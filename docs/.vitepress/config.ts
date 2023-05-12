@@ -118,6 +118,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '点光源', link: '/GameplayObjects/PointLight.md' },
           { text: '非玩家对象', link: '/GameplayObjects/NPCs.md' },
           { text: '音效', link: '/GameplayObjects/SoundEffect.md' }
+          { text: '特效', link: '/GameplayObjects/Effects.md' }
         ]
       },
       {
@@ -140,6 +141,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '角色', link: '/WorldObjects/Characters.md' },
           { text: '后处理', link: '/WorldObjects/Post-Processing.md' },
           { text: '天空球', link: '/WorldObjects/Skybox.md' }
+          { text: '环境雾', link: '/WorldObjects/Fog.md' }
         ]
       },
       {
