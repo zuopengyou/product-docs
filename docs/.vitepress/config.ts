@@ -117,7 +117,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '禁行区', link: '/GameplayObjects/BlockingArea.md' },
           { text: '点光源', link: '/GameplayObjects/PointLight.md' },
           { text: '非玩家对象', link: '/GameplayObjects/NPCs.md' },
-          { text: '音效', link: '/GameplayObjects/SoundEffect.md' }
+          { text: '音效', link: '/GameplayObjects/SoundEffect.md' },
           { text: '特效', link: '/GameplayObjects/Effects.md' }
         ]
       },
@@ -140,7 +140,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '摄像机', link: '/WorldObjects/Camera.md' },
           { text: '角色', link: '/WorldObjects/Characters.md' },
           { text: '后处理', link: '/WorldObjects/Post-Processing.md' },
-          { text: '天空球', link: '/WorldObjects/Skybox.md' }
+          { text: '天空球', link: '/WorldObjects/Skybox.md' },
           { text: '环境雾', link: '/WorldObjects/Fog.md' }
         ]
       },
@@ -185,11 +185,26 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         ]
       },
       {
-        text: 'Release Note',
+        text: '更新日志',
         collapsible: true,
         collapsed: true,
         items: [
-          { text: 'v024.0.2', link: '/ReleaseNote/024/V0.24.0.2.md' }
+          { text: 'v0.22.0.0', link: '/ReleaseNote/v0.22.0.0.md' },
+          { text: 'v0.23.0.0', link: '/ReleaseNote/v0.23.0.0.md' },
+          { text: 'v0.24.0.0', link: '/ReleaseNote/v0.24.0.0.md' },
+          { text: 'v0.24.0.1', link: '/ReleaseNote/v0.24.0.1.md' },
+          { text: 'v0.24.0.2', link: '/ReleaseNote/v0.24.0.2.md' },
+        ]
+      },
+      {
+        text: '更新辅助说明',
+        collapsible: true,
+        collapsed: true,
+        items: [
+          { text: 'Replicated使用规范', link: '/ReleaseNote/Special/Replicated使用规范.md' },
+          { text: '旧项目替换天空球的操作步骤', link: '/ReleaseNote/Special/旧项目替换天空球的操作步骤.md' },
+          { text: '世界UI调整', link: '/ReleaseNote/Special/世界UI调整.md' },
+          { text: '预制体重构项目升级教程及注意事项', link: '/ReleaseNote/Special/预制体重构项目升级教程及注意事项.md' }
         ]
       }
     ],
