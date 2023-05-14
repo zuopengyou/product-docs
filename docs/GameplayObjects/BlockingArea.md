@@ -1,208 +1,239 @@
 # 禁行区
-
-| 修改日期           | 修改人 | 修改内容 | 所属编辑器版本 |
-| ------------------ | ------ | -------- | -------------- |
-| 2022 年 9 月 28 日 | 廖悦吾 | 文档创建 | 015            |
-|                    |        |          |                |
-
+::: info
 **阅读本文预计 10 分钟**
 
-本文概述了禁行区的工作机制，展示在编辑器创建并使用禁行区的过程和禁行区在游戏中的应用。教程内容包含禁行区功能对象的属性面板，类对象属性和接口以及一个示例工程。
+项目中经常存在一些区域对部分角色开放，对其他角色不开放的情况。可以使用【禁行区】给某一个区域添加进出权限管理能力完成上述使用场景。通过【禁行区】我们可以给角色动态设置通行权限，阻挡玩家角色进入或者限制玩家角色的活动范围。
+:::
+# 禁行区对象
+【禁行区】是一种功能对象，在项目中用来控制一片区域对其他对象的通行权限。你可以自定义【禁行区】的属性来控制区域的位置，大小和旋转。在检测到对象接近区域边缘后，【禁行区】会检测该对象是否有通过权限并返回对应的碰撞结果。你可以在【本地资源库】中的【游戏功能对象】栏中找到【禁行区】。
 
-## 什么是禁行区
+![img](https://arkimg.ark.online/1684047518629-11.webp)
 
-禁行区是一个针对角色对象进行碰撞判定的区域。禁行区可以阻挡玩家角色进入，限制玩家角色的活动范围。例如 moba 游戏中开始时无法走出基地，或者某些地图场景需要对不同的玩家设置不同的进入权限。
+# 创建禁行区
 
-禁行区在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是禁行区，资源 ID 为 117。
+## 通过放置资源创建：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6SQO23y9h8OiEwugoPZnaf.png)
+【禁行区】本身作为一个游戏对象可以放置于游戏场景中。你可以从【本地资源库】中的【游戏功能对象】栏将【禁行区】拖入【场景】或者【对象管理器】来创建对象。
 
-## 禁行区 都包含什么
+1. 在【本地资源库】的【游戏功能对象】栏中找到【禁行区】
 
-#### 禁行区的工作流程图：
+![img](https://arkimg.ark.online/1684047518627-1.webp)
 
-#### 禁行区包含的属性：该对象无私有属性
+2. 将对象拖入到场景中或者【对象管理器】
 
-#### 禁行区包含的接口：
+![img](https://arkimg.ark.online/1684047518627-2.webp)
 
-| 接口名                        | 描述                                                                             | 作用端 | 参数                                                             | 返回类型 |
-| ----------------------------- | -------------------------------------------------------------------------------- | ------ | ---------------------------------------------------------------- | -------- |
-| `setPlayerCanPass`            | 设置玩家通过该区域屏障权限                                                       | 调用端 | Target: number （玩家 ID）<br/>CanPass: boolean（是否通过）      | void     |
-| `getPlayerCanPass`            | 获取玩家是否拥有通过该区域屏障权限,结果需要监听 getPlayerStateResponse()的返回值 | 调用端 | Target: number （玩家 ID）                                       | boolean  |
-| `getPlayerStateResponse`      | 获取玩家是否拥有通过该区域屏障权限的响应回调,结果将赋值到传入的参数              | 调用端 | 无                                                               | unknown  |
-| `blockAllPlayer`              | 让该禁行区阻挡所有玩家                                                           | 调用端 | 无                                                               | boolean  |
-| `releaseAllPlayer`            | 让该禁行区可通过所有玩家                                                         | 调用端 | 无                                                               | boolean  |
-| `setNonCharacterActorCanPass` | 设置非角色 Actor 的通过权限,是针对目标这一类 Actor 生效,而非单个对象             | 调用端 | targetActor: any （目标 Actor）<br/>canPass: boolean（是否通过） | void     |
+3. 在右侧【对象管理器】中【对象】栏找到对应的【禁行区】对象并自定义它的属性
 
-## 如何合理利用 / 使用 禁行区
+![img](https://arkimg.ark.online/1684047518627-3.webp)![img](https://arkimg.ark.online/1684047518627-4.webp)
 
-#### 在编辑器工作区中直接使用：
+## 通过脚本创建：
 
-1. **将****禁行区****拖入场景并自定义它的位移、旋转、缩放。**
+通过脚本你也可以在游戏运行时通过【本地资源库】中的【禁行区】资源ID："Projectile" 动态生成一个【禁行区】对象来使用。在【工程内容】下的脚本目录中新建一个脚本文件，将脚本拖入【对象管理器】中【对象】栏。选中脚本进行编辑，将下列示例代码替换脚本中的`onStart`方法：异步生成一个【禁行区】对象，开启双端同步，位置为（300，0，50），旋转为（0，0，0），缩放倍数为（1，1，1）。打印生成【禁行区】对象的guid。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnNE4bAcaxY0w5b88zKd4eDb.png)
+```TypeScript
+protected async onStart(): Promise<void> {
+    if(SystemUtil.isServer()) {
+        let wall = await Core.GameObject.asyncSpawn({guid: "BlockingVolume", replicates: true, transform: new Transform(new Type.Vector(300, 0, 50), Type.Rotation.zero, Type.Vector.one)}) as Gameplay.BlockingVolume;
+        console.log("wall guid: " + wall.guid);
+    }
+}
+```
 
-1. **创建控制禁行区的脚本，可以拖入对象栏。禁行区默认为静态，取消勾选静态状态后，脚本也可以挂在禁行区底下。**
+此处我们也可以通过`spawn`接口生成，但是需要将【禁行区】资源拖入【优先加载栏】或者将【禁行区】资源进行【预加载】来保证生成后我们不需要等待资源下载而导致后续代码失效。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnqwDMZ5AjQfdFg4xYQa3Vdb.png)
+```TypeScript
+// 预加载资源，将下列代码粘贴到脚本中的onStart方法之前
+@Core.Property()
+preloadAssets: string = "BlockingVolume"
+```
+::: tip
+【禁行区】是一个空间的概念，不仅可以阻止外部的角色进入，同时也可以阻止内部的角色出去。
+:::
+# 自定义禁行区
 
-1. 在脚本中给禁行区设置权限，操作它对角色的阻挡效果
+【禁行区】的transform属性将决定它的位置，朝向，大小。而自身函数能给角色动态设置通行权限。在【对象管理器】中【对象】栏找到对应的【禁行区】对象，选中后我们可以查看它的属性面板，通过属性面板我们可以修改它的部分属性。需要注意的是发射【禁行区】需要调用它提供的函数，编辑器修改属性主要是提前配置好它的轨迹参数，方便在脚本中直接使用。
 
-```ts
-// 通过GUID异步获取对象，保证对象获取到后对它进行操作
-MWCore.GameObject.asyncFind("230F0F9745C50B66FDD9228466DB4FC3").then((obj) => {
+![img](https://arkimg.ark.online/1684047518627-5.webp)
+::: tip
+【禁行区】的自定义属性主要就是transform，其他属性对它的功能来说没有太多意义。
+:::
+## 禁行区位置
 
-        let block = obj as GamePlay.BlockingArea;
-        
-        // 监听本地事件，所有角色可通过
-        Events.addLocalListener("releaseAll", () => {
-                console.error("releaseAll");
-                block.releaseAllPlayer();
-        });
+【禁行区】的位置由继承自父类`GameObject`的`worldLocation`世界位置属性和`relativeLocation`相对位置属性控制，可读可写。你可以在属性面板中修改场景中【禁行区】对象的位置，也可以在代码中动态读写【禁行区】对象的属性来控制它的位置。
 
-        // 监听本地事件，所有角色不可通过
-        Events.addLocalListener("blockAll", () => {
-                console.error("blockAll");
-                block.blockAllPlayer();
-        });
+![img](https://arkimg.ark.online/1684047518627-6.webp)
 
-        // 监听本地事件，对某个角色可通过
-        Events.addLocalListener("releaseOne", (charaName: string) => {
-                console.error("releaseOne");
-                this.releaseOne(block, charaName)
-        });
+```TypeScript
+if(SystemUtil.isServer()) {
+    let wall = await Core.GameObject.asyncSpawn({guid: "BlockingVolume", replicates: true, transform: new Transform(new Type.Vector(300, 0, 50), Type.Rotation.zero, Type.Vector.one)}) as Gameplay.BlockingVolume;
+    wall.worldLocation = new Type.Vector(300, 0, 50);
+    console.log("wall worldLocation: " + wall.worldLocation);
+}
+```
 
-        // 监听本地事件，对某个角色不可通过
-        Events.addLocalListener("blockOne", (charaName: string) => {
-                console.error("blockOne");
-                this.blockOne(block, charaName)
+## 禁行区旋转
+
+【禁行区】的旋转由继承自父类`GameObject`的`worldRotation`世界旋转属性和`relativeRotation`相对旋转属性控制，可读可写。你可以在属性面板中修改场景中【禁行区】对象的旋转，也可以在代码中动态读写【禁行区】对象的属性来控制它的位置。
+
+![img](https://arkimg.ark.online/1684047518628-7.webp)
+
+```TypeScript
+if(SystemUtil.isServer()) {
+    let wall = await Core.GameObject.asyncSpawn({guid: "BlockingVolume", replicates: true, transform: new Transform(new Type.Vector(300, 0, 50), Type.Rotation.zero, Type.Vector.one)}) as Gameplay.BlockingVolume;
+    wall.worldRotation = new Type.Rotation(45, 0, 0);
+    console.log("wall worldRotation: " + wall.worldRotation);
+}
+```
+
+## 禁行区大小
+
+【禁行区】的大小可以由继承自父类`GameObject`的`worldScale`世界缩放属性和`relativeScale`相对缩放属性控制，可读可写。当【禁行区】形状为盒体时，XYZ值分别表示盒体的长宽高。当【禁行区】形状为球体时，XY值无效，Z值表示球体半径。此外在代码中，为了突出修改的属性对应的形状，可以使用`setBoxExtent`接口去设置盒体【禁行区】的长宽高，或者使用`setSphereRadius`接口去设置球体【禁行区】的半径。
+
+![img](https://arkimg.ark.online/1684047518628-8.webp)
+
+```TypeScript
+// 通过scale属性设置禁行区大小
+if(SystemUtil.isServer()) {
+    let wall = await Core.GameObject.asyncSpawn({guid: "BlockingVolume", replicates: true, transform: new Transform(new Type.Vector(300, 0, 50), Type.Rotation.zero, Type.Vector.one)}) as Gameplay.BlockingVolume;
+    wall.worldScale = new Type.Vector(2, 2, 2);
+    wall.worldScale = new Type.Vector(300, 0, 50);
+    console.log("wall worldScale: " + wall.worldScale);
+}
+```
+
+# 使用禁行区
+
+## 获取禁行区对象
+
+### 【对象管理器】中【对象】栏下的【禁行区】对象：
+
+**使用`asyncFind`接口通过【禁行区】对象的GUID去获取：**
+
+1. 选中【禁行区】对象后右键点击【复制对象ID】获取它的GUID。此处注意区分【禁行区】资源的GUID和【禁行区】对象的GUID。
+
+![img](https://arkimg.ark.online/1684047518628-9.webp)
+
+2. 将脚本拖入对象管理器下，用下列代码替换脚本中的`onStart`方法：代码将异步查找ID对应的对象以【禁行区】对象进行接收。
+
+```TypeScript
+protected async onStart(): Promise<void> {
+    if(SystemUtil.isServer()) {
+        let wall = await Core.GameObject.asyncFind("13CB1A8B") as Gameplay.BlockingVolume;
+        console.log("wall guid " + wall.guid);
+    }
+}
+```
+
+**使用脚本挂载的方式进行获取：**
+
+1. 选中【禁行区】对象，将脚本挂载到【禁行区】对象下方
+
+![img](https://arkimg.ark.online/1684047518629-10.webp)
+
+2. 在脚本的onStart方法中添加下列代码：代码获取脚本挂载的对象并以【禁行区】对象进行接收
+
+```TypeScript
+let wall = this.gameObject as Gameplay.BlockingVolume;
+```
+
+### 动态生成的【禁行区】对象：
+
+将下列示例代码替换脚本中的`onStart`方法：示例代码在客户端往`asyncSpawn`接口（中传入【禁行区】的资源ID“BlockingVolume”异步生成了一个对应的【禁行区】对象。
+
+```TypeScript
+protected async onStart(): Promise<void> {
+    if(SystemUtil.isServer()) {
+        let wall = await Core.GameObject.asyncSpawn({guid: "BlockingVolume", replicates: true, transform: new Transform(new Type.Vector(300, 0, 50), Type.Rotation.zero, Type.Vector.one)}) as Gameplay.BlockingVolume;
+        console.log("wall guid: " + wall.guid);
+    }
+}
+```
+
+## 设置单个对象的通行权限
+
+【禁行区】通过`addPassableTarget`和`removePassableTarget`两个接口来设置具体对象的通行权限。当对象获得通过【禁行区】的权限后可以自由通行，未获得权限的对象会受到阻挡（如果对象本身需具备碰撞能力）。将下列示例代码复制到脚本中的`onStart`方法中：首先获取脚本挂载的【禁行区】对象。在客户端获取本地玩家角色后添加两个按键方法：按下“1”键给本地角色添加该【禁行区】的通过权限；按下“2”键给本地角色移除该【禁行区】的通过权限；
+
+```TypeScript
+let wall = this.gameObject as Gameplay.BlockingVolume;
+
+        if(SystemUtil.isClient()) {
+            Gameplay.asyncGetCurrentPlayer().then((player) => {
+                let myself = player.character;
                 
-        });
-        
-        // 循环获取角色通过信息
-        setInterval(() => {
-                this.status(block);
-        }, 100);
+                InputUtil.onKeyDown(Type.Keys.One, () => {
+                    wall.addPassableTarget(myself);
+                });
 
-});
-
-
-
-// RPC函数
-@MWCore.MWFunction(MWCore.MWServer)
-private releaseOne(block: GamePlay.BlockingArea, charaName: string) {
-    let playerArray = GamePlay.getAllPlayers();
-    for(let player of playerArray) {
-        if(player.character.characterName === charaName) {
-            block.setPlayerCanPass(player.getPlayerID(), true);
-            return;
+                InputUtil.onKeyDown(Type.Keys.Two, () => {
+                    wall.removePassableTarget(myself);
+                });
+            });
         }
-    }
-}
+```
 
-@MWCore.MWFunction(MWCore.MWServer)
-private blockOne(block: GamePlay.BlockingArea, charaName: string) {
-    let playerArray = GamePlay.getAllPlayers();
-    for(let player of playerArray) {
-        if(player.character.characterName === charaName) {
-            block.setPlayerCanPass(player.getPlayerID(), false);
-            return;
+<video src="C:/Users/admin/Downloads/20230510-151129.mp4"></video>
+
+## 获取对象是否有通行权限
+
+【禁行区】提供`getTargetPassable`接口去获取当前对象是否有通行权限。将下列示例代码补充到上例中：每次设置完本地角色的通过权限后打印结果。
+
+```TypeScript
+let wall = this.gameObject as Gameplay.BlockingVolume;
+
+        if(SystemUtil.isClient()) {
+            Gameplay.asyncGetCurrentPlayer().then((player) => {
+                let myself = player.character;
+                
+                InputUtil.onKeyDown(Type.Keys.One, () => {
+                    wall.addPassableTarget(myself);
+                    console.log("passable: " + wall.getTargetPassable(myself));
+                });
+
+                InputUtil.onKeyDown(Type.Keys.Two, () => {
+                    wall.removePassableTarget(myself);
+                    console.log("passable: " + wall.getTargetPassable(myself));
+                });
+            });
         }
-    }
-}
+```
 
-@MWCore.MWFunction(MWCore.MWServer)
-private status(block: GamePlay.BlockingArea) {
-    block.getPlayerStateResponse();
-    let playerArray = GamePlay.getAllPlayers();
-    let s = "ReleaseAll不改变权限,只是不再检测\n";
-    for(let player of playerArray) {
-        let res = block.getPlayerCanPass(player.getPlayerID());
-        if(res) {
-            s += `${player.character.characterName} 可通过\n`;
-        } else {
-            s += `${player.character.characterName} 不可通过\n`;
+## 对整个禁行区设置通行权限
+
+【禁行区】通过`clear`和`unblockAll`两个接口来设置具体场景内所有对象的通行权限。调用`clear`接口后，所有对象的通过权限都将被移除；调用`unblockAll`接口后，所有对象都将添加该【禁行区】的通过权限；将下列示例代码补充到上例中：添加两个按键方法：按下“3”键给所有角色移除该【禁行区】的通过权限；按下“4”键给所有角色添加该【禁行区】的通过权限；
+
+```TypeScript
+let wall = this.gameObject as Gameplay.BlockingVolume;
+
+        if(SystemUtil.isClient()) {
+            Gameplay.asyncGetCurrentPlayer().then((player) => {
+                let myself = player.character;
+                
+                InputUtil.onKeyDown(Type.Keys.One, () => {
+                    wall.addPassableTarget(myself);
+                    console.log("passable: " + wall.getTargetPassable(myself));
+                });
+
+                InputUtil.onKeyDown(Type.Keys.Two, () => {
+                    wall.removePassableTarget(myself);
+                    console.log("passable: " + wall.getTargetPassable(myself));
+                });
+                
+                InputUtil.onKeyDown(Type.Keys.Three, () => {
+                    wall.clear();
+                    console.log("passable: " + wall.getTargetPassable(myself));
+                });
+
+                InputUtil.onKeyDown(Type.Keys.Four, () => {
+                    wall.releaseAll();
+                    console.log("passable: " + wall.getTargetPassable(myself));
+                });
+            });
         }
-    }
-    Events.dispatchToAllClient("status", s);
-}
 ```
 
-1. **通过接口对禁行区进行其他操作：让投掷物也能通过（投掷物相关具体请查看投掷物文档说明）**
+::: tip
 
-```ts
-MWCore.GameObject.asyncFind("230F0F9745C50B66FDD9228466DB4FC3").then((obj) => {
-    // 监听本地事件，对投掷物可通过
-    Events.addLocalListener("switchProjectileActorCanPass", () => {
-    console.error("switchProjectileActorCanPass");
-    this.releasePro(block, this.isPass);
-    this.isPass = !this.isPass;
-    });
-});
+【禁行区】请尽量放置在场景中，不推荐动态生成。此外【禁行区】不支持重叠使用。
 
-
-
-MWCore.GameObject.asyncFind("D7F04A064DE1F9BB4D30839D27FDBEC1").then((obj) => {
-    let pro = obj as GamePlay.Projectile;
-    let loc = pro.location.clone();
-    let rot = pro.rotation.clone();
-    pro.onProjectileInterrupt.add(() => {
-        pro.setLocationAndRotation(loc, rot);
-    });
-
-    // 监听本地事件，发射投掷物
-    Events.addLocalListener("launch", () => {
-        console.error("launch");
-        this.launch(pro);
-    });
-});
-
-
-//RPC函数
-@MWCore.MWFunction(MWCore.MWServer)
-private releasePro(block: GamePlay.BlockingArea, flag: boolean) {
-    MWCore.GameObject.asyncFind("D7F04A064DE1F9BB4D30839D27FDBEC1").then((obj) => {
-        let pro = obj as GamePlay.Projectile;
-        block.setNonCharacterActorCanPass(pro, flag);
-    });
-    
-}
-
-@MWCore.MWFunction(MWCore.MWServer)
-private launch(pro: GamePlay.Projectile) {
-        pro.launch();
-}
-```
-
-#### 在代码中动态生成
-
-1. 将禁行区功能对象拖入优先加载栏，或者在代码中预加载禁行区的资源 ID，不然需要使用异步 Spawn 才能使用对应资源
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHv4zRfb3z9u40RvJMOhLWg.png)
-
-```ts
-@MWCore.MWProperty()
-preloadAssets: string = "117";
-```
-
-1. 动态 spawn 禁行区后通过与上述代码一样对它进行操作
-
-```ts
-// 异步spawn，没有找到资源时会下载后在生成
-MWCore.GameObject.asyncSpawnGameObject("117").then((obj) => {
-    let block = obj as GamePlay.BlockingArea;
-}
-```
-
-```ts
-// 普通spawn生成，没有优先加载或预加载资源则无法生成
-let block = MWCore.GameObject.spawnGameObject("117") as GamePlay.BlockingArea;
-```
-
-## 使用 禁行区 的注意事项与建议
-
-1. 禁行区不支持单端使用，因为双端角色位置无法同步
-2. getPlayerCanPass 接口暂时无法使用
-3. 不要直接将对象坐标更新至禁行区内，会引发不可预料的问题
-
-## 项目案例
+:::
