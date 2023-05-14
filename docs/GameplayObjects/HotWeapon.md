@@ -1,389 +1,659 @@
 # 热武器
+::: info
+**阅读本文预计 20 分钟**
 
-| 修改日期           | 修改人 | 修改内容 | 所属编辑器版本 |
-| ------------------ | ------ | -------- | -------------- |
-| 2022 年 9 月 28 日 | 廖悦吾 | 文档创建 | 015            |
-|                    |        |          |                |
+编辑器提供【热武器】对象来帮助用户自定义具有独特体验的发射类武器，创造良好的战斗体验。【热武器】对象涵盖发射、换弹、瞄准、上膛、射击精度、后坐力一共六个功能模块来模拟发射类武器的工作机制，用户可以在触发相应事件时执行对应的游戏逻辑。
+:::
+# 热武器对象
 
-**阅读本文预计 10 分钟**
+【热武器】是一个发射类武器的功能框架，框架内实现发射、换弹、瞄准、上膛、射击精度、后坐力六个功能模块来模拟发射类武器的工作机制。开发者可以决定是否启用这些功能并自定义功能中相关的各种属性。通过不同的属性配置来模拟不同类型武器的表现。【热武器】在工作流中会触发关键事件方便用户准确把握【热武器】当前的工作状态，同时执行对应的游戏逻辑：例如开火时播放枪口特效，发射子弹，播放音效等等。你可以在【本地资源库】中的【游戏功能对象】栏中找到【热武器】。
 
-本文概述了热武器的工作机制，展示在编辑器创建并使用热武器的过程和热武器在游戏中的应用。教程内容包含热武器功能对象的属性面板，类对象属性和接口以及一个示例工程。
+![img](https://arkimg.ark.online/1684045718029-20.webp)
 
-## 什么是热武器
+# 创建热武器
 
-热武器是一个提供发射类武器完整功能框架的对象。框架涵盖发射、换弹、瞄准、上膛、射击精度、后坐力一共六个组件来模拟发射类武器的工作机制并执行相关工作逻辑。开发者可以决定启用哪些组件并自定义组件内的各种属性，通过不同的配置实现不同的武器工作流程和表现。此外热武器框架中还提供多个时间点的回调方便开发者准确把握热武器的状态同时执行自己的逻辑：例如开火时播放枪口特效，发射子弹，播放音效等等。
+## 通过放置资源创建：
 
-热武器在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是热武器，资源 ID 为 20638。
+【热武器】本身作为一个游戏对象可以放置于游戏场景中。你可以从【本地资源库】中的【游戏功能对象】栏将【热武器】拖入【场景】或者【对象管理器】来创建对象。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcneG6x0SdKL88h7BS59faJVb.png)
+1. 在【本地资源库】的【游戏功能对象】栏中找到【热武器】
 
-## 热武器 都包含什么
+![img](https://arkimg.ark.online/1684045718023-1.webp)
 
-#### 热武器的工作流程图：
+2. 将对象拖入到场景中或者【对象管理器】
 
-#### 热武器包含的属性：
+![img](https://arkimg.ark.online/1684045718023-2.webp)
 
-| 属性名                    | 描述           | 类型                                                      |
-| ------------------------- | -------------- | --------------------------------------------------------- |
-| `delegateEquipOnServer`   | 服务器装备回调 | Common.MulticastDelegate<(EquipOwner: $Nullable) => void> |
-| `delegateEquipOnClient`   | 客户端装备回调 | Common.MulticastDelegate<(EquipOwner: $Nullable) => void> |
-| `delegateUnEquipOnServer` | 服务器卸载回调 | Common.MulticastDelegate<() => void>                      |
-| `delegateUnEquipOnClient` | 客户端卸载回调 | Common.MulticastDelegate<() => void>                      |
-| `accuracyOfFireComponent` | 射击精度功能   | MWSysHotWeaponAccuracyOfFireComponent                     |
-| `aimComponent`            | 瞄准功能       | MWSysHotWeaponAimComponent                                |
-| `fireComponent`           | 射击功能       | MWSysHotWeaponFireComponent                               |
-| `loadComponent`           | 上膛功能       | MWSysHotWeaponLoadComponent                               |
-| `reloadComponent`         | 换弹功能       | MWSysHotWeaponReloadComponent                             |
-| `recoilForceComponent`    | 后坐力组件     | MWSysHotWeaponRecoilForceComponent                        |
+3. 在右侧【对象管理器】中【对象】栏找到对应的【热武器】对象并自定义它的属性
 
-#### 热武器包含的接口：
+![img](https://arkimg.ark.online/1684045718024-3.webp)![img](https://arkimg.ark.online/1684045718024-4.webp)
 
-| 接口名                                 | 描述                                                                                                                                                                                                                                                                                                                      | 作用端         | 参数                                                                              | 返回类型            |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | --------------------------------------------------------------------------------- | ------------------- |
-| `getOpenRecoilForceComponent`          | 获取是否开启后坐力组件                                                                                                                                                                                                                                                                                                    | 调用端         | 无                                                                                | boolean             |
-| `setOpenRecoilForceComponent`          | 设置是否开启后坐力组件，默认开启                                                                                                                                                                                                                                                                                          | 服务器         | Inval: boolean（后坐力组件是否启用）                                              | void                |
-| `getOpenReloadComponent`               | 获取是否开启换弹组件                                                                                                                                                                                                                                                                                                      | 调用端         | 无                                                                                | boolean             |
-| `setOpenReloadComponent`               | 设置是否开启换弹组件，默认开启                                                                                                                                                                                                                                                                                            | 服务器         | Inval: boolean（换弹组件是否启用）                                                | void                |
-| `getOpenLoadComponent`                 | 获取是否开启上膛组件                                                                                                                                                                                                                                                                                                      | 调用端         | 无                                                                                | boolean             |
-| `setOpenLoadComponent`                 | 设置是否开启上膛组件，默认开启                                                                                                                                                                                                                                                                                            | 服务器         | Inval: boolean（上膛组件是否启用）                                                | void                |
-| `getOpenAccuracyOfFireComponent`       | 获取是否开启射击精度组件                                                                                                                                                                                                                                                                                                  | 调用端         | 无                                                                                | boolean             |
-| `setOpenAccuracyOfFireComponent`       | 设置是否开启射击精度组件，默认开启                                                                                                                                                                                                                                                                                        | 服务器         | Inval: boolean（射击精度组件是否启用）                                            | void                |
-| `getOpenAimComponent`                  | 获取是否开启瞄准组件                                                                                                                                                                                                                                                                                                      | 调用端         | 无                                                                                | boolean             |
-| `setOpenAimComponent`                  | 设置是否开启瞄准组件，默认开启                                                                                                                                                                                                                                                                                            | 服务器         | Inval: boolean（瞄准组件是否启用）                                                | void                |
-| `getBulletLocWhileSpawnOnScreenCenter` | 使用屏幕中心生成子弹时，获取子弹投掷物生成的 location                                                                                                                                                                                                                                                                     | 客户端         | 无                                                                                | Type.Vector         |
-| `getShootDirWithDispersion`            | 非屏幕中心生成子弹模式下，获取子弹飞行方向，该函数可传入经偏移了的屏幕中心发出的射线方向。                                                                                                                                                                                                                                | 客户端         | StartLoc: Type.Vector（子弹生成位置）<br/>ShootRange: number（最大射程）          | Type.Vector         |
-| `getCurrentOwner`                      | 获取当前热武器的所有者                                                                                                                                                                                                                                                                                                    | 调用端         | 无                                                                                | Character           |
-| `equipment`                            | 装备热武器到目标角色的指定插槽位置。<br/>- S 端调用可完成整个装备流程<br/>- C 端调用主要目的是刷新热武器 TS 层对象中关于持有者的数据<br/>- 请确保 TS 层热武器构造完成之后再调用该函数，否则可能出现 C 端没有成功获取到持有者数据的问题<br/>- 热武器加载完毕后会有回调，请在客户端能异步获取新构造的热武器后，填写后续逻辑 | 调用端自动广播 | character: Character（该武器的装备对象）<br/>socketName: string（装备的插槽名称） | void                |
-| `unEquipment`                          | 卸载热武器                                                                                                                                                                                                                                                                                                                | 调用端自动广播 | 无                                                                                | void                |
-| `setCurrentFireModel`                  | 切换设置当前开火模式，装备前只能在服务器调用，装备后可在客户端调用。                                                                                                                                                                                                                                                      | 调用端         | FireMode: MWSysHotWeaponFireMode（热武器开火模式）                                | void                |
-| `startFire`                            | 开火                                                                                                                                                                                                                                                                                                                      | 调用端自动广播 | 无                                                                                | void                |
-| `stopFire`                             | 停止开火                                                                                                                                                                                                                                                                                                                  | 调用端自动广播 | 无                                                                                | void                |
-| `reload`                               | 换弹                                                                                                                                                                                                                                                                                                                      | 调用端自动广播 | bulletSize: number（装填子弹数）                                                  | void                |
-| `breakReload`                          | 打断换弹                                                                                                                                                                                                                                                                                                                  | 调用端自动广播 | 无                                                                                | void                |
-| `load`                                 | 上膛                                                                                                                                                                                                                                                                                                                      | 调用端自动广播 | 无                                                                                | void                |
-| `breakLoad`                            | 打断上膛                                                                                                                                                                                                                                                                                                                  | 调用端自动广播 | 无                                                                                | void                |
-| `getCurrentState`                      | 获取当前热武器状态                                                                                                                                                                                                                                                                                                        | 调用端         | 无                                                                                | MWSysHotWeaponState |
-| `cloneComponentsData`                  | 从传入的热武器逻辑对象中拷贝所有组件数据，但无法拷贝代理委托绑定事件，完成拷贝后，数据同步到客户端有较短延迟。                                                                                                                                                                                                            | 服务器         | otherHotWeapon: MWSysHotWeapon<br/>（被克隆的对象）                               | void                |
+## 通过脚本创建：
 
-#### 发射组件：
+通过脚本你也可以在游戏运行时通过【本地资源库】中的【热武器】资源ID："HotWeapon" 动态生成一个【热武器】对象来使用。在【工程内容】下的脚本目录中新建一个脚本文件，将脚本拖入【对象管理器】中【对象】栏。选中脚本进行编辑，将下列示例代码替换脚本中的onStart方法：异步生成一个【热武器】对象，开启双端同步，位置为（300，0，50），旋转为（0，0，0），缩放倍数为（1，1，1）。打印生成【热武器】对象的guid。
 
-**属性：**
+```TypeScript
+protected async onStart(): Promise<void> {
+    if(SystemUtil.isServer()) {
+        let weapon = await Core.GameObject.asyncSpawn({guid: "HotWeapon", replicates: true, transform: new Transform(new Type.Vector(300, 0, 50), Type.Rotation.zero, Type.Vector.one)}) as Gameplay.HotWeapon;
+        console.log("HotWeapon guid: " + weapon.guid);
+    }
+}
+```
 
-| 属性名                              | 描述                           | 类型                                 |
-| ----------------------------------- | ------------------------------ | ------------------------------------ |
-| `delegateStartFireOnServer`         | 服务器开始开火回调             | Common.MulticastDelegate<() => void> |
-| `delegateStartFireOnClient`         | 客户端开始开火回调             | Common.MulticastDelegate<() => void> |
-| `delegateEndFireOnServer`           | 服务器结束开火回调             | Common.MulticastDelegate<() => void> |
-| `delegateEndFireOnClient`           | 客户端结束开火回调             | Common.MulticastDelegate<() => void> |
-| `delegateEndContinuousFireOnServer` | 服务器完成一次连发射击周期回调 | Common.MulticastDelegate<() => void> |
+此处我们也可以通过spawn接口生成，但是需要将【热武器】资源拖入【优先加载栏】或者将【热武器】资源进行【预加载】来保证生成后我们不需要等待资源下载而导致后续代码失效。
 
-**接口：**
+```TypeScript
+// 预加载资源，将下列代码粘贴到脚本中的onStart方法之前
+@Core.Property()
+preloadAssets: string = "HotWeapon"
+```
+::: tip
+【热武器】是一个双端同步对象，它的工作状态和各功能模块参数都是服务器作为权威进行修改。同时【热武器】为方便用户使用封装了大量客户端接口方便用户与UI操作进行衔接。由于【热武器】许多属性需要进行UI展示或者逻辑计算，推荐尽可能将操作归拢至一端以避免由于【通信延迟造成对象双端属性在某一时刻不一致】+【逻辑分散在双端】 造成的各种问题。
+:::
 
-| 接口名                                 | 描述                                                                      | 作用端             | 参数                                                        | 返回类型               |
-| -------------------------------------- | ------------------------------------------------------------------------- | ------------------ | ----------------------------------------------------------- | ---------------------- |
-| `setAnimationGuid`                     | 设置动画 GUID                                                             | 客户端调用自动广播 | guid: string（需要设置的动画 Id）                           | void                   |
-| `getAnimationGuid`                     | 获取动画 GUID                                                             | 调用端             | 无                                                          | string                 |
-| `hadAnimationGuid`                     | 是否有动画 GUID                                                           | 调用端             | 无                                                          | boolean                |
-| `getCurrentFireModel`                  | 获取当前的开火模式                                                        | 调用端             | 无                                                          | MWSysHotWeaponFireMode |
-| `setFireOnScreenCenter`                | 设置是否在屏幕中心开火                                                    | 客户端调用自动广播 | isFireOnScreenCenter: boolean<br/>（是否在屏幕中心开火）    | void                   |
-| `getFireOnScreenCenter`                | 获取是否在屏幕中心开火                                                    | 调用端             | 无                                                          | boolean                |
-| `setCurrentOffsetOfFireOnScreenCenter` | 设置屏幕中心开火时的偏移                                                  | 客户端调用自动广播 | Offest: Type.Vector（屏幕中心开火的偏移）                   | void                   |
-| `getOffsetOfFireOnScreenCenter`        | 获取屏幕中心开火时的偏移                                                  | 调用端             | 无                                                          | Type.Vector            |
-| `getFireComponentClipSize`             | 获取弹夹容量                                                              | 调用端             | 无                                                          | number                 |
-| `setCurrentMultipleShot`               | 设置一次开火发射的子弹数量                                                | 客户端调用自动广播 | count: number（一次开火发射的子弹数量）                     | void                   |
-| `getCurrentMultipleShot`               | 获取一次开火发射的子弹数量                                                | 调用端             | 无                                                          | number                 |
-| `setCurrentFireInterval`               | 设置开火间隙                                                              | 客户端调用自动广播 | interval: number（开火间隙）                                | void                   |
-| `getFireComponentFireInterval`         | 获取开火间隙                                                              | 调用端             | 无                                                          | number                 |
-| `setCurrentClipSize`                   | 设置当前弹夹容量                                                          | 客户端调用自动广播 | value: number（当前弹夹容量）                               | void                   |
-| `setCurrentBulletSize`                 | 设置当前弹夹中子弹数量                                                    | 客户端调用自动广播 | value: number（弹夹中子弹数量）                             | void                   |
-| `getCurrentClipSize`                   | 获取当前弹夹容量                                                          | 调用端             | 无                                                          | number                 |
-| `getCurrentBulletSize`                 | 获取当前弹夹中子弹数量                                                    | 调用端             | 无                                                          | number                 |
-| `getCurrentbFiring`                    | 获取当前状态下 bFiring 的值，一般用于处理全自动开火模式下的自动换弹       | 调用端             | 无                                                          | boolean                |
-| `getCurrentbIsInFullAuto`              | 获取当前状态下 bIsInFullAuto 的值，一般用于处理全自动开火模式下的自动换弹 | 调用端             | 无                                                          | boolean                |
-| `setCurrentbIsInFullAuto`              | 设置当前状态下 bIsInFullAuto 的值，一般用于处理全自动开火模式下的自动换弹 | 客户端调用自动广播 | isInFullAuto: boolean<br/>（当前状态下 bIsInFullAuto 的值） | void                   |
+# 自定义热武器
 
-#### 射击精度组件：
+## **发射功能：**
 
-**属性：**
+【发射】是热武器工作流中必须开启的功能，功能中定义了与发射相关的属性并提供相关接口。【发射】功能在【热武器】对象中作为一个功能组件对象存在：`fireComponent`，通过它我们可以定义武器发射表现。`fireComponent`的部分属性可以在属性面板进行配置，也可以通过代码去读写。`animationGuid`属性用来指定发射动作；`currentFireModel`属性用来获取武器当前的发射模式（修改需要使用【热武器】本体接口，详情见后文）；`currentFireInterval`属性用来设置发射间隔；`currentClipSize`属性用来设置弹夹中的弹药数量；`currentMultipleShot`属性设置一次开火中发射的子弹数量；
 
-| 属性名                                     | 描述                             | 类型                                 |
-| ------------------------------------------ | -------------------------------- | ------------------------------------ |
-| `delegateCurrentDispersionChangedOnClient` | 客户端实际射击精度值发生变化回调 | Common.MulticastDelegate<() => void> |
+此外部分属性是动态变化的，只能在代码中读写。`currentBulletSize`属性用来表示弹夹中剩余弹药数量。
 
-**接口：**
+![img](https://arkimg.ark.online/1684045718024-5.webp)
 
-| 接口名                                  | 描述                                                                     | 作用端                                           | 参数                                                    | 返回类型 |
-| --------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------- | -------- |
-| `getRandomShootDir`                     | 获取根据射击精度角度范围定义的圆锥空间中的随机射击单位矢量（以屏幕角度） | 调用端                                           | 无                                                      | number   |
-| `setDispersionHalfAngleDefault`         | Set 子弹随机发散范围的默认半径                                           | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | NewValue: number<br/>（新设置的圆型范围默认半径值）     | void     |
-| `getDispersionHalfAngleDefault`         | Get 子弹随机发散范围的默认半径                                           | 调用端                                           | 无                                                      | number   |
-| `setDispersionHalfAngleMax`             | Set 子弹随机发散范围的最大半径                                           | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | NewValue: number<br/>（新设置的圆型范围最大半径值）     | void     |
-| `getDispersionHalfAngleMax`             | Get 子弹随机发散范围的最大半径                                           | 调用端                                           | 无                                                      | number   |
-| `setDispersionHalfAngleMin`             | Set 子弹随机发散范围的最小半径                                           | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | NewValue: number<br/>（新设置的圆型范围最小半径值）     | void     |
-| `getDispersionHalfAngleMin`             | Get 子弹随机发散范围的最小半径                                           | 调用端                                           | 无                                                      | number   |
-| `setDispersionHalfAngleDecreaseSpeed`   | Set 子弹随机发散范围半径的收缩速度                                       | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | NewValue: number<br/>（新设置的圆型范围半径每秒收缩量） | void     |
-| `getDispersionHalfAngleDecreaseSpeed`   | Get 子弹随机发散范围半径的收缩速度                                       | 调用端                                           | 无                                                      | number   |
-| `setDispersionHalfAngleIncreaseSpeed`   | Set 子弹随机发散范围半径的扩张速度                                       | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | NewValue: number<br/>（新设置的圆型范围半径每秒扩张量） | void     |
-| `getDispersionHalfAngleIncreaseSpeed`   | Get 子弹随机发散范围半径的扩张速度                                       | 调用端                                           | 无                                                      | number   |
-| `setDispersionHalfAngleIncreasePerShot` | Set 子弹随机发散范围半径在每次射击后的扩张值                             | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | NewValue: number<br/>（新设置的圆型范围半径增量）       | void     |
-| `getDispersionHalfAngleIncreasePerShot` | Get 子弹随机发散范围半径在每次射击后的扩张值                             | 调用端                                           | 无                                                      | number   |
-| `getCurrentDispersionHalfAngle`         | 获取当前子弹随机发散范围半径实际值                                       | 调用端                                           | 无                                                      | number   |
-| `getTargetDispersionHalfAngle`          | 获取目标子弹随机发散范围半径实际值                                       | 调用端                                           | 无                                                      | number   |
-
-#### 瞄准组件：
-
-**属性：**
-
-| 属性名                   | 描述                 | 类型                                 |
-| ------------------------ | -------------------- | ------------------------------------ |
-| `delegateAimStartServer` | 服务器端开始瞄准回调 | Common.MulticastDelegate<() => void> |
-| `delegateAimStartClient` | 客户端开始瞄准回调   | Common.MulticastDelegate<() => void> |
-| `delegateAimEndServer`   | 服务器端结束瞄准回调 | Common.MulticastDelegate<() => void> |
-| `delegateAimEndClient`   | 客户端结束瞄准回调   | Common.MulticastDelegate<() => void> |
-
-**接口：**
-
-| 接口名                                     | 描述                                       | 作用端             | 参数                                                                                   | 返回类型                    |
-| ------------------------------------------ | ------------------------------------------ | ------------------ | -------------------------------------------------------------------------------------- | --------------------------- |
-| `setAimming`                               | 打开/关闭瞄准                              | 客户端调用自动广播 | 无                                                                                     | void                        |
-| `setAimMode`                               | Set 瞄准时的第一/第三人称模式              | 客户端调用自动广播 | NewAimMode: MWSysHotWeaponAimMode<br/>（新设置的瞄准模式）                             | void                        |
-| `getAimMode`                               | Get 瞄准时的第一/第三人称模式              | 调用端             | 无                                                                                     | MWSysHotWeaponAimMode       |
-| setScopeTypeIndex                          | Set 模拟瞄准镜 UI 种类                     | 客户端调用自动广播 | NewScopeTypeIndex: MWSysHotWeaponCrossHairType<br/>（新的瞄准镜 UI 种类）              | void                        |
-| getScopeTypeIndex                          | Get 模拟瞄准镜 UI 种类                     |                    | 无                                                                                     | MWSysHotWeaponCrossHairType |
-| setAimmingZoom                             | Set 模拟瞄准时的瞄准镜放大倍数             | 客户端调用自动广播 | NewAimmingZoom: number<br/>（新设置的瞄准镜放大倍数）                                  | void                        |
-| getAimmingZoom                             | Get 第一人称瞄准时的瞄准镜放大倍数         | 调用端             | 无                                                                                     | number                      |
-| `setCameraOffsetDistanceInThirdPersonMode` | Set 第三人称瞄准时的连接相机弹簧组件的长度 | 客户端调用自动广播 | NewCameraOffsetDistance: number<br/>（新设置的第三人称瞄准时的连接相机弹簧组件的长度） | void                        |
-| `getCameraOffsetDistanceInThirdPersonMode` | Get 第三人称瞄准时的连接相机弹簧组件的长度 | 调用端             | 无                                                                                     | number                      |
-| `setCameraSpringArmLengthDefault`          | Set 第三人称常态下相机弹簧组件的默认长度   | 客户端调用自动广播 | NewCameraArmLength: number<br/>（新设置的连接相机弹簧组件的默认长度）                  | void                        |
-| `getCameraSpringArmLengthDefault`          | Get 第三人称常态下相机弹簧组件的默认长度   | 调用端             | 无                                                                                     | number                      |
-
-#### 上膛组件：
-
-**属性：**
-
-| 属性名                    | 描述               | 类型                                 |
-| ------------------------- | ------------------ | ------------------------------------ |
-| delegateStartLoadOnServer | 服务端上膛开始回调 | Common.MulticastDelegate<() => void> |
-| delegateStartLoadOnClient | 客户端上膛开始回调 | Common.MulticastDelegate<() => void> |
-| delegateEndLoadOnServer   | 服务端上膛结束回调 | Common.MulticastDelegate<() => void> |
-| delegateEndLoadOnClient   | 客户端上膛结束回调 | Common.MulticastDelegate<() => void> |
-
-**接口：**
-
-| 接口名             | 描述                   | 作用端             | 参数                                             | 返回类型 |
-| ------------------ | ---------------------- | ------------------ | ------------------------------------------------ | -------- |
-| `setAnimationGuid` | 设置动画 GUID          | 客户端调用自动广播 | guid: string（动画 ID）                          | void     |
-| `getAnimationGuid` | 获取绑定的动画 GUID    | 调用端             | 无                                               | string   |
-| `hadAnimationGuid` | 获取是否有动画 GUID    | 调用端             | 无                                               | boolean  |
-| `setLoadAfterFire` | 设置开火后自动上膛     | 客户端调用自动广播 | bEnabled: boolean<br/>（是否开启开火后自动上膛） | void     |
-| `getLoadAfterFire` | 获取是否开火后自动上膛 | 调用端             | 无                                               | boolean  |
-| `setLoadTime`      | 设置上膛时间           | 客户端调用自动广播 | time: number（上膛时间）                         | void     |
-| `getLoadTime`      | 获取上膛时间           | 调用端             | 无                                               | number   |
-
-#### 换弹组件：
-
-**属性：**
-
-| 属性名                        | 描述               | 类型                                 |
-| ----------------------------- | ------------------ | ------------------------------------ |
-| `delegateStartReloadOnServer` | 服务端换弹开始回调 | Common.MulticastDelegate<() => void> |
-| `delegateStartReloadOnClient` | 客户端换弹开始回调 | Common.MulticastDelegate<() => void> |
-| `delegateEndReloadOnServer`   | 服务端换弹结束回调 | Common.MulticastDelegate<() => void> |
-| `delegateEndReloadOnClient`   | 客户端换弹结束回调 | Common.MulticastDelegate<() => void> |
-
-**接口：**
-
-| 接口名             | 描述                | 作用端             | 参数                       | 返回类型 |
-| ------------------ | ------------------- | ------------------ | -------------------------- | -------- |
-| `setAnimationGuid` | 设置动画 GUID       | 客户端调用自动广播 | guid: string（动画 GUID）  | void     |
-| `getAnimationGuid` | 获取绑定的动画 GUID | 调用端             | 无                         | string   |
-| `hadAnimationGuid` | 是否有动画 GUID     | 调用端             | 无                         | boolean  |
-| `setReloadTime`    | 设置换弹时间        | 客户端调用自动广播 | time: number（新换弹时间） | void     |
-| `getReloadTime`    | 获取换弹时间        | 调用端             | 无                         | number   |
-
-#### 后坐力组件：
-
-**属性：**
-
-| 属性名                             | 描述                 | 类型                                 |
-| ---------------------------------- | -------------------- | ------------------------------------ |
-| `delegateStartRecoilForceOnServer` | 服务器后坐力开始广播 | Common.MulticastDelegate<() => void> |
-| `delegateStartRecoilForceOnClient` | 客户端后坐力开始广播 | Common.MulticastDelegate<() => void> |
-
-**接口：**
-
-| 接口名                   | 描述                   | 作用端                                           | 参数                            | 返回类型 |
-| ------------------------ | ---------------------- | ------------------------------------------------ | ------------------------------- | -------- |
-| `setHorizontalOffsetMin` | 设置水平偏移最小值     | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | value: number（水平偏移最小值） | void     |
-| `getHorizontalOffsetMin` | 获取水平偏移最小值     | 调用端                                           | 无                              | number   |
-| `setHorizontalOffsetMax` | 设置水平偏移最大值     | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | value: number（水平偏移最大值） | void     |
-| `getHorizontalOffsetMax` | 获取水平偏移最大值     | 调用端                                           | 无                              | number   |
-| `setVerticalOffsetMin`   | 设置垂直偏移最小值     | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | value: number（垂直偏移最小值） | void     |
-| `getVerticalOffsetMin`   | 获取垂直偏移最小值     | 调用端                                           | 无                              | number   |
-| `setVerticalOffsetMax`   | 设置垂直偏移最大值     | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | value: number（垂直偏移最大值） | void     |
-| `getVerticalOffsetMax`   | 获取垂直偏移最大值     |                                                  | 无                              | number   |
-| `setHorizontalJitterMin` | 设置相机水平抖动最小值 | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | value: number（水平抖动最小值） | void     |
-| `getHorizontalJitterMin` | 获取相机水平抖动最小值 | 调用端                                           | 无                              | number   |
-| `setHorizontalJitterMax` | 设置相机水平抖动最大值 | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | value: number（水平抖动最大值） | void     |
-| `getHorizontalJitterMax` | 获取相机水平抖动最大值 | 调用端                                           | 无                              | number   |
-| `setVerticalJitterMin`   | 设置相机垂直抖动最小值 | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | value: number（垂直抖动最小值） | void     |
-| `getVerticalJitterMin`   | 获取相机垂直抖动最小值 | 调用端                                           | 无                              | number   |
-| `setVerticalJitterMax`   | 设置相机垂直抖动最大值 | 装备前仅服务端<br/>装备后双端<br/>客户端调用广播 | value: number（垂直抖动最大值） | void     |
-| `getVerticalJitterMax`   | 获取相机垂直抖动最大值 | 调用端                                           | 无                              | number   |
-| `getHorizontalOffset`    | 获取水平偏移值         | 调用端                                           | 无                              | number   |
-| `getVerticalOffset`      | 获取垂直偏移值         | 调用端                                           | 无                              | number   |
-| `getHorizontalJitter`    | 获取水平抖动值         | 调用端                                           | 无                              | number   |
-| `getVerticalJitter`      | 获取垂直抖动值         | 调用端                                           | 无                              | number   |
-
-#### 热武器相关枚举：
-
-| 枚举                        | 元素                                                                                                                                                                                                                           |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| MWSysHotWeaponFireMode      | /** 单发 */<br/> SingleFire = 0,<br/> /** 连发 */<br/> ContinuousFire = 1,<br/> /** 全自动 */<br/> FullAutomationFire = 2                                                                                                      |
-| MWSysHotWeaponState         | /** 准备好，可以进行射击 非射机姿态 */<br/> Idle = 0,<br/> /** 换弹夹，装弹 */<br/> Reloading = 1,<br/> /** 上膛 */<br/> Loading = 2,<br/> /** 射击中 */<br/> Firing = 3                                                       |
-| MWSysHotWeaponAimMode       | /** 第一人称 */<br/> First_Person = 0,<br/> /** 第三人称 */<br/> Third_Person = 1                                                                                                                                              |
-| MWSysHotWeaponCrossHairType | /** TODO */<br/> None = 0,<br/> /** 第三人称准心 */<br/> ThirdPersonCrossHair = 1,<br/> /** 第三人称点 */<br/> ThirdPersonDot = 2,<br/> /** 第一人称准心 */<br/> FirstPersonCrossHair = 3,<br/> /** 仅用于补位 */<br/> Max = 4 |
-
-## 如何合理利用 / 使用 热武器
-
-#### **将能力对象拖入场景，开关它的组件，并自定义组件的各种属性：**
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncwml14jlGPUVkWYmJ9Gk3g.png)
-
-**发射组件（必须开启）：**
-
-- 发射动作绑定：热武器开火时播放绑定的动作（资源库拖拽）
+- 发射动作绑定：热武器开火时播放的动作（支持资源库拖拽入参）
 - 发射模式：
+  - 单发：每次执行开火时，发射1次后自动停火。
+  - 连发：每次执行开火时，发射【连发次数】次后停火。
+	![img](https://arkimg.ark.online/1684045718024-6.webp)
 
-  - 单发：每次执行开火时，发射 1 次后停火。
-  - 连发：每次执行开火时，发射“连发次数”次后停火。
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4HXrBLtY9Jxf6wG9DRiqJc.png)
-
-- 全自动：每次执行开火时持续发射，直到手动调用停火或者弹夹子弹为 0；
+  - 全自动：每次执行开火时持续发射，直到手动调用停火或者弹夹子弹为0；
 - 发射间隔：热武器发射两发子弹的最小间隔时间
 - 弹夹容量：热武器弹夹大小
 - 多重射击：每发子弹的分裂数
-- <del>屏幕中心发射：</del>
+- 屏幕中心发射：（已废弃）
+  - 发射偏移调整（已废弃）
+	![img](https://arkimg.ark.online/1684045718024-7.webp)
 
-  - <del>发射偏移调整</del>
+```TypeScript
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2CKUkut5WnmnOk5X1mXy2g.png)
+// 设置发射动画4167
+weapon.fireComponent.animationGuid = "4167";
+// 获取发射模式，当前不是全自动的话改成全自动
+if(weapon.fireComponent.currentFireModel != Gameplay.HotWeaponFireMode.FullAutomationFire) {
+    weapon.setCurrentFireModel(Gameplay.HotWeaponFireMode.FullAutomationFire);
+}
+// 修改发射间隔为0.2s
+weapon.fireComponent.currentFireInterval = 0.2;
+// 修改弹夹容量为10（规定发射次数）
+weapon.fireComponent.currentClipSize = 10;
+// 修改发射子弹数为5（规定每次发射子弹数）
+weapon.fireComponent.currentMultipleShot = 5;
+```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnS6N0G1YqoRqEX1PZguF7Eg.png)
+::: tip
 
-**发射精度组件（可选）：**
+发射间隔主要控制【连发】和【全自动】模式中的发射间隔，但是并没有屏蔽开火操作，武器发射后在间隔时间内再次调用开火还是会重新发射。弹夹容量规定了弹药上限，换弹数量不会超过弹夹容量。此外注意区分弹药数量（可以发射多少次）和发射的子弹数量（每发弹药的子弹数）。
 
-开发者可以对射击范围进行设置，更改上图锥形范围半径，调整射击精准度。
+:::
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMRdcJ04WVvwLzgonCFmdGd.png)
+## **发射精度功能：**
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn80Wfls3UHo9jQFCWwVdgUh.png)
+【发射精度】是热武器工作流中可选的功能，属性面板上可以选择该功能是否启用。功能中定义了与发射精度相关的属性并提供相关接口。【发射精度】功能在【热武器】对象中作为一个功能组件对象存在：`accuracyOfFireComponent`，通过它开发者可以对射击范围进行设置，更改发射的锥形范围半径，调整射击精准度。`accuracyOfFireComponent`的部分属性可以在属性面板进行配置，也可以通过代码去读写。`defaultDispersionHalfAngle`属性表示默认散布范围。`maxDispersionHalfAngle`属性表示最大散布范围。`minDispersionHalfAngle`属性表示最小散布范围。`dispersionHalfAngleDecreaseSpeed`属性表示范围收缩速度。`dispersionHalfAngleIncreaseSpeed`属性表示范围扩张速度。
 
-- 散布范围设置：默认散布范围半径
+此外部分属性是动态变化的，只能在代码中读写。`dispersionHalfAngleIncreaseSpeed`属性表示范围扩张速度。`dispersionHalfAngleIncreasePerShot`属性表示子弹散布范围半径在每次射击后的扩张值。
+
+![img](https://arkimg.ark.online/1684045718024-8.webp)
+
+- 散布范围设置：默认散布范围半径，不开火时范围会向默认移动
 - 最大散布范围：最大散布范围半径
-- 最小散布范围：最小散布范围半径
-- 范围收缩速度：散布范围收缩的速度
-- 范围扩张速度：散布范围扩展的速度
+- 最小散布范围：最小散布范围半径，提供上面两个参数的最低锚定值，可作为切换使用
+- 范围收缩速度：散布范围收缩的速度，过大会使范围无法扩张
+- 范围扩张速度：散布范围扩展的速度，过大会使范围扩张过快
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn82v6Pi4R94Y8oNSKO8iHie.png)
+![img](https://arkimg.ark.online/1684045718024-9.webp)![img](https://arkimg.ark.online/1684045718024-10.webp)
 
-**瞄准组件（可选）：**
+![image-20230514143221095](https://arkimg.ark.online/image-20230514143221095.webp)
+
+![20230328-103749](https://arkimg.ark.online/20230328-103749-1684051023070-4.gif)
+
+```TypeScript
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
+
+weapon.accuracyOfFireComponent.defaultDispersionHalfAngle = 10;
+weapon.accuracyOfFireComponent.maxDispersionHalfAngle = 20;
+weapon.accuracyOfFireComponent.minDispersionHalfAngle = 1;
+weapon.accuracyOfFireComponent.dispersionHalfAngleDecreaseSpeed = 10;
+weapon.accuracyOfFireComponent.dispersionHalfAngleIncreaseSpeed = 10;
+```
+
+::: tip
+
+收缩速度过快会导致范围无法扩散。使用射击进度后子弹会在范围内随机偏移。散布范围的值通常会用于准星UI范围的计算。范围的中心即是屏幕中心。
+
+:::
+
+## **瞄准功能：**
+
+【瞄准】是热武器工作流中可选的功能，属性面板上可以选择该功能是否启用。功能中定义了与瞄准相关的属性并提供相关接口。【瞄准】功能在【热武器】对象中作为一个功能组件对象存在：`aimComponent`，通过它开发者可以修改瞄准时的摄像机距离，切换瞄准状态。
+
+![img](https://arkimg.ark.online/1684045718025-12.webp)![img](https://arkimg.ark.online/1684045718025-13.webp)
 
 - 瞄准模式：
+  - 第一人称：（已废弃）
+    -   瞄准UI（已废弃）
 
-  - <del>第一人称：</del>
+    -   瞄准镜倍率（已废弃）
+    
+  - 第三人称：
 
-<del>瞄准 UI</del>
+  - 摄像机距离调整：瞄准时摄像机杆的长度变化
+  
+    ![image-20230514143412765](https://arkimg.ark.online/image-20230514143412765.webp)
 
-<del>瞄准镜倍率</del>
+```TypeScript
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
+// 设置瞄准时摄像机距离
+weapon.aimComponent.cameraOffsetDistanceInThirdPersonMode = 300
+//开启瞄准
+weapon.aimComponent.enableAiming(true);
+```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGW4zozFvzEiL8s3BOBp2xo.png)
+::: tip
 
-- 第三人称：
+瞄准切换导致的摄像机缩放过程中，不要删除【热武器】对象否则会报错。
 
-摄像机距离调整：瞄准时摄像机杆的长度变化
+:::
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnC8oxLBPbhpgia266vilu1f.png)
+## **上膛功能：**
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfonMpQUFlV7E3KEYAwNG2f.png)
+【上膛】是热武器工作流中可选的功能，属性面板上可以选择该功能是否启用。功能中定义了与上膛相关的属性并提供相关接口。【上膛】功能在【热武器】对象中作为一个功能组件对象存在：`loadComponent`，通过它开发者可以对上膛表现进行设置。`animationGuid`属性用来指定上膛动作；`loadDuration`属性用来设置上膛时间；`loadAfterFireEnable`属性用来设置是否每次开火都需要上膛（霰弹枪，狙击枪）；
 
-**上膛组件（可选）：**
+![img](https://arkimg.ark.online/1684045718025-14.webp)
 
-- 上膛动作绑定：热武器上膛时播放绑定的动作（资源库拖拽）
+- 上膛动作绑定：热武器上膛时播放绑定的动作（支持资源库拖拽）
 - 上膛时间：上膛动作完成的时间
 - 发射后上膛：勾选后每次发射后会自动进行一次上膛（默认是换弹后才进行上膛）
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2UlKbgKj0mMWu0iQXyVSUb.png)
+```TypeScript
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
 
-**换弹组件（可选）：**
+//设置上膛动画80482
+weapon.loadComponent.animationGuid = "80482";
+//设置上膛时间0.5s
+weapon.loadComponent.loadDuration = 0.5;
+//设置发射后上膛为true
+weapon.loadComponent.loadAfterFireEnable = true;
+```
+
+::: tip
+
+每次换弹时会自动进行一次上膛，上膛时间过短会导致动画无法播放。此外上膛时间与动画播放速率无关，且由于动画机制问题，上膛动画可以被其他动画打断。
+
+:::
+
+## **换弹功能：**
+
+【换弹】是热武器工作流中可选的功能，属性面板上可以选择该功能是否启用。功能中定义了与换弹相关的属性并提供相关接口。【换弹】功能在【热武器】对象中作为一个功能组件对象存在：`reloadComponent`，通过它开发者可以对换弹表现进行设置。`animationGuid`属性用来指定换弹动作；`reloadDuration`属性用来设置换弹时间；
+
+![img](https://arkimg.ark.online/1684045718025-15.webp)
 
 - 换弹动作绑定：热武器换弹时播放绑定的动作（资源库拖拽）
 - 换弹时间：换弹动作完成的时间
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5Rj5kfu9kRUNAg6bnrL8Ff.png)
+```TypeScript
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
 
-**后坐力组件：**
+//设置换弹动画4170
+weapon.reloadComponent.animationGuid = "4170";
+//设置换弹时间0.5s
+weapon.reloadComponent.reloadDuration = 0.5;
+```
+
+::: tip
+
+换弹时间过短会导致动画无法播放。此外换弹时间与动画播放速率无关，且由于动画机制问题，换弹动画可以被其他动画打断。
+
+:::
+
+## **后坐力功能：**
+
+【后坐力】是热武器工作流中可选的功能，属性面板上可以选择该功能是否启用。功能中定义了与后坐力相关的属性并提供相关接口。【后坐力】功能在【热武器】对象中作为一个功能组件对象存在：`recoilForceComponent`，通过它开发者可以。`accuracyOfFireComponent`的部分属性可以在属性面板进行配置，也可以通过代码去读写。`defaultDispersionHalfAngle`属性表示默认散布范围。`maxDispersionHalfAngle`属性表示最大散布范围。`minDispersionHalfAngle`属性表示最小散布范围。`dispersionHalfAngleDecreaseSpeed`属性表示范围收缩速度。`dispersionHalfAngleIncreaseSpeed`属性表示范围扩张速度。
+
+此外部分属性是动态变化的，只能在代码中读写。`dispersionHalfAngleIncreaseSpeed`属性表示范围扩张速度。`dispersionHalfAngleIncreasePerShot`属性表示子弹散布范围半径在每次射击后的扩张值。
+
+![img](https://arkimg.ark.online/1684045718025-16.webp)
 
 - 水平偏移最小值/最大值：热武器每次发射时，摄像机会基于开火时摄像机位置，进行水平方向的旋转，偏移值从设定的区间内随机。
 - 垂直偏移最小值/最大值：热武器每次发射时，摄像机会基于开火时摄像机位置，进行垂直方向的旋转偏移，偏移值从设定的区间内随机。
 - 水平抖动最小值/最大值：热武器发射时，摄像机会基于开火时摄像机位置，进行水平方向的旋转，在单次开火后，摄像机会回到水平偏移后的位置，即摄像机水平抖动是一个表现，并不会影响枪械的最终位置
 - 垂直抖动最小值/最大值：热武器发射时，摄像机会基于开火时摄像机位置，进行垂直方向的旋转，在单次开火后，摄像机会回到垂直偏移后的位置，即摄像机垂直抖动是一个表现，并不会影响枪械的最终位置
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKRIJjhXgEdtOYtLH29Vfif.png)
+![image-20230514143556555](https://arkimg.ark.online/image-20230514143556555.webp)
 
-#### 添加热武器实体表现，控制脚本
+![20230327-165923](https://arkimg.ark.online/20230327-165923-1684051142727-7.gif)
 
-热武器对象默认动态，挂载的模型只需要注意关闭碰撞。
+```TypeScript
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFbEoWjaLePvtZOU7JrPclf.png)
+// 抖动属性
+weapon.recoilForceComponent.minHorizontalOffset = -0.5;
+weapon.recoilForceComponent.maxHorizontalOffset = 0.5;
+weapon.recoilForceComponent.minVerticalOffset = -0.3;
+weapon.recoilForceComponent.maxVerticalOffset = -0.2;
 
-将热武器需要用到的特效挂在下方，等热武器执行相应功能时获取并进行对应的操作
+// 偏移属性
+weapon.recoilForceComponent.minHorizontalJitter = -0.7;
+weapon.recoilForceComponent.maxHorizontalJitter = 0.7;
+weapon.recoilForceComponent.minVerticalJitter = -0.8;
+weapon.recoilForceComponent.maxVerticalJitter = 0.8;
+```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSvbboWWivLHY92zLQW1lmg.png)
+# 使用热武器
 
-#### **在脚本中通过热武器对象提供的接口对它进行控制，做出各种行为。**
+## **热武器的工作流程图：**
 
-装备热武器：
+![weaponflow](https://arkimg.ark.online/weaponflow-1684051196671-10.webp)
 
-```ts
-// 热武器对象装备需要先去服务端装备，然后返回客户端再次装备。
-this.equipOnServer(chara); //这里推荐使用RPC函数在同脚本直接进行双端通信
+## 获取热武器对象
 
-@MWCore.MWFunction(MWCore.MWServer)
-private equipOnServer(chara: GamePlay.Character) {
-    // 在服务端执行装备，装备回调双端执行，服务端owner修改为chara， 但客户端owner属性不刷新仍然为null，需要在客户端手动调用equipment装备第二次刷新owner
-    this.weapon.equipment(chara, this.socket);
-}
+### 【对象管理器】中【对象】栏下的【热武器】对象：
 
+**使用`asyncFind`接口通过【触发器】对象的GUID去获取：**
 
-@MWCore.MWFunction(MWCore.MWClient, MWCore.MWMulticast)
-private equipOnClient(chara: GamePlay.Character) {
-    // 服务端调用equipment不会触发回调, 且没有广播，没有执行客户端装备的客户端无法获取武器的owner
-    this.weapon.equipment(chara, this.socket);
-    // 客户端可以打印一下装备后调用getCurrentOwner的结果，未装备时是null。
-    console.error("owner " + this.weapon.getCurrentOwner().characterName);
-    // 通常会在装备热武器后修改角色的运动面朝方向模式和持枪姿态：角色朝向控制器方向，持枪瞄准姿态
-    this.weapon.getCurrentOwner().animationStance = this.pose;
-    this.weapon.getCurrentOwner().moveFacingDirection = GamePlay.MoveFacingDirection.ControllerDirection;
+1. 选中【热武器】对象后右键点击【复制对象ID】获取它的GUID。此处注意区分【热武器】资源的GUID和【热武器】对象的GUID。
+
+![img](https://arkimg.ark.online/1684045718025-18.webp)
+
+2. 将脚本拖入对象管理器下，用下列代码替换脚本中的`onStart`方法：代码将异步查找ID对应的对象以【热武器】对象进行接收。
+
+```TypeScript
+protected async onStart(): Promise<void> {
+    if(SystemUtil.isServer()) {
+        let weapon = await Core.GameObject.asyncFind("1CAD6351") as Gameplay.HotWeapon;
+        console.log("weapon guid " + weapon.guid);
+    }
 }
 ```
 
-卸载热武器：
+**使用脚本挂载的方式进行获取：**
 
-```ts
+1. 将脚本挂载到【热武器】对象下方
 
+![img](https://arkimg.ark.online/1684045718025-19.webp)
+
+2. 在脚本的`onStart`方法中添加下列代码：代码获取脚本挂载的对象并以【热武器】对象进行接收
+
+```TypeScript
+let weapon = this.gameObject as Gameplay.HotWeapon;
 ```
 
-#### **通过接口对热武器进行其他操作：添加****回调****函数，修改属性，获取计算结果等等**
+### 动态生成的【热武器】对象：
 
-## 使用 热武器 的注意事项与建议
+将下列示例代码替换脚本中的`onStart`方法：示例代码在客户端往`asyncSpawn`接口（中传入【热武器】的资源ID“HotWeapon”异步生成了一个对应的【热武器】对象。
 
-1. 装备热武器只能在服务端执行，同时执行完后需要在客户端手动执行一次刷新客户端热武器的持有者属性，否则客户端持有者一直是 null 造成问题。
-2. 已装备的热武器在**客户端**只能被当前角色操作，其他角色对它进行操作都会被屏蔽
-3. 刚装备上的热武器是没有子弹的，需要换弹或者手动指定子弹数。
-4. 上膛时间和换弹时间并不影响动画播放的时间
-5. 射击间隔过短会增加性能消耗
-6. 热武器不同状态是互斥的
+```TypeScript
+protected async onStart(): Promise<void> {
+    if(SystemUtil.isServer()) {
+        let weapon = await Core.GameObject.asyncSpawn({guid: "HotWeapon", replicates: true, transform: new Transform(new Type.Vector(300, 0, 50), Type.Rotation.zero, Type.Vector.one)}) as Gameplay.HotWeapon;
+        console.log("weapon guid: " + weapon.guid);
+    }
+}
+```
 
-## 项目案例
+## 组件功能开关
+
+【热武器】中除了发射功能是不可控制开关之外，其余功能用户都可以选择性的开启或关闭。组件功能：换弹，上膛，后坐力，射击精度，瞄准需要开启才有对应的功能，热武器工作时才会执行对应的流程。【热武器】默认开启所有的功能。`recoilForceEnable`属性对应后坐力功能开关；`reloadEnable`属性对应换弹功能开关；`loadEnable`属性对应上膛功能开关；`accuracyOfFireEnable`属性对应射击精度功能开关；`aimEnable`属性对应瞄准功能开关；
+
+```TypeScript
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
+
+// 操作各功能组件的开关（发射功能不可操作，默认开启）
+weapon.aimEnable = true;
+weapon.loadEnable = true;
+weapon.reloadEnable = true;
+weapon.accuracyOfFireEnable = true;
+weapon.recoilForceEnable = true;
+```
+
+## 装备&卸载
+
+【热武器】提供了接口方便用户装备和卸载。要想使用【热武器】的功能需要调用`equipment`接口将【热武器】对象装备到角色身上的某个插槽。此时【热武器】对象会刷新自己的owner，并且会瞬移到角色插槽的位置并绑定。而卸载热武器则可以调用`unequipHotWeapon`接口，此时【热武器】对象失去owner并且从角色身上解绑。
+
+```TypeScript
+@Core.Class
+export default class NewScript extends Core.Script {
+
+    // 热武器对象
+    weapon: Gameplay.HotWeapon;
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    protected async onStart(): Promise<void> {
+        // 双端获取热武器对象
+        this.weapon = this.gameObject as Gameplay.HotWeapon;
+        console.log("this.weapon guid " + this.weapon.guid);
+        
+        // 服务端
+        if(SystemUtil.isServer()) {
+            // 添加服务端装备回调
+            this.weapon.onEquippedServer.add(() => {
+                console.error("onEquippedServer")
+            });
+            
+            // 添加服务端卸载回调
+            this.weapon.onUnequippedServer.add(() => {
+                console.error("onUnequippedServer")
+            });
+        } 
+
+        // 客户端
+        if(SystemUtil.isClient()) {
+            // 添加客户端装备回调
+            this.weapon.onEquippedClient.add(() => {
+                console.error("onEquippedClient")
+            });
+            
+            // 添加客户端卸载回调
+            this.weapon.onUnequippedClient.add(() => {
+                console.error("onUnequippedClient")
+            });
+
+            // 添加按键方法，按下键盘“E”装备热武器
+            InputUtil.onKeyDown(Type.Keys.E, async () => {
+                // 获取装备的角色对象
+                let chara = (await Gameplay.asyncGetCurrentPlayer()).character;
+                // 调用RPC函数去服务端进行装备，将角色ID传到服务端
+                this.equip_Server(chara.guid);
+            });
+            
+            // 添加按键方法，按下键盘“Q”卸载热武器
+            InputUtil.onKeyDown(Type.Keys.Q, async () => {
+                this.weapon.unequipHotWeapon();
+            });
+        } 
+    }
+
+    // 服务端RPC函数：装备热武器
+    @Core.Function(Core.Server)
+    private equip_Server(charaGuid: string) {
+        // 异步找到角色后将热武器对象装备到角色右手插槽上，并调用RPC函数去所有客户端进行装备
+        Gameplay.GameObject.asyncFind(charaGuid).then((chara: Gameplay.Character) => {
+            this.weapon.equipment(chara, "Right_Hand");
+            this.equip_Client(charaGuid);
+        });
+    }
+
+    // 客户端广播RPC函数：装备热武器
+    @Core.Function(Core.Client, Core.Multicast)
+    private equip_Client(charaGuid: string) {
+        // 异步找到角色后将热武器对象装备到角色右手插槽上
+        Gameplay.GameObject.asyncFind(charaGuid).then((chara: Gameplay.Character) => {
+            this.weapon.equipment(chara, "Right_Hand");
+        });
+    }
+}
+```
+
+::: tip
+
+`equipment`接口需要在服务端调用，客户端调用只是为了刷新一遍客户端的owner数据。注意需要TS层热武器构造完成之后再调用该函数（使用await、ready或then）。注意装备后弹药仍为0，需要换弹才能正常开火。`unequipHotWeapon`接口可以双端调用，客户端调用会自动广播。
+
+:::
+
+## 热武器owner
+
+【热武器】提供了`getCurrentOwner`接口方便用户随时访问它的拥有者。当热武器没有拥有者时，该接口会返回一个空值。
+
+```TypeScript
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
+
+// 打印热武器对象Owner
+console.log("weapon owner " + this.weapon.getCurrentOwner());
+```
+
+::: tip
+
+当热武器装备完成时owner会刷新，需注意服务端完成装备的瞬间客户端还未刷新owner属性。不要在客户端装备事件触发时使用该接口（服务端可以）。此外当热武器卸载时，owner会立即置空，所以在卸载事件触发时访问的owner已经是空。
+
+:::
+
+## 开火&换弹&上膛
+
+【热武器】中`startFire`接口执行开火操作，调用后【热武器】对象按照【发射】组件的设置进入开火流程。如果发射模式是全自动则需要调用`stopFire`接口执行停火操作，其他模式在执行完发射次数后会自动停火。`reload`接口执行换弹操作，用户需要往里面输入一个非负数进行弹药装填，但是最终弹药数量会收到弹夹容量限制。通过`breakReload`接口可以打断换弹操作。`load`接口执行上膛操作，一般该接口不会主动调用，上膛过程是自动执行的，例如换弹完成后或者勾选了每次发射会自动上膛。但是用户可以通过`breakLoad`接口打断上膛操作。
+
+```TypeScript
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
+
+// 添加按键方法，按下键盘“F”键开火
+InputUtil.onKeyDown(Type.Keys.F, async () => {
+    weapon.startFire();
+});
+
+// 添加按键方法，抬起键盘“F”键停火
+InputUtil.onKeyUp(Type.Keys.F, async () => {
+    weapon.stopFire();
+});
+
+// 添加按键方法，按下键盘“R”键换弹
+InputUtil.onKeyDown(Type.Keys.R, async () => {
+    // 补充10发弹药，如果超出弹夹容量限制则将弹药数量置为弹夹容量
+    weapon.reload(10);
+});
+
+// 添加按键方法，按下键盘“B”键打断上膛
+InputUtil.onKeyUp(Type.Keys.B, async () => {
+    weapon.breakLoad();
+});
+```
+
+::: info
+
+`startFire`和`stopFire`接口更类似一个按下扳机，放开扳机的操作。然后根据【热武器】的发射组件设置来执行对应的工作流程。上述操作都不支持重复执行，即执行对应操作时再次调用相关接口是无效的。此外这些接口虽然支持双端调用，但是在客户端调用时，只有持有人的客户端发起的调用会生效。
+
+:::
+
+## 热武器工作状态
+
+【热武器】有四种状态：准备（Idle = 0），换弹（Reloading = 1），上膛（Loading = 2），开火（Firing = 3）。热武器默认状态是【Idle】；当开始开火至开火结束时状态是【Firing】；执行换弹至换弹完成时状态为【Reloading】；执行上膛至上膛完成时状态为【Loading】；
+
+### **热武器的状态图：**
+
+![weaponState](https://arkimg.ark.online/weaponState.webp)
+
+```TypeScript
+enum HotWeaponState {
+    /** 准备好，可以进行射击 非射机姿态 */
+    Idle = 0,
+    /** 换弹夹，装弹 */
+    Reloading = 1,
+    /** 上膛 */
+    Loading = 2,
+    /** 射击中 */
+    Firing = 3
+}
+// 开启onUpdate方法
+this.useUpdate = true;
+
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
+
+// 每帧打印热武器对象当前状态
+protected onUpdate(dt: number): void {
+    console.log("weapon state " + weapon.getCurrentState(););
+}
+```
+
+::: tip
+
+需注意，真正的开火状态持续时间是非常短的，也就是1-3帧。这段时间【热武器】会处于【Firing】状态，然后会回到默认状态【Idle】等待下一次开火。这在全自动和连发模式中可以很明显的看出来。但是实际开发中经常需要将连发或全自动的开火认作一个整体状态，针对这个需求【热武器】在`fireComponent`中额外提供了一个`isFiring`接口去进行判断。
+
+:::
+
+## 常用接口
+
+【热武器】虽然只是一个功能框架，没有实现具体的武器表现，但是它给武器一般需要实现的功能都提供对应的接口，方便用户直接调用接口来获取实现功能所需要的返回值。`getDefaultCrossHairSize`接口帮助用户获取默认准星UI的大小，`getShootDirWithDispersion`接口帮助用户获取计算射击精度偏移后向屏幕中心发射的方向。此外由于热武器功能组件较多，普通clone接口无法复制热武器对象下功能的，`cloneComponentsData`帮助用户复制组件内的数据。
+
+## 热武器事件
+
+【热武器】本体一共有四个事件：服务器装备`onEquippedServer`；客户端装备`onEquippedClient`；服务器卸载`onUnequippedServer`；客户端卸载`onUnequippedClient`；获取到【热武器】对象后。我们可以给对应的装备/卸载事件添加委托函数。当【热武器】装备或者卸载时，就会触发对应的事件并执行委托函数。
+
+【发射组件】一共有5个事件：服务器发射`onStartFireServer`；客户端发射`onStartFireClient`；服务器发射结束`onEndFireServer`；客户端发射结束`onEndFireClient`；服务器连发周期结束`onEndContinuousFireServer`；当【热武器】发射时，就会触发对应的事件并执行委托函数。
+
+【换弹组件】一共有4个事件：服务器换弹`onStartReloadServer`；客户端换弹`onStartReloadClient`；服务器换弹结束`onEndReloadServer`；客户端换弹结束`onEndReloadClient`；当【热武器】换弹时，就会触发对应的事件并执行委托函数。
+
+【上膛组件】一共有4个事件：服务器上膛`onStartLoadServer`；客户端上膛`onStartLoadClient`；服务器上膛结束`onEndLoadServer`；客户端上膛结束`onEndLoadClient`；当【热武器】上膛时，就会触发对应的事件并执行委托函数。
+
+【瞄准组件】一共有4个事件：服务器瞄准`onAimStartServer`；客户端瞄准`onAimStartClient`；服务器瞄准结束`onAimEndServer`；客户端瞄准结束`onAimEndClient`；当【热武器】每次执行瞄准时，就会触发对应的事件并执行委托函数。
+
+【后坐力组件】一共有2个事件：服务器开始后坐力`onStartRecoilForceServer`；客户端开始后坐力`onStartRecoilForceClient`；当【热武器】每次开火产生后坐力时，就会触发对应的事件并执行委托函数。
+
+【射击精度组件】一共有1个事件：射击精度变化`onCurrentDispersionChangedClient`。当【热武器】射击精度变化时，就会触发对应的事件并执行委托函数。
+
+将下列示例代码替换脚本中的`onStart`方法：示例代码在服务端往`asyncFind`接口（中传入【触发器】对象的guid异步获取了一个对应的【触发器】对象。在该【触发器】对象的进入事件中添加一个函数：如果进入的对象是角色，那么打印一行信息并将角色切换为飞行状态。在该【触发器】对象的离开事件中添加一个函数：如果离开的对象是角色，那么打印一行信息并将角色切换为行走状态。
+
+```TypeScript
+// 获取热武器对象
+let weapon = this.gameObject as Gameplay.HotWeapon;
+
+// 服务端添加热武器回调
+if(SystemUtil.isServer()) {
+    this.weapon.onEquippedServer.add(() => {
+        // 需要在服务端热武器装备完成时执行的逻辑，例如更新玩家装备数据
+        console.log("onEquippedServer")
+    });
+
+    this.weapon.onUnequippedServer.add(() => {
+        // 需要在服务端热武器卸载完成时执行的逻辑，例如更新玩家装备数据
+        console.log("onUnequippedServer")
+    });
+
+    this.weapon.fireComponent.onStartFireServer.add(() => {
+        // 需要在服务端热武器开始发射时执行的逻辑，例如生成一个双端模型作为子弹
+        console.log("onStartFireServer")
+    });
+
+    this.weapon.fireComponent.onEndFireServer.add(() => {
+        // 需要在服务端热武器结束发射时执行的逻辑，例如做一些枪械变形
+        console.log("onEndFireServer")
+    });
+
+    this.weapon.fireComponent.onEndContinuousFireServer.add(() => {
+        // 需要在服务端热武器一次连发结束时执行的逻辑，例如做一些枪械变形
+        console.log("onEndContinuousFireServer")
+    });
+
+    this.weapon.reloadComponent.onStartReloadServer.add(() => {
+        // 需要在服务端热武器开始换弹时执行的逻辑，例如更新一下玩家状态
+        console.log("onStartReloadServer")
+    });
+
+    this.weapon.reloadComponent.onEndReloadServer.add(() => {
+        // 需要在服务端热武器结束换弹时执行的逻辑，例如更新一下玩家状态
+        console.log("onEndReloadServer")
+    });
+
+    this.weapon.loadComponent.onStartLoadServer.add(() => {
+        // 需要在服务端热武器开始上膛时执行的逻辑，例如更新一下玩家状态
+        console.log("onStartLoadServer")
+    });
+
+    this.weapon.loadComponent.onEndLoadServer.add(() => {
+        // 需要在服务端热武器结束上膛时执行的逻辑，例如更新一下玩家状态
+        console.log("onEndLoadServer")
+    });
+
+    this.weapon.aimComponent.onAimStartServer.add(() => {
+        // 需要在服务端热武器开始瞄准时执行的逻辑，例如更新一下玩家状态
+        console.log("onAimStartServer")
+    });
+
+    this.weapon.aimComponent.onAimEndServer.add(() => {
+        // 需要在服务端热武器结束瞄准时执行的逻辑，例如更新一下玩家状态
+        console.log("onAimEndServer")
+    });
+
+    this.weapon.recoilForceComponent.onStartRecoilForceServer.add(() => {
+        // 需要在服务端热武器开始后坐力时执行的逻辑，例如更新一下枪械状态
+        console.log("onStartRecoilForceServer")
+    });
+} 
+
+// 客户端添加热武器回调
+if(SystemUtil.isClient()) {
+    this.weapon.onEquippedClient.add(() => {
+        // 需要在客户端热武器装备完成时执行的逻辑，例如播放一个装备音效特效
+        console.log("onEquippedClient")
+    });
+
+    this.weapon.onUnequippedClient.add(() => {
+        // 需要在客户端热武器卸载完成时执行的逻辑，例如播放一个装备音效特效
+        console.log("onUnequippedClient")
+    });
+
+    this.weapon.fireComponent.onStartFireClient.add(() => {
+        // 需要在客户端热武器开始开火时执行的逻辑，例如播放一个开火音效特效
+        console.log("onStartFireClient")
+    });
+
+    this.weapon.fireComponent.onEndFireClient.add(() => {
+        // 需要在客户端热武器开始开火时执行的逻辑，例如更新一下UI界面的子弹数量
+        console.log("onEndFireClient")
+    });
+
+    this.weapon.reloadComponent.onStartReloadClient.add(() => {
+        // 需要在客户端热武器开始换弹时执行的逻辑，例如播放一个换弹音效特效
+        console.log("onStartReloadClient")
+    });
+
+    this.weapon.reloadComponent.onEndReloadClient.add(() => {
+        // 需要在客户端热武器结束换弹时执行的逻辑，例如更新一下UI界面的子弹数量
+        console.log("onEndReloadClient")
+    });
+
+    this.weapon.loadComponent.onStartLoadClient.add(() => {
+        // 需要在客户端热武器开始上膛时执行的逻辑，例如播放一个上膛音效特效
+        console.log("onStartLoadClient")
+    });
+
+    this.weapon.loadComponent.onEndLoadClient.add(() => {
+        // 需要在客户端热武器结束上膛时执行的逻辑，例如播放一个特效
+        console.log("onEndLoadClient")
+    });
+
+    this.weapon.aimComponent.onAimStartClient.add(() => {
+        // 需要在客户端热武器开始瞄准时执行的逻辑，例如更新一下UI
+        console.log("onAimStartClient")
+    });
+
+    this.weapon.aimComponent.onAimEndClient.add(() => {
+        // 需要在客户端热武器结束瞄准时执行的逻辑，例如更新一下UI
+        console.log("onAimEndClient")
+    });
+
+    this.weapon.recoilForceComponent.onStartRecoilForceClient.add(() => {
+        // 需要在客户端热武器开始后坐力时执行的逻辑，例如更新一下UI
+        console.log("onStartRecoilForceClient")
+    });
+
+    this.weapon.accuracyOfFireComponent.onCurrentDispersionChangedClient.add(() => {
+        // 需要在客户端热武器射击精度变化时执行的逻辑，例如更新一下准星UI大小
+        console.log("onCurrentDispersionChangedClient")
+    });
+} 
+```
+
+::: tip
+
+【射击精度】和玩家的摄像机相关，所以只能在客户端触发事件。其余事件会在【热武器】工作时根据名字分别在双端触发，添加委托函数的时候需要注意添加的位置。此外客户端事件触发的时机比收到属性同步要慢，使用时需要注意延迟问题。
+
+:::
