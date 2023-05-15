@@ -190,7 +190,7 @@ if(SystemUtil.isClient()) {
 }
 ```
 
-<video src="C:\Users\admin\Downloads\20230509-161439.mp4"></video>
+<!-- <video src="C:\Users\admin\Downloads\20230509-161439.mp4"></video> -->
 
 ::: tip
 玩家控制的角色推荐在对应的客户端去调用开始交互&结束交互接口，其余NPC角色则需要去服务端调用对应的函数，这样使用更加稳定可靠，不受网络通信的影响。
