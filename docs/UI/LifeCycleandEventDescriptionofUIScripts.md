@@ -4,7 +4,7 @@
 
 ## UI 脚本中基础的生命周期事件
 
-#### onStart( ) : void
+#### onStart() : void
 
 - 当脚本被实例后，会在第一帧更新之前调用 onStart 函数
 - 编辑器在为任何脚本调用 onUpdate 等函数之前，将在所有脚本上调用 onStart 函数
