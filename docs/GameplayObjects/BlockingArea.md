@@ -172,7 +172,7 @@ let wall = this.gameObject as Gameplay.BlockingVolume;
         }
 ```
 
-<video src="C:/Users/admin/Downloads/20230510-151129.mp4"></video>
+<!-- <video src="C:/Users/admin/Downloads/20230510-151129.mp4"></video> -->
 
 ## 获取对象是否有通行权限
 
