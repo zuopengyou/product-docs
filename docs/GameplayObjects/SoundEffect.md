@@ -41,7 +41,7 @@ if(SystemUtil.isClient()) {
 }
 ```
 
-<video src="C:/Users/admin/Downloads/%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E9%9F%B3%E6%95%88.mp4"></video>
+<!-- <video src="C:/Users/admin/Downloads/%E8%84%9A%E6%9C%AC%E7%94%9F%E6%88%90%E9%9F%B3%E6%95%88.mp4"></video> -->
 
 此处我们也可以通过`spawnGameObject`接口生成，但是需要将对应音频资源拖入【优先加载栏】或者将音频资源进行【预加载】来保证生成后我们不需要等待音频资源下载超时而导致后续代码失效。
 

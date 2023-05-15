@@ -118,7 +118,7 @@ projectile.gravityScale = 1; // 重力倍数为1
 projectile.maxBounceCount = 10 // 最大弹跳10次
 ```
 
-<video src="C:/Users/admin/Downloads/20230508-181739.mp4"></video>
+<!-- <video src="C:/Users/admin/Downloads/20230508-181739.mp4"></video> -->
 
 ## 投掷物碰撞物理参数
 
@@ -214,7 +214,7 @@ let projectile = this.gameObject as Gameplay.Projectile;
 }
 ```
 
-<video src="C:/Users/admin/Downloads/20230509-155425.mp4"></video>
+<!-- <video src="C:/Users/admin/Downloads/20230509-155425.mp4"></video> -->
 
 ## 投掷物的委托事件
 
