@@ -49,7 +49,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           },
           { text: '游戏发布流程', link: '/Editor/GameReleaseProcess.md' },
           { text: '接入社交功能', link: '/Editor/UseMGS.md' },
-          { text: '角色编辑工具', link: '/Editor/CharacterEditor.md' }
+          { text: '角色编辑工具', link: '/Editor/CharacterEditor.md' },
           { text: '自动裁剪规则与自定义裁剪距离', link: '/Editor/AutomaticAndCustomizedCullDistance.md' }
         ]
       },
@@ -85,7 +85,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           {
             text: 'UI脚本的生命周期及事件说明',
             link: '/UI/LifeCycleandEventDescriptionofUIScripts.md'
-          }
+          },
           {
             text: 'UI拖拽事件',
             link: '/UI/DragDropEvent.md'
