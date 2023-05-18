@@ -16,7 +16,7 @@
   - inTag?: string 传入所生成的拖拽事件的标签文本
   - inPayLoad?: any 传入拖拽事件数据信息
   - inPivot?: DragPivot 传入拖拽显示UI的锚点
-  - inOffset?: Type.Vector2 传入拖拽显示UI相对于锚点的偏移的百分比，，inPivot和inOffset共同决定了鼠标点击或滑动处与此展示UI的相对位置
+  - inOffset?: Type.Vector2 传入拖拽显示UI相对于锚点的偏移的百分比，inPivot和inOffset共同决定了鼠标点击或滑动处与此展示UI的相对位置
 
 **示例：**
 
@@ -421,8 +421,8 @@ export default class UIDefault extends UI.UIBehavior {
         this.canUpdate = false;
 
         //找到对应的按钮和容器
-        const newBtn = this.uiWidgetBase.findChildByPath('MWCanvas/StaleButton') as UI.StaleButton
-        const canvas = this.uiWidgetBase.findChildByPath('MWCanvas/Canvas') as UI.Canvas
+        const newBtn = this.uiWidgetBase.findChildByPath('RootCanvas/StaleButton') as UI.StaleButton
+        const canvas = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas') as UI.Canvas
         canvas.autoLayoutHugContent.hugContentH=UI.UIHugContentVertically.FixHeight
 
         //点击按钮,创建UI
