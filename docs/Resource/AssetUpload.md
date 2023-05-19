@@ -31,7 +31,7 @@
 * 开发者可通过点击本地资源库下方的资源上传按钮，打开工具窗口
 * 开发者也可通过点击工程内容中“角色”和“预制体”资源的上传按钮，打开工具窗口，同时自动导入选中的资源
 
-<video controls src=" https://cdn.233xyx.com/1684486840372_038.mp4"></video>
+<video controls src="https://cdn.233xyx.com/1684486840372_038.mp4"></video>
 
 ## 资源导入
 
@@ -118,14 +118,14 @@
 * 静态模型、预制体、角色数据资源可通过点击预览图右上角的按钮跳出工具窗口
 * 开发者可在工具窗口中控制视口位置，点击生成按钮生成预览图，预制体资源还可切换成默认预览图
 
-<video controls src=" https://cdn.233xyx.com/1684465236603_929.mp4"></video>
+<video controls src="https://cdn.233xyx.com/1684465236603_929.mp4"></video>
 
 ## 视口预览功能
 
 * 开发者可将静态模型、预制体、角色数据资源拖入场景中进行预览，窗口内工具栏功能同编辑器工具栏
 * 开发者可切换画面质量进行预览
 
-<video controls src=" https://cdn.233xyx.com/1684465236550_374.mp4"></video>
+<video controls src="https://cdn.233xyx.com/1684465236550_374.mp4"></video>
 
 ## 资源上传
 
@@ -133,4 +133,4 @@
   ![](https://cdn.233xyx.com/1684487025224_625.gif)
 * 开发者可在窗口中选择上传的资源，点击上传按钮后将已选的资源上传至审核流程
 
-<video controls src=" https://cdn.233xyx.com/1684465236629_820.mp4"></video>
+<video controls src="https://cdn.233xyx.com/1684465236629_820.mp4"></video>
