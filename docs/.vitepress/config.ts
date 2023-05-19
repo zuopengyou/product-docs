@@ -163,7 +163,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsed: true,
         items: [
           { text: '美术资源', link: '/Resource/ArtResources.md' },
-          { text: '资源加载与资源下载', link: '/Resource/assetdownloadandload.md' }
+          { text: '资源加载与资源下载', link: '/Resource/assetdownloadandload.md' },
           { text: '资源上传工具', link: '/Resource/AssetUpload.md' }
         ]
       },
