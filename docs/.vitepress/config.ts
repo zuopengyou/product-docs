@@ -199,11 +199,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: 'v0.22.0.0', link: '/ReleaseNote/v0.22.0.0.md' },
-          { text: 'v0.23.0.0', link: '/ReleaseNote/v0.23.0.0.md' },
-          { text: 'v0.24.0.0', link: '/ReleaseNote/v0.24.0.0.md' },
-          { text: 'v0.24.0.1', link: '/ReleaseNote/v0.24.0.1.md' },
           { text: 'v0.24.0.2', link: '/ReleaseNote/v0.24.0.2.md' },
+          { text: 'v0.24.0.1', link: '/ReleaseNote/v0.24.0.1.md' },
+          { text: 'v0.24.0.0', link: '/ReleaseNote/v0.24.0.0.md' },
+          { text: 'v0.23.0.0', link: '/ReleaseNote/v0.23.0.0.md' },
+          { text: 'v0.22.0.0', link: '/ReleaseNote/v0.22.0.0.md' },
         ]
       },
       {
