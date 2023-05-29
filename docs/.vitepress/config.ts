@@ -34,7 +34,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '编辑器设置', link: '/Editor/EditorSettings.md' },
           { text: '编辑器窗口操作', link: '/Editor/EditorWindowsOperation.md' },
           {
             text: '画质级别模拟与设置',
