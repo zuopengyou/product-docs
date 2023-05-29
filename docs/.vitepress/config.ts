@@ -26,7 +26,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         items: [
           { text: '手册介绍', link: '/index.md' },
           { text: '安装需求', link: '/Editor/InstallationRequirements.md' },
-          { text: '更新说明', link: '/ReleaseNote/ReleaseNote.md' }  
+          { text: '更新日志', link: '/ReleaseNote/ReleaseNote.md' }  
         ]
       },
       {
