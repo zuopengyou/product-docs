@@ -25,7 +25,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsed: false,
         items: [
           { text: '手册介绍', link: '/index.md' },
-          { text: '安装需求', link: '/Editor/InstallationRequirements.md' }
+          { text: '安装需求', link: '/Editor/InstallationRequirements.md' },
+          { text: '更新日志', link: '/ReleaseNote/ReleaseNote.md' }
         ]
       },
       {
@@ -33,7 +34,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '编辑器设置', link: '/Editor/EditorSettings.md' },
           { text: '编辑器窗口操作', link: '/Editor/EditorWindowsOperation.md' },
           {
             text: '画质级别模拟与设置',
@@ -223,31 +223,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: 'v0.22.0.0', link: '/ReleaseNote/v0.22.0.0.md' },
-          { text: 'v0.23.0.0', link: '/ReleaseNote/v0.23.0.0.md' },
-          { text: 'v0.24.0.0', link: '/ReleaseNote/v0.24.0.0.md' },
+          { text: 'v0.24.0.2', link: '/ReleaseNote/v0.24.0.2.md' },
           { text: 'v0.24.0.1', link: '/ReleaseNote/v0.24.0.1.md' },
-          { text: 'v0.24.0.2', link: '/ReleaseNote/v0.24.0.2.md' }
-        ]
-      },
-      {
-        text: '更新辅助说明',
-        collapsible: true,
-        collapsed: true,
-        items: [
-          {
-            text: 'Replicated使用规范',
-            link: '/ReleaseNote/Special/Replicated使用规范.md'
-          },
-          {
-            text: '旧项目替换天空球的操作步骤',
-            link: '/ReleaseNote/Special/旧项目替换天空球的操作步骤.md'
-          },
-          { text: '世界UI调整', link: '/ReleaseNote/Special/世界UI调整.md' },
-          {
-            text: '预制体重构项目升级教程及注意事项',
-            link: '/ReleaseNote/Special/预制体重构项目升级教程及注意事项.md'
-          }
+          { text: 'v0.24.0.0', link: '/ReleaseNote/v0.24.0.0.md' },
+          { text: 'v0.23.0.0', link: '/ReleaseNote/v0.23.0.0.md' },
+          { text: 'v0.22.0.0', link: '/ReleaseNote/v0.22.0.0.md' }
         ]
       }
     ],

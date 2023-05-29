@@ -13,13 +13,13 @@
 
 #### onStart( ) : void
 
-当脚本被实例后，会在第一帧更新之前调用 OnStart 函数
+当脚本被实例后，会在第一帧更新之前调用 onStart 函数
 
-**注：编辑器在为任何脚本调用 OnUpdate 等函数之前，将在所有脚本上调用 OnStart 函数**
+**注：编辑器在为任何脚本调用 onUpdate 等函数之前，将在所有脚本上调用 onStart 函数**
 
 #### onUpdate(dt : number) : void
 
-编辑器会在游戏每帧调用一次 OnUpdate 函数
+编辑器会在游戏每帧调用一次 onUpdate 函数
 
 这是用于帧更新的主要函数
 
@@ -27,13 +27,13 @@
 
 #### onDestroy( ) : void
 
-脚本存在的最后一帧执行完，且在 OnUpdate 函数执行完毕后，调用此函数
+脚本存在的最后一帧执行完，且在 onUpdate 函数执行完毕后，调用此函数
 
-#### bUseUpdate : boolean
+#### useUpdate : boolean
 
-控制编辑器是否开启 OnUpdate 函数的调用
+控制编辑器是否开启 onUpdate 函数的调用
 
-默认编辑器不会开启脚本 OnUpdate 的生命周期，需要开发者自行调用
+默认编辑器不会开启脚本 onUpdate 的生命周期，需要开发者自行调用
 
 ```ts
 this. bUseUpdate = true;
@@ -43,7 +43,7 @@ this. bUseUpdate = true;
 
 判断当前脚本是否执行在客户端，反之则运行在服务端
 
-有关编辑器客户端与服务端的区别，请看[网络同步原理和结构](https://meta.feishu.cn/wiki/wikcn9Bc049Ov1P1DLYjQdDAG1f)
+有关编辑器客户端与服务端的区别，请看[网络同步原理和结构](https://docs.ark.online/Scripting/NetworkSynchronizationStructureandMechanics.html)
 
 #### 脚本示例：
 
@@ -52,7 +52,7 @@ this. bUseUpdate = true;
 export default class TestScript extends Core.Script {
     protected onStart(): void {
 
-        //开启OnUpdate的函数
+        //开启onUpdate的函数
         this.useUpdate = true;
 
         //向控制台输出当前脚本是否执行在客户端
@@ -63,14 +63,14 @@ export default class TestScript extends Core.Script {
             //根据GUID持有cube对象
             let cube = Core.GameObject.find(`48A8055A40BBA143D723B19BDB2D21ED`);
 
-            this.myLog(`Into Client OnStart()`);
+            this.myLog(`Into Client onStart()`);
 
             //向服务器派发删除cube事件，并将cube对象发送至服务端
             Events.dispatchToServer("DeleteCube", cube);
         }
         else {                          //服务端===>
 
-            this.myLog(`Into Server OnStart()`);
+            this.myLog(`Into Server onStart()`);
 
             //监听客户端删除cube的事件
             Events.addClientListener("DeleteCube", (player, cube: Core.GameObject) => {
@@ -86,12 +86,12 @@ export default class TestScript extends Core.Script {
 
         if (this.isRunningClient()) {
 
-            this.myLog(`Into Client OnUpdate() > dTime:${dt}`);
+            this.myLog(`Into Client onUpdate() > dTime:${dt}`);
 
         }
         else {
 
-            this.myLog(`Into Server OnUpdate() > dTime:${dt}`);
+            this.myLog(`Into Server onUpdate() > dTime:${dt}`);
         }
     }
 
@@ -100,12 +100,12 @@ export default class TestScript extends Core.Script {
 
         if (this.isRunningClient()) {
 
-            this.myLog(`Into Client OnDestroy()`);
+            this.myLog(`Into Client onDestroy()`);
 
         }
         else {
             
-            this.myLog(`Into Server OnDestroy()`);
+            this.myLog(`Into Server onDestroy()`);
         }
 
     }
@@ -130,9 +130,9 @@ export default class TestScript extends Core.Script {
 
 #### 初始化
 
-1）通常会将对象属性（例如：位置、状态等）的初始化做成一个函数，放在 Onstart 中执行
+1）通常会将对象属性（例如：位置、状态等）的初始化做成一个函数，放在 onStart 中执行
 
-2）来自服务器或者客户端的事件的监听，很多时候会写在 OnStart 函数中
+2）来自服务器或者客户端的事件的监听，很多时候会写在 onStart 函数中
 
 **脚本示例：**
 
@@ -215,7 +215,7 @@ export default class TestScript extends Core.Script {
 
     protected onStart(): void {
     
-        //开启OnUpdate的函数
+        //开启onUpdate的函数
         this.bUseUpdate = true;
         
     }
@@ -312,14 +312,14 @@ export default class TestEvents extends Core.Script {
             console.log(`this.temp ===> ${this.temp}`);
         }));
 
-        //当按下横排按键‘1’
-        this.myEvents.push(Events.OnKeyDown(Type.Keys.One,()=>{
+        //当按下按键‘K’
+        this.myEvents.push(Events.OnKeyDown(Type.Keys.K,()=>{
             this.temp ++;
             Events.DispatchLocal("TestEvent1");
         }));
 
-        //当按下横排按键‘2’
-        this.myEvents.push(Events.OnKeyDown(Type.Keys.Two,()=>{
+        //当按下横排按键‘L’
+        this.myEvents.push(Events.OnKeyDown(Type.Keys.L,()=>{
             cube.Destroy();
             Events.DispatchLocal("TestEvent1");
         }));
@@ -327,7 +327,7 @@ export default class TestEvents extends Core.Script {
 
     protected onDestroy(): void {
 
-        console.log(`Into OnDestroy()`);
+        console.log(`Into onDestroy()`);
 
         //在对象被销毁时，遍历所有事件对象，关闭所有事件监听
         this.myEvents.forEach(element => {
