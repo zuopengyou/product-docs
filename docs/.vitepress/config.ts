@@ -35,11 +35,17 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         items: [
           { text: '编辑器设置', link: '/Editor/EditorSettings.md' },
           { text: '编辑器窗口操作', link: '/Editor/EditorWindowsOperation.md' },
-          { text: '画质级别模拟与设置', link: '/Editor/GraphicsQualitySettings.md' },
+          {
+            text: '画质级别模拟与设置',
+            link: '/Editor/GraphicsQualitySettings.md'
+          },
           { text: '预制体功能说明', link: '/Editor/Prefabs.md' },
           { text: '游戏断线重连', link: '/Editor/GameReconnection.md' },
           { text: '绘制模式', link: '/Editor/DrawMode.md' },
-          { text: '横竖屏&分辨率模拟', link: '/Editor/ScreenOrientation&ResolutionSimulation.md' },
+          {
+            text: '横竖屏&分辨率模拟',
+            link: '/Editor/ScreenOrientation&ResolutionSimulation.md'
+          },
           { text: '接入社交功能', link: '/Editor/UseMGS.md' },
           { text: '角色编辑工具', link: '/Editor/CharacterEditor.md' }
         ]
@@ -49,7 +55,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '创建游戏界面(UI)', link: '/UI/CreatingUserInterface(UI).md' },
+          {
+            text: '创建游戏界面(UI)',
+            link: '/UI/CreatingUserInterface(UI).md'
+          },
           { text: 'UI控件的基础属性', link: '/UI/UIWidget-BaseProperties.md' },
           { text: 'UI控件-容器', link: '/UI/UIComponent-Canvas.md' },
           { text: 'UI控件-图片', link: '/UI/UIComponent-Image.md' },
@@ -163,7 +172,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsed: true,
         items: [
           { text: '美术资源', link: '/Resource/ArtResources.md' },
-          { text: '资源加载与资源下载', link: '/Resource/assetdownloadandload.md' },
+          {
+            text: '资源加载与资源下载',
+            link: '/Resource/assetdownloadandload.md'
+          },
           { text: '资源上传工具', link: '/Resource/AssetUpload.md' }
         ]
       },
@@ -178,20 +190,32 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           }
         ]
       },
-       {
+      {
         text: '创作者中心',
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '游戏发布及管理', link: '/CreatorPortal/Publishing&Managing.md' },
+          {
+            text: '游戏发布及管理',
+            link: '/CreatorPortal/Publishing&Managing.md'
+          },
           { text: '分析游戏数据', link: '/CreatorPortal/Analytics.md' },
           { text: '接入游戏广告', link: '/CreatorPortal/Advertising.md' },
-          { text: '游戏性能及排查', link: '/CreatorPortal/PerformanceOverview.md' },
+          {
+            text: '游戏性能及排查',
+            link: '/CreatorPortal/PerformanceOverview.md'
+          },
           { text: '管理游戏版本', link: '/CreatorPortal/VersionManagement.md' },
-          { text: '游戏曝光运营', link: '/CreatorPortal/Promotion&Operation.md' },
+          {
+            text: '游戏曝光运营',
+            link: '/CreatorPortal/Promotion&Operation.md'
+          },
           { text: '管理游戏社区', link: '/CreatorPortal/Community.md' },
-          { text: '协作与转移游戏', link: '/CreatorPortal/Collaboration&Transfer.md' },
-          { text: '创作者收益结算', link: '/CreatorPortal/Monetization.md' },
+          {
+            text: '协作与转移游戏',
+            link: '/CreatorPortal/Collaboration&Transfer.md'
+          },
+          { text: '创作者收益结算', link: '/CreatorPortal/Monetization.md' }
         ]
       },
       {
@@ -203,7 +227,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'v0.23.0.0', link: '/ReleaseNote/v0.23.0.0.md' },
           { text: 'v0.24.0.0', link: '/ReleaseNote/v0.24.0.0.md' },
           { text: 'v0.24.0.1', link: '/ReleaseNote/v0.24.0.1.md' },
-          { text: 'v0.24.0.2', link: '/ReleaseNote/v0.24.0.2.md' },
+          { text: 'v0.24.0.2', link: '/ReleaseNote/v0.24.0.2.md' }
         ]
       },
       {
@@ -211,10 +235,19 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: 'Replicated使用规范', link: '/ReleaseNote/Special/Replicated使用规范.md' },
-          { text: '旧项目替换天空球的操作步骤', link: '/ReleaseNote/Special/旧项目替换天空球的操作步骤.md' },
+          {
+            text: 'Replicated使用规范',
+            link: '/ReleaseNote/Special/Replicated使用规范.md'
+          },
+          {
+            text: '旧项目替换天空球的操作步骤',
+            link: '/ReleaseNote/Special/旧项目替换天空球的操作步骤.md'
+          },
           { text: '世界UI调整', link: '/ReleaseNote/Special/世界UI调整.md' },
-          { text: '预制体重构项目升级教程及注意事项', link: '/ReleaseNote/Special/预制体重构项目升级教程及注意事项.md' }
+          {
+            text: '预制体重构项目升级教程及注意事项',
+            link: '/ReleaseNote/Special/预制体重构项目升级教程及注意事项.md'
+          }
         ]
       }
     ],
@@ -239,6 +272,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             key: 'api-docs',
             facetFilters: ['tags:api-docs'],
             name: 'API文档'
+          },
+          {
+            name: '论坛',
+            url: 'https://forum.ark.online/'
           }
         ]
       },
