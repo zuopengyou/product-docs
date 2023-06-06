@@ -35,8 +35,7 @@
 
 ## 资源导入
 
-* 除了自动导入
-* 的资源，开发者还可通过点击工具窗口的资源导入按钮，打开Windows文件资源管理器选择要导入的资源文件
+* 除了自动导入的资源，开发者还可通过点击工具窗口的资源导入按钮，打开Windows文件资源管理器选择要导入的资源文件
 
 ![](https://meta.feishu.cn/space/api/box/stream/download/asynccode/?code=ODkwMmRjMGFkMTE4ODRiOTcyOGFlMTNlNWRiMmE2ZjVfRWJGS0FxZ3h1V2puT0xIcURBM0tEZWVBRWZnV3VEbUVfVG9rZW46Ym94Y25kZGVHWmdJbXBSaFJpSk5rTTNDRHNjXzE2ODQ0NjI5MzY6MTY4NDQ2NjUzNl9WNA)
 
