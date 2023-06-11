@@ -46,6 +46,7 @@
 ![](https://meta.feishu.cn/space/api/box/stream/download/asynccode/?code=NWUyNWM2MjY5NTliYjRmYzViZDIyZWY4OGM3MjM2NDRfdFVsT2lpbGpSbDV1RzJvY1JOY3h3ZXZ4Wk5kclFadFRfVG9rZW46Ym94Y25WNFZzbEYycG80N3JkcmxaN2dmOUJiXzE2ODQ0NjI5MzY6MTY4NDQ2NjUzNl9WNA)
 
 #### 各类型资源校验规则
+* 上传资源的文件名不能带中文，否则会上传失败
 
 ##### 静态模型
 
