@@ -1,4 +1,4 @@
-import 类型 { DefaultTheme } from 'metaapp-prodigytech-doc-theme'
+import type { DefaultTheme } from 'metaapp-prodigytech-doc-theme'
 import { defineConfigWithTheme } from 'vitepress'
 
 export const sidebar: DefaultTheme.Config['sidebar'] = [
@@ -8,7 +8,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
   }
 ]
 
-export 默认 defineConfigWithTheme<DefaultTheme.Config>({
+export default defineConfigWithTheme<DefaultTheme.Config>({
   ignoreDeadLinks: true,
   标题: '产品手册',
   外观: false,
