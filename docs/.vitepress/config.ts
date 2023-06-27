@@ -279,17 +279,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       {
         text: '论坛',
         link: 'https://forum.ark.online/'
-      },
-      {
-        text: '024 版本',
-        items: [
-          {
-            text: '025 META',
-            link: 'https://docs-025.ark.online/',
-            path: true
-          }
-        ]
       }
+      // {
+      //   text: '025 版本',
+      //   items: []
+      // }
     ],
     socialLinks: [
       // { link: 'https://github.com/prodigytech-doc/api-docs', icon: 'github' },

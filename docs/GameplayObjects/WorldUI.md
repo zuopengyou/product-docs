@@ -1,86 +1,112 @@
 # 世界 UI
 
-| 修改日期            | 修改人 | 修改内容 | 所属编辑器版本 |
-| ------------------- | ------ | -------- | -------------- |
-| 2022 年 10 月 16 日 | 郑毓琳 | 创建文档 | v0.15          |
-
 **阅读本文大概需要 10 分钟。**
 
 本文概述了如何制作世界 UI 并修改属性以实现各种各样的效果。
 
-### 什么是世界 UI？
+## 什么是世界 UI？
 
 世界 UI 的主要作用是提供一个在 3D 环境下的表面，可将正常情况下渲染到屏幕的 UI 组件渲染到该对象上，例如创建商店招牌、游戏提示板的世界类型 UI，角色名称，角色血条的头顶类型 UI。
 
-### 如何编辑世界 UI？
+## 如何编辑世界UI？
 
-在本地资源库-游戏功能对象列表中找到世界 UI，将其拖入到场景中，即完成了世界 UI 的创建
+* 在本地资源库-游戏功能对象列表中找到世界UI，将其拖入到场景中，即完成了世界UI的创建
+* 然后将工程内容中做好的2DUI拖拽到世界UI属性面板的绑定UI对象内，完成绑定后，世界UI就会显示在主视口内了。
+* 如果是头顶类型的世界UI，还需要将世界UI对象挂载在人形对象上，并设置好与角色的相对位置
+![](https://cdn.233xyx.com/1684476052889_393.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMAmfHx6NhmeQlI5WttEcBg.png)
+![](https://cdn.233xyx.com/1684476052651_226.png)
 
-然后将工程内容中做好的 UI 拖拽到世界 UI 属性面板的绑定 UI 对象内，完成绑定后，世界 UI 就会显示在主视口内了。
+世界UI有世界/屏幕/头顶三种类型，下面我们分别展开介绍：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5bJpAzEDxH62UBGXEMSzje.png)
+### 1、UI类型
 
-如果是头顶类型的世界 UI，还需要将世界 UI 对象挂载在人形对象上，并设置好与角色的相对位置
+#### 世界类型
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnh3ZKjUW4hPDoUebDJpxibb.png)
+* 世界类型世界UI是将UI控件以网格体的形式在世界场景中进行渲染，并且可被遮挡，使得UI不再脱离在场景层之外，而是成为场景层的一部分给玩家带来更强的代入感
 
-世界 UI 有世界/屏幕/头顶三种类型，以下展开介绍：
+![](https://cdn.233xyx.com/1684476052356_275.gif)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSiYETEQoInLIIKD3igZLKG.png)
+#### 屏幕类型
 
-#### 1、世界类型
+* 屏幕类型世界UI在完全处于世界场景之外的屏幕上渲染控件，控件永远不会被遮挡，且永远面朝摄像机的功能。
 
-- 世界类型世界 UI 是将 UI 组件以网格体的形式在世界场景中进行渲染，并且可被遮挡，使得 UI 不再脱离在场景层之外，而是成为场景层的一部分给玩家带来更强的代入感
+![](https://cdn.233xyx.com/1684476052967_502.gif)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnVgh5EbM2vbw1AMQmcCHqEh.gif)
+#### 头顶类型
 
-- 世界类型世界 UI 包括以下属性：
+* 与屏幕类型相似，UI界面都会永远面朝摄像机，确保是会使用射线检测方法检测玩家和头顶UI之间是否有物体阻挡，从而控制头顶UI的显示/隐藏，同时计算两者之间的距离去缩放头顶UI实现近大远小的效果
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnO0ueU8B4l5fbDOeqnLfZCd.png)
+![](https://cdn.233xyx.com/1684476052180_110.gif)
 
-- 几何体模式：世界 UI 界面的形状
-- 圆柱体弧形角度：几何体模式为圆柱类型时 UI 界面的角度
+本质上，只有世界类型的世界UI是以网格体真正渲染在场景中的，所以它会被场景里的模型遮挡；而屏幕类型和头顶类型与普通UI的渲染方式相同，不同之处是会自动计算大小和位置
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnvgokdofzQGlE73RbbYxgOf.png)
+### 2、是否可交互
 
-平面
+* 当勾选此属性时，可以与世界UI中的各种UI组件进行交互，此功能会穿透摄像机滑动区；但是无法穿透摇杆，如果场景中有可交互的世界UI，请勿使用范围过大的摇杆
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnm5y0cKMp5pQXcPuxpQ72re.png)
+![](https://cdn.233xyx.com/1684476052270_684.gif)
 
-圆柱-180°
+### 3、头顶类型世界UI的特殊属性
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnO72wfYkyGb5cTId6PxhZgd.png)
+* 是否可以被遮挡：头顶UI是否可以被建筑物等物体遮挡并隐藏，勾选则被遮挡，不勾选则不会被遮挡
+  ![](https://cdn.233xyx.com/1684476052525_871.gif)
+* 是否开启近大远小：头顶UI是否有近大远小的效果，勾选则有近大远小的效果，不勾选则始终是一个大小不会变化
+* 缩放距离系数：头顶UI距离摄像机每n米单位时，将世界UI的尺寸进行百分比缩放。例如，太空游戏每个星球都有名称，但距离都会很远，这个系数就可以放大一些，每1万米进行UI缩放。正常游戏中，大多数距离较近，这个系数就可以缩小一些，每10米进行UI缩放。
+  ![](https://cdn.233xyx.com/1684476052369_954.gif)
+* 是否开启最大可见距离：是否启用头顶UI的最大距离，如果不启用，则无论多远距离都不会隐藏此头顶UI
+* 最大可见距离：头顶UI可以看见的最大距离，超过该距离，头顶UI就会被隐藏
+  ![](https://cdn.233xyx.com/1684476052926_316.gif)
 
-圆柱-90°
 
-- 是否可交互：当勾选此属性时，可以与世界 UI 中的各种 UI 组件进行交互，此功能会穿透摄像机滑动区；但是无法穿透摇杆，如果场景中有可交互的世界 UI，请勿使用范围过大的摇杆
+## 如何使用脚本制作动态的世界UI？
 
-#### 2、屏幕类型
+### **示例一：动态创建世界UI，并绑定2DUI**
 
-- 屏幕类型世界 UI 在完全处于世界场景之外的屏幕上渲染控件，控件永远不会被遮挡，且永远面朝摄像机的功能。
-- 屏幕类型世界 UI 包括以下属性：
+* 除了前文中将世界UI拖入场景，手动给世界UI绑定2DUI的用法之外，我们还可以在脚本中编写动态创建世界UI并完成绑定
+* 因性能原因，目前世界UI的渲染大小限制为最大512*512，所以想用在动态创建世界UI对象中的2DUI的Root的大小请勿超过512*512，否则世界UI将无法显示完全
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJzF544YortUqz5G3qKLq2d.png)
+![](https://cdn.233xyx.com/1684476052263_048.png)
 
-#### 3、头顶类型
+* 编写脚本，动态创建世界UI对象，并且完成与2DUI的绑定
 
-- 与屏幕类型相似，UI 界面都会永远面朝摄像机，确保是会使用射线检测方法检测玩家和头顶 UI 之间是否有物体阻挡，从而控制头顶 UI 的显示/隐藏，同时计算两者之间的距离去缩放头顶 UI 实现近大远小的效果
+```JavaScript
+// 动态创建世界UI
+    let worldUI = Core.GameObject.spawn({ "guid": "UIWidget" }) as Gameplay.UIWidget
+    // 设置世界UI的位置
+    worldUI.worldLocation = new Type.Vector(0, 0, 200)
+    // 创建2DUI
+    let worldui = UI.createUIByName("worldui")
+    // 绑定2DUI
+    worldUI.setTargetUIWidget(worldui)
+    // 设置渲染大小,最大512*512，需要使这个大小和2DUI中Root的大小一致，否则渲染不全
+    worldUI.drawSize = new Type.Vector2(500, 500)
+```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmKgmjBq5zyiJcVHzX6lfx2.gif)
+* 左侧是提前摆放并绑定好2DUI的世界UI，在右侧动态生成一个完全相同的世界UI
 
-- 头顶类型世界 UI 包括以下属性：
+![](https://cdn.233xyx.com/1684476052734_432.png)![](https://cdn.233xyx.com/1684476052563_134.gif)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOF8IMf72zFgc4gjb0ly3Dc.png)
+* 示例工程： [点击下载](https://cdn.233xyx.com/1684476052851_298.7z)
 
-- 是否可以被遮挡：头顶 UI 是否可以被建筑物等物体遮挡并隐藏，勾选则被遮挡，不勾选则不会被遮挡
+### **示例二：使用世界UI制作****在场景中显示的排行榜**
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnr9dxDZFTP5SnWUDGMgISMd.gif)
+* 拖一个世界UI到场景中，并先将排行榜2DUI与世界UI完成绑定，这里的绑定是为了调整世界UI的大小和位置
 
-- 是否开启近大远小：头顶 UI 是否有近大远小的效果，勾选则有近大远小的效果，不勾选则始终是一个大小不会变化
-- 缩放距离系数：头顶 UI 距离摄像机每 n 米单位时，将世界 UI 的尺寸进行百分比缩放。例如，太空游戏每个星球都有名称，但距离都会很远，这个系数就可以放大一些，每 1 万米进行 UI 缩放。正常游戏中，大多数距离较近，这个系数就可以缩小一些，每 10 米进行 UI 缩放。
-- 是否开启最大可见距离：是否启用头顶 UI 的最大距离，如果不启用，则无论多远距离都不会隐藏此头顶 UI
-- 最大可见距离：头顶 UI 可以看见的最大距离，超过该距离，头顶 UI 就会被隐藏
+![](https://cdn.233xyx.com/1684476052483_806.png)
 
-### 如何通过 API 动态修改世界 UI 的属性？
+* 我们可以使用RPC或者Replicated制作排行榜，这里使用了RPC事件来制作排行榜，具体用法请见下方示例项目
+* 如果希望世界UI展示动态更新的2DUI，我们需要在排行榜2DUI的UI脚本中编写绑定逻辑：
+
+```TypeScript
+// 获取场景上的世界UI
+let worldUI = (await Core.GameObject.asyncFind("2C62CF9B")) as Gameplay.UIWidget
+// 将自己绑定的UI设置为世界UI显示的内容
+worldUI.setTargetUIWidget(this.uiWidgetBase)
+```
+
+* 进入游戏后，我们可以得到一个与2DUI排行榜完全相同的世界UI排行榜
+
+![](https://cdn.233xyx.com/1684476052356_858.gif)
+
+* 示例工程： [点击下载](https://cdn.233xyx.com/1684476052812_032.7z)
