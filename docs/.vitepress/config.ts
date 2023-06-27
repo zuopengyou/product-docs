@@ -1,4 +1,4 @@
-import type { DefaultTheme } from 'metaapp-prodigytech-doc-theme'
+import 类型 { DefaultTheme } from 'metaapp-prodigytech-doc-theme'
 import { defineConfigWithTheme } from 'vitepress'
 
 export const sidebar: DefaultTheme.Config['sidebar'] = [
@@ -8,11 +8,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
   }
 ]
 
-export default defineConfigWithTheme<DefaultTheme.Config>({
+export 默认 defineConfigWithTheme<DefaultTheme.Config>({
   ignoreDeadLinks: true,
-  title: '产品手册',
-  appearance: false,
-  description: '口袋方舟编辑器的产品文档',
+  标题: '产品手册',
+  外观: false,
+  描述: '口袋方舟编辑器的产品文档',
   outDir: '../dist',
   head: [['link', { rel: 'icon', href: '/favicon_kd.ico' }]],
   themeConfig: {
@@ -47,7 +47,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             link: '/Editor/ScreenOrientation&ResolutionSimulation.md'
           },
           { text: '接入社交功能', link: '/Editor/UseMGS.md' },
-          { text: '角色编辑工具', link: '/Editor/CharacterEditor.md' }
+          { text: '角色编辑工具', link: '/Editor/CharacterEditor.md' },
+          { text: '自动裁剪规则与自定义裁剪距离', link: '/Editor/AutomaticAndCustomizedCullDistance.md' }
         ]
       },
       {
@@ -81,7 +82,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI性能与优化', link: '/UI/UIPerformanceandOptimization.md' },
           {
             text: 'UI脚本的生命周期及事件说明',
-            link: '/UI/LifeCycleandEventDescriptionofUIScripts.md'
+            link: '/UI/LifeCycleandEventDescriptionofUIScripts.md' 
+          },
+          {
+            text: 'UI拖拽事件',
+            link: '/UI/DragDropEvent.md'
           }
         ]
       },
