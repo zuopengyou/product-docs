@@ -10,9 +10,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = [
 
 export default defineConfigWithTheme<DefaultTheme.Config>({
   ignoreDeadLinks: true,
-  标题: '产品手册',
-  外观: false,
-  描述: '口袋方舟编辑器的产品文档',
+  title: '产品手册',
+  appearance: false,
+  description: '口袋方舟编辑器的产品文档',
   outDir: '../dist',
   head: [['link', { rel: 'icon', href: '/favicon_kd.ico' }]],
   themeConfig: {
@@ -305,7 +305,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         }
       }
     ],
-    outline: [2, 4],
+    outline: [2, 3],
     editLink: {
       pattern:
         'https://github.com/prodigytech-doc/product-docs/tree/main/docs/:path',
