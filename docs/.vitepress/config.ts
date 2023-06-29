@@ -149,6 +149,14 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         ]
       },
       {
+        text: '角色',
+        collapsible: true,
+        collapsed: true,
+        items: [
+          
+        ]
+      },
+      {
         text: '脚本',
         collapsible: true,
         collapsed: true,
