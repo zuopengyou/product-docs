@@ -14,9 +14,17 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   appearance: false,
   description: '口袋方舟编辑器的产品文档',
   outDir: '../dist',
-  head: [['link', { rel: 'icon', href: '/favicon_kd.ico' }]],
+  head: [
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: 'https://wstatic-01-ali.233leyuan.com/xyc/metaverse-docs/tab-logo.png'
+      }
+    ]
+  ],
   themeConfig: {
-    logo: '/logo.png',
+    logo: 'https://wstatic-01-ali.233leyuan.com/xyc/metaverse-docs/kd-logo-black.svg',
     sidebar: [
       {
         text: 'index',
@@ -48,7 +56,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           },
           { text: '接入社交功能', link: '/Editor/UseMGS.md' },
           { text: '角色编辑工具', link: '/Editor/CharacterEditor.md' },
-          { text: '自动裁剪规则与自定义裁剪距离', link: '/Editor/AutomaticAndCustomizedCullDistance.md' }
+          {
+            text: '自动裁剪规则与自定义裁剪距离',
+            link: '/Editor/AutomaticAndCustomizedCullDistance.md'
+          }
         ]
       },
       {
@@ -82,7 +93,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI性能与优化', link: '/UI/UIPerformanceandOptimization.md' },
           {
             text: 'UI脚本的生命周期及事件说明',
-            link: '/UI/LifeCycleandEventDescriptionofUIScripts.md' 
+            link: '/UI/LifeCycleandEventDescriptionofUIScripts.md'
           },
           {
             text: 'UI拖拽事件',
@@ -152,9 +163,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         text: '角色',
         collapsible: true,
         collapsed: true,
-        items: [
-          
-        ]
+        items: []
       },
       {
         text: '脚本',
