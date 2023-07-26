@@ -229,7 +229,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             link: '/CreatorPortal/Publishing&Managing.md'
           },
           { text: '分析游戏数据', link: '/CreatorPortal/Analytics.md' },
-          { text: '接入游戏广告', link: '/CreatorPortal/Advertising.md' },
+          { text: '商业化指南', link: '/CreatorPortal/Advertising.md' },
           {
             text: '游戏性能及排查',
             link: '/CreatorPortal/PerformanceOverview.md'
