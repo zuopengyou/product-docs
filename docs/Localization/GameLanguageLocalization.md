@@ -33,9 +33,9 @@
       * 备注：1、该函数返回key本身，一般用于标识代码中出现的新文本；
                   2、必须使用双引号标记key的字符串，使用单引号会导致该文本无法被收集到
 
-![](https://cdn.233xyx.com/athena/online/0a054894090e4952bd828e15eae571ce_14768802.webp)
+        ![](https://cdn.233xyx.com/athena/online/0a054894090e4952bd828e15eae571ce_14768802.webp)
 
-![](https://cdn.233xyx.com/athena/online/b1f34bf63f6c4b96bedab980d2a9750d_14768803.webp)
+        ![](https://cdn.233xyx.com/athena/online/b1f34bf63f6c4b96bedab980d2a9750d_14768803.webp)
 
 * 支持语言：
   
@@ -86,7 +86,7 @@
   
   * 导出为Excel表，表头格式如下·，每一个语言对应编辑器中的一种支持语言
     
-    | key | Chinese | English | Portuguese |
+| key | Chinese | English | Portuguese |
 | ----- | --------- | --------- | ------------ |
     
     
@@ -129,7 +129,7 @@
   * 主编辑器预览语言切换：
     * 备注：世界UI的预览目前还无法在主视口下正常进行本地化预览，pie中可以正常预览
   
-  ![](https://cdn.233xyx.com/1683772792167_079.png)
+      ![](https://cdn.233xyx.com/1683772792167_079.png)
   
   * UI编辑器预览语言切换：
     
@@ -137,7 +137,8 @@
 * 语言设置
   
   * 提供API设置语言
-    | API名称                                                             | 参数说明                                            | 返回                            | 注释                |
+  
+| API名称                                                             | 参数说明                                            | 返回                            | 注释                |
 | --------------------------------------------------------------------- | ----------------------------------------------------- | --------------------------------- | --------------------- |
 | Util.LanguageUtil.useLocalizedLanguage（Type：LanguageType）：void | LanguageType存在Chinese、English、Portuguese三个值 | callback：isSuccessed：boolean | 设置游戏使用的语言 |
     
