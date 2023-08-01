@@ -86,7 +86,7 @@
   
   * 导出为Excel表，表头格式如下·，每一个语言对应编辑器中的一种支持语言
     
-    | key | Chinese | English | Portuguese |
+| key | Chinese | English | Portuguese |
 | ----- | --------- | --------- | ------------ |
     
     
@@ -137,7 +137,8 @@
 * 语言设置
   
   * 提供API设置语言
-    | API名称                                                             | 参数说明                                            | 返回                            | 注释                |
+  
+| API名称                                                             | 参数说明                                            | 返回                            | 注释                |
 | --------------------------------------------------------------------- | ----------------------------------------------------- | --------------------------------- | --------------------- |
 | Util.LanguageUtil.useLocalizedLanguage（Type：LanguageType）：void | LanguageType存在Chinese、English、Portuguese三个值 | callback：isSuccessed：boolean | 设置游戏使用的语言 |
     
