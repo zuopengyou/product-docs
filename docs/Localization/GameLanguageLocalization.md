@@ -21,15 +21,14 @@
 ## 收集文本：左上角收集文本按钮
   
   ### 两种收集方式：覆盖与新增
-    * 覆盖：收集当前编辑器中的所有原文本并覆盖
-    * 新增：收集当前编辑器中的所有原文本，新增当前表格中没有的原文本
+  * 覆盖：收集当前编辑器中的所有原文本并覆盖
+  * 新增：收集当前编辑器中的所有原文本，新增当前表格中没有的原文本
       
-      ![](https://cdn.233xyx.com/1683772791455_518.png)
+  ![](https://cdn.233xyx.com/1683772791455_518.png)
   ### key的意义：UI组件中的原始文本或者代码中的原始文本
   * 怎么让key被收集到：
-    * 方法一：勾选UI组件的本地化字段
-      
-      ![](https://cdn.233xyx.com/1683772792297_668.png)
+    * 方法一：勾选UI组件的本地化字段    
+  ![](https://cdn.233xyx.com/1683772792297_668.png)
     * 方法二：在ts脚本中使用Util.LanguageUtil.locText("Key")标记文本
       
 ::: tip **备注**
@@ -39,9 +38,9 @@
 
 :::
      
-        ![](https://cdn.233xyx.com/athena/online/0a054894090e4952bd828e15eae571ce_14768802.webp)
+![](https://cdn.233xyx.com/athena/online/0a054894090e4952bd828e15eae571ce_14768802.webp)
 
-        ![](https://cdn.233xyx.com/athena/online/b1f34bf63f6c4b96bedab980d2a9750d_14768803.webp)
+![](https://cdn.233xyx.com/athena/online/b1f34bf63f6c4b96bedab980d2a9750d_14768803.webp)
 
 ## 支持语言：
   
