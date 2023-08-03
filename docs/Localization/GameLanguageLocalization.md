@@ -271,7 +271,7 @@ protected onStart() {
 
 * 最终运行效果如下：
   
-  ![](https://cdn.233xyx.com/1691040953095_625.gif)
+  <video controls src="https://cdn.233xyx.com/1691042312370_391.mp4"></video>
 
 ::: warning **注意**
 
