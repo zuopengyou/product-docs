@@ -298,8 +298,12 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     siteTitle: '产品手册',
     nav: [
       {
-        text: '创作者',
+        text: '官网',
         link: 'https://creator.ark.online/'
+      },
+      {
+        text: '论坛',
+        link: 'https://forum.ark.online/'
       },
       {
         text: '教程',
@@ -310,8 +314,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://api-docs.ark.online/'
       },
       {
-        text: '论坛',
-        link: 'https://forum.ark.online/'
+        text: '创作者',
+        link: 'https://portal.ark.online/'
       }
       // {
       //   text: '025 版本',
