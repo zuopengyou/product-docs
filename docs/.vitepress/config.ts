@@ -319,9 +319,9 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://portal.ark.online/'
       },
       {
-         text: '025 版本'
-         //items: []
-       }
+        text: '025 版本'
+        //items: []
+      }
     ],
     socialLinks: [
       // { link: 'https://github.com/prodigytech-doc/api-docs', icon: 'github' },
