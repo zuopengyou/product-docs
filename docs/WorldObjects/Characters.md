@@ -1220,7 +1220,7 @@ export default class stanceTest extends Core.Script {
 
 示意图：
 
-###### 3.10.6 角色插槽
+###### 3.10.5 角色插槽
 
 属性说明：角色插槽是方便用户将某一物体挂载到角色身上，并可以随着角色姿态进行变化。
 
@@ -1262,7 +1262,7 @@ export default class SpawnGO extends Core.Script {
 
 示意图
 
-###### 3.10.7 头顶名称
+###### 3.10.6 头顶名称
 
 属性说明：角色模型头顶会显示名称等效果
 
@@ -1294,3 +1294,23 @@ export default class stanceTest extends Core.Script {
 ```
 
 示意图：
+
+###### 3.10.7 角色模型偏移
+
+属性说明：可以调整角色模型在胶囊体中的位置，从而实现角色浮空或险地的效果。
+
+实际应用：我们可以通过脚本调整角色模型位置，达到角色浮空移动或踩高跷的效果。
+
+示例脚本：
+
+```ts
+Gameplay.asyncGetCurrentPlayer().then((player) => {
+   let character= player.character;
+    设置mesh偏移
+    character.meshOffset =  new Type.Vector(0,0,50);      
+});
+```
+
+示意图：
+
+<video controls src="https://cdn.233xyx.com/1692510229370_937.mp4"></video>
