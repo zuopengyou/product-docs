@@ -12,6 +12,39 @@
 
 * 本地化是指让编辑器制作的游戏能够显示不同的语种，帮助游戏适应不同的语言环境
 * 游戏语言本地化功能为开发者提供了自行配置游戏内文本在各语言环境下的文本配置功能，支持开发者通过api控制游戏内展示的语种
+## 补充说明：快速理解本地化原理及API各自的作用
+
+### 本地化原理
+
+* 游戏运行过程中会收集UI文本框中的原文本，根据游戏的语言环境与对应配置表内提供的信息进行对比，将原文本转化成对应的转换文本
+
+![](https://cdn.233xyx.com/athena/online/9943c81e56a64252bb0d19bfae34e9a3_16955971.webp)
+
+* 上述操作都是针对“UI文本框”这一载体进行的，只有出现在“UI文本框”内的文本才会受到本地化功能影响
+
+![](https://cdn.233xyx.com/athena/online/01222a10efde4746b46f881cdad928c5_16955972.webp)
+
+### API各自的作用
+
+#### locText
+
+* 对于脚本中动态生成在UI文本框上的文本，除了导入excel表外暂时无法直接收集到配置表中，所以提供locText来标记需要收集的文本
+
+![](https://cdn.233xyx.com/athena/online/c61bfa6a4ce1409ab38737544d337007_16955973.webp)
+
+#### getLocTextValue
+
+* 当原文本出现存在动态拼接文本的情况时，配置表中一般只记录了其中一部分，导致其无法在原文本列表中检索出来并替换上对应的转换文本，此时需要getLocTextValue直接在脚本中返回其在当前语言环境下对应的转换文本
+* 具体示例可见下文的示例2
+
+![](https://cdn.233xyx.com/athena/online/ff0bdd7204b64cc9aa46efc1db994ab6_16955974.webp)
+
+#### useLocalizedLanguage
+
+* pie运行状态下默认语言环境为英文，useLocalizedLanguage为开发者提供了控制语言环境的接口
+* 具体示例可见下文的示例1
+
+![](https://cdn.233xyx.com/athena/online/3a70bcdb420a41049f0269047f1cbe1e_16955975.webp)
 
 ## 本地化功能的使用
 
@@ -68,8 +101,8 @@
   * 在脚本中需要使用Util.LanguageUtil.locText("Key")标记文本
   
   ```ts
-  this.tiptxt.text = Util.LanguageUtil.getLocTextValue("你好")
-  //可将标记好的字符串视为一个可根据游戏环境变换的文本，除涉及文本的拼接时与平常无异
+  this.tiptxt.text = Util.LanguageUtil.locText("你好")
+  //用于收集文本
   ```
 
 ::: warning **注意**
@@ -245,7 +278,7 @@
   * 除上述设置语言的函数Util.LanguageUtil.useLocalizedLanguage与标记本地化的函数Util.LanguageUtil.locText("Key")之外；我们还提供了Util.LanguageUtil.getLocTextValue(“key”)函数，该函数的作用是： 返回该key在此语言环境下的value ；
   * 一般来说，对于静态设置且不涉及到拼接的文本来说，无需用到getLocTextValue函数，直接UI组件.text=Util.LanguageUtil.locText("key")就可以使此UI组件的文本属性本地化，对应的配置为key的多语言配置； 但如果涉及到字符串拼接或动态拼接时，仅用Util.LanguageUtil.locText("key")函数是无法实现的，需要用Util.LanguageUtil.getLocTextValue(“key”)函数进行拼接
 
-## 示例1：点击按钮，切换中文文本为英文
+## 示例1：利用"useLocalizedLanguage"切换游戏内的语言环境
 
 * 第一步：完成UI并保存，打开本地化界面，点击收集文本
 
@@ -284,17 +317,17 @@ protected onStart() {
 
 :::
 
-## 示例2：脚本中拼接文本的处理方式
+## 示例2：利用"getLocTextValue"处理脚本中的拼接文本
 
-* locText不支持拼接文本
+* locText仅提供收集文本的功能，拼接文本无法在原文本列表中检索出来，导致其无法正常本地化
 
 ![](https://cdn.233xyx.com/athena/online/c8a6511e75ba4e44a47ac18820d2c5b5_15026034.webp)
 
 ![](https://cdn.233xyx.com/athena/online/7351ed97529f459488f2c0591d3e19d7_15026035.webp)
 
-* 此时需要使用getLocTextValue返回对应key已配置好的文本
+* 此时需要使用getLocTextValue返回对应语言环境下的转换文本
 
-![](https://cdn.233xyx.com/athena/online/561f47d1f18e457cb99faae085a5749c_15026036.webp)
+![](https://cdn.233xyx.com/athena/online/73e9f4e1270341ebaab3035ec8e39ce4_16955970.webp)
 
 ![](https://cdn.233xyx.com/athena/online/2338add41ca04defb7782ece2a001d3f_15026037.webp)
 
