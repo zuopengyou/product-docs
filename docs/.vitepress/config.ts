@@ -16,6 +16,13 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   outDir: '../dist',
   head: [
     [
+      'meta',
+      {
+        name: 'docsearch:tags',
+        content: 'product-docs'
+      }
+    ],
+    [
       'link',
       {
         rel: 'icon',
@@ -310,15 +317,15 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-         text: '026 版本',
-         items: [
-         {
+        text: '026 版本',
+        items: [
+          {
             text: '025 版本',
             link: 'https://docs-025.ark.online/',
             path: true
           }
-         ]
-       }
+        ]
+      }
     ],
     socialLinks: [
       // { link: 'https://github.com/prodigytech-doc/api-docs', icon: 'github' },
