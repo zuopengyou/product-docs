@@ -304,7 +304,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       {
         text: '论坛',
         link: 'https://forum.ark.online/'
-      }
+      },
       {
          text: '026 版本',
          items: [
