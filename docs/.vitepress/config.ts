@@ -16,13 +16,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   outDir: '../dist',
   head: [
     [
-      'meta',
-      {
-        name: 'docsearch:tags',
-        content: 'product-docs'
-      }
-    ],
-    [
       'link',
       {
         rel: 'icon',
@@ -229,7 +222,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             link: '/CreatorPortal/Publishing&Managing.md'
           },
           { text: '分析游戏数据', link: '/CreatorPortal/Analytics.md' },
-          { text: '商业化指南', link: '/CreatorPortal/Advertising.md' },
+          { text: '接入游戏广告', link: '/CreatorPortal/Advertising.md' },
           {
             text: '游戏性能及排查',
             link: '/CreatorPortal/PerformanceOverview.md'
@@ -252,10 +245,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: 'v0.26.0.2', link: '/ReleaseNote/v0.26.0.2.md' },
-          { text: 'v0.26.0.1', link: '/ReleaseNote/v0.26.0.1.md' },
-          { text: 'v0.26.0.0', link: '/ReleaseNote/v0.26.0.0.md' },
-          { text: 'v0.25.0.4', link: '/ReleaseNote/v0.25.0.4.md' },
           { text: 'v0.25.0.3', link: '/ReleaseNote/v0.25.0.3.md' },
           { text: 'v0.25.0.2', link: '/ReleaseNote/v0.25.0.2.md' },
           { text: 'v0.25.0.1', link: '/ReleaseNote/v0.25.0.1.md' },
@@ -301,12 +290,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     siteTitle: '产品手册',
     nav: [
       {
-        text: '官网',
+        text: '创作者',
         link: 'https://creator.ark.online/'
-      },
-      {
-        text: '论坛',
-        link: 'https://forum.ark.online/'
       },
       {
         text: '教程',
@@ -317,13 +302,13 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://api-docs.ark.online/'
       },
       {
-        text: '创作者',
-        link: 'https://portal.ark.online/'
-      },
-      {
-        text: '025 版本'
-        //items: []
+        text: '论坛',
+        link: 'https://forum.ark.online/'
       }
+      // {
+      //   text: '025 版本',
+      //   items: []
+      // }
     ],
     socialLinks: [
       // { link: 'https://github.com/prodigytech-doc/api-docs', icon: 'github' },

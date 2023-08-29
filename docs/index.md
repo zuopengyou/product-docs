@@ -6,7 +6,7 @@
 [教程文档](https://learning.ark.online/)则拥有较强的上下文关系与系统性，方便萌新按顺序从安装编辑器开始学习到可以制作自己的游戏项目。
 所以推荐首先跟随[教程文档](https://learning.ark.online/)完成学习，然后在开发自己的游戏项目过程中，遇到问题后，搜索查找[产品文档](https://docs.ark.online/)来解决对应问题。
 
-## [编辑器](https://docs.ark.online/Editor/EditorWindowsOperation.html)
+## [编辑器](https://docs.ark.online/Editor/EditorSettings.html)
 
 ## [UI](https://docs.ark.online/UI/CreatingUserInterface(UI).html)
 
