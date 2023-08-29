@@ -1,4 +1,13 @@
 # 更新日志
+## [v0.26.0.2](https://docs.ark.online/ReleaseNote/v0.26.0.2.html)
+
+## [v0.26.0.1](https://docs.ark.online/ReleaseNote/v0.26.0.1.html)
+
+## [v0.26.0.0](https://docs.ark.online/ReleaseNote/v0.26.0.0.html)
+### [026编辑器新增严格编译功能下报错的解决方案](https://docs.ark.online/ReleaseNote/Special/026%E7%BC%96%E8%BE%91%E5%99%A8%E6%96%B0%E5%A2%9E%E4%B8%A5%E6%A0%BC%E7%BC%96%E8%AF%91%E5%8A%9F%E8%83%BD%E4%B8%8B%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html)
+
+## [v0.25.0.4](https://docs.ark.online/ReleaseNote/v0.25.0.4.html)
+
 ## [v0.25.0.3](https://docs.ark.online/ReleaseNote/v0.25.0.3.html)
 
 ## [v0.25.0.2](https://docs.ark.online/ReleaseNote/v0.25.0.2.html)

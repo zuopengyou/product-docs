@@ -16,6 +16,13 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   outDir: '../dist',
   head: [
     [
+      'meta',
+      {
+        name: 'docsearch:tags',
+        content: 'product-docs'
+      }
+    ],
+    [
       'link',
       {
         rel: 'icon',
@@ -245,6 +252,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
+          { text: 'v0.26.0.2', link: '/ReleaseNote/v0.26.0.2.md' },
+          { text: 'v0.26.0.1', link: '/ReleaseNote/v0.26.0.1.md' },
+          { text: 'v0.26.0.0', link: '/ReleaseNote/v0.26.0.0.md' },
+          { text: 'v0.25.0.4', link: '/ReleaseNote/v0.25.0.4.md' },
           { text: 'v0.25.0.3', link: '/ReleaseNote/v0.25.0.3.md' },
           { text: 'v0.25.0.2', link: '/ReleaseNote/v0.25.0.2.md' },
           { text: 'v0.25.0.1', link: '/ReleaseNote/v0.25.0.1.md' },
@@ -304,11 +315,17 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       {
         text: '论坛',
         link: 'https://forum.ark.online/'
+      },
+      {
+        text: '026 版本',
+        items: [
+          {
+            text: '025 版本',
+            link: 'https://docs-025.ark.online/',
+            path: true
+          }
+        ]
       }
-      // {
-      //   text: '025 版本',
-      //   items: []
-      // }
     ],
     socialLinks: [
       // { link: 'https://github.com/prodigytech-doc/api-docs', icon: 'github' },
