@@ -6,13 +6,13 @@
 
 ## 什么是推进器
 
-> 推进器是一个具有物理特性的功能对象，可以对开启物理模拟的物体添加一个持续推力，使其进行物理运动。
+> 推进器是一个具有物理特性的功能对象，可以对开启物理模拟的物体添加一个持续力，推动其进行物理运动。
 
 ## 如何创建推进器
 
 - **step.1** 为模型添加一个推进器
 在本地资源库中搜索[推进器]，找到功能对象，将推进器拖拽到在需要被推动的对象子级，完成绑定。
-被推动的对象需要开启物理模拟，静态模型的物理模拟参考[物理对象](https://docs.ark.online/Physics/PhysicalObject.html)。
+被推动的对象需要开启物理模拟，模型的物理模拟参考[物理对象](https://docs.ark.online/Physics/PhysicalObject.html)。
 
 ![](https://cdn.233xyx.com/1681901694639_899.png)
 
@@ -29,18 +29,24 @@
 
 ![](https://cdn.233xyx.com/1681901694520_126.png)
 
+在属性面板中选中[启用]，运行游戏时推进器会立即施加推力，开始物理模拟计算。
+
 * **通过脚本控制**
 
 ```TypeScript
-@Core.Class
-export default class NewScript extends Core.Script {
+@Component
+export default class NewScript extends Script {
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
-        //通过脚本调用推进器接口，在运行时动态启用推进器
-        let ThrusterOG = this.gameObject as Gameplay.PhysicsThruster; //指定推进器功能对象
-        ThrusterOG.strength = 165000;  //设置推进力
-        ThrusterOG.enable = true;      //开启推进器
+
+        let ThrusterMain = this.gameObject as mw.PhysicsThruster; //指定推进器功能对象
+        
+        //设置推力值，推力值需要参考被推动对象以及当前世界重力，如当前世界重力-1600，被推动对象质量1000，则推力需要大于(1600*1000)才可将其推离地面；
+        ThrusterMain.strength = 165000; 
+        
+        //可以通过API，在指定时机启用推进器；
+        ThrusterMain.enable = true; 
     }
 }
 ```
