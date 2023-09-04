@@ -317,8 +317,13 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-        text: '026 版本',
+        text: '027 版本',
         items: [
+          {
+            text: '026 版本',
+            link: 'https://docs-026.ark.online/',
+            path: true
+          },
           {
             text: '025 版本',
             link: 'https://docs-025.ark.online/',
@@ -345,7 +350,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     outline: [2, 3],
     editLink: {
       pattern:
-        'https://github.com/prodigytech-doc/product-docs/tree/main/docs/:path',
+        'https://github.com/prodigytech-doc/product-docs/tree/release-027/docs/:path',
       text: '编辑'
     },
     feedback: 'https://github.com/prodigytech-doc/product-docs/',
