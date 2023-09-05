@@ -320,15 +320,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         text: '027 版本',
         items: [
           {
-            text: '026 版本',
-            link: 'https://docs-026.ark.online/',
+            text: '主版本',
+            link: 'https://docs.ark.online/',
             path: true
-          },
-          {
-            text: '025 版本',
-            link: 'https://docs-025.ark.online/',
-            path: true
-          }
+          }          
         ]
       }
     ],
