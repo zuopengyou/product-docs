@@ -205,7 +205,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '资源加载与资源下载',
             link: '/Resource/assetdownloadandload.md'
           },
-          { text: '资源上传工具', link: '/Resource/AssetUpload.md' }
+          { text: '资源上传工具', link: '/Resource/AssetUpload.md' },
+          { text: '材质编辑器', link: '/Resource/MaterialEditor.md' }
         ]
       },
       {
