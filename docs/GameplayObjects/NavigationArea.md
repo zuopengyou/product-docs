@@ -63,28 +63,28 @@
 创建一个脚本，使用 moveTo()方法控制角色进行自动寻路
 
 ```ts
-@Core.Class
-export default class PlayerMoveTo extends Core.Script {
+@Component
+export default class NewScript extends Script {
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    protected async onStart(): Promise<void> {
+    protected onStart(): void {
 
-        let player = await Gameplay.asyncGetCurrentPlayer();
-        let loc = new Type.Vector(0, 2020, 350);  //设定一个目标点
-        
-        //moveTo()可以让角色、NPC、载具或者普通对象向一个指定的目标位置进行自动寻路
-        InputUtil.onKeyDown(Type.Keys.One, () => {
-            Gameplay.moveTo(player.character, loc, 0, () => {
+        let player = Player.localPlayer;  //获取角色
+        let loc = new mw.Vector(1600, 0, 250);  //设定一个目标点
+
+        //使用navigateTo()将角色移动到目标点
+        InputUtil.onKeyDown(mw.Keys.One, () => {
+            Navigation.navigateTo(player.character, loc, 10, () => {
                 console.log(`寻路成功`);
             }, () => {
                 console.log(`寻路失败`);
             });
         });
 
-        //使用clearMoveTo()函数，可以将指定的对象停止寻路
-        InputUtil.onKeyDown(Type.Keys.Two, () => {
+        //使用stopNavigateTo()函数，可以将指定的对象停止寻路
+        InputUtil.onKeyDown(mw.Keys.Two, () => {
             console.log(`停止角色寻路}`);
-            Gameplay.clearMoveTo(player.character);
+            Navigation.stopNavigateTo(player.character);
         });
     }
 }
@@ -100,42 +100,51 @@ export default class PlayerMoveTo extends Core.Script {
 
 - **step.8**
 
-在场景中创建一个NPC
+在场景中创建两个角色NPC，将其中一个角色设置为客户端
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/I4epbyRNToqjlYx9cpQcaE2vnDi.png)
+![](https://cdn.233xyx.com/online/uiBbYCV7uaTR1693879253848.png)
 
 - **step.9**
 
-创建一个脚本，使用follow()方法控制NPC跟随主角进行自动寻路
+创建一个脚本，在脚本中使用follow()方法控制NPC跟随主角进行自动寻路
 
 ```ts
-@Core.Class
-export default class NAV extends Core.Script {
 
-    player:Gameplay.Player
-    
+@Component
+export default class NewScript1 extends Script {
+
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected async onStart(): Promise<void> {
 
-        let NPC =this.gameObject as Gameplay.NPC;
+        let player = Player.localPlayer;
+        let NPCforC = await mw.GameObject.asyncFindGameObjectById("216613A7") as mw.Character;  //通过对象ID获取到客户端NPC
 
-        if(Util.SystemUtil.isClient()){
-            this.player= Gameplay.getCurrentPlayer();
-        }
-
-        //follow()可以让角色、NPC、载具或者普通对象向一个指定目标进行持续的跟随
-        InputUtil.onKeyDown(Type.Keys.One,()=>{
-            Gameplay.follow(NPC, this.player.character, 10, () => {
+        //客户端NPC使用follow()开始跟随角色进行移动
+        if (SystemUtil.isClient()) {
+            Navigation.follow(NPCforC, player.character, 10, () => {
                 console.log(`寻路成功`);
             }, () => {
                 console.log(`寻路失败`);
             });
-        })
 
-        //开始执行跟随后，需要使用clearFollow()函数，将对象停止寻路功能
-        InputUtil.onKeyDown(Type.Keys.Two, () => {
-            console.log(`停止NPC跟随}`);
-            Gameplay.clearFollow(NPC);
+            this.serverFollow(player.userId);
+        }
+
+        //开始执行跟随后，使用stopFollow()函数，将客户端NPC停止寻路功能，双端NPC需要在服务器端调用stopFollow()函数；
+        InputUtil.onKeyDown(mw.Keys.Two, () => {
+            console.log(`停止客户端NPC跟随}`);
+            Navigation.stopFollow(NPCforC);
+        });
+    }
+
+    @mw.RemoteFunction(mw.Server)
+    serverFollow(id: string) {
+        let player = Player.getPlayer(id); //在服务器端获取到主角；
+        let NPCforSC = mw.GameObject.findGameObjectById("1CDC00EC") as mw.Character; //通过对象ID获取到双端NPC
+        Navigation.follow(NPCforSC, player.character, 10, () => {
+            console.log(`寻路成功`);
+        }, () => {
+            console.log(`寻路失败`);
         });
     }
 }
@@ -146,7 +155,8 @@ export default class NAV extends Core.Script {
 
 ## 动态修改寻路数据方法
 
-在编辑器菜单栏[设置]功能中增加了[寻路设置]属性,可以设置是否开启动态寻路功能,动态寻路开启后,可以通过游戏运行时动态修改寻路导航数据.
+动态寻路开启后,可以通过游戏运行时动态修改寻路导航数据，用于制作门、桥等有开关状态的寻路地区。
+在编辑器菜单栏[设置]功能中增加了[寻路设置]属性,可以设置是否开启动态寻路功能。
 
 > 关闭动态寻路后,寻路区域数据在项目发布时即构建完成,不会在游戏启动时消耗性能.
 
@@ -163,39 +173,37 @@ export default class NAV extends Core.Script {
 - **step.11**
 在场景中设置两条寻路路径，并设置目标点
 
-![](https://cdn.233xyx.com/1683598687787_662.png)
-
+![](https://cdn.233xyx.com/online/cbcxXAu8ebtP1693892552089.png)
 
 - **step.12**
-创建一个脚本，动态生成一个模型来阻挡移动路线。
+在资源库中搜索[寻路动态修饰区]，放置在路面，将[寻路动态修饰区]区域类型设置为[无效的]。
+![](https://cdn.233xyx.com/online/gT39sUpj4ZQZ1693892552089.png)
+
+- **step.13**
+创建一个脚本，用来控制[寻路动态修饰区]的区域类型状态。
 
 ```ts
-@Core.Class
-export default class Nav extends Core.Script {
+@Component
+export default class NewScript2 extends Script {
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected async onStart(): Promise<void> {
 
-        //设置寻路目标点
-        let targetLocation = new Type.Vector(1700, -650, 0);
+        let player = Player.localPlayer;
+        let targetPos = new mw.Vector(1800,250,250); //设置一个目标点
+        let modifierVolume =await mw.GameObject.asyncFindGameObjectById("352509AA") as mw.NavModifierVolume; //通过对象ID找到寻路动态修饰区
 
-
-        //接收事件，动态创建一个模型做为路障
-        Events.addClientListener("Spawnroadblocks", () => {
-            let roadblocks = Core.GameObject.spawn<Gameplay.Mesh>({
-                guid:"7669",
-                replicates:true,
-                transform:new Type.Transform(new Type.Vector(400,-620,0),Type.Rotation.zero,new Type.Vector(1,5,1))
-            })
+        InputUtil.onKeyDown(mw.Keys.One,()=>{
+            Navigation.navigateTo(player.character,targetPos)
         });
 
-        //接收事件，角色开始寻路
-        Events.addLocalListener("StartNavigation", () => {
-            let player = Gameplay.getCurrentPlayer();
-            Gameplay.moveTo(player.character, targetLocation)
-        });
+        InputUtil.onKeyDown(mw.Keys.Two,()=>{
+            modifierVolume.areaClass = mw.NavModifierType.Default //将寻路动态修饰区类型设置为默认可通行；
+        })
     }
 }
 ```
-<video controls src="https://cdn.233xyx.com/athena/online/a9c9062e89244abf8eec2d0144754231.mp4"></video>
+使用控制台命令 -show Navigation打开寻路区域显示
+在寻路动态修饰区类型为无效时，主角通侧方道路进行寻路，到达了目标点。在改变寻路动态修饰区类型为默认可通行后，再次寻路，主角使用了距离较近的路线到达了目标点。
+<video controls src="https://cdn.233xyx.com/athena/online/cd4a63204d304b48aace55bd7ffcb81c.mp4"></video>
 
