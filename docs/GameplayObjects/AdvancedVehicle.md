@@ -187,6 +187,7 @@ export default class NewScript extends Script {
         });
     }
 }
+
 ```
 
 
