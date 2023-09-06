@@ -6,7 +6,7 @@
 
 ## UI拖拽事件及相关函数
 
-#### onDragDetected(InGemotry :UI.Geometry,InPointerEvent:UI.PointerEvent) : UI.DragDropOperation
+### onDragDetected(InGemotry :UI.Geometry,InPointerEvent:UI.PointerEvent) : UI.DragDropOperation
 - 当触发拖拽时返回一次生成的拖拽事件
 - InGeometry :UI.Geometry可以用来获取UI的坐标信息
 - InPointerEvent:UI.PointerEvent可以用来获取鼠标点击或者滑动的信息
@@ -42,7 +42,7 @@
     }
 ```
 
-#### onDrop(InGemotry :UI.Geometry,InDragDropEvent:UI.PointerEvent,InDragDropOperation:UI.DragDropOperation) : boolean
+### onDrop(InGemotry :UI.Geometry,InDragDropEvent:UI.PointerEvent,InDragDropOperation:UI.DragDropOperation) : boolean
 - 拖拽事件在这个UI完成释放时触发，返回true表示处理完成这次事件；这里可以编写释放UI时想要触发的逻辑
 - 拖拽事件所展示的UI会自动销毁，如果仍想要展示此UI需要重新创建
 
@@ -61,7 +61,7 @@
     }
 ```
 
-#### onDragEnter(InGemotry :UI.Geometry,InDragDropEvent:UI.PointerEvent,InDragDropOperation:UI.DragDropOperation) : void
+### onDragEnter(InGemotry :UI.Geometry,InDragDropEvent:UI.PointerEvent,InDragDropOperation:UI.DragDropOperation) : void
 - 当有正在拖拽的UI进入这个UI的范围内时触发
 
 **示例：**
@@ -76,7 +76,7 @@
 ```
 
 
-#### onDragLeave(InDragDropEvent:UI.PointerEvent,InDragDropOperation : UI.DragDropOperation) : void
+### onDragLeave(InDragDropEvent:UI.PointerEvent,InDragDropOperation : UI.DragDropOperation) : void
 - 当有正在拖拽的UI离开这个UI的范围内时触发
 
 **示例：**
@@ -91,7 +91,7 @@
 ```
 
 
-#### onDragCancelled(InDragDropEvent:UI.PointerEvent,InDragDropOperation : UI.DragDropOperation) : void
+### onDragCancelled(InDragDropEvent:UI.PointerEvent,InDragDropOperation : UI.DragDropOperation) : void
 - 拖拽事件没有被完成而是取消时触发
 - 如果释放的时候没有触发onDrop事件就结束了，则会触发onDragCancelled；也可以通过函数cancelDragDrop/endDragDrop来取消拖拽事件
 
@@ -106,7 +106,7 @@
     }
 ```
 
-#### onDragOver(InGeometry :UI.Geometry,InDragDropEvent:UI.PointerEvent,InDragDropOperation:UI.DragDropOperation):boolean
+### onDragOver(InGeometry :UI.Geometry,InDragDropEvent:UI.PointerEvent,InDragDropOperation:UI.DragDropOperation):boolean
 - 当有正在拖拽的UI经过这个UI的范围内时触发，返回true表示处理完成这次事件
 
 **示例：**
@@ -122,7 +122,7 @@
     }
 ```
 
-#### 其他相关函数
+### 其他相关函数
 - UIBehavior类下的detectDrag/detectDragIfPressed函数，用于开始检测是否有拖拽操作
 - UIBehavior类下的newDragDrop函数，用于创建新的拖拽事件
   - 这三个函数在前文onDragDetected的部分已经介绍过了
@@ -159,36 +159,29 @@
         newDragDrop(inVisualWidget: Widget, inTag?: string, inPayLoad?: any, inPivot?: DragPivot, inOffset?: Type.Vector2): DragDropOperation;
     }
 ```
-- UI类下还有一些拖拽事件相关的函数，可以用来中断/获取/判断当前的拖拽事件
+- 还有一些拖拽事件相关的函数，可以用来中断/获取/判断当前的拖拽事件
 
 ```ts
 declare namespace UI {
         /**
          * @description 中断一个拖拽事件, 传入一个操作的事件
-         * @groups GUI
          * @effect 只在客户端调用生效
          * @param InReply usage:事件
          */
         function endDragDrop(InReply: EventReply): void;
         /**
-         * @author jie.wu
          * @description 中断所有的DragDrop
-         * @groups GUI
          * @effect 只在客户端调用生效
          */
         function cancelDragDrop(): void;
         /**
-         * @author jie.wu
          * @description 判断当前是否有一个DragDrop事件
-         * @groups GUI
          * @effect 只在客户端调用生效
          * @returns boolean
          */
         function isDragDropping(): boolean;
         /**
-         * @author jie.wu
          * @description 获取当前的DragDrop事件
-         * @groups GUI
          * @effect 只在客户端调用生效
          * @returns 返回当前的DragDrop事件
          */
