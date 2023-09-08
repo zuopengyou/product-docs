@@ -2,7 +2,7 @@
 
 **阅读本文大概需要 10 分钟**
 
-本文概述了如何使用按键绑定和鼠标锁定功能快捷设置 PC 游戏端玩家的控制方案，以及如何使用新建项目的预设 UI。
+本文概述了如何使用按键绑定和鼠标锁定功能快捷设置 PC 游戏端的控制方案，以及新建项目的预设UI包括哪些功能。
 
 ## 什么是按键绑定？
 
@@ -35,11 +35,11 @@
 **脚本示例：**
 
 ```ts
-const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.Button
+const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as Button
 //绑定按键
-Util.InputUtil.bindButton(Type.Keys.Up,JumpBtn)
+InputUtil.bindButton(Keys.Up,JumpBtn)
 //解绑按键
-Util.InputUtil.unbindButton(Type.Keys.Up)
+InputUtil.unbindButton(Keys.Up)
 ```
 
 - 为了满足开发者针对 PC 游戏端的不同需求，比如希望某个摄像机滑动区/摇杆是否可以被鼠标点击，因此在 VirtualJoystickPanel 和 TouchPad 类中提供了是否被鼠标控制的接口，编辑器内也可以在摄像机滑动区/摇杆属性面板中勾选此属性
@@ -51,8 +51,8 @@ Util.InputUtil.unbindButton(Type.Keys.Up)
 **脚本示例：**
 
 ```ts
-let touchpad=this.uiWidgetBase.findChildByPath('Canvas/UITouchPad_1') as UI.TouchPad
-let joystick=this.uiWidgetBase.findChildByPath('Canvas/UIVirtualJoystickPanel_1') as UI.VirtualJoystickPanel
+let touchpad=this.uiWidgetBase.findChildByPath('Canvas/UITouchPad_1') as TouchPad
+let joystick=this.uiWidgetBase.findChildByPath('Canvas/UIVirtualJoystickPanel_1') as VirtualJoystickPanel
 //设置摇杆和摄像机滑动区可以被鼠标点击
 touchpad.controlByMouseEnable(true)
 joystick.controlByMouseEnable(true)
@@ -64,12 +64,11 @@ let bool2 = joystick.controlByMouseEnable
 ## 新建项目的预设 UI 控制方案
 
 - 为新建项目提供一个预设UI文件，并且绑定了一套键鼠默认键位，作为默认的控制方案
-- 预设UI文件包括左侧的摇杆、右侧的摄像机滑动区和右下的三个按钮（跳跃/攻击/交互）
-- 预设UI脚本文件内包括控制点击跳跃按钮可以实现跳跃、点击攻击/交互按钮播放动作的逻辑
+- 预设UI文件包括左侧的摇杆、右侧的摄像机滑动区和右下的两个按钮（跳跃/攻击）
+- 预设UI脚本文件内包括控制点击跳跃按钮可以实现跳跃、点击攻击按钮播放动作的逻辑
+- 请注意：尽管在新建项目中，鼠标左右键都能控制摄像机，但两者的逻辑不同，鼠标左键控制摄像机类似于移动端用手指在摄像机滑动区内拖动来控制摄像机，而鼠标右键是通过按键绑定菜单里绑定到摄像机滑动区来控制摄像机的，如果不希望鼠标右键控制摄像机，可以在菜单里解除绑定
 
-![](https://cdn.233xyx.com/1681457046670_844.png)
-
-![](https://cdn.233xyx.com/1681457046832_053.png)
+![](https://cdn.233xyx.com/online/S6R3KZWP1EE31694155920054.png)
 
 | 按键               | 行动             | 对应的预设UI控件        |
 | -------------------- | ------------------ | ------------------------- |
@@ -79,8 +78,7 @@ let bool2 = joystick.controlByMouseEnable
 | **D**        | 向右移动         |
 | **鼠标右键** | 旋转镜头（按住） | TouchPadDesigner |
 | **空格键**   | 跳跃             | Button_Jump |
-| **鼠标左键** | 攻击/热武器开火  | Button_Attack |
-| **F**        | 交互/触发键      | Button_Interact |
+|              | 攻击/热武器开火  | Button_Attack |
 
 ## PC 端鼠标锁定功能及 API
 
@@ -92,7 +90,7 @@ let bool2 = joystick.controlByMouseEnable
 
 ```ts
 //设置为不允许玩家切换鼠标锁定状态
-Util.InputUtil.setCanBeLockMouse(false)
+InputUtil.setMouseLockable=false
 //设置为允许玩家切换鼠标锁定状态
-Util.InputUtil.setCanBeLockMouse(true)
+InputUtil.setMouseLockable=true;
 ```
