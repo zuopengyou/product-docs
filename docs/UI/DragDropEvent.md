@@ -242,18 +242,17 @@ declare namespace UI {
 ### 示例一：制作一张最简单的可拖拽图片
 * **step.1** 新建一个NewUI文件，并把允许拖动的UI内容单独放在这个UI文件里面作为一个自定义UI控件，然后编写脚本
 * 在这个例子中，我们想要拖拽的是一张空白图片
-* **注意应将Root的对齐方式设置为左上对齐**
+* **注意应将Root的对齐方式设置为左上对齐，并且把图片的可见性设置为可见**
 
 ![](https://cdn.233xyx.com/1684047509352_708.png)
 
 ```TypeScript
-import DefaultUI_generate from "./ui-generate/NewUI_generate";
+import NewUI_generate from "./ui-generate/NewUI_generate";
 
 //创建一个继承DragDropPayLoad的TestDragDropPayLoad类，传入newDragDrop函数作为参数payLoad，跟随拖拽事件传递一些信息
 export class TestDragDropPayLoad extends DragDropPayLoad {
 
     private test1 : UserWidget ;
-
     public get Test1() {
         return this.test1;
     }
@@ -263,26 +262,35 @@ export class TestDragDropPayLoad extends DragDropPayLoad {
 }
 
 export default class NewUIScript extends NewUI_generate {
+	/** 
+	 * 构造UI文件成功后，在合适的时机最先初始化一次 
+	 */
+	protected onStart() {
+		//设置能否每帧触发onUpdate
+		this.canUpdate = false;
+		this.layer = UILayerMiddle;
+		console.log("________");
+	}
 
-    protected onStart() {
-    }
-    
     //当玩家触摸到此UI时，开始检测是否发生拖拽操作
-    onTouchStarted(InGeometry :Geometry,InPointerEvent:PointerEvent) :EventReply{
+	onTouchStarted(InGeometry :Geometry,InPointerEvent:PointerEvent) :EventReply{
         console.log("OnTouch"+InPointerEvent.screenSpacePosition)
         return this.detectDragIfPressed(InPointerEvent, Keys.AnyKey)
     }
-        //当检测到发生拖拽操作时，创建一个新的拖拽事件，同时设置此拖拽事件的展示UI、tag、数据信息、锚点及偏移
-    protected onDragDetected(InGeometry :Geometry,InPointerEvent:PointerEvent):DragDropOperation {
-        console.log("OnDrag"+InPointerEvent.screenSpacePosition)
-        let ui=createUIByName("NewUI")
-
-        //这里我们用payLoad参数传递的信息是这个UI对象，以便于在onDrop时创建一个新的UI对象并销毁旧的
-        const payLoad = new TestDragDropPayLoad();
-        payLoad.Test1=this.uiWidgetBase
-        return this.newDragDrop(ui, "DragDropTag", payLoad, DragPivot.CenterCenter, Vector2.zero);  
+    //当玩家触摸到此UI时，开始检测是否发生拖拽操作
+    onTouchEnded(InGemetry: Geometry, InPointEvent: PointerEvent): EventReply {
+        return EventReply.handled;
     }
-}
+        //当检测到发生拖拽操作时，创建一个新的拖拽事件，同时设置此拖拽事件的展示UI、tag、数据信息、锚点及偏移
+	protected onDragDetected(InGeometry :Geometry,InPointerEvent:PointerEvent):DragDropOperation {
+		console.log("OnDrag"+InPointerEvent.screenSpacePosition)
+		let ui=createUIByName("NewUI")
+
+		//这里我们用payLoad参数传递的信息是这个UI对象，以便于在onDrop时创建一个新的UI对象并销毁旧的
+		const payLoad = new TestDragDropPayLoad();
+        payLoad.Test1=this.uiWidgetBase
+        return this.newDragDrop(ui, "DragDropTag", payLoad, DragPivot.CenterCenter, new Vector2(0,0));	
+	}
 ```
 
 * **step.2** 然后在监听释放的另一个UI文件（这个例子中直接使用了DefaultUI文件）的UI脚本内编写释放的逻辑；
@@ -292,33 +300,35 @@ export default class NewUIScript extends NewUI_generate {
 import {TestDragDropPayLoad} from "./NewUIScript";
 import DefaultUI_generate from "./ui-generate/DefaultUI_generate";
 
+@UIBind('')
 export default class UIDefault extends DefaultUI_generate {
 
-    /** 仅在游戏时间对非模板实例调用一次 */
+	/** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() {
-    }
+	}
 
     /**
      * 拖拽事件完成
      */
     onDrop(InGemotry: Geometry, InDragDropEvent: PointerEvent, InOperation: DragDropOperation) {
-        console.warn("OnDrop"+InDragDropEvent.screenSpacePosition)
-        //重新创建一个空白图片的自定义UI并设置位置
-        let ui1=createUIByName("NewUI")
-        this.uiWidgetBase.rootContent.addChild(ui1)
-        ui1.position=(new Vector2(absoluteToLocal(InGemotry,InDragDropEvent.screenSpacePosition).x-ui1.size.x*0.5,absoluteToLocal(InGemotry,InDragDropEvent.screenSpacePosition).y-ui1.size.y*0.5))
-        console.log(ui1.position);
-        //把旧的空白图片UI销毁
-        const payLoad = InOperation.tryGetDragDropPayLoadAs<TestDragDropPayLoad>();
-        const test1 = payLoad.Test1;
-        test1.destroyObject()
+		console.warn("OnDrop"+InDragDropEvent.screenSpacePosition)
+		//重新创建一个空白图片的自定义UI并设置位置
+		let ui1=createUIByName("NewUI")
+		this.uiWidgetBase.rootContent.addChild(ui1)
+		ui1.position=(new Vector2(absoluteToLocal(InGemotry,InDragDropEvent.screenSpacePosition).x-ui1.size.x*0.5,absoluteToLocal(InGemotry,InDragDropEvent.screenSpacePosition).y-ui1.size.y*0.5))
+		console.log(ui1.position);
+		//把旧的空白图片UI销毁
+		const payLoad = InOperation.tryGetDragDropPayLoadAs<TestDragDropPayLoad>();
+		const test1 = payLoad.Test1;
+		test1.destroyObject()
     }
 
-     /**
+	    /**
      * 拖拽操作生成事件触发后，没有完成完成的拖拽事件而取消时触发
      */
     protected onDragCancelled(InGemotry :Geometry,InDragDropEvent:PointerEvent) {
-        console.warn("onDragCancelled"+InDragDropEvent.screenSpacePosition)
+		console.warn("onDragCancelled"+InDragDropEvent.screenSpacePosition)
+    }
 }
 ```
 
@@ -328,7 +338,7 @@ export default class UIDefault extends DefaultUI_generate {
 
 ![](https://cdn.233xyx.com/1684047509420_956.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1684119406149_228.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/online/uM4wYJd7j0m11694155280424.7z)
 
 ### 示例二：制作一个有拖拽功能的背包面板
 
@@ -337,7 +347,7 @@ export default class UIDefault extends DefaultUI_generate {
 * 每个格子都要允许被拖拽，和前面的例子一样，使用onDragDetected事件来新建UI拖拽事件
 * 需要有在有其他格子被拖拽到这个格子上时，实现两个格子交换位置的功能，这部分逻辑写在onDrop事件里
 * 还需要制作一个拖出背包面板并释放就丢弃物品的效果，这部分逻辑写在onDropCancelled事件里
-* **注意应将Root的对齐方式设置为左上对齐**
+* **注意应将Root的对齐方式设置为左上对齐，并且把图片的可见性设置为可见**
 
 ![](https://cdn.233xyx.com/1684047509108_232.png)
 
@@ -357,45 +367,46 @@ export class TestDragDropPayLoad extends DragDropPayLoad {
 }
 
 export default class BagItem extends BagItem_generate {
-    /** 
-     * 构造UI文件成功后，在合适的时机最先初始化一次 
-     */
-    protected onStart() {
-        //给每个格子创建时随机改变图片的颜色，这里我们是模拟每个格子都是不同的物品
-        this.icon.imageColor= new LinearColor(Math.random(),Math.random(),Math.random(),1.0)
-    }
+	// payLoad:TestDragDropPayLoad
+	/** 
+	 * 构造UI文件成功后，在合适的时机最先初始化一次 
+	 */
+	protected onStart() {
+		//给每个格子创建时随机改变图片的颜色，这里我们是模拟每个格子都是不同的物品
+		this.icon.imageColor= new LinearColor(Math.random(),Math.random(),Math.random(),1.0)
+		console.log("_________");
+	}
 
-    //当玩家触摸到此UI时，开始检测是否发生拖拽操作
-    onTouchStarted(InGeometry :Geometry,InPointerEvent:PointerEvent) :EventReply{
+	onTouchStarted(InGeometry :Geometry,InPointerEvent:PointerEvent) :EventReply{
         console.log("onTouchStarted"+InPointerEvent.screenSpacePosition)
         return this.detectDragIfPressed(InPointerEvent, Keys.AnyKey)
     }
-    
-    //触发DragDrop检测事件，准备创建一个DraDrop事件
-    onDragDetected(InGeometry :Geometry,InPointerEvent:PointerEvent):DragDropOperation {
-        console.log("onDragDetected"+InPointerEvent.screenSpacePosition)
-        let ui=createUIByName("BagItem")
-        const payLoad = new TestDragDropPayLoad();
+	onTouchEnded(InGemotry: Geometry, InPointerEvent: PointerEvent): EventReply {
+		console.log("onTouchEnded"+InPointerEvent.screenSpacePosition)
+        return EventReply.handled;
+    }
+	onDragDetected(InGeometry :Geometry,InPointerEvent:PointerEvent):DragDropOperation {
+		console.log("onDragDetected"+InPointerEvent.screenSpacePosition)
+		// let ui=createUIByName("BagItem")
+		const payLoad = new TestDragDropPayLoad();
         payLoad.Test1=this.uiWidgetBase
-        return this.newDragDrop(this.rootCanvas, "DragDropTag", payLoad, DragPivot.CenterCenter, Vector2.zero); 
-    }
+        return this.newDragDrop(this.rootCanvas, "DragDropTag", payLoad, DragPivot.CenterCenter, Vector2.zero);	
+	}
     
-    //拖出背包面板并释放就丢弃物品的效果
-    onDragCancelled(InGemotry :Geometry,InDragDropEvent:PointerEvent) {
-        this.uiWidgetBase.destroyObject()
-        console.log("onDragCancelled"+InDragDropEvent.screenSpacePosition)
-    }
-    
-    //在有其他格子被拖拽到这个格子上时，实现两个格子交换位置的功能
-    onDrop(InGemotry: Geometry, InDragDropEvent: PointerEvent, InOperation: DragDropOperation) {
-        console.log("OnDrop"+InDragDropEvent.screenSpacePosition)
-        const payLoad = InOperation.tryGetDragDropPayLoadAs<TestDragDropPayLoad>();
-        const test1 = payLoad.Test1;
-        let uiExchange=test1.rootContent.getChildAt(0) as Widget
-        test1.rootContent.addChild(this.rootCanvas.getChildAt(0))
-        this.rootCanvas.addChild(uiexchange)
-        console.log(test1.parent);
-        return true
+	onDragCancelled(InGemotry :Geometry,InDragDropEvent:PointerEvent) {
+		this.uiWidgetBase.destroyObject()
+		console.log("onDragCancelled"+InDragDropEvent.screenSpacePosition)
+	}
+	
+	onDrop(InGemotry: Geometry, InDragDropEvent: PointerEvent, InOperation: DragDropOperation) {
+		console.log("OnDrop"+InDragDropEvent.screenSpacePosition)
+		const payLoad = InOperation.tryGetDragDropPayLoadAs<TestDragDropPayLoad>();
+		const test1 = payLoad.Test1;
+		let uiexchange=test1.rootContent.getChildAt(0) as Widget
+		test1.rootContent.addChild(this.rootCanvas.getChildAt(0))
+		this.rootCanvas.addChild(uiexchange)
+		console.log(test1.parent);
+		return true
     }
 }
 ```
@@ -404,27 +415,33 @@ export default class BagItem extends BagItem_generate {
 * 背包面板里的容器需要打开自动布局和网格布局功能，这样动态添加的格子会自动排布；更多关于容器的功能请查看产品手册[UI 控件-容器](https://docs.ark.online/UI/UIComponent-Canvas.html)
 
 ```TypeScript
-@UICallOnly('')
-export default class UIDefault extends UIBehavior {
-    Character: Gameplay.Character;
+@UIBind('')
+export default class UIDefault extends UIScript {
+    Character: Character;
 
-    /** 仅在游戏时间对非模板实例调用一次 */
+	/** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
+		//设置能否每帧触发onUpdate
+		this.canUpdate = false;
 
-        //找到对应的按钮和容器
-        const newBtn = this.uiWidgetBase.findChildByPath('RootCanvas/StaleButton') as StaleButton
-        const canvas = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas') as Canvas
-        canvas.autoLayoutHugContent.hugContentH=UIHugContentVertically.FixHeight
+		//找到对应的按钮和容器
+		const newBtn = this.uiWidgetBase.findChildByPath('RootCanvas/StaleButton') as StaleButton
+		const canvas = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas') as Canvas
+		canvas.autoLayoutHugContent.hugContentH=UIHugContentVertically.FixHeight
 
-        //点击按钮,创建UI
-        newBtn.onPressed.add(()=>{
-            //创建自定义UI组件并挂载到容器下
-            let item= createUIByName('/BagItem.ui') as UserWidget
-            canvas.addChild(item)
-        })
- }
+		//点击按钮,创建UI
+		newBtn.onPressed.add(()=>{
+			//创建自定义UI组件并挂载到容器下
+			let item= createUIByName('BagItem.ui') as UserWidget
+			canvas.addChild(item)
+		})	
+    }
+
+	onDrop(InGemotry: Geometry, InDragDropEvent: PointerEvent, InOperation: DragDropOperation) {
+		console.log("OnDrop"+InDragDropEvent.screenSpacePosition)
+		return true
+    }
+}
 ```
 
 ![](https://cdn.233xyx.com/1684047509505_024.png)
@@ -435,7 +452,7 @@ export default class UIDefault extends UIBehavior {
 
 * 请注意：这里只是为了演示拖拽事件的用法，实际上如果想要制作一个有完整功能的背包，不仅背包内每个格子的样式要传递过去，对应的物品功能也要作为信息传递过去，大家可以自行尝试。
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1684119406303_693.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/online/X4F8Va1kXEox1694155280424.7z)
 
 # 注意事项
 
