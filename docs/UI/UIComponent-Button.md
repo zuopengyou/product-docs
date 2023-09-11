@@ -73,30 +73,30 @@
 ```ts
 @UIBind('')
 export default class DefaultUI extends UIScript {
-	private character: Character;
-	private anim1 = null;
-	
-	/** 仅在游戏时间对非模板实例调用一次 */
-    protected  onStart() {
-		//设置能否每帧触发onUpdate
-		this.canUpdate = false;
-		
-		//找到对应的跳跃按钮
-    const jumpBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_Jump') as Button
-		const attackBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_Attack') as Button
-		
-		//点击跳跃按钮,异步获取人物后执行跳跃
-        jumpBtn.onPressed.add(()=>{
-			if (this.character) {
-				this.character.jump();
-			} else {
-				Player.asyncGetLocalPlayer().then((player) => {
-					this.character = player.character;
-					//角色执行跳跃功能
-					this.character.jump();
-				});
-			}
-		})
+    private character: Character;
+    private anim1 = null;
+    
+    /** 仅在游戏时间对非模板实例调用一次 */
+    protected  onStart() {
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+        
+        //找到对应的跳跃按钮
+        const jumpBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_Jump') as Button
+        const attackBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_Attack') as Button
+        
+        //点击跳跃按钮,异步获取人物后执行跳跃
+        jumpBtn.onPressed.add(()=>{
+            if (this.character) {
+                this.character.jump();
+            } else {
+                Player.asyncGetLocalPlayer().then((player) => {
+                    this.character = player.character;
+                    //角色执行跳跃功能
+                    this.character.jump();
+                });
+            }
+        })
   }
 }
 ```
@@ -116,12 +116,12 @@ export default class DefaultUI extends UIScript {
 - 示例脚本：
 
 ```ts
-//性别选择的方法
-    SexSelected(button_boy: UI.Button,button_girl:UI.Button) {
-        //是否为男性？是的话，男性按钮图案为“120373”，不是的话，男性按钮图案为“120783”；女性按钮则完全相反
-        this.IsMan ? button_boy.normalImageGuid="120373" : button_boy.normalImageGuid="120783";
-        this.IsMan ? button_girl.normalImageGuid="120783" : button_girl.normalImageGuid="120373";
-    }
+    //性别选择的方法
+    SexSelected(button_boy: Button,button_girl:Button) {
+        //是否为男性？是的话，按钮图案为“120373”，不是的话，按钮图案为“120783”
+        this.isMan ? button_boy.normalImageGuid="120373" : button_boy.normalImageGuid="120783";
+        this.isMan ? button_girl.normalImageGuid="120783" : button_girl.normalImageGuid="120373";
+    }
 ```
 
 - 然后我们找到对应的 UI 按键，并通过点击事件，更改是否为男性的属性，然后执行性别的方法即可完成男女选中态的切换。（注意在点击之前也要执行一遍方法，初始化默认性别）
@@ -129,42 +129,33 @@ export default class DefaultUI extends UIScript {
 
 ```ts
 export default class NewUIScript extends UIScript {
-    character: Character;
-	isMan:boolean = false;
-	/** 仅在游戏时间对非模板实例调用一次 */
-    protected  onStart() {
-		const button_girl = this.uiWidgetBase.findChildByPath('Canvas/button_girl') as Button;
-		const button_boy = this.uiWidgetBase.findChildByPath('Canvas/button_boy') as Button;
-		//默认执行一遍角色性别选择的方法
-		// this.SexSelected(button_boy, button_girl);
-		//点击性别女按钮时，是否为男的条件就为否，并且执行一遍角色性别选择的方法
-		button_girl.onPressed.add(() => {
-			this.isMan = false;
-			this.SexSelected(button_boy, button_girl);
-		});
-	
-		//点击性别男按钮时，是否为男的条件就为真，并且执行一遍角色性别选择的方法
-		button_boy.onPressed.add(() => {
-			this.isMan = true;
-			this.SexSelected(button_boy, button_girl);
-		});
-    }
-
-	//性别选择的方法
-	SexSelected(button_boy: Button,button_girl:Button) {
-		//是否为男性？是的话，按钮图案为“120373”，不是的话，按钮图案为“120783”
-		this.isMan ? button_boy.normalImageGuid="120373" : button_boy.normalImageGuid="120783";
-		this.isMan ? button_girl.normalImageGuid="120783" : button_girl.normalImageGuid="120373";
-	}
-}
-}
+    character: Character;
+    isMan:boolean = false;
+    /** 仅在游戏时间对非模板实例调用一次 */
+    protected  onStart() {
+        const button_girl = this.uiWidgetBase.findChildByPath('Canvas/button_girl') as Button;
+        const button_boy = this.uiWidgetBase.findChildByPath('Canvas/button_boy') as Button;
+        // //默认执行一遍角色性别选择的方法
+        // this.SexSelected(button_boy, button_girl);
+        //点击性别女按钮时，是否为男的条件就为否，并且执行一遍角色性别选择的方法
+        button_girl.onPressed.add(() => {
+            this.isMan = false;
+            this.SexSelected(button_boy, button_girl);
+        });
+    
+        //点击性别男按钮时，是否为男的条件就为真，并且执行一遍角色性别选择的方法
+        button_boy.onPressed.add(() => {
+            this.isMan = true;
+            this.SexSelected(button_boy, button_girl);
+        });
+    }
 ```
 
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncN6X8J7UwoM4XtWQUXFJ5g.gif)
 
-- 以上两个示例的工程文件：[点击下载](https://cdn.233xyx.com/1682231334712_831.7z)
+- 以上两个示例的工程文件：[点击下载](https://cdn.233xyx.com/online/1qmlNL8GlSJ21694424668017.7z)
 
 ### **示例三：制作活动页签选择按钮**
 
@@ -297,4 +288,4 @@ export default class activity extends UIScript {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwQg1Pv8mqmSF3t3XJFkw8c.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334664_593.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/online/sN6aAHihDL611694424668017.7z)
