@@ -16,6 +16,13 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
   outDir: '../dist',
   head: [
     [
+      'meta',
+      {
+        name: 'docsearch:tags',
+        content: 'product-docs'
+      }
+    ],
+    [
       'link',
       {
         rel: 'icon',
@@ -198,7 +205,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '资源加载与资源下载',
             link: '/Resource/assetdownloadandload.md'
           },
-          { text: '资源上传工具', link: '/Resource/AssetUpload.md' }
+          { text: '资源上传工具', link: '/Resource/AssetUpload.md' },
+          { text: '材质编辑器', link: '/Resource/MaterialEditor.md' }
         ]
       },
       {
@@ -310,15 +318,15 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-         text: '026 版本',
-         items: [
-         {
-            text: '025 版本',
-            link: 'https://docs-025.ark.online/',
+        text: '027 版本',
+        items: [
+          {
+            text: '主版本',
+            link: 'https://docs.ark.online/',
             path: true
-          }
-         ]
-       }
+          }          
+        ]
+      }
     ],
     socialLinks: [
       // { link: 'https://github.com/prodigytech-doc/api-docs', icon: 'github' },
@@ -338,7 +346,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     outline: [2, 3],
     editLink: {
       pattern:
-        'https://github.com/prodigytech-doc/product-docs/tree/main/docs/:path',
+        'https://github.com/prodigytech-doc/product-docs/tree/release-027/docs/:path',
       text: '编辑'
     },
     feedback: 'https://github.com/prodigytech-doc/product-docs/',
