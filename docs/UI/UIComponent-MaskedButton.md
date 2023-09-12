@@ -28,7 +28,7 @@
 
 实际使用时，如果仅想实现按钮技能冷却的遮罩效果，**推荐遮罩图片选用和普通图片（底图）相同的图片资源，并使用不同的图片颜色和透明度**
 
-#### 2.1 扇形遮罩
+### 2.1 扇形遮罩
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn17giITI7Ut6FFqVz3jbozd.png)
 
@@ -92,7 +92,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn44PWRdSTpN89Iyk08QnCJg.gif)
 
-#### 2.2 圆形遮罩
+### 2.2 圆形遮罩
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnY8WMuK6iEGbP6BAr7xM1jf.png)
 
@@ -149,7 +149,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhRMq5OT7QwABPqdLYgSsng.gif)
 
-#### 2.3 圆角矩形遮罩
+### 2.3 圆角矩形遮罩
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2hC5uFpTsPfUoCMKc6jDxg.png)
 
