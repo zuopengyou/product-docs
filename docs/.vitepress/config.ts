@@ -301,20 +301,24 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     siteTitle: '产品手册',
     nav: [
       {
-        text: '创作者',
+        text: '官网',
         link: 'https://creator.ark.online/'
       },
       {
-        text: '教程',
-        link: 'https://learning.ark.online/'
+        text: '论坛',
+        link: 'https://forum.ark.online/'
+      },
+      {
+        text: '产品手册',
+        link: 'https://docs.ark.online/'
       },
       {
         text: 'API',
         link: 'https://api-docs.ark.online/'
       },
       {
-        text: '论坛',
-        link: 'https://forum.ark.online/'
+        text: '创作者',
+        link: 'https://portal.ark.online/'
       },
       {
         text: '026 版本',
