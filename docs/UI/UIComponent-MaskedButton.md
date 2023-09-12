@@ -194,67 +194,73 @@
 - 在脚本中使用 UI.MaskButton 类实现遮罩的逻辑
 
 ```ts
-@UI.UICallOnly('')
-export default class UIDefault extends UI.UIBehavior {
+export default class UIDefault extends UIScript {
+    character: Character;
 
-    /** 仅在游戏时间对非模板实例调用一次 */
+	/** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
 
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        //设置这个遮罩按钮的冷却时间
-        let cd_value = 5000;
+		 //设置能否每帧触发onUpdate
+		 this.canUpdate = false;
+		 //设置这个遮罩按钮的冷却时间
+		 let cd_value = 5000;
+ 
+		 //找到对应的遮罩按钮和文本
+		 const fanShape_0 = this.uiWidgetBase.findChildByPath('Canvas/MaskButton') as MaskButton
+		 const text_0 = this.uiWidgetBase.findChildByPath('Canvas/TextBlock_1') as TextBlock
+		 //需要先设置文本不可见
+		 text_0.visibility=1
+		 //创建变量记录剩余时间
+		 let timeleft=cd_value
+		 //使扇形值归零
+		 fanShape_0.fanShapedValue=0
+		 //遮罩图片设置为完全透明
+		 fanShape_0.maskImageColor=new LinearColor(0, 0, 0, 0)
+		 //设置一下不可用时，底图禁用图片的颜色更深一些，也可以在编辑器设置
+		 fanShape_0.disableImageColor=new LinearColor(0.5, 0.5, 0.5, 1)
+ 
+		 //按下遮罩按钮后进入冷却计时状态
+		 fanShape_0.pressedDelegate.add(() => {
 
-        //找到对应的遮罩按钮和文本
-        const fanShape_0 = this.uiWidgetBase.findChildByPath('Canvas/MaskButton') as UI.MaskButton
-        const text_0 = this.uiWidgetBase.findChildByPath('Canvas/TextBlock_1') as UI.TextBlock
-        //需要先设置文本不可见
-        text_0.visibility=1
-        //创建变量记录剩余时间
-        let timeleft=cd_value
-        //使扇形值归零
-        fanShape_0.fanShapedValue=0
-        //遮罩图片设置为完全透明
-        fanShape_0.maskImageColor=new Type.LinearColor(0, 0, 0, 0)
-        //设置一下不可用时，底图禁用图片的颜色更深一些，也可以在编辑器设置
-        fanShape_0.disableImageColor=new Type.LinearColor(0.5, 0.5, 0.5, 1)
+			 console.warn("----> GameUI construct");
+			 //遮罩图片设置为半透明黑色，展示遮罩效果
+			 fanShape_0.maskImageColor=new LinearColor(0, 0, 0, 0.8)
+			 //记得将遮罩按钮设为不可用
+			 fanShape_0.enable=false
+			 //显示冷却总时间
+			 text_0.text=(""+timeleft/1000)
+			 //设置文本为可见
+			 text_0.visibility=3
 
-        //按下遮罩按钮后进入冷却计时状态
-        fanShape_0.pressedDelegate.add(() => {
-            console.warn("----> GameUI construct");
-            //遮罩图片设置为半透明黑色，展示遮罩效果
-            fanShape_0.maskImageColor=new Type.LinearColor(0, 0, 0, 0.8)
-            //记得将遮罩按钮设为不可用
-            fanShape_0.enable=false
-            //显示冷却总时间
-            text_0.text=(""+timeleft/1000)
-            //设置文本为可见
-            text_0.visibility=3
-
-            //开始计时，随时间，扇形值逐渐变大
-            let _time=setInterval(() => {
-                timeleft-=50
-                fanShape_0.fanShapedValue=(fanShape_0.fanShapedValue+50/cd_value)
-                //显示冷却剩余时间
-                text_0.text=(""+(Math.floor(timeleft/1000)+1))
-                console.error(timeleft/1000)
-            }, 50);
-            
-            //冷却结束后，按钮恢复正常状态
-            setTimeout(() => {
-                //停止计时
-                clearInterval(_time)
-                //使扇形值归零
-                fanShape_0.fanShapedValue=0
-                //遮罩图片设置为完全透明
-                fanShape_0.maskImageColor=new Type.LinearColor(0, 0, 0, 0)
-                //记得将遮罩按钮设为可用
-                fanShape_0.enable=true
-                //设置文本不可见
-                text_0.visibility=1
-                //剩余时间重置
-                timeleft=cd_value
-            }, cd_value);
+			//开始计时，随时间，扇形值逐渐变大
+			let _time=setInterval(() => {
+				timeleft-=50
+				fanShape_0.fanShapedValue=(fanShape_0.fanShapedValue+50/cd_value)
+				//显示冷却剩余时间
+				if (Math.ceil(timeleft/1000)>1) {
+					text_0.text=(""+(Math.ceil(timeleft/1000)))
+					
+				}else{
+					text_0.text=(""+(Math.ceil(timeleft/100)/10))
+				}
+				console.error(timeleft/1000)
+			}, 50);
+			 
+			 //冷却结束后，按钮恢复正常状态
+			 setTimeout(() => {
+				 //停止计时
+				 clearInterval(_time)
+				 //使扇形值归零
+				 fanShape_0.fanShapedValue=0
+				 //遮罩图片设置为完全透明
+				 fanShape_0.maskImageColor=new LinearColor(0, 0, 0, 0)
+				 //记得将遮罩按钮设为可用
+				 fanShape_0.enable=true
+				 //设置文本不可见
+				 text_0.visibility=1
+				 //剩余时间重置
+				 timeleft=cd_value
+			 }, cd_value);
         });
     }
 }
@@ -264,4 +270,4 @@ export default class UIDefault extends UI.UIBehavior {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9AFTdJsFiX5F90IIpErAkS.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334554_722.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/online/fFb8HSV9m3571694499991758.7z)
