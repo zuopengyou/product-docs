@@ -115,23 +115,22 @@
 - 然后编写脚本，动态生成其他 UI 控件并添加为滚动框内容器的子级，这里生成一张图片控件作为示例；运行游戏后，点击按钮就能看到动态生成的 UI 控件出现在滚动框内部了
 
 ```ts
-@UI.UICallOnly('')
-export default class UIDefault extends UI.UIBehavior{
-
-    /** 仅在游戏时间对非模板实例调用一次 */
-    protected onStart() { 
-        //找到对应的按钮和容器
-        const newBtn = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as UI.StaleButton
-        const canvas = this.uiWidgetBase.findChildByPath('Canvas/ScrollBox/Canvas') as UI.Canvas
-        //点击按钮,创建图片
-        newBtn.onPressed.add(()=>{
-            //创建图片控件
-            let image= UI.Image.newObject()
-            //把图片控件挂载滚动框下
-            canvas.addChild(image)
-            image.slot.size=new Type.Vector2(225,225)
-            image.imageGuid="76721"
-        })  
+@UIBind('')
+export default class DefaultUI extends UIScript {
+	/** 仅在游戏时间对非模板实例调用一次 */
+    protected  onStart() {
+		//找到对应的按钮和容器
+		const newBtn = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as StaleButton
+		const canvas = this.uiWidgetBase.findChildByPath('Canvas/ScrollBox/Canvas') as Canvas
+		//点击按钮,创建图片
+		newBtn.onPressed.add(()=>{
+			//创建图片组件
+			let image= Image.newObject()
+			//把图片组件挂载滚动框下
+			canvas.addChild(image)
+			image.size=new Vector2(225,225)
+			image.imageGuid="76721"
+		})	
     }
 }
 ```
@@ -164,7 +163,7 @@ export default class UIDefault extends UI.UIBehavior{
     //修改按钮触摸模式
     changeBtnMethod(): void {
         for(let i = 1; i < 7; i++) {
-            (this["btn"+i] as UI.Button).touchMethod = UI.ButtonTouchMethod.PreciseTap;
+            (this["btn"+i] as Button).touchMethod = ButtonTouchMethod.PreciseTap;
         }
     }
 ```
