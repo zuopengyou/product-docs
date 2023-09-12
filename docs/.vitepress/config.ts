@@ -309,8 +309,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-        text: '产品手册',
-        link: 'https://docs.ark.online/'
+        text: '教程',
+        link: 'https://learning.ark.online/'
       },
       {
         text: 'API',
