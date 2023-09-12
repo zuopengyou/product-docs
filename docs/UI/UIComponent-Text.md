@@ -175,42 +175,29 @@
 - 示例脚本：
 
 ```ts
-@UI.UICallOnly('')
-export default class UIDefault extends UI.UIBehavior{
-    character: Gameplay.Character;
-    speed:number
-    /** 仅在游戏时间对非模板实例调用一次 */
-    protected onStart() { 
-        //设置能否每帧触发onUpdate
-        this.canUpdate = true;
-        //找到对应的跳跃按钮
-        const jumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
-        //点击跳跃按钮,异步获取人物后执行跳跃
-        jumpBtn.onPressed.add(()=>{
-            if (this.character) {
-                this.character.jump();
-            } else {
-                Gameplay.asyncGetCurrentPlayer().then((player) => {
-                    this.character = player.character;
-                    //角色执行跳跃功能
-                    this.character.jump();
-                });
-            }
-        })
-    }   
-    /**
-    * 每一帧调用
-    * 通过canUpdate可以开启关闭调用
-    * dt 两帧调用的时间差，毫秒
-    */
-    protected onUpdate(dt :number) {
-        const textBlock = this.uiWidgetBase.findChildByPath('Canvas/TextBlock_2') as UI.TextBlock
-    // 找到当前玩家角色
-    Gameplay.asyncGetCurrentPlayer().then((player) => {
-        this.character = player.character;
-        textBlock.text= this.Character.velocity.x+""
-    });
-    }   
+@UIBind('')
+export default class DefaultUI extends UIScript {
+	private character: Character;
+	private anim1 = null;
+	
+	/** 仅在游戏时间对非模板实例调用一次 */
+  protected  onStart() {
+		//设置能否每帧触发onUpdate
+		this.canUpdate = true;
+	}	
+	/**
+	* 每一帧调用
+	* 通过canUpdate可以开启关闭调用
+	* dt 两帧调用的时间差，毫秒
+	*/
+	protected onUpdate(dt :number) {
+		const textBlock = this.uiWidgetBase.findChildByPath('Canvas/TextBlock_2') as TextBlock
+	// 找到当前玩家角色
+	Player.asyncGetLocalPlayer().then((player) => {
+		this.character = player.character;
+		textBlock.text=	Math.sqrt(Math.pow(this.character.velocity.x,2)+Math.pow(this.character.velocity.y,2))+""
+	});
+	}	
 }
 ```
 
