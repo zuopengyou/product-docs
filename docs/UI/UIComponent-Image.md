@@ -99,23 +99,23 @@
 脚本示例：
 
 ```ts
-//找到对应的UI文件
-        const base = (this.uiObject) as UI.UserWidget;
-        //找到容器
-        const canvas = (base.findChildByPath("Canvas")) as UI.Canvas; 
-        //新建一个图片控件
-        let image= UI.Image.newObject(canvas,"NewUI_1") as UI.Image
-        //设置图片的位置、大小、资源
-        image.position=new Type.Vector2(1000,400)
-        image.size=new Type.Vector2(400,400)
-        image.imageGuid="128701"
-        //最后设置图片的绘制类型为九宫格，并且设置好九宫格的边距
-        image.imageDrawType=1
-        image.margin=new UI.Margin(0.2)
+		//找到对应的UI文件
+		const base = (this.uiObject) as UserWidget;
+		//找到容器
+		const canvas = (base.findChildByPath("Canvas")) as Canvas; 
+		//新建一个图片组件
+		let image= Image.newObject(canvas,"NewUI_1") as Image
+		//设置图片的位置、大小、资源
+		image.position=new Vector2(1000,400)
+		image.size=new Vector2(400,400)
+		image.imageGuid="128701"
+		//最后设置图片的绘制类型为九宫格，并且设置好九宫格的边距
+		image.imageDrawType=1
+		image.margin=new Margin(0.2)
 ```
 
 - 最终效果：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwwT0YO3QdL4dHWpjSMNLkf.png)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334819_566.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/online/cCvvRYZhTosS1694498904051.7z)
