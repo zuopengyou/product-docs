@@ -198,34 +198,38 @@ export default class WeaponUI extends WeaponUI_Generate {
 - 示例脚本：
 
 ```ts
-export default class AbilityUIControl extends UI.UIBehavior {
-    player: Gameplay.Player;
-    _Joystick: UI.VirtualJoystickPanel;
-    _rotation:Type.Rotation
+export default class AbilityUIControl extends UIScript {
+    player: Player;
+    _Joystick: VirtualJoystickPanel;
+    _rotation:Vector
     Construct() {
         this.InitEvents()
     }
 
     InitEvents() {
         //找到对应的摇杆
-        let _Joystick = this.uiWidgetBase.findChildByPath('Canvas/VirtualJoystickPanel') as UI.VirtualJoystickPanel
+        let _Joystick = this.uiWidgetBase.findChildByPath('Canvas/VirtualJoystickPanel') as VirtualJoystickPanel
         //按下摇杆后调整FOV和灵敏度
         _Joystick.onJoyStickDown.add(() => {
-            Gameplay.getCurrentPlayer().character.cameraSystem.cameraFOV=70
-            _Joystick.inputScale=(new Type.Vector2(0.2, 0.2))
+            Camera.currentCamera.fov=70
+            _Joystick.inputScale=(new Vector2(0.2, 0.2))
         });
         //转动摇杆的时候记录方向，并修改角色面朝方向
-        _Joystick.onInputDir.add((vec : Type.Vector2)=>{
+        _Joystick.onInputDir.add((vec : Vector2)=>{
             if(vec.length>0){
-                this._rotation=new Type.Rotation(0,0,Gameplay.getCurrentPlayer().character.cameraSystem.cameraWorldTransform.rotation.z-Math.atan2(vec.normalized.y, vec.normalized.x)/Math.PI*180+90)
-                Gameplay.getCurrentPlayer().character.relativeRotation =this._rotation
-            }
+                this._rotation=new Vector(0,0,Camera.currentCamera.worldTransform.rotation.z-Math.atan2(vec.normalized.y, vec.normalized.x)/Math.PI*180+90)
+				// 获取当前客户端的玩家(自己)
+				let myPlayer = Player.localPlayer;
+				// 获取当前玩家控制的角色
+				let myCharacter = myPlayer.character;
+				myCharacter.moveFacingDirection=1
+				myCharacter.movementAxisDirection=this._rotation            }
         });
         //松开摇杆的时候，发送射击事件和方向，并把FOV和灵敏度调回去
         _Joystick.onJoyStickUp.add(() => {
-            Events.dispatchToServer("_magicattacking",this._rotation);
-            Gameplay.getCurrentPlayer().character.cameraSystem.cameraFOV=90
-            this._Joystick.inputScale=(new Type.Vector2(0.5, 0.5))
+            Event.dispatchToServer("_magicattacking",this._rotation);
+            Camera.currentCamera.fov=90
+            this._Joystick.inputScale=(new Vector2(0.5, 0.5))
         });
     }
 }
