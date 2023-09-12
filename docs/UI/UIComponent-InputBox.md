@@ -89,11 +89,11 @@
 - 示例脚本：
 
 ```ts
-export default class NewUIScript extends UI.UIBehavior{
+export default class NewUIScript extends UIScript {
 
     isExchange:Boolean;
     //创建一个兑换成功或失败提示的方法：判断条件为是否兑换成功？
-    Tips (tipsText: UI.TextBlock) {
+    Tips (tipsText: TextBlock) {
         //兑换成功，则显示兑换成功，兑换失败，则显示兑换码错误
         this.isExchange? tipsText.text="兑换成功" : tipsText.text="兑换码错误" ;
         //兑换成功，则文字显示为绿色，兑换失败，则文字显示为红色
@@ -111,13 +111,12 @@ export default class NewUIScript extends UI.UIBehavior{
     protected onStart() {
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
-        this.layer = UI.UILayerMiddle;
-         //找到对应的文本控件
-        let text = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/InputBox') as UI.InputBox
-        let confirmBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/Button') as UI.Button
-        let tipsText = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/TextBlock_1') as UI.TextBlock
+         //找到对应的文本组件
+        let text = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/InputBox') as InputBox
+        let confirmBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/Button') as Button
+        let tipsText = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas/TextBlock_1') as TextBlock
 
-        //按下确认按钮后，检测码是否正确
+        //按下确认按钮后，检测验证码是否正确
         confirmBtn.onPressed.add(() => {
             if (text.text == "111111") {
                 //兑换成功
@@ -138,4 +137,4 @@ export default class NewUIScript extends UI.UIBehavior{
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmz22T0jzFsCRBvnZHHYAyc.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334483_698.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/online/e5b3YgeWB89Z1694499630537.7z)
