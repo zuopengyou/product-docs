@@ -1,8 +1,8 @@
 # UI 控件-调色板
 
-**阅读本文大概需要 5 分钟**
+**阅读本文大概需要 2 分钟**
 
-本文概述了 UI 控件—调色板的各项属性以及使用方法。
+本文概述了 UI控件—调色板的各项属性以及使用方法。
 
 ## 什么是调色板？
 
@@ -17,22 +17,23 @@
 - 脚本示例：
 
 ```ts
+const colorPick = this.uiWidgetBase.findChildByPath('RootCanvas/colorPick') as ColorPick
 //设置调色板按钮图片
-ColorPick.ImageByGuid="45155";
+colorPick.imageGuid="45155";
 
 //颜色调整监听
-let _Delegate = Common.MulticastDelegate<(Content: Type.LinearColor) => void>;
-ColorPick.onColorChanged(_Delegate);
+colorPick.onColorChanged.add(()=>{
+})	
 
 //颜色调整完毕监听
-let _Delegate = Common.MulticastDelegate<(Content: Type.LinearColor) => void>;
-ColorPick.onColorChangeFinished(_Delegate);
+colorPick.onColorChangeFinished.add(()=>{
+})	
 
 //触摸开始监听
-let _Delegate = Common.MulticastDelegate<(Content: Type.LinearColor) => void>;
-ColorPick.onTouchStart(_Delegate);
+colorPick.onTouchStart.add(()=>{
+})	
 
 //触摸结束监听
-let _Delegate = Common.MulticastDelegate<(Content: Type.LinearColor) => void>;
-ColorPick.onTouchFinished(_Delegate);
+colorPick.onTouchFinished.add(()=>{
+})	
 ```
