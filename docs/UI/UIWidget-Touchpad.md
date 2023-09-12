@@ -34,31 +34,32 @@
 ### 示例一：制作动态调节灵敏度的摄像机滑动区
 
 ```ts
-@UI.UICallOnly('')
-export default class UIDefault extends UI.UIBehavior{
+@UIBind('')
+export default class DefaultUI extends UIScript {
+	private character: Character;
 
-    /** 仅在游戏时间对非模板实例调用一次 */
+	/** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        
-        let plus = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as UI.StaleButton
-        let inc = this.uiWidgetBase.findChildByPath('Canvas/StaleButton_1') as UI.StaleButton
-        let touchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as UI.TouchPad
-        let text=this.uiWidgetBase.findChildByPath('Canvas/TextBlock') as UI.TextBlock
-    
-        plus.onClicked.add(()=>{ 
-            touchPad.inputScale=(new Type.Vector2(1,1))
-            let num =touchPad.inputScale
-            text.text=(num.toString())
-        })
-    
-        inc.onClicked.add(()=>{ 
-            touchPad.inputScale=(new Type.Vector2(0.2,0.2))
-            let num =touchPad.inputScale
-            text.text=(num.toString())
-        })  
-    }
+		//设置能否每帧触发onUpdate
+		this.canUpdate = false;
+		
+		let Plus = this.uiWidgetBase.findChildByPath('MWCanvas/StaleButton') as StaleButton
+		let Inc = this.uiWidgetBase.findChildByPath('MWCanvas/StaleButton_1') as StaleButton
+		let TouchPad = this.uiWidgetBase.findChildByPath('MWCanvas/TouchPad') as TouchPad
+		let text=this.uiWidgetBase.findChildByPath('MWCanvas/TextBlock') as TextBlock
+	
+		Plus.onClicked.add(()=>{ 
+			TouchPad.inputScale=(new Vector2(1,1))
+			let num =TouchPad.inputScale
+			text.text=(num.toString())
+		})
+	
+		Inc.onClicked.add(()=>{ 
+			TouchPad.inputScale=(new Vector2(0.2,0.2))
+			let num =TouchPad.inputScale
+			text.text=(num.toString())
+		})  
+  }
 }
 ```
 
@@ -75,7 +76,7 @@ export default class UIDefault extends UI.UIBehavior{
   - 调整可用性为不可用
 
 ```ts
-let touchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as UI.TouchPad
+let touchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as TouchPad
 //调整摄像机滑动区的可用性为不可用
 touchPad.isEnabled=false
 //调整摄像机滑动区的可用性为可用
@@ -85,7 +86,7 @@ touchPad.isEnabled=true
 - 调整可见性为隐藏/折叠/可见不可交互也都可以使摄像机滑动区不可使用
 
 ```ts
-let touchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as UI.TouchPad
+let touchPad = this.uiWidgetBase.findChildByPath('Canvas/TouchPad') as TouchPad
 //调整摄像机滑动区的可见性为折叠，1234这四种可见性都会使摄像机滑动区不可使用
 touchPad.visibility=1
 //调整摄像机滑动区的可见性为可见，即可以使用
