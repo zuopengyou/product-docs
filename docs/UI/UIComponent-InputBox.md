@@ -16,26 +16,26 @@
 
 - 字体大小、字体间距、水平显示请见 [UI 控件-文本](https://docs.ark.online/UI/UIComponent-Text.html) 。
 
-#### 输入限制
+### 输入限制
 
 - 限制输入文字的字符数量，超过输入限制，则不会显示超出部分字符。
 - 举例说明：输入游戏角色名称一般不超过 8 个字符。
 
-#### 默认文本
+### 默认文本
 
 - 即占位文本，输入框内容为空时，默认显示的文本内容，显示在输入框控件内，且字体颜色为淡灰色。在用户输入文本时，该默认文本将会消失。
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxUIzqK1Kt3kqM3ghfBd3He.png)
 
-#### 文本
+### 文本
 
 - 输入相应文本内容，显示在输入框控件内。
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYET5zoGXJvrJFBLnyEapgS.png)
 
-#### 只读
+### 只读
 
 - 该文本输入框是否可以更改，勾选则设置为只读无法更改
 
@@ -46,7 +46,7 @@
 
 - 字体类属性请见 [UI 控件-文本](https://docs.ark.online/UI/UIComponent-Text.html)。
 
-#### 内容颜色
+### 内容颜色
 
 - 修改输入底框的颜色。
 - 示意图：
@@ -57,7 +57,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnz7qV9htSuLVenIgm6c84bf.png)
 
-#### 内容限制
+### 内容限制
 
 - 无限制
 
