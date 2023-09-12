@@ -128,28 +128,32 @@
 - 脚本示例：
 
 ```ts
-@UI.UICallOnly('')
-export default class UIDefault extends UI.UIBehavior{
+@UIBind('')
+export default class DefaultUI extends UIScript {
+	private character: Character;
+	private anim1 = null;
+	
+	/** 仅在游戏时间对非模板实例调用一次 */
+    protected  onStart() {
+		 //找到进度条
+		 const progressbar = this.uiWidgetBase.findChildByPath('Canvas/ProgressBar') as ProgressBar
 
-    /** 仅在游戏时间对非模板实例调用一次 */
-    protected  onStart() { 
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        
-       //找到进度条
-       const progressbar = this.uiWidgetBase.findChildByPath('Canvas/ProgressBar') as UI.ProgressBar
-       //生成一个音效并播放
-       let sound1 = Core.GameObject.spawnGameObject("4165") as Gameplay.Sound
-       sound1.isLoop = true
-       sound1.play()
-       //取到当前音效的音量并设置成进度条当前值
-       let volume1=sound1.volume
-       progressbar.currentValue=volume1
-       //进度条移动后设置音量
-       progressbar.onSliderValueChanged.add(() => {
-         let volume1=progressbar.currentValue
-         sound1.volume=volume1
-       });
+		 AssetUtil.asyncDownloadAsset("4165").then((res : boolean) => {
+			if (res) {
+				//生成一个音效并播放
+				let sound1 = GameObject.spawn("4165") as Sound
+				sound1.isLoop = true
+				sound1.play()
+				//取到当前音效的音量并设置成进度条当前值
+				let volume1=sound1.volume
+				progressbar.currentValue=volume1
+				//进度条移动后设置音量
+				progressbar.onSliderValueChanged.add(() => {
+					let volume1=progressbar.currentValue
+					sound1.volume=volume1
+				});
+			}
+		})
     }
 }
 ```
