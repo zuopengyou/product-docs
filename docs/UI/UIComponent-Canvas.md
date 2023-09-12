@@ -20,21 +20,21 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4V8N1j9wLi8gqGJweYl2qg.png)
 
-#### 自动布局
+### 自动布局
 
 - 开启自动布局功能，将容器内所有子项的 UI 控件有序的排列成一排。
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmTJ2mNKZI4Go3UkLxrqAFe.png)
 
-#### 网格布局
+### 网格布局
 
 - 根据容器大小将其子项的 UI 控件进行自动换行。
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHIxN8R3rEltxMBxNyTsXvh.png)
 
-#### 容器类型
+### 容器类型
 
 - 水平布局
 
@@ -50,7 +50,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcndTrAYxQqsQ8LDeMJUYwvNc.png)
 
-#### 排列规则
+### 排列规则
 
 - 左上对齐
 
@@ -83,14 +83,14 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnBEYyIEEq2vlbZ77zbhwCQc.gif)
 
-#### 间隔
+### 间隔
 
 - 容器中 UI 控件的相距间隔
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmMXoiVC5secAajnMCXogFh.gif)
 
-#### 子项排列规则
+### 子项排列规则
 
 - 启用自动布局后，容器内所有子对象默认会根据从上到下，从左到右的顺序进行排序；如果希望修改这些子对象的排序规则，可以修改子项排列规则的水平排序和垂直排序属性。
 - 水平排序
@@ -124,7 +124,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6lenGSS6jci4DuzdnJlupb.png)
 
-#### 自适应规则
+### 自适应规则
 
 - 水平适应
 
@@ -146,7 +146,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncA6nH9CpQgflWEkT4XT8Qh.gif)
 
-#### 边缘间距
+### 边缘间距
 
 - 左边距
 
