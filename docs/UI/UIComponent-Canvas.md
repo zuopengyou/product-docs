@@ -191,7 +191,6 @@
 - 示例脚本：
 
 ```ts
-import activity_generate from "./ui-generate/activity_generate";
 
 /** 页签选择枚举 */
 export enum PropSelect {
@@ -201,98 +200,112 @@ export enum PropSelect {
     Prop4,
 }
 
-@UI.UICallOnly('')
-export default class activity extends activity_generate {
-    
+@UIBind('')
+export default class activity extends UIScript {
+	
     PlayerPropSelect: PropSelect = PropSelect.Prop1;
 
-    protected onStart() { 
-        //点击页签按钮1时，页签选择为页签1，并且执行一遍页签选择的方法
-        this.mBtn.onPressed.add(() => {
-            this.PlayerPropSelect = PropSelect.Prop1;
-            this.Prop_Select(this.mBtn, this.mBtn1, this.mBtn2, this.mBtn3)
-        });
+	protected onStart() { 
+		const mBtn = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_Tab_Left/mCanvas_tab/mBtn') as StaleButton	
+		const mBtn1 = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_Tab_Left/mCanvas_tab_1/mBtn1') as StaleButton	
+		const mBtn2 = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_Tab_Left/mCanvas_tab_2/mBtn2') as StaleButton	
+		const mBtn3 = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_Tab_Left/mCanvas_tab_3/mBtn3') as StaleButton	
 
-        //点击页签按钮2时，页签选择为页签2，并且执行一遍页签选择的方法
-        this.mBtn1.onPressed.add(() => {
-            this.PlayerPropSelect = PropSelect.Prop2;
-            this.Prop_Select(this.mBtn, this.mBtn1, this.mBtn2, this.mBtn3)
-        });
-        //点击页签按钮3时，页签选择为页签3，并且执行一遍页签选择的方法
-        this.mBtn2.onPressed.add(() => {
-            this.PlayerPropSelect = PropSelect.Prop3;
-            this.Prop_Select(this.mBtn, this.mBtn1, this.mBtn2, this.mBtn3)
-        });
+		//点击页签按钮1时，页签选择为页签1，并且执行一遍页签选择的方法
+		mBtn.onPressed.add(() => {
+			this.PlayerPropSelect = PropSelect.Prop1;
+			this.Prop_Select(mBtn, mBtn1, mBtn2, mBtn3)
+		});
 
-        //点击页签按钮4时，页签选择为页签4，并且执行一遍页签选择的方法
-        this.mBtn3.onPressed.add(() => {
-            this.PlayerPropSelect = PropSelect.Prop4;
-            this.Prop_Select(this.mBtn, this.mBtn1, this.mBtn2, this.mBtn3)
-        })
-    }
+		//点击页签按钮2时，页签选择为页签2，并且执行一遍页签选择的方法
+		mBtn1.onPressed.add(() => {
+			this.PlayerPropSelect = PropSelect.Prop2;
+			this.Prop_Select(mBtn, mBtn1, mBtn2, mBtn3)
+		});
+		//点击页签按钮3时，页签选择为页签3，并且执行一遍页签选择的方法
+		mBtn2.onPressed.add(() => {
+			this.PlayerPropSelect = PropSelect.Prop3;
+			this.Prop_Select(mBtn, mBtn1, mBtn2, mBtn3)
+		});
 
-    //创建一个页签选择的方法：判断条件为页签选择是哪个页签
-    Prop_Select(Btn1: UI.StaleButton, Btn2: UI.StaleButton, Btn3: UI.StaleButton, Btn4: UI.StaleButton) {
-        switch (this.PlayerPropSelect) {
-            //页签选择为页签1时，按钮的颜色效果
-            case PropSelect.Prop1:
-                {
-                    this.mButton_Select.visibility=0
-                    this.mButton_Select1.visibility=1
-                    this.mButton_Select2.visibility=1
-                    this.mButton_Select3.visibility=1
-                    //使页签1可见，剩余隐藏
-                    this.mCanvas.visibility=0
-                    this.mCanvas_1.visibility=1
-                    this.mCanvas_2.visibility=1
-                    this.mCanvas_3.visibility=1
-                }
-                break;
-            //页签选择为页签2时，按钮的颜色效果
-            case PropSelect.Prop2:
-                {
-                    this.mButton_Select.visibility=1
-                    this.mButton_Select1.visibility=0
-                    this.mButton_Select2.visibility=1
-                    this.mButton_Select3.visibility=1
-                    //使页签2可见，剩余隐藏
-                    this.mCanvas.visibility=1
-                    this.mCanvas_1.visibility=0
-                    this.mCanvas_2.visibility=1
-                    this.mCanvas_3.visibility=1
-                }
-                break;
-            //页签选择为页签3时，按钮的颜色效果
-            case PropSelect.Prop3:
-                {
-                    this.mButton_Select.visibility=1
-                    this.mButton_Select1.visibility=1
-                    this.mButton_Select2.visibility=0
-                    this.mButton_Select3.visibility=1
-                    //使页签3可见，剩余隐藏
-                    this.mCanvas.visibility=1
-                    this.mCanvas_1.visibility=1
-                    this.mCanvas_2.visibility=0
-                    this.mCanvas_3.visibility=1
-                }
-                break;
-            //页签选择为页签4时，按钮的颜色效果
-            case PropSelect.Prop4:
-                {
-                    this.mButton_Select.visibility=1
-                    this.mButton_Select1.visibility=1
-                    this.mButton_Select2.visibility=1
-                    this.mButton_Select3.visibility=0
-                    //使页签4可见，剩余隐藏
-                    this.mCanvas.visibility=1
-                    this.mCanvas_1.visibility=1
-                    this.mCanvas_2.visibility=1
-                    this.mCanvas_3.visibility=0
-                }
-                break;
-        }
-    }
+		//点击页签按钮4时，页签选择为页签4，并且执行一遍页签选择的方法
+		mBtn3.onPressed.add(() => {
+			this.PlayerPropSelect = PropSelect.Prop4;
+			this.Prop_Select(mBtn, mBtn1, mBtn2, mBtn3)
+		})
+	}
+
+	//创建一个页签选择的方法：判断条件为页签选择是哪个页签
+	Prop_Select(Btn1: StaleButton, Btn2: StaleButton, Btn3: StaleButton, Btn4: StaleButton) {
+		const mButton_Select = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_Tab_Left/mCanvas_tab/mButton_Select') as Image	
+		const mButton_Select1 = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_Tab_Left/mCanvas_tab_1/mButton_Select1') as Image	
+		const mButton_Select2 = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_Tab_Left/mCanvas_tab_2/mButton_Select2') as Image	
+		const mButton_Select3 = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_Tab_Left/mCanvas_tab_3/mButton_Select3') as Image	
+		const mCanvas = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas') as Canvas	
+		const mCanvas_1 = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_1') as Canvas	
+		const mCanvas_2 = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_2') as Canvas	
+		const mCanvas_3 = this.uiWidgetBase.findChildByPath('mCanvas_Root/mCanvas_3') as Canvas	
+		switch (this.PlayerPropSelect) {
+			//页签选择为页签1时，按钮的颜色效果
+			case PropSelect.Prop1:
+				{
+					mButton_Select.visibility=0
+					mButton_Select1.visibility=1
+					mButton_Select2.visibility=1
+					mButton_Select3.visibility=1
+					//使页签1可见，剩余隐藏
+					mCanvas.visibility=0
+					mCanvas_1.visibility=1
+					mCanvas_2.visibility=1
+					mCanvas_3.visibility=1
+				}
+				break;
+			//页签选择为页签2时，按钮的颜色效果
+			case PropSelect.Prop2:
+				{
+					mButton_Select.visibility=1
+					mButton_Select1.visibility=0
+					mButton_Select2.visibility=1
+					mButton_Select3.visibility=1
+					//使页签2可见，剩余隐藏
+					mCanvas.visibility=1
+					mCanvas_1.visibility=0
+					mCanvas_2.visibility=1
+					mCanvas_3.visibility=1
+				}
+				break;
+			//页签选择为页签3时，按钮的颜色效果
+			case PropSelect.Prop3:
+				{
+					mButton_Select.visibility=1
+					mButton_Select1.visibility=1
+					mButton_Select2.visibility=0
+					mButton_Select3.visibility=1
+					//使页签3可见，剩余隐藏
+					mCanvas.visibility=1
+					mCanvas_1.visibility=1
+					mCanvas_2.visibility=0
+					mCanvas_3.visibility=1
+				}
+				break;
+			//页签选择为页签4时，按钮的颜色效果
+			case PropSelect.Prop4:
+				{
+					mButton_Select.visibility=1
+					mButton_Select1.visibility=1
+					mButton_Select2.visibility=1
+					mButton_Select3.visibility=0
+					//使页签4可见，剩余隐藏
+					mCanvas.visibility=1
+					mCanvas_1.visibility=1
+					mCanvas_2.visibility=1
+					mCanvas_3.visibility=0
+				}
+				break;
+		}
+	}
 }
+
 ```
 
 - 示意图：
@@ -300,7 +313,7 @@ export default class activity extends activity_generate {
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWCPp8wXO1mVZ86z3Wc53cb.gif)
 
 - 工程项目：
-  [点击下载](https://cdn.233xyx.com/1682231334664_593.7z)
+  [点击下载](https://cdn.233xyx.com/online/sN6aAHihDL611694424668017.7z)
 
 ### 示例三：制作动态增加/移除自定义UI控件的自动布局面板
 
@@ -316,23 +329,23 @@ export default class activity extends activity_generate {
   * 示例脚本：
   
   ```TypeScript
-  export default class UIDefault extends UI.UIBehavior {
-  
-      /** 仅在游戏时间对非模板实例调用一次 */
+  @UIBind('')
+  export default class UIDefault extends UIScript {
+  	/** 仅在游戏时间对非模板实例调用一次 */
       protected onStart() { 
-          //设置能否每帧触发onUpdate
-          this.canUpdate = false;
-  
-          //找到对应的按钮和容器
-          const newBtn = this.uiWidgetBase.findChildByPath('Canvas/StaleButton') as UI.StaleButton
-          const canvas = this.uiWidgetBase.findChildByPath('Canvas/Canvas') as UI.Canvas
-  
-          //点击按钮,创建UI
-          newBtn.onPressed.add(()=>{
-              //创建自定义UI控件并挂载到容器下
-              let item= UI.createUIByName('/BagItem.ui') as UI.UserWidget
-              canvas.addChild(item)
-          })  
+  		//设置能否每帧触发onUpdate
+  		this.canUpdate = false;
+  		//找到对应的按钮和容器
+  		const newBtn = this.uiWidgetBase.findChildByPath('RootCanvas/StaleButton') as StaleButton
+  		const canvas = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas') as Canvas
+  		canvas.autoLayoutHugContent.hugContentH=UIHugContentVertically.FixHeight
+    
+  		//点击按钮,创建UI
+  		newBtn.onPressed.add(()=>{
+  			//创建自定义UI组件并挂载到容器下
+  			let item= createUIByName('BagItem.ui') as UserWidget
+  			canvas.addChild(item)
+  		})	
       }
   }
   ```
@@ -353,41 +366,41 @@ export default class activity extends activity_generate {
        * 构造UI文件成功后，在合适的时机最先初始化一次 
        */
       protected onStart() {
-          this.icon.imageColor= new Type.LinearColor(Math.random(),Math.random(),Math.random(),1.0)
+          this.icon.imageColor= new LinearColor(Math.random(),Math.random(),Math.random(),1.0)
       }
   
-      onTouchStarted(InGeometry :UI.Geometry,InPointerEvent:UI.PointerEvent) :UI.EventReply{
-          console.log("OnTouch"+InPointerEvent.screenSpacePosition)
-          return this.detectDragIfPressed(InPointerEvent, Type.Keys.AnyKey)
+	    onTouchStarted(InGeometry :Geometry,InPointerEvent:PointerEvent) :EventReply{
+        console.log("onTouchStarted"+InPointerEvent.screenSpacePosition)
+        return this.detectDragIfPressed(InPointerEvent, Keys.AnyKey)
+      }
+	    onTouchEnded(InGemotry: Geometry, InPointerEvent: PointerEvent): EventReply {
+		    console.log("onTouchEnded"+InPointerEvent.screenSpacePosition)
+        return EventReply.handled;
       }
   
-      onTouchEnded(InGemotry: UI.Geometry, InPointEvent: UI.PointerEvent): UI.EventReply {
-          return UI.EventReply.handled;
-      }
-  
-      onDragDetected(InGeometry :UI.Geometry,InPointerEvent:UI.PointerEvent):UI.DragDropOperation {
-          console.log("OnDrag"+InPointerEvent.screenSpacePosition)
-  
-          //如果想要拖动时，手指/鼠标保持与UI的相对位置不变
-          return this.newDragDrop(this.rootCanvas,"DragDropTag",null,UI.DragPivot.TopLeft,(InPointerEvent.screenSpacePosition.clone().subtract(InGeometry.getAbsolutePosition().clone())).clone().divide(InGeometry.getAbsoluteSize().clone()).clone().multiply(-1));
-          //如果想要拖动时，手指/鼠标移动到在UI中心
-          // return this.newDragDrop(this.rootCanvas,"DragDropTag",null,UI.DragPivot.CenterCenter,Type.Vector2.zero);
+      onDragDetected(InGeometry :Geometry,InPointerEvent:PointerEvent):DragDropOperation {
+        console.log("OnDrag"+InPointerEvent.screenSpacePosition)
+
+        //如果想要拖动时，手指/鼠标保持与UI的相对位置不变
+        return this.newDragDrop(this.rootCanvas,"DragDropTag",null,DragPivot.TopLeft,(InPointerEvent.screenSpacePosition.clone().subtract(InGeometry.getAbsolutePosition().clone())).clone().divide(InGeometry.getAbsoluteSize().clone()).clone().multiply(-1));
+        //如果想要拖动时，手指/鼠标移动到在UI中心
+        // return this.newDragDrop(this.rootCanvas,"DragDropTag",null,DragPivot.CenterCenter,Vector2.zero);
       }
   
       //当释放格子的位置在面板外时，拖拽事件不会结束而是被取消，就会执行这里的逻辑，将此格子销毁
-      onDragCancelled(InGemotry :UI.Geometry,InDragDropEvent:UI.PointerEvent) {
-          this.uiWidgetBase.destroyObject()
-          console.log("onDragCancelled"+InDragDropEvent.screenSpacePosition)
-      }
+    	onDragCancelled(InGemotry :Geometry,InDragDropEvent:PointerEvent) {
+    		this.uiWidgetBase.destroyObject()
+    		console.log("onDragCancelled"+InDragDropEvent.screenSpacePosition)
+    	}
   }
   ```
   
   ```TypeScript
-  //写在面板的UI脚本中，当释放格子的位置在面板内时，执行结束拖拽事件
+      //写在面板的UI脚本中，当释放格子的位置在面板内时，执行结束拖拽事件
       //在这个示例中，onDrop不执行任何逻辑，只和onDragCancelled用来区分释放点在面板之内还是之外
-      onDrop(InGemotry: UI.Geometry, InDragDropEvent: UI.PointerEvent, InOperation: UI.DragDropOperation) {
-          console.log("OnDrop"+InDragDropEvent.screenSpacePosition)
-          return true
+  	  onDrop(InGemotry: Geometry, InDragDropEvent: PointerEvent, InOperation: DragDropOperation) {
+  		  console.log("OnDrop"+InDragDropEvent.screenSpacePosition)
+  		  return true
       }
   ```
 * 效果图：
@@ -395,4 +408,4 @@ export default class activity extends activity_generate {
 ![](https://cdn.233xyx.com/1681462157060_878.gif)
 
 * 工程项目：
-  [点击下载](https://cdn.233xyx.com/1682231334857_402.7z)
+  [点击下载](https://cdn.233xyx.com/online/X4F8Va1kXEox1694155280424.7z)
