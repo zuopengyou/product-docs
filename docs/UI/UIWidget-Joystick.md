@@ -14,13 +14,13 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMolQooNGMahQNolHMdMhlc.png)
 
-#### 摇杆类型
+### 摇杆类型
 
 - 自定义：开发者需要自行编写控制效果
 - 角色移动：控制角色移动的摇杆
 - 摄像机移动：控制摄像机移动的摇杆
 
-#### 摇杆位置
+### 摇杆位置
 
 - 功能说明：调整摇杆在控件中的位置
 - 示意图：
@@ -42,54 +42,54 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5Z2ty6EUmrlwyAEG0Ch3xe.gif)
 
-#### 摇杆背景大小
+### 摇杆背景大小
 
 - 功能说明：调整摇杆背景图片的大小
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8g6is5VCikllVgSoI9bRsf.gif)
 
-#### 摇杆中心大小
+### 摇杆中心大小
 
 - 功能说明：调整摇杆中心图片的大小；需注意摇杆背景图片和摇杆中心图片的大小决定了屏幕可见的摇杆图片大小，而该控件的可操作范围大小是由参数变换-坐标-大小决定的
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnRvA1k822N96G1nvsFc3jcc.gif)
 
-#### 灵敏度比例
+### 灵敏度比例
 
 - 功能说明：此属性数值越大，摇杆的灵敏度越高。
 
-#### 激活不透明度
+### 激活不透明度
 
 - 功能说明：使用摇杆时，摇杆在激活状态下的中心按钮和背景图片的整体不透明度。
 
-#### 淡隐时间
+### 淡隐时间
 
 - 功能说明：不使用摇杆后，摇杆变为淡隐状态所需时间。
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnRCXcVpgC4X0AXKwXfMm63e.gif)
 
-#### 淡隐不透明度
+### 淡隐不透明度
 
 - 功能说明：摇杆进入淡隐后的不透明度，也就是上图中停止使用摇杆后淡隐状态的不透明度。
 
-#### 复位时间
+### 复位时间
 
 - 功能说明：不使用摇杆后，摇杆从使用位置回归初始位置时所需时间。
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnUspEzqHDfSlSQB3poJbW7b.gif)
 
-#### 固定摇杆位置
+### 固定摇杆位置
 
 - 功能说明：当固定摇杆位置时，摇杆位置不会改变，如下图；当不固定摇杆位置时，摇杆位置会移动到玩家首次触摸摇杆控件的位置，如上图
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYvKaOpJDQvExNBvsz5wuYd.gif)
 
-#### 是否被鼠标控制
+### 是否被鼠标控制
 
 - 功能说明：设置此摇杆是否允许被鼠标控制，此属性只作用于 PC 端，不会影响移动端
 - 在为 PC 游戏端玩家设计控制方案时，为了**避免按键绑定与****直接****点击 UI 产生冲突**，需要合理的运用此项属性，例如：
@@ -106,7 +106,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoc8BWWLPGba0ah1DHIEO8g.png)
 
-#### 摇杆背景图片
+### 摇杆背景图片
 
 - 功能说明：配置摇杆的背景图片，图片相关属性介绍请见 [UI 控件-图片](https://meta.feishu.cn/wiki/wikcnFg4z5zLX0puYIncTBIJGtf)
 - 按下时图片和禁用时图片相关属性的作用是：在摇杆处于按下状态/禁用状态时，使摇杆背景图片产生不同的效果，类似于按钮的过渡模式。
@@ -114,7 +114,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn7SEU5SPW7F55lA4YS8Zosb.gif)
 
-#### 摇杆中心图片
+### 摇杆中心图片
 
 - 功能说明：配置摇杆的中心图片，图片相关属性介绍请见 [UI 控件-图片](https://meta.feishu.cn/wiki/wikcnFg4z5zLX0puYIncTBIJGtf)
 - 按下时图片和禁用时图片相关属性的作用是：在摇杆处于按下状态/禁用状态时，使摇杆中心图片产生不同的效果，类似于按钮的过渡模式。
