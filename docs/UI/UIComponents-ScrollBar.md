@@ -18,7 +18,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFun5JvW35J1Hs85yIxcMhe.png)
 
-#### 滚动朝向
+### 滚动朝向
 
 - 水平滚动
 
@@ -30,7 +30,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOlEWSSfXIN1LWDnwFIeuwh.gif)
 
-#### 运动类型
+### 运动类型
 
 - 弹性运动（Elastic）
 
@@ -44,7 +44,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnlvV3CHJJfWiQ6dPhPVRMDf.gif)
 
-#### 滚动条默认位置
+### 滚动条默认位置
 
 - 在玩家没有操作滚动条的情况下滚动条的默认位置；每次滑动框重新渲染后，滑动条都回到这个默认位置
 
@@ -54,7 +54,7 @@
 | 居中       | ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoqYG3QSXoBfbpIkOMnr8kh.png) | ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcndNbO45MMAln9Lsd5BowWmc.png) |
 | 底部或右侧 | ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnLzpmO9FQW9baQa4DS46cWb.png) | ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnUNSPxFNIwvKIjGtBRiyGVe.png) |
 
-#### 弹性系数
+### 弹性系数
 
 - 在运动类型为弹性运动时，滚动框拉到顶部或底部边缘时，还能再拉动一小段距离，此系数决定了能超出滚动框正常范围的距离大小。
 
@@ -62,7 +62,7 @@
 
 左侧弹性系数=0.2，右侧弹性系数=2
 
-#### 是否有惯性
+### 是否有惯性
 
 - 使用滚动框滚动内容结束后，会不会根据惯性再滑动一段距离。勾选即有惯性，可以滑动一段距离，不勾选的话即无惯性。
 
@@ -70,7 +70,7 @@
 
 左侧无惯性，右侧有惯性
 
-#### 显示滚动条
+### 显示滚动条
 
 - 是否显示滚动条。勾选则显示，不勾选则不显示。
 
@@ -78,7 +78,7 @@
 
 左侧显示滚动条，右侧不显示滚动条
 
-#### 边缘阴影
+### 边缘阴影
 
 - 是否显示滚动边缘的阴影部分。勾选则显示，不勾选则不显示。
 
@@ -86,13 +86,13 @@
 
 左侧不显示边缘阴影，右侧显示边缘阴影
 
-#### 滚动条宽度
+### 滚动条宽度
 
 - 即滚动条的宽度，X 和 Y 的值分别为垂直滚动和水平滚动时的宽度
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcne1nkXy6uP3dknlFoMj5hHg.gif)
 
-#### 滚动条颜色
+### 滚动条颜色
 
 - 可以修改滚动条的颜色和透明度
 
