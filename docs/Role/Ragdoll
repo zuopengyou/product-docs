@@ -6,7 +6,7 @@
 
 ## 1. 布娃娃介绍
 
-![](https://cdn.233xyx.com/online/pqTAEJLOPote1694170687910.PNG)       
+![](https://cdn.233xyx.com/online/5YTaooi8cgCQ1694604132461.PNG)       
 
 布娃娃定义：布娃娃是角色的一种不可控且具有物理效果的状态。
 
@@ -21,21 +21,28 @@
 示例脚本：
 
 ```ts
-//获取玩家角色
-let chara = Player.localPlayer.character
-//按下“1”键触发以下逻辑
-InputUtil.onKeyDown(Keys.One, () => {
-    //角色布娃娃效果开启
-    chara.ragdollEnabled = true;
-});
+@Component
+export default class NewScript extends Script {
 
-//按下“2”键触发以下逻辑
-InputUtil.onKeyDown(Keys.Two, () => {
-    //角色布娃娃效果关闭
-    chara.ragdollEnabled = false;
-});
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    protected onStart(): void {
+        //获取玩家角色
+        let chara = Player.localPlayer.character
+        //按下“1”键触发以下逻辑
+        InputUtil.onKeyDown(Keys.One, () => {
+            //角色布娃娃效果开启
+            chara.ragdollEnabled = true;
+        });
+
+        //按下“2”键触发以下逻辑
+        InputUtil.onKeyDown(Keys.Two, () => {
+            //角色布娃娃效果关闭
+            chara.ragdollEnabled = false;
+        });
+    }
+}
 ```
 
 效果图：
 
-<video controls src="https://cdn.233xyx.com/online/M5bhvFWpA4jp1694170687910.mp4"></video>
+<video controls src="https://cdn.233xyx.com/online/75QDF8BBVcyq1694604132461.mp4"></video>
