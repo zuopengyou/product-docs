@@ -14,7 +14,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHKEAR3vBCE0aQQKrsu5jAe.png)
 
-#### 填充类型
+### 填充类型
 
 - Left To Right（从左到右）
 
@@ -35,27 +35,27 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMS9l1t5CRVZnjR4YJc04h1.gif)
 
-#### 滑动最小值
+### 滑动最小值
 
 - 设置滑动条可滑动到的最小值
 - 举例说明：下载进度条从 0 到 100%，0 即为滑动最小值
 
-#### 滑动最大值
+### 滑动最大值
 
 - 设置滑动条可滑动到的最大值
 - 举例说明：下载进度条从 0 到 100%，100% 即为滑动最大值
 
-#### 当前值
+### 当前值
 
 - 规定滑动按钮的初始位置的值。
 - 举例说明：下载进度条是从 0 开始的，所以当前值为 0。相反假设角色满体力是 100，那么角色运行游戏时体力应该是 100，也就是说当前值为 100。
 
-#### 当前百分比
+### 当前百分比
 
 - 规定滑动按钮的初始位置的百分比，该百分比是通过当前值进行换算的，也就是说两个值调整的是同一个参数。
 - 举例说明：还以上面的下载进度条为例，当前值为 0 时，则当前百分比应该为 0%，如果当前值为 50 时，则当前百分比应该为 50%。
 
-#### 取整
+### 取整
 
 - 限制滑动值是整数还是小数。
 - 举例说明：商店的道具数量购买时的滑动条需要取整，因为道具数量没有小数。
@@ -63,7 +63,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTYIe9rM8FlqjMwJKFl4dke.gif)
 
-#### 条厚度
+### 条厚度
 
 - 进度条控件允许分别设置渲染图形大小和可操作范围为不同大小：
 
@@ -84,11 +84,11 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5xRKJIBI5F54Ek3JN2eQye.png)
 
-#### 滑动填充图片
+### 滑动填充图片
 
 - 修改的是进度条在填充时的填充效果。图片属性请见【UI 控件-图片】
 
-#### 滑动按钮图片
+### 滑动按钮图片
 
 - 修改的是进度条填充位置的按钮效果。图片属性请见【UI 控件-图片】
 
@@ -104,7 +104,7 @@
     - 锚点类型为两侧时，偏移值为 X 像素即让按钮图片可滑动的最左位置和最右位置整体素，偏移值为-X 像素即让按钮图片的最左位置和最右位置整体向内偏移 X 像素
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8LggdkVE3nqfxk3QM3HZBd.png)
 
-#### 滑动背景图片
+### 滑动背景图片
 
 - 修改的是进度条在未填充的背景效果。图片属性请见 [UI 控件-图片](https://docs.ark.online/UI/UIComponent-Image.html)
 - 示意图：
@@ -128,28 +128,32 @@
 - 脚本示例：
 
 ```ts
-@UI.UICallOnly('')
-export default class UIDefault extends UI.UIBehavior{
+@UIBind('')
+export default class DefaultUI extends UIScript {
+	private character: Character;
+	private anim1 = null;
+	
+	/** 仅在游戏时间对非模板实例调用一次 */
+    protected  onStart() {
+		 //找到进度条
+		 const progressbar = this.uiWidgetBase.findChildByPath('Canvas/ProgressBar') as ProgressBar
 
-    /** 仅在游戏时间对非模板实例调用一次 */
-    protected  onStart() { 
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        
-       //找到进度条
-       const progressbar = this.uiWidgetBase.findChildByPath('Canvas/ProgressBar') as UI.ProgressBar
-       //生成一个音效并播放
-       let sound1 = Core.GameObject.spawnGameObject("4165") as Gameplay.Sound
-       sound1.isLoop = true
-       sound1.play()
-       //取到当前音效的音量并设置成进度条当前值
-       let volume1=sound1.volume
-       progressbar.currentValue=volume1
-       //进度条移动后设置音量
-       progressbar.onSliderValueChanged.add(() => {
-         let volume1=progressbar.currentValue
-         sound1.volume=volume1
-       });
+		 AssetUtil.asyncDownloadAsset("4165").then((res : boolean) => {
+			if (res) {
+				//生成一个音效并播放
+				let sound1 = GameObject.spawn("4165") as Sound
+				sound1.isLoop = true
+				sound1.play()
+				//取到当前音效的音量并设置成进度条当前值
+				let volume1=sound1.volume
+				progressbar.currentValue=volume1
+				//进度条移动后设置音量
+				progressbar.onSliderValueChanged.add(() => {
+					let volume1=progressbar.currentValue
+					sound1.volume=volume1
+				});
+			}
+		})
     }
 }
 ```

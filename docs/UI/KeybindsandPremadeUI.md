@@ -2,7 +2,7 @@
 
 **阅读本文大概需要 10 分钟**
 
-本文概述了如何使用按键绑定和鼠标锁定功能快捷设置 PC 游戏端玩家的控制方案，以及如何使用新建项目的预设 UI。
+本文概述了如何使用按键绑定和鼠标锁定功能快捷设置 PC 游戏端的控制方案，以及新建项目的预设UI包括哪些功能。
 
 ## 什么是按键绑定？
 
@@ -20,13 +20,13 @@
 - 对于摄像机滑动区、按钮、按钮（废弃）：点击/释放/按住绑定的键鼠按键就会触发点击/释放/按住对应 UI 控件
 - 对于摇杆：支持绑定摇杆的上下左右四个方向和仅按下/抬起，
 
-  - 上下左右四个方向：分别对应摇杆输入值为（0,0.8）、（0,-0.8）、（-0.8,0）和（0.8,0）四种效果
+  - 上下左右四个方向：分别对应摇杆输入值为（0,1）、（0,-1）、（-1,0）和（1,0）四种效果
   - 仅按下/抬起：按下绑定的键鼠按键会触发摇杆的按下抬起事件，但摇杆的当前值保持在（0,0）不变
   - 使用场景：为了实现一边开火一边转动摄像机来瞄准，射击游戏中的开火键推荐使用摇杆控件；而如果需要为 PC 端提供控制方案，可以将开火摇杆的仅按下/抬起绑定在鼠标左键，这样，玩家可以按住鼠标右键拖动或者直接拖动鼠标（鼠标锁定时）来转动摄像机进行瞄准，并使用左键触发摇杆完成开火
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhmdpZQxxnjfkGIrqSvmxfe.gif)
 
-- 点击菜单中的按钮可以更换绑定，点击重置按钮可以恢复到默认绑定键位
+- 点击菜单中的按钮可以更换绑定，点击重置按钮可以恢复到置空状态
 
 ## 键鼠绑定相关 API
 
@@ -35,14 +35,15 @@
 **脚本示例：**
 
 ```ts
-const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.Button
+const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as Button
 //绑定按键
-Util.InputUtil.bindButton(Type.Keys.Up,JumpBtn)
+InputUtil.bindButton(Keys.Up,JumpBtn)
 //解绑按键
-Util.InputUtil.unbindButton(Type.Keys.Up)
+InputUtil.unbindButton(Keys.Up)
 ```
 
 - 为了满足开发者针对 PC 游戏端的不同需求，比如希望某个摄像机滑动区/摇杆是否可以被鼠标点击，因此在 VirtualJoystickPanel 和 TouchPad 类中提供了是否被鼠标控制的接口，编辑器内也可以在摄像机滑动区/摇杆属性面板中勾选此属性
+- 请注意：直接点击/拖动等方式控制UI比通过键鼠绑定功能控制UI的优先级更高，所以如果摄像机滑动区/摇杆设置为可以被鼠标点击，而这两类控件在屏幕中占据的比例一般又比较大，就很容易操控到摄像机或摇杆，无法触发键鼠绑定的UI了
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGgX88e45wIi9fPbNj6s2Sc.png)
 
@@ -51,8 +52,8 @@ Util.InputUtil.unbindButton(Type.Keys.Up)
 **脚本示例：**
 
 ```ts
-let touchpad=this.uiWidgetBase.findChildByPath('Canvas/UITouchPad_1') as UI.TouchPad
-let joystick=this.uiWidgetBase.findChildByPath('Canvas/UIVirtualJoystickPanel_1') as UI.VirtualJoystickPanel
+let touchpad=this.uiWidgetBase.findChildByPath('Canvas/UITouchPad_1') as TouchPad
+let joystick=this.uiWidgetBase.findChildByPath('Canvas/UIVirtualJoystickPanel_1') as VirtualJoystickPanel
 //设置摇杆和摄像机滑动区可以被鼠标点击
 touchpad.controlByMouseEnable(true)
 joystick.controlByMouseEnable(true)
@@ -64,12 +65,11 @@ let bool2 = joystick.controlByMouseEnable
 ## 新建项目的预设 UI 控制方案
 
 - 为新建项目提供一个预设UI文件，并且绑定了一套键鼠默认键位，作为默认的控制方案
-- 预设UI文件包括左侧的摇杆、右侧的摄像机滑动区和右下的三个按钮（跳跃/攻击/交互）
-- 预设UI脚本文件内包括控制点击跳跃按钮可以实现跳跃、点击攻击/交互按钮播放动作的逻辑
+- 预设UI文件包括左侧的摇杆、右侧的摄像机滑动区和右下的两个按钮（跳跃/攻击）
+- 预设UI脚本文件内包括控制点击跳跃按钮可以实现跳跃、点击攻击按钮播放动作的逻辑
+- 请注意：尽管在新建项目中，鼠标左右键都能控制摄像机，但两者的逻辑不同，鼠标左键控制摄像机类似于移动端用手指在摄像机滑动区内拖动来控制摄像机，而鼠标右键是通过按键绑定菜单里绑定到摄像机滑动区来控制摄像机的，如果不希望鼠标右键控制摄像机，可以在菜单里解除绑定
 
-![](https://cdn.233xyx.com/1681457046670_844.png)
-
-![](https://cdn.233xyx.com/1681457046832_053.png)
+![](https://cdn.233xyx.com/online/S6R3KZWP1EE31694155920054.png)
 
 | 按键               | 行动             | 对应的预设UI控件        |
 | -------------------- | ------------------ | ------------------------- |
@@ -79,8 +79,7 @@ let bool2 = joystick.controlByMouseEnable
 | **D**        | 向右移动         |
 | **鼠标右键** | 旋转镜头（按住） | TouchPadDesigner |
 | **空格键**   | 跳跃             | Button_Jump |
-| **鼠标左键** | 攻击/热武器开火  | Button_Attack |
-| **F**        | 交互/触发键      | Button_Interact |
+|              | 攻击/热武器开火  | Button_Attack |
 
 ## PC 端鼠标锁定功能及 API
 
@@ -92,7 +91,7 @@ let bool2 = joystick.controlByMouseEnable
 
 ```ts
 //设置为不允许玩家切换鼠标锁定状态
-Util.InputUtil.setCanBeLockMouse(false)
+InputUtil.setMouseLockable=false
 //设置为允许玩家切换鼠标锁定状态
-Util.InputUtil.setCanBeLockMouse(true)
+InputUtil.setMouseLockable=true;
 ```

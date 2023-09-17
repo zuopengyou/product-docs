@@ -86,7 +86,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-按钮', link: '/UI/UIComponent-Button.md' },
           { text: 'UI控件-遮罩按钮', link: '/UI/UIComponent-MaskedButton.md' },
           { text: 'UI控件-进度条', link: '/UI/UIComponent-ProgressBar.md' },
-          { text: 'UI控件-滚动框', link: '/UI/UIComponents-ScrollBar.md' },
+          { text: 'UI控件-滚动框', link: '/UI/UIComponents-ScrollBox.md' },
           { text: 'UI控件-摇杆', link: '/UI/UIWidget-Joystick.md' },
           { text: 'UI控件-摄像机滑动区', link: '/UI/UIWidget-Touchpad.md' },
           { text: 'UI控件-加载图', link: '/UI/UIComponent-LoadingIcon.md' },

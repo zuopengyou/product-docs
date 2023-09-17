@@ -14,32 +14,32 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnszRhmLcMi1xEspl71LjyVh.png)
 
-#### 文本
+### 文本
 
 - 修改文字内容
 
-#### 字体大小
+### 字体大小
 
 - 修改文字的字体大小
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnY3ZzYncURlLNcROLqLw6df.gif)
 
-#### 字体间距
+### 字体间距
 
 - 修改文字之间的间隔距离
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJ28CsjgGjYeW39YydkQuLf.gif)
 
-#### 行距系数
+### 行距系数
 
 - 修改每一行之间的间隔距离
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnk3sYbYlPTAh3wvDj4koadd.gif)
 
-#### 水平显示
+### 水平显示
 
 - 此属性用于修改要使用的换行策略
 
@@ -55,7 +55,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQQeZ7r6NNQJsBuQkqD4tre.gif)
 
-#### 自适应文本框
+### 自适应文本框
 
 - 开启后会根据当前文本内容和文本控件大小，自动计算当前文本控件最适合的【字体大小】，尽可能大的充满整个文本框，而文本框大小不会变化
 
@@ -76,49 +76,49 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnM0ugvMv54RGWJFWl21Tf1e.png)
 
-#### 字形
+### 字形
 
 - 修改文字的字形（请注意，目前编辑器仅支持修改英文字形，汉字等其他语言暂不支持修改字形）
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnCpOCRjLoU3K0Cnt9Ro0oLc.gif)
 
-#### 删除线
+### 删除线
 
 - 修改文字是否添加删除线
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnSszoYp9ahGpe8CC6HXJlFh.png)
 
-#### 下划线
+### 下划线
 
 - 修改文字是否添加下划线
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIMnw7EL2D8quIXjvGQcWFd.png)
 
-#### 字体颜色
+### 字体颜色
 
 - 修改文字的字体颜色
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGNYTD3NnwPHhPI0DiQPZb8.gif)
 
-#### 阴影颜色
+### 阴影颜色
 
 - 修改文字的阴影颜色，凸显文字的立体感
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwMLeQzP8XeFS9Q7G0SaOPh.gif)
 
-#### 阴影偏移
+### 阴影偏移
 
 - 修改文字的阴影的相对位置
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcno9jQBkFBnL4xx2mtF1u1Mh.gif)
 
-#### 水平对齐
+### 水平对齐
 
 - 左对齐
 
@@ -130,7 +130,7 @@
 
   - 文本内容以文本框水平方向的右侧靠齐的对齐方式
 
-#### 垂直对齐
+### 垂直对齐
 
 - 上对齐
 
@@ -145,14 +145,14 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFLDlG3pel88Gc2Oxt1gVUe.gif)
 
-#### 字体描边颜色
+### 字体描边颜色
 
 - 修改字体描边的颜色。
 - 示意图：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnqCquMTysKNUqQysZS72UGf.gif)
 
-#### 字体描边宽度
+### 字体描边宽度
 
 - 修改字体描边的宽度。
 - 示意图：
@@ -175,42 +175,29 @@
 - 示例脚本：
 
 ```ts
-@UI.UICallOnly('')
-export default class UIDefault extends UI.UIBehavior{
-    character: Gameplay.Character;
-    speed:number
-    /** 仅在游戏时间对非模板实例调用一次 */
-    protected onStart() { 
-        //设置能否每帧触发onUpdate
-        this.canUpdate = true;
-        //找到对应的跳跃按钮
-        const jumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
-        //点击跳跃按钮,异步获取人物后执行跳跃
-        jumpBtn.onPressed.add(()=>{
-            if (this.character) {
-                this.character.jump();
-            } else {
-                Gameplay.asyncGetCurrentPlayer().then((player) => {
-                    this.character = player.character;
-                    //角色执行跳跃功能
-                    this.character.jump();
-                });
-            }
-        })
-    }   
-    /**
-    * 每一帧调用
-    * 通过canUpdate可以开启关闭调用
-    * dt 两帧调用的时间差，毫秒
-    */
-    protected onUpdate(dt :number) {
-        const textBlock = this.uiWidgetBase.findChildByPath('Canvas/TextBlock_2') as UI.TextBlock
-    // 找到当前玩家角色
-    Gameplay.asyncGetCurrentPlayer().then((player) => {
-        this.character = player.character;
-        textBlock.text= this.Character.velocity.x+""
-    });
-    }   
+@UIBind('')
+export default class DefaultUI extends UIScript {
+	private character: Character;
+	private anim1 = null;
+	
+	/** 仅在游戏时间对非模板实例调用一次 */
+  protected  onStart() {
+		//设置能否每帧触发onUpdate
+		this.canUpdate = true;
+	}	
+	/**
+	* 每一帧调用
+	* 通过canUpdate可以开启关闭调用
+	* dt 两帧调用的时间差，毫秒
+	*/
+	protected onUpdate(dt :number) {
+		const textBlock = this.uiWidgetBase.findChildByPath('Canvas/TextBlock_2') as TextBlock
+	// 找到当前玩家角色
+	Player.asyncGetLocalPlayer().then((player) => {
+		this.character = player.character;
+		textBlock.text=	Math.sqrt(Math.pow(this.character.velocity.x,2)+Math.pow(this.character.velocity.y,2))+""
+	});
+	}	
 }
 ```
 
