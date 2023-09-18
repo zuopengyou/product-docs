@@ -160,7 +160,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '环境光', link: '/WorldObjects/AmbientLight.md' },
           { text: '太阳光', link: '/WorldObjects/Sunlight.md' },
           { text: '摄像机', link: '/WorldObjects/Camera.md' },
-          { text: '角色', link: '/WorldObjects/Characters.md' },
           { text: '后处理', link: '/WorldObjects/Post-Processing.md' },
           { text: '天空球', link: '/WorldObjects/Skybox.md' },
           { text: '环境雾', link: '/WorldObjects/Fog.md' }
@@ -170,7 +169,14 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         text: '角色',
         collapsible: true,
         collapsed: true,
-        items: []
+        items: [
+          { text: '角色基础功能', link: '/Role/RoleBasicAbility.md' },
+          { text: '形象与换装', link: '/Role/AppearanceAndReplacement.md' },
+          { text: '动画与姿态', link: '/Role/AnimationAndStane.md' },
+          { text: '角色插槽', link: '/Role/Slot.md' },
+          { text: '布娃娃功能', link: '/Role/Ragdoll.md' },
+          { text: '头顶名称', link: '/Role/OverHeadName.md' },
+        ]
       },
       {
         text: '脚本',
