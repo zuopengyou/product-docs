@@ -18,7 +18,7 @@
 
 ### 2.1 人形插槽介绍说明
 
-![](https://cdn.233xyx.com/online/DeWLk9IfmgFk1694158606115.png)    
+![](https://cdn.233xyx.com/online/Cufvbi7QR6YB1694604176305.png)    
 
 | 中文名称  | 枚举名称 | 枚举序号  | 应用说明 |
 | ----- | ----- | ----- | ----- |
