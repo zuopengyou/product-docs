@@ -22,9 +22,7 @@
 
 ## 2. 动画
 
-### 2.1 属性
-
-#### 2.1.1 资源
+### 2.1 资源
 
 资源说明：我们需要使用loadAnimation加载相应的动画资源。
 
@@ -37,7 +35,7 @@ let chara = Player.localPlayer.character
 let animation = chara.loadAnimation("14700");
 ```
 
-#### 2.1.2 动画循环次数
+### 2.2 动画循环次数
 
 功能说明：角色在播放动画时，多次重复播放该动画资源，直至达到循环次数上限后，停止播放动画。
 
@@ -100,7 +98,7 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/YTcLjwvLklfI1694604277559.mp4"></video>
 
-#### 2.1.3 动画时长
+### 2.3 动画时长
 
 功能说明：角色播放动画的总时长。
 
@@ -117,7 +115,7 @@ let danceAnimation = chara.loadAnimation("14700");
 console.log(danceAnimation.length);
 ```
 
-#### 2.1.4 动画播放部位
+### 2.4 动画播放部位
 
 功能说明：由角色的哪些部位进行播放动画。目前可播放动画的部位包括：全身、上半身、下半身。
 
@@ -165,7 +163,7 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/YX3TxYm15qBp1694604277558.mp4"></video>
 
-#### 2.1.5 动画播放速度
+### 2.5 动画播放速度
 
 功能说明：控制动画的播放速度，这里的速度代表的是播放速度的倍率，速度为1时，代表初始播放速度。速度值越大，播放速度越快，速度值越小，播放速度越慢。
 
@@ -191,9 +189,7 @@ InputUtil.onKeyDown(Keys.One, () => {
 
 <video controls src="https://cdn.233xyx.com/online/EKhBvkEHXVBa1694604277558.mp4"></video>
 
-### 2.2 操作性功能
-
-#### 2.2.1 播放功能
+### 2.6 播放功能
 
 功能说明：根据动画的循环/速度等属性，使指定角色播放该动画的功能。
 
@@ -204,7 +200,7 @@ InputUtil.onKeyDown(Keys.One, () => {
 animation.play();
 ```
 
-#### 2.2.2 暂停功能
+### 2.7 暂停功能
 
 功能说明：让正在播放动画的角色暂停播放，并保持暂停时的动画姿势。
 
@@ -219,7 +215,7 @@ animation.pause();
 
 <video controls src="https://cdn.233xyx.com/online/H8buBQwO2AH81694604277559.mp4"></video>
 
-#### 2.2.3 继续功能
+### 2.8 继续功能
 
 功能说明：使已经暂停动画的角色恢复播放状态，并继续播放完成后续的动画。
 
@@ -230,7 +226,7 @@ animation.pause();
 animation.resume();
 ```
 
-#### 2.2.4 停止功能
+### 2.9 停止功能
 
 功能说明：让正在播放动画的角色停止播放，并让角色恢复到默认待机状态。
 
@@ -245,9 +241,7 @@ animation.stop();
 
 <video controls src="https://cdn.233xyx.com/online/VVY3iZH39k6f1694604277558.mp4"></video>
 
-### 2.3 辅助性功能
-
-#### 2.3.1 动画是否在播放
+### 2.10 动画是否在播放
 
 功能说明：检测动画是否还在进行播放。
 
@@ -264,7 +258,7 @@ if (animation.isPlaying == true) {
 }
 ```
 
-#### 2.3.2 动画播放结束回调
+### 2.11 动画播放结束回调
 
 功能说明：动画播放结束后，抛出结束事件。
 
@@ -305,11 +299,9 @@ animation.onFinish.add(() => {
 
 <video controls src="https://cdn.233xyx.com/online/xk8o9fk3Xu7n1694604277558.mp4"></video>
 
-## 3. 姿态
+## 3. 基础姿态
 
-### 3.1 基础姿态
-
-#### 3.1.1 设置姿态
+### 3.1 设置姿态
 
 功能说明：更换基础姿态的资源
 
@@ -338,7 +330,7 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/sdWAwMMFgqJe1694604277559.mp4"></video>
 
-#### 3.1.2 播放功能
+### 3.2 播放功能
 
 功能说明：根据加载的基础姿态的资源，使指定角色播放该姿态的功能。
 
@@ -353,7 +345,7 @@ stance.play();
 
 <video controls src="https://cdn.233xyx.com/online/xd5UFBREaYSr1694604277559.mp4"></video>
 
-#### 3.1.3 停止功能
+### 3.3 停止功能
 
 功能说明：根据加载的基础姿态的资源，使指定角色停止正在播放的姿态。
 
@@ -368,7 +360,7 @@ stance.stop();
 
 <video controls src="https://cdn.233xyx.com/online/4WU79guDpYwJ1694604277559.mp4"></video>
 
-#### 3.1.4 瞄准偏移功能
+### 3.4 瞄准偏移功能
 
 功能说明：开启瞄准偏移功能后，角色头部会跟随摄像机的方向进行移动，并且不会转动身体。关闭瞄准偏移后，摄像机移动并不会影响角色效果。
 
@@ -400,9 +392,9 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/feFEU7T38OHS1694604277559.mp4"></video>
 
-### 3.2 二级姿态
+## 4. 二级姿态
 
-#### 3.2.1 设置姿态
+### 4.1 设置姿态
 
 功能说明：更换二级姿态的资源
 
@@ -417,7 +409,7 @@ let subStance = chara.loadSubStance("94258");
 
 【播放】、【停止】等功能的使用方式与基础姿态一致。
 
-#### 3.2.2 姿态混合
+### 4.2 姿态混合
 
 功能说明：根据加载的二级姿态的资源，使角色只播放该姿态的上半身效果或下半身效果或全身效果。
 
@@ -455,7 +447,7 @@ export default class stanceTest extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/NiIOC2MTsuvW1694604277559.mp4"></video>
 
-#### 3.2.3 动画转姿态
+### 4.3 动画转姿态
 
 功能说明：loadSubStance()方法可以填写姿态资源或动画资源，如果识别资源类型是动画资源时，会让角色自动播放其动画的姿态效果。方便我们更加灵活的控制动作资源效果。
 
