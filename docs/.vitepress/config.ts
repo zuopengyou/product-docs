@@ -353,7 +353,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         }
       }
     ],
-    outline: [2, 3],
+    outline: [2, 4],
     editLink: {
       pattern:
         'https://github.com/prodigytech-doc/product-docs/tree/release-027/docs/:path',
