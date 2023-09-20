@@ -23,7 +23,7 @@
 
 天空球主要构件有：天空球贴图、渐变效果、星星、太阳、月亮、云。以下展开介绍：
 
-### 2.1. 天空球预设
+### 天空球预设
 
 - 编辑器提供了8种常用的天空球预设效果，当选择其中一个预设效果时，下面其他的天空球基础属性将会自动刷新，并将其属性设置为预设的默认值。
 - 演示效果：
@@ -186,7 +186,7 @@ export default class UIDefault extends UI.UIBehavior {
 
 <video controls src="https://cdn.233xyx.com/1682503424227_593.mp4"></video>
 
-### 2.2. 天空球贴图
+### 天空球贴图
 
 - 更改天空球贴图：从左侧资源管理器拖出要更换的天空球贴图，拖拽到右侧属性面板→天空球贴图处松开。
 - 效果图：
@@ -200,7 +200,7 @@ export default class UIDefault extends UI.UIBehavior {
 this.sky.skyDomeTextureAssetByID = "32676"
 ```
 
-### 2.3. 天空球亮度
+### 天空球亮度
 
 - **天空球亮度：**可以改变天空自身发出的颜色亮度，数值为 0-100 之间。
 - 效果图：
@@ -214,7 +214,7 @@ this.sky.skyDomeTextureAssetByID = "32676"
 this.sky.skyDomeIntensity = 1;
 ```
 
-### 2.4. 天空球整体颜色
+### 天空球整体颜色
 
 - **天空球整体颜色：**可以改变天空球整体颜色，相当于在天空球上叠加了一层颜色滤镜。
 - 效果图：
@@ -228,8 +228,8 @@ this.sky.skyDomeIntensity = 1;
 this.sky.skyDomeTint = new Type.LinearColor(255,0,0)
 ```
 
-### 2.5. 渐变功能
-#### 2.5.1. 是否开启渐变效果
+### 渐变功能
+#### 是否开启渐变效果
 
 ![](https://cdn.233xyx.com/1682503517307_065.png)
 
@@ -244,7 +244,7 @@ this.sky.skyDomeGradientEnable = true;
 this.sky.skyDomeGradientEnable = false;
 ```
 
-#### 2.5.2. 天空球顶层颜色
+#### 天空球顶层颜色
 
 - 天空球顶层颜色：天空球的65-100%部分，若开启渐变效果，将与天空球整体色调进行乘法。
 - 相关接口：
@@ -254,7 +254,7 @@ this.sky.skyDomeGradientEnable = false;
 this.sky.skyDomeTopTint = new Type.LinearColor(255,0,0);
 ```
 
-#### 2.5.3. 天空球上层颜色
+#### 天空球上层颜色
 
 - 天空球上层颜色：天空球的50-64%部分，若开启渐变效果，将与天空球整体色调进行乘法。
 - 相关接口：
@@ -264,7 +264,7 @@ this.sky.skyDomeTopTint = new Type.LinearColor(255,0,0);
 this.sky.skyDomeHorizontalTint = new Type.LinearColor(255,0,0);
 ```
 
-#### 2.5.4. 天空球下层颜色
+#### 天空球下层颜色
 
 - 天空球下层颜色：天空球的0-49%部分，若开启渐变效果，将与天空球整体色调进行乘法。
 - 相关接口：
@@ -274,7 +274,7 @@ this.sky.skyDomeHorizontalTint = new Type.LinearColor(255,0,0);
 this.sky.skyDomeBotTint = new Type.LinearColor(255,0,0);
 ```
 
-#### 2.5.5. 地平线渐出
+#### 地平线渐出
 
 - 地平线渐出：影响地平线的渐变宽度，范围为1-20。此值越小，两相邻部分之间的颜色交替部分越宽；此值越大，两相邻部分之间的颜色交替部分越窄。
 - 效果图：
@@ -295,8 +295,8 @@ this.sky.skyDomeBotTint = new Type.LinearColor(255,0,0);
 this.sky.skyDomeHorizontalFallOff = 10;
 ```
 
-### 2.6. 星星功能
-#### 2.6.1. 是否开启星星
+### 星星功能
+#### 是否开启星星
 
 ![](https://cdn.233xyx.com/1682503535583_495.png)
 
@@ -317,7 +317,7 @@ this.sky.skyDomeHorizontalFallOff = 10;
 this.sky.skyDomeHorizontalFallOff = 10;
 ```
 
-#### 2.6.2. 星星贴图
+#### 星星贴图
 
 - 星星贴图：改变星星贴图，可以改变星星的效果。
 - 相关接口：
@@ -329,7 +329,7 @@ this.sky.starTextureAssetByID = "";
 
 **注意**目前我们仅有一种星星贴图，后续会添加更多贴图资源。
 
-#### 2.6.3. 星星亮度
+#### 星星亮度
 
 - 星星亮度：用以控制天空中所有星星的亮度，范围为0-1。亮度越大，星星越明亮；亮度越小，星星越暗淡。
 
@@ -349,7 +349,7 @@ this.sky.starIntensity = 1;
 ```
 
 
-#### 2.6.4. 星星密度
+#### 星星密度
 
 - 星星密度：用以控制天空中星星的数量，范围为0-100。密度越大，星星越多并且越小；密度越小，星星越小并且越大。
 
@@ -368,8 +368,8 @@ this.sky.starIntensity = 1;
 this.sky.starTiling = 10;
 ```
 
-### 2.7. 太阳
-#### 2.7.1. 是否开启太阳
+### 太阳
+#### 是否开启太阳
 
 ![](https://cdn.233xyx.com/1682503622187_817.png)
 
@@ -388,7 +388,7 @@ this.sky.sunEnable = true;
 this.sky.sunEnable = false;
 ```
 
-#### 2.7.2. 太阳贴图
+#### 太阳贴图
 
 - 太阳贴图：改变太阳贴图，可以改变太阳的效果。
 
@@ -401,7 +401,7 @@ this.sky.sunEnable = false;
 this.sky.sunTextureAssetByID = "";
 ```
 
-#### 2.7.3. 太阳亮度
+#### 太阳亮度
 
 - 太阳亮度：用以控制天空中太阳的亮度，范围为0-2000。亮度越大，太阳越明亮；亮度越小，太阳越暗淡。下图分别为亮度0、200、2000的太阳表现效果。
 
@@ -425,7 +425,7 @@ this.sky.sunIntensity = 1;
 ```
 
 
-#### 2.7.4. 太阳颜色
+#### 太阳颜色
 
 - 太阳颜色：太阳的颜色。
 
@@ -438,7 +438,7 @@ this.sky.sunIntensity = 1;
 this.sky.sunTint = new Type.LinearColor(255, 0, 0);
 ```
 
-#### 2.7.5. 太阳大小
+#### 太阳大小
 
 - 太阳大小：太阳的大小，范围为0-100。
 
@@ -450,8 +450,8 @@ this.sky.sunTint = new Type.LinearColor(255, 0, 0);
 //设置太阳光大小
 this.sky.sunSize = 20;
 ```
-### 2.8. 月亮
-#### 2.8.1. 是否开启月亮
+### 月亮
+#### 是否开启月亮
 
 ![](https://cdn.233xyx.com/1682503711191_434.png)
 
@@ -468,7 +468,7 @@ this.sky.moonEnable = true;
 this.sky.moonEnable = false;
 ```
 
-#### 2.8.2. 月亮贴图
+#### 月亮贴图
 
 - 月亮贴图：改变月亮贴图，可以改变月亮的效果。
 
@@ -481,7 +481,7 @@ this.sky.moonEnable = false;
 this.sky.moonTextureAssetByID = "";
 ```
 
-#### 2.8.3. 月亮亮度
+#### 月亮亮度
 
 - 月亮亮度：用以控制天空中月亮的亮度，范围为0-2000。亮度越大，月亮越明亮；亮度越小，月亮越暗淡。下图分别为亮度0、200、2000的月亮表现效果
 
@@ -505,7 +505,7 @@ this.sky.moonIntensity = 1;
 ```
 
 
-#### 2.8.4. 月亮颜色
+#### 月亮颜色
 
 - 月亮颜色：月亮的颜色。
 
@@ -518,7 +518,7 @@ this.sky.moonIntensity = 1;
 this.sky.moonTint = new Type.LinearColor(255, 0, 0);
 ```
 
-#### 2.8.5. 月亮大小
+#### 月亮大小
 
 - 月亮大小：月亮的大小，范围为0-100。
 
@@ -531,8 +531,8 @@ this.sky.moonTint = new Type.LinearColor(255, 0, 0);
 this.sky.moonSize = 20;
 ```
 
-### 2.9. 云
-#### 2.9.1. 是否开启云
+### 云
+#### 是否开启云
 
 ![](https://cdn.233xyx.com/1682503780829_589.png)
 
@@ -547,7 +547,7 @@ this.sky.cloudEnable = true;
 this.sky.cloudEnable = false;
 ```
 
-#### 2.9.2. 云贴图
+#### 云贴图
 
 - 云贴图：改变云贴图，可以改变云的效果。
 
@@ -560,7 +560,7 @@ this.sky.cloudEnable = false;
 this.sky.cloudTextureAssetByID = "";
 ```
 
-#### 2.9.3. 云透明度
+#### 云透明度
 
 - 云透明度：云的透明效果，范围为0-1。透明度越小，云越透明；透明度越大，云越明显。
 
@@ -579,7 +579,7 @@ this.sky.cloudTextureAssetByID = "";
 this.sky.cloudOpacity = 1;
 ```
 
-#### 2.9.4. 云颜色
+#### 云颜色
 
 - 云颜色：云的颜色。
 
@@ -591,7 +591,7 @@ this.sky.cloudOpacity = 1;
 //设置云的颜色
 this.sky.cloudTint = new Type.LinearColor(255, 0, 0);
 ```
-#### 2.9.5. 云密度
+#### 云密度
 
 - 云密度：云在天空中显示的密度范围，范围为0-1。密度越大，云的样式就越”稀疏“；密度越小，云的样式就越“紧凑”。
 
@@ -610,7 +610,7 @@ this.sky.cloudTint = new Type.LinearColor(255, 0, 0);
 this.sky.cloudDensity = 1;
 ```
 
-#### 2.9.6. 云速度
+#### 云速度
 
 - 云速度：云在天空中的移动速度，范围为0-10。速度越大，云的移动速度就越快；速度越小，云的移动速度就越慢。
 
@@ -629,4 +629,4 @@ this.sky.cloudDensity = 1;
 this.sky.cloudSpeed = 1;
 ```
 
-## 3. 如何制作生成天空球贴图？
+## 如何制作生成天空球贴图？
