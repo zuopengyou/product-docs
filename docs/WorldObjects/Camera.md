@@ -178,26 +178,26 @@
 * 脚本示例：
 
 ```TypeScript
-//按下射击摇杆进入瞄准状态
-fireButton.onJoyStickDown.add(() => {
-    //将视场调小，来模拟瞄准镜中的画面
-    Gameplay.getCurrentPlayer().character.cameraSystem.cameraFOV=70
-    //将将摄像机位置向前移动，使画面中不再出现狙击枪
-    let cameradata=Gameplay.getCurrentPlayer().character.cameraSystem.cameraRelativeTransform
-    cameradata.location.x+=100
-    Gameplay.getCurrentPlayer().character.cameraSystem.cameraRelativeTransform =cameradata
-    //将射击摇杆的灵敏度调低，防止瞄准状态时调整瞄准方向过于灵敏
-    fireButton.inputScale=(new Type.Vector2(0.04, 0.03))
-});
-
-//松开射击摇杆发射子弹，并恢复到原有的TPS射击视角
-fireButton.onJoyStickUp.add(() => {
-    Events.dispatchLocal("FIRE_CLICK_Gun");
-    //恢复预置的TPS射击视角，switchCameraMode会重置摄像机位置和视场为TPS射击视角的默认值
-    Gameplay.getCurrentPlayer().character.cameraSystem.switchCameraMode(5,true)
-    //恢复原有的射击摇杆灵敏度
-    fireButton.inputScale=(new Type.Vector2(0.08, 0.06))
-});
+		//按下射击摇杆进入瞄准状态
+		fireButton.onJoyStickDown.add(() => {
+			//将视场调小，来模拟瞄准镜中的画面
+			Camera.currentCamera.fov=70
+			//将将摄像机位置向前移动，使画面中不再出现狙击枪
+			let cameradata=Camera.currentCamera.localTransform
+			cameradata.position.x+=100
+			Camera.currentCamera.localTransform=cameradata
+			//将射击摇杆的灵敏度调低，防止瞄准状态时调整瞄准方向过于灵敏
+			fireButton.inputScale=(new Vector2(0.04, 0.03))
+		});
+		
+		//松开射击摇杆发射子弹，并恢复到原有的TPS射击视角
+		fireButton.onJoyStickUp.add(() => {
+			Event.dispatchToLocal("FIRE_CLICK_Gun");
+			//恢复预置的TPS射击视角，重置摄像机位置和视场
+			Camera.currentCamera.preset=4
+			//恢复原有的射击摇杆灵敏度
+			fireButton.inputScale=(new Vector2(0.08, 0.06))
+		});
 ```
 
 * 实现效果：<video controls src="https://cdn.233xyx.com/1684475955078_130.mp4"></video>
