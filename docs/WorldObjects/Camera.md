@@ -200,7 +200,7 @@
 		});
 ```
 
-* 实现效果：<video controls src="https://cdn.233xyx.com/1684475955078_130.mp4"></video>
+* 实现效果示例：<video controls src="https://cdn.233xyx.com/1684475955078_130.mp4"></video>
 
 ### 示例2：调整摄像机距离实现双指放缩功能
 
@@ -208,13 +208,11 @@
 * 脚本示例：
 
 ```TypeScript
-@Core.Class
-export default class NewScript extends Core.Script {
-    Character: Gameplay.Character;
-    touch: Gameplay.TouchInput;
+@Component
+export default class NewScript extends Script {
+    touch: TouchInput;
     touchNum: number;
     oldPointSize: number;
-    cameradata: Transform
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
         this.setFinger()
@@ -225,15 +223,13 @@ export default class NewScript extends Core.Script {
     private setFinger() {
 
         // 找到UI对象DefaultUI，及其内部的UI控件
-        let UI1 = UI.UIObject.findGameObjectByTag("DefaultUI")[0] as UI.UIObject;
-        const touchpad = UI1.uiWidgetBase.findChildByPath('Canvas/TouchPadDesigner') as UI.TouchPad
-        const canvas = UI1.uiWidgetBase.findChildByPath('Canvas') as UI.Canvas
+        let UI1 = UIObject.findGameObjectsByTag("DefaultUI")[0] as UIObject;
+        const touchpad = UI1.uiWidgetBase.findChildByPath('Canvas/TouchPadDesigner') as TouchPad
+        const canvas = UI1.uiWidgetBase.findChildByPath('Canvas') as Canvas
 
         
         // 双指缩放镜头视角
-        this.touch = new Gameplay.TouchInput();
-        // 将当前玩家的控制器赋值给触摸器
-        this.touch.setPlayerController();
+        this.touch = new TouchInput();
         // 使用touchNum记录当前屏幕的触摸点数量
         this.touchNum=0
         
@@ -257,15 +253,14 @@ export default class NewScript extends Core.Script {
             let touchPoint = this.touch.getTouchVectorArray();
             let newPointSize = touchPoint[0].subtract(touchPoint[1]).length;
             //计算初始距离和最新距离之差
-            let char = Gameplay.getCurrentPlayer().character;
             let distance = newPointSize - this.oldPointSize;
             //使用length记录当前弹簧臂长度，也就是摄像机距离，加上或者减去两个触摸点初始距离和最新距离之差
-            let length = char.cameraSystem.targetArmLength;
+            let length = Camera.currentCamera.springArm.length
             length += (distance > 0 ? -1 : distance < 0 ? 1 : 0) * 1 * Math.abs(distance);
             length = Math.max(length, 60);
             length = Math.min(length, 500);
             //应用length记录的弹簧臂长度，并且用oldPointSize再次记录两个触摸点的初始距离
-            char.cameraSystem.targetArmLength = length;
+            Camera.currentCamera.springArm.length = length;
             this.oldPointSize = newPointSize;
         });
 
@@ -281,100 +276,50 @@ export default class NewScript extends Core.Script {
 }
 ```
 
-* 实现效果及项目文件（请发布后在手机上测试）：<video controls src="https://cdn.233xyx.com/1684475954184_475.mp4"></video>
-
-[点击下载](https://cdn.233xyx.com/1684475955108_755.7z)
+* 实现效果示例（请发布后在手机上测试）：<video controls src="https://cdn.233xyx.com/1684475954184_475.mp4"></video>
 
 ### 示例3：动态切换摄像机的位置模式和固定模式
 
-* 目前用法较繁琐，预计在026/027版本优化
 * 脚本示例：
 
 ```TypeScript
 import DefaultUI_generate from "./ui-generate/DefaultUI_generate";
 
-@UI.UICallOnly('')
+@UIBind('')
 export default class UIDefault extends DefaultUI_generate {
-    Character: Gameplay.Character;
-
-    oldCameraSystemRelativeTransform: Type.Transform;
-    oldCameraSystemWorldTransform: Type.Transform;
-    oldCameraRelativeTransform: Type.Transform;
-    oldCameraWorldTransform: Type.Transform;
 
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
 
-        //找到对应的跳跃按钮
-        const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
-        const touchpad = this.uiWidgetBase.findChildByPath('Canvas/TouchPadDesigner') as UI.TouchPad
-
-        //点击跳跃按钮,异步获取人物后执行跳跃
-        JumpBtn.onPressed.add(()=>{
-            if (this.Character) {
-                this.Character.jump();
-            } else {
-                Gameplay.asyncGetCurrentPlayer().then((player) => {
-                    this.Character = player.character;
-                    //角色执行跳跃功能
-                    this.Character.jump();
-                });
-            }
-        })  
 
         //LocationFixed
         this.mStaleButton.onClicked.add(() => {
-            Gameplay.asyncGetCurrentPlayer().then((player) => {
-                this.Character = player.character;
-                this.oldCameraSystemRelativeTransform=this.Character.cameraSystem.cameraSystemRelativeTransform;
-                this.oldCameraSystemWorldTransform=this.Character.cameraSystem.cameraSystemWorldTransform;
-                this.Character.cameraSystem.cameraLocationMode=0;
-                this.Character.cameraSystem.cameraSystemWorldTransform=this.oldCameraSystemWorldTransform;
-            })
+			Camera.currentCamera.positionMode=0
         })
         //LocationFollow
-        this.mStaleButton_1.onClicked.add(() => {
-            Gameplay.asyncGetCurrentPlayer().then((player) => {
-                this.Character = player.character;
-                this.Character.cameraSystem.cameraLocationMode=1;
-                this.Character.cameraSystem.cameraSystemRelativeTransform=this.oldCameraSystemRelativeTransform;
-        });})
+		this.mStaleButton_1.onClicked.add(() => {
+			Camera.currentCamera.positionMode=1
+        })
+
         //RotationFixed
         this.mStaleButton_2.onClicked.add(() => {
-            Gameplay.asyncGetCurrentPlayer().then((player) => {
-                this.Character = player.character;
-                this.oldCameraWorldTransform=this.Character.cameraSystem.cameraWorldTransform;
-                this.oldCameraWorldTransform.location=this.Character.cameraSystem.cameraSystemWorldTransform.location;
-                this.Character.cameraSystem.cameraRotationMode=0;
-                this.Character.cameraSystem.setOverrideCameraRotation(this.oldCameraWorldTransform.rotation)
-                this.Character.cameraSystem.cameraSystemWorldTransform=this.oldCameraWorldTransform;
-        });})
+			Camera.currentCamera.rotationMode=0
+		})
         //RotationFollow
         this.mStaleButton_3.onClicked.add(() => {
-            Gameplay.asyncGetCurrentPlayer().then((player) => {
-                this.Character = player.character;
-                this.oldCameraSystemWorldTransform=this.Character.cameraSystem.cameraSystemWorldTransform;
-                this.Character.cameraSystem.cameraRotationMode=1;
-                this.Character.cameraSystem.setOverrideCameraRotation(this.oldCameraSystemWorldTransform.rotation)
-                this.oldCameraSystemWorldTransform.rotation=this.Character.getForwardVector().toRotation();
-                this.Character.cameraSystem.cameraSystemWorldTransform=this.oldCameraSystemWorldTransform;
-        });})
+			Camera.currentCamera.rotationMode=1
+		})
         //RotationControl
         this.mStaleButton_4.onClicked.add(() => {
-            Gameplay.asyncGetCurrentPlayer().then((player) => {
-                this.Character = player.character;
-                this.Character.cameraSystem.cameraRotationMode=2
-                this.Character.cameraSystem.resetOverrideCameraRotation()
-                
-        });})
+			Camera.currentCamera.rotationMode=2
+		})
     }
 }
 ```
 
-* 实现效果及项目文件：
+* 实现效果示例：
 
 <video controls src="https://cdn.233xyx.com/1684475954572_044.mp4"></video>
 
-[点击下载](https://cdn.233xyx.com/1684475954503_229.7z)
