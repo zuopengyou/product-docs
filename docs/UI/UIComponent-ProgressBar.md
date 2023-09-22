@@ -159,4 +159,4 @@ export default class DefaultUI extends UIScript {
 ```
 
 - 示意视频：<video controls src="https://cdn.233xyx.com/1681612440566_544.mp4"></video>
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334449_333.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/online/0v5klMrOtYWK1694916401072.7z)

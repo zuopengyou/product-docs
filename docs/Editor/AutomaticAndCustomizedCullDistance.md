@@ -35,9 +35,9 @@
 
 ```TypeScript
 //找到需要自定义裁剪距离的对象
-    let Obj1 = Core.GameObject.find("B48CE402") as Gameplay.Mesh
-    //设置自定义裁剪距离
-    Obj1.setCullDistance(1000);
-    //关闭自定义裁剪距离，启用自动的CullDistanceVolume功能
-    Obj1.setCullDistance(0);
+let Obj1 = GameObject.findGameObjectById("B48CE402") as Model
+//设置自定义裁剪距离
+Obj1.setCullDistance(1000);
+//关闭自定义裁剪距离，启用自动的CullDistanceVolume功能
+Obj1.setCullDistance(0);
 ```
