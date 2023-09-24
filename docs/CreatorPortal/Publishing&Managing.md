@@ -81,7 +81,7 @@
 
 打开233乐园扫一扫（可通过[233官网](https://www.233leyuan.com/)下载），找到需要测试的版本，点击【开始】拉起游戏。
 
-![img](https://arkimg.ark.online/1684027758538-8.gif)
+![CleanShot 2023-09-24 at 13.38.45@2x](https://arkimg.ark.online/CleanShot%202023-09-24%20at%2013.38.45@2x.webp)
 
 ## 游戏审核
 
