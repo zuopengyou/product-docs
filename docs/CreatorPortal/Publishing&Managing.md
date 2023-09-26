@@ -14,13 +14,9 @@
 
 ### 发布游戏工程
 
-打开编辑器菜单栏的【工程】菜单，并找到工程菜单中的【发布游戏】。
+打开编辑器菜单栏的【工程】菜单，并找到工程菜单中的【发布游戏】，在弹出的游戏发布窗口中，填写游戏相关信息，完成后点击发布。
 
-![img](https://arkimg.ark.online/1684027758538-10.webp)
-
-在弹出的游戏发布窗口中，填写游戏相关信息，完成后点击发布。
-
-![img](https://arkimg.ark.online/1684027758537-1.webp)
+![CleanShot 2023-09-25 at 16.36.13@2x](https://arkimg.ark.online/CleanShot%202023-09-25%20at%2016.36.13@2x.webp)
 
 - **游戏名称**：必填项，作为发布在 233 乐园的游戏名称；
 - **发布说明**：必填项，不会呈现给用户，仅供审核人员和创作者查看，可在版本列表查看；
@@ -31,7 +27,7 @@
 
 游戏上传后会跳转至[创作者中心](https://portal.ark.online/#/admin/game-list)，需要继续填写游戏详细信息，详见[游戏曝光运营](https://docs.ark.online/CreatorPortal/Promotion&Operation.html)。
 
-![img](https://arkimg.ark.online/1684027758537-2.webp)
+![CleanShot 2023-09-25 at 16.40.35@2x](https://arkimg.ark.online/CleanShot%202023-09-25%20at%2016.40.35@2x.webp)
 
 - **游戏名称**：作为 233 乐园的游戏名称，可在[创作者中心](https://portal.ark.online/#/admin/game-list)进行二次编辑；
 - **游戏图标**：展示在 233 乐园上的游戏图标；
@@ -42,7 +38,7 @@
 
 添加详情页素材（视频、五图、描述），可以同时多套素材在线，方便查看不同详情页转化。
 
-![CleanShot 2023-09-24 at 10.47.35@2x](https://arkimg.ark.online/CleanShot%202023-09-24%20at%2010.47.35@2x.webp)
+![CleanShot 2023-09-25 at 16.41.55@2x](https://arkimg.ark.online/CleanShot%202023-09-25%20at%2016.41.55@2x.webp)
 
 - **素材名称**：为本套素材命名，用于区分多套素材，如：二次元风格；
 - **游戏图片**：展示在详情页上，一般可上传4-5张图片，一般为游戏内截图介绍玩法等；
@@ -53,11 +49,11 @@
 
 打开编辑器菜单栏的【工程】-【更新已发布游戏】，选择线上对应游戏点击更新。
 
-![img](https://arkimg.ark.online/1684027758537-4.webp)
+![CleanShot 2023-09-25 at 16.43.18@2x](https://arkimg.ark.online/CleanShot%202023-09-25%20at%2016.43.18@2x.webp)
 
 跳转到创作者中心后，可继续修改游戏详细信息并提交审核，每次更新会自增一个游戏版本，可对游戏版本进行AB测试或手动上线（审核通过不会立即上线），详见[游戏版本管理](https://docs.ark.online/CreatorPortal/VersionManagement.html)。
 
-![CleanShot 2023-09-24 at 10.54.32@2x](https://arkimg.ark.online/CleanShot%202023-09-24%20at%2010.54.32@2x.webp)
+![CleanShot 2023-09-25 at 16.45.30@2x](https://arkimg.ark.online/CleanShot%202023-09-25%20at%2016.45.30@2x.webp)
 
 ## 游戏测试
 
@@ -75,7 +71,7 @@
 
 **方法二**：在对应游戏列表，点击【总览】-【游戏测试】打开需要测试游戏的二维码。
 
-![CleanShot 2023-09-24 at 11.14.07@2x](https://arkimg.ark.online/CleanShot%202023-09-24%20at%2011.14.07@2x.webp)
+![CleanShot 2023-09-25 at 16.46.35@2x](https://arkimg.ark.online/CleanShot%202023-09-25%20at%2016.46.35@2x.webp)
 
 ### 使用游戏二维码
 
