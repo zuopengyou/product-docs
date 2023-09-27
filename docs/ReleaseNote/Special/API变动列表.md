@@ -40,15 +40,15 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | HideInEditorState | -              | 删除     |
 | RepType           | -              | 删除     |
 
-#### [删除]<类>AbilityObject 能力对象
+#### [删除]`<类>`AbilityObject 能力对象
 
 - 删除低频使用对象【AbilityObject】
 
-#### [修改]<类>AbilityState 能力状态
+#### [修改]`<类>`AbilityState 能力状态
 
 - 删除低频使用对象【AbilityState】
 
-#### [删除]<类>AccountService 账号服务
+#### [删除]`<类>`AccountService 账号服务
 
 - 删除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。
 - 删除`getOpenId()`方法，去除OpenId概念，后续凡是与账号相关服务统一使用【Player】下`userId`属性。
@@ -58,7 +58,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | getInstance    | AccountService | MethodDeclaration | -              |            |          |
 | getOpenId      | AccountService | MethodDeclaration | -              |            |          |
 
-#### [修改]<类>AdsService 广告服务
+#### [修改]`<类>`AdsService 广告服务
 
 - 删除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。
 - 删除`show()`方法，替换为`showAd()`。
@@ -68,7 +68,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | getInstance    | AdsService | MethodDeclaration | -              |            |          |
 | show           | AdsService | MethodDeclaration | showAd         | AdsService |          |
 
-#### [修改]<类>AdvancedVehicle 高级轮式载具
+#### [修改]`<类>`AdvancedVehicle 高级轮式载具
 
 - 删除废弃方法`getGearRatio`，替换为`getGearData`。
 - 删除设置方法`setDriver`、`setSimulatePhysics`、`setSteeringInput`、`setThrottleInput`，替换为标准属性setter实现：`owner`、`simulatePhysics`、`steeringInput`、`throttleInput`。
@@ -81,11 +81,11 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | setSteeringInput   | AdvancedVehicle | MethodDeclaration | steeringInput   | AdvancedVehicle |          |
 | setThrottleInput   | AdvancedVehicle | MethodDeclaration | throttleInput   | AdvancedVehicle |          |
 
-#### [删除]<类>Anchor 空锚点
+#### [删除]`<类>`Anchor 空锚点
 
 - 因【Anchor】 空锚点运行态暂不具备任何特殊功能，且内部没有独立接口，删除对象。
 
-#### [修改]<类>AnalyticsService 分析服务
+#### [修改]`<类>`AnalyticsService 分析服务
 
 - 删除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。
 
@@ -93,7 +93,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | -------------- | ---------------- | ----------------- | -------------- | ---------- | -------- |
 | getInstance    | AnalyticsService | MethodDeclaration | -              |            |          |
 
-#### [删除]<类>AICharacter AI角色
+#### [删除]`<类>`AICharacter AI角色
 
 - 删除【AICharacter】类，统一使用【Character】类代表角色对象，消除角色对象之间的区别。
 - 删除内部私有`defaultV1EditorDataJson`属性。
@@ -105,7 +105,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | defaultV1EditorDataJson | AICharacter | PropertyDeclaration | -                      |            |          |
 | serverCalculateEnable   | AICharacter | SetAccessor         | complexMovementEnabled | Character  |          |
 
-#### [修改]<类>Animation 动画
+#### [修改]`<类>`Animation 动画
 
 - 027版本由【Animation】对象承担角色播放动画的功能
 - `onAnimFinished`事件委托替换为`onFinish`，去除时态。
@@ -117,7 +117,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | rate           | Animation  | GetAccessor    | speed          | Animation  |          |
 | rate           | Animation  | SetAccessor    | speed          | Animation  |          |
 
-#### [修改]<namespace>AssetUtil 函数
+#### [修改]`<namespace>`AssetUtil 函数
 
 - 命名空间【AssetUtil】改为类【AssetUtil】。
 - 删除冗余接口`isAssetExist()`和`isAssetLoaded()`，使用`assetLoaded()`代替。
@@ -131,14 +131,14 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | isAssetLoaded      | -          | FunctionDeclaration | assetLoaded        | AssetUtil  | 替换     |
 | loadAsset          | -          | FunctionDeclaration | asyncDownloadAsset | AssetUtil  | 替换     |
 
-#### [修改]<类>AvatarSettings 人物设置
+#### [修改]`<类>`AvatarSettings 人物设置
 
 | 接口名称（老）        | 属类（老）     | 接口类型（老）    | 接口名称（新）      | 属类（新）     | 修改方案 |
 | --------------------- | -------------- | ----------------- | ------------------- | -------------- | -------- |
 | enableOptimization    | AvatarSettings | MethodDeclaration | optimizationEnabled | AvatarSettings |          |
 | isOptimizationEnabled | AvatarSettings | MethodDeclaration | optimizationEnabled | AvatarSettings |          |
 
-#### [修改]<类>Base 基类
+#### [修改]`<类>`Base 基类
 
 - `guid`属性修改为`gameObjectId`
 - 删除对象的无效属性`useUpdate`（仅保留脚本的属性）。
@@ -158,7 +158,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | onStart          | Base       | MethodDeclaration | -              |            | 删除     |
 | onUpdate         | Base       | MethodDeclaration | -              |            | 删除     |
 
-#### [删除]<类>BlockingArea 禁行区
+#### [删除]`<类>`BlockingArea 禁行区
 
 - 原先的【BlockingArea】修改为【BlockingVolume】，空间区域统一使用Volume。
 - 删除失效属性`playerStateResponse`。
@@ -177,11 +177,11 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | setCurrentPlayerPassable    | BlockingArea | MethodDeclaration | addPassableTarget | BlockingVolume |          |
 | setNonCharacterActorCanPass | BlockingArea | MethodDeclaration | addPassableTarget | BlockingVolume |          |
 
-#### [删除]<类>BlockingAreaManager 禁行区管理
+#### [删除]`<类>`BlockingAreaManager 禁行区管理
 
 - 删除【BlockingAreaManager】，不再提供全局禁行区对象的管理类。 
 
-#### [删除]<类>CameraShake 摄像机抖动
+#### [删除]`<类>`CameraShake 摄像机抖动
 
 - 【CameraShake】类修改为【CameraShakeInfo】接口，迁移其中关于抖动数据的属性。
 - 【CameraShake】类中的`start`方法迁移至新增【Camera】对象中已静态方法的方式实现。
@@ -202,7 +202,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | zAmplitude     | CameraShake | MethodDeclaration | positionZAmplitude | CameraShakeInfo |          |
 | zFrequency     | CameraShake | MethodDeclaration | positionZFrequency | CameraShakeInfo |          |
 
-#### [删除]<类>CameraSystem 摄像机系统
+#### [删除]`<类>`CameraSystem 摄像机系统
 
 - 原有【CameraSystem】替换为【Camera】，将摄像机与玩家角色解耦并继承【GameObject】成为游戏对象。支持场景摆放，挂载卸载和动态生成销毁切换等操作，实现逻辑上的多相机。
 - 解构摄像机系统：弹簧臂+镜头，抽象`SpringArm`弹簧臂对象包裹原先实际操作弹簧臂的接口。每个`Camera`摄像机对象持有一个`SpringArm`弹簧臂对象。
@@ -320,7 +320,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | stopCameraShake                    | CameraSystem | MethodDeclaration   | stopShake                         | Camera     |          |
 | switchCameraMode                   | CameraSystem | MethodDeclaration   | preset                            | Camera     |          |
 
-#### [修改]<类>Character 角色
+#### [修改]`<类>`Character 角色
 
 - 为消除角色对象之间的区别，统一使用【Character】类代表场景中的角色对象，将原先【CharacterBase】的基础能力进行抽象并封装进【Character】。
 - 删除原先【Character】中的技能接口：`onSkillTriggered`等。使用【InputUtil】代替。
@@ -334,7 +334,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | onSkill4Triggered | Character  | GetAccessor    | onKeyUp        | InputUtil  |          |
 | onSkill5Triggered | Character  | GetAccessor    | onKeyUp        | InputUtil  |          |
 
-#### [删除]<类>CharacterBase 角色基类
+#### [删除]`<类>`CharacterBase 角色基类
 
 - 为消除角色对象之间的区别，统一使用【Character】类代表场景中的角色对象，将原先【CharacterBase】代表角色基础能力的接口迁移进【Character】。
 - 删除空中灵活度控制接口：`airControlBoostMultiplier`和`airControlBoostVelocityThreshold`，同时空中灵活度接口`airControl`替换为`driftControl`；空中减速接口`brakingDecelerationFalling`替换为`horizontalBrakingDecelerationFalling`。减低理解难度。
@@ -461,7 +461,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | swimmingDown                      | CharacterBase | MethodDeclaration   | swimDown                                                     | Character  |          |
 | swimmingUp                        | CharacterBase | MethodDeclaration   | swimUp                                                       | Character  |          |
 
-#### [修改]<类>ChatService 聊天服务
+#### [修改]`<类>`ChatService 聊天服务
 
 - 删除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。
 
@@ -469,7 +469,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | -------------- | ----------- | ----------------- | -------------- | ---------- | -------- |
 | getInstance    | ChatService | MethodDeclaration | -              |            |          |
 
-#### [修改]<namespace>Core 函数
+#### [修改]`<namespace>`Core 函数
 
 | 枚举名称（老） | 枚举名称（新） | 修改方案 |
 | -------------- | -------------- | -------- |
@@ -477,7 +477,7 @@ InputUtil.onKeyDown(Keys.Enter, async () => {
 | Function       | RemoteFunction | 替换     |
 | Type           | Serializable   | 替换     |
 
-#### [修改]<namespace>DataStorage 数据存储
+#### [修改]`<namespace>`DataStorage 数据存储
 
 - 命名空间【DataStorage】改为类【DataStorage】。
 - 数据存储统一使用一套接口，不再区分玩家数据和自定义数据。之前使用含player的玩家数据接口，key值统一为Player的userId。027版本使用新接口，传入userId作为key的参数即可获取之前的数据。
@@ -501,7 +501,7 @@ asyncRemoveCustomData和`asyncRemovePlayerData`合并，->`asyncRemoveData`。
 | setTemporaryStorage   | -          | FunctionDeclaration | setTemporaryStorage   | DataStorage | 替换     |
 | sizeOfData            | -          | FunctionDeclaration | getDataSize           | DataStorage | 替换     |
 
-#### [修改]<类>DataCenterC 数据中心客户端
+#### [修改]`<类>`DataCenterC 数据中心客户端
 
 - 去除getInstance，缩短调用链。
 
@@ -509,7 +509,7 @@ asyncRemoveCustomData和`asyncRemovePlayerData`合并，->`asyncRemoveData`。
 | -------------- | ----------- | ----------------- | -------------- | ---------- | -------- |
 | getInstance    | DataCenterC | MethodDeclaration | -              |            |          |
 
-#### [修改]<类>DataCenterS 数据中心服务端
+#### [修改]`<类>`DataCenterS 数据中心服务端
 
 - 去除getInstance，缩短调用链。
 - `onPlayerJoined`和`onPlayerLeft`事件委托替换为`onPlayerJoin`和`onPlayerLeave`，去除时态。
@@ -520,7 +520,7 @@ asyncRemoveCustomData和`asyncRemovePlayerData`合并，->`asyncRemoveData`。
 | onPlayerJoined | DataCenterS | PropertyDeclaration | onPlayerJoin   | DataCenterS |          |
 | onPlayerLeft   | DataCenterS | PropertyDeclaration | onPlayerLeave  | DataCenterS |          |
 
-#### [修改]<类>DebugService 聊天服务
+#### [修改]`<类>`DebugService 聊天服务
 
 - 删除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。
 
@@ -528,11 +528,11 @@ asyncRemoveCustomData和`asyncRemovePlayerData`合并，->`asyncRemoveData`。
 | -------------- | ------------ | ----------------- | -------------- | ---------- | -------- |
 | getInstance    | DebugService | MethodDeclaration | -              |            |          |
 
-#### [删除]<类>Decoration 挂件数据
+#### [删除]`<类>`Decoration 挂件数据
 
 - 删除【Decoration】挂件数据类，后续统一使用【CharacterDescription】挂件数据对象。
 
-#### [删除]<类>DirectionalLight 平行光
+#### [删除]`<类>`DirectionalLight 平行光
 
 - 删除【DirectionalLight】平行光，接口修改为静态调用形式迁移至新增对象【Lighting】。
 - 删除继承自【GameObject】的接口，【Lighting】不继承【GameObject】。
@@ -560,11 +560,11 @@ asyncRemoveCustomData和`asyncRemovePlayerData`合并，->`asyncRemoveData`。
 | temperatureEnable | DirectionalLight | SetAccessor    | temperatureEnabled | Lighting   |          |
 | yawAngle          | DirectionalLight | SetAccessor    | yawAngle           | Lighting   |          |
 
-#### [删除]<类>EffectLogical 区域效果
+#### [删除]`<类>`EffectLogical 区域效果
 
 - 删除低频使用对象【EffectLogical】
 
-#### [修改]<类>EffectService 特效服务
+#### [修改]`<类>`EffectService 特效服务
 
 - 删除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。成员函数全部封装成静态方法。
 - 删除`clearAll()`方法，屏蔽用户对内部对象池的操作带来的风险。
@@ -581,11 +581,11 @@ asyncRemoveCustomData和`asyncRemovePlayerData`合并，->`asyncRemoveData`。
 | stopAllEffect          | EffectService | MethodDeclaration | stopAll          | EffectService |          |
 | stopEffect             | EffectService | MethodDeclaration | stop             | EffectService |          |
 
-#### [删除]<类>Equipment 装备
+#### [删除]`<类>`Equipment 装备
 
 - 删除低频使用对象【Equipment】
 
-#### [修改]<命名空间>Events 函数
+#### [修改]`<命名空间>`Events 函数
 
 - 新增【Event】类，静态封装命名空间【Events】中与事件相关的方法。
 - `dispatchLocal`方法替换为`dispatchToLocal`，其余事件通信接口`addClientListener`、`addLocalListener`、`addServerListener`、`dispatchToAllClient`、`dispatchToClient`和`dispatchToServer`封装为类静态方法。
@@ -610,7 +610,7 @@ asyncRemoveCustomData和`asyncRemovePlayerData`合并，->`asyncRemoveData`。
 | dispatchToClient        | -          | FunctionDeclaration | dispatchToClient    | Event      |          |
 | dispatchToServer        | -          | FunctionDeclaration | dispatchToServer    | Event      |          |
 
-#### [删除]<类>ExponentialHeightFog 环境雾
+#### [删除]`<类>`ExponentialHeightFog 环境雾
 
 - **删除【ExponentialHeightFog】环境雾，接口修改为静态调用形式迁移至新增对象【Fog】**。因为环境雾并不支持叠加使用，场景中有且仅有一份生效，故027版本将**其放置到世界对象**以默认配置存在。
 - 删除继承自【GameObject】的接口，**【Fog】不继承【GameObject】**。
@@ -633,7 +633,7 @@ asyncRemoveCustomData和`asyncRemovePlayerData`合并，->`asyncRemoveData`。
 | fogMaxOpacity        | ExponentialHeightFog | SetAccessor       | maxOpacity        | Fog        |          |
 | setPresetByIndex     | ExponentialHeightFog | MethodDeclaration | setPreset         | Fog        |          |
 
-#### [删除]<类>FourFootStandard 四足外观
+#### [删除]`<类>`FourFootStandard 四足外观
 
 - 删除【SomatotypeBase】四足角色外观对象。统一使用【CharacterDescription】角色外观描述对象中的`base`对象进行四足角色的外观操作。
 - 删除设置/获取四足体型方法`getSomatotype`和`changeSomatotype`，后续四足外观只支持设置全身模型。
@@ -645,7 +645,7 @@ asyncRemoveCustomData和`asyncRemovePlayerData`合并，->`asyncRemoveData`。
 | getWholeBody     | FourFootStandard | MethodDeclaration | base.wholeBody | CharacterDescriptioon |          |
 | setWholeBody     | FourFootStandard | MethodDeclaration | base.wholeBody | CharacterDescriptioon |          |
 
-#### [修改]<类>GameObject 游戏对象
+#### [修改]`<类>`GameObject 游戏对象
 
 - 统一使用世界变换`worldTransform`和本地变换`localTransform`承载原先对象内Transform相关的属性和方法。每个【GameObject】持有`worldTransform`和`localTransform`。两个transform对象保存了【GameObject】的引用，所有针对`worldTransform`和`localTransform`的修改都会反应到对象身上。
 
@@ -746,7 +746,7 @@ let position = a.worldTransform.position；
 | spawn                   | GameObject | MethodDeclaration   | spawn                           | GameObject |          |
 | spawnGameObject         | GameObject | MethodDeclaration   | spawn                           | GameObject |          |
 
-#### [修改]<命名空间>Gameplay函数
+#### [修改]`<命名空间>`Gameplay函数
 
 | 接口名称（老）                | 接口名称（新）                | 属类（新）          | 修改方案 |
 | ----------------------------- | ----------------------------- | ------------------- | -------- |
@@ -784,7 +784,7 @@ let position = a.worldTransform.position；
 | spawnNewSound                 | -                             |                     |          |
 | sphereOverlap                 | sphereOverlap                 | QueryUtil           |          |
 
-#### [修改]<类>GameObjPool 游戏对象池
+#### [修改]`<类>`GameObjPool 游戏对象池
 
 - 删除getInstance，缩短调用链。
 - 删除获取对象池中对象方法`find`
@@ -794,7 +794,7 @@ let position = a.worldTransform.position；
 | find           | GameObjPool | MethodDeclaration | -              |            |          |
 | getInstance    | GameObjPool | MethodDeclaration | -              |            |          |
 
-#### [删除]<类>Group 缓动组
+#### [删除]`<类>`Group 缓动组
 
 - 删除【Group】对象，替换为【TweenGroup】。
 
@@ -806,7 +806,7 @@ let position = a.worldTransform.position；
 | removeAll      | Group      | MethodDeclaration | removeAll      | TweenGroup |          |
 | update         | Group      | MethodDeclaration | update         | TweenGroup |          |
 
-#### [修改]<类>HitResult 击中结果
+#### [修改]`<类>`HitResult 击中结果
 
 - 删除对象击中位置属性`location`，替换为position。
 
@@ -814,7 +814,7 @@ let position = a.worldTransform.position；
 | -------------- | ---------- | ------------------- | -------------- | ---------- | -------- |
 | location       | HitResult  | PropertyDeclaration | position       | HitResult  |          |
 
-#### [修改]<类>HotWeapon 热武器
+#### [修改]`<类>`HotWeapon 热武器
 
 - 合并委托接口，接口名称不再区分C/S端，根据调用端自动绑定。删除老委托接口，替换为新接口。
 
@@ -849,7 +849,7 @@ onUnequippedClient` & `onUnequippedServer` -> `onUnequip
 | setCurrentFireModel  | HotWeapon  | MethodDeclaration   | fireComponent.fireMode | HotWeaponFireComponent |          |
 | unequipHotWeapon     | HotWeapon  | MethodDeclaration   | unequip                | HotWeapon              |          |
 
-#### [修改]<类>HotWeaponAccuracyOfFireComponent 热武器瞄准组件
+#### [修改]`<类>`HotWeaponAccuracyOfFireComponent 热武器瞄准组件
 
 - 删除无效方法`bindOpenAccuracyOfFireComponentDelegates`，后续使用委托无需绑定。
 - 删除散射值变化委托`onCurrentDispersionChangedClient`，替换为`onCurrentDispersionChange`。
@@ -859,7 +859,7 @@ onUnequippedClient` & `onUnequippedServer` -> `onUnequip
 | bindOpenAccuracyOfFireComponentDelegates | HotWeaponAccuracyOfFireComponent | MethodDeclaration   | -                         |                                  |          |
 | onCurrentDispersionChangedClient         | HotWeaponAccuracyOfFireComponent | PropertyDeclaration | onCurrentDispersionChange | HotWeaponAccuracyOfFireComponent |          |
 
-#### [修改]<类>HotWeaponAimComponent 热武器瞄准组件
+#### [修改]`<类>`HotWeaponAimComponent 热武器瞄准组件
 
 - 删除失效属性瞄准镜UI种类`scopeTypeIndex`。
 - 合并委托接口，接口名称不再区分C/S端，根据调用端自动绑定。删除老委托接口，替换为新接口。
@@ -878,7 +878,7 @@ onAimEndClient` & `onAimEndServer` -> `onEndAim
 | onAimStartClient | HotWeaponAimComponent | PropertyDeclaration | onStartAim     | HotWeaponAimComponent |          |
 | onAimStartServer | HotWeaponAimComponent | PropertyDeclaration | onStartAim     | HotWeaponAimComponent |          |
 
-#### [修改]<类>HotWeaponFireComponent 热武器发射组件
+#### [修改]`<类>`HotWeaponFireComponent 热武器发射组件
 
 - Guid后续统一区分为对象ID：`gameobjectId`；资源ID：`assetId`；删除`animationGuid`，替换为`animationAssetId`。
 - 删除原属性current前缀，替换为新属性：`currentBulletSize` -> `currentBullet`；`currentClipSize` -> `clipSize`；`currentFireInterval` -> `fireInterval`；`currentFireModel` -> `fireMode`；`currentMultipleShot` -> `multipleShot`。
@@ -914,7 +914,7 @@ onStartFireClient` & `onStartFireServer `-> `onStartFire
 | onStartFireServer         | HotWeaponFireComponent | PropertyDeclaration | onStartFire         | HotWeaponFireComponent |          |
 | hadAnimationGuid          | HotWeaponFireComponent | MethodDeclaration   | -                   |                        |          |
 
-#### [修改]<类>HotWeaponLoadComponent 热武器上膛组件
+#### [修改]`<类>`HotWeaponLoadComponent 热武器上膛组件
 
 - Guid后续统一区分为对象ID：`gameobjectId`；资源ID：`assetId`；删除`animationGuid`，替换为`animationAssetId`。
 - 删除发射后上膛属性`loadAfterFireEnable`，替换为`loadAfterFireEnabled`。
@@ -938,7 +938,7 @@ onStartLoadClient` & `onStartLoadServer` -> `onStartLoad
 | onStartLoadServer   | HotWeaponLoadComponent | PropertyDeclaration | onStartLoad          | HotWeaponLoadComponent |          |
 | hadAnimationGuid    | HotWeaponLoadComponent | MethodDeclaration   | -                    |                        |          |
 
-#### [修改]<类>HotWeaponRecoilForceComponent 热武器后坐力组件
+#### [修改]`<类>`HotWeaponRecoilForceComponent 热武器后坐力组件
 
 - 合并委托接口，接口名称不再区分C/S端，根据调用端自动绑定。删除老委托接口，替换为新接口。
 
@@ -951,7 +951,7 @@ onStartRecoilForceClient` & `onStartRecoilForceServer` -> `onStartRecoil
 | onStartRecoilForceClient | HotWeaponRecoilForceComponent | PropertyDeclaration | onStartRecoil  | HotWeaponRecoilForceComponent |          |
 | onStartRecoilForceServer | HotWeaponRecoilForceComponent | PropertyDeclaration | onStartRecoil  | HotWeaponRecoilForceComponent |          |
 
-#### [修改]<类>HotWeaponReloadComponent 热武器换弹组件
+#### [修改]`<类>`HotWeaponReloadComponent 热武器换弹组件
 
 - Guid后续统一区分为对象ID：`gameobjectId`；资源ID：`assetId`；删除`animationGuid`，替换为`animationAssetId`。
 - 删除组件内动画ID判断方法`hadAnimationGuid`。
@@ -972,7 +972,7 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | onStartReloadServer | HotWeaponReloadComponent | PropertyDeclaration | onStartReload    | HotWeaponReloadComponent |          |
 | hadAnimationGuid    | HotWeaponReloadComponent | MethodDeclaration   | -                |                          |          |
 
-#### [删除]<类>Humanoid 非玩家角色
+#### [删除]`<类>`Humanoid 非玩家角色
 
 - 删除【Humanoid】类，统一使用【Character】类代表角色对象，消除角色对象之间的区别。
 - 删除`serverCalculateEnable`方法和`serverMovementEnable`属性，替换为【Character】类中新增属性`complexMovementEnabled`。`complexMovementEnabled`默认为true，开启移动组件计算。`complexMovementEnabled`为false，关闭移动组件计算。
@@ -982,7 +982,7 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | serverCalculateEnable | Humanoid   | SetAccessor    | complexMovementEnabled | Character  |          |
 | serverMovementEnable  | Humanoid   | SetAccessor    | complexMovementEnabled | Character  |          |
 
-#### [删除]<类>HumanoidV1 V1外观 
+#### [删除]`<类>`HumanoidV1 V1外观 
 
 - 删除【HumanoidV1】等相关的V1角色外观对象。统一使用【CharacterDescription】角色外观描述对象中的`base`对象进行V1角色的外观操作。
 - 删除设置姿态方法`changeSomatotype`和`getSomatotype`，后续V1外观只支持设置全身模型。
@@ -998,7 +998,7 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | getWholeBody     | HumanoidV1 | MethodDeclaration   | base.wholeBody | CharacterDescription |          |
 | setWholeBody     | HumanoidV1 | MethodDeclaration   | base.wholeBody | CharacterDescription |          |
 
-#### [删除]<类>HumanoidV1Part V1外观基类 
+#### [删除]`<类>`HumanoidV1Part V1外观基类 
 
 - 删除V1外观的所有类【HumanoidV1Part】【 HumanoidV1Hair】【HumanoidV1Trunk】【HumanoidV1Face】，后续V1外观只支持设置全身模型。
 
@@ -1007,19 +1007,19 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | 设置头发模型   | setMesh()  | MethodDeclaration | -              |            |          |
 | 获取头发模型   | getMesh()  | MethodDeclaration | -              |            |          |
 
-#### [删除]<类>HumanoidV1Hair V1头发 
+#### [删除]`<类>`HumanoidV1Hair V1头发 
 
 同HumanoidV1Part V1外观基类
 
-#### [删除]<类>HumanoidV1Trunk V1躯干 
+#### [删除]`<类>`HumanoidV1Trunk V1躯干 
 
 同HumanoidV1Part V1外观基类
 
-#### [删除]<类>HumanoidV1Face  V1脸 
+#### [删除]`<类>`HumanoidV1Face  V1脸 
 
 同HumanoidV1Part V1外观基类
 
-#### [删除]<类>HumanoidV2 V2外观 
+#### [删除]`<类>`HumanoidV2 V2外观 
 
 - 删除【HumanoidV2】等相关的V2角色外观对象。统一使用【CharacterDescription】角色外观描述对象中的`advance`对象进行V2角色的外观操作。
 
@@ -1063,7 +1063,7 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | setSomatotype          | HumanoidV2 | MethodDeclaration   | advance.base.characterSetting.somatotype             | CharacterDescription |          |
 | setSuit                | HumanoidV2 | MethodDeclaration   | -                                                    |                      |          |
 
-#### [删除]<类>HumanoidV2HairPart V2头发基类 
+#### [删除]`<类>`HumanoidV2HairPart V2头发基类 
 
 - 删除继承自【HumanoidV2HairPart】的相关的V2角色发型外观对象。统一使用【CharacterDescription】角色外观描述对象中的`frontHair`和`backHair`对象操作V2角色的发型。下表以`frontHair`为例：
 
@@ -1109,15 +1109,15 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | setHighlightMask             | HumanoidV2HairPart | MethodDeclaration | advance.hair.frontHair.highlight.highlightStyle              | CharacterDescription |          |
 | setMesh                      | HumanoidV2HairPart | MethodDeclaration | advance.hair.frontHair.style                                 | CharacterDescription |          |
 
-#### [删除]<类>HumanoidV2FrontHairPart V2前发 
+#### [删除]`<类>`HumanoidV2FrontHairPart V2前发 
 
 - 见HumanoidV2HairPart 
 
-#### [删除]<类>HumanoidV2BehindHairPart V2后发 
+#### [删除]`<类>`HumanoidV2BehindHairPart V2后发 
 
 - 见HumanoidV2HairPart 
 
-#### [删除]<类>HumanoidV2ClothPart V2服装基类 
+#### [删除]`<类>`HumanoidV2ClothPart V2服装基类 
 
 - 删除继承自【HumanoidV2ClothPart】的相关的V2角色服饰对象。统一使用【CharacterDescription】角色外观描述对象中的`upperCloth`、`lowerCloth`、`gloves`和`shoes`对象操作V2角色的服饰。下表以`upperCloth`为例：
 
@@ -1155,23 +1155,23 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | setPatternWidth     | HumanoidV2ClothPart | MethodDeclaration | advance.clothing.upperCloth.part[index].pattern.patternHorizontalScale | CharacterDescription |          |
 | setTexture          | HumanoidV2ClothPart | MethodDeclaration | advance.clothing.upperCloth.part[index].pattern.patternStyle | CharacterDescription |          |
 
-#### [删除]<类>HumanoidV2UpperClothPart V2上装 
+#### [删除]`<类>`HumanoidV2UpperClothPart V2上装 
 
 - 见HumanoidV2ClothPart 
 
-#### [删除]<类>HumanoidV2LowerClothPart V2 下装 
+#### [删除]`<类>`HumanoidV2LowerClothPart V2 下装 
 
 - 见HumanoidV2ClothPart 
 
-#### [删除]<类>HumanoidV2GlovesPart V2手套 
+#### [删除]`<类>`HumanoidV2GlovesPart V2手套 
 
 - 见HumanoidV2ClothPart 
 
-#### [删除]<类>HumanoidV2ShoePart V2鞋子 
+#### [删除]`<类>`HumanoidV2ShoePart V2鞋子 
 
 - 见HumanoidV2ClothPart 
 
-#### [删除]<类>HumanoidV2HeadPart V2头部 
+#### [删除]`<类>`HumanoidV2HeadPart V2头部 
 
 - 删除继承自【HumanoidV2HeadPart】的相关的V2角色头部外观对象。统一使用【CharacterDescription】角色外观描述对象中的妆容`makeup`和头部特征`headFeatures`对象操作V2角色的头部特征。
 
@@ -1248,23 +1248,23 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | setUpperEyeHighlightColor   | HumanoidV2HeadPart | MethodDeclaration | advance.makeup.coloredContacts.highlight.upperHighlightColor | CharacterDescription |          |
 | setUpperEyeHighlightTexture | HumanoidV2HeadPart | MethodDeclaration | advance.makeup.coloredContacts.highlight.upperHighlightStyle | CharacterDescription |          |
 
-#### [删除]<类>HumanoidV2UpperClothPart V2上装 
+#### [删除]`<类>`HumanoidV2UpperClothPart V2上装 
 
 - 见HumanoidV2ClothPart 
 
-#### [删除]<类>HumanoidV2LowerClothPart V2 下装 
+#### [删除]`<类>`HumanoidV2LowerClothPart V2 下装 
 
 - 见HumanoidV2ClothPart 
 
-#### [删除]<类>HumanoidV2GlovesPart V2手套 
+#### [删除]`<类>`HumanoidV2GlovesPart V2手套 
 
 - 见HumanoidV2ClothPart 
 
-#### [删除]<类>HumanoidV2ShoePart V2鞋子 
+#### [删除]`<类>`HumanoidV2ShoePart V2鞋子 
 
 - 见HumanoidV2ClothPart 
 
-#### [删除]<类>HumanoidV2HeadPart V2头部 
+#### [删除]`<类>`HumanoidV2HeadPart V2头部 
 
 - 删除继承自【HumanoidV2HeadPart】的相关的V2角色头部外观对象。统一使用【CharacterDescription】角色外观描述对象中的妆容`makeup`和头部特征`headFeatures`对象操作V2角色的头部特征。
 
@@ -1341,7 +1341,7 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | setUpperEyeHighlightColor   | HumanoidV2HeadPart | MethodDeclaration | advance.makeup.coloredContacts.highlight.upperHighlightColor | CharacterDescription |          |
 | setUpperEyeHighlightTexture | HumanoidV2HeadPart | MethodDeclaration | advance.makeup.coloredContacts.highlight.upperHighlightStyle | CharacterDescription |          |
 
-#### [删除]<类>HumanoidV2Shape V2 体型
+#### [删除]`<类>`HumanoidV2Shape V2 体型
 
 - 删除继承自【HumanoidV2Shape】的相关的V2角色身体外观对象。统一使用【CharacterDescription】角色外观描述对象中的`bodyFeatures`对象操作V2角色的身体特征。
 
@@ -1514,7 +1514,7 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | setWaistThickness            | HumanoidV2Shape | MethodDeclaration | advance.bodyFeatures.waist.waistFrontalScale                 | CharacterDescription |          |
 | setWaistWidth                | HumanoidV2Shape | MethodDeclaration | advance.bodyFeatures.waist.waistHorizontalScale              | CharacterDescription |          |
 
-#### [修改]<类>Interactor 交互物
+#### [修改]`<类>`Interactor 交互物
 
 - 删除交互姿态`interactiveSlot`，替换为为交互动画animationId，支持动画资源输入（兼容姿态输入）。
 - 优化交互物交互的延迟时间（仅动画资源输入可以生效，姿态资源还是有延迟）
@@ -1539,7 +1539,7 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | interactiveCharacter  | Interactor | MethodDeclaration   | getCurrentCharacter | Interactor |          |
 | startInteract         | Interactor | MethodDeclaration   | enter               | Interactor |          |
 
-#### [修改]<类>MessageChannelService 消息频道服务
+#### [修改]`<类>`MessageChannelService 消息频道服务
 
 - 删除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。
 
@@ -1547,7 +1547,7 @@ onStartReloadClient` & `onStartReloadServer` -> `onStartReload
 | -------------- | --------------------- | ----------------- | -------------- | ---------- | -------- |
 | getInstance    | MessageChannelService | MethodDeclaration | -              |            |          |
 
-#### [修改]<类>Mesh 模型
+#### [修改]`<类>`Mesh 模型
 
 - 删除【Mesh】模型对象，接口迁移至新增对象【Model】。
 - 删除无效属性`applyImpulseOnDamage`、`ignoreRadialForce`和`ignoreRadialImpulse`。
@@ -1591,11 +1591,11 @@ massInKg` -> `mass
 | setOutlineAndColor     | Mesh       | MethodDeclaration   | setOutline             | Model      |          |
 | setStaticMeshAsset     | Mesh       | MethodDeclaration   | setStaticMeshAsset     | Model      |          |
 
-#### [删除]<类>MobileSensor 移动传感器
+#### [删除]`<类>`MobileSensor 移动传感器
 
 - 删除低频使用对象【MobileSensor】移动传感器
 
-#### [删除]<类>NPC 非玩家角色
+#### [删除]`<类>`NPC 非玩家角色
 
 - 删除【NPC】类，统一使用【Character】类代表角色对象，消除角色对象之间的区别。
 - 删除NPC专属接口。
@@ -1605,7 +1605,7 @@ massInKg` -> `mass
 | setServerMovementEnable | NPC        | MethodDeclaration | complexMovementEnabled | Character  |          |
 | serverCalculateEnable   | NPC        | SetAccessor       | complexMovementEnabled | Character  |          |
 
-#### [删除]<类>Optimization 角色优化
+#### [删除]`<类>`Optimization 角色优化
 
 - 删除【Optimization】类，角色优化开关作为角色设置项，替换为【AvatarSettings】中`optimizationEnabled`。
 
@@ -1613,7 +1613,7 @@ massInKg` -> `mass
 | ------------------ | ------------ | ----------------- | ------------------- | -------------- | -------- |
 | enableOptimization | Optimization | MethodDeclaration | optimizationEnabled | AvatarSettings |          |
 
-#### [删除]<类>Particle 特效
+#### [删除]`<类>`Particle 特效
 
 - 原先的类名【Particle】修改为更贴近当前资源特效机制和功能的【Effect】。
 - 重新梳理停止特效的接口实现，`stop()`：停止但不销毁已发射粒子；`forceStop()`：停止且销毁粒子。
@@ -1647,7 +1647,7 @@ massInKg` -> `mass
 | setVectorRandom         | Particle   | MethodDeclaration   | setVectorRandom | Effect     | 替换     |
 | stop                    | Particle   | MethodDeclaration   | stop            | Effect     | 替换     |
 
-#### [修改]<类>Player 玩家
+#### [修改]`<类>`Player 玩家
 
 - 去除继承GameObject，独立存在
 - 迁移MW中散落其他命名空间的Player相关的接口进入Player类中作为静态函数使用
@@ -1672,7 +1672,7 @@ massInKg` -> `mass
 | removeNetworkReconnectListener  | Player     | MethodDeclaration | onPlayerReconnect  | Player     |          |
 | setCustomTimeDilation           | Player     | MethodDeclaration | customTimeDilation | Pawn       |          |
 
-#### [修改]<类>PostProcess 后处理
+#### [修改]`<类>`PostProcess 后处理
 
 - 因后处理对象并不支持叠加使用，场景中有且仅有一份生效，故027版本将**【PostProcess】后处理对象从资源库逻辑对象中删除，放置到世界对象**以默认配置存在。
 - 删除继承自【GameObject】的接口，【PostProcess】**不继承【GameObject】**。
@@ -1825,7 +1825,7 @@ massInKg` -> `mass
 | setToneToe                    | PostProcess | MethodDeclaration   | -              |             |          |
 | setToneWhiteClip              | PostProcess | MethodDeclaration   | -              |             |          |
 
-#### [修改]<类>PostProcessConfig 后处理配置类
+#### [修改]`<类>`PostProcessConfig 后处理配置类
 
 - 后续需要暴露更多复杂的后处理参数即在配置类中新增。
 
@@ -1862,7 +1862,7 @@ massInKg` -> `mass
 | toneToe                    | PostProcessConfig | PropertyDeclaration | -                |                   |          |
 | toneWhiteClip              | PostProcessConfig | PropertyDeclaration | -                |                   |          |
 
-#### [删除]<类>Projectile 投掷物
+#### [删除]`<类>`Projectile 投掷物
 
 - 删除【Projectile】投掷物，**替换为重构对象【ProjectileMovement】**投掷物移动功能类。
 - 删除继承自【GameObject】的接口，【ProjectileMovement】**不继承【GameObject】**。以后使用投掷功能不再需要生成【GameObject】，再挂载具体的对象。而是将它转化成带有投掷能力的对象自行发射。
@@ -1901,7 +1901,7 @@ massInKg` -> `mass
 | pause                    | Projectile | MethodDeclaration   | pause               | ProjectileMovement |          |
 | resume                   | Projectile | MethodDeclaration   | resume              | ProjectileMovement |          |
 
-#### [删除]<类>ProjectileLauncher 投掷物发射器
+#### [删除]`<类>`ProjectileLauncher 投掷物发射器
 
 - 删除【ProjectileLauncher】投掷发射器，**替换为重构对象【ObjectLauncher】对象发射器**。
 - **删除对象中过度设计**的接口：
@@ -1980,7 +1980,7 @@ massInKg` -> `mass
 | spawnProjectileInstanceLaunchToTarget | ProjectileLauncher | MethodDeclaration   | spawnProjectileInstanceLaunchToTarget | ObjectLauncher |          |
 | unbindPlayer                          | ProjectileLauncher | MethodDeclaration   | -                                     |                |          |
 
-#### [修改]<类>PurchaseService 购买服务
+#### [修改]`<类>`PurchaseService 购买服务
 
 - 删除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。
 
@@ -1988,7 +1988,7 @@ massInKg` -> `mass
 | -------------- | --------------- | ----------------- | -------------- | ---------- | -------- |
 | getInstance    | PurchaseService | MethodDeclaration | -              |            |          |
 
-#### [修改]<类>RoomService 购买服务
+#### [修改]`<类>`RoomService 购买服务
 
 - 删除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。
 - 删除无效和MGS相关接口，以及部分内部方法。
@@ -2008,7 +2008,7 @@ massInKg` -> `mass
 | registerMGSEventListener | RoomService | MethodDeclaration | -              |            |          |
 |                          |             | MethodDeclaration | -              |            |          |
 
-#### [修改]<类>RouteService 跳游戏服务
+#### [修改]`<类>`RouteService 跳游戏服务
 
 - 删除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。
 
@@ -2016,7 +2016,7 @@ massInKg` -> `mass
 | -------------- | ------------ | ----------------- | -------------- | ---------- | -------- |
 | getInstance    | RouteService | MethodDeclaration | -              |            |          |
 
-#### [删除]<类>SkyBox 天空盒
+#### [删除]`<类>`SkyBox 天空盒
 
 - **删除【SkyBox】天空盒，接口修改为静态调用形式迁移至新增对象【Skybox】**。因为天空盒并不支持叠加使用，场景中有且仅有一份生效，故027版本将**其放置到世界对象**以默认配置存在。
 - 删除继承自【GameObject】的接口，**【Skybox】不继承【GameObject】**。
@@ -2081,7 +2081,7 @@ massInKg` -> `mass
 | refresh                  | SkyBox     | MethodDeclaration | refresh                  | Skybox     |          |
 | reset                    | SkyBox     | MethodDeclaration | reset                    | Skybox     |          |
 
-#### [修改]<类>SkyLight 天空光
+#### [修改]`<类>`SkyLight 天空光
 
 - 删除【DirectionalLight】平行光，接口修改为静态调用形式迁移至新增对象【Lighting】。
 - 删除继承自【GameObject】的接口，【Lighting】不继承【GameObject】。
@@ -2094,7 +2094,7 @@ massInKg` -> `mass
 | intensity      | SkyLight   | SetAccessor    | brightness     | Lighting   |          |
 | lightColor     | SkyLight   | SetAccessor    | lightColor     | Lighting   |          |
 
-#### [删除]<类>SomatotypeBase 体型基类
+#### [删除]`<类>`SomatotypeBase 体型基类
 
 - 删除【SomatotypeBase】体型基类。内含的角色mesh描边接口使用新增的【Pawn】对象中代替。
 - 删除`enableOutline`和`postProcessObj`，因后处理对象已修改，接口无效。
@@ -2109,7 +2109,7 @@ massInKg` -> `mass
 | setOutline        | SomatotypeBase | MethodDeclaration   | setOutline            | Pawn       |          |
 | setOutlineAdvance | SomatotypeBase | MethodDeclaration   | setPostProcessOutline | Pawn       |          |
 
-#### [修改]<类>Sound 音效
+#### [修改]`<类>`Sound 音效
 
 - 新增音效衰减形状，支持球体，胶囊体，盒体和锥体。
 - 新增`attenuationShapeExtents`属性统一表示音效形状尺寸，删除原有尺寸相关接口。
@@ -2157,7 +2157,7 @@ massInKg` -> `mass
 | setAudioAssetByGuid  | Sound      | MethodDeclaration   | setSoundAsset           | Sound      |          |
 | setSoundSphere       | Sound      | MethodDeclaration   | -                       |            |          |
 
-#### [删除]<类>Sequence 缓动序列
+#### [删除]`<类>`Sequence 缓动序列
 
 删除【Sequence 】，替换为【TweenSequence】。
 
@@ -2165,7 +2165,7 @@ massInKg` -> `mass
 | -------------- | ---------- | ----------------- | -------------- | ------------- | -------- |
 | nextID         | Sequence   | MethodDeclaration | nextID         | TweenSequence |          |
 
-#### [修改]<类>SoundService 音效服务
+#### [修改]`<类>`SoundService 音效服务
 
 - 去除`getInstance()`，支持类名+方法名的调用方式，缩短调用链。
 - 删除`clearAll`方法，屏蔽用户对内部对象池的操作。
@@ -2176,7 +2176,7 @@ massInKg` -> `mass
 | get3DSoundGameObject | SoundService | MethodDeclaration | get3DSoundById | SoundService |          |
 | getInstance          | SoundService | MethodDeclaration | -              |              |          |
 
-#### [修改]<类>Stance 基础姿态
+#### [修改]`<类>`Stance 基础姿态
 
 删除内部接口`playInternal`和`stopInternal`。
 
@@ -2185,7 +2185,7 @@ massInKg` -> `mass
 | playInternal   | Stance     | -              |                |            |          |
 | stopInternal   | Stance     | -              |                |            |          |
 
-#### [修改]<类>SwimmingVolume 游泳区
+#### [修改]`<类>`SwimmingVolume 游泳区
 
 - 删除`inArea`方法，改为直接判断角色对象游泳状态
 - 新增`fluidFriction`流体摩擦力属性
@@ -2194,11 +2194,11 @@ massInKg` -> `mass
 | -------------- | -------------- | -------------- | -------------- | ---------- | -------- |
 | inArea         | SwimmingVolume | -              |                |            | 修改方案 |
 
-#### [修改]<命名空间>SelectUtil 选择工具
+#### [修改]`<命名空间>`SelectUtil 选择工具
 
 - 由命名空间修改为类对象，静态封装原有方法，类名仍采用【SelectUtil】。 
 
-#### [修改]<类>Trigger 触发器
+#### [修改]`<类>`Trigger 触发器
 
 - 新增`shape`属性替换切换形状和判断形状的接口，`shapeExtent`属性控制形状大小。
 - 新增`enabled`替换设置触发器激活状态的接口。
@@ -2213,7 +2213,7 @@ massInKg` -> `mass
 | setSphereRadius     | Trigger    | MethodDeclaration | shapeExtent    | Trigger    |          |
 | toggleTriggerShape  | Trigger    | MethodDeclaration | shape          | Trigger    |          |
 
-#### [修改]<类>UIWidget 世界UI
+#### [修改]`<类>`UIWidget 世界UI
 
 | 接口名称（老）   | 属类（老） | 接口类型（老）    | 接口名称（新）    | 属类（新） | 修改方案 |
 | ---------------- | ---------- | ----------------- | ----------------- | ---------- | -------- |
@@ -2225,11 +2225,11 @@ massInKg` -> `mass
 | setUI            | UIWidget   | MethodDeclaration | setTargetUIWidget | UIWidget   |          |
 | setUIbyGUID      | UIWidget   | MethodDeclaration | setUIbyID         | UIWidget   |          |
 
-#### [删除]<类>VehicleCameraSetting 载具摄像机配置
+#### [删除]`<类>`VehicleCameraSetting 载具摄像机配置
 
 因摄像机系统重构，删除了摄像机配置相关接口，【VehicleCameraSetting】 载具摄像机配置同样进行删除处理。
 
-#### [新增]<类>Navigation 寻路（导航）
+#### [新增]`<类>`Navigation 寻路（导航）
 
 - 新增【Navigation】寻路类，承载寻路相关接口。
 
@@ -2240,17 +2240,17 @@ massInKg` -> `mass
 | 寻路移动 | Gameplay.moveTo()      | Navigation.navigateTo()     | 使用新接口代替 |
 | 导航停止 | Gameplay.clearMoveTo() | Navigation.stopNavigateTo() | 使用新接口代替 |
 
-#### [新增]<类>Pawn 控制对象
+#### [新增]`<类>`Pawn 控制对象
 
 - 新增【Pawn】对象，保留后续可操作对象增加的扩展性，便于Player与Character解耦。
 - pass描边和后处理描边由其他命名空间下沉至具体Pawn对象中，直接调用。
 - 自定义时间膨胀由Player迁移至Pawn对象中，方便独立生效。
 
-#### [删除]<类>PlayerStart 初生点
+#### [删除]`<类>`PlayerStart 初生点
 
-#### [删除]<类>Prefab 预制体
+#### [删除]`<类>`Prefab 预制体
 
-#### [废弃]<类>UGCService UGC服务
+#### [废弃]`<类>`UGCService UGC服务
 
 删除外部内部使用对象【UGCService】
 
