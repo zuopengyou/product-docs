@@ -1,4 +1,4 @@
-# UI 性能与优化
+# UI表现与性能优化
 
 **阅读本文大概需要 10 分钟**
 
@@ -89,9 +89,9 @@ OPPOA57 屏幕分辨率为：1280x720，而下面两张图原始分辨率分别�
 示例：
 
 ```ts
-const btn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.Button
+const btn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as Button
 //隐藏 并且在布局中不占用大小，节省性能
-btn.visibility= UI.SlateVisibility.Collapsed
+btn.visibility= SlateVisibility.Collapsed
 //隐藏 并且在布局中占用大小
-btn.visibility= UI.SlateVisibility.Hidden
+btn.visibility= SlateVisibility.Hidden
 ```
