@@ -97,7 +97,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '按键绑定（针对PC端）及预设UI',
             link: '/UI/KeybindsandPremadeUI.md'
           },
-          { text: 'UI性能与优化', link: '/UI/UIPerformanceandOptimization.md' },
+          { text: 'UI表现与性能优化', link: '/UI/UIPerformanceandOptimization.md' },
           {
             text: 'UI脚本的生命周期及事件说明',
             link: '/UI/LifeCycleandEventDescriptionofUIScripts.md'
