@@ -3,6 +3,9 @@
 ### [‌⁡⁤⁤⁢⁣⁤‍‌⁢﻿⁤‌⁣⁣‍﻿‍﻿⁡⁢⁢‍‬‬‬⁡‌﻿⁢﻿⁡⁡⁡﻿﻿⁤⁤⁣⁡⁣027版本更新手册](https://docs.ark.online/ReleaseNote/Special/027版本更新手册.html) 
 
 ------
+## [v0.26.0.5](https://docs.ark.online/ReleaseNote/v0.26.0.5.html)
+
+## [v0.26.0.4](https://docs.ark.online/ReleaseNote/v0.26.0.4.html)
 
 ## [v0.26.0.2](https://docs.ark.online/ReleaseNote/v0.26.0.2.html)
 
