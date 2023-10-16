@@ -337,43 +337,47 @@ export default class UIDefault extends DefaultUI_generate {
 ### 示例4：实现多摄像机之间的切换
 * 上文有提到，除了【对象管理器-世界对象】中有一个自带的无法被删除的摄像机对象，我们还可以从【资源库-游戏功能对象】中拖出或者在脚本中动态创建任意个摄像机对象，下面我们演示一下如何使用switch接口在多个摄像机对象之间自由切换
 * 使用switch切换摄像机时，可以实现瞬间切换到新的摄像机，也可以使用编辑器提供的多种混合效果，完成匀速/变速的运镜效果
-* 各个摄像机对象及其弹簧臂的属性值都是独立的，当想要实现两种甚至多种摄像机效果时，可以考虑两种制作思路：
-  * 如果各种摄像机效果差别不大，我们可以
+* 提示：各个摄像机对象及其弹簧臂的属性值都是独立的，如果想在游戏中实现多种摄像机效果变换时，可以考虑两种制作思路
+  * 如果各种摄像机效果差别不大，我们可以使用同一个摄像机对象，通过修改属性来实现效果的切换
+  * 如果各种摄像机效果差别较大，需要调整较多属性，我们可以创建多个摄像机对象，各个摄像机对象用于实现专门的效果，通过switch接口来实现效果的切换
 * 脚本示例：
 
 ```TypeScript
-import DefaultUI_generate from "./ui-generate/DefaultUI_generate";
-
-@UIBind('')
-export default class UIDefault extends DefaultUI_generate {
-
-    /** 仅在游戏时间对非模板实例调用一次 */
-    protected onStart() { 
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-
-
-        //LocationFixed
-        this.mStaleButton.onClicked.add(() => {
-			Camera.currentCamera.positionMode=0
-        })
-        //LocationFollow
-		this.mStaleButton_1.onClicked.add(() => {
-			Camera.currentCamera.positionMode=1
-        })
-
-        //RotationFixed
-        this.mStaleButton_2.onClicked.add(() => {
-			Camera.currentCamera.rotationMode=0
-		})
-        //RotationFollow
-        this.mStaleButton_3.onClicked.add(() => {
-			Camera.currentCamera.rotationMode=1
-		})
-        //RotationControl
-        this.mStaleButton_4.onClicked.add(() => {
-			Camera.currentCamera.rotationMode=2
-		})
-    }
-}
+ @Component
+ export default class Example_Camera_Switch extends Script {
+     // 当脚本被实例后，会在第一帧更新前调用此函数
+     protected onStart(): void {
+         // 下列代码仅在客户端执行
+         if(SystemUtil.isClient()) {
+             // 获取当前摄像机
+             let myCamera = Camera.currentCamera;
+             let curCameraIndex = -1;
+             // 在场景中随机创建5个摄像机
+             let cameraArray = new Array<Camera>();
+             for (let i = 0; i< 5;i++) {
+                 let camera = GameObject.spawn("Camera") as Camera;
+                 camera.worldTransform.position = new Vector(MathUtil.randomInt(-1000, 1000), MathUtil.randomInt(-1000, 1000),MathUtil.randomInt(0, 1000));
+                 camera.worldTransform.rotation = new Rotation(MathUtil.randomInt(-90, 90), MathUtil.randomInt(-30, 30),MathUtil.randomInt(-150, 150));
+                 cameraArray.push(camera);
+                 camera.onSwitchComplete.add(() => {
+                     console.log("当前摄像机序号 " + i);
+                     curCameraIndex = i;
+                 });
+             }
+             // 添加一个按键方法：按下键盘“1”，切换摄像机
+             InputUtil.onKeyDown(Keys.One, () => {
+                 console.log("Switch Camera");
+                 let newCamera = (curCameraIndex + 1) % 5;
+                 Camera.switch(cameraArray[newCamera], 5, CameraSwitchBlendFunction.Linear);
+             });
+             // 添加一个按键方法：按下键盘“2”，切换回默认摄像机
+             InputUtil.onKeyDown(Keys.Two, () => {
+                 console.log("Switch Default Camera");
+                 Camera.switch(myCamera);
+             });
+         }
+     }
+ }
 ```
+* 实现效果示例：
+* ![](https://cdn.233xyx.com/online/2o8uyunB3uhI1697435647673.gif)
