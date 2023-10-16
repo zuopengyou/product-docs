@@ -73,7 +73,7 @@
 - 固定朝向：摄像机固定朝向某一个方向。
 - 跟随朝向：摄像机跟随目标面朝方向。
 - 控制朝向：由UI控件-摄像机滑动区控制此摄像机弹簧臂相对旋转，动态设置的弹簧臂相对旋转不会生效。
-- 当开启使用控制器控制摄像机旋转时，与摄像机朝向模式=控制朝向在大多数情况下效果相同，并且调整这两个属性其中之一也会影响到另一条属性。
+- 请注意：当开启使用控制器控制摄像机旋转时，与摄像机朝向模式=控制朝向效果完全相同，并且调整这两个属性其中之一也会影响到另一条属性，此时弹簧臂的方向与弹簧臂相对旋转（springArm.localTransform.rotation）不是对应关系，而需要用控制器旋转（Player.getControllerRotation/Player.setControllerRotation ）来获取或者设置
 
 #### 固定摄像机高度
 - 固定摄像机在Z轴上的坐标，比如角色在跳跃或者上楼梯时，摄像机不会跟随角色改变高度，用于制作俯视角游戏。
@@ -286,8 +286,10 @@ export default class NewScript extends Script {
 
 * 实现效果示例（请发布后在手机上测试）：<video controls src="https://cdn.233xyx.com/1684475954184_475.mp4"></video>
 
-### 示例3：动态切换摄像机的位置模式和固定模式
-
+### 示例3：动态切换摄像机的位置模式和朝向模式
+* 可以通过调整positionMode和rotationMode这两条属性来动态动态切换摄像机的位置模式和固定模式
+* 也可以启用控制器操作摄像机useControllerRotation来切换摄像机的朝向模式
+* 当rotationMode=RotationControl时，此时弹簧臂的方向与弹簧臂相对旋转springArm.localTransform.rotation不是对应关系，而需要用控制器旋转（Player.getControllerRotation/Player.setControllerRotation ）来获取或者设置
 * 脚本示例：
 
 ```TypeScript
@@ -331,3 +333,51 @@ export default class UIDefault extends DefaultUI_generate {
 
 <video controls src="https://cdn.233xyx.com/1684475954572_044.mp4"></video>
 
+
+### 示例4：实现多摄像机之间的切换
+* 上文有提到，除了【对象管理器-世界对象】中有一个自带的无法被删除的摄像机对象，我们还可以从【资源库-游戏功能对象】中拖出或者在脚本中动态创建任意个摄像机对象，下面我们演示一下如何使用switch接口在多个摄像机对象之间自由切换
+* 使用switch切换摄像机时，可以实现瞬间切换到新的摄像机，也可以使用编辑器提供的多种混合效果，完成匀速/变速的运镜效果
+* 提示：各个摄像机对象及其弹簧臂的属性值都是独立的，如果想在游戏中实现多种摄像机效果变换时，可以考虑两种制作思路
+  * 如果各种摄像机效果差别不大，我们可以使用同一个摄像机对象，通过修改属性来实现效果的切换
+  * 如果各种摄像机效果差别较大，需要调整较多属性，我们可以创建多个摄像机对象，各个摄像机对象用于实现专门的效果，通过switch接口来实现效果的切换
+* 脚本示例：
+
+```TypeScript
+ @Component
+ export default class Example_Camera_Switch extends Script {
+     // 当脚本被实例后，会在第一帧更新前调用此函数
+     protected onStart(): void {
+         // 下列代码仅在客户端执行
+         if(SystemUtil.isClient()) {
+             // 获取当前摄像机
+             let myCamera = Camera.currentCamera;
+             let curCameraIndex = -1;
+             // 在场景中随机创建5个摄像机
+             let cameraArray = new Array<Camera>();
+             for (let i = 0; i< 5;i++) {
+                 let camera = GameObject.spawn("Camera") as Camera;
+                 camera.worldTransform.position = new Vector(MathUtil.randomInt(-1000, 1000), MathUtil.randomInt(-1000, 1000),MathUtil.randomInt(0, 1000));
+                 camera.worldTransform.rotation = new Rotation(MathUtil.randomInt(-90, 90), MathUtil.randomInt(-30, 30),MathUtil.randomInt(-150, 150));
+                 cameraArray.push(camera);
+                 camera.onSwitchComplete.add(() => {
+                     console.log("当前摄像机序号 " + i);
+                     curCameraIndex = i;
+                 });
+             }
+             // 添加一个按键方法：按下键盘“1”，切换摄像机
+             InputUtil.onKeyDown(Keys.One, () => {
+                 console.log("Switch Camera");
+                 let newCamera = (curCameraIndex + 1) % 5;
+                 Camera.switch(cameraArray[newCamera], 5, CameraSwitchBlendFunction.Linear);
+             });
+             // 添加一个按键方法：按下键盘“2”，切换回默认摄像机
+             InputUtil.onKeyDown(Keys.Two, () => {
+                 console.log("Switch Default Camera");
+                 Camera.switch(myCamera);
+             });
+         }
+     }
+ }
+```
+* 实现效果示例：
+* ![](https://cdn.233xyx.com/online/2o8uyunB3uhI1697435647673.gif)
