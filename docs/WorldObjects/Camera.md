@@ -288,7 +288,7 @@ export default class NewScript extends Script {
 
 ### 示例3：动态切换摄像机的位置模式和朝向模式
 * 可以通过调整positionMode和rotationMode这两条属性来动态动态切换摄像机的位置模式和固定模式
-* 也可以使用启用控制器操作摄像机的属性useControllerRotation来切换摄像机的朝向模式
+* 也可以启用控制器操作摄像机useControllerRotation来切换摄像机的朝向模式
 * 当rotationMode=RotationControl时，此时弹簧臂的方向与弹簧臂相对旋转springArm.localTransform.rotation不是对应关系，而需要用控制器旋转（Player.getControllerRotation/Player.setControllerRotation ）来获取或者设置
 * 脚本示例：
 
