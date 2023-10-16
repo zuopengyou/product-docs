@@ -286,8 +286,10 @@ export default class NewScript extends Script {
 
 * 实现效果示例（请发布后在手机上测试）：<video controls src="https://cdn.233xyx.com/1684475954184_475.mp4"></video>
 
-### 示例3：动态切换摄像机的位置模式和固定模式
-
+### 示例3：动态切换摄像机的位置模式和朝向模式
+* 可以通过调整positionMode和rotationMode这两条属性来动态动态切换摄像机的位置模式和固定模式
+* 也可以使用启用控制器操作摄像机的属性useControllerRotation来切换摄像机的朝向模式
+* 当rotationMode=RotationControl时，此时弹簧臂的方向与弹簧臂相对旋转springArm.localTransform.rotation不是对应关系，而需要用控制器旋转（Player.getControllerRotation/Player.setControllerRotation ）来获取或者设置
 * 脚本示例：
 
 ```TypeScript
@@ -331,3 +333,47 @@ export default class UIDefault extends DefaultUI_generate {
 
 <video controls src="https://cdn.233xyx.com/1684475954572_044.mp4"></video>
 
+
+### 示例4：实现多摄像机之间的切换
+* 上文有提到，除了【对象管理器-世界对象】中有一个自带的无法被删除的摄像机对象，我们还可以从【资源库-游戏功能对象】中拖出或者在脚本中动态创建任意个摄像机对象，下面我们演示一下如何使用switch接口在多个摄像机对象之间自由切换
+* 使用switch切换摄像机时，可以实现瞬间切换到新的摄像机，也可以使用编辑器提供的多种混合效果，完成匀速/变速的运镜效果
+* 各个摄像机对象及其弹簧臂的属性值都是独立的，当想要实现两种甚至多种摄像机效果时，可以考虑两种制作思路：
+** 如果各种摄像机效果差别不大，我们可以
+* 脚本示例：
+
+```TypeScript
+import DefaultUI_generate from "./ui-generate/DefaultUI_generate";
+
+@UIBind('')
+export default class UIDefault extends DefaultUI_generate {
+
+    /** 仅在游戏时间对非模板实例调用一次 */
+    protected onStart() { 
+        //设置能否每帧触发onUpdate
+        this.canUpdate = false;
+
+
+        //LocationFixed
+        this.mStaleButton.onClicked.add(() => {
+			Camera.currentCamera.positionMode=0
+        })
+        //LocationFollow
+		this.mStaleButton_1.onClicked.add(() => {
+			Camera.currentCamera.positionMode=1
+        })
+
+        //RotationFixed
+        this.mStaleButton_2.onClicked.add(() => {
+			Camera.currentCamera.rotationMode=0
+		})
+        //RotationFollow
+        this.mStaleButton_3.onClicked.add(() => {
+			Camera.currentCamera.rotationMode=1
+		})
+        //RotationControl
+        this.mStaleButton_4.onClicked.add(() => {
+			Camera.currentCamera.rotationMode=2
+		})
+    }
+}
+```
