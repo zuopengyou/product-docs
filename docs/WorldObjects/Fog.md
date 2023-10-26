@@ -20,7 +20,7 @@
 
 ![](https://cdn.233xyx.com/athena/online/e3d953c2cfb8474d9f7746d91bc98c88_12104555.webp)
 
-#### 2.1 是否启用
+### 是否启用
 
 - 属性说明：是否启用环境雾的效果，勾选后，场景中将显示雾效，取消勾选则场景中没有雾效。
 - 效果图：
@@ -70,7 +70,7 @@ export default class NewScript extends Core.Script {
 
 <video controls src="https://cdn.233xyx.com/1683197520943_860.mp4"></video>
 
-#### 2.2 环境雾预设
+### 环境雾预设
 
 - 属性说明：环境雾提供了便捷的预设效果，供用户选择。后续可能会拓展更多环境雾效果
 
@@ -200,7 +200,7 @@ export default class NewScript extends Core.Script {
 
 <video controls src="https://cdn.233xyx.com/1683255320520_589.mp4"></video>
 
-#### 2.3 雾密度
+### 雾密度
 
 - 属性说明：此为整体密度系数，是可视雾层的厚度。
 - 效果图：
@@ -214,7 +214,7 @@ export default class NewScript extends Core.Script {
 this.fog.fogDensity = 1;
 ```
 
-#### 2.4 雾高度
+### 雾高度
 
 - 属性说明：雾效的起始世界高度，也就是环境雾Z轴的位置，高度越低，雾的效果越淡，高度越高，雾的效果越浓。
 - 效果图：
@@ -228,7 +228,7 @@ this.fog.fogDensity = 1;
 this.fog.fogHeight = 5000;
 ```
 
-#### 2.5 雾高度衰弱
+### 雾高度衰弱
 
 - 属性说明：雾效从高到低，雾效效果逐渐变浓，该值是控制雾效的过度效果，值越小效果越柔和。
 - 效果图：
@@ -242,7 +242,7 @@ this.fog.fogHeight = 5000;
 this.fog.fogHeightFalloff = 0.7;
 ```
 
-#### 2.6 雾散射颜色
+### 雾散射颜色
 
 - 属性说明：设置雾的内散射颜色，就是雾的主要颜色。
 - 效果图：
@@ -256,7 +256,7 @@ this.fog.fogHeightFalloff = 0.7;
 this.fog.fogInscatteringColor = new Type.LinearColor(255, 0, 0);
 ```
 
-#### 2.7 雾最大透明度
+### 雾最大透明度
 
 - 属性说明：控制雾的最大不透明度。值为1时雾完全不透明，值为0时雾基本不可见。
 - 效果图：
@@ -270,7 +270,7 @@ this.fog.fogInscatteringColor = new Type.LinearColor(255, 0, 0);
 this.fog.fogMaxOpacity = 0.5;
 ```
 
-#### 2.8 起始距离
+### 起始距离
 
 - 属性说明：雾出现处与摄像机的距离。
 - 效果图：
@@ -284,7 +284,7 @@ this.fog.fogMaxOpacity = 0.5;
 this.fog.startDistance = 1000;
 ```
 
-#### 2.9 太阳光散射颜色
+### 太阳光散射颜色
 
 - 属性说明：设置在环境雾中太阳光的散射颜色，就是太阳光的主要颜色。
 - 效果图：
@@ -298,7 +298,7 @@ this.fog.startDistance = 1000;
 this.fog.directionalInscatteringColor = new Type.LinearColor(0, 137, 60);
 ```
 
-#### 2.10 太阳光散射指数
+### 太阳光散射指数
 
 - 属性说明：控制太阳光颜色影响的散射强弱，指数越强，散射的范围就越大。
 - 效果图：
@@ -312,7 +312,7 @@ this.fog.directionalInscatteringColor = new Type.LinearColor(0, 137, 60);
 this.fog.directionalInscatteringExponent = 20;
 ```
 
-#### 2.11 太阳光散射起始距离
+### 太阳光散射起始距离
 
 - 属性说明：太阳光散射的初始距离
 - 效果图：
@@ -326,7 +326,7 @@ this.fog.directionalInscatteringExponent = 20;
 this.fog.directionalInscatteringStartDistance = 20000;
 ```
 
-## 3. 如何使用环境雾？
+## 如何使用环境雾？
 
 - 最后我们就可以通过相关接口和代码动态调整环境雾的效果。
 - 示例工程：

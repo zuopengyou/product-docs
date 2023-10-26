@@ -86,7 +86,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-按钮', link: '/UI/UIComponent-Button.md' },
           { text: 'UI控件-遮罩按钮', link: '/UI/UIComponent-MaskedButton.md' },
           { text: 'UI控件-进度条', link: '/UI/UIComponent-ProgressBar.md' },
-          { text: 'UI控件-滚动框', link: '/UI/UIComponents-ScrollBar.md' },
+          { text: 'UI控件-滚动框', link: '/UI/UIComponents-ScrollBox.md' },
           { text: 'UI控件-摇杆', link: '/UI/UIWidget-Joystick.md' },
           { text: 'UI控件-摄像机滑动区', link: '/UI/UIWidget-Touchpad.md' },
           { text: 'UI控件-加载图', link: '/UI/UIComponent-LoadingIcon.md' },
@@ -97,7 +97,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '按键绑定（针对PC端）及预设UI',
             link: '/UI/KeybindsandPremadeUI.md'
           },
-          { text: 'UI性能与优化', link: '/UI/UIPerformanceandOptimization.md' },
+          { text: 'UI表现与性能优化', link: '/UI/UIPerformanceandOptimization.md' },
           {
             text: 'UI脚本的生命周期及事件说明',
             link: '/UI/LifeCycleandEventDescriptionofUIScripts.md'
@@ -160,7 +160,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '环境光', link: '/WorldObjects/AmbientLight.md' },
           { text: '太阳光', link: '/WorldObjects/Sunlight.md' },
           { text: '摄像机', link: '/WorldObjects/Camera.md' },
-          { text: '角色', link: '/WorldObjects/Characters.md' },
           { text: '后处理', link: '/WorldObjects/Post-Processing.md' },
           { text: '天空球', link: '/WorldObjects/Skybox.md' },
           { text: '环境雾', link: '/WorldObjects/Fog.md' }
@@ -170,7 +169,14 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         text: '角色',
         collapsible: true,
         collapsed: true,
-        items: []
+        items: [
+          { text: '角色基础功能', link: '/Role/RoleBasicAbility.md' },
+          { text: '形象与换装', link: '/Role/AppearanceAndReplacement.md' },
+          { text: '动画与姿态', link: '/Role/AnimationAndStane.md' },
+          { text: '角色插槽', link: '/Role/Slot.md' },
+          { text: '布娃娃功能', link: '/Role/Ragdoll.md' },
+          { text: '头顶名称', link: '/Role/OverHeadName.md' },
+        ]
       },
       {
         text: '脚本',
@@ -205,7 +211,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '资源加载与资源下载',
             link: '/Resource/assetdownloadandload.md'
           },
-          { text: '资源上传工具', link: '/Resource/AssetUpload.md' }
+          { text: '资源上传工具', link: '/Resource/AssetUpload.md' },
+          { text: '材质编辑器', link: '/Resource/MaterialEditor.md' }
         ]
       },
       {
@@ -252,9 +259,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: 'v0.27.0.0', link: '/ReleaseNote/v0.27.0.0.md' },
-          { text: 'v0.26.0.5', link: '/ReleaseNote/v0.26.0.5.md' },
-          { text: 'v0.26.0.4', link: '/ReleaseNote/v0.26.0.4.md' },
           { text: 'v0.26.0.2', link: '/ReleaseNote/v0.26.0.2.md' },
           { text: 'v0.26.0.1', link: '/ReleaseNote/v0.26.0.1.md' },
           { text: 'v0.26.0.0', link: '/ReleaseNote/v0.26.0.0.md' },
@@ -324,16 +328,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://portal.ark.online/'
       },
       {
-        text: '026 版本',
+        text: '027 版本',
         items: [
           {
-            text: '025 版本',
-            link: 'https://docs-025.ark.online/',
-            path: true
-          },
-          {
-            text: '027 版本',
-            link: 'https://docs-027.ark.online/',
+            text: '主版本',
+            link: 'https://docs.ark.online/',
             path: true
           }          
         ]
@@ -357,7 +356,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     outline: [2, 4],
     editLink: {
       pattern:
-        'https://github.com/prodigytech-doc/product-docs/tree/main/docs/:path',
+        'https://github.com/prodigytech-doc/product-docs/tree/release-027/docs/:path',
       text: '编辑'
     },
     feedback: 'https://github.com/prodigytech-doc/product-docs/',

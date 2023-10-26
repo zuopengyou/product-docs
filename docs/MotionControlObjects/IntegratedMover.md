@@ -73,20 +73,30 @@
 ## 如何创建运动器
 ### 在编辑器内创建
 在编辑器左侧【游戏功能对象】选项中，找到【运动功能对象】，点击其中的【运动器】，拖拽到主视口中想要实现运动效果的对象子级，即可完成创建。
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIfVMD8DhAuFXv26FiRaqhb.png)
+![](https://cdn.233xyx.com/online/LPXmVRubTX1f1693823407815.png)
 
 ### 动态创建运动器
 ```ts
-/*
-端通过spawnGameObject()动态创建运动器，需要注意被绑定的对象是双端状态时，需要在服务端创建运动器；被绑定的对象是客端户时，需要在对应的客户端进行创建运动器；
-运动器创建后，要绑定到需要运动的对象子级，来驱使父级对象进行运动。
-*/
-let og = Core.GameObject.find("3B158A4E") as Gameplay.StaticMesh;  //获取场景中需要运动的静态模型，需要确认该模型属性中已设置为非静态状态；
-let IntegratedMoverOg = Core.GameObject.spawnGameObject("PhysicsSports") as Gameplay.IntegratedMover;  //动态创建一个运动器功能对象
+@Component
+export default class NewScript2 extends Script {
 
-IntegratedMoverOg.attachToGameObject(og);   //将运动器绑定到需要运动的对象子级。
-IntegratedMoverOg.rotationSpeed = new Type.Vector(0,0,20);  //设置运动器的旋转运动效果，同样可以设置其他运动方式，详情可查看运动器API文档。
-IntegratedMoverOg.enable = true;            //启动运动器，运行工程查看运动效果。
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    protected onStart(): void {
+
+        /**
+         * 通过spawnGameObject()动态创建运动器，需要注意被绑定的对象是双端状态时，需要在服务端创建运动器；被绑定的对象是客端户时，需要在对应的客户端进行创建运动器；
+         *运动器创建后，要绑定到需要运动的对象子级，来驱使父级对象进行运动。
+         */
+
+        let ModelBox = mw.GameObject.findGameObjectById("28309E5C") as mw.Model;  //获取场景中需要运动的模型;
+        let IntegratedMoverMain = mw.GameObject.spawn("PhysicsSports") as mw.IntegratedMover;  //动态创建一个运动器功能对象
+
+        IntegratedMoverMain.parent = ModelBox;   //将运动器绑定到需要运动的对象子级。
+        IntegratedMoverMain.rotationSpeed = new mw.Vector(0, 0, 40);  //设置运动器的旋转运动效果，同样可以设置其他运动方式，详情可查看运动器API文档。
+        IntegratedMoverMain.enable = true;            //启动运动器，运行工程查看运动效果。
+
+    }
+}
 ```
 
 ## 运动器高级使用方法
@@ -104,25 +114,26 @@ IntegratedMoverOg.enable = true;            //启动运动器，运行工程查�
 ### 运动器回调事件使用方法
 
 ```ts
-@Core.Class
-export default class NewScript extends Core.Script {
+@Component
+export default class NewScript3 extends Script {
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    protected async onStart(): Promise`<void>` {
-        let IntegratedMover = this.gameObject as Gameplay.PhysicsIntegratedMover;
+    protected onStart(): void {
+
+        let IntegratedMoverMain = this.gameObject as mw.IntegratedMover;
 
         //运动器首次启动时回调事件，只执行一次。
-        IntegratedMover.onRotationEnable.add(() => {
+        IntegratedMoverMain.onRotationEnable.add(() => {
             console.log(`onRotationEnable`);
         });
 
         //运动器单程运动达到终点时的回调事件。
-        IntegratedMover.onRotationReturn.add(() => {
+        IntegratedMoverMain.onRotationReturn.add(() => {
             console.log(`onRotationReturn`);
         });
 
         //运动器单程运动返回起点时的回调事件。
-        IntegratedMover.onRotationStart.add(() => {
+        IntegratedMoverMain.onRotationStart.add(() => {
             console.log(`onRotationStart`);
         });
     }
@@ -132,17 +143,17 @@ export default class NewScript extends Core.Script {
 ### 运动器重置接口使用方法
 
 ```ts
-/**
-运动器重置接口moverReset()可以将正在运行的运动器重置回初始状态，并可以通过执行回调重新设置运动器参数
-*/
-let moverOG = this.gameObject as Gameplay.IntegratedMover;  // 指向场景中的运动器
-moverOG1.enable = true;  //启用运动器
-setTimeout(() => {
-    //5秒后将运动器重置，并关闭运动器
-    moverOG.moverReset(()=>{
-    moverOG.enable = false;
-    });
-}, 5000);
+        /**
+        *运动器重置接口moverReset()可以将正在运行的运动器重置回初始状态，并可以通过执行回调重新设置运动器参数
+        */
+        let IntegratedMoverMain = this.gameObject as mw.IntegratedMover;  // 指向场景中的运动器
+        IntegratedMoverMain.enable = true;  //启用运动器
+        setTimeout(() => {
+            //5秒后将运动器重置，并关闭运动器
+            IntegratedMoverMain.moverReset(() => {
+                IntegratedMoverMain.enable = false;
+            });
+        }, 5000);
 ```
 
 ## 机关预制体

@@ -55,14 +55,20 @@
 ### 冲量对象回调
 
 ```ts
-let impulse = this.gameObject as Gameplay.Impulse;   //获取场景中的冲量对象
+@Component
+export default class NewScript1 extends Script {
 
-/*
-  冲量对象提供了回调方法
-*/
-impulse.onImpulseEnter.add((chara:Gameplay.Character) => {
-   chara.playAnimation("95751",1,1);
-});
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    protected onStart(): void {
+
+        let impulseMain = this.gameObject as mw.Impulse; //指定冲量对象
+
+        //冲量对象提供了回调方法
+        impulseMain.onImpulseEnter.add((chara: mw.Character) => {
+            console.log(`角色进入冲量范围`);
+        })
+    }
+}
 ```
 <video controls src="https://cdn.233xyx.com/athena/online/85157428cd8e46438b57df1abb2fd79f.mp4"></video>
 
@@ -70,15 +76,25 @@ impulse.onImpulseEnter.add((chara:Gameplay.Character) => {
 ### 冲量对象动态开关
 
 ```ts
-/*
-冲量对象提供了setImpulseEnabled()，可以动态设置冲量力开关，合理的使用这一接口，可以实现类如炸弹爆炸的效果；
-*/
-let im = this.gameObject as Gameplay.Impulse;
-im.enable = false;  //将冲量对象设置为关闭状态
+@Component
+export default class NewScript1 extends Script {
 
-Events.addLocalListener("boom",()=>{
-    im.enable = true;  //将冲量对象设置为开启状态
-});
+    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
+    protected onStart(): void {
+
+        let impulseMain = this.gameObject as mw.Impulse; //指定冲量对象
+
+        /*
+        冲量对象提供了setImpulseEnabled()，可以动态设置冲量力开关，合理的使用这一接口，可以实现类如炸弹爆炸的效果；
+        */
+        impulseMain.enable = false;  //将冲量对象设置为关闭状态
+
+        //通过UI按钮发送一个本地事件，来触发冲量对象开启
+        Event.addLocalListener("boom", () => {
+            impulseMain.enable = true;  //将冲量对象设置为开启状态
+        });
+    }
+}
 ```
 <video controls src="https://cdn.233xyx.com/athena/online/78dad341f96d4f1187c185c53e8699f9.mp4"></video>
 ##

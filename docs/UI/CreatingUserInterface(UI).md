@@ -4,7 +4,7 @@
 
 ## 什么是游戏界面？
 
-**游戏界面**指游戏软件的用户界面，包括游戏画面中的按钮、动画、文字、声音、窗口等与游戏用户直接或间接接触的游戏设计元素。
+**游戏界面**指游戏软件的用户界面，包括游戏画面中的按钮、动画、文字、窗口等与游戏用户直接或间接接触的游戏设计元素。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6TY4Vc2JZhdHggVhlFS6Yd.png)
 
@@ -19,7 +19,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnpDtLBcodQqBpzQqxjwbeSm.png)
 
-##### UI 编辑器模块说明：
+### UI 编辑器模块说明：
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIm5u7XnzhGW34v31eqf49c.png)
 
@@ -66,7 +66,7 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnQnNwHToBWXzeIjU3tl7vgd.png)
 
-##### 
+
 
 ## 如何将 UI 添加到游戏场景中？
 
@@ -91,25 +91,31 @@
   - 例如实现一个跳跃按钮的简单逻辑：
 
 ```ts
-@UI.UICallOnly('')
-export default class UIDefault extends UI.UIBehavior {
-    character: Gameplay.Character;
-
-    /** 仅在游戏时间对非模板实例调用一次 */
-    protected onStart() { 
-        //设置能否每帧触发onUpdate
-        this.canUpdate = false;
-        //找到对应的跳跃按钮
-        const jumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
-        //点击跳跃按钮,异步获取人物后执行跳跃
+@UIBind('')
+export default class DefaultUI extends UIScript {
+	private character: Character;
+	
+	/** 仅在游戏时间对非模板实例调用一次 */
+  protected  onStart() {
+		//设置能否每帧触发onUpdate
+		this.canUpdate = false;
+		
+		//找到对应的跳跃按钮
+    const jumpBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_Jump') as Button
+		const attackBtn = this.uiWidgetBase.findChildByPath('RootCanvas/Button_Attack') as Button
+		
+		//点击跳跃按钮,异步获取人物后执行跳跃
         jumpBtn.onPressed.add(()=>{
-                Gameplay.asyncGetCurrentPlayer().then((player) => {
-                    this.character = player.character;
-                    //角色执行跳跃功能
-                    this.character.jump();
-                });
-        })  
-    }
+			if (this.character) {
+				this.character.jump();
+			} else {
+				Player.asyncGetLocalPlayer().then((player) => {
+					this.character = player.character;
+					//角色执行跳跃功能
+					this.character.jump();
+				});
+			}
+		})	
 }
 ```
 
@@ -121,18 +127,18 @@ export default class UIDefault extends UI.UIBehavior {
 
 ```ts
 //比如在UI脚本中创建一个自定义UI控件，并挂在UI对象的某个容器下
-@UI.UICallOnly('')
-export default class UIDefault extends UI.UIBehavior {
-    character: Gameplay.Character;
+@UIBind('')
+export default class DefaultUI extends UIScript {
+	  private character: Character;
     
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() {
         //通过路径找到按钮和容器
-        const canvas_1=this.uiWidgetBase.findChildByPath('RootCanvas') as UI.Canvas
-        const btn = this.uiWidgetBase.findChildByPath("RootCanvas/Button") as UI.Button; 
+        const canvas_1=this.uiWidgetBase.findChildByPath('RootCanvas') as Canvas
+        const btn = this.uiWidgetBase.findChildByPath("RootCanvas/Button") as Button; 
         //点击此按钮后打开某个自定义UI
         btn.onPressed.add(() => {
-            let uiprefab1= UI.createUIByName('/NewUI_1.ui') as UI.UserWidget
+            let uiprefab1= createUIByName('/NewUI_1.ui') as UserWidget
             canvas_1.addChild(uiprefab1)
         })
     }
@@ -144,13 +150,13 @@ export default class UIDefault extends UI.UIBehavior {
 
 ```ts
 //比如在普通脚本中实例化一个UI文件作为新的UI对象
-@Core.Class
-export default class NewScript extends Core.Script {
-
+@Component
+export default class NewScript extends Script {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
-        UI.createUIByName('/NewUI_1.ui').addToViewport(0)
+        createUIByName('/NewUI_1.ui').addToViewport(0)
     }
+}
 ```
 
 ## （进阶）如何使用 UI 脚本导出功能代替手动获取 UI 组件？
@@ -166,11 +172,11 @@ export default class NewScript extends Core.Script {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGNDeKEB6oA6FQhxVsxWcxd.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnRyKZ441cQ81iUbw5NkFswc.png)
+![](https://cdn.233xyx.com/online/iYj7xq6hI61u1693910384651.png)
 
-  - 完成导出后，请将UI文件所绑定的UI脚本修改为继承"UI文件名-generate"脚本，之后就可以在UI文件所绑定的UI脚本中直接使用UI控件，无需再逐个使用findChildByPath函数获取UI控件
+  - 完成导出后，请将UI文件所绑定的UI脚本修改为继承"UI文件名_generate"脚本，之后就可以在UI文件所绑定的UI脚本中直接使用UI控件，无需再逐个使用findChildByPath函数获取UI控件
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmKvJyUYoYNgMLjfXCgixTb.png)
+![](https://cdn.233xyx.com/online/6GY33B0xshQD1693910384651.png)
 
   - 注意请勿在"UI文件名-generate"脚本内编写逻辑，每次执行【导出所有脚本】会重新导出所有UI控件信息，并且覆盖掉当前ui-generate文件夹内的全部脚本
 
@@ -180,20 +186,20 @@ export default class NewScript extends Core.Script {
 ```ts
 ${Import}
 
- @UI.UICallOnly('${UIPath}')
- export default class ${ClassName}_Generate extends ${SuperClassName} {
-     ${Fileds}
+@UIBind('${UIPath}')
+export default class ${ClassName}_Generate extends ${SuperClassName} {
+	${Fileds}
  
-      /**
-      * before onStart called 
-      */
-    protected onAwake() {
-        ${Button_Start}this.${Button}.onClicked.add(()=>{
+	/**
+	* onStart 之前触发一次
+	*/
+	protected onAwake() {
+		${Button_Start}this.${Button}.onClicked.add(()=>{
              
         })${Button_End}
-    }
-     
- }
+	}
+	 
+}
 ```
 
 1. ${Import} ：用于自动化框架导入脚本引用
