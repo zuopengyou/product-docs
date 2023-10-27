@@ -97,7 +97,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '按键绑定（针对PC端）及预设UI',
             link: '/UI/KeybindsandPremadeUI.md'
           },
-          { text: 'UI表现与性能优化', link: '/UI/UIPerformanceandOptimization.md' },
+          {
+            text: 'UI表现与性能优化',
+            link: '/UI/UIPerformanceandOptimization.md'
+          },
           {
             text: 'UI脚本的生命周期及事件说明',
             link: '/UI/LifeCycleandEventDescriptionofUIScripts.md'
@@ -175,7 +178,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '动画与姿态', link: '/Role/AnimationAndStane.md' },
           { text: '角色插槽', link: '/Role/Slot.md' },
           { text: '布娃娃功能', link: '/Role/Ragdoll.md' },
-          { text: '头顶名称', link: '/Role/OverHeadName.md' },
+          { text: '头顶名称', link: '/Role/OverHeadName.md' }
         ]
       },
       {
@@ -275,36 +278,36 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         ]
       }
     ],
-    algolia: {
-      appId: 'I2PHYUBLCN',
-      apiKey: '62ee775311415d26549e0e30fef5aa38',
-      indexName: 'api-docs_prodigytech',
-      project: {
-        active: 'product-docs',
-        arr: [
-          {
-            key: 'product-docs',
-            facetFilters: ['tags:product-docs'],
-            name: '产品手册'
-          },
-          {
-            key: 'learning-docs',
-            facetFilters: ['tags:learning-docs'],
-            name: '教程文档'
-          },
-          {
-            key: 'api-docs',
-            facetFilters: ['tags:api-docs'],
-            name: 'API文档'
-          },
-          {
-            name: '论坛',
-            url: 'https://forum.ark.online/search.php?searchsubmit=yes&mod=forum&srchtxt='
-          }
-        ]
-      },
-      searchPage: 'https://search.ark.online/#/search'
-    },
+    // algolia: {
+    //   appId: 'I2PHYUBLCN',
+    //   apiKey: '62ee775311415d26549e0e30fef5aa38',
+    //   indexName: 'api-docs_prodigytech',
+    //   project: {
+    //     active: 'product-docs',
+    //     arr: [
+    //       {
+    //         key: 'product-docs',
+    //         facetFilters: ['tags:product-docs'],
+    //         name: '产品手册'
+    //       },
+    //       {
+    //         key: 'learning-docs',
+    //         facetFilters: ['tags:learning-docs'],
+    //         name: '教程文档'
+    //       },
+    //       {
+    //         key: 'api-docs',
+    //         facetFilters: ['tags:api-docs'],
+    //         name: 'API文档'
+    //       },
+    //       {
+    //         name: '论坛',
+    //         url: 'https://forum.ark.online/search.php?searchsubmit=yes&mod=forum&srchtxt='
+    //       }
+    //     ]
+    //   },
+    //   searchPage: 'https://search.ark.online/#/search'
+    // },
     siteTitle: '产品手册',
     nav: [
       {
@@ -334,7 +337,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '026 版本',
             link: 'https://docs-026.ark.online/',
             path: true
-          }          
+          }
         ]
       }
     ],
