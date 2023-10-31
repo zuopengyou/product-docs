@@ -279,36 +279,36 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         ]
       }
     ],
-    // algolia: {
-    //   appId: 'I2PHYUBLCN',
-    //   apiKey: '62ee775311415d26549e0e30fef5aa38',
-    //   indexName: 'api-docs_prodigytech',
-    //   project: {
-    //     active: 'product-docs',
-    //     arr: [
-    //       {
-    //         key: 'product-docs',
-    //         facetFilters: ['tags:product-docs'],
-    //         name: '产品手册'
-    //       },
-    //       {
-    //         key: 'learning-docs',
-    //         facetFilters: ['tags:learning-docs'],
-    //         name: '教程文档'
-    //       },
-    //       {
-    //         key: 'api-docs',
-    //         facetFilters: ['tags:api-docs'],
-    //         name: 'API文档'
-    //       },
-    //       {
-    //         name: '论坛',
-    //         url: 'https://forum.ark.online/search.php?searchsubmit=yes&mod=forum&srchtxt='
-    //       }
-    //     ]
-    //   },
-    //   searchPage: 'https://search.ark.online/#/search'
-    // },
+    algolia: {
+      appId: 'I2PHYUBLCN',
+      apiKey: '62ee775311415d26549e0e30fef5aa38',
+      indexName: 'api-docs_prodigytech',
+      project: {
+        active: 'product-docs',
+        arr: [
+          {
+            key: 'product-docs',
+            facetFilters: ['tags:product-docs'],
+            name: '产品手册'
+          },
+          {
+            key: 'learning-docs',
+            facetFilters: ['tags:learning-docs'],
+            name: '教程文档'
+          },
+          {
+            key: 'api-docs',
+            facetFilters: ['tags:api-docs'],
+            name: 'API文档'
+          },
+          {
+            name: '论坛',
+            url: 'https://forum.ark.online/search.php?searchsubmit=yes&mod=forum&srchtxt='
+          }
+        ]
+      },
+      searchPage: 'https://search.ark.online/#/search'
+    },
     siteTitle: '产品手册',
     nav: [
       {
