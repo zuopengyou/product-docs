@@ -178,7 +178,7 @@ weapon.loadComponent.animationAssetId = "80482";
 //设置上膛时间0.5s
 weapon.loadComponent.loadDuration = 0.5;
 //设置发射后上膛为true
-weapon.loadComponent.loadAfterFireEnable = true;
+weapon.loadComponent.loadAfterFireEnabled = true;
 ```
 
 ::: tip
@@ -267,7 +267,7 @@ weapon.recoilForceComponent.maxVerticalJitter = 0.8;
 ```TypeScript
 protected async onStart(): Promise<void> {
     if(SystemUtil.isServer()) {
-        let weapon = await GameObject.asyncFindGameObjectByIdGameObjectById("1CAD6351") as HotWeapon;
+        let weapon = await GameObject.asyncFindGameObjectById("1CAD6351") as HotWeapon;
         console.log("weapon gameObjectId " + weapon.gameObjectId);
     }
 }
@@ -374,7 +374,7 @@ export default class NewScript extends Script {
     @RemoteFunction(Server)
     private equip_Server(charaGameObjectId: string) {
         // 异步找到角色后将热武器对象装备到角色右手插槽上，并调用RPC函数去所有客户端进行装备
-        GameObject.asyncFindGameObjectByIdGameObjectById(charaGameObjectId).then((chara: Character) => {
+        GameObject.asyncFindGameObjectById(charaGameObjectId).then((chara: Character) => {
             this.weapon.equip(chara, HumanoidSlotType.RightHand);
             this.equip_Client(charagameObjectId);
         });
