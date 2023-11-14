@@ -140,7 +140,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '初生点', link: '/GameplayObjects/SpawnPoint.md' },
           { text: '对象发射器', link: '/GameplayObjects/ObjectLauncher.md' },
           { text: '禁行区', link: '/GameplayObjects/BlockingArea.md' },
-          { text: '点光源', link: '/GameplayObjects/PointLight.md' },
           { text: '音效', link: '/GameplayObjects/SoundEffect.md' },
           { text: '特效', link: '/GameplayObjects/Effects.md' }
         ]
