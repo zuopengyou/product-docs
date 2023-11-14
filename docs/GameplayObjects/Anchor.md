@@ -78,7 +78,7 @@
 
 ```TypeScript
 if(SystemUtil.isServer()) {
-    let anchor = await GameObject.asyncFind("3819014E") as GameObject;
+    let anchor = await GameObject.asyncFindGameObjectById("3819014E") as GameObject;
     console.log("anchor gameObjectId " + anchor.gameObjectId);
 }
 ```
