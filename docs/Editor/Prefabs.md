@@ -42,8 +42,8 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhsN5M3zEUZUHeA2sVbh4ld.png)
 
-- 编辑状态下可修改预制体引用对象的结构及属性（修改结构后将变成实例状态）
-
+- 编辑状态下可修改预制体引用对象的结构及属性（并不影响其他相同的预制体引用对象）
+  
 （修改整体结构）
 
 （修改任意节点的属性）
@@ -52,17 +52,10 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjzK50c1xyOmm4c4JXvChRf.png)
 
-- 普通状态
-
-  - 预制体引用对象未进行过结构修改的情况下称为**普通状态（对象树中紫色形式显示）**
-  - 对于同一个预制体文件而言，使用**实例状态**下的“**以预制体引用对象更新预制体功能**”，预制体本身结构修改可以向全部普通状态预制体引用对象进行**同步**（本质上修改了.prefab 文件）
+  - 预制体引用对象在对象树中紫色形式显示**
 
 （同步结构修改）
 
-- 实例状态
-
-  - 预制体引用对象进行过**结构修改**的情况称为实例状态（对象树中**黄色**形式显示）
-  - 预制体本身的任何修改都**不会**自动向实例状态预制体引用对象进行同步
 
 ## 预制体使用指南
 
@@ -166,11 +159,11 @@
   - 通过 API 动态生成预制体引用对象
 
 ```ts
-/*动态生成预制体引用对象，GUID为本地资源库或工程内容中预制体GUID(需要预加载资源)*/
-Core.GameObject.spawnGameObject("GUID")
+/*动态生成预制体引用对象，需要本地资源库或工程内容中预制体资源ID(需要预加载资源)*/
+GameObject.spawn("AssetId")
 
-/*异步生成预制体引用对象，GUID为本地资源库或工程内容中预制体GUID(无需预加载资源)*/
-Core.GameObject.asyncSpawnGameObject("GUID")
+/*异步生成预制体引用对象，需要本地资源库或工程内容中预制体资源ID(无需预加载资源)*/
+GameObject.asyncSpawn("AssetId")
 ```
 
 ### 预制体的删除
@@ -245,8 +238,6 @@ Core.GameObject.asyncSpawnGameObject("GUID")
 
 ## 使用预制体功能的注意事项与建议
 
-动态生成预制体时需注意预制体为非静态，满足动态生成的运行环境要求
+使用 spawn 动态生成预制体时，需要 使用AssetUtil类去下载加载 预制体 资源，或者将预制体拖入对象管理器中的优先加载区域
 
-使用 spawnGameObject 动态生成预制体时，需要 preload 预制体 GUID，或者将预制体拖入对象管理器中的优先加载区域
-
-使用 asyncSpawnGameObject 异步生成预制体时，无需 preload 预制体 GUID
+使用 asyncSpawn 异步生成预制体时，无需预加载资源
