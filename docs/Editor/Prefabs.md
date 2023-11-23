@@ -10,23 +10,9 @@
 
 ### 预制体是什么
 
-- 预制体是开发者根据设计目的，在编辑器中使用模型、特效、UI、脚本等资源进行组合制作的高级类资源
+- 预制体是可重复使用的游戏对象组合，是一种将游戏对象组合成一个整体并保存为一个独立资源的机制。预制体可以用来创建和存储一个游戏对象的所有组件、各项属性和子对象。当需要多次重复使用同一个游戏对象时，便可以使用预制体，将该游戏对象设置为预制体。
 
-### 预制体的应用场景
 
-- 编辑状态下重复创建结构、功能相同的场景对象和游戏逻辑对象
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJo57NKVQRUsC6TINYvzomk.png)
-
-（场景搭建）
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnDeRWHiGqJ9EyxmFkHAZ2gb.png)
-
-（游戏逻辑对象搭建，图中为即拖即用的四轮车）
-
-- 运行状态下动态创建场景对象和游戏逻辑对象
-
-（运行状态下动态创建）
 
 ### 预制体基础规则
 
@@ -34,27 +20,15 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnY362BcnTsQQcPL98Io67Hf.png)
 
-- 预制体均包含一个自动创建的预制体头结点
+- 预制体均包含一个预制体头结点，当创建一个空预制体时，会自动生成一个默认的头节点。
 - 预制体头结点下为预制体子对象，子对象间可以是平级、父子级结构关系
+  
 - **预制体引用对象**
 
   - 编辑状态下将预制体拖拽挂载至主视口、对象管理器中的操作称为**预制体引用**，生成的对象称为**预制体引用对象**
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhsN5M3zEUZUHeA2sVbh4ld.png)
 
-- 编辑状态下可修改预制体引用对象的结构及属性（并不影响其他相同的预制体引用对象）
-  
-（修改整体结构）
-
-（修改任意节点的属性）
-
-- **预制体引用状态**
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjzK50c1xyOmm4c4JXvChRf.png)
-
-  - 预制体引用对象在对象树中紫色形式显示**
-
-（同步结构修改）
 
 
 ## 预制体使用指南
@@ -81,7 +55,7 @@
 
 - 方法 2：选中对象管理器中某实例状态的预制体引用对象头结点，点击右键菜单中【另存为新预制体】，选中的实例状态预制体引用对象将与原预制体脱离引用关系，并生成为新预制体
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6yzz1EH53MqttDoSZ2vXeg.png)
+![](https://cdn.233xyx.com/online/gHwYLRrfpbDR1700726601533.jpg)
 
 - 方法 3：从对象管理器中选中对象拖入至工程内容-预制体分类下
 
@@ -141,18 +115,18 @@
 
 - 主编辑器中保存
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnlCPbqkbyPVb1OFRKc3mbOg.png)
+![](https://cdn.233xyx.com/online/gHwYLRrfpbDR1700726601533.jpg)
 
-- 点击某预制体右键菜单中【以预制体引用对象更新预制体】，将当前在对象管理器中对预制体引用对象的修改保存
+- 点击某预制体右键菜单中【更新预制体】，将当前在对象管理器中对预制体引用对象的修改保存
 - 点击某预制体右键菜单中【另存为新预制体】，将当前在对象管理器中对预制体引用对象的修改另存为新预制体
 
 ### 预制体的使用
 
 - **编辑状态**
 
-  - 拖拽至对象管理器及主视口中创建预制体引用对象
+  - 可以在资源库或工程内容中找到预制体，拖拽至对象管理器及主视口中创建预制体引用对象
+<video controls src = "https://cdn.233xyx.com/athena/online/de206300ff8d408c8853557972aa2c13.mp4"></video>
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjOIRlnQ8Nuj12afd0z6EQg.png)
 
 - **运行状态**
 
