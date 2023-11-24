@@ -95,9 +95,7 @@ export default class NewScript extends Script {
         impulseSpawn.impulseType = ImpulseType.Absolute;
         impulseSpawn.impulseVector = new Vector(0,0,800);
 
-        /*
-        冲量对象提供了setImpulseEnabled()，可以动态设置冲量力开关，合理的使用这一接口，可以实现类如炸弹爆炸的效果；
-        */
+        //冲量对象提供了可以动态设置冲量力开关的接口，合理的使用这一接口，可以实现类如炸弹爆炸的效果；
         impulseSpawn.enable = false;  //将冲量对象设置为关闭状态
 
         //通过UI按钮发送一个本地事件，来触发冲量对象开启
