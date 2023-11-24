@@ -768,7 +768,7 @@ let position = a.worldTransform.position；
 | getPlayer                     | getPlayer                     | Player              |          |
 | getShootDir                   | -                             |                     |          |
 | getSightBeadLocation          | getSightBeadPosition          | ScreenUtil          |          |
-| isDynamicVibration            | -                             |                     |          |
+| isDynamicVibration            | mw.vibrate                    |                     |          |
 | lineTrace                     | lineTrace                     | QueryUtil           |          |
 | moveTo                        | navigateTo                    | Navigation          |          |
 | parabolicTrace                | -                             |                     |          |
