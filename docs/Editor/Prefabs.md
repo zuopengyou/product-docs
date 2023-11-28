@@ -37,11 +37,7 @@
 
 - **新建预制体**
 
-  - 方法 1：点击工具栏中【新建】菜单下的【新建预制体】按钮
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5qZq6A6dVB6eYHiFBwEQ5Q.png)
-
-- 方法 2：点击工程内容-预制体分类中【新建预制体】按钮
+- 方法：点击工程内容-预制体分类中【新建预制体】按钮
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9Bmp1nIqNhqZ3TSyFlqHxh.png)
 
