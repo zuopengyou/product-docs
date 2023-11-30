@@ -32,6 +32,6 @@
   },
   "dependencies": {
     "@documate/vue": "^0.3.1",
-    "metaapp-prodigytech-doc-theme": "^2.1.15"
+    "doc-theme-323": "^2.1.17"
   }
 }

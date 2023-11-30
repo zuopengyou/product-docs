@@ -1,4 +1,4 @@
-import type { DefaultTheme } from 'metaapp-prodigytech-doc-theme'
+import type { DefaultTheme } from 'doc-theme-323'
 import { defineConfigWithTheme } from 'vitepress'
 
 export const sidebar: DefaultTheme.Config['sidebar'] = [
