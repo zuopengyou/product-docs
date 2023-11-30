@@ -205,4 +205,4 @@ export default class DefaultUI extends UIScript {
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5HapDZ4FTzKt0PvM8jxXjf.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1682231334747_525.7z)
+- 工程文件：  [点击下载](https://cdn.233xyx.com/online/X9kOTd3OlmXB1694916401072.7z)

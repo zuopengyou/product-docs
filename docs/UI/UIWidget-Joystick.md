@@ -155,37 +155,13 @@ export default class WeaponUI extends WeaponUI_Generate {
             this.curWeapon.stopFire();
         });
     }
-    
-    //startFire
-    public startFire() {
-        if (this.weaponObj == null || this.isCanFire != 0) return;
-        //切换姿态
-        this.chara.animationStance = this.weaponAction.aimStance;
-        this.weaponObj.startFire();
-        this.isFiring = true;
-        if(!this.isAimming) {
-            this.weaponObj.aimComponent.enableAiming(true);
-        }
-    }
-
-    //stopFire
-    public stopFire() {
-        if (this.weaponObj == null) return;
-        this.weaponObj.stopFire();
-        this.isFiring = false;
-        //切换姿态
-        this.chara.animationStance = this.weaponAction.holdStance;
-        if(!this.isAimming) {
-            this.weaponObj.aimComponent.enableAiming(false);
-        }
-    }
 }
 ```
 
 - pc端效果：
 ![](https://cdn.233xyx.com/1681614349826_342.gif)
 - 移动端效果：<video controls src="https://cdn.233xyx.com/1681614130168_428.mp4"></video>
-- 工程文件：  [点击下载](https://cdn.233xyx.com/1681467995344_224.7z)
+
 
 ### 示例二：使用摇杆制作瞄准后发射的技能按钮
 

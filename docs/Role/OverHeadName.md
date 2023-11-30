@@ -4,15 +4,15 @@
 
 本文概述了头顶名称的定义，以及如何修改头顶名称。
 
-## 1. 头顶名称介绍
+## 头顶名称介绍
 
 ![](https://cdn.233xyx.com/online/ri2LnAxOci6A1694767738691.png)   
 
 头顶定义：角色模型头顶会显示名称等效果。
 
-## 2. 角色换装方式
+## 如何修改头顶名称？
 
-### 2.1 修改头顶名称
+### 修改头顶名称
 
 功能说明：我们可以获取并修改头顶名称
 
@@ -29,7 +29,7 @@ chara.displayName = "哈哈哈";
 
 <video controls src="https://cdn.233xyx.com/online/GeygvnZQT7qd1694767738691.mp4"></video>
 
-### 2.2 头顶名称显示/隐藏
+### 头顶名称显示/隐藏
 
 功能说明：我们可以通知所有角色的头顶名称的显隐。
 
@@ -52,7 +52,7 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/1n26Jlypp9Ku1694767738691.mp4"></video>
 
-### 2.3 头顶UI的替换
+### 头顶UI的替换
 
 功能说明：使用UI功能替换掉头顶UI名称。
 

@@ -4,7 +4,7 @@
 
 本文概述了角色的形象分类，每个形象如何进行换装，以及如何使用代码动态调整角色外观。
 
-## 1. 角色形象介绍
+## 角色形象介绍
 
 - 目前角色形象根据外观类型和功能划分为三大类，分别是：【基础人形形象】/【高级人形形象】/【多足形象】
 
@@ -12,19 +12,18 @@
   - 【高级人形形象】：是更加完善得人形形象，功能上可以更换角色的服装（上衣、裤子、手套、鞋子），以及脸部效果（前发、后发、瞳孔、眉毛、睫毛、肤色）等等效果，主要应用在角色以及注重形象效果的NPC模型上，不宜大量同屏使用。
   - 【多足形象】：是非人形的整体形象，目前已经提供了多套资源分别为：猫、狗、鸡、牛、龙、鸭子。后续还会继续拓展形象需求。该类型的功能上与基础人形形象一致，只能修改整体外观效果，无法切换部位。主要应用在宠物和坐骑等方面。
 
-## 2. 角色换装方式
+## 角色换装方式
 
 - 角色换装方式分为三种，分别是【角色属性面板换装】、【角色编辑器换装】以及【通过API进行动态换装】。
+ - 【角色属性面板换装】：应用场景主要是在实例化NPC和怪物后，快速的调整角色形象外观。具体操作说明请见：[角色基础功能](https://docs-027.ark.online/Role/RoleBasicAbility.html)
+ - 【角色编辑器换装】：角色编辑器是调整【高级人形形象】的工具，主要是调整较为详细的外观效果（包括：五官、服饰花纹、体型大小等等），以及预设出角色外观数据，方便后续使用API的动态调用外观数据等等。具体操作说明请见：[角色编辑工具](https://docs-027.ark.online/Editor/CharacterEditor.html#_1-2-%E8%A7%92%E8%89%B2%E7%BC%96%E8%BE%91%E5%B7%A5%E5%85%B7%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF)
+ - 【通过API进行动态换装】：使用API进行动态换装是游戏中比较常见的效果和手段。下面进行详细说明。
 
-- 【角色属性面板换装】：具体操作说明请见： 。应用场景主要是在实例化NPC和怪物后，快速的调整角色形象外观。
-- 【角色编辑器换装】：具体操作说明请见：https://docs.ark.online/Editor/CharacterEditor.html。角色编辑器是调整【高级人形形象】的工具，主要是调整较为详细的外观效果（包括：五官、服饰花纹、体型大小等等），以及预设出角色外观数据，方便后续使用API的动态调用外观数据等等。
-- 【通过API进行动态换装】：使用API进行动态换装是游戏中比较常见的效果和手段。下面进行详细说明。
-
-## 3. 基础人形形象换装/多足形象换装
+## 基础人形形象换装/多足形象换装
 
 【基础人形形象】与【多足形象】功能上一致，都是只能进行整体更换外观效果，具体操作如下。
 
-### 3.1 基础人形形象换装
+### 基础人形形象换装
 
 首先我们需要找到需要更换的资源ID。
 
@@ -70,7 +69,7 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/9SRLVATvoRRv1694158606115.mp4"></video>
 
-### 3.2 多足形象换装
+### 多足形象换装
 
 ![](https://cdn.233xyx.com/online/dmdDi0YD6Zi41694158606114.png)   
 
@@ -101,7 +100,7 @@ InputUtil.onKeyDown(Keys.One, () => {
 
 - 多足形象默认没有动画功能，需要主动添加动画。
 
-## 4. 高级人形形象形象换装
+## 高级人形形象形象换装
 
 ![](https://cdn.233xyx.com/online/VC5yG2UL3L9p1694158606115.png)
 
@@ -161,9 +160,9 @@ InputUtil.onKeyDown(Keys.Nine, () => {
 
 <video controls src="https://cdn.233xyx.com/online/XoiTkQ0C5Xg11694158606114.mp4"></video>
 
-### 4.1 五官相关调整
+### 五官相关调整
 
-#### 4.1.1 头部
+#### 头部
 
 属性说明：头部功能可以调整样式，进行整体调整。
 
@@ -176,7 +175,7 @@ let chara = Player.localPlayer.character
 chara.description.advance.headFeatures.head.style = ""
 ```
 
-#### 4.1.2 眼睛
+#### 眼睛
 
 属性说明：眼睛功能可以细分为整体功能、眼角功能、瞳孔功能。
 
@@ -269,7 +268,7 @@ chara.description.advance.makeup.coloredContacts.decal.pupilVerticalPosition = 0
 
 <video controls src="https://cdn.233xyx.com/online/ZfdHlaqBFHwy1694158606115.mp4"></video>
 
-#### 4.1.3 嘴
+#### 嘴
 
 嘴部功能可以细分为整体功能、嘴唇功能、嘴角功能。
 
@@ -318,7 +317,7 @@ chara.description.advance.headFeatures.mouth.mouthCorners.mouthCornerVerticalShi
 
 <video controls src="https://cdn.233xyx.com/online/oA87SsGRYNaF1694158606115.mp4"></video>
 
-#### 4.1.4 鼻子
+#### 鼻子
 
 鼻子功能可以细分为整体功能、鼻梁功能、鼻尖功能、鼻翼功能。
 
@@ -378,7 +377,7 @@ chara.description.advance.headFeatures.nose.nostrils.nostrilHorizontalScale = 1;
 
 <video controls src="https://cdn.233xyx.com/online/iLCDXQWsx1xu1694158606115.mp4"></video>
 
-#### 4.1.5 眉毛
+#### 眉毛
 
 眉毛功能包括：眉间前后移动、眉头上下移动、眉尾上下移动、眉毛前后移动、眉毛左右移动、眉毛上下移动、眉毛整体旋转移动。
 
@@ -407,7 +406,7 @@ chara.description.advance.headFeatures.eyebrows.eyebrowOverallRotation = 1;
 
 <video controls src="https://cdn.233xyx.com/online/Q9iXB7AFpbxy1694158606115.mp4"></video>
 
-#### 4.1.6 耳朵
+#### 耳朵
 
 耳朵功能包括：前后旋转、左右旋转、整体缩放、上部缩放、下部缩放。
 
@@ -432,7 +431,7 @@ chara.description.advance.headFeatures.ears.earOverallScale = 1;
 
 <video controls src="https://cdn.233xyx.com/online/I3XPoPdCnjib1694158606115.mp4"></video>
 
-#### 4.1.7 脸型
+#### 脸型
 
 脸部功能可以细分为脸颊功能、颧骨功能、下巴功能、下颚功能、面部功能。
 
@@ -523,7 +522,7 @@ chara.description.advance.headFeatures.faceShape.overall.upperFaceVerticalShift 
 
 <video controls src="https://cdn.233xyx.com/online/XQvjwW0gdabS1694158606115.mp4"></video>
 
-#### 4.1.8 表情
+#### 表情
 
 表情功能只有切换角色的表情。表情包括：默认、微笑、开心、伤心、生气、尴尬、笑、调皮、可爱、疑惑。
 
@@ -558,9 +557,9 @@ chara.description.advance.headFeatures.expressions.changeExpression = 9;
 
 <video controls src="https://cdn.233xyx.com/online/yAJm88aMnPSv1694158606115.mp4"></video>
 
-### 4.2 化妆调整
+### 化妆调整
 
-#### 4.2.1 腮红
+#### 腮红
 
 腮红功能包括：腮红样式、腮红颜色。
 
@@ -579,7 +578,7 @@ chara.description.advance.makeup.blush.blushColor = new LinearColor(255,40,40);
 
 <video controls src="https://cdn.233xyx.com/online/dK9umrjishDq1694158606114.mp4"></video>
 
-#### 4.2.2 睫毛
+#### 睫毛
 
 睫毛功能包括：睫毛样式、睫毛颜色。
 
@@ -598,7 +597,7 @@ chara.description.advance.makeup.eyelashes.eyelashColor = new LinearColor(255,40
 
 <video controls src="https://cdn.233xyx.com/online/80kDqf7FnM2S1694158606114.mp4"></video>
 
-#### 4.2.3 口红
+#### 口红
 
 口红功能包括：口红样式、口红颜色。
 
@@ -617,7 +616,7 @@ chara.description.advance.makeup.lipstick.lipstickColor = new LinearColor(255,40
 
 <video controls src="https://cdn.233xyx.com/online/XOdqEEYFB5xQ1694158606114.mp4"></video>
 
-#### 4.2.4 身体贴花
+#### 身体贴花
 
 贴花功能：主要是在某个位置贴上附着于表面的花纹，但是我们要确定贴花的位置。进行贴花的调整，调整范围包括：贴花样式、贴花颜色、贴花左右移动、贴花上下移动、贴花整体缩放、贴花整体旋转。
 
@@ -656,7 +655,7 @@ chara.description.advance.makeup.bodyDecal[1].decalOverallScale = 10;
 
 <video controls src="https://cdn.233xyx.com/online/vCkOMDRhXRha1694158606114.mp4"></video>
 
-#### 4.2.5 眼影
+#### 眼影
 
 眼影功能包括：眼影样式、眼影颜色。
 
@@ -675,7 +674,7 @@ chara.description.advance.makeup.eyeShadow.eyeshaowColor = new LinearColor(255,4
 
 <video controls src="https://cdn.233xyx.com/online/QSh91diNNTLZ1694158606115.mp4"></video>
 
-#### 4.2.6 脸部贴花
+#### 脸部贴花
 
 贴花功能：主要是在某个位置贴上附着于表面的花纹，但是我们要确定贴花的位置。进行贴花的调整，调整范围包括：贴花样式、贴花颜色、贴花左右移动、贴花上下移动、贴花整体缩放、贴花整体旋转。
 
@@ -706,7 +705,7 @@ chara.description.advance.makeup.faceDecal[0].decalVerticalShift = 0;
 
 <video controls src="https://cdn.233xyx.com/online/oZyjq0Xatoql1694158606114.mp4"></video>
 
-#### 4.2.7 头皮贴花
+#### 头皮贴花
 
 贴花功能：主要是在某个位置贴上附着于表面的花纹，但是我们要确定贴花的位置。进行贴花的调整，调整范围包括：贴花样式、贴花颜色、贴花左右移动、贴花上下移动、贴花整体缩放、贴花整体旋转。
 
@@ -737,7 +736,7 @@ chara.description.advance.makeup.headDecal[0].decalVerticalShift = 0;
 
 <video controls src="https://cdn.233xyx.com/online/kCKGSr850Lyd1694158606115.mp4"></video>
 
-#### 4.2.8 肤色
+#### 肤色
 
 肤色功能：就是调整角色的皮肤颜色。
 
@@ -754,9 +753,9 @@ chara.description.advance.makeup.skinTone.skinColor = new LinearColor(255,40,40)
 
 <video controls src="https://cdn.233xyx.com/online/LfIjnSkKrdl91694158606114.mp4"></video>
 
-### 4.3 头发调整
+### 头发调整
 
-#### 4.3.1 前发
+#### 前发
 
 前发功能：可以细分为前发功能、头饰图案功能、头饰纹理功能、高光功能。头饰功能是部分头发样式携带的功能。比如帽子，发卡等装饰物。然后我们可以通过代码改变装饰物的效果。
 
@@ -848,7 +847,7 @@ chara.description.advance.hair.frontHair.highlight.highlightStyle = "";
 
 <video controls src="https://cdn.233xyx.com/online/Phil7MAk4rn61694158606115.mp4"></video>
 
-#### 4.3.2 后发
+#### 后发
 
 后发功能与前发功能基本一致，可以细分为后发功能、头饰图案功能、头饰纹理功能、高光功能。头饰功能是部分头发样式携带的功能。比如帽子，发卡等装饰物。然后我们可以通过代码改变装饰物的效果。
 
@@ -940,9 +939,9 @@ chara.description.advance.hair.backHair.highlight.highlightStyle = "";
 
 <video controls src="https://cdn.233xyx.com/online/Jj0eCRDp9N9t1694158606115.mp4"></video>
 
-### 4.4 服饰调整
+### 服饰调整
 
-#### 4.4.1 上衣调整
+#### 上衣
 
 上衣功能：可以细分为整体功能、区域图案功能、区域纹理功能。
 
@@ -1011,7 +1010,7 @@ chara.description.advance.clothing.upperCloth.part[0].pattern.patternVisibility 
 
 <video controls src="https://cdn.233xyx.com/online/9GGeFDbus5gm1694158606114.mp4"></video>
 
-#### 4.4.2 下衣调整
+#### 下衣
 
 下衣功能：可以细分为整体功能、区域图案功能、区域纹理功能。
 
@@ -1080,7 +1079,7 @@ chara.description.advance.clothing.lowerCloth.part[0].pattern.patternVisibility 
 
 <video controls src="https://cdn.233xyx.com/online/jbro9uEJOgxK1694158606114.mp4"></video>
 
-#### 4.4.3 手套调整
+#### 手套
 
 手套功能：可以细分为整体功能、区域图案功能、区域纹理功能。
 
@@ -1149,7 +1148,7 @@ chara.description.advance.clothing.gloves.part[0].pattern.patternVisibility = 1;
 
 <video controls src="https://cdn.233xyx.com/online/uiPMHhgh5ubr1694158606114.mp4"></video>
 
-#### 4.4.4 鞋子调整
+#### 鞋子
 
 鞋子功能：可以细分为整体功能、区域图案功能、区域纹理功能。
 
@@ -1218,11 +1217,11 @@ chara.description.advance.clothing.shoes.part[0].pattern.patternVisibility = 1;
 
 <video controls src="https://cdn.233xyx.com/online/YhhYrR3JbiPC1694158606114.mp4"></video>
 
-### 4.5 体型调整
+### 体型调整
 
 高级人形形象体型是可以通过【角色编辑器】提前调整的，也可以通过脚本进行动态调整。
 
-#### 4.5.1 头部调整
+#### 头部
 
 头部功能包括：整体缩放、左右缩放。
 
@@ -1241,7 +1240,7 @@ chara.description.advance.headFeatures.head.headOverallScale = 1
 
 <video controls src="https://cdn.233xyx.com/online/jGCaXu2U013O1694158606115.mp4"></video>
 
-#### 4.5.2 身体调整
+#### 身体
 
 身体功能包括：整体高度缩放。
 
@@ -1258,7 +1257,7 @@ chara.description.advance.bodyFeatures.body.height = 1
 
 <video controls src="https://cdn.233xyx.com/online/wqHinnMso2IX1694158606115.mp4"></video>
 
-#### 4.5.3 脖子调整
+#### 脖子
 
 脖子功能包括：前后缩放、左右缩放、上下缩放。
 
@@ -1279,7 +1278,7 @@ chara.description.advance.bodyFeatures.neck.neckVerticalScale = 1
 
 <video controls src="https://cdn.233xyx.com/online/jGADeQe44no01694158606115.mp4"></video>
 
-#### 4.5.4 胸腔调整
+#### 胸腔
 
 胸腔功能包括：前后缩放、左右缩放、上下缩放
 
@@ -1300,7 +1299,7 @@ chara.description.advance.bodyFeatures.chest.chestVerticalScale = 1
 
 <video controls src="https://cdn.233xyx.com/online/AMVeDbMefeuQ1694158606115.mp4"></video>
 
-#### 4.5.5 胸部调整
+#### 胸部
 
 胸部功能包括：左右缩放、长度缩放、左右缩放、上下缩放。
 
@@ -1323,7 +1322,7 @@ chara.description.advance.bodyFeatures.breast.breastVerticalShift = 1
 
 <video controls src="https://cdn.233xyx.com/online/c7iZgCUQoTOm1694158606115.mp4"></video>
 
-#### 4.5.6 肋部调整
+#### 肋部
 
 肋部功能包括：前后缩放、左右缩放。
 
@@ -1342,7 +1341,7 @@ chara.description.advance.bodyFeatures.ribs.ribHorizontalScale = 1
 
 <video controls src="https://cdn.233xyx.com/online/yX1WwywFW5il1694158606115.mp4"></video>
 
-#### 4.5.7 腰部调整
+#### 腰部
 
 腰部功能包括：前后缩放、左右缩放、上下缩放。
 
@@ -1363,7 +1362,7 @@ chara.description.advance.bodyFeatures.waist.waistVerticalScale = 1
 
 <video controls src="https://cdn.233xyx.com/online/IjK44FS9nf7a1694158606115.mp4"></video>
 
-#### 4.5.8 手臂调整
+#### 手臂
 
 手臂可以细分为小臂功能、肩臂功能、大臂功能。
 
@@ -1414,7 +1413,7 @@ chara.description.advance.bodyFeatures.arms.upperArmVerticalScale = 1
 
 <video controls src="https://cdn.233xyx.com/online/E8Mwe5YbUmKQ1694158606115.mp4"></video>
 
-#### 4.5.9 手调整
+#### 手
 
 手功能包括：整体缩放。
 
@@ -1431,7 +1430,7 @@ chara.description.advance.bodyFeatures.hands.handOverallScale = 1
 
 <video controls src="https://cdn.233xyx.com/online/gRK7qCoeqTit1694158606115.mp4"></video>
 
-#### 4.5.10 胯调整
+#### 胯
 
 胯功能包括：前后缩放、左右缩放。
 
@@ -1450,7 +1449,7 @@ chara.description.advance.bodyFeatures.hips.hipHorizontalScale = 1
 
 <video controls src="https://cdn.233xyx.com/online/ThRYhd3JEhrW1694158606115.mp4"></video>
 
-#### 4.5.11 腿调整
+#### 腿
 
 腿可以细分为小腿功能、大腿功能。
 
@@ -1488,7 +1487,7 @@ chara.description.advance.bodyFeatures.legs.thighVerticalScale = 1
 
 <video controls src="https://cdn.233xyx.com/online/AtnDUqx5WlyS1694158606115.mp4"></video>
 
-#### 4.5.12 脚调整
+#### 脚
 
 脚功能包括：整体缩放。
 
@@ -1505,9 +1504,9 @@ chara.description.advance.bodyFeatures.feet.feetOverallScale = 1
 
 <video controls src="https://cdn.233xyx.com/online/jNa7HNZBW7ww1694158606115.mp4"></video>
 
-## 5. 高级人形形象换装相关
+## 高级人形形象换装相关
 
-### 5.1 角色数据换装
+### 角色数据换装
 
 ![](https://cdn.233xyx.com/online/d9qUo99hEBde1694169509299.png)    
 
@@ -1533,7 +1532,7 @@ let chara = Player.localPlayer.character
 chara.setDescription(["136291"])
 ```
 
-### 5.2 获取形象与重置形象
+### 获取形象与重置形象
 
 功能说明：我们提供了获取角色形象，以及设置形象的功能。
 

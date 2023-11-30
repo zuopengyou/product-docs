@@ -12,13 +12,13 @@
 
 ## 如何设置角色属性？
 
-### 方式一 ：
+### 方式一 ：面板设置
 
 在对象管理器中的【世界】对象中，找到并点击【角色】对象后，即可通过属性面板编辑角色的默认属性。
 
 ![](https://cdn.233xyx.com/online/VjFfyu3foFyN1693999403175.png)        
 
-### 方式二 ：
+### 方式二 ：脚本设置
 
 通过脚本挂在到对象管理器的对象中，实现动态修改角色属性。
 
@@ -26,11 +26,11 @@
 
 ## 角色属性
 
-### 3.1  基础属性
+### 基础属性
 
 ![](https://cdn.233xyx.com/online/UrZMMNr7DMWh1693999403175.png)
 
-#### 3.1.1 是否可移动
+#### 是否可移动
 
 属性说明：控制玩家移动的属性，关闭后角色将无法移动。
 
@@ -94,7 +94,7 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/AvLF60GkexpY1693999403176.mp4"></video>
 
-#### 3.1.2 地面最大速度
+#### 地面最大速度
 
 属性说明：角色在地面移动时，角色可达到的最大移动速度。
 
@@ -199,7 +199,7 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/HYZMNa5Ojbuc1693999403176.mp4"></video>
 
-#### 3.1.3 最大加速度
+#### 最大加速度
 
 属性说明：角色移动时，角色会根据最大加速度进行提速，逐渐达到角色的地面最大速度。
 
@@ -214,7 +214,7 @@ let chara = Player.localPlayer.character
 chara.maxAcceleration = 1000;
 ```
 
-#### 3.1.4 不可跨越高度
+#### 不可跨越高度
 
 属性说明：角色跨越台阶时，台阶的最大高度 ，大于等于该高度角色均无法跨越。
 
@@ -233,7 +233,7 @@ chara.maxStepHeight = 200;
 
 <video controls src="https://cdn.233xyx.com/online/kl30rEqnyKYi1693999403175.mp4"></video>
 
-#### 3.1.5 最大站稳角度
+#### 最大站稳角度
 
 属性说明：角色站立在斜坡上时，斜坡的最大角度，超过该角度，角色将无法站立在这个斜坡上，角色会存在坠落的表现。
 
@@ -254,7 +254,7 @@ chara.walkableFloorAngle = 60;
 
 <video controls src="https://cdn.233xyx.com/online/laKEaJHyAl3J1693999403176.mp4"></video>
 
-#### 3.1.6 最大转向速度
+#### 最大转向速度
 
 属性说明：角色每秒旋转的最大速度
 
@@ -273,7 +273,7 @@ chara.rotateRate = 100;
 
 <video controls src="https://cdn.233xyx.com/online/CfOiw6hqaUe11693999403176.mp4"></video>
 
-#### 3.1.7 运动面朝方向
+#### 运动面朝方向
 
 属性说明：主角模型的面部朝向。
 
@@ -329,7 +329,7 @@ export default class NewScript extends Script {
 }
 ```
 
-#### 3.1.8 运动时依据的正方向
+#### 运动时依据的正方向
 
 属性说明：角色模型移动时，依据的前进方向。
 
@@ -385,7 +385,7 @@ export default class NewScript extends Script {
 }
 ```
 
-#### 3.1.9 启用地面摩擦力
+#### 启用地面摩擦力
 
 属性说明：角色在地面移动时，会受到两种向后的因素影响，分别是地面摩擦力和行走减速度。关闭地面摩擦力的影响后，角色移动时，就只会受到行走减速度影响。
 
@@ -400,7 +400,7 @@ chara.groundFrictionEnabled = false;
 chara.brakingDecelerationWalking = 1000;
 ```
 
-#### 3.1.10 地面摩擦力
+#### 地面摩擦力
 
 属性说明：角色在地面移动时，会受到两种向后的因素影响，分别是地面摩擦力和行走减速度。地面摩擦力是制约人物运动时改变方向的能力效果，一般是模拟环境因素给角色带来的不同减速效果。
 
@@ -417,7 +417,7 @@ chara.groundFrictionEnabled = true;
 chara.groundFriction = 10;
 ```
 
-#### 3.1.11 行走减速度
+#### 行走减速度
 
 属性说明：角色在地面移动时，会受到两种向后的因素影响，分别是地面摩擦力和行走减速度。行走减速度是角色在地面移动状态下，不施加任何主动操作时受到的减速度。
 
@@ -513,11 +513,11 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/GqMO1Scrdw5c1693999403175.mp4"></video>
 
-### 3.2  飞行属性
+### 飞行属性
 
 ![](https://cdn.233xyx.com/online/8OchP6KsK2r91693999403175.png)
 
-#### 3.2.1 最大飞行速度
+#### 最大飞行速度
 
 属性说明：角色在飞行状态下进行移动时，角色可达到的最大移动速度。
 
@@ -564,7 +564,7 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/P73juCE59Pxc1693999403176.mp4"></video>
 
-#### 3.2.2 飞行减速度
+#### 飞行减速度
 
 属性说明：角色在空中移动的状态下，不施加任何主动操作时受到的减速度。
 
@@ -587,11 +587,11 @@ chara.brakingDecelerationFlying = 200;
 
 <video controls src="https://cdn.233xyx.com/online/OfbKoYSDkjle1693999403175.mp4"></video>
 
-### 3.3  游泳属性
+### 游泳属性
 
 ![](https://cdn.233xyx.com/online/FDAjAbMARikv1693999403176.png)
 
-#### 3.3.1 最大游泳速度
+#### 最大游泳速度
 
 属性说明：角色在游泳状态下进行移动时，角色可达到的最大移动速度。
 
@@ -622,7 +622,7 @@ export default class NewScript extends Script {
 }
 ```
 
-#### 3.3.2 游泳减速度
+#### 游泳减速度
 
 属性说明：角色在游泳状态下，不施加任何主动操作时受到的减速度。
 
@@ -645,17 +645,17 @@ chara.brakingDecelerationSwimming = 500;
 
 <video controls src="https://cdn.233xyx.com/online/j0qttyJMkOvt1693999403176.mp4"></video>
 
-### 3.4  下蹲属性
+### 下蹲属性
 
 ![](https://cdn.233xyx.com/online/5gSaip88PsHA1693999403175.png)
 
-#### 3.4.1 是否可以下蹲
+#### 是否可以下蹲
 
 属性说明：角色是否可以下蹲。
 
 实际应用：在特殊情况下，不允许角色下蹲。
 
-#### 3.4.2 蹲伏行走最大移动速度
+#### 蹲伏行走最大移动速度
 
 属性说明：角色在下蹲状态下移动时，角色可达到的最大移动速度。
 
@@ -698,7 +698,7 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/haTQ8efdSOqv1693999403176.mp4"></video>
 
-#### 3.4.3 下蹲时的高度
+#### 下蹲时的高度
 
 属性说明：下蹲状态下，角色胶囊体的高度。
 
@@ -713,11 +713,11 @@ let chara = Player.localPlayer.character
 chara.crouchedHeight = 150;
 ```
 
-### 3.5  下落属性
+### 下落属性
 
 ![](https://cdn.233xyx.com/online/wa6gR0BSgJ0V1693999403175.png)
 
-#### 3.5.1 最大下落速度
+#### 最大下落速度
 
 属性说明：角色在下落状态下移动时，角色可达到的最大移动速度。
 
@@ -732,7 +732,7 @@ let chara = Player.localPlayer.character
 chara.maxFallingSpeed = 5000;
 ```
 
-#### 3.5.2 下落控制灵敏度
+#### 下落控制灵敏度
 
 属性说明：角色在下落状态下的运动效果，可以拆分成水平方向的运动和垂直方向的运动两个部分。垂直方向的运动计算主要通过重力影响，水平方向的运动计算与地面的运动效果是一样的，也是由地面的最大速度、最大加速度以及下落控制灵敏度进行计算。也就是说水平速度主要以地面速度为基准，而下落控制灵敏度是限制水平的移动速度效果，使角色在下落状态下的水平移动速度不超过地面的移动速度。
 
@@ -765,7 +765,7 @@ InputUtil.onKeyDown(Keys.Two, () => {
 
 <video controls src="https://cdn.233xyx.com/online/BoepkXAN3v1I1693999403176.mp4"></video>
 
-#### 3.5.3 重力倍率
+#### 重力倍率
 
 属性说明：该值是调整角色下落速度时的重力效果的倍率。默认为1倍，数值越大，角色下落速度越快，数值越小，角色下落速度越慢。该值只影响角色重力倍率，世界场景中其他物体不受其影响。
 
@@ -780,7 +780,7 @@ let chara = Player.localPlayer.character
 chara.gravityScale = 0.01;
 ```
 
-#### 3.5.4 下落水平减速度
+#### 下落水平减速度
 
 属性说明：角色在下落状态下，不施加任何主动操作时水平方向受到的减速度。
 
@@ -803,11 +803,11 @@ chara.horizontalBrakingDecelerationFalling = 1000;
 
 <video controls src="https://cdn.233xyx.com/online/tCewg44jAeTG1693999403176.mp4"></video>
 
-### 3.6  跳跃属性
+### 跳跃属性
 
 ![](https://cdn.233xyx.com/online/52yUIQEPD3bX1693999403175.png)
 
-#### 3.6.1 是否可跳跃
+#### 是否可跳跃
 
 属性说明：限制角色跳跃的属性。
 
@@ -820,7 +820,7 @@ let chara = Player.localPlayer.character
 chara.jumpEnabled = false;
 ```
 
-#### 3.6.2 最大跳跃高度
+#### 最大跳跃高度
 
 属性说明：角色跳跃时，从起跳位置到最高位置的距离设定。
 
@@ -863,7 +863,7 @@ export default class NewScript extends Script {
 
 <video controls src="https://cdn.233xyx.com/online/Y3RHFBVwMm8N1693999403176.mp4"></video>
 
-#### 3.6.3 最大跳跃次数
+#### 最大跳跃次数
 
 属性说明：角色能够执行的最大跳跃数量。
 
@@ -882,17 +882,17 @@ chara.jumpMaxCount = 5;
 
 <video controls src="https://cdn.233xyx.com/online/Thpwn5ppWGZb1693999403176.mp4"></video>
 
-### 3.7  形象设置
+### 形象设置
 
 ![](https://cdn.233xyx.com/online/rxnlCwinjwHF1693999403175.png)
 
-#### 3.7.1 使用平台角色形象
+#### 使用平台角色形象
 
 属性说明：勾选使用平台角色形象，角色的形象会继承233的平台形象效果，不勾选的情况下，角色可以自主设置角色形象。
 
 注意说明：勾选使用平台角色形象的情况下，在角色编辑器中修改角色形象是无法更改形象效果的。
 
-#### 3.7.2 外观类型
+#### 外观类型
 
 ![](https://cdn.233xyx.com/online/pSw6v03DY2PQ1693999403175.png)
 
@@ -904,7 +904,7 @@ chara.jumpMaxCount = 5;
 
 【多足形象】：是非人形的整体形象，比如四足动物的猫/狗/猪等，只能更换整体外观形象。
 
-#### 3.7.3 体型类型
+#### 体型类型
 
 ![](https://cdn.233xyx.com/online/FnTxSYy6ryQi1693999403175.png)
 
@@ -912,7 +912,7 @@ chara.jumpMaxCount = 5;
 
 备注说明：无类型是没有明确的形象定义，让用户自定义角色效果。
 
-#### 3.7.4 套装数据
+#### 套装数据
 
 属性说明：套装数据是高级人形形象的独有属性，用户可以将自己在角色编辑器中存储好的形象保存成相应文件，并直接拖入到属性面板中，这样用户可以将自己存储好的形象进行便捷设置。
 
@@ -920,7 +920,7 @@ chara.jumpMaxCount = 5;
 
 <video controls src="https://cdn.233xyx.com/online/G1u8gad505mA1693999403175.mp4"></video>
 
-#### 3.7.5 角色形象
+#### 角色形象
 
 属性说明：角色形象是具体的形象资源槽，根据不同的类型显示不同的资源槽，用户可以通过将资源拖拽相应属性资源槽内，快速实现设置想要的角色形象。因为基础人形形象和多足形象都是只能更换整体外观形象，所以只有一个形象资源槽，而高级人形形象可以更换多个部位的资源，所以有6个形象资源槽。
 
@@ -930,21 +930,21 @@ chara.jumpMaxCount = 5;
 
 角色换装的详细说明请见：
 
-### 3.8  角色描边
+### 角色描边
 
 ![](https://cdn.233xyx.com/online/x6LIBmH3B0oE1693999403175.png)
 
-#### 3.8.1 被遮挡时开启描边
+#### 被遮挡时开启描边
 
 属性说明：角色被物体遮挡时，会显示角色描边，标记角色位置。
 
 注意说明：开启描边后，注意关闭摄像机碰撞，否则没办法看到角色在遮挡情况下的描边效果。
 
-#### 3.8.2 描边颜色
+#### 描边颜色
 
 属性说明：显示角色描边时，角色的描边颜色。
 
-#### 3.8.3 描边宽度
+#### 描边宽度
 
 属性说明：显示角色描边时，角色的描边宽度。
 

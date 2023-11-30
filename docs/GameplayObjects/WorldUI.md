@@ -71,42 +71,20 @@
 * 编写脚本，动态创建世界UI对象，并且完成与2DUI的绑定
 
 ```JavaScript
-// 动态创建世界UI
-    let worldUI = Core.GameObject.spawn({ "guid": "UIWidget" }) as Gameplay.UIWidget
-    // 设置世界UI的位置
-    worldUI.worldLocation = new Type.Vector(0, 0, 200)
-    // 创建2DUI
-    let worldui = UI.createUIByName("worldui")
-    // 绑定2DUI
-    worldUI.setTargetUIWidget(worldui)
-    // 设置渲染大小,最大512*512，需要使这个大小和2DUI中Root的大小一致，否则渲染不全
-    worldUI.drawSize = new Type.Vector2(500, 500)
+			// 动态创建世界UI
+			let worldUI = GameObject.spawn<mw.UIWidget> ("UIWidget") 
+			// 设置世界UI的位置
+			worldUI.localTransform.position = new Vector(0, 0, 200)
+			// 创建2DUI
+			let worldui = createUIByName("worldui")
+			// 绑定2DUI
+			worldUI.setTargetUIWidget(worldui)
+			// 设置渲染大小,最大512*512，需要使这个大小和2DUI中Root的大小一致，否则渲染不全
+			worldUI.drawSize = new Vector2(500, 500)
 ```
 
 * 左侧是提前摆放并绑定好2DUI的世界UI，在右侧动态生成一个完全相同的世界UI
 
 ![](https://cdn.233xyx.com/1684476052734_432.png)![](https://cdn.233xyx.com/1684476052563_134.gif)
 
-* 示例工程： [点击下载](https://cdn.233xyx.com/1684476052851_298.7z)
-
-### **示例二：使用世界UI制作在场景中显示的排行榜**
-
-* 拖一个世界UI到场景中，并先将排行榜2DUI与世界UI完成绑定，这里的绑定是为了调整世界UI的大小和位置
-
-![](https://cdn.233xyx.com/1684476052483_806.png)
-
-* 我们可以使用RPC或者Replicated制作排行榜，这里使用了RPC事件来制作排行榜，具体用法请见下方示例项目
-* 如果希望世界UI展示动态更新的2DUI，我们需要在排行榜2DUI的UI脚本中编写绑定逻辑：
-
-```TypeScript
-// 获取场景上的世界UI
-let worldUI = (await Core.GameObject.asyncFind("2C62CF9B")) as Gameplay.UIWidget
-// 将自己绑定的UI设置为世界UI显示的内容
-worldUI.setTargetUIWidget(this.uiWidgetBase)
-```
-
-* 进入游戏后，我们可以得到一个与2DUI排行榜完全相同的世界UI排行榜
-
-![](https://cdn.233xyx.com/1684476052356_858.gif)
-
-* 示例工程： [点击下载](https://cdn.233xyx.com/1684476052812_032.7z)
+* 示例工程： [点击下载](https://cdn.233xyx.com/online/tPQrMayZVaj01695276591631.7z)

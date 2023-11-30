@@ -9,6 +9,7 @@
 **摄像机滑动区**是一种不可见的交互区域，在摄像机滑动区内可以通过滑动屏幕的方式，控制摄像机镜头转向。
 
 - 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://docs.ark.online/UI/UIWidget-BaseProperties.html)
+- 请注意：为了确保使用大面积摄像机滑动区的游戏中，能正常触发下层UI的touch事件以及与世界UI交互，摄像机滑动区空间的交互优先级永远最低，例如摄像机滑动区下方放置的按钮也可以被点击到。
 
 ## 摄像机滑动区属性
 
@@ -67,7 +68,7 @@ export default class DefaultUI extends UIScript {
 <video controls src="https://cdn.233xyx.com/1681463233045_362.mp4"></video>
 
 - 工程文件：
-[点击下载](https://cdn.233xyx.com/1681463104869_856.7z)
+[点击下载](https://cdn.233xyx.com/online/FE8H39HLxett1694916401072.7z)
 
 ### 示例二：动态调整摄像机滑动区是否可用
 

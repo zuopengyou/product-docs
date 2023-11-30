@@ -4,109 +4,35 @@
 
 本文概述了如何通过修改摄像机的各种属性，实现各种各样的镜头效果。
 
-### 什么是摄像机？
+## 什么是摄像机？
+::: tip
+摄像机就像我们的眼睛， 决定了玩家在3D游戏世界中看到什么样的画面。
+:::
 
-**摄像机**就像我们的眼睛， 决定了玩家在 3D 游戏世界中看到什么样的画面；游戏进行时，摄像机默认和玩家角色绑定在一起。
+- 新建项目的【对象管理器-世界对象】中会有一个自带的无法被删除的摄像机对象；游戏开始时，会默认展示这个摄像机所看到的画面；
+- 也可以从【资源库-游戏功能对象】中拖出或者在脚本中动态创建任意个摄像机对象，这些摄像机对象可以被放置在场景中的任意位置，或者挂载到其他对象下作为子级对象；
+- 世界对象-摄像机与游戏功能对象-摄像机都可以通过脚本中Camera类的属性/接口来调整效果。
+
+![](https://cdn.233xyx.com/online/XnLugKTQJ9Ha1695279533730.png)
 
 ## 摄像机属性说明
 
-在编辑器右上角【世界】中，找到【摄像机】，点击后在右下属性面板中修改摄像机的属性
+### 2.1 摄像机设置
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4ujiEwJWC0u4EKxa2yKuie.png)
+#### 相对位置和相对旋转
+- 即摄像机相对于弹簧臂的偏移和旋转，下文会具体介绍弹簧臂的定义，目前我们这里可以把主视口中的红色细线理解为弹簧臂
+- 建议仅在摄像机朝向模式=固定/跟随朝向时调整摄像机相对旋转，如果当摄像机朝向模式=控制朝向时，务必将相对旋转清零，否则玩家会无法合理的操纵摄像机方向。
+- 也请谨慎调整摄像机相对位置，当相对位置不在原点位置时，可能会导致弹簧臂触发摄像机碰撞后，摄像机的位置无法跟随弹簧臂伸缩至障碍物的同一侧；例如，如果希望让摄像机离角色远一些，建议调整弹簧臂长度，而不是调整摄像机相对位置
+- 请注意区分摄像机相对位置/旋转与弹簧臂相对位置/旋转两者之间的区别，下文会具体介绍弹簧臂相对位置/旋转的作用。
+![](https://cdn.233xyx.com/online/P1OKDAh0guwC1695279533730.gif)
+![](https://cdn.233xyx.com/online/yLAvE1uxaRqV1695279533730.gif)
 
-### 基础属性
-
-* **距离调整：**
-  * 摄像机与摄像机插槽之间存在一定距离，这个距离又称为弹簧臂长度，改变摄像机之间的距离，就是改变弹簧臂的长度。
-  * 制作第一人称游戏时，请将此属性大小调整为0
-  * 弹簧臂长度（即距离调整）示意图如下：
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOUNH5RuhI6Fj9nbjzrIwHc.png)
-
-
-
-* **摄像机位置延迟**
-  * 摄像机延迟是对摄像机跟随人物的运动、视角的旋转进行延迟、滞后，使得运镜更顺滑、更有代入感。开启摄像机位置延迟后，在人物位移时，摄像机跟随人物的运动会有延迟效果
-* **摄像机位置延迟速度**
-  * 控制人物在位移时，摄像机抵达目标位置的速度。低数值较慢(延迟高)，高数值较快(延迟低)，零为即时(无延迟)。
-
-| **位置延迟速度=8**       | ![](https://cdn.233xyx.com/1684475954511_620.gif) |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **位置延迟速度=2**       | ![](https://cdn.233xyx.com/1684475955080_298.gif) |
-| **位置延迟速度=0 或关闭** | ![](https://cdn.233xyx.com/1684475954511_919.gif) |
-
-* **摄像机旋转延迟**
-  * 开启摄像机旋转延迟后，在手指/鼠标控制摄像机滑动区进行视角旋转时，摄像机旋转会有延迟效果
-* **摄像机旋转延迟速度**
-  * 控制视角在旋转时，摄像机抵达目标位置的速度。低数值较慢(延迟高)，高数值较快(延迟低)，零为即时(无延迟)。
-
-| **旋转延迟速度=8**        | ![](https://cdn.233xyx.com/1684475954189_668.gif) |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **旋转延迟速度=2**        | ![](https://cdn.233xyx.com/1684475954897_433.gif) |
-| **旋转延迟速度=0或关闭** | ![](https://cdn.233xyx.com/1684475954321_282.gif) |
-
-* **视场**
-  * 视场（FOV），也就是透视模式下的水平视野角度，FOV越大，可见的视野角度越大。
-
-| **视场为60时** | ![](https://cdn.233xyx.com/1684475954533_734.png) |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **视场为90时**  | ![](https://cdn.233xyx.com/1684475954609_668.png) |
-| **视场为120时** | ![](https://cdn.233xyx.com/1684475954510_291.png) |
-
-如果需要使用正交视角（例如制作拥有3D效果的2D休闲游戏），推荐使用 **视场=35（或更小）** ，并同时调整**摄像机距离、位置、角度**等参数来模拟正交视角
-
-![](https://cdn.233xyx.com/1684475955081_332.png)
-
-* **是否有摄像机碰撞**
-  * 摄像机与其他物体存在碰撞效果，碰撞后会将摄像机位置前移，防止穿模或者玩家角色被遮挡。
-
-关闭摄像机碰撞
-![](https://cdn.233xyx.com/1684475955081_665.gif)
-
-开启摄像机碰撞
-![](https://cdn.233xyx.com/1684475954182_709.gif)
-
-* **物体透明(仅在摄像机碰撞关闭时生效）**
-  * 开启后当摄像机与角色之间有其他障碍物体时，会让障碍物体变透明。
-  * 关闭后则不会让障碍物体变透明。
-* **物体透明度**
-  * 开启物体透明时，当摄像机与角色之间障碍物体的透明度，越接近0越透明，越接近1越不透明。
-
-提示：目前物体透明功能与编辑器自动合批功能有冲突，正在优化中，部分情况下效果不理想，现阶段请谨慎使用。
-
-### 摄像机变换（API：cameraRelativeTransform）和弹簧臂变换（API：cameraSystemRelativeTransform）
-
-* **摄像机变换-相对位置**
-  
-  * 即摄像机相对默认位置的偏移，修改此属性时，不会改变镜头旋转时围绕的中心位置
-* **弹簧臂变换-相对位置**
-  
-  * 即弹簧臂挂点相对角色的位置，摄像机通过弹簧臂挂点连接到角色，旋转视角时，镜头围绕弹簧臂挂点旋转
-  * 示例：
-    摄像机变换-相对位置（0,100,0）；弹簧臂变换-相对位置（0,0,0）
-    ![](https://cdn.233xyx.com/1684475955151_703.gif)
-    摄像机变换-相对位置（0,0,0）；弹簧臂变换-相对位置（0,100,0）
-    ![](https://cdn.233xyx.com/1684475955081_503.gif)
-* **摄像机变换-相对旋转**
-  
-  * 即摄像机相对默认位置的旋转
-* **弹簧臂变换-相对旋转**
-  
-  * 设定弹簧臂角度，即摄像机相对弹簧臂挂点角度，在游戏中拖动屏幕转动视角就相当于动态调整此属性，因此该属性仅在摄像机朝向模式为固定朝向和跟随朝向时生效，用于制作俯视角游戏；摄像机变换-相对旋转相比于此属性不同的是仅改变摄像机角度，不改变弹簧臂角度
-  * 示例：
-    弹簧臂变换-相对旋转（0,-30,0）；摄像机变换-相对旋转（0,0,0）
-    ![](https://cdn.233xyx.com/1684475954179_624.png)
-    弹簧臂变换-相对旋转（0,0,0）摄像机变换-相对旋转（0,-30,0）
-    ![](https://cdn.233xyx.com/1684475954194_880.png)
-
-### 摄像机模式
-
-* **摄像机模式**
-  * 为了开发者能快捷选择需要的视角，编辑器提供了若干套预置的【摄像机模式】，开发者可以在属性面板或脚本中的switchCameraMode方法快捷选择想要使用的摄像机模式，而不需要手动调整众多参数；
-  * 使用某个摄像机模式后，各相关的摄像机属性会按照这一预置模式的预设值自动刷新
-    由于摄像机的各项参数较为复杂，强烈推荐新入门开发者使用这些预置摄像机模式；或者在这些预置摄像机模式的基础上微调
-
-**摄像机模式-枚举（CameraMode）**
+#### 摄像机预设
+- 为了开发者能快捷选择需要的视角，编辑器提供了若干套预置的【摄像机模式】，开发者可以在属性面板或脚本中的currentCameraMode属性快捷选择想要使用的摄像机模式，而不需要手动调整众多参数；
+- 使用某个摄像机模式后，各相关的摄像机属性会按照这一预置模式的预设值自动刷新。
+::: tip
+由于摄像机的各项参数较为复杂，强烈推荐新入门开发者使用这些预置摄像机模式；或者在这些预置摄像机模式的基础上微调。
+:::
 
 | **枚举名称** | **英文名称**   | **枚举值** | **说明**               |
 | -------------------- | ---------------------- | ------------------ | ------------------------------ |
@@ -123,46 +49,128 @@
 
 <video controls src="https://cdn.233xyx.com/1684475955075_215.mp4"></video>
 
-* **开启真实效果**
-  * 如果开启真实效果，摄像机会跟随角色模型头部移动，模拟角色移动时跟随头部上下抖动的画面，用于制作第一视角游戏；如果关闭真实效果，摄像机会跟随角色胶囊体移动，不会跟着头部上下抖动
-  * 示例：
-    关闭真实效果
-    ![](https://cdn.233xyx.com/1684475954229_814.gif)
-    开启真实效果
-    ![](https://cdn.233xyx.com/1684475954700_076.gif)
+#### 视场
+- 视场（FOV），也就是透视模式下的水平视野角度，FOV越大，可见的视野角度越大。
 
-### 摄像机位置
+| **视场为60时** | ![](https://cdn.233xyx.com/1684475954533_734.png) |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **视场为90时**  | ![](https://cdn.233xyx.com/1684475954609_668.png) |
+| **视场为120时** | ![](https://cdn.233xyx.com/1684475954510_291.png) |
 
-* **摄像机位置模式**
-  * 固定模式
-    * 摄像机固定在某一位置，不可移动。
-  * 跟随模式
-    * 摄像机跟随某个物体（默认是玩家角色）一直移动。
-* **固定摄像机Z轴方向**
-  * 固定摄像机在Z轴上的坐标，比如角色在跳跃时，摄像机不会跟随角色改变Z轴位置，用于制作俯视角游戏。
+::: tip
+如果需要使用正交视角（例如制作拥有3D效果的2D休闲游戏），推荐使用 **视场=35（或更小）** ，并同时调整**摄像机距离、位置、角度**等参数来模拟正交视角
+:::
+
+![](https://cdn.233xyx.com/1684475955081_332.png)
+
+#### 摄像机位置模式
+- 固定模式
+  - 摄像机固定在某一位置，不可移动。
+- 跟随模式
+  - 摄像机跟随某个物体（默认是玩家角色）一直移动。
+
+#### 摄像机朝向模式/使用控制器控制摄像机旋转
+- 固定朝向：摄像机固定朝向某一个方向。
+- 跟随朝向：摄像机跟随目标面朝方向。
+- 控制朝向：由UI控件-摄像机滑动区控制此摄像机弹簧臂相对旋转，动态设置的弹簧臂相对旋转不会生效。
+- 请注意：当开启使用控制器控制摄像机旋转时，与摄像机朝向模式=控制朝向效果完全相同，并且调整这两个属性其中之一也会影响到另一条属性，此时弹簧臂的方向与弹簧臂相对旋转（springArm.localTransform.rotation）不是对应关系，而需要用控制器旋转（Player.getControllerRotation/Player.setControllerRotation ）来获取或者设置
+
+#### 固定摄像机高度
+- 固定摄像机在Z轴上的坐标，比如角色在跳跃或者上楼梯时，摄像机不会跟随角色改变高度，用于制作俯视角游戏。
   * 示例：
     关闭固定摄像机Z轴方向
     ![](https://cdn.233xyx.com/1684475954245_027.gif)
     开启固定摄像机Z轴方向
     ![](https://cdn.233xyx.com/1684475954186_776.gif)
 
-### 摄像机朝向
 
-* **摄像机朝向模式**
-  * 固定朝向：摄像机固定朝向某一个方向。
-  * 跟随朝向：摄像机跟随目标面朝方向。
-  * 控制朝向：摄像机的朝向受到输入控制。
-* **向上限制角度**
-  * 摄像机向上旋转时的最大角度，防止旋转至角色模型下方，导致穿模效果。
-  * 范围：0~90°  数值越大，可旋转的角度越大。
-* **向下限制角度**
-  * 摄像机向下旋转时的最大角度，防止旋转至角色模型上方，导致穿模效果。
-  * 范围：0~90°  数值越大，可旋转的角度越大。
-  * 限制角度示意图：
 
+### 2.2 弹簧臂设置
+- 首先，简单说明一下摄像机的弹簧臂有什么作用？
+  - 弹簧臂能为摄像机提供根据场景情况进行扩展或回缩的功能，例如遇到障碍物时自动移动摄像机的位置，防止视线遮挡。
+  - 弹簧臂的方向可以由UI控件-摄像机滑动区或者摇杆被玩家控制，便于在游戏中实现视角转动效果。
+  - 目前我们这里可以把主视口中的红色细线理解为弹簧臂
+
+#### 相对位置和相对旋转
+- 相对位置，即弹簧臂挂点相对父节点的位置，父节点一般为玩家角色，摄像机通过弹簧臂挂点连接到角色。
+  - 弹簧臂挂点的位置决定了玩家转动视角时，镜头围绕哪个点旋转，大多数第三人称游戏会把弹簧臂挂点放在角色的头部或者脖子，以保证角色的上半身始终位于屏幕正中央。
+- 相对旋转，即弹簧臂相对于默认方向的角度，在游戏中拖动屏幕转动视角就相当于动态调整此属性，该属性可用于制作固定的俯视角或斜45°视角。请注意：
+  - 当摄像机朝向模式=控制朝向（即使用控制器控制摄像机旋转开启时），由UI控件-摄像机滑动区控制此摄像机弹簧臂相对旋转，动态设置的弹簧臂相对旋转不会生效
+  - 当摄像机朝向模式=固定朝向/跟随朝向（即使用控制器控制摄像机旋转不开启时），动态设置的弹簧臂相对旋转才会生效
+    ![](https://cdn.233xyx.com/online/PL6bqcLnC4Mt1695279533730.gif)
+    ![](https://cdn.233xyx.com/online/FZJgkk19xjaw1695279533730.gif)
+::: tip
+注意区分：摄像机的相对位置/相对旋转vs弹簧臂的相对位置/相对旋转
+- 摄像机的相对位置/相对旋转仅改变摄像机，不影响弹簧臂；而调整弹簧臂的相对位置/相对旋转时，会连带摄像机的位置和方向一起变化。
+  - 可以把弹簧臂理解成自拍杆，自拍杆的近端由自拍者手持，远端固定相机；摄像机的相对位置/相对旋转仅调整远端相机的位置和方向，不会影响自拍杆；而弹簧臂的相对位置/相对旋转调整自拍杆（会连带相机）的位置和方向。
+:::
+- 如果想要动态设置弹簧臂的方向，例如重置摄像机到角色正背后，但而后仍希望弹簧臂继续由玩家控制方向，可以使用如下方法：
+```TypeScript
+    //点击攻击按钮，把摄像机重置到角色的正背后
+    attackBtn.onPressed.add(()=>{
+        Camera.currentCamera.springArm.useControllerRotation = false;
+        Camera.currentCamera.springArm.localTransform.rotation=new Rotation(0,0,0)
+        Camera.currentCamera.springArm.useControllerRotation = true;
+    })  
+```
+- 效果示例
+![](https://cdn.233xyx.com/online/ghiaeSrCT73p1695279533730.gif)
+
+#### 弹簧臂长度
+- 可以把场景中这条红色细线视作摄像机弹簧臂，修改弹簧臂长度的同时也会修改红色细线长度。
+  - 摄像机到角色之间的实际距离由摄像机相对位置、弹簧臂相对位置、弹簧臂长度这三个属性共同决定。
+  - 如果摄像机相对位置和弹簧臂相对位置都为(0,0,0)，弹簧臂长度就是摄像机到角色之间的距离。
+- 制作第一人称游戏时，建议将此属性大小调整为0。
+- 弹簧臂长度（即距离调整）示意图如下：
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOUNH5RuhI6Fj9nbjzrIwHc.png)
+![](https://cdn.233xyx.com/online/GwHaWgwltu481695279533730.gif)
+
+#### 是否有摄像机碰撞
+- 摄像机弹簧臂与其他物体存在碰撞效果，碰撞后会将摄像机位置前移，防止穿模或者玩家角色被遮挡。
+- 可以理解为：如果有开启碰撞的物体挡在主视口的红色细线上，就会触发摄像机碰撞
+- 关闭摄像机碰撞
+![](https://cdn.233xyx.com/1684475955081_665.gif)
+
+- 开启摄像机碰撞
+![](https://cdn.233xyx.com/1684475954182_709.gif)
+
+### 2.3 其他设置
+
+#### 开启摄像机位置延迟
+- 摄像机延迟是对摄像机跟随人物的运动、视角的旋转进行延迟、滞后，使得运镜更顺滑、更有代入感。开启摄像机位置延迟后，在人物位移时，摄像机跟随人物的运动会有延迟效果。
+#### 开启摄像机位置延迟
+- 控制人物在位移时，摄像机抵达目标位置的速度。低数值较慢(延迟高)，高数值较快(延迟低)，零为即时(无延迟)。
+- 此外，延迟效果还受位置延迟最大距离影响（脚本中用maxLagDistance属性进行调整），例如下面几幅动图中，位置延迟最大距离为100(厘米）。
+
+| **位置延迟速度=8**       | ![](https://cdn.233xyx.com/1684475954511_620.gif) |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **位置延迟速度=2**       | ![](https://cdn.233xyx.com/1684475955080_298.gif) |
+| **位置延迟速度=0 或关闭** | ![](https://cdn.233xyx.com/1684475954511_919.gif) |
+
+#### 开启摄像机旋转延迟
+- 开启摄像机旋转延迟后，在手指/鼠标控制摄像机滑动区进行视角旋转时，摄像机旋转会有延迟效果。
+#### 开启摄像机旋转延迟
+- 控制视角在旋转时，摄像机抵达目标位置的速度。低数值较慢(延迟高)，高数值较快(延迟低)，零为即时(无延迟)。
+
+| **旋转延迟速度=8**        | ![](https://cdn.233xyx.com/1684475954189_668.gif) |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **旋转延迟速度=2**        | ![](https://cdn.233xyx.com/1684475954897_433.gif) |
+| **旋转延迟速度=0或关闭** | ![](https://cdn.233xyx.com/1684475954321_282.gif) |
+
+#### 向上限制角度
+- 摄像机向上旋转时的最大角度，防止旋转至角色模型下方，导致穿模效果。
+- 范围：0~90°  数值越大，可旋转的角度越大。
+#### 向下限制角度
+- 摄像机向下旋转时的最大角度，防止旋转至角色模型上方，导致穿模效果。
+- 范围：0~90°  数值越大，可旋转的角度越大。
+- 限制角度示意图：
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKh5HB410OoxfCelWMrDMth.png)
 
-
+#### 是否开启物体透明
+- 开启后，当摄像机与角色之间有其他障碍物体时，会让障碍物体变透明。
+#### 物体不透明度
+- 调整障碍物体变透明时的不透明度。
+![](https://cdn.233xyx.com/online/ClrdpU2ddqOp1695279533731.gif)
 
 
 ## 如何通过API动态修改摄像机效果？
@@ -178,29 +186,29 @@
 * 脚本示例：
 
 ```TypeScript
-//按下射击摇杆进入瞄准状态
-fireButton.onJoyStickDown.add(() => {
-    //将视场调小，来模拟瞄准镜中的画面
-    Gameplay.getCurrentPlayer().character.cameraSystem.cameraFOV=70
-    //将将摄像机位置向前移动，使画面中不再出现狙击枪
-    let cameradata=Gameplay.getCurrentPlayer().character.cameraSystem.cameraRelativeTransform
-    cameradata.location.x+=100
-    Gameplay.getCurrentPlayer().character.cameraSystem.cameraRelativeTransform =cameradata
-    //将射击摇杆的灵敏度调低，防止瞄准状态时调整瞄准方向过于灵敏
-    fireButton.inputScale=(new Type.Vector2(0.04, 0.03))
-});
-
-//松开射击摇杆发射子弹，并恢复到原有的TPS射击视角
-fireButton.onJoyStickUp.add(() => {
-    Events.dispatchLocal("FIRE_CLICK_Gun");
-    //恢复预置的TPS射击视角，switchCameraMode会重置摄像机位置和视场为TPS射击视角的默认值
-    Gameplay.getCurrentPlayer().character.cameraSystem.switchCameraMode(5,true)
-    //恢复原有的射击摇杆灵敏度
-    fireButton.inputScale=(new Type.Vector2(0.08, 0.06))
-});
+		//按下射击摇杆进入瞄准状态
+		fireButton.onJoyStickDown.add(() => {
+			//将视场调小，来模拟瞄准镜中的画面
+			Camera.currentCamera.fov=70
+			//将将摄像机位置向前移动，使画面中不再出现狙击枪
+			let cameradata=Camera.currentCamera.localTransform
+			cameradata.position.x+=100
+			Camera.currentCamera.localTransform=cameradata
+			//将射击摇杆的灵敏度调低，防止瞄准状态时调整瞄准方向过于灵敏
+			fireButton.inputScale=(new Vector2(0.04, 0.03))
+		});
+		
+		//松开射击摇杆发射子弹，并恢复到原有的TPS射击视角
+		fireButton.onJoyStickUp.add(() => {
+			Event.dispatchToLocal("FIRE_CLICK_Gun");
+			//恢复预置的TPS射击视角，重置摄像机位置和视场
+			Camera.currentCamera.preset=4
+			//恢复原有的射击摇杆灵敏度
+			fireButton.inputScale=(new Vector2(0.08, 0.06))
+		});
 ```
 
-* 实现效果：<video controls src="https://cdn.233xyx.com/1684475955078_130.mp4"></video>
+* 实现效果示例：<video controls src="https://cdn.233xyx.com/1684475955078_130.mp4"></video>
 
 ### 示例2：调整摄像机距离实现双指放缩功能
 
@@ -208,13 +216,11 @@ fireButton.onJoyStickUp.add(() => {
 * 脚本示例：
 
 ```TypeScript
-@Core.Class
-export default class NewScript extends Core.Script {
-    Character: Gameplay.Character;
-    touch: Gameplay.TouchInput;
+@Component
+export default class NewScript extends Script {
+    touch: TouchInput;
     touchNum: number;
     oldPointSize: number;
-    cameradata: Transform
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
         this.setFinger()
@@ -225,15 +231,13 @@ export default class NewScript extends Core.Script {
     private setFinger() {
 
         // 找到UI对象DefaultUI，及其内部的UI控件
-        let UI1 = UI.UIObject.findGameObjectByTag("DefaultUI")[0] as UI.UIObject;
-        const touchpad = UI1.uiWidgetBase.findChildByPath('Canvas/TouchPadDesigner') as UI.TouchPad
-        const canvas = UI1.uiWidgetBase.findChildByPath('Canvas') as UI.Canvas
+        let UI1 = UIObject.findGameObjectsByTag("DefaultUI")[0] as UIObject;
+        const touchpad = UI1.uiWidgetBase.findChildByPath('Canvas/TouchPadDesigner') as TouchPad
+        const canvas = UI1.uiWidgetBase.findChildByPath('Canvas') as Canvas
 
         
         // 双指缩放镜头视角
-        this.touch = new Gameplay.TouchInput();
-        // 将当前玩家的控制器赋值给触摸器
-        this.touch.setPlayerController();
+        this.touch = new TouchInput();
         // 使用touchNum记录当前屏幕的触摸点数量
         this.touchNum=0
         
@@ -257,15 +261,14 @@ export default class NewScript extends Core.Script {
             let touchPoint = this.touch.getTouchVectorArray();
             let newPointSize = touchPoint[0].subtract(touchPoint[1]).length;
             //计算初始距离和最新距离之差
-            let char = Gameplay.getCurrentPlayer().character;
             let distance = newPointSize - this.oldPointSize;
             //使用length记录当前弹簧臂长度，也就是摄像机距离，加上或者减去两个触摸点初始距离和最新距离之差
-            let length = char.cameraSystem.targetArmLength;
+            let length = Camera.currentCamera.springArm.length
             length += (distance > 0 ? -1 : distance < 0 ? 1 : 0) * 1 * Math.abs(distance);
             length = Math.max(length, 60);
             length = Math.min(length, 500);
             //应用length记录的弹簧臂长度，并且用oldPointSize再次记录两个触摸点的初始距离
-            char.cameraSystem.targetArmLength = length;
+            Camera.currentCamera.springArm.length = length;
             this.oldPointSize = newPointSize;
         });
 
@@ -281,100 +284,100 @@ export default class NewScript extends Core.Script {
 }
 ```
 
-* 实现效果及项目文件（请发布后在手机上测试）：<video controls src="https://cdn.233xyx.com/1684475954184_475.mp4"></video>
+* 实现效果示例（请发布后在手机上测试）：<video controls src="https://cdn.233xyx.com/1684475954184_475.mp4"></video>
 
-[点击下载](https://cdn.233xyx.com/1684475955108_755.7z)
-
-### 示例3：动态切换摄像机的位置模式和固定模式
-
-* 目前用法较繁琐，预计在026/027版本优化
+### 示例3：动态切换摄像机的位置模式和朝向模式
+* 可以通过调整positionMode和rotationMode这两条属性来动态动态切换摄像机的位置模式和固定模式
+* 也可以启用控制器操作摄像机useControllerRotation来切换摄像机的朝向模式
+* 当rotationMode=RotationControl时，此时弹簧臂的方向与弹簧臂相对旋转springArm.localTransform.rotation不是对应关系，而需要用控制器旋转（Player.getControllerRotation/Player.setControllerRotation ）来获取或者设置
 * 脚本示例：
 
 ```TypeScript
 import DefaultUI_generate from "./ui-generate/DefaultUI_generate";
 
-@UI.UICallOnly('')
+@UIBind('')
 export default class UIDefault extends DefaultUI_generate {
-    Character: Gameplay.Character;
-
-    oldCameraSystemRelativeTransform: Type.Transform;
-    oldCameraSystemWorldTransform: Type.Transform;
-    oldCameraRelativeTransform: Type.Transform;
-    oldCameraWorldTransform: Type.Transform;
 
     /** 仅在游戏时间对非模板实例调用一次 */
     protected onStart() { 
         //设置能否每帧触发onUpdate
         this.canUpdate = false;
 
-        //找到对应的跳跃按钮
-        const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as UI.StaleButton
-        const touchpad = this.uiWidgetBase.findChildByPath('Canvas/TouchPadDesigner') as UI.TouchPad
-
-        //点击跳跃按钮,异步获取人物后执行跳跃
-        JumpBtn.onPressed.add(()=>{
-            if (this.Character) {
-                this.Character.jump();
-            } else {
-                Gameplay.asyncGetCurrentPlayer().then((player) => {
-                    this.Character = player.character;
-                    //角色执行跳跃功能
-                    this.Character.jump();
-                });
-            }
-        })  
 
         //LocationFixed
         this.mStaleButton.onClicked.add(() => {
-            Gameplay.asyncGetCurrentPlayer().then((player) => {
-                this.Character = player.character;
-                this.oldCameraSystemRelativeTransform=this.Character.cameraSystem.cameraSystemRelativeTransform;
-                this.oldCameraSystemWorldTransform=this.Character.cameraSystem.cameraSystemWorldTransform;
-                this.Character.cameraSystem.cameraLocationMode=0;
-                this.Character.cameraSystem.cameraSystemWorldTransform=this.oldCameraSystemWorldTransform;
-            })
+			Camera.currentCamera.positionMode=0
         })
         //LocationFollow
-        this.mStaleButton_1.onClicked.add(() => {
-            Gameplay.asyncGetCurrentPlayer().then((player) => {
-                this.Character = player.character;
-                this.Character.cameraSystem.cameraLocationMode=1;
-                this.Character.cameraSystem.cameraSystemRelativeTransform=this.oldCameraSystemRelativeTransform;
-        });})
+		this.mStaleButton_1.onClicked.add(() => {
+			Camera.currentCamera.positionMode=1
+        })
+
         //RotationFixed
         this.mStaleButton_2.onClicked.add(() => {
-            Gameplay.asyncGetCurrentPlayer().then((player) => {
-                this.Character = player.character;
-                this.oldCameraWorldTransform=this.Character.cameraSystem.cameraWorldTransform;
-                this.oldCameraWorldTransform.location=this.Character.cameraSystem.cameraSystemWorldTransform.location;
-                this.Character.cameraSystem.cameraRotationMode=0;
-                this.Character.cameraSystem.setOverrideCameraRotation(this.oldCameraWorldTransform.rotation)
-                this.Character.cameraSystem.cameraSystemWorldTransform=this.oldCameraWorldTransform;
-        });})
+			Camera.currentCamera.rotationMode=0
+		})
         //RotationFollow
         this.mStaleButton_3.onClicked.add(() => {
-            Gameplay.asyncGetCurrentPlayer().then((player) => {
-                this.Character = player.character;
-                this.oldCameraSystemWorldTransform=this.Character.cameraSystem.cameraSystemWorldTransform;
-                this.Character.cameraSystem.cameraRotationMode=1;
-                this.Character.cameraSystem.setOverrideCameraRotation(this.oldCameraSystemWorldTransform.rotation)
-                this.oldCameraSystemWorldTransform.rotation=this.Character.getForwardVector().toRotation();
-                this.Character.cameraSystem.cameraSystemWorldTransform=this.oldCameraSystemWorldTransform;
-        });})
+			Camera.currentCamera.rotationMode=1
+		})
         //RotationControl
         this.mStaleButton_4.onClicked.add(() => {
-            Gameplay.asyncGetCurrentPlayer().then((player) => {
-                this.Character = player.character;
-                this.Character.cameraSystem.cameraRotationMode=2
-                this.Character.cameraSystem.resetOverrideCameraRotation()
-                
-        });})
+			Camera.currentCamera.rotationMode=2
+		})
     }
 }
 ```
 
-* 实现效果及项目文件：
+* 实现效果示例：
 
 <video controls src="https://cdn.233xyx.com/1684475954572_044.mp4"></video>
 
-[点击下载](https://cdn.233xyx.com/1684475954503_229.7z)
+
+### 示例4：实现多摄像机之间的切换
+* 上文有提到，除了【对象管理器-世界对象】中有一个自带的无法被删除的摄像机对象，我们还可以从【资源库-游戏功能对象】中拖出或者在脚本中动态创建任意个摄像机对象，下面我们演示一下如何使用switch接口在多个摄像机对象之间自由切换
+* 使用switch切换摄像机时，可以实现瞬间切换到新的摄像机，也可以使用编辑器提供的多种混合效果，完成匀速/变速的运镜效果
+* 提示：各个摄像机对象及其弹簧臂的属性值都是独立的，如果想在游戏中实现多种摄像机效果变换时，可以考虑两种制作思路
+  * 如果各种摄像机效果差别不大，我们可以使用同一个摄像机对象，通过修改属性来实现效果的切换
+  * 如果各种摄像机效果差别较大，需要调整较多属性，我们可以创建多个摄像机对象，各个摄像机对象用于实现专门的效果，通过switch接口来实现效果的切换
+* 脚本示例：
+
+```TypeScript
+ @Component
+ export default class Example_Camera_Switch extends Script {
+     // 当脚本被实例后，会在第一帧更新前调用此函数
+     protected onStart(): void {
+         // 下列代码仅在客户端执行
+         if(SystemUtil.isClient()) {
+             // 获取当前摄像机
+             let myCamera = Camera.currentCamera;
+             let curCameraIndex = -1;
+             // 在场景中随机创建5个摄像机
+             let cameraArray = new Array<Camera>();
+             for (let i = 0; i< 5;i++) {
+                 let camera = GameObject.spawn("Camera") as Camera;
+                 camera.worldTransform.position = new Vector(MathUtil.randomInt(-1000, 1000), MathUtil.randomInt(-1000, 1000),MathUtil.randomInt(0, 1000));
+                 camera.worldTransform.rotation = new Rotation(MathUtil.randomInt(-90, 90), MathUtil.randomInt(-30, 30),MathUtil.randomInt(-150, 150));
+                 cameraArray.push(camera);
+                 camera.onSwitchComplete.add(() => {
+                     console.log("当前摄像机序号 " + i);
+                     curCameraIndex = i;
+                 });
+             }
+             // 添加一个按键方法：按下键盘“1”，切换摄像机
+             InputUtil.onKeyDown(Keys.One, () => {
+                 console.log("Switch Camera");
+                 let newCamera = (curCameraIndex + 1) % 5;
+                 Camera.switch(cameraArray[newCamera], 5, CameraSwitchBlendFunction.Linear);
+             });
+             // 添加一个按键方法：按下键盘“2”，切换回默认摄像机
+             InputUtil.onKeyDown(Keys.Two, () => {
+                 console.log("Switch Default Camera");
+                 Camera.switch(myCamera);
+             });
+         }
+     }
+ }
+```
+* 实现效果示例：
+* ![](https://cdn.233xyx.com/online/2o8uyunB3uhI1697435647673.gif)
