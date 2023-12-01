@@ -57,6 +57,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '预制体功能说明', link: '/Editor/Prefabs.md' },
           { text: '游戏断线重连', link: '/Editor/GameReconnection.md' },
           { text: '绘制模式', link: '/Editor/DrawMode.md' },
+          { text: '场景管理与跳转', link: '/Editor/SceneAndTeleport.md' },
           {
             text: '横竖屏&分辨率模拟',
             link: '/Editor/ScreenOrientation&ResolutionSimulation.md'
@@ -158,8 +159,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '环境光', link: '/WorldObjects/AmbientLight.md' },
-          { text: '太阳光', link: '/WorldObjects/Sunlight.md' },
+          { text: '光照系统', link: '/WorldObjects/Lighting.md' },
           { text: '摄像机', link: '/WorldObjects/Camera.md' },
           { text: '后处理', link: '/WorldObjects/Post-Processing.md' },
           { text: '天空球', link: '/WorldObjects/Skybox.md' },
