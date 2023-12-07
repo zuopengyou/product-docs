@@ -23,6 +23,29 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       }
     ],
     [
+      'script',
+      {},
+      `
+    window.PandoraConfig = {
+      base: {
+        index_type: 'cDEwMTE2/wl',
+        selfpackagename: 'com.metaverse.creator.api',
+      },
+      other: {
+        appkey: 'cDEwMTE2',
+        zone: 'zh',
+        baseUrl: 'https://push.233leyuan.com'
+      }
+    }
+    `
+    ],
+    [
+      'script',
+      {
+        src: 'https://wstatic-01-ali.233leyuan.com/common/pandora/5.2.4/pandora_sdk.min.js'
+      }
+    ],
+    [
       'link',
       {
         rel: 'icon',
