@@ -74,6 +74,7 @@ export default class NewScript extends Script {
 - 属性说明：环境雾提供了便捷的预设效果，供用户选择。后续可能会拓展更多环境雾效果
 
 | 枚举名称 | 英文名称 | 枚举值  | 说明 |
+| ----- | ----- | ----- | ----- |
 | 默认 | Default | 0 | 默认效果，距离和浓度适中 |
 | 近景雾 | NearFog | 1 | 近处的环境雾，距离较短 |
 | 远景雾 | FarFog | 2 | 远处的环境雾，距离较远 |
@@ -185,7 +186,7 @@ export default class NewScript extends Script {
 - 属性说明：此为整体密度系数，是可视雾层的厚度。
 - 效果图：
 
-<video controls src="https://cdn.233xyx.com/1683255361727_623.mp4"></video>
+<video controls src="https://cdn.233xyx.com/online/d6slMtpepjOS1702194132284.mp4"></video>
 
 - 相关接口：
 
