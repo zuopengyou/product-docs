@@ -1834,10 +1834,10 @@ digest-header@^1.0.0:
   dependencies:
     utility "^1.17.0"
 
-doc-theme-323@^2.1.22:
-  version "2.1.22"
-  resolved "https://registry.npmjs.org/doc-theme-323/-/doc-theme-323-2.1.22.tgz#8b31948bcf5e7601e5b81884e8e2ea8f26e3e839"
-  integrity sha512-A+sczlkUpMYvCEJTCBpIDuA0xabIGcgM0zTWkW8uxkrDAXAF6KQwCqughT6uG/TO8N8V7kk9JL8ixHVclmXmcA==
+doc-theme-323@^2.1.23:
+  version "2.1.23"
+  resolved "https://registry.npmjs.org/doc-theme-323/-/doc-theme-323-2.1.23.tgz#bf003502e7a40190ef11acb2c35dacc65ed22391"
+  integrity sha512-wAyYUvm3M4E7Li45jUj0T8NhvWRBEwtnYyVnDknjOziCBrPAarMR/kn2yI9pPKu2oHpYOwuJUvgSzt7i7QA1YA==
   dependencies:
     "@docsearch/css" "^3.3.0"
     "@docsearch/js" "^3.3.0"
