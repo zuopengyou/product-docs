@@ -184,21 +184,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '脚本的生命周期', link: '/Scripting/ScriptLifeCycle.md' },
-          {
-            text: '单机游戏开发注意事项',
-            link: '/Scripting/DevelopingStandaloneGames.md'
-          },
-          {
-            text: '使用与动态加载资源',
-            link: '/Scripting/UsingandDynamicallyLoadingResources.md'
-          },
-          { text: '事件系统', link: '/Scripting/TheEventSystem.md' },
           { text: '数据存储', link: '/Scripting/DataStorage.md' },
-          {
-            text: '网络同步原理和结构',
-            link: '/Scripting/NetworkSynchronizationStructureandMechanics.md'
-          },
           { text: '共享数据', link: '/Scripting/DataSharing.md' }
         ]
       },
