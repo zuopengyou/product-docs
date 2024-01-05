@@ -148,7 +148,7 @@
 #### 放缩距离输入比例
 - 用于设置玩家双指/滚轮放缩摄像机弹簧臂长度的灵敏度。
 - 摄像机放缩距离的效果示例：
-<video controls src="https://cdn.233xyx.com/1684475954572_044.mp4"></video>
+<video controls src="https://cdn.233xyx.com/online/0v6ZxWPFon6V1704449477079.mp4"></video>
 
 
 ### 2.3 其他设置
