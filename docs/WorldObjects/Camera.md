@@ -73,7 +73,8 @@
 - 固定朝向：摄像机固定朝向某一个方向。
 - 跟随朝向：摄像机跟随目标面朝方向。
 - 控制朝向：由UI控件-摄像机滑动区控制此摄像机弹簧臂相对旋转，动态设置的弹簧臂相对旋转不会生效。
-- 请注意：当开启使用控制器控制摄像机旋转时，与摄像机朝向模式=控制朝向效果完全相同，并且调整这两个属性其中之一也会影响到另一条属性，此时弹簧臂的方向与弹簧臂相对旋转（springArm.localTransform.rotation）不是对应关系，而需要用控制器旋转（Player.getControllerRotation/Player.setControllerRotation ）来获取或者设置
+- 使用控制器控制摄像机旋转：开启时，与摄像机朝向模式=控制朝向效果相同；关闭时，会采用摄像机朝向模式=固定朝向/跟随朝向的效果，调整摄像机朝向模式和使用控制器控制摄像机旋转这两个属性其中之一也会影响到另一条属性。
+- 请注意：当开启使用控制器控制摄像机旋转（或者摄像机朝向模式=控制朝向）时，弹簧臂的方向需要用控制器旋转（Player.getControllerRotation/Player.setControllerRotation）来获取或者设置；当关闭使用控制器控制摄像机旋转（或者摄像机朝向模式=固定朝向/跟随朝向）时，弹簧臂的方向由弹簧臂相对旋转（springArm.localTransform.rotation）来获取或者设置。
 
 #### 固定摄像机高度
 - 固定摄像机在Z轴上的坐标，比如角色在跳跃或者上楼梯时，摄像机不会跟随角色改变高度，用于制作俯视角游戏。
@@ -104,13 +105,17 @@
 - 摄像机的相对位置/相对旋转仅改变摄像机，不影响弹簧臂；而调整弹簧臂的相对位置/相对旋转时，会连带摄像机的位置和方向一起变化。
   - 可以把弹簧臂理解成自拍杆，自拍杆的近端由自拍者手持，远端固定相机；摄像机的相对位置/相对旋转仅调整远端相机的位置和方向，不会影响自拍杆；而弹簧臂的相对位置/相对旋转调整自拍杆（会连带相机）的位置和方向。
 :::
-- 如果想要动态设置弹簧臂的方向，例如重置摄像机到角色正背后，但而后仍希望弹簧臂继续由玩家控制方向，可以使用如下方法：
+- 如果想要动态设置弹簧臂的方向，例如重置摄像机到角色正背后，但而后仍希望弹簧臂继续由玩家控制方向，可以使用如下两种方法：
 ```TypeScript
-    //点击攻击按钮，把摄像机重置到角色的正背后
+    //方法一：先关闭使用控制器控制摄像机旋转，然后将弹簧臂相对旋转设置为(0,0,0)
     attackBtn.onPressed.add(()=>{
         Camera.currentCamera.springArm.useControllerRotation = false;
-        Camera.currentCamera.springArm.localTransform.rotation=new Rotation(0,0,0)
+        Camera.currentCamera.springArm.localTransform.rotation=new Rotation(0,0,0);
         Camera.currentCamera.springArm.useControllerRotation = true;
+    })
+    //方法二：如果此时是开启使用控制器控制摄像机旋转的状态，可以直接将覆写控制器旋转的值，也能实现相同的效果
+    attackBtn.onPressed.add(()=>{
+        Player.setControllerRotation(new Rotation(0,0,0));
     })  
 ```
 - 效果示例
