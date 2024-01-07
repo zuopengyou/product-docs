@@ -421,7 +421,6 @@ export default class UIDefault extends DefaultUI_generate {
 		// 添加一个按键方法：按下键盘“1”，切换摄像机
 		InputUtil.onKeyDown(Keys.One, () => {
 		    console.log("Switch Camera");
-	
 		    Camera.switch(camera);
 		});
 		// 添加一个按键方法：按下键盘“2”，切换回默认摄像机
