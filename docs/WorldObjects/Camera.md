@@ -398,3 +398,38 @@ export default class UIDefault extends DefaultUI_generate {
 ```
 * 实现效果示例：
 * ![](https://cdn.233xyx.com/online/2o8uyunB3uhI1697435647673.gif)
+
+* 如果想要新创建一个挂在角色身上的摄像机对象，可以使用以下方法：
+* ```TypeScript
+ @Component
+ export default class Example_Camera_Switch extends Script {
+     // 当脚本被实例后，会在第一帧更新前调用此函数
+     protected onStart(): void {
+         // 下列代码仅在客户端执行
+         if(SystemUtil.isClient()) {
+	        // 获取当前摄像机
+	        let myCamera = Camera.currentCamera;
+		//创建并且设置第二个摄像机，挂载在角色身上
+		let camera = GameObject.spawn<Camera>("Camera") as Camera;
+		camera.parent=Player.localPlayer.character
+		camera.positionMode=1
+		camera.rotationMode=2
+		camera.springArm.useControllerRotation=true
+		camera.springArm.length=500
+		camera.fov=90
+
+		// 添加一个按键方法：按下键盘“1”，切换摄像机
+		InputUtil.onKeyDown(Keys.One, () => {
+		    console.log("Switch Camera");
+	
+		    Camera.switch(camera);
+		});
+		// 添加一个按键方法：按下键盘“2”，切换回默认摄像机
+		InputUtil.onKeyDown(Keys.Two, () => {
+		    console.log("Switch Default Camera");
+		    Camera.switch(myCamera);
+		});
+         }
+     }
+ }
+```
