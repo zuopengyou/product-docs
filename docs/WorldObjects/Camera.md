@@ -400,7 +400,7 @@ export default class UIDefault extends DefaultUI_generate {
 * ![](https://cdn.233xyx.com/online/2o8uyunB3uhI1697435647673.gif)
 
 * 如果想要新创建一个挂在角色身上的摄像机对象，可以使用以下方法：
-* ```TypeScript
+```TypeScript
  @Component
  export default class Example_Camera_Switch extends Script {
      // 当脚本被实例后，会在第一帧更新前调用此函数
