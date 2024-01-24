@@ -535,5 +535,3 @@ Skybox.cloudDensity = 1;
 //设置云速度
 Skybox.cloudSpeed = 1;
 ```
-
-## 如何制作生成天空球贴图？

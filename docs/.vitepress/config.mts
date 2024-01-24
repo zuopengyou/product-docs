@@ -80,6 +80,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '预制体功能说明', link: '/Editor/Prefabs.md' },
           { text: '游戏断线重连', link: '/Editor/GameReconnection.md' },
           { text: '绘制模式', link: '/Editor/DrawMode.md' },
+          { text: '场景管理与跳转', link: '/Editor/SceneAndTeleport.md' },
           {
             text: '横竖屏&分辨率模拟',
             link: '/Editor/ScreenOrientation&ResolutionSimulation.md'
@@ -206,21 +207,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '脚本的生命周期', link: '/Scripting/ScriptLifeCycle.md' },
-          {
-            text: '单机游戏开发注意事项',
-            link: '/Scripting/DevelopingStandaloneGames.md'
-          },
-          {
-            text: '使用与动态加载资源',
-            link: '/Scripting/UsingandDynamicallyLoadingResources.md'
-          },
-          { text: '事件系统', link: '/Scripting/TheEventSystem.md' },
           { text: '数据存储', link: '/Scripting/DataStorage.md' },
-          {
-            text: '网络同步原理和结构',
-            link: '/Scripting/NetworkSynchronizationStructureandMechanics.md'
-          },
           { text: '共享数据', link: '/Scripting/DataSharing.md' }
         ]
       },
@@ -354,11 +341,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://portal.ark.online/'
       },
       {
-        text: '027 版本',
+        text: '028 版本',
         items: [
           {
-            text: '028 版本',
-            link: 'https://docs-028.ark.online/',
+            text: '027 版本',
+            link: 'https://docs-027.ark.online/',
             path: true
           },
           {
