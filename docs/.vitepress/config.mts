@@ -149,10 +149,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          {
-            text: '四轮载具',
-            link: '/GameplayObjects/Four-wheeledVehicles.md'
-          },
           { text: '高级轮式载具', link: '/GameplayObjects/AdvancedVehicle.md' },
           { text: '寻路系统', link: '/GameplayObjects/NavigationArea.md' },
           { text: '交互物', link: '/GameplayObjects/Interactors.md' },
