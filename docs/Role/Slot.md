@@ -167,3 +167,38 @@ halo.destroy()
 效果图：
 
 <video controls src="https://cdn.233xyx.com/online/GTTW3nwykWG01694604176305.mp4"></video>
+
+## 非人形形象插槽
+
+无论是人形插槽还是非人形插槽，使用均一致，具体请见上方，这里主要描述每个不同形象的插槽位置。
+
+### 四足插槽介绍说明
+
+![](https://cdn.233xyx.com/online/WFXtm1raGxJn1706167819283.png)    
+
+| 中文名称  | 枚举名称 | 枚举序号  | 应用说明 |
+| ----- | ----- | ----- | ----- |
+| 根节点 | Root | 0 | 由于根节点不会跟随动作晃动，相对于比较稳定，所以会放置一些脚底特效等。 |
+| 胸腔 | Chest | 1 | 放置胸部等装饰物 |
+| 上脊柱 | UpperSpine | 2 | 放置背部等装饰物 |
+| 下脊柱 | LowerSpine | 3 | 放置背部等装饰物 |
+| 脖子 | Neck | 4 | 放置围脖、吊牌等装饰物 |
+| 头部 | Head | 5 | 放置眼镜、帽子等装饰物 |
+| 左前脚 | FrontalLeftFoot | 6 | 放置攻击特效和道具等 |
+| 右前脚 | FrontalRightFoot | 7 | 放置攻击特效和道具等 |
+| 左后脚 | RearLeftFoot | 8 | 放置攻击特效和道具等 |
+| 右后脚 | RearRightFoot | 9 | 放置攻击特效和道具等 |
+| 尾巴 | Tail | 10 | 放置尾部装饰物 |
+
+示例脚本：
+
+```ts
+//新增光环特效
+let halo = GameObject.spawn("27704",{ replicates: true }) as Effect;
+//将光环插到非人形对象的头部插槽上
+chara.attachToSlot(halo, NonHumanoidType.Head);
+```
+
+效果图：
+
+<video controls src="https://cdn.233xyx.com/online/HxZTe1GGAQEk1694604176304.mp4"></video>
