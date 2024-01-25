@@ -199,7 +199,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '动画与姿态', link: '/Role/AnimationAndStane.md' },
           { text: '角色插槽', link: '/Role/Slot.md' },
           { text: '布娃娃功能', link: '/Role/Ragdoll.md' },
-          { text: '头顶名称', link: '/Role/OverHeadName.md' }
+          { text: '头顶名称', link: '/Role/OverHeadName.md' },
+          { text: '基础状态', link: '/Role/State.md' }
         ]
       },
       {
