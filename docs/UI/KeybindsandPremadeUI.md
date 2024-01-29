@@ -13,11 +13,11 @@
 ## UI 编辑器内的【按键绑定】菜单
 
 - 双击工程内容中的任意 UI 文件，点击 UI 编辑器工具栏的【按键绑定】按钮后，打开【按键绑定】菜单，开发者可以在此菜单直接将移动端 UI（包括摇杆、摄像机滑动区、按钮）绑定或覆盖到键鼠键位上
-- 每个 UI 文件的按键绑定菜单会自动读取该 UI 文件内所有的摇杆、摄像机滑动区、按钮、按钮（废弃）这四类 UI 控件
+- 每个 UI 文件的按键绑定菜单会自动读取该 UI 文件内所有的摇杆、摄像机滑动区、按钮、文本按钮这四类 UI 控件；每个键鼠按键只能绑定一个UI控件，后面绑定的控件会把前面绑定的控件覆盖；但是一个UI控件可以绑定到多个按键
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnuSXwPA9zT2bIOvFYbhS1kc.png)
 
-- 对于摄像机滑动区、按钮、按钮（废弃）：点击/释放/按住绑定的键鼠按键就会触发点击/释放/按住对应 UI 控件
+- 对于摄像机滑动区、按钮、文本按钮：点击/释放/按住绑定的键鼠按键就会触发点击/释放/按住对应 UI 控件
 - 对于摇杆：支持绑定摇杆的上下左右四个方向和仅按下/抬起，
 
   - 上下左右四个方向：分别对应摇杆输入值为（0,1）、（0,-1）、（-1,0）和（1,0）四种效果
@@ -31,15 +31,25 @@
 ## 键鼠绑定相关 API
 
 - 除了 UI 编辑器内的按键绑定菜单，开发者也可以使用脚本自定义控制方案，或者覆盖默认键位
+- 请注意：与UI 编辑器内的【按键绑定】菜单逻辑相同，每个键鼠按键只能绑定一个UI控件，后面绑定的控件会把前面绑定的控件覆盖；但是一个UI控件可以绑定到多个按键
 
 **脚本示例：**
 
 ```ts
 const JumpBtn = this.uiWidgetBase.findChildByPath('Canvas/Button_Jump') as Button
-//绑定按键
-InputUtil.bindButton(Keys.Up,JumpBtn)
-//解绑按键
-InputUtil.unbindButton(Keys.Up)
+const Joystick = this.uiWidgetBase.findChildByPath('Canvas/Joystick') as VirtualJoystickPanel
+
+//按钮绑定按键
+JumpBtn.addKey(Keys.Up)
+//按钮解绑按键
+JumpBtn.removeKey(Keys.Up)
+//摇杆绑定按键
+Joystick.addKey(new JoystickBindKeyType(Keys.W,Keys.S,Keys.A,Keys.D))
+//摇杆改绑按键
+let keydata1=new JoystickBindKeyType(Keys.I,Keys.K,Keys.J,Keys.L) 
+Joystick.addKey(keydata1)
+//摇杆解绑按键
+Joystick.removeKey(new JoystickBindKeyType(Keys.I,Keys.K,Keys.J,Keys.L))
 ```
 
 - 为了满足开发者针对 PC 游戏端的不同需求，比如希望某个摄像机滑动区/摇杆是否可以被鼠标点击，因此在 VirtualJoystickPanel 和 TouchPad 类中提供了是否被鼠标控制的接口，编辑器内也可以在摄像机滑动区/摇杆属性面板中勾选此属性
@@ -55,8 +65,8 @@ InputUtil.unbindButton(Keys.Up)
 let touchpad=this.uiWidgetBase.findChildByPath('Canvas/UITouchPad_1') as TouchPad
 let joystick=this.uiWidgetBase.findChildByPath('Canvas/UIVirtualJoystickPanel_1') as VirtualJoystickPanel
 //设置摇杆和摄像机滑动区可以被鼠标点击
-touchpad.controlByMouseEnable(true)
-joystick.controlByMouseEnable(true)
+touchpad.controlByMouseEnable=true
+joystick.controlByMouseEnable=true
 //获取摇杆和摄像机滑动区是否可以被鼠标点击
 let bool1 = touchpad.controlByMouseEnable
 let bool2 = joystick.controlByMouseEnable
@@ -83,15 +93,19 @@ let bool2 = joystick.controlByMouseEnable
 
 ## PC 端鼠标锁定功能及 API
 
-- PC 游戏端允许使用鼠标锁定功能，玩家按 Shift 可以切换鼠标锁定，鼠标锁定情况下隐藏鼠标，转动鼠标直接旋转镜头和人物朝向，这样可以同时解放左键和右键留给其他角色行动，比如实现 PC 射击游戏常见的右键瞄准 + 左键射击
+- PC 游戏端允许使用鼠标锁定功能，鼠标锁定情况下隐藏鼠标，转动鼠标直接旋转镜头和人物朝向，这样可以同时解放左键和右键留给其他角色行动，比如实现 PC 射击游戏常见的右键瞄准 + 左键射击
 ![](https://cdn.233xyx.com/1681457046992_545.gif)
-- 开发者可以在脚本中控制是否允许玩家切换鼠标锁定状态
+- 您既可以使用isLockMouse直接控制玩家当前的鼠标锁定状态，也可以使用mouseLockOptionEnabled控制是否要允许玩家自行用shift键切换鼠标锁定状态（相当于把isLockMouse的值交给玩家来控制）
 
 **脚本示例：**
 
 ```ts
-//设置为不允许玩家切换鼠标锁定状态
-InputUtil.setMouseLockable=false
-//设置为允许玩家切换鼠标锁定状态
-InputUtil.setMouseLockable=true;
+//设置为不允许玩家使用shift切换鼠标锁定状态
+InputUtil.mouseLockOptionEnabled=false
+//设置为允许玩家使用shift切换鼠标锁定状态
+InputUtil.mouseLockOptionEnabled=true
+//直接设置玩家进入鼠标锁定状态
+InputUtil.isLockMouse=false
+//直接设置玩家结束鼠标锁定状态
+InputUtil.isLockMouse=true
 ```
