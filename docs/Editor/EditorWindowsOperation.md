@@ -92,13 +92,16 @@
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHWhEB4gVUlw1Sbky973Fch.png)
 
 左侧三个按钮分别是移动（W）、旋转（E）、缩放（R），可以在此选择需要调整哪一个属性，也可以在主视口中通过快捷键操作
-最右侧图标 + 数值含义是在**所选**的 transform 工具下，执行的最小单位（下图为移动的单位）
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoJoHhR0uznpiilaTnEPYTG.png)
+#### 网格
 
-单击网格图标，可选择是否启用此功能；若不启用，则按 **系统默认最小单位** 执行操作命令 **该单位远小于下拉框中提供的单位**
+开启网格功能后，对象将按照设定的单位移动、旋转或缩放
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrJMFKqfc4dCFH3Fct0Kzjc.png)
+![](https://cdn.233xyx.com/online/LJ8lFwwbn5Pr1706493164033.png)
+
+可以点击下拉按钮，从预设值中选择网格数值，也可以直接输入数值（移动工具支持1-1000的整数，旋转工具支持1-360的整数，缩放工具支持0.0625-10.0的小数）
+
+![](https://cdn.233xyx.com/online/Pcv6exwFtDK01706492495662.png)
 
 #### 世界/本地轴向
 
@@ -110,15 +113,6 @@
 | ----- | ------------ | ------------ |
 |说明|进行移动和旋转时，始终按照世界坐标进行，不随着物体的旋转而变化||
 |截图|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnDel2XKjXTxXaWmrDEJgTdE.png)|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8N8sYUjN1K8ssV8gXojpQb.png)|
-
-#### 新建
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5P9rCGfC9owOES92vlhnRb.png)
-
-- 点击新建脚本，会在工程内容中新增一个脚本文件，并置于重命名状态
-- 点击新建预制体，会在工程内容中新增一个预制体文件，并置于重命名状态，并且主视口与对象管理器将会自动进入该预制体的编辑状态
-- 点击新建 UI，会在工程内容中新增一个 UI 文件，并置于重命名状态
-- 点击新建角色，将打开角色编辑器
 
 #### 运行
 
