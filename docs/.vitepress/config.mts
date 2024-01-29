@@ -73,6 +73,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsed: true,
         items: [
           { text: '编辑器窗口操作', link: '/Editor/EditorWindowsOperation.md' },
+          { text: 'Transform工具', link: '/Editor/TransformTool.md'},
           {
             text: '画质级别模拟与设置',
             link: '/Editor/GraphicsQualitySettings.md'
