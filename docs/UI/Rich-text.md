@@ -73,3 +73,111 @@
 | teal                   | `#008080ff`          | ![](https://cdn.233xyx.com/1681453408279_910.png) |
 | white                  | `#ffffffff`          | ![](https://cdn.233xyx.com/1681453408609_561.png) |
 | yellow                 | `#ffff00ff`          | ![](https://cdn.233xyx.com/1681453408762_077.png) |
+
+
+
+## 富图片及其标记格式列表
+* 文本框/输入框控件支持使用标记格式插入富图片，富图片功能目前支持使用233娘表情图共94张
+* 使用方法：将文本框/输入框控件的富文本属性开启，在文字输入富图片的对应标记格式，标记格式会自动转成富图片，富图片的尺寸由文本框的字号大小决定
+* 如果使用了ChatBubble类的聊天气泡接口，能自动支持将房间内聊天使用到的233表情同步显示在聊天气泡中
+* 请注意：目前这批233娘的富图片仅支持在国内环境使用，请谨慎使用，处理海外本地化时应将所使用的富图片去除，否则会展示标记格式原文本
+* 富图片标记格式对应表
+| 富图片标记格式 | 图片                                                                                                                                                                                                                                           |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [发怒]     | ![](https://cdn.233xyx.com/online/VeiFRqN3AHIb1706526133475.png) |
+| [鼓掌]     | ![](https://cdn.233xyx.com/online/qfvGMY7kKNyd1706526133475.png) |
+| [背叛]     | ![](https://cdn.233xyx.com/online/i2I2LcSlqSpl1706526133475.png) |
+| [大笑]     | ![](https://cdn.233xyx.com/online/UGNa2UhGCHiu1706526133475.png) |
+| [笑容满面] | ![](https://cdn.233xyx.com/online/kKQ2qZw5S3gO1706526133475.png) |
+| [黑线]     | ![](https://cdn.233xyx.com/online/rilMuaqxk1WB1706526133475.png) |
+| [羞]       | ![](https://cdn.233xyx.com/online/7QMMELUhQ0D91706526133475.png) |
+| [快哭了]   | ![](https://cdn.233xyx.com/online/C8qHT07EZVZf1706526133475.png) |
+| [冷汗]     | ![](https://cdn.233xyx.com/online/voOj9uIxJQQD1706526133475.png) |
+| [冲]       | ![](https://cdn.233xyx.com/online/BEi11KPfiPK11706526133475.png) |
+| [酷]       | ![](https://cdn.233xyx.com/online/Tb6PtiHJZoKH1706526133475.png) |
+| [抓狂]     | ![](https://cdn.233xyx.com/online/QDXH1ydXKFd91706526133475.png) |
+| [新月脸]   | ![](https://cdn.233xyx.com/online/HcfME4d4QNCQ1706526133475.png) |
+| [哭哭]     | ![](https://cdn.233xyx.com/online/vAva3hO8Q2Ff1706526133475.png) |
+| [可爱]     | ![](https://cdn.233xyx.com/online/MCKY2y5Yvorw1706526133475.png) |
+| [鄙视你]   | ![](https://cdn.233xyx.com/online/5xbexxtDpc1T1706526133475.png) |
+| [在做了]   | ![](https://cdn.233xyx.com/online/K9HMTGSI5a4g1706526133475.png) |
+| [疑问]     | ![](https://cdn.233xyx.com/online/MbAkZAJfL6I31706526133475.png) |
+| [吃饭]     | ![](https://cdn.233xyx.com/online/3MZDK4dlmoGg1706526133475.png) |
+| [期待]     | ![](https://cdn.233xyx.com/online/XRpOpXmhcoUC1706526133475.png) |
+| [打call]   | ![](https://cdn.233xyx.com/online/mBbWEK5ZqjkX1706526133475.png) |
+| [财迷]     | ![](https://cdn.233xyx.com/online/0bQJhDMvk5Jo1706526133475.png) |
+| [委屈]     | ![](https://cdn.233xyx.com/online/CImJRhFDQsLI1706526133475.png) |
+| [皱眉]     | ![](https://cdn.233xyx.com/online/5nolrekhWtym1706526133476.png) |
+| [满月脸]   | ![](https://cdn.233xyx.com/online/UL0IktLMpC2t1706526133476.png) |
+| [收到]     | ![](https://cdn.233xyx.com/online/XSW3iyfou2Dj1706526133476.png) |
+| [拜拜]     | ![](https://cdn.233xyx.com/online/hFDnePEcf6721706526133476.png) |
+| [做鬼脸]   | ![](https://cdn.233xyx.com/online/PelOjeppSeil1706526133476.png) |
+| [呲牙]     | ![](https://cdn.233xyx.com/online/A20p7npWyyhY1706526133476.png) |
+| [我晕]     | ![](https://cdn.233xyx.com/online/ttoftYT0TL6i1706526133476.png) |
+| [愉快]     | ![](https://cdn.233xyx.com/online/2VxipacFLOCd1706526133476.png) |
+| [心心脸]   | ![](https://cdn.233xyx.com/online/7txiuymqfa0e1706526133476.png) |
+| [送心心]   | ![](https://cdn.233xyx.com/online/W9FTY09qkUED1706526133476.png) |
+| [吐血]     | ![](https://cdn.233xyx.com/online/GsSv8B8gOYsW1706526133476.png) |
+| [稍等]     | ![](https://cdn.233xyx.com/online/D2eXphDo42vX1706526133476.png) |
+| [摊手]     | ![](https://cdn.233xyx.com/online/pavlLuKI5QXh1706526133476.png) |
+| [求抱抱]   | ![](https://cdn.233xyx.com/online/QFUBdZRd74e61706526133476.png) |
+| [灵光一闪] | ![](https://cdn.233xyx.com/online/eavLsPbSdwap1706526133476.png) |
+| [无辜笑]   | ![](https://cdn.233xyx.com/online/ESyAGf93oF3g1706526133476.png) |
+| [烦躁]     | ![](https://cdn.233xyx.com/online/LjDNxp7PALUb1706526133476.png) |
+| [小丑]     | ![](https://cdn.233xyx.com/online/cTYsFrSGUrSv1706526133476.png) |
+| [敲键盘]   | ![](https://cdn.233xyx.com/online/nmsvHhjPu8SA1706526133476.png) |
+| [飞吻]     | ![](https://cdn.233xyx.com/online/pCXYRQ9dJHPN1706526133476.png) |
+| [亲亲]     | ![](https://cdn.233xyx.com/online/yeITAehCaN8x1706526133476.png) |
+| [笑]       | ![](https://cdn.233xyx.com/online/WFpZEpkAHo861706526133476.png) |
+| [笑哭]     | ![](https://cdn.233xyx.com/online/yWSuEWAHu2Ml1706526133476.png) |
+| [嬉笑]     | ![](https://cdn.233xyx.com/online/3xKlx5flI3vQ1706526133476.png) |
+| [柠檬]     | ![](https://cdn.233xyx.com/online/i8ZEPCWtrIis1706526133476.png) |
+| [听音乐]   | ![](https://cdn.233xyx.com/online/f4ALYAWfePxK1706526133476.png) |
+| [心]       | ![](https://cdn.233xyx.com/online/AdVHNZRceqUi1706526133476.png) |
+| [戴口罩]   | ![](https://cdn.233xyx.com/online/vJkCmsPMW8fs1706526133476.png) |
+| [调皮]     | ![](https://cdn.233xyx.com/online/20Zer2PmWIyV1706526133476.png) |
+| [抠鼻]     | ![](https://cdn.233xyx.com/online/V1O0915qJwp61706526133476.png) |
+| [我看行]   | ![](https://cdn.233xyx.com/online/CKRHohKIoqUx1706526133476.png) |
+| [惊恐]     | ![](https://cdn.233xyx.com/online/6CqT999xNjVR1706526133476.png) |
+| [派对]     | ![](https://cdn.233xyx.com/online/GB5skm5ynmAS1706526133476.png) |
+| [我想静静] | ![](https://cdn.233xyx.com/online/LHqkO0Iol1Kj1706526133476.png) |
+| [石化]     | ![](https://cdn.233xyx.com/online/0leiIbxsWUCA1706526133476.png) |
+| [可怜]     | ![](https://cdn.233xyx.com/online/ia6q9PwDQplg1706526133476.png) |
+| [撇嘴]     | ![](https://cdn.233xyx.com/online/YcCP5ur7rn391706526133476.png) |
+| [尬笑]     | ![](https://cdn.233xyx.com/online/3TpBGfMR9iSj1706526133476.png) |
+| [举手]     | ![](https://cdn.233xyx.com/online/8eC6Tjv11Ub51706526133476.png) |
+| [翻白眼]   | ![](https://cdn.233xyx.com/online/a2sGiw3dLT9b1706526133476.png) |
+| [致敬]     | ![](https://cdn.233xyx.com/online/TU898GvKRlNt1706526133476.png) |
+| [流泪]     | ![](https://cdn.233xyx.com/online/Lbm1h0GAtSUO1706526133476.png) |
+| [注意]     | ![](https://cdn.233xyx.com/online/G1fw1VuUslia1706526133476.png) |
+| [震惊]     | ![](https://cdn.233xyx.com/online/DFjW6H1gQ1Is1706526133476.png) |
+| [闭嘴]     | ![](https://cdn.233xyx.com/online/QCCerFeyNq2C1706526133476.png) |
+| [害羞]     | ![](https://cdn.233xyx.com/online/hc61A5OUkKa21706526133476.png) |
+| [叹气]     | ![](https://cdn.233xyx.com/online/3ea5NnZnf4wE1706526133476.png) |
+| [骷髅]     | ![](https://cdn.233xyx.com/online/Qg668cQH9Gpe1706526133476.png) |
+| [酣睡]     | ![](https://cdn.233xyx.com/online/V81MHyhdJM3o1706526133476.png) |
+| [困]       | ![](https://cdn.233xyx.com/online/08ZOhjS6dk3v1706526133476.png) |
+| [开心]     | ![](https://cdn.233xyx.com/online/1tIfyne76StA1706526133476.png) |
+| [打脸]     | ![](https://cdn.233xyx.com/online/M18o0TWpcIi91706526133476.png) |
+| [骄傲]     | ![](https://cdn.233xyx.com/online/sZawfcsdH0sC1706526133476.png) |
+| [泣不成声] | ![](https://cdn.233xyx.com/online/mFy2wDneJYvu1706526133476.png) |
+| [无奈]     | ![](https://cdn.233xyx.com/online/mYCulZgkvESu1706526133476.png) |
+| [敲打]     | ![](https://cdn.233xyx.com/online/kTrUMFVg9sCw1706526133476.png) |
+| [强]       | ![](https://cdn.233xyx.com/online/YLBIBfIisByX1706526133476.png) |
+| [奋斗]     | ![](https://cdn.233xyx.com/online/tx5786jw7WLY1706526133477.png) |
+| [惊呆]     | ![](https://cdn.233xyx.com/online/TLZTKbdNJ1T51706526133477.png) |
+| [汗]       | ![](https://cdn.233xyx.com/online/sDukpmdWxTDK1706526133477.png) |
+| [泪奔]     | ![](https://cdn.233xyx.com/online/mQD84EGx6aDX1706526133477.png) |
+| [感谢]     | ![](https://cdn.233xyx.com/online/oYCo1aqlbUJQ1706526133477.png) |
+| [思索]     | ![](https://cdn.233xyx.com/online/BdU3bwl46Ptm1706526133477.png) |
+| [偷笑]     | ![](https://cdn.233xyx.com/online/4w5G3QbfK42p1706526133477.png) |
+| [摸头]     | ![](https://cdn.233xyx.com/online/cqWN74bM5JSu1706526133477.png) |
+| [呕吐]     | ![](https://cdn.233xyx.com/online/WcO1KTXSp3xS1706526133477.png) |
+| [vr]       | ![](https://cdn.233xyx.com/online/5DZtKoSX9W791706526133477.png) |
+| [坏笑]     | ![](https://cdn.233xyx.com/online/njXUd0FtTAKj1706526133477.png) |
+| [机智]     | ![](https://cdn.233xyx.com/online/uwLHIFiWFVQA1706526133477.png) |
+| [哈欠]     | ![](https://cdn.233xyx.com/online/By27hPmx2F4w1706526133477.png) |
+| [耶]       | ![](https://cdn.233xyx.com/online/YWo5C8vQYuGD1706526133477.png) |
+
+
+
