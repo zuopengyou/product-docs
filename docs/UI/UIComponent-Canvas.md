@@ -124,28 +124,6 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6lenGSS6jci4DuzdnJlupb.png)
 
-### 自适应规则
-
-- 水平适应
-
-  - 固定宽度
-
-    - 根据变换大小，显示水平的宽度
-  - 自适应宽度
-
-    - 根据容器内的内容大小，显示水平的宽度
-- 垂直适应
-
-  - 固定高度
-
-    - 根据变换大小，显示垂直的高度
-  - 自适应高度
-
-    - 根据容器内的内容大小，显示垂直的高度
-- 示意图：
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncA6nH9CpQgflWEkT4XT8Qh.gif)
-
 ### 边缘间距
 
 - 左边距
