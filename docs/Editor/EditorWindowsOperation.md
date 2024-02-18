@@ -87,38 +87,18 @@
 
 见[绘制模式](https://docs.ark.online/Editor/DrawMode.html)文档
 
-#### transform 工具
+#### Transform工具
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHWhEB4gVUlw1Sbky973Fch.png)
+<img src="https://cdn.233xyx.com/athena/online/1c140c9167ca44d0af20ea54d51cad49_128655771.webp" width="80%">
 
-左侧三个按钮分别是移动（W）、旋转（E）、缩放（R），可以在此选择需要调整哪一个属性，也可以在主视口中通过快捷键操作
-最右侧图标 + 数值含义是在**所选**的 transform 工具下，执行的最小单位（下图为移动的单位）
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoJoHhR0uznpiilaTnEPYTG.png)
-
-单击网格图标，可选择是否启用此功能；若不启用，则按 **系统默认最小单位** 执行操作命令 **该单位远小于下拉框中提供的单位**
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrJMFKqfc4dCFH3Fct0Kzjc.png)
-
-#### 世界/本地轴向
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoOfKI8AMvNlaJDtd3MHLPd.png)
-
-点击该图标，可切换主视口所使用的世界/本地轴向
-
-|轴向|世界轴向|本地轴向|
-| ----- | ------------ | ------------ |
-|说明|进行移动和旋转时，始终按照世界坐标进行，不随着物体的旋转而变化||
-|截图|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnDel2XKjXTxXaWmrDEJgTdE.png)|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8N8sYUjN1K8ssV8gXojpQb.png)|
-
-#### 新建
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5P9rCGfC9owOES92vlhnRb.png)
-
-- 点击新建脚本，会在工程内容中新增一个脚本文件，并置于重命名状态
-- 点击新建预制体，会在工程内容中新增一个预制体文件，并置于重命名状态，并且主视口与对象管理器将会自动进入该预制体的编辑状态
-- 点击新建 UI，会在工程内容中新增一个 UI 文件，并置于重命名状态
-- 点击新建角色，将打开角色编辑器
+Transform工具的相关功能见[Transform工具](https://docs-029.ark.online/Editor/TransformTool.html)文档：
+- [移动工具](https://docs-029.ark.online/Editor/TransformTool.html#%E7%A7%BB%E5%8A%A8%E5%B7%A5%E5%85%B7)
+- [旋转工具](https://docs-029.ark.online/Editor/TransformTool.html#%E6%97%8B%E8%BD%AC%E5%B7%A5%E5%85%B7)
+- [缩放工具](https://docs-029.ark.online/Editor/TransformTool.html#%E7%BC%A9%E6%94%BE%E5%B7%A5%E5%85%B7)
+- [“中心/锚点”模式](https://docs-029.ark.online/Editor/TransformTool.html#%E4%B8%AD%E5%BF%83-%E9%94%9A%E7%82%B9-%E6%A8%A1%E5%BC%8F)
+- [网格](https://docs-029.ark.online/Editor/TransformTool.html#%E7%BD%91%E6%A0%BC)
+- [“世界/本地”轴向](https://docs-029.ark.online/Editor/TransformTool.html#%E4%B8%96%E7%95%8C-%E6%9C%AC%E5%9C%B0-%E8%BD%B4%E5%90%91)
+- [召唤Transform工具](https://docs-029.ark.online/Editor/TransformTool.html#%E5%8F%AC%E5%94%A4transform%E5%B7%A5%E5%85%B7)
 
 #### 运行
 
@@ -378,31 +358,9 @@
 滚轮滚动，可移动摄像机（摄像机朝向保持不变）
 WASD+ 鼠标右键，可移动摄像机并调整摄像机朝向（摄像机位置与朝向均改变）
 
-#### transform 工具
+#### Transform工具
 
-移动：选中对象后按 W 可切换至移动模式，鼠标左键拖拽对应坐标轴即可完成物体的移动
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2fl2QbIVTlof4upSUyOMKc.png)
-
-拖拽时可选择多个坐标轴
-对象可多选
-除移动坐标轴之外，鼠标左键按住物体锚点拖拽也可以移动对象，并且与 transform 模式无关
-  - 使用该操作时，静态模型对象在靠近时将会自动吸附至另一静态模型对象上
-在对主视口对象进行移动时，按住 shift 键可以锁定摄像机与对象之间的相对位置
-旋转：选中对象后按 E 可切换至旋转模式，鼠标左键旋转视口中的旋转轴即可完成物体的旋转
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnS31cSLeS2etGq6gQHgyi2d.png)
-
-旋转时只能选择一个坐标轴
-对象可多选，**但多选时将基于包围盒几何中心旋转，而非对象锚点**
-缩放：选中对象后按 R 可切换至缩放模式，鼠标左键拖拽对应缩放轴即可完成物体的缩放
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2iLzApXWANCAvf7zdfvPGh.png)
-
-缩放时可选择多个坐标轴
-对象可多选
-缩放按物体当前长宽高的比值进行等比缩放
-单边缩放（**仅静态模型可以使用**）：如图中所示六个点，分别是上下、左右、前后；鼠标左键拖拽这六个点，可实现单边缩放的效果
+主视口中使用Transform工具的相关操作见[Transform工具](https://docs-029.ark.online/Editor/TransformTool.html)文档
 
 #### 主视口右键菜单
 

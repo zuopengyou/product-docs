@@ -72,7 +72,7 @@ this.uiObject.zOrder=0
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxHnqEzLP0HGoHBBf5WHzQe.gif)
 
-### 自动大小
+### 水平自动大小/垂直自动大小
 
 - 选择自动大小后，UI 控件的大小会自动调整至理想大小
 

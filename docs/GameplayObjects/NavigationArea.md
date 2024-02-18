@@ -121,13 +121,18 @@ export default class NewScript1 extends Script {
 
         //客户端NPC使用follow()开始跟随角色进行移动
         if (SystemUtil.isClient()) {
-            Navigation.follow(NPCforC, player.character, 10, () => {
-                console.log(`寻路成功`);
-            }, () => {
-                console.log(`寻路失败`);
-            });
-
-            this.serverFollow(player.userId);
+            if (Navigation.follow(NPCforC, player.character)){
+                console.log(`在寻路区域内找到目标，开始跟随`);
+                Navigation.follow(NPCforC, player.character, 10, () => {
+                    console.log(`跟随到了目标，跟随成功`);
+                }, () => {
+                    console.log(`无法找到目标，跟随失败`);
+                });
+    
+                this.serverFollow(player.userId);
+            }else{
+                console.log(`无法找到目标，跟随失败`);
+            }
         }
 
         //开始执行跟随后，使用stopFollow()函数，将客户端NPC停止寻路功能，双端NPC需要在服务器端调用stopFollow()函数；
@@ -142,9 +147,9 @@ export default class NewScript1 extends Script {
         let player = Player.getPlayer(id); //在服务器端获取到主角；
         let NPCforSC = mw.GameObject.findGameObjectById("1CDC00EC") as mw.Character; //通过对象ID获取到双端NPC
         Navigation.follow(NPCforSC, player.character, 10, () => {
-            console.log(`寻路成功`);
+            console.log(`跟随成功`);
         }, () => {
-            console.log(`寻路失败`);
+            console.log(`跟随失败`);
         });
     }
 }
