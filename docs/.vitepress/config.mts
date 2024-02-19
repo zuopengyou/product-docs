@@ -73,6 +73,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsed: true,
         items: [
           { text: '编辑器窗口操作', link: '/Editor/EditorWindowsOperation.md' },
+          { text: 'Transform工具', link: '/Editor/TransformTool.md'},
           {
             text: '画质级别模拟与设置',
             link: '/Editor/GraphicsQualitySettings.md'
@@ -149,10 +150,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          {
-            text: '四轮载具',
-            link: '/GameplayObjects/Four-wheeledVehicles.md'
-          },
           { text: '高级轮式载具', link: '/GameplayObjects/AdvancedVehicle.md' },
           { text: '寻路系统', link: '/GameplayObjects/NavigationArea.md' },
           { text: '交互物', link: '/GameplayObjects/Interactors.md' },
@@ -199,7 +196,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '动画与姿态', link: '/Role/AnimationAndStane.md' },
           { text: '角色插槽', link: '/Role/Slot.md' },
           { text: '布娃娃功能', link: '/Role/Ragdoll.md' },
-          { text: '头顶名称', link: '/Role/OverHeadName.md' }
+          { text: '头顶名称', link: '/Role/OverHeadName.md' },
+          { text: '基础状态', link: '/Role/State.md' }
         ]
       },
       {
@@ -269,7 +267,17 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: 'v0.27.0.3', link: '/ReleaseNote/v0.27.0.1.md' },
+          { text: 'v0.29.0.6', link: '/ReleaseNote/v0.29.0.6.md' },
+          { text: 'v0.29.0.5', link: '/ReleaseNote/v0.29.0.5.md' },
+          { text: 'v0.29.0.4', link: '/ReleaseNote/v0.29.0.4.md' },
+          { text: 'v0.29.0.3', link: '/ReleaseNote/v0.29.0.3.md' },
+          { text: 'v0.29.0.2', link: '/ReleaseNote/v0.29.0.2.md' },
+          { text: 'v0.29.0.1', link: '/ReleaseNote/v0.29.0.1.md' },
+          { text: 'v0.29.0.0', link: '/ReleaseNote/v0.29.0.0.md' },
+          { text: 'v0.28.0.2', link: '/ReleaseNote/v0.28.0.2.md' },
+          { text: 'v0.28.0.1', link: '/ReleaseNote/v0.28.0.1.md' },
+          { text: 'v0.28.0.0', link: '/ReleaseNote/v0.28.0.0.md' },
+          { text: 'v0.27.0.3', link: '/ReleaseNote/v0.27.0.3.md' },
           { text: 'v0.27.0.1', link: '/ReleaseNote/v0.27.0.1.md' },
           { text: 'v0.27.0.0', link: '/ReleaseNote/v0.27.0.0.md' },
           { text: 'v0.26.0.2', link: '/ReleaseNote/v0.26.0.2.md' },
@@ -341,7 +349,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://portal.ark.online/'
       },
       {
-        text: '028 版本',
+        text: '029 版本',
         items: [
           {
             text: '主版本',
