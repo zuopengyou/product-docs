@@ -8,7 +8,7 @@
 
 <video controls src="https://cdn.233xyx.com/online/CHlJqFLqDkZT1708476811380.mp4"></video>
 
-【资源】-【[我的资源](https://portal.ark.online/#/admin/resources-manage)】是当前账号上传过的资源，可以查看资源上传审核状态并对资源进行信息配置，也可将资源状态设置为**公开**提供给更多创作者使用，通过AIGC生成的资源也会直接在【[我的资源](https://portal.ark.online/#/admin/resources-manage)】列表，在编辑器刷新后即可直接使用；
+【[我的资源](https://portal.ark.online/#/admin/resources-manage)】是当前账号上传过的资源，可以查看资源上传审核状态并对资源进行信息配置，也可将资源状态设置为**公开**提供给更多创作者使用，通过AIGC生成的资源也会直接在【[我的资源](https://portal.ark.online/#/admin/resources-manage)】列表，在编辑器刷新后即可直接使用；
 
 ![img_v3_0289_7bc41c9a-808d-4270-9e88-2b12c6aa459g](https://arkimg.ark.online/img_v3_0289_7bc41c9a-808d-4270-9e88-2b12c6aa459g.jpg)
 
@@ -22,7 +22,7 @@
 
 <video controls src="https://cdn.233xyx.com/online/RTRrE7t71bxi1708478282936.mp4"></video>
 
-当点开【[AIGC资源](https://portal.ark.online/#/admin/ai-explore)】任务列表后，点击【创建任务】-【动作捕捉】会来到【[视频动捕生成动画](https://portal.ark.online/#/admin/motion-capture)】，上传视频（30秒内且大小不超过25M）并填写基本信息后即可提交等待预览效果生成，导入视频后单个动作资源预计生成1分钟，当生成资源过多时需要等待，可在非高峰期上传。
+当点开【[AIGC资源](https://portal.ark.online/#/admin/ai-explore)】任务列表后，点击【创建任务】-【动作捕捉】来到【[视频动捕生成动画](https://portal.ark.online/#/admin/motion-capture)】，上传视频（30秒内且大小不超过25M）并填写基本信息后即可提交等待预览效果生成，导入视频后单个动作资源预计生成1分钟，当生成资源过多时需要等待，可在非高峰期上传。
 
 ![CleanShot 2024-02-21 at 09.32.37](https://arkimg.ark.online/CleanShot%202024-02-21%20at%2009.32.37.png)
 
@@ -47,7 +47,7 @@
 
 <video controls src="https://cdn.233xyx.com/online/BSjBLPqp0Fbr1708489062768.mp4"></video>
 
-当点开【[AIGC资源](https://portal.ark.online/#/admin/ai-explore)】任务列表后，点击【创建任务】-【静态模型生成】会来到【[纹理重建生成模型](https://portal.ark.online/#/admin/static-model-generation)】，资源支持模糊查询已支持重建的静态模型，也可以直接搜索GUID，填写相应提示词后即可提交等待预览效果生成，三个静态模型资源预计生成1分钟，当生成资源过多时需要等待，可在非高峰期上传。
+当点开【[AIGC资源](https://portal.ark.online/#/admin/ai-explore)】任务列表后，点击【创建任务】-【静态模型生成】来到【[纹理重建生成模型](https://portal.ark.online/#/admin/static-model-generation)】，资源支持模糊查询已支持重建的静态模型，也可以直接搜索GUID，填写相应提示词后即可提交等待预览效果生成，三个静态模型资源预计生成1分钟，当生成资源过多时需要等待，可在非高峰期上传。
 
 ![CleanShot 2024-02-21 at 10.54.51](https://arkimg.ark.online/CleanShot%202024-02-21%20at%2010.54.51.png)
 
