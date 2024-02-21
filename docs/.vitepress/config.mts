@@ -251,8 +251,12 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           },
           { text: '管理游戏版本', link: '/CreatorPortal/VersionManagement.md' },
           {
-            text: '游戏曝光运营',
+            text: '游戏推荐及曝光',
             link: '/CreatorPortal/Promotion&Operation.md'
+          },
+          {
+            text: '游戏福利及活跃',
+            link: '/CreatorPortal/GameBenefits.md'
           },
           { text: '管理游戏社区', link: '/CreatorPortal/Community.md' },
           {
@@ -328,10 +332,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
     },
     siteTitle: '产品手册',
     nav: [
-      {
-        text: '官网',
-        link: 'https://creator.ark.online/'
-      },
       {
         text: '论坛',
         link: 'https://forum.ark.online/'
