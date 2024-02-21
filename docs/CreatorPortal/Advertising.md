@@ -22,15 +22,13 @@
 
 ### 游戏代码编写
 
-在需要接入广告的位置粘贴以下代码（参考[广告相关API](https://api-docs.ark.online/classes/Service.AdsService.html)），并在相应位置填写广告播放逻辑即可。
+在需要接入广告的位置粘贴以下代码（参考[广告相关API](https://api-docs.ark.online/classes/mw.AdsService.html)），并在相应位置填写广告播放逻辑即可。
 
 ::: tip 使用前获取广告激活状态，如果广告未激活则隐藏广告相关功能
 
 const isActive=AdsService.getInstance.isActive(AdsType.Reward)
 
 :::
-
-播放广告的 API ：**AdsService.showAd()**
 
 该API需要传入两个参数，第一个参数是传入播放广告的类型，第二个参数是传入播放广告的回调
 
