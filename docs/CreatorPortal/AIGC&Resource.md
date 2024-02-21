@@ -26,7 +26,7 @@
 
 ![CleanShot 2024-02-21 at 09.32.37](https://arkimg.ark.online/CleanShot%202024-02-21%20at%2009.32.37.png)
 
-**为了得到最好的动捕效果，请注意上传视频的要求，反馈直达问卷- [ AIGC资源生成使用反馈 ](https://meta.feishu.cn/share/base/form/shrcnFvsMrxy8xnL9IdKzkrPyE8) **
+为了得到最好的动捕效果，请注意上传视频的要求，反馈直达问卷- [ AIGC资源生成使用反馈 ](https://meta.feishu.cn/share/base/form/shrcnFvsMrxy8xnL9IdKzkrPyE8) 。
 
 1. 单人全身清晰视频 ，四肢都在视频中且人物不要太小； 
 2. 不要有物品遮挡，不要穿太宽松的上衣和过膝的裙子; 
