@@ -45,6 +45,12 @@
 
 模型纹理重建演示效果如下，可以先找到支持重建的模型通过提示词进行模型材质重建并生成新的静态模型资源；
 
+::: danger 哪些模型资源支持材质纹理重建？
+
+目前还在内测阶段，后续会加上已支持模型的搜索，现阶段可通过当前表格查看[已支持资源列表](https://cdn.233xyx.com/online/Q5vlkyAvY03F1708565617719.xlsx)。
+
+::: 
+
 <video controls src="https://cdn.233xyx.com/online/BSjBLPqp0Fbr1708489062768.mp4"></video>
 
 当点开【[AIGC资源](https://portal.ark.online/#/admin/ai-explore)】任务列表后，点击【创建任务】-【静态模型生成】来到【[纹理重建生成模型](https://portal.ark.online/#/admin/static-model-generation)】，资源支持模糊查询已支持重建的静态模型，也可以直接搜索GUID，填写相应提示词后即可提交等待预览效果生成，三个静态模型资源预计生成1分钟，当生成资源过多时需要等待，可在非高峰期上传。
