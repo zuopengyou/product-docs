@@ -20,7 +20,7 @@
 
 视频动捕演示效果如下，可以上传已有清晰视频或者通过手机录制来生成游戏内的动画资源；
 
-<video controls src="https://cdn.233xyx.com/online/RTRrE7t71bxi1708478282936.mp4"></video>
+<video controls src="https://cdn.233xyx.com/online/rUMeeWfZEgtr1708656297524.mp4"></video>
 
 当点开【[AIGC资源](https://portal.ark.online/#/admin/ai-explore)】任务列表后，点击【创建任务】-【动作捕捉】来到【[视频动捕生成动画](https://portal.ark.online/#/admin/motion-capture)】，上传视频（30秒内且大小不超过25M）并填写基本信息后即可提交等待预览效果生成，导入视频后单个动作资源预计生成1分钟，当生成资源过多时需要等待，可在非高峰期上传。
 
