@@ -73,7 +73,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsed: true,
         items: [
           { text: '编辑器窗口操作', link: '/Editor/EditorWindowsOperation.md' },
-          { text: 'Transform工具', link: '/Editor/TransformTool.md'},
+          { text: 'Transform工具', link: '/Editor/TransformTool.md' },
           {
             text: '画质级别模拟与设置',
             link: '/Editor/GraphicsQualitySettings.md'
@@ -220,7 +220,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             link: '/Resource/assetdownloadandload.md'
           },
           { text: '资源上传工具', link: '/Resource/AssetUpload.md' },
-          { text: '材质编辑器', link: '/Resource/MaterialEditor.md' }
+          { text: '材质编辑器', link: '/Resource/MaterialEditor.md' },
+          { text: 'AIGC及资源管理', link: '/CreatorPortal/AIGC&Resource.md' }
         ]
       },
       {
