@@ -58,6 +58,3 @@ export default class NewScript1 extends Script {
 }
 ```
 <video controls src="https://cdn.233xyx.com/athena/online/85157428cd8e46438b57df1abb2fd79f.mp4"></video>
-
-
-##
