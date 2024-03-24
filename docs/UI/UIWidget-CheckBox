@@ -6,7 +6,7 @@
 
 ## 什么是勾选框？
 
-**勾选框**是一种能切换状态的按钮，可以通过点击来进行选中状态与未选中状态之间的切换。。
+**勾选框**是一种能切换状态的按钮，可以通过点击来进行选中状态与未选中状态之间的切换。
 - 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://docs.ark.online/UI/UIWidget-BaseProperties.html)
 ![](https://cdn.233xyx.com/online/apfXyOm0zPy11711267429689.gif)
 
