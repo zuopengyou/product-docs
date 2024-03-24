@@ -160,12 +160,12 @@ GameObject.asyncSpawn("AssetId")
 
 - **导出预制体**
 
-  - 在工程内容-预制体分类下选中某预制体，点击右键菜单中【导出】按钮，在资源管理器中选择导出路径后将该预制体打包导出
-  - 将该**预制体描述文件（.prefab 文件）**以及**所有其引用的文件**全部导出，并保证文件之间的相对路径不变
-
-    - 若脚本/UI 中引用了其他脚本，多次引用的脚本及路径信息一并导出，保证相对路径不变
+  - 在工程内容-预制体分类下选中某预制体，点击右键菜单中【导出】按钮
+  - 在弹出界面内可以查看被导出的预制体及其包含的文件,可以通过勾选的方法选择需要导出文件
+  - 预制体引用的脚本、UI以及材质等文件会以相对应的路径被一同导出
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmQqEtXaHNDMlVv80vX1fig.png)
+![](https://cdn.233xyx.com/online/_预制体导出qE8EZWiHbgpE1711270756067.png)
 
 - **导入预制体**
 
@@ -173,31 +173,17 @@ GameObject.asyncSpawn("AssetId")
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcne4rfPhEftcoqGBwjRZw7db.png)
 
+
 - 导入时将解析预制体文件，并还原所有引用文件至工程中
 
-  - 导入时将显示导入详情面板，给开发者提供 prefab 的结构信息
+- 导入时将显示导入详情面板，给开发者提供 prefab 的结构信息,可以通过文件前的勾选框来确定需要被导入的内容.
+![](https://cdn.233xyx.com/online/_导入1111QNukGTGclbCM1711270726363.png)
 
-    - 若当前工程中的文件与导入的 prefab 有冲突，将给用户提供重命名或覆盖操作
-
-      - 覆盖：选择覆盖，导入时将导入的文件覆盖导入；并在文件右侧显示覆盖图标
-
-        - 当原工程中的文件与此文件发生冲突但路径不同时，显示提示如下图
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcna46w6Z9azlsXcbHTD4x5zh.png)
-
+- 若当前工程中的文件与导入的 prefab 有冲突，将给用户提供重命名或覆盖操作
+- 覆盖：选择覆盖，导入时将导入的文件覆盖导入；并在文件右侧显示覆盖图标
 - 重命名：选择重命名，导入时将导入的文件自动重命名导入
 
- - 对于脚本类型而言，若重命名修改的脚本正在被其他脚本引用，则树状结构中显示引用此脚本的脚本文件，并在此脚本后显示文本：“该脚本引用了xxx.ts，导入后请手动修改”
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnVons4asag0pOtEiDhkZ3Df.png)
-
-  - 若与当前工程中的文件无冲突，则分两种情况
-
-    - 新增：当前工程没有与该文件冲突的文件，显示**绿色new标识**
-
-    - 忽略：当前工程存在一个完全相同的文件，此时不显示任何标识与操作
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmaVXqJmPvRnRIU9UlEcOrS.png)
 
 ### 解除预制体
 
