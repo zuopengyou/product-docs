@@ -116,6 +116,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-摄像机滑动区', link: '/UI/UIWidget-Touchpad.md' },
           { text: 'UI控件-加载图', link: '/UI/UIComponent-LoadingIcon.md' },
           { text: 'UI控件-调色板', link: '/UI/UIComponent-ColorPicker.md' },
+          { text: 'UI控件-勾选框', link: '/UI/UIComponent-CheckBox.md' },
+          { text: 'UI控件-下拉菜单', link: '/UI/UIComponent-Dropdown.md' },
           { text: '富文本', link: '/UI/Rich-text.md' },
           { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
           {
