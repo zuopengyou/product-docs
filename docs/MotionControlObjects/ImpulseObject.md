@@ -12,6 +12,11 @@
 
 ## 冲量对象属性
 
+| 属性     | 说明                                                 |
+| -------- | ---------------------------------------------------- |
+| 启用 | 在运行时立即启用冲量对象功能,关闭后可以通过脚本来动态启用. |
+
+
 ### 冲量类型
 
 | 属性     | 说明                                                 |
@@ -94,9 +99,6 @@ export default class NewScript extends Script {
         impulseSpawn.impulseForceType = ImpulseForceType.VectorForce;
         impulseSpawn.impulseType = ImpulseType.Absolute;
         impulseSpawn.impulseVector = new Vector(0,0,800);
-
-        //冲量对象提供了可以动态设置冲量力开关的接口，合理的使用这一接口，可以实现类如炸弹爆炸的效果；
-        impulseSpawn.enable = false;  //将冲量对象设置为关闭状态
 
         //通过UI按钮发送一个本地事件，来触发冲量对象开启
         Event.addLocalListener("boom", () => {
