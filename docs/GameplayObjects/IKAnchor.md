@@ -4,7 +4,7 @@
 
 本文概述了IK的定义，IK锚点都有哪些功能，表现效果以及使用方式。
 
-### 什么是IK？
+## 什么是IK？
 
 ![](https://cdn.233xyx.com/online/rayEmyCCz3dm1712563560819.PNG)
 
@@ -14,15 +14,15 @@
 
 我们提供了【IK锚点】的逻辑对象，方便用户在使用涉及到手部或脚部的交互对象时，能够控制角色的手部位置或脚部位置，防止穿模现象。举例说明，比较典型的手部交互对象就是武器（弓箭/热武器等），脚部交互对象就是载具坐骑（车/马等）
 
-### IK锚点的使用
+## IK锚点的使用
 
-#### 1、如何找到IK锚点？
+### 1、如何找到IK锚点？
 
 在【资源库】-【游戏功能对象】列表中找到【IK锚点】的对象。
 
 ![](https://cdn.233xyx.com/online/QV25NvHhjoEI1712563529856.PNG)
 
-#### 2、使用IK锚点
+### 2、使用IK锚点
 
 以角色可以驾驶的摩托车为例，如果我们在不使用IK锚点的情况下，效果如下：
 
@@ -85,7 +85,7 @@ export default class NewScript extends Script {
 
 ![](https://cdn.233xyx.com/online/My2NfGziSNIJ1712563612630.png)
 
-#### 3、关闭IK锚点
+### 3、关闭IK锚点
 
 上面我们描述了如何去使用IK锚点的功能，但是如果我们启用IK锚点后，角色无论是播放动画，还是做其他的事情，都会根据IK锚点进行移动，举例说明，比如我们已经下车了，本质上就不需要将手部IK和脚部IK的功能了，这个时候，就需要将IK功能关闭掉，防止影响我们角色的移动等其他的交互功能。
 所以我们需要在下车的脚本中，添加关闭IK锚点的代码，如下
@@ -105,7 +105,7 @@ InputUtil.onKeyDown(Keys.Q,()=>{
 ```
 
 
-#### 4、动态生成IK锚点
+### 4、动态生成IK锚点
 
 ![](https://cdn.233xyx.com/online/oYY9H0lnIsbc1712563567604.png)
 
@@ -125,9 +125,9 @@ GameObject.asyncSpawn("12683").then((obj) => {
 let IKObject = GameObject.spawn("IKAnchor") as IKAnchor;
 ```
 
-### IK锚点属性介绍
+## IK锚点属性介绍
 
-#### 1、IK类型
+### 1、IK类型
 
 功能说明：IK类型主要是决定IK锚点影响角色的骨骼位置，目前我们提供的骨骼位置只有4个，分别是左手，右手，左脚，右脚。
 
@@ -135,7 +135,7 @@ let IKObject = GameObject.spawn("IKAnchor") as IKAnchor;
 
 <video controls src="https://cdn.233xyx.com/online/9ZOZIaVifpEn1712563516255.mp4"></video>
 
-#### 2、关节朝向
+### 2、关节朝向
 
 功能说明：修改关节朝向，会影响到IK类型所关联的骨骼空间朝向，比如说手部IK的相连骨骼就是肘部的关节，脚部IK的相连骨骼就是膝盖关节，关节朝向会直接影响到肘部关节和膝盖关节的朝向问题。
 
@@ -154,7 +154,7 @@ IK.active(Player.localPlayer.character);
 IK.jointTarget = new Vector(90,0,0)
 ```
 
-#### 3、权重
+### 3、权重
 
 功能说明：在激活IK锚点功能时，角色动画和IK效果的混合权重，取值范围在0-1之间，值为0时，则全依据角色动画效果，值为1时，则全依据角色IK效果。
 
@@ -171,7 +171,7 @@ IK.jointTarget = new Vector(90,0,0)
 IK.weight = 1
 ```
 
-#### 4、混入时间
+### 4、混入时间
 
 功能说明：激活IK锚点后，当前动画混合到IK效果时需要的时间
 
@@ -186,7 +186,7 @@ IK.weight = 1
 IK.blendInTime = 10;
 ```
 
-#### 5、混出时间
+### 5、混出时间
 
 功能说明：停用IK锚点后，从IK混合效果恢复到角色正常动画需要的时间
 
