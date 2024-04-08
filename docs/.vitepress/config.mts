@@ -116,6 +116,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-摄像机滑动区', link: '/UI/UIWidget-Touchpad.md' },
           { text: 'UI控件-加载图', link: '/UI/UIComponent-LoadingIcon.md' },
           { text: 'UI控件-调色板', link: '/UI/UIComponent-ColorPicker.md' },
+          { text: 'UI控件-勾选框', link: '/UI/UIWidget-CheckBox.md' },
+          { text: 'UI控件-下拉菜单', link: '/UI/UIWidget-Dropdown.md' },
           { text: '富文本', link: '/UI/Rich-text.md' },
           { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
           {
@@ -363,16 +365,12 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-        text: '030 版本',
+        text: '031 版本',
         items: [
           {
-            text: '029 版本',
-            link: 'https://docs-029.ark.online/',
-            path: true
-          },
-          {
-            text: '031 版本',
-            link: 'https://docs-031.ark.online/',
+            text: '主版本',
+            link: 'https://docs.ark.online/',
+
             path: true
           }
         ]
