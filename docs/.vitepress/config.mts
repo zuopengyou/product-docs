@@ -164,6 +164,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '对象发射器', link: '/GameplayObjects/ObjectLauncher.md' },
           { text: '禁行区', link: '/GameplayObjects/BlockingArea.md' },
           { text: '音效', link: '/GameplayObjects/SoundEffect.md' },
+          { text: 'IK锚点', link: '/GameplayObjects/IKAnchor.md' },
           { text: '特效', link: '/GameplayObjects/Effects.md' }
         ]
       },
@@ -369,6 +370,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           {
             text: '主版本',
             link: 'https://docs.ark.online/',
+
             path: true
           }
         ]
