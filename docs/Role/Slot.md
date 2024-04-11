@@ -202,3 +202,60 @@ chara.attachToSlot(halo, NonHumanoidType.Head);
 效果图：
 
 <video controls src="https://cdn.233xyx.com/online/HxZTe1GGAQEk1694604176304.mp4"></video>
+
+### 鱼插槽介绍说明
+
+![](https://cdn.233xyx.com/online/G9uBFJZ1fY0k1712573880968.png)    
+![](https://cdn.233xyx.com/online/a2EHfHKV8ZlC1712573886124.png)    
+
+| 中文名称  | 枚举名称 | 枚举序号  | 应用说明 |
+| ----- | ----- | ----- | ----- |
+| 根节点 | Root | 0 | 由于根节点不会跟随动作晃动，相对于比较稳定，所以会放置一些脚底特效等。 |
+| 胸腔 | Chest | 1 | 放置胸部等装饰物 |
+| 上脊柱 | UpperSpine | 2 | 放置背部等装饰物 |
+| 下脊柱 | LowerSpine | 3 | 放置背部等装饰物 |
+| 头部 | Head | 5 | 放置眼镜、帽子等装饰物 |
+| 尾巴 | Tail | 10 | 放置尾部装饰物 |
+| 上边鱼鳍 | FrontalRightFoot | 7 | 放置攻击特效和道具等 |
+| 左边鱼鳍 | RearLeftFoot | 8 | 放置攻击特效和道具等 |
+| 右边鱼鳍 | RearRightFoot | 9 | 放置攻击特效和道具等 |
+
+### 西方龙插槽介绍说明
+
+![](https://cdn.233xyx.com/online/89wj7z8OglFR1712573890339.png)    
+![](https://cdn.233xyx.com/online/vkHY59RBhNIq1712573894163.png)  
+
+| 中文名称  | 枚举名称 | 枚举序号  | 应用说明 |
+| ----- | ----- | ----- | ----- |
+| 根节点 | Root | 0 | 由于根节点不会跟随动作晃动，相对于比较稳定，所以会放置一些脚底特效等。 |
+| 胸腔 | Chest | 1 | 放置胸部等装饰物 |
+| 上脊柱 | UpperSpine | 2 | 放置背部等装饰物 |
+| 下脊柱 | LowerSpine | 3 | 放置背部等装饰物 |
+| 脖子 | Neck | 4 | 放置围脖、吊牌等装饰物 |
+| 头部 | Head | 5 | 放置眼镜、帽子等装饰物 |
+| 左前脚 | FrontalLeftFoot | 6 | 放置攻击特效和道具等 |
+| 右前脚 | FrontalRightFoot | 7 | 放置攻击特效和道具等 |
+| 左后脚 | RearLeftFoot | 8 | 放置攻击特效和道具等 |
+| 右后脚 | RearRightFoot | 9 | 放置攻击特效和道具等 |
+| 尾巴 | Tail | 10 | 放置尾部装饰物 |
+| 左翼翅膀 | LeftWing | 19 | 放置飞行特效 |
+| 右翼翅膀 | RightWing | 18 | 放置飞行特效 |
+
+### 东方龙插槽介绍说明
+
+![](https://cdn.233xyx.com/online/oxwIh59VrLAX1712573898408.png)    
+
+| 中文名称  | 枚举名称 | 枚举序号  | 应用说明 |
+| ----- | ----- | ----- | ----- |
+| 根节点 | Root | 0 | 由于根节点不会跟随动作晃动，相对于比较稳定，所以会放置一些脚底特效等。 |
+| 胸腔 | Chest | 1 | 放置胸部等装饰物 |
+| 上脊柱 | UpperSpine | 2 | 放置背部等装饰物 |
+| 下脊柱 | LowerSpine | 3 | 放置背部等装饰物 |
+| 脖子 | Neck | 4 | 放置围脖、吊牌等装饰物 |
+| 头部 | Head | 5 | 放置眼镜、帽子等装饰物 |
+| 左前脚 | FrontalLeftFoot | 6 | 放置攻击特效和道具等 |
+| 右前脚 | FrontalRightFoot | 7 | 放置攻击特效和道具等 |
+| 左后脚 | RearLeftFoot | 8 | 放置攻击特效和道具等 |
+| 右后脚 | RearRightFoot | 9 | 放置攻击特效和道具等 |
+| 尾巴 | Tail | 10 | 放置尾部装饰物 |
+

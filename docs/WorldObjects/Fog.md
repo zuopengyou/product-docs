@@ -317,3 +317,8 @@ Fog.directionalInscatteringStartDistance = 20000;
 - 效果图：
 
 <video controls src="https://cdn.233xyx.com/1683255815579_618.mp4"></video>
+
+
+## 注意事项
+
+- 我们的环境雾是通过模型网格顶点去做的渲染，所以尽量不要将一个模型拉得很长去使用，会导致环境雾的功能识别到模型的顶点较少，环境雾的效果会变差。

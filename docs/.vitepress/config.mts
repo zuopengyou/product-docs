@@ -116,6 +116,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-摄像机滑动区', link: '/UI/UIWidget-Touchpad.md' },
           { text: 'UI控件-加载图', link: '/UI/UIComponent-LoadingIcon.md' },
           { text: 'UI控件-调色板', link: '/UI/UIComponent-ColorPicker.md' },
+          { text: 'UI控件-勾选框', link: '/UI/UIWidget-CheckBox.md' },
+          { text: 'UI控件-下拉菜单', link: '/UI/UIWidget-Dropdown.md' },
           { text: '富文本', link: '/UI/Rich-text.md' },
           { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
           {
@@ -162,6 +164,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '对象发射器', link: '/GameplayObjects/ObjectLauncher.md' },
           { text: '禁行区', link: '/GameplayObjects/BlockingArea.md' },
           { text: '音效', link: '/GameplayObjects/SoundEffect.md' },
+          { text: 'IK锚点', link: '/GameplayObjects/IKAnchor.md' },
           { text: '特效', link: '/GameplayObjects/Effects.md' }
         ]
       },
@@ -274,6 +277,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
+          { text: 'v0.31.0.4', link: '/ReleaseNote/v0.31.0.4.md' },
+          { text: 'v0.31.0.3', link: '/ReleaseNote/v0.31.0.3.md' },
+          { text: 'v0.31.0.2', link: '/ReleaseNote/v0.31.0.2.md' },
+          { text: 'v0.31.0.1', link: '/ReleaseNote/v0.31.0.1.md' },
+          { text: 'v0.31.0.0', link: '/ReleaseNote/v0.31.0.0.md' },
           { text: 'v0.30.0.8', link: '/ReleaseNote/v0.30.0.8.md' },
           { text: 'v0.30.0.7', link: '/ReleaseNote/v0.30.0.7.md' },
           { text: 'v0.30.0.6', link: '/ReleaseNote/v0.30.0.6.md' },
@@ -362,15 +370,15 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-        text: '030 版本',
+        text: '主版本',
         items: [
-          {
-            text: '030 版本',
-            link: 'https://docs-030.ark.online/',
-          },
           {
             text: '主版本',
             link: 'https://docs.ark.online/',
+          },
+          {
+            text: '030 版本',
+            link: 'https://docs-030.ark.online/',
           }
         ]
       }
