@@ -14,20 +14,23 @@
 在本地资源库中搜索[推进器]，找到功能对象，将推进器拖拽到在需要被推动的对象子级，完成绑定。
 被推动的对象需要开启物理模拟，模型的物理模拟参考[物理对象](https://docs.ark.online/Physics/PhysicalObject.html)。
 
-![](https://cdn.233xyx.com/1681901694639_899.png)
+|中文示例|英文示例|
+|-------|---------|
+| ![](https://cdn.233xyx.com/online/9Pqxh8t6yBIG1712907026650.png)| ![](https://cdn.233xyx.com/online/ojq6IMfEDrnJ1712907046032.png) |
+
 
 - **step.2** 设置推进方向和推进力
 
 通过推进器的属性来设置推进力方向和力的大小，注意：视口中蓝色箭头方向为作用力方向。
 
-![](https://cdn.233xyx.com/1681901694576_204.png)
+|中文示例|英文示例|
+|-------|---------|
+| ![](https://cdn.233xyx.com/online/ivaXjElbXVor1712907057714.png)| ![](https://cdn.233xyx.com/online/dsaJwyyLWj9o1712907074613.png) |
 
 
 ## 如何启用推进器功能
 
 * **通过属性面板启用**
-
-![](https://cdn.233xyx.com/1681901694520_126.png)
 
 在属性面板中选中[启用]，运行游戏时推进器会立即施加推力，开始物理模拟计算。
 
