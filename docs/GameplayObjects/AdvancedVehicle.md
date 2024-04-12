@@ -101,18 +101,21 @@ export default class NewScript extends Script {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
 
-        this.vehicle = mw.GameObject.findGameObjectById("3BC398BD") as mw.AdvancedVehicle;  //获取到高级轮式载具逻辑对象
-        this.interactiveObj = mw.GameObject.findGameObjectById("2DAC1BFF") as mw.Interactor; //获取到交互物逻辑对象
-        this.trigger = mw.GameObject.findGameObjectById("36741AF4") as mw.Trigger; //获取到触发器逻辑对象
+        this.vehicle = mw.GameObject.findGameObjectById("337D3F6F") as mw.AdvancedVehicle;  //获取到高级轮式载具逻辑对象
+        this.interactiveObj = mw.GameObject.findGameObjectById("2093ED53") as mw.Interactor; //获取到交互物逻辑对象
+        this.trigger = mw.GameObject.findGameObjectById("09523175") as mw.Trigger; //获取到触发器逻辑对象
 
         //通过触发器，激活上车事件
         if (SystemUtil.isClient()) {
             this.trigger.onEnter.add((chara: mw.Character) => {
                 if (chara instanceof mw.Character) {
                     Event.dispatchToLocal("InVehicle");
+                    Event.dispatchToServer("setPlayerCollision",false);
                 }
             });
         }
+
+
 
         //客户端执行上车逻辑
         Event.addLocalListener("InVehicle", () => {
@@ -124,6 +127,8 @@ export default class NewScript extends Script {
             this.VehicleKeyEvents();
         });
 
+
+
         //客户端执行下车逻辑
         Event.addLocalListener("LeaveVehicle", () => {
             let player = Player.localPlayer;
@@ -131,6 +136,17 @@ export default class NewScript extends Script {
             this.interactiveObj.leave(endLoc.add(new mw.Vector(0, 200, 50))); //激活交互物,并设置一个下车位置
             this.vehicle.owner = null; //清除载具控制权
             player.character.setCollision(mw.PropertyStatus.On); //打开角色碰撞
+        });
+
+        
+        //在服务端处理角色碰撞                
+        Event.addClientListener("setPlayerCollision",(player,value:boolean)=>{
+            if(value){
+                player.character.setCollision(mw.PropertyStatus.On) //打开角色碰撞
+            }else{
+                player.character.setCollision(mw.PropertyStatus.Off) //关闭角色碰撞
+            }
+
         });
 
     }
@@ -184,6 +200,7 @@ export default class NewScript extends Script {
         //按下F键，下车；
         InputUtil.onKeyDown(mw.Keys.F, () => {
             Event.dispatchToLocal("LeaveVehicle");
+            Event.dispatchToServer("setPlayerCollision",true);
         });
     }
 }
