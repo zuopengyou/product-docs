@@ -102,7 +102,7 @@
      * 拖拽操作生成事件触发后，拖拽事件没有完成而是取消时触发
      */
     protected onDragCancelled(InDragDropEvent:PointerEvent,InDragDropOperation : DragDropOperation) {
-        console.warn("onDragCancelled"+InDragDropEvent.screenSpacePosition)
+        console.warn("onDragCancelled")
     }
 ```
 
@@ -338,8 +338,6 @@ export default class UIDefault extends DefaultUI_generate {
 
 ![](https://cdn.233xyx.com/1684047509420_956.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/online/uM4wYJd7j0m11694155280424.7z)
-
 ### 示例二：制作一个有拖拽功能的背包面板
 
 * **step.1** 新建一个BagItem文件，并把允许拖动的UI内容单独放在这个UI文件里面作为一个自定义UI控件
@@ -357,7 +355,6 @@ import BagItem_generate from "./ui-generate/BagItem_generate";
 export class TestDragDropPayLoad extends DragDropPayLoad {
 
     private test1 : UserWidget ;
-
     public get Test1() {
         return this.test1;
     }
@@ -367,15 +364,16 @@ export class TestDragDropPayLoad extends DragDropPayLoad {
 }
 
 export default class BagItem extends BagItem_generate {
-	// payLoad:TestDragDropPayLoad
+	imageColor:LinearColor
 	/** 
 	 * 构造UI文件成功后，在合适的时机最先初始化一次 
 	 */
 	protected onStart() {
 		//给每个格子创建时随机改变图片的颜色，这里我们是模拟每个格子都是不同的物品
-		this.icon.imageColor= new LinearColor(Math.random(),Math.random(),Math.random(),1.0)
-		console.log("_________");
+		this.imageColor= new LinearColor(Math.random(),Math.random(),Math.random(),1.0)
+		this.icon.imageColor= this.imageColor
 	}
+
 
 	onTouchStarted(InGeometry :Geometry,InPointerEvent:PointerEvent) :EventReply{
         console.log("onTouchStarted"+InPointerEvent.screenSpacePosition)
@@ -387,17 +385,23 @@ export default class BagItem extends BagItem_generate {
     }
 	onDragDetected(InGeometry :Geometry,InPointerEvent:PointerEvent):DragDropOperation {
 		console.log("onDragDetected"+InPointerEvent.screenSpacePosition)
-		// let ui=createUIByName("BagItem")
+		let uiiconnow=this.uiWidgetBase.findChildByPath('RootCanvas/canvas/icon') as Image
+		this.imageColor=uiiconnow.imageColor
+		let uidrag=createUIByName("BagItem")
+		let uiicon=uidrag.findChildByPath('RootCanvas/canvas/icon') as Image
+		uiicon.imageColor= this.imageColor
 		const payLoad = new TestDragDropPayLoad();
         payLoad.Test1=this.uiWidgetBase
-        return this.newDragDrop(this.rootCanvas, "DragDropTag", payLoad, DragPivot.CenterCenter, Vector2.zero);	
+        return this.newDragDrop(uidrag, "DragDropTag", payLoad, DragPivot.CenterCenter, Vector2.zero);	
 	}
     
+	//拖出各item范围之后释放，消耗UI，模拟丢弃的效果
 	onDragCancelled(InGemotry :Geometry,InDragDropEvent:PointerEvent) {
 		this.uiWidgetBase.destroyObject()
-		console.log("onDragCancelled"+InDragDropEvent.screenSpacePosition)
+		console.log("onDragCancelled")
 	}
 	
+	//其他item在此item上完成onDrop事件后，双方交换UI
 	onDrop(InGemotry: Geometry, InDragDropEvent: PointerEvent, InOperation: DragDropOperation) {
 		console.log("OnDrop"+InDragDropEvent.screenSpacePosition)
 		const payLoad = InOperation.tryGetDragDropPayLoadAs<TestDragDropPayLoad>();
@@ -427,7 +431,6 @@ export default class UIDefault extends UIScript {
 		//找到对应的按钮和容器
 		const newBtn = this.uiWidgetBase.findChildByPath('RootCanvas/StaleButton') as StaleButton
 		const canvas = this.uiWidgetBase.findChildByPath('RootCanvas/Canvas') as Canvas
-		canvas.autoLayoutHugContent.hugContentH=UIHugContentVertically.FixHeight
 
 		//点击按钮,创建UI
 		newBtn.onPressed.add(()=>{
@@ -451,8 +454,6 @@ export default class UIDefault extends UIScript {
 ![](https://cdn.233xyx.com/1684047509238_392.gif)
 
 * 请注意：这里只是为了演示拖拽事件的用法，实际上如果想要制作一个有完整功能的背包，不仅背包内每个格子的样式要传递过去，对应的物品功能也要作为信息传递过去，大家可以自行尝试。
-
-- 工程文件：  [点击下载](https://cdn.233xyx.com/online/X4F8Va1kXEox1694155280424.7z)
 
 # 注意事项
 
