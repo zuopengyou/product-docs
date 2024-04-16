@@ -17,7 +17,7 @@
 
 |中文示例|英文示例|
 |-----|-----|
-|<video controls src="https://cdn.233xyx.com/athena/online/8d6de33f18c04a36bb5af64b6f097455.mp4"></video>|<video controls src="https://cdn.233xyx.com/athena/online/2ba3999f45ad4db58e4adcda66e7c962.mp4"></video>
+|<video controls src="https://cdn.233xyx.com/athena/online/8d6de33f18c04a36bb5af64b6f097455.mp4"></video>|<video controls src="https://cdn.233xyx.com/athena/online/2ba3999f45ad4db58e4adcda66e7c962.mp4"></video>|
 
 ### 1.2 绘制模式使用场景
 
@@ -25,7 +25,7 @@
 
 |中文示例|英文示例|
 |-----|-----|
-|<video controls src="https://cdn.233xyx.com/athena/online/55310802f16742cea00306a3ce94245e.mp4"></video>|<video controls src="https://cdn.233xyx.com/athena/online/e5a1a76167bc49efa8dfe3a85d52a1cf.mp4"></video>
+|<video controls src="https://cdn.233xyx.com/athena/online/55310802f16742cea00306a3ce94245e.mp4"></video>|<video controls src="https://cdn.233xyx.com/athena/online/e5a1a76167bc49efa8dfe3a85d52a1cf.mp4"></video>|
 
 ### 1.3 绘制模式基础规则
 
@@ -46,7 +46,7 @@
 
   |中文示例|英文示例|
   |-----|-----|
-  |<video controls src="">https://cdn.233xyx.com/athena/online/3299d09b34564ea2a5fb9fea500734a2.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/caad9283cd064e95833b35921789102f.mp4</video>
+  |<video controls src="">https://cdn.233xyx.com/athena/online/3299d09b34564ea2a5fb9fea500734a2.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/caad9283cd064e95833b35921789102f.mp4</video>|
 
 - **在主视口中选择绘制对象**
 
@@ -62,7 +62,7 @@
 
   |中文示例|英文示例|
   |-----|-----|
-  |<video controls src="">https://cdn.233xyx.com/athena/online/7b95cbb0d7bf423fa35946c4fbd9ee92.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/a6627867718e4e118ce858ab36abd329.mp4</video>
+  |<video controls src="">https://cdn.233xyx.com/athena/online/7b95cbb0d7bf423fa35946c4fbd9ee92.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/a6627867718e4e118ce858ab36abd329.mp4</video>|
 
 - **绘制多个模型**
 
@@ -70,7 +70,7 @@
 
   |中文示例|英文示例|
   |-----|-----|
-  |<video controls src="">https://cdn.233xyx.com/athena/online/1ce406ae1d704869960fb9b4e4ad2c52.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/529f394ef6c94d16878066e370d4cc40.mp4</video>
+  |<video controls src="">https://cdn.233xyx.com/athena/online/1ce406ae1d704869960fb9b4e4ad2c52.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/529f394ef6c94d16878066e370d4cc40.mp4</video>|
 
   方法二：按住 Ctrl 拖动枢轴创建。鼠标光标上有绘制对象时，按住 ctrl 键，光标上的绘制对象将展示枢轴，可以通过拖动枢轴划定预定义区域。松开左键后，在预定义区域连续创建多个对象。
   <video controls src="https://cdn.233xyx.com/1678877575167_069.mp4"></video>
@@ -84,7 +84,7 @@
 
   |中文示例|英文示例|
   |-----|-----|
-  |<video controls src="">https://cdn.233xyx.com/athena/online/3a7ca04ef6384481bb581eb191247f68.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/a5cda49d3a33456bb6d4404ccf1762eb.mp4</video>
+  |<video controls src="">https://cdn.233xyx.com/athena/online/3a7ca04ef6384481bb581eb191247f68.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/a5cda49d3a33456bb6d4404ccf1762eb.mp4</video>|
 
   在已生成预测模型的情况下点击鼠标左键，则会在预测模型的位置处生成对象，同时鼠标光标上的绘制对象会自动生成在下一个预测模型的位置，然后出现新的预测模型。
   <video controls src="https://cdn.233xyx.com/1678877575192_067.mp4"></video>
