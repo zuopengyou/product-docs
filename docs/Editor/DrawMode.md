@@ -44,9 +44,9 @@
 
   绘制模式下，在资源库中单击某一静态模型后，该模型会被设置为绘制对象，跟随鼠标光标在主视口中移动。
 
-  |中文示例|英文示例|
-  |-----|-----|
-  |<video controls src="">https://cdn.233xyx.com/athena/online/3299d09b34564ea2a5fb9fea500734a2.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/caad9283cd064e95833b35921789102f.mp4</video>|
+|中文示例|英文示例|
+|-----|-----|
+|<video controls src="">https://cdn.233xyx.com/athena/online/3299d09b34564ea2a5fb9fea500734a2.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/caad9283cd064e95833b35921789102f.mp4</video>|
 
 - **在主视口中选择绘制对象**
 
@@ -60,17 +60,17 @@
 
   鼠标光标上有绘制对象时，在主视口中**单击左键**，将使用属性面板中配置的默认参数，在光标所在处创建该对象。
 
-  |中文示例|英文示例|
-  |-----|-----|
-  |<video controls src="">https://cdn.233xyx.com/athena/online/7b95cbb0d7bf423fa35946c4fbd9ee92.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/a6627867718e4e118ce858ab36abd329.mp4</video>|
+|中文示例|英文示例|
+|-----|-----|
+|<video controls src="">https://cdn.233xyx.com/athena/online/7b95cbb0d7bf423fa35946c4fbd9ee92.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/a6627867718e4e118ce858ab36abd329.mp4</video>|
 
 - **绘制多个模型**
 
   方法一：鼠标拖动创建。鼠标光标上有绘制对象时，在主视口中**按住左键并拖动**，将出现一个**预定义区域**，松开左键后，在预定义区域连续创建多个对象。
 
-  |中文示例|英文示例|
-  |-----|-----|
-  |<video controls src="">https://cdn.233xyx.com/athena/online/1ce406ae1d704869960fb9b4e4ad2c52.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/529f394ef6c94d16878066e370d4cc40.mp4</video>|
+|中文示例|英文示例|
+|-----|-----|
+|<video controls src="">https://cdn.233xyx.com/athena/online/1ce406ae1d704869960fb9b4e4ad2c52.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/529f394ef6c94d16878066e370d4cc40.mp4</video>|
 
   方法二：按住 Ctrl 拖动枢轴创建。鼠标光标上有绘制对象时，按住 ctrl 键，光标上的绘制对象将展示枢轴，可以通过拖动枢轴划定预定义区域。松开左键后，在预定义区域连续创建多个对象。
   <video controls src="https://cdn.233xyx.com/1678877575167_069.mp4"></video>
@@ -82,9 +82,9 @@
 
   在主视口中创建对象后，若鼠标光标在已创建对象包围盒的某个面上，则根据光标所在面的轴向，自动测算下一个摆放位置，并生成预测模型。
 
-  |中文示例|英文示例|
-  |-----|-----|
-  |<video controls src="">https://cdn.233xyx.com/athena/online/3a7ca04ef6384481bb581eb191247f68.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/a5cda49d3a33456bb6d4404ccf1762eb.mp4</video>|
+|中文示例|英文示例|
+|-----|-----|
+|<video controls src="">https://cdn.233xyx.com/athena/online/3a7ca04ef6384481bb581eb191247f68.mp4</video>|<video controls src="">https://cdn.233xyx.com/athena/online/a5cda49d3a33456bb6d4404ccf1762eb.mp4</video>|
 
   在已生成预测模型的情况下点击鼠标左键，则会在预测模型的位置处生成对象，同时鼠标光标上的绘制对象会自动生成在下一个预测模型的位置，然后出现新的预测模型。
   <video controls src="https://cdn.233xyx.com/1678877575192_067.mp4"></video>
