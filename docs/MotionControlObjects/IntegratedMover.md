@@ -72,8 +72,12 @@
 
 ## 如何创建运动器
 ### 在编辑器内创建
-在编辑器左侧【游戏功能对象】选项中，找到【运动功能对象】，点击其中的【运动器】，拖拽到主视口中想要实现运动效果的对象子级，即可完成创建。
-![](https://cdn.233xyx.com/online/LPXmVRubTX1f1693823407815.png)
+在本地资源库中搜索[运动器]，找到功能对象，，拖入到需要运动的对象子级即可完成创建.
+
+| 中文示例        | 英文示例              |
+| ------------| ---------------------|
+| ![](https://cdn.233xyx.com/online/2mtbIuE70Fbc1713320758023.png)        | ![](https://cdn.233xyx.com/online/ArbCKrho38Hu1713320772527.png)                  |
+
 
 ### 动态创建运动器
 ```ts
@@ -159,8 +163,6 @@ export default class NewScript3 extends Script {
 ## 机关预制体
 
 在[本地资源库]-[预制体]-[机关]分类资源中，提供了部分运动器机关资源，可以直接拖拽到场景中使用。
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn0ehbljCTDTyZ9xtueRiFzb.png)
 
 
 
