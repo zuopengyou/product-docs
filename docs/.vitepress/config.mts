@@ -118,6 +118,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-调色板', link: '/UI/UIComponent-ColorPicker.md' },
           { text: 'UI控件-勾选框', link: '/UI/UIWidget-CheckBox.md' },
           { text: 'UI控件-下拉菜单', link: '/UI/UIWidget-Dropdown.md' },
+          { text: 'UI控件-广告按钮', link: '/UI/UIWidget-AdsButton.md' },
+          { text: 'UI控件-序列帧', link: '/UI/UIWidget-Flipbook.md' },
           { text: '富文本', link: '/UI/Rich-text.md' },
           { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
           {
