@@ -40,4 +40,4 @@
 - 序列帧的播放状态，共有Playing /Paused/Stopped三种状态，默认为Playing状态
 - UI编辑器中可以切换此属性值并用于预览效果；而在TS脚本中，该属性是只读属性，需要使用play/stop/pause/resume四种方法修改播放状态
 - 三种播放状态和四种方法之间的关系，详见下方的调用关系图
-![](https://cdn.233xyx.com/online/RpoBiAqzwcfB1713506794673.png)
+![](https://cdn.233xyx.com/online/fs5XaJYjppw11713511758685.jpg)
