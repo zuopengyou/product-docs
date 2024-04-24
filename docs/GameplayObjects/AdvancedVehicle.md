@@ -9,20 +9,23 @@
 ## 如何使用高级轮式载具
 - **step.1** **通过本地资源库创建高级轮式载具**
 在本地资源库搜索[高级轮式载具]，找到功能对象将其拖拽到场景中，完成创建。
-<video controls src="https://cdn.233xyx.com/athena/online/ef87ed2989c64186bd1508ef3a6efd07.mp4"></video>
+<video controls src="https://cdn.233xyx.com/athena/online/eae605aa0e724b9bbf30fdb84459c4f5.mp4"></video>
+<video controls src="https://cdn.233xyx.com/athena/online/18e5ee6ef94e497eb6599933671e51b3.mp4"></video>
 
 - **step.2** **搭建载具外观**
 可以使用任意模型或特效拼装你的高级轮式载具，模型会自动成为载具碰撞的一部分。
 ::: tip **注意车质量**
 **拼装车身时，会将模型对象的质量计入载具整体质量中，拼装质量过大的模型时，需要考虑载具重心是否会影响平衡性，否则会出现翻车的情况。。**
 :::
-<video controls src="https://cdn.233xyx.com/athena/online/b6d78019c3f04cc1ad56fd91792c4ce8.mp4"></video>
+<video controls src="https://cdn.233xyx.com/athena/online/2f7db14f06154995b74fca9737146668.mp4"></video>
+<video controls src="https://cdn.233xyx.com/athena/online/0a1d4a09b51b4b279db71fb5a76f505e.mp4"></video>
 
 - **step.3** **绑定载具轮胎**
 高级轮式载具可以指定某个模型做为载具的轮胎，绑定后模型会具有轮胎转动的动画效果。高级轮式载具的轮胎碰撞需要通过属性中的轮胎半径进行设置，被绑定的模型没有碰撞效果。
 高级轮式载具可以绑定0~4个车轮，也可以调整车轮的位置，但要考虑车轮位置对车身整体的平衡性影响。
 
-<video controls src="https://cdn.233xyx.com/athena/online/2180928441d0404894fe0564ceeb2ad9.mp4"></video>
+<video controls src="https://cdn.233xyx.com/athena/online/340db8b9b8ad4d009cf2b55621815d17.mp4"></video>
+<video controls src="https://cdn.233xyx.com/athena/online/c3af134ba038432a8d86d4c2324e6d3e.mp4"></video>
 
 
 | **动力轮组属性** | **说明**                                | **类型** | **取值范围** |
@@ -35,10 +38,6 @@
 
 - **step.4** **自动上车功能**
 高级轮式载具的自动上车功能，通过创建时自带的触发器和交互物逻辑对象来完成这一功能，可以在编辑器运行时快速验证载具运行效果。
-选中默认交互物，在属性面板中设置好交互姿态和交互插槽。
-
-<video controls src="https://cdn.233xyx.com/athena/online/b20e436a02c9492fafff0b9c3b1bcd7b.mp4"></video>
-
 
 | **属性** | **说明**|
 | ------------ | ------- |
@@ -51,9 +50,8 @@
 
 
 - **step.5** **运行体验载具效果**
-<video controls src="https://cdn.233xyx.com/athena/online/ff1e3c3836244a9da6c6c79a8d3d7a79.mp4"></video>
-
-
+<video controls src="https://cdn.233xyx.com/athena/online/8112fad534e6468e9978bd63a7aed379.mp4"></video>
+<video controls src="https://cdn.233xyx.com/athena/online/26d49c2e059c4400bbea6c05a0bb4166.mp4"></video>
 
 
 | **基础属性**  | **说明**              | **类型** | **取值范围** |
@@ -101,18 +99,21 @@ export default class NewScript extends Script {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
 
-        this.vehicle = mw.GameObject.findGameObjectById("3BC398BD") as mw.AdvancedVehicle;  //获取到高级轮式载具逻辑对象
-        this.interactiveObj = mw.GameObject.findGameObjectById("2DAC1BFF") as mw.Interactor; //获取到交互物逻辑对象
-        this.trigger = mw.GameObject.findGameObjectById("36741AF4") as mw.Trigger; //获取到触发器逻辑对象
+        this.vehicle = mw.GameObject.findGameObjectById("337D3F6F") as mw.AdvancedVehicle;  //获取到高级轮式载具逻辑对象
+        this.interactiveObj = mw.GameObject.findGameObjectById("2093ED53") as mw.Interactor; //获取到交互物逻辑对象
+        this.trigger = mw.GameObject.findGameObjectById("09523175") as mw.Trigger; //获取到触发器逻辑对象
 
         //通过触发器，激活上车事件
         if (SystemUtil.isClient()) {
             this.trigger.onEnter.add((chara: mw.Character) => {
                 if (chara instanceof mw.Character) {
                     Event.dispatchToLocal("InVehicle");
+                    Event.dispatchToServer("setPlayerCollision",false);
                 }
             });
         }
+
+
 
         //客户端执行上车逻辑
         Event.addLocalListener("InVehicle", () => {
@@ -124,6 +125,8 @@ export default class NewScript extends Script {
             this.VehicleKeyEvents();
         });
 
+
+
         //客户端执行下车逻辑
         Event.addLocalListener("LeaveVehicle", () => {
             let player = Player.localPlayer;
@@ -131,6 +134,17 @@ export default class NewScript extends Script {
             this.interactiveObj.leave(endLoc.add(new mw.Vector(0, 200, 50))); //激活交互物,并设置一个下车位置
             this.vehicle.owner = null; //清除载具控制权
             player.character.setCollision(mw.PropertyStatus.On); //打开角色碰撞
+        });
+
+        
+        //在服务端处理角色碰撞                
+        Event.addClientListener("setPlayerCollision",(player,value:boolean)=>{
+            if(value){
+                player.character.setCollision(mw.PropertyStatus.On) //打开角色碰撞
+            }else{
+                player.character.setCollision(mw.PropertyStatus.Off) //关闭角色碰撞
+            }
+
         });
 
     }
@@ -184,6 +198,7 @@ export default class NewScript extends Script {
         //按下F键，下车；
         InputUtil.onKeyDown(mw.Keys.F, () => {
             Event.dispatchToLocal("LeaveVehicle");
+            Event.dispatchToServer("setPlayerCollision",true);
         });
     }
 }

@@ -21,10 +21,9 @@
 
 | 属性     | 说明                                                 |
 | -------- | ---------------------------------------------------- |
-| 绝对冲量 | 不受其他物理效果影响，以设置属性为标准执行冲量运动 |
-| 相对冲量 | 受其他物理效果影响，将对象当前的运动数据与设置属性合并计算冲量结果  |
+| 绝对冲量 | 触发冲量时不考虑对象当前的速度，仅以设置的冲量值为标准进行计算 |
+| 相对冲量 | 触发冲量时会将对象当前的速度与设置的冲量值合并计算  |
 
-<video controls src="https://cdn.233xyx.com/athena/online/e5a1d2c91c884d70add3a084f489bd9b.mp4"></video>
 
 ### 冲量值
 
@@ -44,14 +43,17 @@
 | 矢量力 | 向某个方向施加一个冲量 |
 | 径向力 | 以圆心向外施加一个冲量 |
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnf1UQc5D27sRsOuRYdYuesb.png)
 
 
 ## 如何使用冲量对象
 
-在本地资源库中搜索[冲量对象]，找到功能对象，，拖入到场景中即可完成创建。
+在本地资源库中搜索[冲量对象],找到功能对象,拖入到场景中即可完成创建.
+在属性面板中可以设置是否自动开启冲量效果及冲量值等参数.
 
-![](https://cdn.233xyx.com/1681893626211_733.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+| ![](https://cdn.233xyx.com/online/BZ6vpSPq2nKl1713150793926.png) | ![](https://cdn.233xyx.com/online/xBu8u2NFhihW1713150778569.png) |
+
 
 
 
@@ -61,7 +63,7 @@
 
 ```ts
 @Component
-export default class NewScript1 extends Script {
+export default class NewScript extends Script {
 
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
@@ -70,12 +72,13 @@ export default class NewScript1 extends Script {
 
         //冲量对象提供了回调方法
         impulseMain.onImpulseEnter.add((chara: mw.Character) => {
-            console.log(`角色进入冲量范围`);
+            if(chara instanceof Character){
+                console.log(`角色进入冲量范围`);
+            }
         })
     }
 }
 ```
-<video controls src="https://cdn.233xyx.com/athena/online/85157428cd8e46438b57df1abb2fd79f.mp4"></video>
 
 
 ### 冲量对象动态开关
@@ -87,25 +90,16 @@ export default class NewScript extends Script {
     /** 当脚本被实例后，会在第一帧更新前调用此函数 */
     protected onStart(): void {
 
-        //通过GUID来动态创建一个冲量对象,并设置世界坐标
-        let impulseSpawn = GameObject.spawn<Impulse>("PhysicsImpulse",{
-            replicates:true,
-            transform:new Transform(new Vector(300,0,0),Rotation.zero,Vector.one)
-        });
+        let impulseMain = this.gameObject as mw.Impulse; //指定冲量对象
 
-        /**
-         * 设置冲量对象的属性，制作一个向Z轴的绝对冲量；
-         */
-        impulseSpawn.impulseForceType = ImpulseForceType.VectorForce;
-        impulseSpawn.impulseType = ImpulseType.Absolute;
-        impulseSpawn.impulseVector = new Vector(0,0,800);
-
-        //通过UI按钮发送一个本地事件，来触发冲量对象开启
-        Event.addLocalListener("boom", () => {
-            impulseSpawn.enable = true;  //将冲量对象设置为开启状态
-        });
+        //冲量对象提供了回调方法
+        impulseMain.onImpulseEnter.add((chara: mw.Character) => {
+            if(chara instanceof Character){
+                console.log(`角色进入冲量范围`);
+                impulseMain.enable = true; //动态开启冲量
+            }
+        })
     }
 }
 ```
-<video controls src="https://cdn.233xyx.com/athena/online/78dad341f96d4f1187c185c53e8699f9.mp4"></video>
 ##
