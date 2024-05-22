@@ -380,10 +380,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       },
       {
 
-        text: '033 版本',
+        text: '主版本',
         items: [
           {
-            text: '主版本',
+            text: '033 版本',
             link: 'https://docs.ark.online/',
           }
         ]
