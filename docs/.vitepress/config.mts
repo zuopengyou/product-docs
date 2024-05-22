@@ -380,7 +380,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
       },
       {
 
-        text: '033 版本',
+        text: '034 版本',
         items: [
           {
             text: '主版本',
