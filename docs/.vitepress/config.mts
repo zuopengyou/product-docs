@@ -91,6 +91,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           {
             text: '自动裁剪规则与自定义裁剪距离',
             link: '/Editor/AutomaticAndCustomizedCullDistance.md'
+          },
+          {
+            text: '实体建模工具',
+            link: '/Editor/SolidModelingTool.md'
           }
         ]
       },
