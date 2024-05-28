@@ -106,7 +106,7 @@
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://cdn.233xyx.com/online/yEf7mu8OnEtV1716879230737.gif)|![](https://cdn.233xyx.com/online/1PKNA4jCiakH1716886620279.gif)|
+|![](https://cdn.233xyx.com/online/yEf7mu8OnEtV1716879230737.gif)|![](https://cdn.233xyx.com/online/90NSBoIAX0rE1716888085526.gif)|
   
 
 ### 手动生成资源图标
