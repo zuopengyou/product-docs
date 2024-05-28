@@ -26,11 +26,22 @@
 ## 资源导入工具入口
 
 * 开发者可通过拖拽资源到【编辑器-工程内容】区域
-  ![](https://cdn.233xyx.com/online/HoMF0Kd7KDW91716879225061.gif)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://cdn.233xyx.com/online/HoMF0Kd7KDW91716879225061.gif)|![](https://cdn.233xyx.com/online/Z9IU9BZpNeh21716886614425.gif)|
+  
 * 开发者也可通过点击【工程内容】左下角资源导入功能按钮
-  ![](https://cdn.233xyx.com/online/hThNow9wB6Jy1716879226214.gif)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://cdn.233xyx.com/online/hThNow9wB6Jy1716879226214.gif)|![](https://cdn.233xyx.com/online/zqa1jgPQ39I21716886616254.gif)|
+
 * 开发者也可通过点击【工程内容】各资源类型分类下空白处右键导入资源
-  ![](https://cdn.233xyx.com/online/u7Bml6MOceUB1716879227279.gif)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://cdn.233xyx.com/online/u7Bml6MOceUB1716879227279.gif)|![](https://cdn.233xyx.com/online/Sv1uIGB8WXSk1716886617348.gif)|
 
 ### 资源校验
 
@@ -58,7 +69,10 @@
 #### 静态模型资源
 
 * 在模型资源贴图引用关系正确的情况下，导入静态模型时可解析引用到的贴图资源自动导入
-  ![](https://cdn.233xyx.com/online/HoMF0Kd7KDW91716879225061.gif)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://cdn.233xyx.com/online/HoMF0Kd7KDW91716879225061.gif)|![](https://cdn.233xyx.com/online/j9ykpguflNj71716886618392.gif)|
 
 #### 场景贴图/UI贴图
 
@@ -89,12 +103,19 @@
 * 可编辑内容包括：
   - 静态模型：简单碰撞编辑、UV预览、LOD预览、贴图引用、材质颜色修改。支持打开材质编辑器进行更细化的材质属性参数、效果调整
 * UI贴图/场景贴图：属性参数修改
-  ![](https://cdn.233xyx.com/online/yEf7mu8OnEtV1716879230737.gif)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://cdn.233xyx.com/online/yEf7mu8OnEtV1716879230737.gif)|![](https://cdn.233xyx.com/online/1PKNA4jCiakH1716886620279.gif)|
+  
 
 ### 手动生成资源图标
 
 * 导入时将自动生成资源图标，也可通过点击导资源图标右上角“相机”，使用手动生成资源图标功能
-  ![](https://cdn.233xyx.com/online/ikYZ6vBmq6mK1716879233110.gif)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://cdn.233xyx.com/online/ikYZ6vBmq6mK1716879233110.gif)|![](https://cdn.233xyx.com/online/9GshrNzhcH091716886624594.gif)|
 
 ### 同步到工程内容
 * 确认本次导入资源符合预期后，点击资源预览配置界面右上角同步到工程内容，即可在项目工程内容各资源分类中显示
@@ -103,7 +124,11 @@
 ## 本地资源直接使用
 
 * 导入到工程内容的资源，可直接拖拽至主视口或对象管理器进行项目搭建（本地资源暂不支持动态调用加载）
-  ![](https://cdn.233xyx.com/online/a2AjkqCDPeao1716879235385.gif)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://cdn.233xyx.com/online/a2AjkqCDPeao1716879235385.gif)|![](https://cdn.233xyx.com/online/k1STAeuXZ2m81716886627170.jpg)|
+
 <br>
 
 ## 资源上传途径
@@ -127,8 +152,7 @@
 * 资源被上传后，共可能显示下图五种状态
 * 资源的正常上传流程为：检验中——审核中——打包中——可使用
 
-  ![](https://cdn.233xyx.com/athena/online/7b90ea94a40b4ecaab73a41f20d3e062_12740286.webp)
+![](https://cdn.233xyx.com/athena/online/7b90ea94a40b4ecaab73a41f20d3e062_12740286.webp)
 
 * 当资源未通过校验或为通过审核时，资源状态变为“未通过审核”并在备注中注明对应原因，上传流程结束
-
-  ![](https://cdn.233xyx.com/athena/online/a2d4a6683c324baf9904ad4bb16af2bf_12740287.webp)
+![](https://cdn.233xyx.com/athena/online/a2d4a6683c324baf9904ad4bb16af2bf_12740287.webp)
