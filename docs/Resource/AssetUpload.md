@@ -50,19 +50,19 @@
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://cdn.233xyx.com/online/HoMF0Kd7KDW91716879225061.gif)|![](https://cdn.233xyx.com/online/Z9IU9BZpNeh21716886614425.gif)|
+|<video controls src="https://cdn.233xyx.com/athena/online/9476c99ce15d43499549d95abb21dbf1.SkK8d7aaRa8R1716949240822"></video>|<video controls src="https://cdn.233xyx.com/athena/online/23d7e432030e48fe8a1956e422fa9b5d.Xo9ckSrC78001716949241892"></video>|
   
 * 开发者也可通过点击【工程内容】左下角资源导入功能按钮
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://cdn.233xyx.com/online/hThNow9wB6Jy1716879226214.gif)|![](https://cdn.233xyx.com/online/zqa1jgPQ39I21716886616254.gif)|
+|<video controls src="https://cdn.233xyx.com/athena/online/71cf3cb9f22d4d908467684149ee12c4.2OE0bpSZZvQC1716949242702"></video>|<video controls src="https://cdn.233xyx.com/athena/online/89cb00e43a194331a82de6429653ef05.RWprxfhyoYZ91716949244202"></video>|
 
 * 开发者也可通过点击【工程内容】各资源类型分类下空白处右键导入资源
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://cdn.233xyx.com/online/u7Bml6MOceUB1716879227279.gif)|![](https://cdn.233xyx.com/online/Sv1uIGB8WXSk1716886617348.gif)|
+|<video controls src="https://cdn.233xyx.com/athena/online/9665437723f248dc9e9572e3c2cf3330.OoobQIPflSZG1716949245353"></video>|<video controls src="https://cdn.233xyx.com/athena/online/285692e29721436388e417ca8548bced.Ar2I42wsD7jm1716949247331"></video>|
 
 ## 资源校验
 
@@ -80,7 +80,7 @@
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://cdn.233xyx.com/online/HoMF0Kd7KDW91716879225061.gif)|![](https://cdn.233xyx.com/online/j9ykpguflNj71716886618392.gif)|
+|<video controls src="https://cdn.233xyx.com/athena/online/cd2047b8105e4062a7c245212bc34ba8.Oy4SXdLcwvcl1716949248472"></video>|<video controls src="https://cdn.233xyx.com/athena/online/7d4ebf7b99ca42eebfc0045e1e1e3351.AN5G1JmhK5bk1716949252254"></video>|
 
 ### 场景贴图/UI贴图
 
@@ -112,7 +112,7 @@
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://cdn.233xyx.com/online/ikYZ6vBmq6mK1716879233110.gif)|![](https://cdn.233xyx.com/online/9GshrNzhcH091716886624594.gif)|
+|<video controls src="https://cdn.233xyx.com/athena/online/42b60b1fc3b54bb794d4f9a4fa894729.VFQ8qO8bDIMO1716949253540"></video>|<video controls src="https://cdn.233xyx.com/athena/online/b10eedb7e27c4444b9bd6667e54499f9.BMcdUCR99oE31716949257665"></video>|
 
 
 ## 预览配置
@@ -124,7 +124,7 @@
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://cdn.233xyx.com/online/yEf7mu8OnEtV1716879230737.gif)|![](https://cdn.233xyx.com/online/90NSBoIAX0rE1716888085526.gif)|
+|<video controls src="https://cdn.233xyx.com/athena/online/946f4763ed1f40bbbd9cc078fff4dea9.M4vqPUJ92jP31716949258776"></video>|<video controls src="https://cdn.233xyx.com/athena/online/bce44dc111b543229c0c51b28d97d3fe.RLOh7eUiqlNT1716949259773"></video>|
   
 
 
@@ -138,7 +138,7 @@
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://cdn.233xyx.com/online/a2AjkqCDPeao1716879235385.gif)|![](https://cdn.233xyx.com/online/k1STAeuXZ2m81716886627170.jpg)|
+|<video controls src="https://cdn.233xyx.com/athena/online/1f463e96cd2c488abfb5e3da71defd89.SW9cRZhBNEK91716949260849"></video>|<video controls src="https://cdn.233xyx.com/athena/online/f487c83168404219a576dc24ca154ccc.Gng0SxSJkv7F1716949261871"></video>|
 
 <br>
 
