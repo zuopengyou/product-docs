@@ -38,8 +38,9 @@
 ### 示例一：用勾选框控制是否开启摄像机碰撞
 - 下面我们实现一个基础的列表视图，每行按顺序显示不同的数字。
 - 第一步：新建一个UI文件，这个UI文件内存放各项目UI的默认UI样式，请注意最顶部RootCanvas层级的大小决定了该项目在列表视图中的高度（垂直滚动的列表视图中，列表视图的宽度决定了项目UI的宽度，而水平滚动的列表视图则相反）。
-
+![](https://cdn.233xyx.com/online/t506mfXE9wHx1718169533166.png)
 - 第二步：创建一个列表视图，将上一步创建的条目UI文件拖入到属性面板，并修改列表视图的基础样式，包括滚动朝向、条目边距、菜单行样式、滚动条样式。
+![](https://cdn.233xyx.com/online/4rpEYGeYZDg31718169532608.png)
 - 第三步：先编写条目UI文件对应的脚本，获取UI文件中的文本框，这里我们将列表视图节点数据基类（ListViewItemDataBase）的序号填入文本框，实际项目中这里可以写更多逻辑，让每行项目展示不同的内容。
 ```ts
 export default class NewUIScript1 extends UIScript {
@@ -80,8 +81,8 @@ export default class NewUIScript extends UIScript {
     }
 }
 ```
-- 请注意如果是瓦片视图，需要在上述代码获得TileView控件之后，需要手动设置排列规则，如下：
-```ts
+::: tip
+请注意如果是瓦片视图，需要在上述代码获得TileView控件之后，需要手动设置排列规则，如下：
 this.TileView = this.uiWidgetBase.findChildByPath('RootCanvas/TileView') as mw.TileView
 // 通过设置子对象的宽高来决定对象的排列规则
 // 本例中TileView宽400+，这里设定itemWidth200
@@ -95,6 +96,7 @@ for(let index = 0; index < 10; index++){
     arrTileV.push(new mw.ListViewItemDataBase())
 }
 tileV.addItems(arrTileV)
-```
+:::
+
 - 启动游戏后，我们按下数字键1，就能在列表视图中动态生成新项目了，并且每个项目中的数字都是节点数据基类的序号。
-![](https://cdn.233xyx.com/online/ZMx6dlwMFUVH1711267446256.gif)
+![](https://cdn.233xyx.com/online/69BYcSYeLEIR1718169531421.gif)
