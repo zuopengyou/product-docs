@@ -120,6 +120,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-下拉菜单', link: '/UI/UIWidget-Dropdown.md' },
           { text: 'UI控件-广告按钮', link: '/UI/UIWidget-AdsButton.md' },
           { text: 'UI控件-序列帧', link: '/UI/UIWidget-Flipbook.md' },
+          { text: 'UI控件-列表视图和瓦片视图', link: '/UI/UIWidget-Listview.md' },
           { text: '富文本', link: '/UI/Rich-text.md' },
           { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
           {
