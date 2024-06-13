@@ -124,6 +124,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-下拉菜单', link: '/UI/UIWidget-Dropdown.md' },
           { text: 'UI控件-广告按钮', link: '/UI/UIWidget-AdsButton.md' },
           { text: 'UI控件-序列帧', link: '/UI/UIWidget-Flipbook.md' },
+          { text: 'UI控件-列表视图和瓦片视图', link: '/UI/UIWidget-Listview.md' },
           { text: '富文本', link: '/UI/Rich-text.md' },
           { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
           {
@@ -283,6 +284,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
+          { text: 'v0.34.0.3', link: '/ReleaseNote/v0.34.0.3.md' },
+          { text: 'v0.34.0.2', link: '/ReleaseNote/v0.34.0.2.md' },
+          { text: 'v0.34.0.1', link: '/ReleaseNote/v0.34.0.1.md' },
+          { text: 'v0.34.0.0', link: '/ReleaseNote/v0.34.0.0.md' },
           { text: 'v0.33.0.5', link: '/ReleaseNote/v0.33.0.5.md' },
           { text: 'v0.33.0.4', link: '/ReleaseNote/v0.33.0.4.md' },
           { text: 'v0.33.0.3', link: '/ReleaseNote/v0.33.0.3.md' },
@@ -385,12 +390,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-
         text: '主版本',
         items: [
           {
-            text: '034 版本',
-            link: 'https://docs-034.ark.online/',
+            text: '033 版本',
+            link: 'https://docs-033.ark.online/',
           }
         ]
       }
