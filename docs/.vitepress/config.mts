@@ -395,6 +395,10 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           {
             text: '033 版本',
             link: 'https://docs-033.ark.online/',
+          },
+{
+            text: '035 版本',
+            link: 'https://docs-035.ark.online/',
           }
         ]
       }
