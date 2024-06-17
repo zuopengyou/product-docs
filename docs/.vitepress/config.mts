@@ -258,6 +258,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           },
           { text: '分析游戏数据', link: '/CreatorPortal/Analytics.md' },
           { text: '接入游戏广告', link: '/CreatorPortal/Advertising.md' },
+ { text: '接入游戏内购', link: '/CreatorPortal/In-App Purchase.md' },
           {
             text: '游戏性能及排查',
             link: '/CreatorPortal/PerformanceOverview.md'
