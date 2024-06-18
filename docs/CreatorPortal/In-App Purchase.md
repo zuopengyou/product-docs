@@ -40,7 +40,7 @@ mw.PurchaseService.onArkBalanceUpdated.add(onArkUpdate);
  mw.PurchaseService.getArkBalance(); // 触发代币余额刷新。接收更新的值要用mw.PurchaseService.onArkBalanceUpdated
 ```
 
-1. ###### 购买代币商品
+2. ###### 购买代币商品
 
 - 需要在客户端调用购买方法，并在回调中刷新代币数量，其中CommodityId为平台配置的商品ID
 
