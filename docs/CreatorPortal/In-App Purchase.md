@@ -140,12 +140,12 @@ mw.PurchaseService.onOrderDelivered.add(onShipOrder);
 
 您可根据用户消费力分布情况，调整商品定价策略，以吸引更多用户、或使用户分布往更高价值偏移。比如有的游戏内购人数较多，但大部分消费分布集中在1~200代币，可考虑制定累计充值活动提高用户消费金额等
 
-![image](https://arkimg.ark.online/image.png)
+![img](https://arkimg.ark.online/(null)-20240624143456519.png)
 
 #### 整体分析思路
 
 这里为大家概括说明下该看板的分析思路，大家可以参考去使用看板分析游戏的内购数据
 
-![whiteboard_exported_image](https://arkimg.ark.online/whiteboard_exported_image.png)
+![img](https://arkimg.ark.online/(null)-20240624143456626.png)
 
 希望通过利用内购数据分析看板，您能够更深入地了解用户需求和购买行为，从而制定更有效的游戏内购策略，提升游戏收入。
