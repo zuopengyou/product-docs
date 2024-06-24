@@ -13,13 +13,20 @@
 
 ### 创建商品
 
-可在【创作者中心】-【游戏服务】-【[商品管理](https://portal.ark.online/#/admin/good-management)】创建商品。
+可在【创作者中心】-【我的游戏】-【游戏服务】-【[商品管理]([https://portal.ark.online/#/admin/good-management](https://portal.ark.online/#/admin/game-good-management))】创建商品。
 
 - 该价格为代币价格，目前100代币≈1元，可根据游戏内定价填写合适价格
-- 游戏内的每个商品都应该在商品管理内创建单独的商品以方便后续管理。
-- 请注意不要多个游戏共用一个商品code。
+- 游戏内的每个商品都应该在游戏维度下的商品管理内创建单独的商品以方便后续管理。
 
 ![image](https://arkimg.ark.online/image.png)
+
+
+**tips：之前创建的商品可以在【创作者中心】-【游戏服务】-【[商品管理](https://portal.ark.online/#/admin/good-management)】修改绑定的游戏**
+
+- **请于6.25前将账号下所有商品绑定游戏，若商品未绑定或并非已绑定游戏，玩家将无法完成支付。请您务必在此之前完成相关内容的修改。**
+
+![image](https://cdn.233xyx.com/athena/online/822e0af0ad10418ba7f0d74edf2b6ba9_265528549.webp)
+
 
 ### 游戏代码编写
 
