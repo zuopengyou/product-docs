@@ -396,7 +396,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-        text: '036版本',
+        text: '主版本',
         items: [
           {
 
