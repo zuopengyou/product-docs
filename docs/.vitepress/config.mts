@@ -125,6 +125,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-广告按钮', link: '/UI/UIWidget-AdsButton.md' },
           { text: 'UI控件-序列帧', link: '/UI/UIWidget-Flipbook.md' },
           { text: 'UI控件-列表视图和瓦片视图', link: '/UI/UIWidget-Listview.md' },
+          { text: 'UI控件-绘图画布', link: '/UI/UIWidget-DrawCanvas.md' },
           { text: '富文本', link: '/UI/Rich-text.md' },
           { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
           {
@@ -172,7 +173,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '禁行区', link: '/GameplayObjects/BlockingArea.md' },
           { text: '音效', link: '/GameplayObjects/SoundEffect.md' },
           { text: 'IK锚点', link: '/GameplayObjects/IKAnchor.md' },
-          { text: '特效', link: '/GameplayObjects/Effects.md' }
+          { text: '特效', link: '/GameplayObjects/Effects.md' },
+          { text: '点光源', link: '/GameplayObjects/PointLight.md' }
         ]
       },
       {
@@ -285,6 +287,9 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
+          { text: 'v0.35.0.2', link: '/ReleaseNote/v0.35.0.2.md' },
+          { text: 'v0.35.0.1', link: '/ReleaseNote/v0.35.0.1.md' },
+          { text: 'v0.35.0.0', link: '/ReleaseNote/v0.35.0.0.md' },
           { text: 'v0.34.0.3', link: '/ReleaseNote/v0.34.0.3.md' },
           { text: 'v0.34.0.2', link: '/ReleaseNote/v0.34.0.2.md' },
           { text: 'v0.34.0.1', link: '/ReleaseNote/v0.34.0.1.md' },
@@ -391,11 +396,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-        text: '034 版本',
+        text: '主版本',
         items: [
           {
-            text: '主版本',
-            link: 'https://docs.ark.online/'
+            text: '034 版本',
+            link: 'https://docs-034.ark.online/'
           }
         ]
       }
