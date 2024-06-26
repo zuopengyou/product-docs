@@ -260,6 +260,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           },
           { text: '分析游戏数据', link: '/CreatorPortal/Analytics.md' },
           { text: '接入游戏广告', link: '/CreatorPortal/Advertising.md' },
+ { text: '接入游戏内购', link: '/CreatorPortal/In-App Purchase.md' },
           {
             text: '游戏性能及排查',
             link: '/CreatorPortal/PerformanceOverview.md'
@@ -395,11 +396,11 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-        text: '035 版本',
+        text: '主版本',
         items: [
           {
-            text: '主版本',
-            link: 'https://docs.ark.online/',
+            text: '034 版本',
+            link: 'https://docs-034.ark.online/'
           }
         ]
       }
