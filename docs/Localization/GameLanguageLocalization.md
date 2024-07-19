@@ -85,7 +85,7 @@ this.tiptxt.text = LanguageUtil.getText("Test1")+"number"+LanguageUtil.getText("
 
 ![](https://cdn.233xyx.com/online/RpwXw48f2Gea1721359404720.png)
 
-| ![](https://cdn.233xyx.com/online/O6UAozTtojsi1721359391592.PNG)  ![](https://cdn.233xyx.com/online/EFQghDiECp7G1721359392148.png) 
+![](https://cdn.233xyx.com/online/O6UAozTtojsi1721359391592.PNG)  ![](https://cdn.233xyx.com/online/EFQghDiECp7G1721359392148.png) 
 
   - 目前本地化功能支持识别的占位符格式有以下三种，这三种占位符内的标记文本不会被自动翻译，运行时检测替换也会跳过占位符来进行匹配：
 
