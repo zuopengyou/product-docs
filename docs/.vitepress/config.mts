@@ -127,7 +127,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-列表视图和瓦片视图', link: '/UI/UIWidget-Listview.md' },
           { text: 'UI控件-绘图画布', link: '/UI/UIWidget-DrawCanvas.md' },
           { text: '富文本', link: '/UI/Rich-text.md' },
-          { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
+          { text: '安全区适配及设计器功能', link: '/UI/UIDesigner.md' },
           {
             text: '按键绑定（针对PC端）及预设UI',
             link: '/UI/KeybindsandPremadeUI.md'
@@ -244,7 +244,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsed: true,
         items: [
           {
-            text: '游戏语言本地化',
+            text: '游戏本地化',
             link: '/Localization/GameLanguageLocalization.md'
           }
         ]
