@@ -126,8 +126,9 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-序列帧', link: '/UI/UIWidget-Flipbook.md' },
           { text: 'UI控件-列表视图和瓦片视图', link: '/UI/UIWidget-Listview.md' },
           { text: 'UI控件-绘图画布', link: '/UI/UIWidget-DrawCanvas.md' },
+          { text: 'UI控件-遮罩', link: '/UI/UIWidget-Mask.md' },
           { text: '富文本', link: '/UI/Rich-text.md' },
-          { text: 'UI编辑器设计功能', link: '/UI/UIDesigner.md' },
+          { text: '安全区适配及设计器功能', link: '/UI/UIDesigner.md' },
           {
             text: '按键绑定（针对PC端）及预设UI',
             link: '/UI/KeybindsandPremadeUI.md'
@@ -174,7 +175,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '音效', link: '/GameplayObjects/SoundEffect.md' },
           { text: 'IK锚点', link: '/GameplayObjects/IKAnchor.md' },
           { text: '特效', link: '/GameplayObjects/Effects.md' },
-          { text: '点光源', link: '/GameplayObjects/PointLight.md' }
+          { text: '点光源', link: '/GameplayObjects/PointLight.md' },
+          { text: '粒子发射器', link: '/GameplayObjects/ParticleEmitter.md' }
         ]
       },
       {
@@ -244,7 +246,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsed: true,
         items: [
           {
-            text: '游戏语言本地化',
+            text: '游戏本地化',
             link: '/Localization/GameLanguageLocalization.md'
           }
         ]
@@ -285,6 +287,12 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
+          { text: 'v0.36.0.5', link: '/ReleaseNote/v0.36.0.5.md' },
+          { text: 'v0.36.0.4', link: '/ReleaseNote/v0.36.0.4.md' },
+          { text: 'v0.36.0.3', link: '/ReleaseNote/v0.36.0.3.md' },
+          { text: 'v0.36.0.2', link: '/ReleaseNote/v0.36.0.2.md' },
+          { text: 'v0.36.0.1', link: '/ReleaseNote/v0.36.0.1.md' },
+          { text: 'v0.36.0.0', link: '/ReleaseNote/v0.36.0.0.md' },
           { text: 'v0.35.0.4', link: '/ReleaseNote/v0.35.0.4.md' },
           { text: 'v0.35.0.3', link: '/ReleaseNote/v0.35.0.3.md' },
           { text: 'v0.35.0.2', link: '/ReleaseNote/v0.35.0.2.md' },
@@ -396,16 +404,17 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         link: 'https://forum.ark.online/'
       },
       {
-        text: '主版本',
+        text: '036 版本',
         items: [
           {
+
             text: '036 版本',
             link: 'https://docs-036.ark.online/'
           },
          {
             text: '034 版本',
             link: 'https://docs-034.ark.online/'
-          }      
+          }     
         ]
       }
     ],
