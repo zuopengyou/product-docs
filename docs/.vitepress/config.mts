@@ -126,6 +126,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: 'UI控件-序列帧', link: '/UI/UIWidget-Flipbook.md' },
           { text: 'UI控件-列表视图和瓦片视图', link: '/UI/UIWidget-Listview.md' },
           { text: 'UI控件-绘图画布', link: '/UI/UIWidget-DrawCanvas.md' },
+          { text: 'UI控件-遮罩', link: '/UI/UIWidget-Mask.md' },
           { text: '富文本', link: '/UI/Rich-text.md' },
           { text: '安全区适配及设计器功能', link: '/UI/UIDesigner.md' },
           {
