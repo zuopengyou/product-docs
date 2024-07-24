@@ -174,7 +174,8 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '音效', link: '/GameplayObjects/SoundEffect.md' },
           { text: 'IK锚点', link: '/GameplayObjects/IKAnchor.md' },
           { text: '特效', link: '/GameplayObjects/Effects.md' },
-          { text: '点光源', link: '/GameplayObjects/PointLight.md' }
+          { text: '点光源', link: '/GameplayObjects/PointLight.md' },
+          { text: '粒子发射器', link: '/GameplayObjects/ParticleEmitter.md' }
         ]
       },
       {
