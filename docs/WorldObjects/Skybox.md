@@ -535,3 +535,44 @@ Skybox.cloudDensity = 1;
 //设置云速度
 Skybox.cloudSpeed = 1;
 ```
+
+### 云
+- 是否开启扰动：扰动开启时,会对天空球贴图进行颜色的扰动处理.
+- 相关接口：
+
+```ts
+//开启扰动
+Skybox.disturbanceEnabled = true;
+//关闭扰动
+Skybox.disturbanceEnabled = false;
+```
+
+<div style="text-align: center">开启扰动效果</div>
+
+<video controls src="https://cdn.233xyx.com/online/Md9K1iYg6pN01721884904752.mp4"></video>
+
+
+- 扰动强度：设置扰动效果的强度
+- 相关接口：
+
+```ts
+//设置扰动强度
+Skybox.disturbanceIntensity = 1;
+```
+<div style="text-align: center">扰动强度为1时的效果</div>
+
+<video controls src="https://cdn.233xyx.com/online/Ef1nE4NsMJuO1721884906212.mp4"></video>
+
+
+
+- 扰动密集度：设置扰动效果的密集度
+- 相关接口：
+
+```ts
+//设置扰动密集度
+Skybox.disturbanceDensity = 30;
+```
+
+<div style="text-align: center">扰动强度为30时的效果</div>
+
+<video controls src="https://cdn.233xyx.com/online/VRXNXdgBNInA1721884906898.mp4"></video>
