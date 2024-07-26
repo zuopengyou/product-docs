@@ -53,7 +53,7 @@ let pool = GameObject.spawn("WaterVolume") as WaterVolume;
 :::
 
 
-## 游泳属性介绍
+## 游泳区属性介绍
 
 ### 水体摩擦力
 
@@ -64,6 +64,16 @@ let pool = GameObject.spawn("WaterVolume") as WaterVolume;
 | 水体摩擦力=1  | 水体摩擦力=100 |
 | ----- | ----- |
 | <video controls src="https://cdn.233xyx.com/online/UVIfDdUOjEWD1709714874837.mp4"></video> | <video controls src="https://cdn.233xyx.com/online/tPDy7Tw1KKQW1709714874837.mp4"></video> |
+
+
+### 启用浮力
+
+功能说明：为水体区域添加浮力效果,可能将具有物理模拟属性的对象浮在水体中.
+
+演示效果：
+<video controls src="https://cdn.233xyx.com/online/3PyIlqBEpBPZ1721958692529.mp4"></video>
+
+
 
 ## 水体属性介绍
 
