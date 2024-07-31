@@ -24,7 +24,7 @@
 
 1. 访问创作者中心-选择游戏-游戏测试-切换到沙盒模式，使用4.38以上版本的233乐园扫码即可
 
-最新233乐园下载 ：[]
+最新233乐园下载 ：[233乐园官网](https://www.233leyuan.com/)
 
 <img src="https://arkimg.ark.online/1722304673502-4.gif" alt="img" style="zoom:50%;" />
 
@@ -46,10 +46,13 @@
 
 沙盒环境数据与正式环境数据完全独立，可通过【游戏测试】下的游戏存档&充值订单查看沙箱环境数据
 
+<img src="https://arkimg.ark.online/1722304673502-3.webp" alt="img" style="zoom:50%;" />
+
+
 |          | 游戏存档                                                  | 充值订单                                             |
 | -------- | --------------------------------------------------------- | ---------------------------------------------------- |
-| 正式环境 | https://portal.ark.online/#/admin/players-archive         | https://portal.ark.online/#/admin/game-order-list    |
-| 沙盒环境 | https://portal.ark.online/#/admin/sandbox-players-archive | https://portal.ark.online/#/admin/sandbox-order-list |
+| 正式环境 | [游戏存档-正式环境](https://portal.ark.online/#/admin/players-archive)         | [充值订单-正式环境](https://portal.ark.online/#/admin/game-order-list)    |
+| 沙盒环境 | [游戏存档-沙盒环境](https://portal.ark.online/#/admin/sandbox-players-archive) | [充值订单-沙盒环境](https://portal.ark.online/#/admin/sandbox-order-list) |
 
-<img src="https://arkimg.ark.online/1722304673502-3.webp" alt="img" style="zoom:50%;" />
+
 
