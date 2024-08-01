@@ -261,7 +261,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             link: '/CreatorPortal/Publishing&Managing.md'
           },
 { text: '游戏多地区发布', link: '/CreatorPortal/PublishOversea.md' },
-{ text: '游戏测试&沙盒环境', link: '/CreatorPortal/Debug&release.md' },
+{ text: '游戏测试&沙箱环境', link: '/CreatorPortal/Debug&release.md' },
           { text: '分析游戏数据', link: '/CreatorPortal/Analytics.md' },
           { text: '接入游戏广告', link: '/CreatorPortal/Advertising.md' },
           { text: '接入游戏内购', link: '/CreatorPortal/In-App Purchase.md' },
