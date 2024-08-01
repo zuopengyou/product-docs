@@ -46,7 +46,7 @@
 
 沙箱环境数据与正式环境数据完全独立，可通过【游戏测试】下的游戏存档&充值订单查看沙箱环境数据
 
-<img src="https://arkimg.ark.online/1722304673502-3.webp" alt="img" style="zoom:50%;" />
+<img src="https://cdn.233xyx.com/athena/online/5918b5c69a7141b19d28988689e1b2f9_323454571.webp" alt="img" style="zoom:50%;" />
 
 
 |          | 游戏存档                                                  | 充值订单                                             |
