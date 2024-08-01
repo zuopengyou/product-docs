@@ -7,9 +7,11 @@
 
 ### 账号绑定
 
+
 #### 1. 登录[海外开发者平台](https://portal.gpark.fun)，复制token
 
 <img src="https://cdn.233xyx.com/athena/online/99a3246cbeb04ad1a4974e236cefa8a3_321840760.webp" alt="img" style="zoom:50%;" />
+
 
 #### 2. 前往[国内开发者平台](https://portal.ark.online/#/admin/home)绑定海外账号，将海外的token复制到国内贴上
 
@@ -31,12 +33,14 @@ token有效期5min，绑定后不可修改
 
 ### 发布游戏
 
+
 #### 发布设置
 
 - 可玩设备默认全部勾选，安卓必选；
 - 发布地区勾选Gpark，即可将您的游戏发布到海外，您可选择绑定之前在海外发布过的游戏或者创建个新的游戏；
 
 <img src="https://arkimg.ark.online/1722253246499-51.webp" alt="img" style="zoom:50%;" />
+
 
 #### 游戏素材
 
