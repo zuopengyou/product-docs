@@ -49,17 +49,18 @@ Lighting.pitchAngle = -30;
 
 - 属性说明：开发者可通过滑动滚轮调整平行光强度。
 - 数值范围：0-100。
-<div style="text-align: center">强度为0时候的地面</div>
 
 ![](https://cdn.233xyx.com/1682496758313_708.PNG)
 
-<div style="text-align: center">强度为50时候的地面</div>
+<div style="text-align: center">强度为0时候的地面</div>
 
 ![](https://cdn.233xyx.com/1682496924716_543.PNG)
 
-<div style="text-align: center">强度为100时候的地面</div>
+<div style="text-align: center">强度为50时候的地面</div>
 
 ![](https://cdn.233xyx.com/1682496937447_114.PNG)
+
+<div style="text-align: center">强度为100时候的地面</div>
 
 - 相关接口：
 
