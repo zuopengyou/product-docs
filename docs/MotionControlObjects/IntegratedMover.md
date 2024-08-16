@@ -68,7 +68,7 @@
 | 延时启动时间 | swingDelayStartTime  | 设置首次运行时的延迟启动时间                                                                                               |
 | 摆动角度     | swingAngle           | 设置摆动一侧的最大角度，需要注意在同时设置了多个轴方向的摆动时，会出现摆动幅度异常的情况，推荐只使用一个轴方向上进行摆动。 |
 
-<video controls src="https://cdn.233xyx.com/athena/online/310492b3b66e409bbcc87808bb924f1d.mp4"></video>
+<video controls src="https://qn-cdn.233leyuan.com/online/RuWtzShHWYim1723785004638.mp4"></video>
 
 ## 如何创建运动器
 ### 在编辑器内创建
