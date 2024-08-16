@@ -257,28 +257,24 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsed: true,
         items: [
           {
-            text: '游戏发布及管理',
+            text: '游戏发布&审核',
             link: '/CreatorPortal/Publishing&Managing.md'
           },
-{ text: '游戏多地区发布', link: '/CreatorPortal/PublishOversea.md' },
-{ text: '游戏测试&沙箱环境', link: '/CreatorPortal/Debug&release.md' },
-          { text: '分析游戏数据', link: '/CreatorPortal/Analytics.md' },
-          { text: '接入游戏广告', link: '/CreatorPortal/Advertising.md' },
+          { text: '游戏测试&沙箱', link: '/CreatorPortal/Debug&release.md' },
+          { text: '版本管理&实验', link: '/CreatorPortal/VersionManagement.md' },
+          { text: '游戏数据&反馈', link: '/CreatorPortal/Analytics.md' },
           { text: '接入游戏内购', link: '/CreatorPortal/In-App Purchase.md' },
-          { text: '游戏性能及报错', link: '/CreatorPortal/PerformanceOverview.md' },
-          { text: '房间监控及日志', link: '/CreatorPortal/Room&Logs.md' },
-          { text: '管理游戏版本', link: '/CreatorPortal/VersionManagement.md' },
+          { text: '接入游戏广告', link: '/CreatorPortal/Advertising.md' },
+          { text: '游戏性能&报错', link: '/CreatorPortal/PerformanceOverview.md' },
+          { text: '房间服务&日志', link: '/CreatorPortal/Room&Logs.md' },
           {
-            text: '游戏推荐及曝光',
+            text: '游戏推荐&曝光',
             link: '/CreatorPortal/Promotion&Operation.md'
           },
-          {
-            text: '游戏福利及活跃',
-            link: '/CreatorPortal/GameBenefits.md'
-          },
           { text: '管理游戏社区', link: '/CreatorPortal/Community.md' },
+          { text: '管理游戏福利', link: '/CreatorPortal/GameBenefits.md' },
           {
-            text: '协作与转移游戏',
+            text: '协作权限&管理',
             link: '/CreatorPortal/Collaboration&Transfer.md'
           },
           { text: '创作者收益结算', link: '/CreatorPortal/Monetization.md' }
