@@ -106,8 +106,7 @@ export default class NewUIScript extends UIScript {
 ```ts
 this.TileView = this.uiWidgetBase.findChildByPath('RootCanvas/TileView') as mw.TileView
 // 通过设置子对象的宽高来决定对象的排列规则
-// 本例中TileView宽400+，这里设定itemWidth200
-// 因此如下图一排容纳了两个
+// 本例中TileView宽400+，这里设定itemWidth200，一排能容纳两个项目
 this.TileView.itemWidth = 200
 this.TileView.itemHeight = 50
 
