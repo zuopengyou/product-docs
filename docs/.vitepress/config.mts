@@ -265,12 +265,16 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '游戏数据与反馈', link: '/CreatorPortal/Analytics.md' },
           { text: '接入游戏内购', link: '/CreatorPortal/In-App Purchase.md' },
           { text: '接入游戏广告', link: '/CreatorPortal/Advertising.md' },
-          { text: '游戏性能与报错', link: '/CreatorPortal/PerformanceOverview.md' },
-          { text: '房间服务与日志', link: '/CreatorPortal/Room&Logs.md' },
           {
             text: '游戏推荐与曝光',
             link: '/CreatorPortal/Promotion&Operation.md'
           },
+          {
+            text: '游戏活跃与公告',
+            link: '/CreatorPortal/Announcement.md'
+          },
+          { text: '游戏性能与报错', link: '/CreatorPortal/PerformanceOverview.md' },
+          { text: '房间服务与日志', link: '/CreatorPortal/Room&Logs.md' },
           { text: '管理游戏社区', link: '/CreatorPortal/Community.md' },
           { text: '管理游戏福利', link: '/CreatorPortal/GameBenefits.md' },
           {
