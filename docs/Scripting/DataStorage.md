@@ -146,7 +146,7 @@ let data3 = await DataStorage.asyncGetData("coin");
 
 |中文示例|英文示例|
 |-----|-----|
-|[中文示例](https://qn-cdn.233leyuan.com/online/HNbKLlm2ccAE1724058131585.png)|[英文示例](https://qn-cdn.233leyuan.com/online/OYYzUKDCw5Bm1724058132341.png)|
+|![](https://qn-cdn.233leyuan.com/online/HNbKLlm2ccAE1724058131585.png)|![](https://qn-cdn.233leyuan.com/online/OYYzUKDCw5Bm1724058132341.png)|
 
 - 选择游戏存档并将数据类型选择为自定义。
 
