@@ -12,8 +12,6 @@
 
 ## 输入框属性-文本
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntSDwiP56KZ602AahsNCnMg.png)
-
 - 字体大小、字体间距、水平显示请见 [UI 控件-文本](https://docs.ark.online/UI/UIComponent-Text.html) 。
 
 ### 输入限制
@@ -24,16 +22,10 @@
 ### 默认文本
 
 - 即占位文本，输入框内容为空时，默认显示的文本内容，显示在输入框控件内，且字体颜色为淡灰色。在用户输入文本时，该默认文本将会消失。
-- 示意图：
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnxUIzqK1Kt3kqM3ghfBd3He.png)
 
 ### 文本
 
 - 输入相应文本内容，显示在输入框控件内。
-- 示意图：
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYET5zoGXJvrJFBLnyEapgS.png)
 
 ### 只读
 
@@ -42,20 +34,13 @@
 
 ## 输入框属性-样式
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcneS75jSRDgBWTMoanPQbbBh.png)
-
 - 字体类属性请见 [UI 控件-文本](https://docs.ark.online/UI/UIComponent-Text.html)。
 
 ### 内容颜色
 
 - 修改输入底框的颜色。
-- 示意图：
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjsTrzL4F1NMql9sMfbcd0e.gif)
 
 ## 输入框属性-内容限制
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnz7qV9htSuLVenIgm6c84bf.png)
 
 ### 内容限制
 
@@ -83,7 +68,7 @@
 
 - 首先我们需要制作一个面板，然后将输入框等 UI 控件放置在面板上，如图。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnG5xvvO3NrF5ayC2upmKUmf.png)
+![](https://qn-cdn.233leyuan.com/online/4zdEqpqQHMXU1724051250930.png)
 
 - 然后将 UI 与脚本进行绑定。随后编写脚本。
 - 示例脚本：
@@ -135,6 +120,5 @@ export default class NewUIScript extends UIScript {
 
 - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmz22T0jzFsCRBvnZHHYAyc.gif)
+![](https://qn-cdn.233leyuan.com/online/45CQ0oQQ52VS1724051249966.gif)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/online/e5b3YgeWB89Z1694499630537.7z)

@@ -12,8 +12,6 @@
 
 ## 文本属性-文本
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnszRhmLcMi1xEspl71LjyVh.png)
-
 ### 文本
 
 - 修改文字内容
@@ -68,13 +66,13 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHCXXuNLqTTbmiWRDPh9bhh.gif)
 
-- 使用场景：将游戏内中文批量翻译成英文，为了避免翻译后的英文会比中文长，导致超出文本框，可以开启【自适应文本框】，自动计算合适的文本大小；例如下图中，将字号大小为 58 号的汉字内容更换成英文后，英文的字号大小自动调整为 48 号
+- 【最大字体大小】和【最小字体大小】
+  - 开启【自适应文本框】时，如果计算出的自适应字号大于【最大字体大小】，则采用最大字体大小；如果计算出的自适应字号小于【最小字体大小】，则采用最小字体大小；如果计算出的自适应字号介于两者之间，就采用计算的自适应字号
+  - 推荐同一批尺寸相同的文本框可以统一设定一个【最大字体大小】
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYFXa0nT4Bz237DFXBtMQPN.gif)
+![](https://qn-cdn.233leyuan.com/online/EJwwA8ZOru8i1724051242051.mp4)
 
 ## 文本属性-样式
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnM0ugvMv54RGWJFWl21Tf1e.png)
 
 ### 字形
 
@@ -168,7 +166,7 @@
 
 - 首先我们先创建一个 UI，并拖入文本控件。保存后，拖入主编辑器的对象列表中，生成 UI。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnj00PR4jM0IeVWzTzfGAAKf.png)
+![](https://qn-cdn.233leyuan.com/online/UTuYQbmlTzi11724051250462.png)
 
 - 然后我们开始编写脚本的逻辑，找到当前角色并获取到角色的速度。
 - 我们再创建一个脚本，找到咱们的 UI 文本控件，并且接受上面的速度事件，将获取到的角色速度显示在文本控件上。最后将这个脚本拖入 Root 目录下，完成与 UI 的绑定。
@@ -203,6 +201,4 @@ export default class DefaultUI extends UIScript {
 
 - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5HapDZ4FTzKt0PvM8jxXjf.gif)
-
-- 工程文件：  [点击下载](https://cdn.233xyx.com/online/X9kOTd3OlmXB1694916401072.7z)
+![](https://qn-cdn.233leyuan.com/online/sT8ujuays9SN1724051248300.gif)
