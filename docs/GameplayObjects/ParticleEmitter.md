@@ -18,7 +18,11 @@
 
 ## 3. 粒子发射器有哪些属性和接口？
 ### 3.1 变换
-![image](https://github.com/user-attachments/assets/7bebf453-a626-4840-b743-1522ed4ef2aa)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/athena/online/c3aab7481a08432aa8d47876f97bf556_354387306.webp)|![](https://qn-cdn.233leyuan.com/athena/online/8f366ee676ec48b092771f2188aded66_354387307.webp)|
+
 #### 3.1.1 相对位置：粒子发射器在世界中的位置。
 #### 3.1.2 相对旋转：粒子发射器在世界中的旋转。
 #### 3.1.3 相对缩放：固定为(1,1,1)，无法更改。
