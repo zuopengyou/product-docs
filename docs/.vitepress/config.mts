@@ -221,8 +221,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '数据存储', link: '/Scripting/DataStorage.md' },
-          { text: '共享数据', link: '/Scripting/DataSharing.md' }
+          { text: '数据存储', link: '/Scripting/DataStorage.md' }
         ]
       },
       {
