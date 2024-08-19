@@ -12,13 +12,12 @@
 
 ## 容器属性-布局
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcndWr09C5ra5oh6gdkKCkR2g.png)
 
 - 布局是容器的独有属性，主要作用是将容器内的所有子项进行有规则的排序，方便用户进行使用。
 - 举例说明：背包功能就是典型利用容器布局所制作的 UI 效果。
 - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4V8N1j9wLi8gqGJweYl2qg.png)
+![](https://qn-cdn.233leyuan.com/online/hkc1Jz6hYnn81724046855463.png)
 
 ### 自动布局
 
@@ -52,36 +51,8 @@
 
 ### 排列规则
 
-- 左上对齐
+- 将该容器的子级放置在容器的哪个方位，可以设置为左上对齐、左中对齐、左下对齐、右上对齐、右中对齐、右下对齐、中上对齐、居中对齐、中下对齐
 
-  - 以左上位置进行对齐
-- 左中对齐
-
-  - 以左中位置进行对齐
-- 左下对齐
-
-  - 以左下位置进行对齐
-- 右上对齐
-
-  - 以右上位置进行对齐
-- 右中对齐
-
-  - 以右中位置进行对齐
-- 右下对齐
-
-  - 以右下位置进行对齐
-- 中上对齐
-
-  - 以中上位置进行对齐
-- 居中对齐
-
-  - 以居中位置进行对齐
-- 中下对齐
-
-  - 以中下位置进行对齐
-- 示意图：
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnBEYyIEEq2vlbZ77zbhwCQc.gif)
 
 ### 间隔
 
@@ -94,35 +65,33 @@
 
 - 启用自动布局后，容器内所有子对象默认会根据从上到下，从左到右的顺序进行排序；如果希望修改这些子对象的排序规则，可以修改子项排列规则的水平排序和垂直排序属性。
 - 水平排序
-
   - 从左到右
   - 从右到左
 - 垂直排序
-
   - 从上到下
   - 从下到上
 - 再加上上文的容器类型和排列规则，共能实现 9X2X2X2=72 种容器的布局方式。
 
   - 可以理解为：
 
-    - 第一步：排列规则是决定被排列对象的整体位置在容器的哪个角落，用容器九个锚点中的哪一个来对齐；
+    - 第一步：排列规则是决定被排列对象的整体位置在容器的哪个方位，用容器九个锚点中的哪一个来对齐；
     - 第二步：子项排列规则的水平排序和垂直排序决定这些被排列对象整体内部是如何排列的，具体来说就是层级在最上的对象会在被排列对象整体位置的哪个角落；
     - 第三步：按照容器类型（水平分布/垂直分布）来决定排列方向，层级在最上的对象被放置在第二步中确定的角落，剩余对象根据这个排列方向进行分布
   - 举例说明：开启网格布局的默认情况下，容器类型默认值为水平布局，排列规则默认值为左上对齐。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnyqW1DABhRMqnmhZlZPIYzb.png)
+![](https://qn-cdn.233leyuan.com/online/IbxLYMF3lyiu1724047361462.jpg)
 
-- 将从左到右属性修改为从右到左，从上到下属性改为从下到上。
+- 将水平排序属性修改为从右到左，垂直排序属性改为从下到上。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmBozgbdPuJisxurjrikync.png)
+![](https://qn-cdn.233leyuan.com/online/bvi3Bbmtnl981724047361028.jpg)
 
 - 再举例说明：开启网格布局的默认情况下，将容器类型设置为垂直布局，排列规则设置为右上对齐。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfNbVkYbvrARQ0NByokpqYd.png)
+![](https://qn-cdn.233leyuan.com/online/snRKi2frwvPN1724047360511.jpg)
 
-- 将从左到右属性修改为从右到左，从上到下属性改为从下到上。
+- 将水平排序属性修改为从右到左，垂直排序属性改为从下到上。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6lenGSS6jci4DuzdnJlupb.png)
+![](https://qn-cdn.233leyuan.com/online/gW0ptrIbhnLm1724047359242.jpg)
 
 ### 边缘间距
 
@@ -140,31 +109,29 @@
   - 容器内的子项内容距离容器下边框的距离间距
 - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjJSMrtjfu5HR29qyaRvPgc.png)
+![](https://qn-cdn.233leyuan.com/online/Nsb3Yhwqe2bO1724047361903.png)
 
 ## 如何使用容器？
 
 ### 示例一：通过容器的自动布局，使 UI 控件有规律排序
 
-- 举例说明：很多情况下我们需要创建整齐的 UI 控件，下面左图中活动页签按钮就需要进行竖向的垂直排列，而下面右图的活动奖励内容需要水平排列；
+- 举例说明：很多情况下我们需要创建整齐的 UI 控件，下面左图中商店界面页签按钮就需要进行竖向的垂直排列，而下面右图的商店内容需要水平排列；
 - 想实现这样的效果，我们可以把底部的容器设置开启自动布局，并且把 UI 控件挂在在这个容器下，就可以实现快捷的自动布局了
 - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnDYLaS6iCo7eE1CIzov4uNh.png)
+![](https://qn-cdn.233leyuan.com/online/LU2KYIbEMa2x1724046856074.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnqUt10qT1KN6jsThwMqXhRc.png)
+![](https://qn-cdn.233leyuan.com/online/70CL4fFV9Bxf1724046856987.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIcbGxhE4k66RF7UCzY5Usc.gif)
+![](https://qn-cdn.233leyuan.com/online/lt4Wwa3uMR3I1724046848695.gif)
 
-### 示例二：制作活动页签的面板，用于整理 UI 控件并使其方便管理
+### 示例二：制作商店页签的面板，用于整理 UI 控件并使其方便管理
 
-- 举例说明：下面我们制作简单的活动面板，该面板有 4 种活动。点击每个活动页签的按钮点击后，右边的活动详情就会切换到不同的内容；
+- 举例说明：下面我们制作简单的商店面板，该面板有 4 种商店页签。点击每个商店页签的按钮点击后，右边的商店详情就会切换到不同的内容；
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWrpj2O6RL09cahEz1vwFjh.png)
+- 为了方便控制我们将同一个商店界面的所有 UI 控件放到同一个容器内，并在点击商店界面页签按钮时，将该容器设置为显示，其他为隐藏，即可实现效果（关于如何制作页签按钮的选中态，请参考 UI 控件-按钮部分的思路）
 
-- 为了方便控制我们将同一个活动的所有 UI 控件放到同一个容器内，并在点击活动页签按钮时，将该容器设置为显示，其他为隐藏，即可实现效果（关于如何制作页签按钮的选中态，请参考 UI 控件-按钮部分的思路）
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnfEFge52FO7U6ARQDR0yI5f.png)
+![](https://qn-cdn.233leyuan.com/online/3WgNvrDXOpLU1724046856531.png)
 
 - 示例脚本：
 
@@ -286,22 +253,15 @@ export default class activity extends UIScript {
 
 ```
 
-- 示意图：
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnWCPp8wXO1mVZ86z3Wc53cb.gif)
-
-- 工程项目：
-  [点击下载](https://cdn.233xyx.com/online/sN6aAHihDL611694424668017.7z)
-
 ### 示例三：制作动态增加/移除自定义UI控件的自动布局面板
 
 * 实际制作游戏时，背包/商店等菜单中的每个格子通常不是简单的一个UI控件，而是图片、文本、按钮等多个UI控件复合而成的，建议把一个格子放在一个单独的UI文件内
 * 需要注意：务必将自定义UI文件-Root对齐方式设为靠左+靠上对齐（如果Root是左右+上下对齐或者自适应对齐，会与容器的自动布局冲突），把可见性修改为【可见】，并把设计尺寸调整为所需要的大小
 
-![](https://cdn.233xyx.com/1681462157262_307.png)![](https://cdn.233xyx.com/1681462156860_422.png)
+![](https://qn-cdn.233leyuan.com/online/Y6YOqzcdrfIk1724046857468.png)
 
 * 然后制作面板，在底图上摆放一个开启自动布局的容器，【自适应规则】-【垂直适应】选择【自适应高度】；
-  ![](https://meta.feishu.cn/space/api/box/stream/download/asynccode/?code=NmQ3MDU2ZjcwNTRlODJlZWUxOTEzNDg3YmIyNDAwM2FfSkVWTXhiT2diR3VLZE1Da2cyemtaVmtVSjBZaE1zT3ZfVG9rZW46QWNzcWJ2VmhDb1VGUnB4MldmaGN3U00zbmtjXzE2ODE0NjIwOTE6MTY4MTQ2NTY5MV9WNA)
+
 * 最后，我们编写脚本将作为格子的自定义UI控件动态生成并挂载到这个容器里面；每次点击按钮，都会将作为格子的UI文件实例化一次，并生成一个格子
   
   * 示例脚本：
@@ -383,7 +343,5 @@ export default class activity extends UIScript {
   ```
 * 效果图：
 
-![](https://cdn.233xyx.com/1681462157060_878.gif)
+![](https://qn-cdn.233leyuan.com/online/J83G4tkx3D9U1724046851977.gif)
 
-* 工程项目：
-  [点击下载](https://cdn.233xyx.com/online/X4F8Va1kXEox1694155280424.7z)
