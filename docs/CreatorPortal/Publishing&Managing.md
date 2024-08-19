@@ -6,7 +6,9 @@
 
 :::
 
-[创作者中心](https://portal.ark.online/#/admin/game-list)将帮助您一站式管理发布的游戏及资源，您可以在此查看游戏相关数据、接入游戏相关服务、管理账号以及进行财务结算。
+[创作者中心](https://portal.ark.online/#/admin/game-list)将帮助您一站式管理发布的游戏及资源。
+
+> 您可以在此查看游戏相关数据、接入游戏相关服务、管理账号以及进行财务结算。
 
 ![CleanShot 2023-09-24 at 10.29.52@2x](https://arkimg.ark.online/CleanShot%202023-09-24%20at%2010.29.52@2x.webp)
 
@@ -74,13 +76,11 @@ token有效期5min，绑定后不可修改
 | <img src="https://cdn.233xyx.com/athena/online/79c1e30fa1fc4336a8f6c50177675cdb_322564351.webp" alt="img" style="zoom: 25%;" />| <img src="https://cdn.233xyx.com/athena/online/8397e8f006b84e6c897a139ae5d273ed_322542023.webp" alt="img" style="zoom:25%;" />|
 | --------------------------------------------------------- | ---------------------------------------------------- |
 
-### 游戏本地化
+### 本地化及发布
 
 可以使用编辑器的本地化工具完成游戏内容本地化，具体使用方式可前往[游戏本地化](https://docs.ark.online/Localization/GameLanguageLocalization.html)查看
 
 <img src="https://arkimg.ark.online/1722253246499-50.gif" alt="img" style="zoom:50%;" />
-
-### 游戏多端发布
 
 发布地区勾选Gpark，即可将您的游戏同步至海外，可以绑定已有的游戏或者发布为新游戏；
 
