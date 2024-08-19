@@ -152,13 +152,13 @@ let data3 = await DataStorage.asyncGetData("coin");
 
 |中文示例|英文示例|
 |-----|-----|
-|[中文示例](https://qn-cdn.233leyuan.com/online/SMBQtGPyBnDU1724058132809.png)|[英文示例](https://qn-cdn.233leyuan.com/online/6mFVvTSY63cN1724058133291.png)|
+|![](https://qn-cdn.233leyuan.com/online/SMBQtGPyBnDU1724058132809.png)|![](https://qn-cdn.233leyuan.com/online/6mFVvTSY63cN1724058133291.png)|
 
 - 最后根据 key 进行搜索，或直接点击搜索按钮，就可以看到我们游戏中存储的所有的数据啦！
 
 |中文示例|英文示例|
 |-----|-----|
-|[中文示例](https://qn-cdn.233leyuan.com/online/p2eiOEiHNqOt1724058133769.png)|[英文示例](https://qn-cdn.233leyuan.com/online/QO5HpviY2Bj71724058134190.png)|
+|![](https://qn-cdn.233leyuan.com/online/p2eiOEiHNqOt1724058133769.png)|![](https://qn-cdn.233leyuan.com/online/QO5HpviY2Bj71724058134190.png)|
 
 ::: warning 注意
 平台上的游戏数据需要等实际游戏的运行后，即执行了数据存储的游戏逻辑后，开发者平台上面才会存在相应的数据。
@@ -171,7 +171,7 @@ let data3 = await DataStorage.asyncGetData("coin");
 
 |中文示例|英文示例|
 |-----|-----|
-|[中文示例](https://qn-cdn.233leyuan.com/online/LWDYjcTp3ZoG1724058134669.png)|[英文示例](https://qn-cdn.233leyuan.com/online/BPRvZtlQxyxe1724058135107.png)|
+|![](https://qn-cdn.233leyuan.com/online/LWDYjcTp3ZoG1724058134669.png)|![](https://qn-cdn.233leyuan.com/online/BPRvZtlQxyxe1724058135107.png)|
 
 - 点击添加按钮，添加授权游戏。
 
@@ -182,7 +182,7 @@ let data3 = await DataStorage.asyncGetData("coin");
 
 |中文示例|英文示例|
 |-----|-----|
-|[中文示例](https://qn-cdn.233leyuan.com/online/HTeFohzAV6wf1724058135580.png)|[英文示例](https://qn-cdn.233leyuan.com/online/UU2LAptOXwOU1724058136007.png)|
+|![](https://qn-cdn.233leyuan.com/online/HTeFohzAV6wf1724058135580.png)|![](https://qn-cdn.233leyuan.com/online/UU2LAptOXwOU1724058136007.png)|
 
 ### 4. 其他游戏读取并修改共享数据
 
