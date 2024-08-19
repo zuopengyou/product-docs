@@ -13,8 +13,6 @@
 
 ## 变换
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn950nr4JyqJ3p6YhE1venJh.png)
-
 ### 坐标-位置
 
 - 修改 UI 控件在主视口的显示位置
@@ -54,7 +52,7 @@
 - 两个处于同一 UI 对象内的 UI 控件，UI 控件 Z 系数更大的控件渲染在上层
 - UI 控件 Z 系数在 UI 编辑器对象列表中选中 UI 控件后再属性面板中修改，而 UI 对象层级在主编辑器对象列表中选中 UI 对象后在属性面板中修改，两者也都可以在脚本中修改
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnRuCFkO0jlJ30jJKtjjSvSb.png)
+![](https://qn-cdn.233leyuan.com/online/0fLC2tfSg54D1724038002800.png)
 
 修改 UI 控件 Z 系数和 UI 对象层级的脚本示例：
 
@@ -84,8 +82,6 @@ this.uiObject.zOrder=0
 
 ## 对齐
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOtFGmHz6ebeVQUKCJMNlab.png)
-
 ### 对齐
 
 - 是指根据父级的拉伸/位移进行 UI 布局的对齐方式，方便对不同机型进行 UI 适配。
@@ -95,7 +91,7 @@ this.uiObject.zOrder=0
   父级无论如何变化，UI 控件依旧保持靠左边距的距离不变，且大小不变
   示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZDllX6w9A90igPaRSH5f35.gif)
+![](https://qn-cdn.233leyuan.com/online/oYLsXpc2p29D1724037990641.gif)
 
 ::: tip
 需要说明的是，在这一系列的演示动图中，白色图片并不是直接跟随游戏画面长宽比自适应变化的；白色图片的父级是上下对齐+左右对齐的Rootcanvas以及Root，Rootcanvas以及Root会自动跟随游戏画面长宽比变化填满屏幕，进而改变白色图片的位置和尺寸
@@ -105,24 +101,24 @@ this.uiObject.zOrder=0
   父级无论如何变化，UI 控件依旧保持靠右边距的距离不变，且大小不变
   示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn9dmacbOvcxViETmJKhEeih.gif)
+![](https://qn-cdn.233leyuan.com/online/Utw2ijaRTo6m1724037991149.gif)
 
 - 左右对齐
   父级无论如何变化，UI 控件依旧保持靠左边距和靠右边距的距离不变，大小会发生变化
   示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnbYalFiZPrAV2FFIhskhPqh.gif)
+![](https://qn-cdn.233leyuan.com/online/gKihI3oYGCxu1724037991659.gif)
 
 - 中心对齐
   父级无论如何变化，水平方向上，UI 控件依旧保持和父级中心位置的相对距离不变，且大小不变
   示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHjkvN8PBa9bwBsexKWTo8d.gif)
+![](https://qn-cdn.233leyuan.com/online/u6v9PVv39HRH1724037992154.gif)
 
 - 自适应
   水平方向上，UI 控件会根据会根据父级的变化进行自适应的变化比例大小
   示意图：
-  ![](https://cdn.233xyx.com/1681612910124_593.gif)
+  ![](https://qn-cdn.233leyuan.com/online/hiiAoFPamU361724037992661.gif)
 
 ### 垂直方向
 
@@ -130,53 +126,40 @@ this.uiObject.zOrder=0
   父级无论如何变化，UI 控件依旧保持靠上边距的距离不变，且大小不变
   示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnywBOu5DiFHLrYPGlO3jpWe.gif)
+![](https://qn-cdn.233leyuan.com/online/SQ1ZzD90DQEP1724037993209.gif)
 
 - 靠下对齐
   父级无论如何变化，UI 控件依旧保持靠下边距的距离不变，且大小不变
   示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn02FUkSErKNs3HNQY9vwwze.gif)
+![](https://qn-cdn.233leyuan.com/online/5VlnrOC2kfCK1724037993718.gif)
 
 - 上下对齐
   父级无论如何变化，UI 控件依旧保持靠上边距和靠下边距的距离不变，大小会发生变化
   示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIjAuQSkJWq9jPPHl6ZZO6g.gif)
+![](https://qn-cdn.233leyuan.com/online/RRgpUW3SHZ1M1724037994227.gif)
 
 - 中心对齐
   父级无论如何变化，垂直方向上，UI 控件依旧保持和父级中心位置的相对距离不变，且大小不变
   示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcni8ioTU2U8FdbhczLx6jJge.gif)
+![](https://qn-cdn.233leyuan.com/online/M5Zpvh1i7fsO1724037994754.gif)
 
 - 自适应
   垂直方向上，UI 控件会根据会根据父级的变化进行自适应的变化比例大小，
   示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnp9b8MMxFAA3WRDmxWgWEzf.gif)
+![](https://qn-cdn.233leyuan.com/online/xB6t5yDtvPH81724037995245.gif)
 
-### 举例：不同情景下的对齐使用方式：
+### 举例：如何对齐使用方式：
 
-- 1.如果想摇杆/摄像机控件大小按玩家屏幕比例自动变化，推荐摇杆/摄像机控件的对齐方式=自适应
+- 如果想摇杆/摄像机控件大小按玩家屏幕比例自动变化，推荐摇杆/摄像机控件的对齐方式=自适应
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnyl5gHztJWlpcx7cdQSPVBe.gif)
+![](https://qn-cdn.233leyuan.com/online/nhDswxHkDZgM1724037995717.gif)
 
-- 2.如果制作自动计算高度的文本气泡，想让文本控件与容器的边距保持不变，推荐文本控件的对齐方式=上下 + 左右对齐
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFfFyjw2wlCzBbGVSr15Htf.gif)
-
-- 3.如果制作一个菜单，并不想其比例跟随玩家屏幕比例变化，推荐容纳菜单的容器控件对齐方式=中心对齐
-  
-  - 这时，由于菜单大小固定不变，容器内部各控件的对齐方式不会各自大小产生影响，最终菜单的效果会和 UI 编辑器中相同
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnt6EAq9LBv1nlNjrbACuTkg.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnkgUkiytPtSG1DUZjVdj6Ah.png)
 
 ## 通用
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnToqu5TdGSUvNFZbGNkRFKh.png)
 
 ### 名字
 
@@ -197,49 +180,24 @@ let btn = this.uiWidgetBase.findChildByPath('Canvas/btn') as Button
 ### 可见性
 
 - 可见（Visible）
-
   - 可见，并可以进行点击交互
-  - 举例说明：两个重叠的按钮，Btn2 层级高于 Btn1，两个按钮均设置为可见，执行点击后则仅能点击到上层的按钮（Btn2）。
-  - 示意图：
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn2ulI0omYzoFiuoyZr58sVd.gif)
 
 - 折叠（Collapsed）
-
   - 不可见，不占用布局空间，不能进行点击交互
-  - 布局空间：UI 控件的位置和大小，相当于减少控件的部分计算。
-  - 举例说明：多个按钮进行放置在容器里，容器将他们自动布局，排列为垂直方式，其中将第二个按钮进行折叠，则表现为第二个按钮的位置将会被第三个按钮所替代。
-  - 示意图：
+
 
 - 隐藏（Hidden）
-
   - 不可见，占用布局空间，不能进行点击交互
-  - 举例说明：多个按钮进行放置在容器里，容器将他们自动布局，排列为垂直方式，其中将第二个按钮进行隐藏，则表现为第二个按钮的位置将会被预留出来，显示为空的状态。
-  - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5Ko00T8aT1XjIvP6gKnIkg.png)
 
 - 可见不可交互（HitTestInvisible）
-
   - 可见，但无法进行点击交互，且层级中的子项也无法进行点击交互，所有操作会穿透此控件及其子项
-  - 举例说明：容器里放 Btn1 和 Btn2，如果容器设置为可见不可交互，则 Btn1 和 Btn2 均不可点击。
-  - 注意：虽然容器不可点击，但容器具有穿透效果，如果该容器层级下有一个按钮（非该容器的子项），则依旧可以点击到该按钮。
-  - 示意图：
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGTjHuTSIyiM1ErPPAedNVh.gif)
 
 - 可见不可交互仅自身（SelfHitTestInvisible）
-
   - 可见，但无法进行点击交互，但不影响层级中的子项进行点击交互，所有操作会穿透此控件
-  - 举例说明：容器里放 Btn1，如果容器设置为可见不可交互仅自身，则 Btn1 可被点击。
-  - 注意：虽然容器不可点击，但容器具有穿透效果，如果该容器层级下有一个按钮（不属于该容器的子级），则依旧可以点击到此按钮
-  - 示意图：
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1x4VVn4xEqPqeT18AX56bf.gif)
 
 ## 渲染
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcniS5OiyIJtN1thMOBjeWGAf.png)
 
 - 渲染属性是在 UI 控件的布局空间不变的情况下，针对 UI 控件进行的位移和形变。
 
@@ -249,26 +207,20 @@ let btn = this.uiWidgetBase.findChildByPath('Canvas/btn') as Button
 
 - 渲染锚点是 UI 控件进行形变和位移时，所依据的中心点位置。
 
-| 锚点 Y\锚点 X | X=0                                         | X=0.5                                       | X=1                                         |
-| ------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
-| Y=0           | ![](https://cdn.233xyx.com/athena/online/b3ddfc2812b149d2bf8c45ad832bb444_11631162.webp) | ![](https://cdn.233xyx.com/athena/online/af032167828d48f9b66b98481c68fb7b_11631163.webp) | ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnUFz9YbzteH3Wkn5k8sDjqc.png) |
-| Y=0.5         | ![](https://cdn.233xyx.com/athena/online/d81d5c008b44451e838d60788e150343_11631164.webp) | ![](https://cdn.233xyx.com/athena/online/d73ceaacc4214b2dba0747e5a9755442_11631165.webp) | ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnlsETwfrgKXayqx89XbW5bg.png) |
-| Y=1           | ![](https://cdn.233xyx.com/athena/online/4a549433c39e42848a54b4535866cfad_11631166.webp) | ![](https://cdn.233xyx.com/athena/online/418f52e399bb4ae7a28802b592bb6a3d_11631167.webp) | ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnj1povWrJtRyMOzcaVvUQTg.png) |
-
 ### 渲染倾斜度
 
 - 以渲染锚点为中心，进行横向倾斜和纵向倾斜
 - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnNQCNh2I8QRCuf2nTuKxyUb.png)
+![](https://qn-cdn.233leyuan.com/online/TY3pgQbNJ3eB1724037997225.jpg)
 
 ### 渲染缩放
 
 - 以渲染锚点为中心，进行 UI 控件的缩放。
 - 举例说明：将 UI 控件放入容器中，进行自动布局后，如果修改的是 Transform 的大小，则自动布局的将会根据图形的变化而变化，而如果修改的是渲染缩放，则自动布局不会发生改变。
-- 示意图：
+- 组合举例说明：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYvMbJuX50TzganW8w3WHXd.png)
+![](https://qn-cdn.233leyuan.com/online/VhFjZgraIxCf1724037997703.jpg)
 
 ### 渲染透明
 
@@ -292,35 +244,36 @@ let btn = this.uiWidgetBase.findChildByPath('Canvas/btn') as Button
 ## UI文件（自定义UI）的整体属性——Root属性
 
 - 打开某个UI文件后，选中对象管理器中的Root，可以在对象属性面板中修改这个UI文件的整体属性
-![](https://cdn.233xyx.com/1681459811547_635.png)
+![](https://qn-cdn.233leyuan.com/online/7j4bVuiHGE1j1724038003232.png)
 
 ### 变换/对齐/通用/渲染
 
 - 这四个分组的属性的用法与前文单个UI控件的这四个分组的属性完全相同，不再赘述
-  
-  - 例如调整Root的渲染透明度，就是此UI文件整体的渲染透明度
-    ![](https://cdn.233xyx.com/1681458030118_551.gif)
+  - 例如调整Root的渲染透明度，就是调整此UI文件整体的渲染透明度
+
   - 除了属性面板，还可以在脚本中找到UIScript.uiWidgetBase或UIObject.uiWidgetBase来找到对应的UI对象的Root节点，进而调整UI对象的整体属性，uiWidgetBase与属性面板中的Root完全对应
   - UI文件还可以作为自定义UI控件（即UserWidget），在UI编辑器拖拽到其他UI文件里或者在脚本中动态添加到其他UI对象中，UI文件内root的变换/对齐/通用/渲染这四个分组的属性会自动应用到新建的自定义UI控件；**也就是说只需要修改一次UI文件root的属性，不需要每次创建自定义UI都设置一次**
-    ![](https://cdn.233xyx.com/athena/online/17068f7ebe604db6836835f1e394c538_11631157.webp)
+    ![](https://qn-cdn.233leyuan.com/online/oEarVkPeunal1724038003723.png)
 - 下面，我们来单独介绍一下Root对齐属性的用法，这部分较难理解，也比较容易出问题：
   
   - 用UI文件新创建自定义UI控件时会把原UI文件内最底部设计尺寸视为旧容器，然后再根据其创建时新父级容器的大小和位置，以及自定义UI控件的对齐方式（也就是UI文件Root中的对齐属性），来决定创建后的自定义UI控件的位置和大小
-    ![](https://cdn.233xyx.com/athena/online/c66331dfcd4146a08e4eb095e8538f3a_11631158.webp)
+    ![](https://qn-cdn.233leyuan.com/online/FdlOa3aiBelO1724038004185.png)
   - 新创建的自定义UI控件内部的每个控件仍然根据各控件的对齐方式，自上而下的决定大小和位置
     ::: tip
     请注意这一点！新建UI文件root会默认设为上下对齐+左右对齐，这是为了UI文件用作全屏HUD时能够自适应玩家设备尺寸比例。
     但如果此UI文件作为自定义UI控件使用时，不希望自定义UI控件的大小和位置跟随父级自适应变化（比如制作背包中的某一个格子），务必把此UI文件root设置为靠左对齐+靠上对齐！
     :::
-    ![](https://cdn.233xyx.com/athena/online/40c64a242c4046b9be12406b8c6cbce6_11631159.webp)![](https://cdn.233xyx.com/1681458030869_215.gif)
+    ![](https://qn-cdn.233leyuan.com/online/jH2o64ztynbN1724038004634.png)
+    ![](https://qn-cdn.233leyuan.com/online/NWkIk39X5H3K1724037996228.gif)
   
-    ![](https://cdn.233xyx.com/athena/online/1912e5e2670d43e6bc2e1b48d7d919ba_11631160.webp)![](https://cdn.233xyx.com/1681458030494_798.gif)
+    ![](https://qn-cdn.233leyuan.com/online/IXMAHm2l1J2I1724038005072.png)
+    ![](https://qn-cdn.233leyuan.com/online/WPo110dArJZM1724037996721.gif)
 
 ### TS脚本
 
 - 用于设置当前UI文件所绑定的UI脚本，可以将想绑定的UI脚本拖拽到这里完成绑定
 
-![](https://cdn.233xyx.com/athena/online/a4f71b3c1758473c962a04715a9004f8_11631161.webp)
+![](https://qn-cdn.233leyuan.com/online/iaZtb1LwoUso1724038005528.png)
 
 ::: tip
 这里可以理解为：在此UI文件里，绑定了某个UI脚本；
