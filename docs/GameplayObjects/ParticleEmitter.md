@@ -11,9 +11,10 @@
 
 ## 2. 如何创建粒子发射器？
 - 将发射器从功能组件中拖出到场景或对象管理器中，选中粒子发射器后可以在面板中更改属性。
-| 中文示例 | 英文示例 |
-| - | - |
-| ![](https://qn-cdn.233leyuan.com/online/mIQSjwPEmfuA1724061672640.png) | ![](https://qn-cdn.233leyuan.com/online/bsZgY2e3kzKf1724061673310.png) |
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/athena/online/30d931c1167e4813b76c85215cfda222_354326875.webp)|![](https://qn-cdn.233leyuan.com/athena/online/177823862f7b414fb41412fc46bc8340_354326876.webp)|
 
 ## 3. 粒子发射器有哪些属性和接口？
 ### 3.1 变换
