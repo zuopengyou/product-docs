@@ -12,7 +12,6 @@
 
 ## 图片属性-样式
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOZaMDsHZ10veG8iHNcCDpT.png)
 
 ### 图片大小
 
@@ -20,69 +19,50 @@
 
 ### 图片颜色
 
-- 可以修改图片的本身颜色，如果图片本身具有颜色，则颜色效果为叠加关系。
+- 可以修改图片的本身颜色，如果图片本身具有颜色，则颜色效果为相乘叠加关系。
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnIZfL4nenJR3rktSUQMXxSb.gif)
 
 ### 绘制类型
 
 - 绘制类型包括无、九宫格、边界绘制、图片、九宫格（像素单位）共五种
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcncdWvlVMuyxTQz6U6HMvyZc.png)
-
+![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntXXS7j4CjHQSm66qHLyMqg.png)
+![](https://qn-cdn.233leyuan.com/online/wI7AAoSuwX091724049058070.jpg)
 #### 无
 
 - 不执行任何绘制工作，则效果为空。
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnPlC9fvxqpqwOaYNgAv08nl.png)
 
 #### 九宫格
 
 - 九宫格是将一张图分割为 9 块，四个角(1,3,7,9)在缩放的时候是保持大小不变，图块 2，8 仅当宽度变化时缩放宽度，图块 4，6 仅当高度变化时缩放高度，图块 5 当图片大小发生变化，宽度和高度都进行缩放。
 - 举例说明：当我们拉伸圆角矩形的图片时会导致图片失真。如果我们选择九宫格绘制模式，将(1,3,7,9)四个角固定，那么拉伸时就不会影响圆角的形状，也不会出现失真的情况。
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntXXS7j4CjHQSm66qHLyMqg.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnF3IE9MRte9942zfCXmMvXb.png)
-
 - 九宫格类型的图片边距单位是比例，比如左边距=0.5 时，1,4,7 三个图块的宽度为整张图片宽度的 0.5 倍。
 
 #### 边界绘制
 
 - 边界绘制也是将一张图分割为 9 块，四个角(1,3,7,9)在缩放的时候是保持大小不变，图块 2，8 仅当宽度变化时缩放宽度，图块 4，6 仅当高度变化时缩放高度，与九宫格不同的是扣掉了图块 5。
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntHX3cpLb0hqV8bwGMxSMnf.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZeYCHYYFXmuOAcO5NSfTyb.png)
-
 - 边界绘制的图片边距单位是比例，比如左边距=0.5 时，1,4,7 三个块的宽度为整张图片宽度的 0.5 倍
 
 #### 图片
 
 - 正常绘制一张图片
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnCG6OG8ZLNMCowBElsZU7xb.png)
-
 #### 九宫格（像素单位）
 
 - 九宫格（像素单位）的效果与九宫格一样，只是图片边距属性的单位不同
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnjlhXYLYHs7CFEkFHH8dfTf.png)
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcneeEZ06sjfi7CNMktrqZcIb.png)
-
 - 九宫格类型的图片边距单位是像素，比如左边距=20 时，1,4,7 三个图块的宽度固定为 20 像素。
 
 #### 图片
 
 - 可以替换图片资源
-- 操作方法一：将本地资源库内的图片资源直接拖入此处，效果图：
+- 操作方法一：将本地资源库内的图片资源直接拖入此处：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnk88sZUdxcdslYWlWaIJrYd.gif)
+![](https://qn-cdn.233leyuan.com/online/xzLI6Emz19dE1724049055472.gif)
 
-- 操作方法二：将 UI 贴图拖进设计器并松开后，将直接替换鼠标所在位置渲染在最上方的图片控件的图片资源，效果图：
+- 操作方法二：将 UI 贴图拖进设计器并松开后，将直接替换鼠标所在位置渲染在最上方的图片控件的图片资源：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn82TMZtBhsee6ByNoG8wahd.gif)
+![](https://qn-cdn.233leyuan.com/online/86GCqzT8c3Pk1724049052167.gif)
 - 如果此控件大小没有被修改过，按操作方法二替换图片时，控件大小会自动改成此图片资源的尺寸
 - 如果此控件大小被手动调整过，则操作方法二只会替换图片，控件大小保持不变
 
@@ -118,4 +98,3 @@
 
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnwwT0YO3QdL4dHWpjSMNLkf.png)
 
-- 工程文件：  [点击下载](https://cdn.233xyx.com/online/cCvvRYZhTosS1694498904051.7z)
