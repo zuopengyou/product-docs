@@ -34,7 +34,8 @@ this.tiptxt.text = "Test"
   - 首先，点击本地化窗口底部的【导出】按钮，将当前项目的多语言表导出为一个csv文件，将项目中用到的原文本都填写在csv文件内第A列中；
   - 然后，点击本地化窗口的【导入】按钮，选择导入模式为【覆盖】或【新增】之后确认，即可将整理完成的csv文件导入当前项目的多语言表；
   - **请注意导入表格的结构和表头名务必与导出的表格相同**，否则无法正确识别；
-  ![](https://cdn.233xyx.com/online/fcjX4KK53eCg1721359401184.png) 
+  ![](https://cdn.233xyx.com/online/fcjX4KK53eCg1721359401184.png)
+
  ![](https://cdn.233xyx.com/online/0FvPKTILZcLZ1721359401627.png)
 
   - **可以与前两种方法组合使用**，例如先自动收集UI文件和脚本中标记的文本，此外再自行整理一份原语言表格并导入，注意选择导入模式为【新增】；
@@ -112,6 +113,7 @@ this.tiptxt.text = LanguageUtil.getText("Test1")+"number"+LanguageUtil.getText("
 ![](https://cdn.233xyx.com/online/uCuRaDYUgMZD1721359405148.png)
   - 打开设置菜单，选择本地化预览页签，选择预览语言，然后在编辑器中启动游戏，即可以PIE中预览游戏运行时切换语言的效果。
 ![](https://cdn.233xyx.com/online/gTgSPV9h32Zq1721359405578.png)
+
   <video controls src="https://cdn.233xyx.com/online/aStumCvYXbWc1721359392571.mp4"></video>
  
  ## 如何让切换语言后的界面更加美观

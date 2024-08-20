@@ -12,7 +12,6 @@
 
 ## 进度条属性-滑动设置
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnHKEAR3vBCE0aQQKrsu5jAe.png)
 
 ### 填充类型
 
@@ -33,7 +32,7 @@
   - 从下到上填充图片的效果。
   - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMS9l1t5CRVZnjR4YJc04h1.gif)
+![](https://qn-cdn.233leyuan.com/online/mgp2mmOWwZn61724133629112.gif)
 
 ### 滑动最小值
 
@@ -61,7 +60,7 @@
 - 举例说明：商店的道具数量购买时的滑动条需要取整，因为道具数量没有小数。
   - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTYIe9rM8FlqjMwJKFl4dke.gif)
+![](https://qn-cdn.233leyuan.com/online/bjcPEUBXnbF71724133629581.gif)
 
 ### 条厚度
 
@@ -82,8 +81,6 @@
 
 ## 进度条属性-样式
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn5xRKJIBI5F54Ek3JN2eQye.png)
-
 ### 滑动填充图片
 
 - 修改的是进度条在填充时的填充效果。图片属性请见【UI 控件-图片】
@@ -100,16 +97,12 @@
 
   - 偏移值：用于修改按钮相对锚点的位置
     - 锚点类型为中心时，偏移值为 X 像素即让按钮图片整体向右偏移 X 像素，偏移值为-X 像素即让按钮图片整体向左偏移 X 像素
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnvuvGza0ltwHdjVPNBHjAXe.png)
-    - 锚点类型为两侧时，偏移值为 X 像素即让按钮图片可滑动的最左位置和最右位置整体素，偏移值为-X 像素即让按钮图片的最左位置和最右位置整体向内偏移 X 像素
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8LggdkVE3nqfxk3QM3HZBd.png)
+    - 锚点类型为两侧时，偏移值为 X 像素即让按钮图片可滑动的最左位置和最右位置整体像素，偏移值为-X 像素即让按钮图片的最左位置和最右位置整体向内偏移 X 像素
 
 ### 滑动背景图片
 
 - 修改的是进度条在未填充的背景效果。图片属性请见 [UI 控件-图片](https://docs.ark.online/UI/UIComponent-Image.html)
-- 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnamAhT67NK0uOhjjqm1Hfbd.png)
 
 ## 如何使用进度条？
 
@@ -119,11 +112,10 @@
 
 - 首先我们需要用 UI 编辑器制作一个面板，然后将进度条等 UI 控件放置在面板上，如图
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrCZY6uUJxUVMcQmacGQLnd.png)
+![](https://qn-cdn.233leyuan.com/online/gnp84nCvoWUx1724133630031.png)
 
 - 然后把对应的音效文件拖入优先加载内，并把与脚本进行绑定好的 UI 文件拖入对象列表中
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnAXUw2YPuiVNlLsSChKrO6f.png)
 
 - 脚本示例：
 
@@ -158,5 +150,5 @@ export default class DefaultUI extends UIScript {
 }
 ```
 
-- 示意视频：<video controls src="https://cdn.233xyx.com/1681612440566_544.mp4"></video>
-- 工程文件：  [点击下载](https://cdn.233xyx.com/online/0v5klMrOtYWK1694916401072.7z)
+- 示意视频：<video controls src="https://qn-cdn.233leyuan.com/online/OhyCHQ9Yd9FS1724133627151.mp4"></video>
+

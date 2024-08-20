@@ -13,7 +13,6 @@
 
 ## 摄像机滑动区属性
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKATbfX6YFgTCcmzzVeq2O9.png)
 
 ### 灵敏度比例
 
@@ -65,10 +64,8 @@ export default class DefaultUI extends UIScript {
 ```
 
 - 示意视频：
-<video controls src="https://cdn.233xyx.com/1681463233045_362.mp4"></video>
+<video controls src="https://qn-cdn.233leyuan.com/online/mzQpKKbZ3Gyv1724134721326.mp4"></video>
 
-- 工程文件：
-[点击下载](https://cdn.233xyx.com/online/FE8H39HLxett1694916401072.7z)
 
 ### 示例二：动态调整摄像机滑动区是否可用
 
@@ -96,4 +93,4 @@ touchPad.visibility=0
 
 - 在属性面板中也可以调整摄像机滑动区的可见性和可用性
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnL6gjWtqhHNUqe9Atpm12fc.png)
+![](https://qn-cdn.233leyuan.com/online/K9sHbmwpe8Ef1724134722645.png)
