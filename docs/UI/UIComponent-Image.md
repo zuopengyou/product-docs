@@ -27,6 +27,7 @@
 
 - 绘制类型包括无、九宫格、边界绘制、图片、九宫格（像素单位）共五种
 ![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntXXS7j4CjHQSm66qHLyMqg.png)
+
 ![](https://qn-cdn.233leyuan.com/online/wI7AAoSuwX091724049058070.jpg)
 #### 无
 
