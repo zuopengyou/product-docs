@@ -12,8 +12,6 @@
 
 ## 加载图属性
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn6Qbx3hqC6rqPSHeu1p47iw.png)
-
 - 图片数量
 
   - 功能说明：加载图中包含的图片总数
