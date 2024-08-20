@@ -99,9 +99,9 @@ UI编辑器设计器的顶部工具栏包括以下功能：
 
 ## 右键菜单
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcntrK5rpjc6o4Op6PxIKDnge.png)
+![](https://qn-cdn.233leyuan.com/online/bM1AMNDecYJR1724135348805.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnh9iwYKJ00AjykYRXpePDCc.png)
+![](https://qn-cdn.233leyuan.com/online/bl0vXw3rhwRv1724135349919.png)
 
 - 设计器或者对象列表内单击右键可以打开右键菜单，右键菜单的功能包括：
 
