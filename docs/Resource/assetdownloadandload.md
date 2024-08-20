@@ -31,7 +31,7 @@ JumpBtn.onPressed.add(()=>{
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://qn-cdn.233leyuan.com/online/cqBMv8LtguYb1724069877598.gif)|![](https://qn-cdn.233leyuan.com/online/qBqJDtNsw3iX1724068864685.gif)|
+|![](https://qn-cdn.233leyuan.com/online/NWRzfnHRQPaF1724150192397.gif)|![](https://qn-cdn.233leyuan.com/online/NWRzfnHRQPaF1724150192397.gif)|
 
 
 为了使资源不要等到使用的时候再加载，编辑器下提供了一种方式帮助用户去提前加载会使用到的资源：将使用到的资源拖入【对象管理器】下的【优先加载】栏。【对象管理器】中的对象使用的资源在游戏运行后都会默认进行加载，与拖入【优先加载】栏的效果一样。需要注意的是，预加载的资源越多，进入游戏的时间越慢。在编辑状态测试游戏时主要是资源加载进缓存的时间，而发布的线上游戏还需要增加资源下载的时间。
