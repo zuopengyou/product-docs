@@ -23,7 +23,7 @@
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://qn-cdn.233leyuan.com/online/z9ygOCgtallq1724136615060.jpeg)|![](https://qn-cdn.233leyuan.com/online/ovrKQYoxUEuP1724136613270.jpeg)|
+|![](https://qn-cdn.233leyuan.com/online/z9ygOCgtallq1724136615060.jpeg)|![](https://qn-cdn.233leyuan.com/online/QgNp8yt7gu5S1724138289053.jpg)|
 
 
 #### 1、菜单栏
