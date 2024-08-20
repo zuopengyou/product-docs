@@ -31,7 +31,7 @@
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://qn-cdn.233leyuan.com/athena/online/0d8fae652e204da1b28497c7c9d86a2c_354405651.webp)|![](https://qn-cdn.233leyuan.com/athena/online/ad4b2ace804d4768abd3e81e12ad4a50_354405652.webp)|
+|![](https://qn-cdn.233leyuan.com/online/AhjzQ9rDeOhk1724121800083.gif)|![](https://qn-cdn.233leyuan.com/online/HHBOqt2cP4Cv1724121801485.gif)|
 
 ### 3.2 效果属性
 #### 3.2.1 启用：打开时，粒子发射器会在游戏启动时发射粒子，反之则不会。暂停按钮可以让粒子发射器在编辑器中暂停发射。该属性仅可在编辑器中修改。
