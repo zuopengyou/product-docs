@@ -103,43 +103,70 @@ Effect.color = ColorSequence;
 
 #### 3.2.5 透明度：控制粒子的透明度，支持“关键帧插值”，默认值1。
 
-
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/athena/online/7e15c95d4d27443bb61c085efb6afa40_356142115.webp)|![](https://qn-cdn.233leyuan.com/athena/online/4683c537300f48a3a12b7e45b008251d_356142116.webp)|
 
 效果演示：
 
-
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/online/3IVQJraVhWpl1724151102791.gif)|![](https://qn-cdn.233leyuan.com/online/kWk2GXfbTmGm1724151103646.gif)|
 
 #### 3.2.6 贴图：单个粒子的贴图，目前仅适配场景贴图。
-![image](https://github.com/user-attachments/assets/a2bed62a-e02e-4cf8-bbe5-ce74a24335a6)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
-![20240723150305_rec_](https://github.com/user-attachments/assets/2ceef36f-1288-43aa-a0e7-b2d9cd23b708)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 #### 3.2.7 大小：控制粒子的大小，支持“关键帧插值”，默认值1。
-![image](https://github.com/user-attachments/assets/4127a32f-e6c0-463f-ad2e-ac28a742cf5f)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
-![20240723150846_rec_](https://github.com/user-attachments/assets/dc37ec86-0566-4307-8277-2936f9ca1ec3)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 #### 3.2.8 宽高比：控制粒子的宽高比，默认值0。
-![image](https://github.com/user-attachments/assets/445bf523-02b6-4016-a9f0-c5fdaa2587a0)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
-![20240723151207_rec_](https://github.com/user-attachments/assets/7fcf801b-ad0e-4309-8be5-eb62311db77d)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 ### 3.3 释放属性
 #### 3.3.1 生命周期：控制粒子从诞生到销毁的时间，X和Y代表区间，当相同时，生命周期恒定，当不同时，生命周期会在二者中间随机，默认值(10,10)。
-![image](https://github.com/user-attachments/assets/3b9ad859-4045-4e30-afce-9e7d5304a394)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
-![20240723151740_rec_](https://github.com/user-attachments/assets/83d5d69a-937c-4dc7-8159-f41bb5140652)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 #### 3.3.2 发射频率：控制粒子的发射频率，单位“个/秒”，范围0-100，默认值20。
-![image](https://github.com/user-attachments/assets/a7321518-ee9f-4bee-8421-771f8adb902b)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 ::: tip
 如果单个粒子发射器所发射出去但仍未被销毁的粒子达到了1000个，那么就会自动减缓发射频率，以保证数量维持在1000以内。
@@ -149,46 +176,76 @@ Effect.color = ColorSequence;
 
 效果演示：
 
-![20240723152446_rec_](https://github.com/user-attachments/assets/640485f9-d183-4dd2-ba49-e93a97ec1b9c)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 #### 3.3.3 速度：控制粒子的速度，单位“厘米/秒”。
-![image](https://github.com/user-attachments/assets/b98508fd-70bc-4b89-8046-4204819be734)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
-![20240723155139_rec_](https://github.com/user-attachments/assets/ab0e9f4a-8b8a-44f4-bea7-20a28381b898)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 #### 3.3.4 加速度：控制粒子在生命周期中的加速度，支持“关键帧插值”。
-![image](https://github.com/user-attachments/assets/bd14a672-aa8e-47bb-8abe-a93374309659)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
-![20240723160413_rec_](https://github.com/user-attachments/assets/a780f34e-d0d3-45a2-91a3-bb95d05943fb)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 #### 3.3.5 初始旋转角度：控制粒子在发射时的初始旋转角度，默认值0。
-![image](https://github.com/user-attachments/assets/dc5cf306-452b-4a21-80d9-da5b041fa901)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
-![20240723162651_rec_](https://github.com/user-attachments/assets/794a29a4-dc88-4b2a-a229-72d229edc3a0)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 #### 3.3.6 旋转速度：粒子在生命周期过程中旋转的速度，支持“序列帧插值”。
-![image](https://github.com/user-attachments/assets/ed0e728a-1853-404c-9b79-8bf83dfb1bb8)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
-![20240723163015_rec_](https://github.com/user-attachments/assets/7435a007-34e4-4f80-8a37-e47dbc01cf79)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 #### 3.3.7 扩散角度：粒子偏离发射垂直方向的角度
-![image](https://github.com/user-attachments/assets/8ae1b3dd-beac-47b5-9974-c9e315742676)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
-![20240723163500_rec_](https://github.com/user-attachments/assets/3c98ed13-a652-4ad5-832e-a9b4c98ac3bb)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 ### 3.4 发射器属性
 #### 3.4.1 形状范围：当前版本粒子发射器仅支持矩形，XYZ表示矩形的长宽高。默认值(50,50,50)。
-![image](https://github.com/user-attachments/assets/f302713e-6ac9-4d08-8917-55005fbe0d8c)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 ::: tip
 在矩形粒子发射器下，缩小XYZ可以实现粒子从单个点发射；缩小一个一个值，放大其他两个值，可以实现方形平面发射的效果等。
@@ -197,16 +254,25 @@ Effect.color = ColorSequence;
 
 效果演示：
 
-![20240723163918_rec_](https://github.com/user-attachments/assets/b90604db-00c0-4348-b9e4-07b6d06cdd11)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 #### 3.4.2 形状样式：分为仅表面发射和体积内发射，仅表面发射代表粒子只会从发射器的表面生成，体积内发射代表粒子会从发射器内部生成。默认为体积内发射。
-![image](https://github.com/user-attachments/assets/646fb543-d24d-45fc-93d8-244fefba7fcc)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
+|中文示例|
 | 体积内发射  | 仅表面发射 |
 | - | - |
 | ![20240724093017_rec_](https://github.com/user-attachments/assets/6c1ac1c2-99b3-472a-ad10-b89d8434e175) | ![20240724093128_rec_](https://github.com/user-attachments/assets/9e29d4f1-ce17-4db1-aa45-5f24f1e53304) |
+|英文示例|
+| - | - |
+|![]()|![]()|
 
 ### 3.5 其他属性
 #### 3.5.1 阻力：粒子从发射开始速度衰减到0的速率，计算公式“粒子速度 += 粒子速度 * -阻力 * DeltaTime”，取值范围0-1，默认值0。
@@ -219,11 +285,16 @@ Effect.color = ColorSequence;
 | ![20240724104350_rec_](https://github.com/user-attachments/assets/fe0d5e2a-c28b-4ae8-b4fa-768c4420432b) | ![20240724104456_rec_](https://github.com/user-attachments/assets/ca3c9465-0292-47f2-a152-c549611d4868) |
 
 #### 3.5.2 遮罩半径：设置粒子的边缘遮罩裁剪，取值范围0-1，默认值0.5。
-![image](https://github.com/user-attachments/assets/686c96a2-ecf0-4c52-8f8e-cd0c5aa2f6e3)
+
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 效果演示：
 
-![20240724104043_rec_](https://github.com/user-attachments/assets/4ecc1cb1-f565-4cbc-94b7-4dfeedb29fd6)
+|中文示例|英文示例|
+|-----|-----|
+|![]()|![]()|
 
 ### 4. 粒子发射器的使用建议
 - 需要发射大量粒子时，可以考虑将多个粒子合成一张图片，减少渲染压力。
