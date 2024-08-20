@@ -35,14 +35,20 @@
 
 ### 3.2 效果属性
 #### 3.2.1 启用：打开时，粒子发射器会在游戏启动时发射粒子，反之则不会。暂停按钮可以让粒子发射器在编辑器中暂停发射。该属性仅可在编辑器中修改。
-![image](https://github.com/user-attachments/assets/5ed98648-7e36-4721-b069-38e8a9f9c7ff)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/athena/online/e89bb53e5e5f41f9ad6bd7e35609dd55_355160419.webp)|![](https://qn-cdn.233leyuan.com/athena/online/7393312142ce4b5d956a24525ca9b8a4_355160420.webp)|
 
 ::: tip
 脚本中使用ParticleEmitter.play()开始发射粒子，使用ParticleEmitter.stop()停止发射粒子，使用ParticleEmitter.forceStop()停止发射并销毁所有已经发射的粒子。
 :::
 
 #### 3.2.2 颜色：控制粒子在生命周期中的颜色以及变化。
-![image](https://github.com/user-attachments/assets/27bee8d5-0583-4758-8507-f366e2239e2f)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/athena/online/560d4761dd58420fab9cdcd57fac4ef7_355165817.webp)|![](https://qn-cdn.233leyuan.com/athena/online/ec694aba692f407da4c6d8c3f1d577e4_355165818.webp)|
 
 ::: tip
 如上这种数据形式为“关键帧插值”，在粒子发射器中被频繁使用，以实现丰富的效果。
