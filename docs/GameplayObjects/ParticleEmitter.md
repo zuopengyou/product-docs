@@ -102,11 +102,12 @@ Effect.color = ColorSequence;
 |![](https://qn-cdn.233leyuan.com/online/f7jsMrHS4Tjo1724123814494.gif)|![](https://qn-cdn.233leyuan.com/online/L0RdNVVXTRAs1724123815163.gif)|
 
 #### 3.2.5 透明度：控制粒子的透明度，支持“关键帧插值”，默认值1。
-![image](https://github.com/user-attachments/assets/762163d1-02f3-4ea6-a4d6-73637110d0e7)
+
+
 
 效果演示：
 
-![20240723145734_rec_](https://github.com/user-attachments/assets/ea26894c-3f41-4033-8893-ddcfb415511f)
+
 
 #### 3.2.6 贴图：单个粒子的贴图，目前仅适配场景贴图。
 ![image](https://github.com/user-attachments/assets/a2bed62a-e02e-4cf8-bbe5-ce74a24335a6)
