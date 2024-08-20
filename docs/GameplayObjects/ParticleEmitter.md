@@ -1,7 +1,6 @@
 # 粒子发射器
 ::: info
-**阅读本文预计 15 分钟**
-
+阅读本文预计 15 分钟
 本文概述了 游戏功能对象——粒子发射器的使用方法。
 :::
 
@@ -74,21 +73,33 @@ Effect.color = ColorSequence;
 
 效果演示：
 
-![20240723143028_rec_](https://github.com/user-attachments/assets/16e4ccb5-01fd-493c-a11d-c40874ddff26)
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/online/vCYHok2uOoiS1724122019915.gif)|![](https://qn-cdn.233leyuan.com/online/JMCjlUUmYpeO1724122020706.gif)|
 
 #### 3.2.3 亮度：控制粒子的亮度。默认值1。
-![image](https://github.com/user-attachments/assets/262abbc1-965f-4b04-bd67-c18a984cd76f)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/athena/online/74e4ea603f7043a085e4bf8e55b342c4_355193083.webp)|![](https://qn-cdn.233leyuan.com/athena/online/7143dd8f9a234844be297e89d9a89bda_355193084.webp)|
 
 效果演示：
 
-![20240723144533_rec_](https://github.com/user-attachments/assets/d2141b45-9abd-4394-92b8-d640601b074c)
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/online/PJMLvvPn2cgk1724122436199.gif)|![](https://qn-cdn.233leyuan.com/online/g4wenq0vjoEO1724122437140.gif)|
 
 #### 3.2.4 光照影响：控制粒子收到环境光照影响的程度，0到1代表完全不受影响到完全受影响。默认值0。
-![image](https://github.com/user-attachments/assets/43e6009a-1946-46aa-be89-796be3a44740)
+
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/athena/online/c02e00b3c9a94dbc8d5a7a3942e27acb_355238617.webp)|![](https://qn-cdn.233leyuan.com/athena/online/4ab84e9ee26a492891c3b3c96d9cc8ee_355238618.webp)|
 
 效果演示：
 
-![20240723144927_rec_](https://github.com/user-attachments/assets/cd3bc116-cf84-4d5a-abad-c7d9270423ad)
+|中文示例|英文示例|
+|-----|-----|
+|![](https://qn-cdn.233leyuan.com/online/f7jsMrHS4Tjo1724123814494.gif)|![](https://qn-cdn.233leyuan.com/online/L0RdNVVXTRAs1724123815163.gif)|
 
 #### 3.2.5 透明度：控制粒子的透明度，支持“关键帧插值”，默认值1。
 ![image](https://github.com/user-attachments/assets/762163d1-02f3-4ea6-a4d6-73637110d0e7)
