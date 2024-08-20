@@ -10,7 +10,9 @@
 
 【[我的资源](https://portal.ark.online/#/admin/resources-manage)】是当前账号上传过的资源，可以查看资源上传审核状态并对资源进行信息配置，也可将资源状态设置为**公开**提供给更多创作者使用，通过AIGC生成的资源也会直接在【[我的资源](https://portal.ark.online/#/admin/resources-manage)】列表，在编辑器刷新后即可直接使用；
 
-![img_v3_0289_7bc41c9a-808d-4270-9e88-2b12c6aa459g](https://arkimg.ark.online/img_v3_0289_7bc41c9a-808d-4270-9e88-2b12c6aa459g.jpg)
+|中文示例|英文示例|
+|-----|-----|
+|![](https://arkimg.ark.online/img_v3_0289_7bc41c9a-808d-4270-9e88-2b12c6aa459g.jpg)|![](https://qn-cdn.233leyuan.com/online/BlsqyK4L8zlU1724125529774.png)|
 
 ## AIGC
 
