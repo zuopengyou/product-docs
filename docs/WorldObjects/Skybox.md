@@ -18,10 +18,11 @@
 ## 如何编辑天空球？
 
 鼠标左键点击对象管理器(默认右上角)中的SkyBox对象，即可在属性面板(默认右下角)中编辑天空球。
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://cdn.233xyx.com/1682503386813_929.png)|![](https://qn-cdn.233leyuan.com/online/aABtseCYnrkq1723780102894.png) |
 
-![](https://cdn.233xyx.com/1682503386813_929.png)
 
-![](https://qn-cdn.233leyuan.com/online/aABtseCYnrkq1723780102894.png)
 
 天空球主要构件有：天空球贴图、渐变效果、星星、太阳、月亮、云。以下展开介绍：
 
@@ -29,10 +30,13 @@
 
 - 编辑器提供了8种常用的天空球预设效果，当选择其中一个预设效果时，下面其他的天空球基础属性将会自动刷新，并将其属性设置为预设的默认值。
 - 演示效果：
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|<video controls src="https://cdn.233xyx.com/1682503398592_256.mp4"></video>|<video controls src="https://qn-cdn.233leyuan.com/online/khhq4JpB0nCi1723780195729.mp4"></video>|
 
-<video controls src="https://cdn.233xyx.com/1682503398592_256.mp4"></video>
 
-<video controls src="https://qn-cdn.233leyuan.com/online/khhq4JpB0nCi1723780195729.mp4"></video>
+
+
 
 - 实际应用：我们可以根据不同的环境切换不同的天空球预设，便捷的完成天空球的切换，而不需要每个参数都设置一遍。也可以通过预设功能，进行快速的还原。
 - 实现步骤：
@@ -98,10 +102,13 @@
 
 - 更改天空球贴图：从左侧资源管理器拖出要更换的天空球贴图，拖拽到右侧属性面板→天空球贴图处松开。
 - 效果图：
+- 
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|<video controls src="https://cdn.233xyx.com/1682503451594_188.mp4"></video>|<video controls src="https://qn-cdn.233leyuan.com/online/khhq4JpB0nCi1723780195729.mp4"></video>|
 
-<video controls src="https://cdn.233xyx.com/1682503451594_188.mp4"></video>
 
-<video controls src="https://qn-cdn.233leyuan.com/online/khhq4JpB0nCi1723780195729.mp4"></video>
+
 
 - 相关接口：
 
@@ -141,9 +148,13 @@ Skybox.skyDomeBaseColor = new LinearColor(255,0,0)
 ### 渐变功能
 #### 是否开启渐变效果
 
-![](https://qn-cdn.233leyuan.com/online/v7AJHDScwtgQ1723780115305.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/v7AJHDScwtgQ1723780115305.png)|![](https://qn-cdn.233leyuan.com/online/HI8lMqIQBIkl1723780127681.png)|
 
-![](https://qn-cdn.233leyuan.com/online/HI8lMqIQBIkl1723780127681.png)
+
+
+
 
 开启渐变效果时，开发者可对天空球顶层、上层和下层进行编辑。顶层、中层、下层的颜色将会与天空球整体颜色进行乘法。
 - 是否开启渐变效果：勾选后，渐变效果生效；若不勾选，开发者所选的天空球顶层/中层/下层颜色均不会生效。
@@ -210,9 +221,9 @@ Skybox.skyDomeHorizontalFallOff = 10;
 ### 星星功能
 #### 是否开启星星
 
-![](https://qn-cdn.233leyuan.com/online/uUu9hq8xdkv21723780244906.png)
-
-![](https://qn-cdn.233leyuan.com/online/lTnUaDWux7CK1723780254960.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/uUu9hq8xdkv21723780244906.png)|![](https://qn-cdn.233leyuan.com/online/lTnUaDWux7CK1723780254960.png)|
 
 - 是否开启星星：开启时，可以修改星星的属性，并且天空球中将会添加星星效果；关闭时，星星不会出现在天空中。
 
@@ -285,9 +296,9 @@ Skybox.starDensity = 10;
 ### 太阳
 #### 是否开启太阳
 
-![](https://qn-cdn.233leyuan.com/online/iWzrYJMjJG4V1723780139112.png)
-
-![](https://qn-cdn.233leyuan.com/online/YP5khQNqjWO91723780157439.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/iWzrYJMjJG4V1723780139112.png)|![](https://qn-cdn.233leyuan.com/online/YP5khQNqjWO91723780157439.png)|
 
 - 是否开启太阳：开启时，可以修改太阳的属性，并且天空球中将会添加太阳效果；关闭时，太阳不会出现在天空中，取而代之，天空中会显示为月亮，如果月亮也为关闭状态，则都不会显示。
 
@@ -307,9 +318,9 @@ Skybox.sunVisible = false;
 
 - 太阳贴图：改变太阳贴图，可以改变太阳的效果。
 
-<video controls src="https://cdn.233xyx.com/1682503647447_200.mp4"></video>
-
-<video controls src="https://qn-cdn.233leyuan.com/online/ssfC6verkkVK1723780167702.mp4"></video>
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|<video controls src="https://cdn.233xyx.com/1682503647447_200.mp4"></video>|<video controls src="https://qn-cdn.233leyuan.com/online/ssfC6verkkVK1723780167702.mp4"></video>|
 
 - 相关接口：
 
@@ -370,9 +381,9 @@ Skybox.sunSize = 20;
 ### 月亮
 #### 是否开启月亮
 
-![](https://cdn.233xyx.com/1682503711191_434.png)
-
-![](https://qn-cdn.233leyuan.com/online/qX6jAyyQRx4O1723780265278.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://cdn.233xyx.com/1682503711191_434.png)|![](https://qn-cdn.233leyuan.com/online/qX6jAyyQRx4O1723780265278.png)|
 
 - 是否开启月亮：开启时，可以修改月亮的属性，并且天空球中将会添加月亮效果；关闭时，月亮不会出现在天空中。
 
@@ -391,9 +402,9 @@ Skybox.moonVisible = false;
 
 - 月亮贴图：改变月亮贴图，可以改变月亮的效果。
 
-<video controls src="https://cdn.233xyx.com/1682503723627_205.mp4"></video>
-
-<video controls src="https://qn-cdn.233leyuan.com/online/Xvgg6KUCjx0F1723780275313.mp4"></video>
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|<video controls src="https://cdn.233xyx.com/1682503723627_205.mp4"></video>|<video controls src="https://qn-cdn.233leyuan.com/online/Xvgg6KUCjx0F1723780275313.mp4"></video>|
 
 - 相关接口：
 
@@ -453,9 +464,9 @@ Skybox.moonSize = 20;
 ### 云
 #### 是否开启云
 
-![](https://cdn.233xyx.com/1682503780829_589.png)
-
-![](https://qn-cdn.233leyuan.com/online/pfwxvRASZMEs1723780300542.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://cdn.233xyx.com/1682503780829_589.png)|![](https://qn-cdn.233leyuan.com/online/pfwxvRASZMEs1723780300542.png)|
 
 - 是否开启云：开启时，可以修改云的属性，并且天空球中将会添加云效果；关闭时，云不会出现在天空中。
 
@@ -472,9 +483,9 @@ Skybox.cloudVisible = false;
 
 - 云贴图：改变云贴图，可以改变云的效果。
 
-<video controls src="https://cdn.233xyx.com/1682503793529_983.mp4"></video>
-
-<video controls src="https://qn-cdn.233leyuan.com/online/ygR8pnEv5gzD1723780311230.mp4"></video>
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|<video controls src="https://cdn.233xyx.com/1682503793529_983.mp4"></video>|<video controls src="https://qn-cdn.233leyuan.com/online/ygR8pnEv5gzD1723780311230.mp4"></video>|
 
 - 相关接口：
 
