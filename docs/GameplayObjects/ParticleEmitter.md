@@ -154,19 +154,19 @@ Effect.color = ColorSequence;
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/c5e8b73eca8442608b6fefbb203a41b8_357280096.webp)|![](https://qn-cdn.233leyuan.com/athena/online/ceade2447a794789807aa1809c2d56f0_357280097.webp)|
 
 效果演示：
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/LUEVuuEyr5UC1724221375094.gif)|![](https://qn-cdn.233leyuan.com/online/oihvc49ed9Cu1724221375859.gif)|
 
 #### 3.3.2 发射频率：控制粒子的发射频率，单位“个/秒”，范围0-100，默认值20。
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/5a9d9d1778034783bc6d1caecfe63f13_357292457.webp)|![](https://qn-cdn.233leyuan.com/athena/online/1dc31912774f4278aa62378fcac8498b_357292458.webp)|
 
 ::: tip
 如果单个粒子发射器所发射出去但仍未被销毁的粒子达到了1000个，那么就会自动减缓发射频率，以保证数量维持在1000以内。
@@ -178,7 +178,7 @@ Effect.color = ColorSequence;
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/OtxIBsCBMDK41724221719427.gif)|![](https://qn-cdn.233leyuan.com/online/S3EjLqLAyZoM1724221720146.gif)|
 
 #### 3.3.3 速度：控制粒子的速度，单位“厘米/秒”。
 
