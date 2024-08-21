@@ -184,25 +184,25 @@ Effect.color = ColorSequence;
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/909b767f02c04d0ea415cb115dcf5080_357308586.webp)|![](https://qn-cdn.233leyuan.com/athena/online/1a1c36499de84fce9a01f07bc218a6ea_357308587.webp)|
 
 效果演示：
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/H1AdmZuKx90s1724222163510.gif)|![](https://qn-cdn.233leyuan.com/online/1LQ56QPg2hOt1724222164405.gif)|
 
 #### 3.3.4 加速度：控制粒子在生命周期中的加速度，支持“关键帧插值”。
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/20465dc5f5914f9984dd412fc38ab0c4_357322792.webp)|![](https://qn-cdn.233leyuan.com/athena/online/a74a6ada1a0b45c19d622c42570cbe5c_357322793.webp)|
 
 效果演示：
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/uu2XqcwP9zOD1724222550085.gif)|![](https://qn-cdn.233leyuan.com/online/bKqrHID7d9L11724222550942.gif)|
 
 #### 3.3.5 初始旋转角度：控制粒子在发射时的初始旋转角度，默认值0。
 
