@@ -35,15 +35,14 @@
 
 在本地资源库中搜索[物理连接],找到功能对象,拖入到场景中即可完成创建.
 
-![](https://cdn.233xyx.com/online/jAicpYIRYxqs1709269580817.png)
-
-![](https://qn-cdn.233leyuan.com/online/At0ya7umSQhS1723785380131.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://cdn.233xyx.com/online/jAicpYIRYxqs1709269580817.png)|![](https://qn-cdn.233leyuan.com/online/At0ya7umSQhS1723785380131.png)|
 
 通过属性面板绑定想要被约束的对象,完成约束。
-
-![](https://qn-cdn.233leyuan.com/online/UMMX0eQPALyD1723785386014.png)
-
-![](https://qn-cdn.233leyuan.com/online/omscMaEO7blC1723785391610.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/UMMX0eQPALyD1723785386014.png)|![](https://qn-cdn.233leyuan.com/online/omscMaEO7blC1723785391610.png)|
 
 
 普通连接效果
@@ -71,8 +70,8 @@
 3.物理连接逻辑对象开启[自动启用],[软连接],[设置最大约束距离].
 4.物理连接逻辑对象开启[启用绞盘],设置[绞盘力]和[绞盘速度],同时设置一个[绞盘目标距离]
 
-![](https://qn-cdn.233leyuan.com/online/m8uN0Y3q6qnb1723785396027.png)
-
-![](https://qn-cdn.233leyuan.com/online/q852Kj8nq7o01723785403493.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/m8uN0Y3q6qnb1723785396027.png)|![](https://qn-cdn.233leyuan.com/online/q852Kj8nq7o01723785403493.png)|
 
 ##
