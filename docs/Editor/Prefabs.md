@@ -19,9 +19,9 @@
 
 - **预制体结构**
 
-![](https://qn-cdn.233leyuan.com/online/jmDRCLHgUeEc1723795563026.png)
-
-![](https://qn-cdn.233leyuan.com/online/mCUWAJefYnSA1723795576572.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/jmDRCLHgUeEc1723795563026.png)|![](https://qn-cdn.233leyuan.com/online/mCUWAJefYnSA1723795576572.png)|
 
 - 预制体均包含一个预制体头结点，当创建一个空预制体时，会自动生成一个默认的头节点。
 - 预制体头结点下为预制体子对象，子对象间可以是平级、父子级结构关系
@@ -35,32 +35,32 @@
 
 - 方法：点击工程内容-预制体分类中【新建预制体】按钮
 
-![](https://qn-cdn.233leyuan.com/online/ZX5WJ7UgAfAV1723796175822.png)
-
-![](https://qn-cdn.233leyuan.com/online/vQHNmJQaSWsb1723796185623.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/ZX5WJ7UgAfAV1723796175822.png)|![](https://qn-cdn.233leyuan.com/online/vQHNmJQaSWsb1723796185623.png)|
 
 - **已有对象生成为预制体**
 
   - 方法 1：选中对象管理器中对象，点击右键菜单中【生成为预制体】，将选中对象及其子对象生成为预制体
-
-![](https://qn-cdn.233leyuan.com/online/a6YcAsqLf9DA1723796123847.png)
-
-![](https://qn-cdn.233leyuan.com/online/4DsSL2z72GgE1723796133482.png)
+ 
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/a6YcAsqLf9DA1723796123847.png)|![](https://qn-cdn.233leyuan.com/online/4DsSL2z72GgE1723796133482.png)|
 
 - 方法 2：选中对象管理器中某实例状态的预制体引用对象头结点，点击右键菜单中【另存为新预制体】，选中的实例状态预制体引用对象将与原预制体脱离引用关系，并生成为新预制体
 
-![](https://qn-cdn.233leyuan.com/online/G7mVy90DkR3E1723796058088.png)
-
-![](https://qn-cdn.233leyuan.com/online/bfRsGziJ5Gtf1723796069404.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/G7mVy90DkR3E1723796058088.png)|![](https://qn-cdn.233leyuan.com/online/bfRsGziJ5Gtf1723796069404.png)|
 
 
 - **预制体的存储**
 
   - 工程内容-预制体分类中存储着当前工程下所有的预制体资源
 
-![](https://qn-cdn.233leyuan.com/online/gvKc1Zu3KUdA1723795648665.png)
-
-![](https://qn-cdn.233leyuan.com/online/8QHT3aTFJayu1723795664344.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/gvKc1Zu3KUdA1723795648665.png)|![](https://qn-cdn.233leyuan.com/online/8QHT3aTFJayu1723795664344.png)|
 
 - 每个预制体文件中其所**引用**的脚本、UI、材质均分别存于对应的文件类型下，**不会与 prefab 文件整合存放同一工程内容分组中**
 
@@ -72,22 +72,22 @@
 
   - 入口 1：在工程内容中选中某预制体，点击右键菜单中【编辑】或双击预制体文件，可在预制体编辑视口中打开选中预制体进行编辑
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZ0kpC3ztV9KViUdye5gEEd.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnZ0kpC3ztV9KViUdye5gEEd.png)|![](https://qn-cdn.233leyuan.com/online/5sU6qxE46Pl61723795632784.png)|
 
-![](https://qn-cdn.233leyuan.com/online/5sU6qxE46Pl61723795632784.png)
 
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4IQC5GJyWzW96Vg8iDBrMd.png)
-
-![](https://qn-cdn.233leyuan.com/online/I0cyKauMwYrM1723795623112.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4IQC5GJyWzW96Vg8iDBrMd.png)|![](https://qn-cdn.233leyuan.com/online/I0cyKauMwYrM1723795623112.png)|
 
 （通过工程内容打开预制体进行编辑）
 
 - 入口 2：在对象管理器中选中某预制体头结点，点击右键菜单中【编辑预制体】，可在预制体编辑视口中打开选中预制体进行编辑
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTodZehIUXA8EphCrd60Nof.png)
-
-![](https://qn-cdn.233leyuan.com/online/DWAiLfKGn0dQ1723795607910.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnTodZehIUXA8EphCrd60Nof.png)|![](https://qn-cdn.233leyuan.com/online/DWAiLfKGn0dQ1723795607910.png)|
 
 
 （通过对象管理器打开预制体进行编辑）
@@ -107,15 +107,15 @@
 
     - 点击工程内容中【保存】按钮保存对预制体的修改
 
-![](https://qn-cdn.233leyuan.com/online/7sg4r7ZCJ8mL1723795585820.png)
-
-![](https://qn-cdn.233leyuan.com/online/biLyk247bHK21723795595595.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/7sg4r7ZCJ8mL1723795585820.png)|![](https://qn-cdn.233leyuan.com/online/biLyk247bHK21723795595595.png)|
 
 - 切换编辑状态及编辑对象时，点击保存提示弹窗中【保存】按钮
 
-![](https://qn-cdn.233leyuan.com/online/HTAhdJboGZos1723796081954.png)
-
-![](https://qn-cdn.233leyuan.com/online/F6b9OkqbPYTl1723796096915.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/HTAhdJboGZos1723796081954.png)|![](https://qn-cdn.233leyuan.com/online/F6b9OkqbPYTl1723796096915.png)|
 
 - 主编辑器中保存
 
@@ -127,14 +127,16 @@
 - **编辑状态**
 
   - 在资源库中找到需要使用的预制体,拖拽至对象管理器或主视口中创建预制体引用对象,此时预制体为网络资源,不可进行本地编辑,如果需要进行二次编辑,需要将预制体导入至本地工程内容.
-<video controls src = "https://qn-cdn.233leyuan.com/online/nhCAtA4Vcwxd1723796197065.mp4"></video>
 
-<video controls src = "https://qn-cdn.233leyuan.com/online/xNGVWmnD4sEl1723796244868.mp4"></video>
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|<video controls src = "https://qn-cdn.233leyuan.com/online/nhCAtA4Vcwxd1723796197065.mp4"></video>|<video controls src = "https://qn-cdn.233leyuan.com/online/xNGVWmnD4sEl1723796244868.mp4"></video>|
 
   - 在工程内容中找到预制体，拖拽至对象管理器及主视口中创建预制体引用对象
-<video controls src = "https://qn-cdn.233leyuan.com/online/gaeVdfNzzptd1723795712183.mp4"></video>
 
-<video controls src = "https://qn-cdn.233leyuan.com/online/lurK2nTARy9C1723796016993.mp4"></video>
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|<video controls src = "https://qn-cdn.233leyuan.com/online/gaeVdfNzzptd1723795712183.mp4"></video>|<video controls src = "https://qn-cdn.233leyuan.com/online/lurK2nTARy9C1723796016993.mp4"></video>|
 
 
 - **运行状态**
@@ -155,9 +157,9 @@ GameObject.asyncSpawn("AssetId")
 
   - 若有引用对象，则弹出弹窗
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGklAUKt00uFTyqWaUKztvg.png)
-
-![](https://qn-cdn.233leyuan.com/online/TlXY2TzO0lGJ1723796108782.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGklAUKt00uFTyqWaUKztvg.png)|![](https://qn-cdn.233leyuan.com/online/TlXY2TzO0lGJ1723796108782.png)|
 
 - 删除引用对象：删除此预制体的同时，删除此预制体在场景中的引用对象
 
@@ -165,15 +167,15 @@ GameObject.asyncSpawn("AssetId")
 
 - 若没有引用对象，则显示二次确认弹窗
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJgOA8Raod912urXxpbKoNc.png)
-
-![](https://qn-cdn.233leyuan.com/online/crr5PNtO7Ghy1723796159665.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnJgOA8Raod912urXxpbKoNc.png)|![](https://qn-cdn.233leyuan.com/online/crr5PNtO7Ghy1723796159665.png)|
 
 - 删除预制体文件夹时，显示二次确认弹窗，点击确认后，将对文件夹中的所有预制体执行“**删除引用对象**”逻辑
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhO189ai1LVtrybbD5shAwf.png)
-
-![](https://qn-cdn.233leyuan.com/online/amE7BcGg9mkw1723796145242.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnhO189ai1LVtrybbD5shAwf.png)|![](https://qn-cdn.233leyuan.com/online/amE7BcGg9mkw1723796145242.png)|
 
 ### 预制体的导入、导出
 
@@ -183,24 +185,25 @@ GameObject.asyncSpawn("AssetId")
   - 在弹出界面内可以查看被导出的预制体及其包含的文件,可以通过勾选的方法选择需要导出文件
   - 预制体引用的脚本、UI以及材质等文件会以相对应的路径被一同导出
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmQqEtXaHNDMlVv80vX1fig.png)
-
-![](https://qn-cdn.233leyuan.com/online/IR7sQkdBmsLF1723795676825.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnmQqEtXaHNDMlVv80vX1fig.png)|![](https://qn-cdn.233leyuan.com/online/IR7sQkdBmsLF1723795676825.png)|
 
 - **导入预制体**
 
   - 点击工程内容【资源导入】按钮，在资源管理器中选择要导入的预制体后将预制体导入
 
-![](https://qn-cdn.233leyuan.com/online/A9X9BSLYHV5A1723795690499.png)
-
-![](https://qn-cdn.233leyuan.com/online/E8LWHLcPhP5o1723795705525.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/A9X9BSLYHV5A1723795690499.png)|![](https://qn-cdn.233leyuan.com/online/E8LWHLcPhP5o1723795705525.png)|
 
 - 导入时将解析预制体文件，并还原所有引用文件至工程中
 
 - 导入时将显示导入详情面板，给开发者提供 prefab 的结构信息,可以通过文件前的勾选框来确定需要被导入的内容.
-![](https://cdn.233xyx.com/online/_导入1111QNukGTGclbCM1711270726363.png)
 
-![](https://qn-cdn.233leyuan.com/online/9S7xINP979r21723799716344.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://cdn.233xyx.com/online/_导入1111QNukGTGclbCM1711270726363.png)|![](https://qn-cdn.233leyuan.com/online/9S7xINP979r21723799716344.png)|
 
 
 - 若当前工程中的文件与导入的 prefab 有冲突，将给用户提供重命名或覆盖操作
