@@ -266,11 +266,11 @@ Effect.color = ColorSequence;
 
 效果演示：
 
-|中文示例|
-| 体积内发射  | 仅表面发射 |
+| 体积内发射_中文示例 | 体积内发射_英文示例 |
 | - | - |
-| ![20240724093017_rec_](https://github.com/user-attachments/assets/6c1ac1c2-99b3-472a-ad10-b89d8434e175) | ![20240724093128_rec_](https://github.com/user-attachments/assets/9e29d4f1-ce17-4db1-aa45-5f24f1e53304) |
-|英文示例|
+|![]()|![]()|
+
+| 仅表面发射_中文示例 | 仅表面发射_英文示例 |
 | - | - |
 |![]()|![]()|
 
@@ -280,9 +280,13 @@ Effect.color = ColorSequence;
 
 效果演示：
 
-| 阻力 = 0.3 | 阻力 = 1 |
+| 阻力 = 0.3_中文示例 | 阻力 = 0.3_英文示例 |
 | - | - |
-| ![20240724104350_rec_](https://github.com/user-attachments/assets/fe0d5e2a-c28b-4ae8-b4fa-768c4420432b) | ![20240724104456_rec_](https://github.com/user-attachments/assets/ca3c9465-0292-47f2-a152-c549611d4868) |
+|![]()|![]()|
+
+| 阻力 = 1_中文示例 | 阻力 = 1_英文示例 |
+| - | - |
+|![]()|![]()|
 
 #### 3.5.2 遮罩半径：设置粒子的边缘遮罩裁剪，取值范围0-1，默认值0.5。
 
