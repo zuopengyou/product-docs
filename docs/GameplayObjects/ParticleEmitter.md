@@ -232,20 +232,20 @@ Effect.color = ColorSequence;
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/8f400d94e4764f2c90415e9b1097ccc7_357367478.webp)|![](https://qn-cdn.233leyuan.com/athena/online/95d633d1d4224baaaaf845979e070c3f_357367479.webp)|
 
 效果演示：
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/R7ZZCiS6iAen1724223812712.gif)|![](https://qn-cdn.233leyuan.com/online/qUb1pcgTB7Qw1724223813677.gif)|
 
 ### 3.4 发射器属性
 #### 3.4.1 形状范围：当前版本粒子发射器仅支持矩形，XYZ表示矩形的长宽高。默认值(50,50,50)。
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/574b40e6786e4d299180fc2db26f1c80_357376390.webp)|![](https://qn-cdn.233leyuan.com/athena/online/0c977b8f748d4b8286380ebb7ad78f62_357376391.webp)|
 
 ::: tip
 在矩形粒子发射器下，缩小XYZ可以实现粒子从单个点发射；缩小一个一个值，放大其他两个值，可以实现方形平面发射的效果等。
@@ -256,37 +256,32 @@ Effect.color = ColorSequence;
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/seP2ewlWZGcD1724224071375.gif)|![](https://qn-cdn.233leyuan.com/online/LT6iuHM4JxLb1724224072166.gif)|
 
 #### 3.4.2 形状样式：分为仅表面发射和体积内发射，仅表面发射代表粒子只会从发射器的表面生成，体积内发射代表粒子会从发射器内部生成。默认为体积内发射。
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/f2418f76048b4e5eb96a532b9b3d7177_357399481.webp)|![](https://qn-cdn.233leyuan.com/athena/online/1bc8bbf6c93a4c0582cf6b62d73c5a64_357399482.webp)|
 
 效果演示：
 
-| 体积内发射_中文示例 | 体积内发射_英文示例 |
+| 中文示例 | 英文示例 |
 | - | - |
-|![]()|![]()|
-
-| 仅表面发射_中文示例 | 仅表面发射_英文示例 |
-| - | - |
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/MXl07CW8sNMp1724224755246.gif)|![](https://qn-cdn.233leyuan.com/online/N77UVAlu5ugd1724224756533.gif)|
 
 ### 3.5 其他属性
 #### 3.5.1 阻力：粒子从发射开始速度衰减到0的速率，计算公式“粒子速度 += 粒子速度 * -阻力 * DeltaTime”，取值范围0-1，默认值0。
-![image](https://github.com/user-attachments/assets/fc7e3bfb-1e71-425e-bf3e-bf248d350422)
+
+| 中文示例 | 英文示例 |
+| - | - |
+|![](https://qn-cdn.233leyuan.com/athena/online/33abf995ab944f63bfd953e37ab21f74_357410366.webp)|![](https://qn-cdn.233leyuan.com/athena/online/29ea1b7e76ee4e0985b5e8eb05a058cf_357410367.webp)|
 
 效果演示：
 
-| 阻力 = 0.3_中文示例 | 阻力 = 0.3_英文示例 |
+| 中文示例 | 英文示例 |
 | - | - |
-|![]()|![]()|
-
-| 阻力 = 1_中文示例 | 阻力 = 1_英文示例 |
-| - | - |
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/h4uWoIRoh6dj1724225069792.gif)|![](https://qn-cdn.233leyuan.com/online/GszJNukxPBUz1724225070584.gif)|
 
 #### 3.5.2 遮罩半径：设置粒子的边缘遮罩裁剪，取值范围0-1，默认值0.5。
 
