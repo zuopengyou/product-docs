@@ -17,25 +17,25 @@
 
 在【资源库】-【游戏功能对象】列表中找到【水体区域】的对象。
 
-![](https://qn-cdn.233leyuan.com/online/IZf5a16KK9QL1723785888559.png)
-
-![](https://qn-cdn.233leyuan.com/online/0FTrpmSp4g3Z1723785892905.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/IZf5a16KK9QL1723785888559.png)|![](https://qn-cdn.233leyuan.com/online/0FTrpmSp4g3Z1723785892905.png)|
 
 ### 使用水体区域
 
 我们在找到水体区域后，可以根据需求手动拖入场景内，修改其属性来实现相应的效果，也可以通过代码动态生成水体区域。
 
-![](https://qn-cdn.233leyuan.com/online/6Y7qBO2uoPnL1723785897618.png)
-
-![](https://qn-cdn.233leyuan.com/online/MVuQJLQacJRW1723785902794.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/6Y7qBO2uoPnL1723785897618.png)|![](https://qn-cdn.233leyuan.com/online/MVuQJLQacJRW1723785902794.png)|
 
 基础属性中包括了水体的物理属性和水体的表现效果。我们可以通过调节水体摩擦力，改变角色在水中的移动效果。我们也可以通过调节水体属性和水波效果调整水面的表现效果。
 
 ### 动态生成水体区域
 
-![](https://qn-cdn.233leyuan.com/online/f9A6PWTuzcdm1723785907064.png)
-
-![](https://qn-cdn.233leyuan.com/online/JKfCOV45pz9h1723785910400.png)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/f9A6PWTuzcdm1723785907064.png)|![](https://qn-cdn.233leyuan.com/online/JKfCOV45pz9h1723785910400.png)|
 
 也可以将鼠标悬停在要的的资源上方，查看资源的GUID；也可以通过右键，复制对象的GUID。然后通过GUID动态创建相应的资源。
 
