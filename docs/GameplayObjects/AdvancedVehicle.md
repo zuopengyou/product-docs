@@ -9,23 +9,26 @@
 ## 如何使用高级轮式载具
 - **step.1** **通过本地资源库创建高级轮式载具**
 在本地资源库搜索[高级轮式载具]，找到功能对象将其拖拽到场景中，完成创建。
-<video controls src="https://cdn.233xyx.com/athena/online/eae605aa0e724b9bbf30fdb84459c4f5.mp4"></video>
-<video controls src="https://cdn.233xyx.com/athena/online/18e5ee6ef94e497eb6599933671e51b3.mp4"></video>
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|<video controls src="https://cdn.233xyx.com/athena/online/eae605aa0e724b9bbf30fdb84459c4f5.mp4"></video>|<video controls src="https://cdn.233xyx.com/athena/online/18e5ee6ef94e497eb6599933671e51b3.mp4"></video>|
 
 - **step.2** **搭建载具外观**
 可以使用任意模型或特效拼装你的高级轮式载具，模型会自动成为载具碰撞的一部分。
 ::: tip **注意车质量**
 **拼装车身时，会将模型对象的质量计入载具整体质量中，拼装质量过大的模型时，需要考虑载具重心是否会影响平衡性，否则会出现翻车的情况。。**
 :::
-<video controls src="https://cdn.233xyx.com/athena/online/2f7db14f06154995b74fca9737146668.mp4"></video>
-<video controls src="https://cdn.233xyx.com/athena/online/0a1d4a09b51b4b279db71fb5a76f505e.mp4"></video>
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|<video controls src="https://cdn.233xyx.com/athena/online/2f7db14f06154995b74fca9737146668.mp4"></video>|<video controls src="https://cdn.233xyx.com/athena/online/0a1d4a09b51b4b279db71fb5a76f505e.mp4"></video>|
 
 - **step.3** **绑定载具轮胎**
 高级轮式载具可以指定某个模型做为载具的轮胎，绑定后模型会具有轮胎转动的动画效果。高级轮式载具的轮胎碰撞需要通过属性中的轮胎半径进行设置，被绑定的模型没有碰撞效果。
 高级轮式载具可以绑定0~4个车轮，也可以调整车轮的位置，但要考虑车轮位置对车身整体的平衡性影响。
 
-<video controls src="https://cdn.233xyx.com/athena/online/340db8b9b8ad4d009cf2b55621815d17.mp4"></video>
-<video controls src="https://cdn.233xyx.com/athena/online/c3af134ba038432a8d86d4c2324e6d3e.mp4"></video>
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|<video controls src="https://cdn.233xyx.com/athena/online/340db8b9b8ad4d009cf2b55621815d17.mp4"></video>|<video controls src="https://cdn.233xyx.com/athena/online/c3af134ba038432a8d86d4c2324e6d3e.mp4"></video>|
 
 
 | **动力轮组属性** | **说明**                                | **类型** | **取值范围** |
@@ -50,8 +53,9 @@
 
 
 - **step.5** **运行体验载具效果**
-<video controls src="https://cdn.233xyx.com/athena/online/8112fad534e6468e9978bd63a7aed379.mp4"></video>
-<video controls src="https://cdn.233xyx.com/athena/online/26d49c2e059c4400bbea6c05a0bb4166.mp4"></video>
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|<video controls src="https://cdn.233xyx.com/athena/online/8112fad534e6468e9978bd63a7aed379.mp4"></video>|<video controls src="https://cdn.233xyx.com/athena/online/26d49c2e059c4400bbea6c05a0bb4166.mp4"></video>|
 
 
 | **基础属性**  | **说明**              | **类型** | **取值范围** |
