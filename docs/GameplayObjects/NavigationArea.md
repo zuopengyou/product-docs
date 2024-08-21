@@ -20,8 +20,9 @@
 
 设置参数以需要使用寻路功能的对象为参照，比如默认大小的角色或 NPC 使用寻路时，寻路参数可以直接使用默认值，以保证角色或 NPC 对象导航时不会被阻挡。如果是体形较大或较小的对象使用寻路，可以适当调整胶囊半径、高度等参数，使寻路区域计算更加精准。
 
-![](https://cdn.233xyx.com/online/1PwCbxkPePFV1723774304578.jpg)
-![](https://cdn.233xyx.com/online/1PwCbxkPePFV1723774304578.jpg)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://cdn.233xyx.com/online/1PwCbxkPePFV1723774304578.jpg)|![](https://cdn.233xyx.com/online/1PwCbxkPePFV1723774304578.jpg)|
 
 - **使用技巧**
 根据场景的实际使用环境,寻路区域参数,可以让寻路效果更加平滑.例如适当增大胶囊体半径参数，可以让角色在转角导航时更新平滑,避免贴紧墙壁移动的现象.
@@ -42,9 +43,9 @@
 - **step.3**
 
 寻路区域可以进行高度判断，需要向高处寻路时，请调整 Z 轴缩放属性。
-![](https://cdn.233xyx.com/online/47ys91FrEhFd1723774305112.jpg)
-
-![](https://cdn.233xyx.com/online/DmFv9FDuvaAP1723774305632.jpg)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://cdn.233xyx.com/online/47ys91FrEhFd1723774305112.jpg)|![](https://cdn.233xyx.com/online/DmFv9FDuvaAP1723774305632.jpg)|
 
 
 
@@ -98,10 +99,9 @@ export default class NewScript extends Script {
 - **step.7**
 
 在场景中创建两个角色NPC，将其中一个角色设置为客户端
-
-![](https://cdn.233xyx.com/online/uiBbYCV7uaTR1693879253848.png)
-
-![](https://cdn.233xyx.com/online/Zo8xdqkdsoqA1723774306166.jpg)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://cdn.233xyx.com/online/uiBbYCV7uaTR1693879253848.png)|![](https://cdn.233xyx.com/online/Zo8xdqkdsoqA1723774306166.jpg)|
 
 
 - **step.8**
@@ -173,22 +173,23 @@ export default class NewScript1 extends Script {
 - **step.9**
 在[世界设置]-[寻路设置]中打开动态寻路
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/Cly0bNOUuo8uWYxcEthcmhRGnpg.png)
-
-![](https://cdn.233xyx.com/online/X9oEPmetRCAT1723774306688.jpg)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://wstatic-a1.233leyuan.com/productdocs/static/Cly0bNOUuo8uWYxcEthcmhRGnpg.png)|![](https://cdn.233xyx.com/online/X9oEPmetRCAT1723774306688.jpg)|
 
 - **step.10**
 在场景中设置两条寻路路径，并设置目标点
 
-![](https://cdn.233xyx.com/online/cbcxXAu8ebtP1693892552089.png)
-
-![](https://cdn.233xyx.com/online/sbQzIjIqQ8am1723774307188.jpg)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://cdn.233xyx.com/online/cbcxXAu8ebtP1693892552089.png)|![](https://cdn.233xyx.com/online/sbQzIjIqQ8am1723774307188.jpg)|
 
 - **step.11**
 在资源库中搜索[寻路动态修饰区]，放置在路面，将[寻路动态修饰区]区域类型设置为[无效的]。
-![](https://cdn.233xyx.com/online/gT39sUpj4ZQZ1693892552089.png)
 
-![](https://cdn.233xyx.com/online/hJ3v6uoOBH8b1723774307682.jpg)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://cdn.233xyx.com/online/gT39sUpj4ZQZ1693892552089.png)|![](https://cdn.233xyx.com/online/hJ3v6uoOBH8b1723774307682.jpg)|
 
 - **step.12**
 创建一个脚本，用来控制[寻路动态修饰区]的区域类型状态。
