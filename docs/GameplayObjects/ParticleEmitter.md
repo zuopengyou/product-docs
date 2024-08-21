@@ -208,25 +208,25 @@ Effect.color = ColorSequence;
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/a76d908cde754fe3b4600a9d2fc8e692_357342792.webp)|![](https://qn-cdn.233leyuan.com/athena/online/dcae1866e4a74c9280b13e66b833cacc_357342793.webp)|
 
 效果演示：
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/87YcKQZH5fu71724223094371.gif)|![](https://qn-cdn.233leyuan.com/online/XW3nQT9ym6vS1724223095083.gif)|
 
 #### 3.3.6 旋转速度：粒子在生命周期过程中旋转的速度，支持“序列帧插值”。
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/c00f5cdba8334e8d9fc7cb7d01988eeb_357353019.webp)|![](https://qn-cdn.233leyuan.com/athena/online/0cd02c64ccc143a49c5be36e8cc5be0a_357353020.webp)|
 
 效果演示：
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/5xBqUA9pDxj91724223382174.gif)|![](https://qn-cdn.233leyuan.com/online/TSL2KJqOKF8V1724223382849.gif)|
 
 #### 3.3.7 扩散角度：粒子偏离发射垂直方向的角度
 
