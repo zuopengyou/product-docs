@@ -147,7 +147,7 @@ Effect.color = ColorSequence;
 
 |中文示例|英文示例|
 |-----|-----|
-|![](https://qn-cdn.233leyuan.com/online/u7jqgngVdZy71724220636221.gif)|![](https://qn-cdn.233leyuan.com/online/jG5VnH9BoKGr1724220636954.gif)|
+|![](https://qn-cdn.233leyuan.com/online/u7jqgngVdZy71724220636221.gif)|![](https://qn-cdn.233leyuan.com/online/mDeHyxumQvuO1724223492299.gif)|
 
 ### 3.3 释放属性
 #### 3.3.1 生命周期：控制粒子从诞生到销毁的时间，X和Y代表区间，当相同时，生命周期恒定，当不同时，生命周期会在二者中间随机，默认值(10,10)。
