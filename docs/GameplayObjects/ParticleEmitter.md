@@ -117,25 +117,25 @@ Effect.color = ColorSequence;
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/e06cfb8a64c34f219e2669a38ab9b090_357130482.webp)|![](https://qn-cdn.233leyuan.com/athena/online/9021c8555a4f4faca0c1ada09d5c60dd_357130483.webp)|
 
 效果演示：
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/JSENxtsUzzKb1724217240042.gif)|![](https://qn-cdn.233leyuan.com/online/vcv7Y7vpgwaw1724217240990.gif)|
 
 #### 3.2.7 大小：控制粒子的大小，支持“关键帧插值”，默认值1。
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/4bfae4b8354645bb8eab871d4a6dc638_357218218.webp)|![](https://qn-cdn.233leyuan.com/athena/online/13a0642918c44b148ea4725c57bc6cab_357218219.webp)|
 
 效果演示：
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/fIVLTuLuRBDA1724219685249.gif)|![](https://qn-cdn.233leyuan.com/online/PGx8jGmBAEYd1724219686016.gif)|
 
 #### 3.2.8 宽高比：控制粒子的宽高比，默认值0。
 
