@@ -287,13 +287,13 @@ Effect.color = ColorSequence;
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/athena/online/de7d767ae4cd407b93ab4f31a3f47898_357420012.webp)|![](https://qn-cdn.233leyuan.com/athena/online/850d71024aac46819d873b462877c7e2_357420013.webp)|
 
 效果演示：
 
 |中文示例|英文示例|
 |-----|-----|
-|![]()|![]()|
+|![](https://qn-cdn.233leyuan.com/online/7FQdtRdLlSpv1724225351623.gif)|![](https://qn-cdn.233leyuan.com/online/mJyBTsmFDD0V1724225352353.gif)|
 
 ### 4. 粒子发射器的使用建议
 - 需要发射大量粒子时，可以考虑将多个粒子合成一张图片，减少渲染压力。
@@ -319,4 +319,4 @@ export default class EffectExample extends Script {
 
 效果演示：
 
-![20240724103814_rec_](https://github.com/user-attachments/assets/f187be4a-9d7d-4a84-91b7-adc49f6e7291)
+![](https://qn-cdn.233leyuan.com/online/OkYHYl3SgpCE1724225531402.gif)
