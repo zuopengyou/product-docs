@@ -14,24 +14,36 @@
 
 在【对象管理器】-【世界对象】列表中找到【环境雾】对象。
 
-![](https://qn-cdn.233leyuan.com/online/qbzv7TImV0ik1723778959819.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+| ![](https://qn-cdn.233leyuan.com/online/qbzv7TImV0ik1723778959819.png) | ![](https://qn-cdn.233leyuan.com/online/kEoCo1iUuq9h1723778960446.png) |
 
-![](https://qn-cdn.233leyuan.com/online/kEoCo1iUuq9h1723778960446.png)
+
+
+
 
 可以根据需求调整雾效效果。然后我们点击环境雾对象，就可以在属性面板(默认右下角)中编辑环境雾。勾选是否启用，雾效就会显示出来。以下展开介绍具体得环境雾属性：
 
-![](https://qn-cdn.233leyuan.com/online/Exh6Ok7nKl5U1723778960948.png)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+| ![](https://qn-cdn.233leyuan.com/online/Exh6Ok7nKl5U1723778960948.png)|  ![](https://qn-cdn.233leyuan.com/online/M8utjoOACToT1723778961388.png)|
 
-![](https://qn-cdn.233leyuan.com/online/M8utjoOACToT1723778961388.png)
+
+
+
 
 ### 是否启用
 
 - 属性说明：是否启用环境雾的效果，勾选后，场景中将显示雾效，取消勾选则场景中没有雾效。
 - 效果图：
 
-<video controls src="https://qn-cdn.233leyuan.com/online/LhUmXHMTQN0i1723778961845.mp4"></video>
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|<video controls src="https://qn-cdn.233leyuan.com/online/LhUmXHMTQN0i1723778961845.mp4"></video>| <video controls src="https://qn-cdn.233leyuan.com/online/C36TGypUYrFd1723778962948.mp4"></video> |
 
-<video controls src="https://qn-cdn.233leyuan.com/online/C36TGypUYrFd1723778962948.mp4"></video>
+
+
+
 
 - 实际应用：因为环境雾是客户端效果，所以每个客户端可以显示得效果可以完全不同。换句话说，我们完全可以制作几个不同得环境区域，玩家进入沙漠地带就会呈现沙漠雾得效果，别的玩家没有进入沙漠，所以就不会开启雾得效果。
 - 实现步骤：
