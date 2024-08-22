@@ -8,94 +8,88 @@
 ## 1. 什么是特效？
 
 - 特效是游戏中丰富表现的特殊效果，如烟花、刀光、雨雪等。
-- 编辑器中的特效分为 “美术效果特效” 和 “预制体特效” 。
--  “预制体特效” 实际上是通过编辑器内置的游戏功能对象 “粒子发射器” 制作而成，所以您可以修改其中的每一个参数。而 “美术效果特效” 虽然可修改范围小，但提供了精美的成品效果。所以其请在实际开发过程中，挑选适合自己项目的特效。
+- 编辑器中的特效分为**美术效果特特效**和**预制体特效**。
+- **预制体特效**实际上是通过编辑器内置的游戏功能对象[**粒子发射器**](https://docs.ark.online/GameplayObjects/ParticleEmitter.html)制作而成，所以您可以修改其中的每一个参数。
+- **美术效果特特效**虽然可修改范围小，但提供了精美的成品效果。所以其请在实际开发过程中，挑选适合自己项目的特效。
 
-## 2. 如何使用特效？
+## 2. 如何添加特效？
 
 ### 2.1 如在项目中添加特效？
 
-- 
+- 添加**美术效果特特效**
 
-![](https://qn-cdn.233leyuan.com/athena/online/c069d9163a374de39935b455f2df018f_357785636.webp)
+| 中文示例 | 英文示例 |
+| - | - |
+| ![](https://qn-cdn.233leyuan.com/athena/online/7fc135e08e064eb489b73c03a5a4e8b6_358396690.webp) | ![](https://qn-cdn.233leyuan.com/athena/online/c069d9163a374de39935b455f2df018f_357785636.webp) |
 
-### 2.2 如何修改特效以达到自己想要的效果？
+- 添加**预制体特效**
 
-- 我们在找到特效资源后，可以根据需求找到自己想要的特效，并拖入场景中，修改其特效属性。
+| 中文示例 | 英文示例 |
+| - | - |
+| ![](https://qn-cdn.233leyuan.com/athena/online/94f6496ab5bc4e13a8710a0ef7edb439_358426376.webp) | ![](https://qn-cdn.233leyuan.com/athena/online/e09a2ffa463c4129949457090d3deb51_358420401.webp) |
 
-![](https://cdn.233xyx.com/athena/online/b73e9b1d30a842a0886d89066dfc9e35_12166458.webp)
+::: tip
+**预制体特效**的使用方法详见[**粒子发射器**](https://docs.ark.online/GameplayObjects/ParticleEmitter.html)，接下来的介绍围绕**美术效果特特效**展开。
+:::
 
-- 基础属性中，存在播放/停止按钮，可以在编辑状态下，调整特效的播放状态。
-- 在运行过程中，如果想要看到特效，需要开启【自动启用】功能。这样特效能够在运行时，自动播放特效。否则特效在运行状态下可能会看不见。
+### 2.2 如何在项目中动态生成美术效果特效？
 
-### 2.3 动态生成特效
+| 中文示例 | 英文示例 |
+| - | - |
+| ![](https://qn-cdn.233leyuan.com/athena/online/f4ac8ab0c2fd4c13b4c4b609a7e2f3e3_358579229.webp) | ![](https://qn-cdn.233leyuan.com/athena/online/cd6d6b8737a54526a0f7d16f471ea832_358579230.webp) |
 
-![](https://cdn.233xyx.com/athena/online/b1b3e9b5c37443d0b47df6b64264afec_12166468.webp)
-
-- 也可以将鼠标悬停在要的的资源上方，查看资源的GUID；也可以通过右键，复制对象的GUID。然后通过GUID动态创建相应的资源。
-- 动态生成特效的示例脚本：
+- 将鼠标悬停在要的的资源上方，查看资源的Asset ID；也可以通过右键，复制对象的Asset ID。
+- 通过Asset ID动态创建相应的资源，动态生成特效的示例脚本：
 
 ```ts
 @Component
-export default class NewScript extends Script {
+export default class Effect extends Script {
 
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    protected async onStart(): Promise<void> {
-        //延迟3秒
-        await TimeUtil.delaySecond(3)
-        //生成特效
-        let eff = await asyncSpawn(
-            //特效的GUID
-            "4330",
-            //特效同步设置为false
-            replicates: false,
-            //特效的生成位置
-            transform: new Transform(new Vector(100, 0, 100), new Rotation(0, 0, 0),
-                new Vector(2, 2, 1))
-        }) as Particle
-        //播放特效
-        eff.play();
-        //停止特效
-        //eff.stop();
+    private readonly effect = {
+        assetID: "4330",
+        object: null as mw.Effect,
+    };
+
+    protected onStart(): void {
+        this.createEffect();
     }
 
+    @RemoteFunction(Client)
+    public async createEffect(): Promise<void> {
+        const success = await mw.AssetUtil.asyncDownloadAsset(this.effect.assetID);
+            if (success) {
+                // 下载完毕创建特效
+                this.effect.object = await mw.GameObject.asyncSpawn(this.effect.assetID) as mw.Effect;
+
+                // 设置特效transform
+                const transform = new mw.Transform(new mw.Vector(0, 0, 0), new mw.Rotation(0, 0, 0), new mw.Vector(1, 1, 1));
+                this.effect.object.localTransform = transform;
+
+                // 播放特效
+                this.effect.object.play();
+            }
+    }
 }
 ```
 
-- 效果图：
-
-<video controls src="https://cdn.233xyx.com/1683524819944_206.mp4"></video>
-
-## 3. 特效属性介绍
-
-- 我们点击特效对象，就可以在属性面板(默认右下角)中编辑特效的属性面板。勾选自动启用，特效就会显示出来。以下展开介绍具体得特效属性：
-
-![](https://cdn.233xyx.com/athena/online/1d40164a4c704dc68f478da556e18755_12166896.webp)
+## 3. 美术对象特效有哪些属性？
 
 ### 3.1. 特效资源
 
 - 属性说明：特效资源指的是特效的资源ID，我们可以通过将【本地资源库】中的【特效资源】直接拖入到属性面板中实现更换资源，也可以通过更换资源ID更换相应的特效资源。
-- 演示效果：
-
-<video controls src="https://cdn.233xyx.com/1683527981425_522.mp4"></video>
 
 ### 3.2 自动启用
 
 - 属性说明：设置特效是否在游戏开始时自动激活，是则会自动播放，否则需要脚本触发播放。
-- 演示效果：
-
-<video controls src="https://cdn.233xyx.com/1683528058177_392.mp4"></video>
 
 ### 3.3 生成粒子个数（Rate）
 
-- 属性说明：特效粒子的生成数量
+- 属性说明：特效粒子的生成数量，支持范围随机，即每个粒子都是在设定范围内随机生成。
 - 演示效果：
 
-![](https://cdn.233xyx.com/1683528193261_248.gif)
-
-- 当然我们也提供了【范围随机】的属性，即每个粒子特效都是在设定范围内，进行随机生成。显示更加多变的效果。
-
-![](https://cdn.233xyx.com/1683528241843_767.gif)
+| Rate = 0.5 | Rate = 3 |
+| - | - |
+| ![](https://qn-cdn.233leyuan.com/online/hBqY9vFAqfyp1724310760795.gif) | ![](https://qn-cdn.233leyuan.com/online/iqI9sUaXbrOH1724310761464.gif) |
 
 - 相关接口：
 
@@ -108,14 +102,7 @@ eff.setFloatRandom("Rate",10,3)
 
 ### 3.4 生命周期（LifeTime）
 
-- 属性说明：特效粒子的生存时间
-- 演示效果：
-
-![](https://cdn.233xyx.com/1683528307644_518.gif)
-
-- 当然我们也提供了【范围随机】的属性，即每个粒子特效都是在设定范围内，进行随机生成。显示更加多变的效果。
-
-![](https://cdn.233xyx.com/1683528632632_778.gif)
+- 属性说明：特效粒子的生存时间，支持范围随机，即每个粒子都是在设定范围内随机生成。
 
 - 相关接口：
 
@@ -128,14 +115,12 @@ eff.setFloatRandom("LifeTime",100,10)
 
 ### 3.5 大小（Size）
 
-- 属性说明：特效粒子的大小
+- 属性说明：特效粒子的大小，支持范围随机，即每个粒子都是在设定范围内随机生成。
 - 演示效果：
 
-![](https://cdn.233xyx.com/1683528799147_205.gif)
-
-- 当然我们也提供了【范围随机】的属性，即每个粒子特效都是在设定范围内，进行随机生成。显示更加多变的效果。
-
-![](https://cdn.233xyx.com/1683529283671_716.gif)
+| Size = 2 | Size = 5 |
+| - | - |
+| ![](https://qn-cdn.233leyuan.com/online/n7Fz4ZLwt0j41724311245500.gif) | ![](https://qn-cdn.233leyuan.com/online/q5yMKmZf99Xt1724311246467.gif) |
 
 - 相关接口：
 
@@ -148,14 +133,7 @@ eff.setVectorRandom("Size",new Vector(20,20,20)，new Vector(10,10,10))
 
 ### 3.6 速度（Speed）
 
-- 属性说明：特效粒子的方向与速度
-- 演示效果：
-
-![](https://cdn.233xyx.com/1683530016922_082.gif)
-
-- 当然我们也提供了【范围随机】的属性，即每个粒子特效都是在设定范围内，进行随机生成。显示更加多变的效果。
-
-![](https://cdn.233xyx.com/1683530132633_194.gif)
+- 属性说明：特效粒子的方向与速度，支持范围随机，即每个粒子都是在设定范围内随机生成。
 
 - 相关接口：
 
@@ -168,11 +146,7 @@ eff.setVectorRandom("Speed",new Vector(0,0,50)，new Vector(0,0,0))
 
 ### 3.7 发射器位置（EmitterLocation）
 
-- 属性说明：特效粒子的生成位置
-- 演示效果：由于固定位置不好分辨，我们以随机位置做演示效果
-- 随机效果依旧是以【范围随机】的属性，即每个粒子特效都是在设定范围内，进行随机生成。
-
-![](https://cdn.233xyx.com/1683530340730_107.gif)
+- 属性说明：特效粒子的生成位置，支持范围随机，即每个粒子都是在设定范围内随机生成。
 
 - 相关接口：
 
@@ -185,11 +159,12 @@ eff.setVectorRandom("EmitterLocation",new Vector(50,50,50)，new Vector(0,0,0))
 
 ### 3.8 颜色（InitialColor）
 
-- 属性说明：特效粒子的颜色
+- 属性说明：特效粒子的颜色，支持范围随机，即每个粒子都是在设定范围内随机生成。
 - 演示效果：颜色比较简单，我们将随机颜色与正常颜色放在一起展示。
-- 随机颜色依旧是【范围随机】的属性，即每个粒子特效都是在设定范围内，进行随机生成。
 
-![](https://cdn.233xyx.com/1683530381157_532.gif)
+| Color = FF91C7FF | Color = 72B5FFFF |
+| - | - |
+| ![](https://qn-cdn.233leyuan.com/online/n7Fz4ZLwt0j41724311245500.gif) | ![](https://qn-cdn.233leyuan.com/online/Hjm2O2qq9Xgs1724311508951.gif) |
 
 - 相关接口：
 
@@ -202,11 +177,7 @@ eff.setColorRandom("Color",new Type.LinearColor(1,0,0,1)，new Type.LinearColor(
 
 ### 3.9 初始旋转角度（Rotion）
 
-- 属性说明：特效粒子的初始旋转角度
-- 演示效果：旋转角度比较简单，我们将随机角度与正常角度放在一起展示。
-- 随机角度依旧是【范围随机】的属性，即每个粒子特效都是在设定范围内，进行随机生成。
-
-![](https://cdn.233xyx.com/1683535008248_004.gif)
+- 属性说明：特效粒子的初始旋转角度，支持范围随机，即每个粒子都是在设定范围内随机生成。
 
 - 相关接口：
 
@@ -219,11 +190,7 @@ eff.setFloatRandom("Rotion",1,0)
 
 ### 3.10 旋转速度（RotationRate）
 
-- 属性说明：特效粒子的旋转速度
-- 演示效果：旋转速度比较简单，我们将随机旋转速度与正常旋转放在一起展示。
-- 随机旋转速度依旧是【范围随机】的属性，即每个粒子特效都是在设定范围内，进行随机生成。
-
-![](https://cdn.233xyx.com/1683535222123_545.gif)
+- 属性说明：特效粒子的旋转速度，支持范围随机，即每个粒子都是在设定范围内随机生成。
 
 - 相关接口：
 
@@ -236,11 +203,7 @@ eff.setFloatRandom("RotationRate",1,0)
 
 ### 3.11 阻力（Drag）
 
-- 属性说明：特效粒子的受到的阻力效果
-- 演示效果：阻力比较简单，我们将随机阻力与正常阻力放在一起展示。
-- 随机阻力依旧是【范围随机】的属性，即每个粒子特效都是在设定范围内，进行随机生成。
-
-![](https://cdn.233xyx.com/1683535246840_829.gif)
+- 属性说明：特效粒子的受到的阻力效果，支持范围随机，即每个粒子都是在设定范围内随机生成。
 
 - 相关接口：
 
@@ -253,14 +216,7 @@ eff.setFloatRandom("Drag",1,0)
 
 ### 3.12 重力（Acceleration）
 
-- 属性说明：特效粒子的受到的重力效果
-- 演示效果：
-
-![](https://cdn.233xyx.com/1683535280025_608.gif)
-
-- 当然我们也提供了【范围随机】的属性，即每个粒子特效都是在设定范围内，进行随机生成。
-
-![](https://cdn.233xyx.com/1683535358013_913.gif)
+- 属性说明：特效粒子的受到的重力效果，支持范围随机，即每个粒子都是在设定范围内随机生成。
 
 - 相关接口：
 
@@ -271,16 +227,6 @@ eff.setVector("Acceleration",new Vector(0,0,-50))
 eff.setVectorRandom("Acceleration",new Vector(0,0,-50)，new Vector(0,0,0))
 ```
 
-### 3.13 循环/循环次数（即将废弃）
-
-- 【循环】属性说明：特效是否循环，开启后特效将不会停下来，进行循环播放。
-- 【循环次数】属性说明：当开启循环时，循环次数不生效。当取消循环时，特效会根据循环次数，进行播放，播放次数到达循环次数后，特效将会停止播放。
-- 演示效果：
-
-<video controls src="https://cdn.233xyx.com/1683535407198_168.mp4"></video>
-
-- 备注：该属性接口即将废弃，特效循环由开发者，通过脚本调用play函数实现。
-
 ## 4. 属性显示问题
 
-- 为了让用户体验到更加自由的特效功能，暴露了以上的特效属性，特效属性会根据特效的特点，暴露相关的属性，也就是说，以上特效属性在不同的特效，显示是不同的。有的会显示1个，有的会显示多个。并且我们不会翻新老特效的资源，只有新制作的特效才会显示这些属性。
+- 特效属性会根据特效的特点，暴露相关的属性，也就是说，以上特效属性在不同的特效中显示是不同的。有的会显示1个，有的会显示多个。并且我们不会翻新老特效的资源，只有新制作的特效才会显示这些属性。
