@@ -6,7 +6,7 @@
 
 ## 头顶名称介绍
 
-![](https://cdn.233xyx.com/online/ri2LnAxOci6A1694767738691.png)   
+![img](https://qn-cdn.233leyuan.com/athena/online/fdda245e49fc4d049ca106b26ff48ccc_361029366.webp)   
 
 头顶定义：角色模型头顶会显示名称等效果。
 
@@ -58,15 +58,21 @@ export default class NewScript extends Script {
 
 实际应用：
 
-![](https://cdn.233xyx.com/online/a92uO9iQfuj21694767738691.png)   
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/348ee115299e434a82575046c3a4517f_361035494.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/cae8ad1a18d84af78bb3c783f4a65e51_361035495.webp)|
 
 首先我们点击新建UI的按钮，创建一个新的UI文件
 
-![](https://cdn.233xyx.com/online/Jw5MMDrKTJZ21694767738691.png)   
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/f893518448cc4e10a2698e829d673473_361029363.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/5173bd2388ec4c4caf4b4cfaa27320ff_361029365.webp)|
 
 然后双击点开UI文件，编辑UI内容，拖入图片组件，然后将中意的图片替换到图片组件的属性上，并点击保存，这样我们就完成了UI的编辑效果。
 
-![](https://cdn.233xyx.com/online/Zh8TFvvxd3JF1694767738691.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/51c53f91c5b9494aa61620297e33a19d_361029364.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/51c53f91c5b9494aa61620297e33a19d_361029364.webp)|
 
 退出UI编辑器，回到主编辑器后，右键UI文件，选择复制UI的工程内容ID。
 
