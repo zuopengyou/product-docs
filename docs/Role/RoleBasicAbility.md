@@ -16,7 +16,9 @@
 
 在对象管理器中的【世界】对象中，找到并点击【角色】对象后，即可通过属性面板编辑角色的默认属性。
 
-![](https://cdn.233xyx.com/online/VjFfyu3foFyN1693999403175.png)        
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/d168a4ce96d0465f8a66dec787b6b4f8_360736522.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/57129b6494424eafb4152e4433dcaf50_360736532.webp)|
 
 ### 方式二 ：脚本设置
 
@@ -28,7 +30,9 @@
 
 ### 基础属性
 
-![](https://cdn.233xyx.com/online/UrZMMNr7DMWh1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/be3b0b43a3af4d22817ac64bb7cf6201_360736523.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/0df4e219bd2749a28ea7cab707926f2d_360736533.webp)|
 
 #### 是否可移动
 
@@ -40,7 +44,9 @@
 
 首先我们将触发器对象放置在场景中
 
-![](https://cdn.233xyx.com/online/uUlivLur2pau1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/9849316cfa79420aa5530d19b94e13e9_360736524.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/3bf42d1bb4d142629331c4d1129644e0_360736534.webp)|
 
 然后触发器对象下挂载以下脚本，即可实现一个限制移动的陷阱。
 
@@ -88,7 +94,9 @@ export default class NewScript extends Script {
 
 最后需要将脚本中利用到的GUID为【142935】和【53005】的资源放置在优先加载的列表，中即可实现效果。
 
-![](https://cdn.233xyx.com/online/kJWcicUu5mcP1693999403176.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/b000810e67294b2ab3142a9e3d8aaddb_360736535.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/cedb95466ca64b73bb4c51b00d5dfdf6_360736525.webp)|
 
 效果图：
 
@@ -102,7 +110,9 @@ export default class NewScript extends Script {
 
 首先我们将触发器对象放置在场景中
 
-![](https://cdn.233xyx.com/online/uUlivLur2pau1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/9849316cfa79420aa5530d19b94e13e9_360736524.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/3bf42d1bb4d142629331c4d1129644e0_360736534.webp)|
 
 然后触发器对象下挂载以下脚本，即可实现一个加速区域。
 
@@ -150,7 +160,9 @@ export default class NewScript extends Script {
 
 最后需要将脚本中利用到的GUID为【29722】和【153604】的资源放置在优先加载的列表，中即可实现效果。
 
-![](https://cdn.233xyx.com/online/kJWcicUu5mcP1693999403176.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/b000810e67294b2ab3142a9e3d8aaddb_360736535.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/cedb95466ca64b73bb4c51b00d5dfdf6_360736525.webp)|
 
 效果图：
 
@@ -515,7 +527,9 @@ export default class NewScript extends Script {
 
 ### 飞行属性
 
-![](https://cdn.233xyx.com/online/8OchP6KsK2r91693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/95a0f716ebe54d8da7ba847ba5b9d739_360736526.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/062e786d3a3e4cc493fd89e9f6db60fc_360736536.webp)|
 
 #### 最大飞行速度
 
@@ -525,7 +539,9 @@ export default class NewScript extends Script {
 
 首先我们将触发器对象放置在场景中
 
-![](https://cdn.233xyx.com/online/uUlivLur2pau1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/9849316cfa79420aa5530d19b94e13e9_360736524.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/3bf42d1bb4d142629331c4d1129644e0_360736534.webp)|
 
 然后触发器对象下挂载以下脚本，即可实现一个飞行区域。
 
@@ -589,7 +605,9 @@ chara.brakingDecelerationFlying = 200;
 
 ### 游泳属性
 
-![](https://cdn.233xyx.com/online/FDAjAbMARikv1693999403176.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/8ae1e6c3fe4c4fae8c494f5127a20658_360736527.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/186bbc16476c4cc0a4d512ad84164f8a_360736537.webp)|
 
 #### 最大游泳速度
 
@@ -599,7 +617,9 @@ chara.brakingDecelerationFlying = 200;
 
 实现步骤：首先我们将游泳区域对象放置在场景中
 
-![](https://cdn.233xyx.com/online/SSTj52Hp9hXL1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/5f49306eb1e24b0dbd4f2f18e677eb09_360736528.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/45e3eb7c59be4099b420983de090b2e8_360736538.webp)|
 
 然后我们就会根据角色属性面板中最大游泳速度，进行执行。
 
@@ -647,7 +667,9 @@ chara.brakingDecelerationSwimming = 500;
 
 ### 下蹲属性
 
-![](https://cdn.233xyx.com/online/5gSaip88PsHA1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/bc2454ceffcf43c3be51edc46992e549_360736529.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/8c6dce4ec64f4452bcd3e28650f08d72_360736539.webp)|
 
 #### 是否可以下蹲
 
@@ -715,7 +737,9 @@ chara.crouchedHeight = 150;
 
 ### 下落属性
 
-![](https://cdn.233xyx.com/online/wa6gR0BSgJ0V1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/47dba01fb88e4659bdd9b7eecb7eef4c_360736530.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/fe5b17c2c6584221b223641f8e218511_360736540.webp)|
 
 #### 最大下落速度
 
@@ -805,7 +829,9 @@ chara.horizontalBrakingDecelerationFalling = 1000;
 
 ### 跳跃属性
 
-![](https://cdn.233xyx.com/online/52yUIQEPD3bX1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/7bc23409b98b40d38833b1d7baef4da5_360736531.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/2078d2f83a7a4540a897aa095c60c263_360736541.webp)|
 
 #### 是否可跳跃
 
@@ -884,55 +910,51 @@ chara.jumpMaxCount = 5;
 
 ### 形象设置
 
-![](https://cdn.233xyx.com/online/rxnlCwinjwHF1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/0b204e53bec749c98a2f2477c6687f95_360960892.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/302c75093ed2450aa612653c8a944209_360960888.webp)|
 
-#### 使用平台角色形象
+#### 使用233平台角色形象
 
 属性说明：勾选使用平台角色形象，角色的形象会继承233的平台形象效果，不勾选的情况下，角色可以自主设置角色形象。
 
 注意说明：勾选使用平台角色形象的情况下，在角色编辑器中修改角色形象是无法更改形象效果的。
 
-#### 外观类型
+#### 编辑人形对象
 
-![](https://cdn.233xyx.com/online/pSw6v03DY2PQ1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/97e0693c02d14dcfa3578006705a99f9_360960893.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/4fcc2c4d051e4bfda2fcb888183c1e19_360960889.webp)|
 
-属性说明：外观类型根据角色外观形象进行得划分，分为【基础人形形象】/【高级人形形象】/【多足形象】。
-
-【基础人形形象】：是人形的整体形象，只能更换整体外观形象。
-
-【高级人形形象】：是更加完善得人形形象，可以更换角色的服装（上衣、裤子、手套、鞋子），以及脸部效果（前发、后发、瞳孔、眉毛、睫毛、肤色）等等效果。
-
-【多足形象】：是非人形的整体形象，比如四足动物的猫/狗/猪等，只能更换整体外观形象。
+说明：可以点击属性面板中的【编辑人形对象】进入编辑人形对象面板，为角色自定义更多装扮。
 
 #### 体型类型
 
-![](https://cdn.233xyx.com/online/FnTxSYy6ryQi1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/5fd2286ac2a740c49c65f2bd17ace4fb_360960894.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/d726e0976adf4a6b88f9773f14303daf_360960890.webp)|
 
 属性说明：体型类型是相同外观类型下得更加详细得类型划分，使编辑器能够更加精准的获取到角色形象的体型外观，让角色的动作和表现效果更加符合审美。目前体型类型只有高级人形形象才会进行区分，【基础人形形象】和【多足形象】直接更换形象即可，不需要区分体型。
 
 备注说明：无类型是没有明确的形象定义，让用户自定义角色效果。
 
-#### 套装数据
-
-属性说明：套装数据是高级人形形象的独有属性，用户可以将自己在角色编辑器中存储好的形象保存成相应文件，并直接拖入到属性面板中，这样用户可以将自己存储好的形象进行便捷设置。
-
-操作示例：
-
-<video controls src="https://cdn.233xyx.com/online/G1u8gad505mA1693999403175.mp4"></video>
-
 #### 角色形象
 
-属性说明：角色形象是具体的形象资源槽，根据不同的类型显示不同的资源槽，用户可以通过将资源拖拽相应属性资源槽内，快速实现设置想要的角色形象。因为基础人形形象和多足形象都是只能更换整体外观形象，所以只有一个形象资源槽，而高级人形形象可以更换多个部位的资源，所以有6个形象资源槽。
+属性说明：角色形象是具体的形象资源槽，根据不同的类型显示不同的资源槽，用户可以通过将资源拖拽相应属性资源槽内，快速实现设置想要的角色形象。
 
 操作示例：
 
-<video controls src="https://cdn.233xyx.com/online/sVryLhg3AmO01693999403175.mp4"></video>
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|<video controls src="https://qn-cdn.233leyuan.com/online/4BwUFKOLxbos1724408739259.mp4"></video>|<video controls src="https://qn-cdn.233leyuan.com/online/T0SLhIvnGCLe1724408782812.mp4"></video>|
 
 角色换装的详细说明请见：
 
 ### 角色描边
 
-![](https://cdn.233xyx.com/online/x6LIBmH3B0oE1693999403175.png)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/6b7ccaa21f5a4213aa17d33e4d45f769_360960895.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/34e527a7189f49cd82eae58e6fcc293f_360960891.webp)|
 
 #### 被遮挡时开启描边
 
