@@ -86,7 +86,6 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
             text: '横竖屏&分辨率模拟',
             link: '/Editor/ScreenOrientation&ResolutionSimulation.md'
           },
-          { text: '接入社交功能', link: '/Editor/UseMGS.md' },
           { text: '角色编辑工具', link: '/Editor/CharacterEditor.md' },
           {
             text: '自动裁剪规则与自定义裁剪距离',
@@ -174,7 +173,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
           { text: '禁行区', link: '/GameplayObjects/BlockingArea.md' },
           { text: '音效', link: '/GameplayObjects/SoundEffect.md' },
           { text: 'IK锚点', link: '/GameplayObjects/IKAnchor.md' },
-          { text: '特效', link: '/GameplayObjects/Effects.md' },
+          { text: '特效', link: '/GameplayObjects/Effect.md' },
           { text: '点光源', link: '/GameplayObjects/PointLight.md' },
           { text: '粒子发射器', link: '/GameplayObjects/ParticleEmitter.md' }
         ]
@@ -221,8 +220,7 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
-          { text: '数据存储', link: '/Scripting/DataStorage.md' },
-          { text: '共享数据', link: '/Scripting/DataSharing.md' }
+          { text: '数据存储', link: '/Scripting/DataStorage.md' }
         ]
       },
       {
@@ -289,6 +287,14 @@ export default defineConfigWithTheme<DefaultTheme.Config>({
         collapsible: true,
         collapsed: true,
         items: [
+          { text: 'v0.37.0.7', link: '/ReleaseNote/v0.37.0.7.md' },
+          { text: 'v0.37.0.6', link: '/ReleaseNote/v0.37.0.6.md' },
+          { text: 'v0.37.0.5', link: '/ReleaseNote/v0.37.0.5.md' },
+          { text: 'v0.37.0.4', link: '/ReleaseNote/v0.37.0.4.md' },
+          { text: 'v0.37.0.3', link: '/ReleaseNote/v0.37.0.3.md' },
+          { text: 'v0.37.0.2', link: '/ReleaseNote/v0.37.0.2.md' },
+          { text: 'v0.37.0.1', link: '/ReleaseNote/v0.37.0.1.md' },
+          { text: 'v0.37.0.0', link: '/ReleaseNote/v0.37.0.0.md' },
           { text: 'v0.36.0.6', link: '/ReleaseNote/v0.36.0.6.md' },
           { text: 'v0.36.0.5', link: '/ReleaseNote/v0.36.0.5.md' },
           { text: 'v0.36.0.4', link: '/ReleaseNote/v0.36.0.4.md' },

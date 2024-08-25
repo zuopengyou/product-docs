@@ -12,8 +12,6 @@
 
 ## 摇杆属性- 摇杆设置
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnMolQooNGMahQNolHMdMhlc.png)
-
 ### 摇杆类型
 
 - 自定义：开发者需要自行编写控制效果
@@ -104,8 +102,6 @@
 
 ## 摇杆属性-样式
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnoc8BWWLPGba0ah1DHIEO8g.png)
-
 ### 摇杆背景图片
 
 - 功能说明：配置摇杆的背景图片，图片相关属性介绍请见 [UI 控件-图片](https://meta.feishu.cn/wiki/wikcnFg4z5zLX0puYIncTBIJGtf)
@@ -133,7 +129,7 @@
   - 首先我们将摇杆模式设置为【摄像机控制】，然后编写脚本
   - 推荐灵敏度比例为（0.08,0.06），横向转动比纵向转动的灵敏度稍高一些
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8X9tfyKwc7av8K3mFEilrc.png)
+![](https://qn-cdn.233leyuan.com/online/AY7Y2MVfJ7Ce1724134308953.png)
 
 - 示例脚本：
 
@@ -158,9 +154,9 @@ export default class WeaponUI extends WeaponUI_Generate {
 }
 ```
 
-- pc端效果：
+- 效果演示：
 ![](https://cdn.233xyx.com/1681614349826_342.gif)
-- 移动端效果：<video controls src="https://cdn.233xyx.com/1681614130168_428.mp4"></video>
+
 
 
 ### 示例二：使用摇杆制作瞄准后发射的技能按钮
@@ -169,7 +165,7 @@ export default class WeaponUI extends WeaponUI_Generate {
 
   - 首先我们将摇杆模式设置为【无】，然后自行编写拖动摇杆后的逻辑
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcng54JtH5zXfw2NiRXjCjNNo.png)
+![](https://qn-cdn.233leyuan.com/online/7uwKRId4teLX1724134311281.png)
 
 - 示例脚本：
 
@@ -210,5 +206,3 @@ export default class AbilityUIControl extends UIScript {
     }
 }
 ```
-
-- 示例效果：<video controls src="https://cdn.233xyx.com/1681467994749_891.mp4"></video>

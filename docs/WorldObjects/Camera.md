@@ -47,7 +47,7 @@
   * FPS射击视角下，摄像机只能能看见玩家角色手持的武器，而看不到玩家角色
   * TPS过肩视角下，摄像机能看见玩家的上半身，且玩家在屏幕的左下区域，不会遮挡正前方视野
 
-<video controls src="https://cdn.233xyx.com/1684475955075_215.mp4"></video>
+![](https://cdn.233xyx.com/online/h62hUrTlvIme1711267443832.gif)
 
 #### 视场
 - 视场（FOV），也就是透视模式下的水平视野角度，FOV越大，可见的视野角度越大。
@@ -78,12 +78,6 @@
 
 #### 固定摄像机高度
 - 固定摄像机在Z轴上的坐标，比如角色在跳跃或者上楼梯时，摄像机不会跟随角色改变高度，用于制作俯视角游戏。
-  * 示例：
-    关闭固定摄像机Z轴方向
-    ![](https://cdn.233xyx.com/1684475954245_027.gif)
-    开启固定摄像机Z轴方向
-    ![](https://cdn.233xyx.com/1684475954186_776.gif)
-
 
 
 ### 2.2 弹簧臂设置
@@ -127,15 +121,12 @@
   - 如果摄像机相对位置和弹簧臂相对位置都为(0,0,0)，弹簧臂长度就是摄像机到角色之间的距离。
 - 制作第一人称游戏时，建议将此属性大小调整为0。
 - 弹簧臂长度（即距离调整）示意图如下：
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnOUNH5RuhI6Fj9nbjzrIwHc.png)
+![](https://qn-cdn.233leyuan.com/online/K8FHXsvtcCTQ1723787855803.png)
 ![](https://cdn.233xyx.com/online/GwHaWgwltu481695279533730.gif)
 
 #### 是否有摄像机碰撞
 - 摄像机弹簧臂与其他物体存在碰撞效果，碰撞后会将摄像机位置前移，防止穿模或者玩家角色被遮挡。
 - 可以理解为：如果有开启碰撞的物体挡在主视口的红色细线上，就会触发摄像机碰撞
-- 关闭摄像机碰撞
-![](https://cdn.233xyx.com/1684475955081_665.gif)
-
 - 开启摄像机碰撞
 ![](https://cdn.233xyx.com/1684475954182_709.gif)
 
@@ -181,7 +172,7 @@
 - 摄像机向下旋转时的最大角度，防止旋转至角色模型上方，导致穿模效果。
 - 范围：0~90°  数值越大，可旋转的角度越大。
 - 限制角度示意图：
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnKh5HB410OoxfCelWMrDMth.png)
+![](https://qn-cdn.233leyuan.com/online/CgsZ3qdPay931723787856421.jpg)
 
 #### 是否开启物体透明
 - 开启后，当摄像机与角色之间有其他障碍物体时，会让障碍物体变透明。
@@ -225,85 +216,8 @@
 		});
 ```
 
-* 实现效果示例：<video controls src="https://cdn.233xyx.com/1684475955078_130.mp4"></video>
 
-### 示例2：调整摄像机距离实现双指放缩功能
-
-* 现在我们来制作一个双指放缩效果，双指距离变大时，摄像机距离（也就是弹簧臂长度）变小，摄像机向前移动；双指距离变小时，摄像机距离变大，摄像机向后移动
-* 脚本示例：
-
-```TypeScript
-@Component
-export default class NewScript extends Script {
-    touch: TouchInput;
-    touchNum: number;
-    oldPointSize: number;
-    /** 当脚本被实例后，会在第一帧更新前调用此函数 */
-    protected onStart(): void {
-        this.setFinger()
-        
-    }
-    
-    // 设置手指事件
-    private setFinger() {
-
-        // 找到UI对象DefaultUI，及其内部的UI控件
-        let UI1 = UIObject.findGameObjectsByTag("DefaultUI")[0] as UIObject;
-        const touchpad = UI1.uiWidgetBase.findChildByPath('Canvas/TouchPadDesigner') as TouchPad
-        const canvas = UI1.uiWidgetBase.findChildByPath('Canvas') as Canvas
-
-        
-        // 双指缩放镜头视角
-        this.touch = new TouchInput();
-        // 使用touchNum记录当前屏幕的触摸点数量
-        this.touchNum=0
-        
-        //开始触摸（包括第一个和第二个触摸点）
-        this.touch.onTouchBegin.add(() => {
-
-            this.touchNum++;
-            if (this.touchNum < 2)return
-            //当出现第二个触摸点时，移除UI对象中的摄像机滑动区
-            touchpad.removeObject()
-            //使用oldPointSize记录两个触摸点的初始距离
-            let touchPoint = this.touch.getTouchVectorArray();
-            this.oldPointSize = touchPoint[0].subtract(touchPoint[1]).length;
-        });
-
-        //触摸点移动（包括第一个和第二个触摸点）
-        this.touch.onTouchMove.add(() => {
-
-            if (this.touchNum < 2) return
-            //计算两个触摸点移动过程中的最新距离
-            let touchPoint = this.touch.getTouchVectorArray();
-            let newPointSize = touchPoint[0].subtract(touchPoint[1]).length;
-            //计算初始距离和最新距离之差
-            let distance = newPointSize - this.oldPointSize;
-            //使用length记录当前弹簧臂长度，也就是摄像机距离，加上或者减去两个触摸点初始距离和最新距离之差
-            let length = Camera.currentCamera.springArm.length
-            length += (distance > 0 ? -1 : distance < 0 ? 1 : 0) * 1 * Math.abs(distance);
-            length = Math.max(length, 60);
-            length = Math.min(length, 500);
-            //应用length记录的弹簧臂长度，并且用oldPointSize再次记录两个触摸点的初始距离
-            Camera.currentCamera.springArm.length = length;
-            this.oldPointSize = newPointSize;
-        });
-
-        //结束触摸点离开（包括第一个和第二个触摸点）
-        this.touch.onTouchEnd.add(() => {
-            this.touchNum--;
-            console.log(this.touchNum);
-            //当最后一个触摸点离开屏幕时，重新挂载UI对象中的摄像机滑动区
-            if (this.touchNum < 1) {
-                canvas.addChild(touchpad)
-            }
-        })}
-}
-```
-
-* 实现效果示例（请发布后在手机上测试）：<video controls src="https://cdn.233xyx.com/1684475954184_475.mp4"></video>
-
-### 示例3：动态切换摄像机的位置模式和朝向模式
+### 示例2：动态切换摄像机的位置模式和朝向模式
 * 可以通过调整positionMode和rotationMode这两条属性来动态动态切换摄像机的位置模式和固定模式
 * 也可以启用控制器操作摄像机useControllerRotation来切换摄像机的朝向模式
 * 当rotationMode=RotationControl时，此时弹簧臂的方向与弹簧臂相对旋转springArm.localTransform.rotation不是对应关系，而需要用控制器旋转（Player.getControllerRotation/Player.setControllerRotation ）来获取或者设置
@@ -351,7 +265,7 @@ export default class UIDefault extends DefaultUI_generate {
 <video controls src="https://cdn.233xyx.com/1684475954572_044.mp4"></video>
 
 
-### 示例4：实现多摄像机之间的切换
+### 示例3：实现多摄像机之间的切换
 * 上文有提到，除了【对象管理器-世界对象】中有一个自带的无法被删除的摄像机对象，我们还可以从【资源库-游戏功能对象】中拖出或者在脚本中动态创建任意个摄像机对象，下面我们演示一下如何使用switch接口在多个摄像机对象之间自由切换
 * 使用switch切换摄像机时，可以实现瞬间切换到新的摄像机，也可以使用编辑器提供的多种混合效果，完成匀速/变速的运镜效果
 * 提示：各个摄像机对象及其弹簧臂的属性值都是独立的，如果想在游戏中实现多种摄像机效果变换时，可以考虑两种制作思路
@@ -399,7 +313,7 @@ export default class UIDefault extends DefaultUI_generate {
 * 实现效果示例：
 ![](https://cdn.233xyx.com/online/2o8uyunB3uhI1697435647673.gif)
 
-* 如果想要新创建一个挂在角色身上的摄像机对象，可以使用以下方法：
+* 如果想要新创建一个挂在角色身上的摄像机对象并切换过去，可以参考以下示例代码：
 ```TypeScript
  @Component
  export default class Example_Camera_Switch extends Script {

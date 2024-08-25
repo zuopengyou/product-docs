@@ -6,9 +6,11 @@
 :::
 # 音效对象
 
-【音效】是在项目中播放音频的对象。编辑器为资源库中的每个音频资源分配一个唯一的资源ID，你可以将它指定给一个【音效】对象来播放。你可以自定义【音效】对象的相关属性使音频资源按照预想的方式进行播放，例如将它设置为在游戏开始后自动播放。你也可以通过脚本调用【音效】对象的API去播放。在【资源库】中可以搜索并使用各种免费的音频资源，将音频资源拖入场景后会自带一个对应的【音效】对象。你也可以在【游戏功能对象】栏目中找到【音效】。
+【音效】是在项目中播放音频的对象。编辑器为资源库中的每个音频资源分配一个唯一的资源ID，你可以将它指定给一个【音效】对象来播放。你可以自定义【音效】对象的相关属性使音频资源按照预想的方式进行播放，例如将它设置为在游戏开始后自动播放。你也可以通过脚本调用【音效】对象的API去播放。在【资源库】中可以搜索并使用各种免费的音频资源，将音频资源拖入场景后会自带一个对应的【音效】对象。
 
-![img](https://arkimg.ark.online/1684047744629-14.webp)![img](https://arkimg.ark.online/1684047744628-1.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/a09ed235f36943338347694d13912742_356166023.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/7c47e0efef8a41da874c5a099d8d3111_356163089.webp)|
 
 # 创建音效对象
 
@@ -16,17 +18,23 @@
 
 【音效】本身作为一个游戏对象可以存在于游戏场景中。你可以从【资源库】中将音频资源拖入【场景】或者【对象管理器】后会自动生成一个包含对应音频资源的【音效】对象。
 
-1. 在【本地资源库】中搜索你想要的音频资源或者在【游戏功能对象】栏中找到【音效】
+1. 在【本地资源库】中搜索你想要的音频资源
 
-![img](https://arkimg.ark.online/1684047744628-2.webp)![img](https://arkimg.ark.online/1684047744628-3.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/029962038bc945d7839a0ecbff9f9003_356158477.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/55f5719df2a14d6caef00efae585bee3_356158478.webp)|
 
 2. 将对象拖入到【场景】中或者【对象管理器】下
 
-![img](https://arkimg.ark.online/1684047744628-4.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/9197e2645fb64d45a2138ac3e60f52a7_356158479.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/6f69b11b87b942159d64c6a5f3ca2aba_356158480.webp)|
 
 3. 在右侧【对象管理器】中【对象】栏找到对应的【音效】对象并进行自定义
 
-![img](https://arkimg.ark.online/1684047744628-5.webp)![img](https://arkimg.ark.online/1684047744628-6.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/c38356a6a21e4c0c8a65737802291168_356158481.webp)![img](https://qn-cdn.233leyuan.com/athena/online/169478b48341493c8132cf176c23e609_356158483.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/b02c3b62244b404b9b8d56c82e74a162_356158482.webp)![img](https://qn-cdn.233leyuan.com/athena/online/eeddcf54d02845f1a8253b1917ef56f5_356158484.webp)|
 
 ## 通过脚本创建：
 
@@ -63,7 +71,9 @@ if(SystemUtil.isClient()) {
 
 在【对象管理器】中【对象】栏找到对应的【音效】，选中后我们可以查看它的属性面板，通过属性面板我们可以修改【音效】的部分属性。如果不想在脚本中去操作【音效】，那么你可以在属性面板上勾选【自动启用】和【循环播放】并修改其他属性，那么当游戏运行时该【音效】就会自动循环播放。
 
-![img](https://arkimg.ark.online/1684047744629-8.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/10134b6069c44ecf86e3a52f6ef060a8_356187047.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/e738d932de6a45b8b682775338bf80ad_356187048.webp)|
 
 ## 音效时长
 
@@ -128,7 +138,9 @@ audio.play();
 
 衰减范围和`attenuationShapeExtents`和音效衰减距离`falloffDistance`确定用户从空间音效感知音量的范围。这两个属性需要开启音效空间化`isSpatialization`才能生效。对于空间音效，音效衰减内径`attenuationShapeExtents`是当客户端的收听者远离【音效】时，音频音量开始减小的最小距离。即在音衰减效内径以内，音量不会发生衰减。在`falloffDistance`属性范围内，是客户端收听者可以从听到声音的最大衰减距离。即在音效衰减外径以外，用户听不见声音。在音效衰减内径和音量衰减外径之间，音频音量按照音效的音量衰减方式`attenuationDistanceModel`属性进行衰减。
 
-![img](https://arkimg.ark.online/1684047744629-9.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/9b919f23ca264293b810e0e554d646d6_357704103.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/00aaac06df2d46299ed522f150d50b05_356158486.webp)|
 
 ## 音量比例
 
@@ -148,7 +160,9 @@ audio.setSoundAsset("13827");
 
 ## 音效的工作流程图：
 
-![soundflow](https://arkimg.ark.online/soundflow.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![soundflow](https://arkimg.ark.online/soundflow.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/fcb13c82236f40149fee0d81ebb1d85a_356158491.webp)|
 
 ## 获取音效对象
 
@@ -160,7 +174,9 @@ audio.setSoundAsset("13827");
 
 1. 选中【音效】后右键点击【复制对象ID】获取它的gameObjectId。此处注意区分音频资源的ID和【音效】的gameObjectId，这两个指代的不是同一个对象。
 
-![img](https://arkimg.ark.online/1684047744629-10.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/55404112e2434373a4860a09d6c3516a_356158487.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/11e9857881e04f4b97e2fc9eba05677f_356158488.webp)|
 
 1. 在脚本的`onStart`方法中添加下列代码：代码将异步查找ID对应的对象并以【音效】进行接收。
 
@@ -173,9 +189,11 @@ if(SystemUtil.isClient()) {
 **使用脚本挂载的方式进行获取：**
 
 
-1. 将脚本挂载到【音效】下方，此时会弹出脚本网络状态提示，点击确认即可
+1. 将脚本挂载到【音效】下方
 
-![img](https://arkimg.ark.online/1684047744629-12.webp)![img](https://arkimg.ark.online/1684047744629-13.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/d19add17972449a2ae285b3ad5ba0e7d_356158489.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/78c8d9d083474e2d8d2cdbfecd72f068_356158490.webp)|
 
 2. 在脚本的`onStart`方法中添加下列代码：代码获取脚本挂载的对象并以【音效】进行接收
 

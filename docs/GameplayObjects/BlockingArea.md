@@ -7,7 +7,9 @@
 # 禁行区对象
 【禁行区】是一种功能对象，在项目中用来控制一片区域对其他对象的通行权限。你可以自定义【禁行区】的属性来控制区域的位置，大小和旋转。在检测到对象接近区域边缘后，【禁行区】会检测该对象是否有通过权限并返回对应的碰撞结果。你可以在【本地资源库】中的【游戏功能对象】栏中找到【禁行区】。
 
-![img](https://arkimg.ark.online/1684047518629-11.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/276b91a37c374e6e8cfba4879fcd6c9d_359025326.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/78b0a06e811b4424a7671266498dda98_359025327.webp)|
 
 # 创建禁行区
 
@@ -17,15 +19,21 @@
 
 1. 在【本地资源库】的【游戏功能对象】栏中找到【禁行区】
 
-![img](https://arkimg.ark.online/1684047518627-1.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/bb8d737e6e4d4b2ebc86838695c8058b_359025328.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/fc955d72a42f4da08a319f913bd56f84_359025329.webp)|
 
 2. 将对象拖入到场景中或者【对象管理器】
 
-![img](https://arkimg.ark.online/1684047518627-2.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/8e32e21b4b584f469e8628fa5d466d33_359025330.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/f2929218b7264aeeb390a98c1cb83904_359025331.webp)|
 
 3. 在右侧【对象管理器】中【对象】栏找到对应的【禁行区】对象并自定义它的属性
 
-![img](https://arkimg.ark.online/1684047518627-3.webp)![img](https://arkimg.ark.online/1684047518627-4.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/f19ec900c7374c44b29716f25705606b_359025334.webp)![img](https://qn-cdn.233leyuan.com/athena/online/6f1cca4f3fb64e13826e044d746e71fc_359025332.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/da3ae9dc9a674ad5affb34ca97e3ff7f_359025335.webp)![img](https://qn-cdn.233leyuan.com/athena/online/34bbcb5b3c7c4f1788b523de4ee3c138_359025333.webp)|
 
 ## 通过脚本创建：
 
@@ -47,7 +55,10 @@ protected async onStart(): Promise<void> {
 
 【禁行区】的transform属性将决定它的位置，朝向，大小。而自身函数能给角色动态设置通行权限。在【对象管理器】中【对象】栏找到对应的【禁行区】对象，选中后我们可以查看它的属性面板，通过属性面板我们可以修改它的部分属性。需要注意的是发射【禁行区】需要调用它提供的函数，编辑器修改属性主要是提前配置好它的轨迹参数，方便在脚本中直接使用。
 
-![img](https://arkimg.ark.online/1684047518627-5.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/a58b18f7880745588479e8a7024d08cc_359025336.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/22d6f845e7de4b27897a7ec5510071e9_359025337.webp)|
+
 ::: tip
 【禁行区】的自定义属性主要就是transform，其他属性对它的功能来说没有太多意义。
 :::
@@ -55,7 +66,9 @@ protected async onStart(): Promise<void> {
 
 【禁行区】的位置由继承自父类`GameObject`的`worldTransform.position`世界位置属性控制，可读可写。你可以在属性面板中修改场景中【禁行区】对象的位置，也可以在代码中动态读写【禁行区】对象的属性来控制它的位置。
 
-![img](https://arkimg.ark.online/1684047518627-6.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/601c3b6edc964f16ace1d7e1ae554495_359025338.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/03f1f69a0c514482a21ba1456e248e34_359025339.webp)|
 
 ```TypeScript
 if(SystemUtil.isServer()) {
@@ -69,7 +82,9 @@ if(SystemUtil.isServer()) {
 
 【禁行区】的旋转由继承自父类`GameObject`的`worldTransform.rotation`世界旋转属性控制，可读可写。你可以在属性面板中修改场景中【禁行区】对象的旋转，也可以在代码中动态读写【禁行区】对象的属性来控制它的位置。
 
-![img](https://arkimg.ark.online/1684047518628-7.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/cf6c6d46d9a34a6287e78e799527e868_359025340.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/4395b32b3b664effb31b8bca187ba9e1_359025341.webp)|
 
 ```TypeScript
 if(SystemUtil.isServer()) {
@@ -83,7 +98,9 @@ if(SystemUtil.isServer()) {
 
 【禁行区】的大小可以由继承自父类`GameObject`的`worldTransform.scale`世界缩放属性控制，可读可写。当【禁行区】形状为盒体时，XYZ值分别表示盒体的长宽高。
 
-![img](https://arkimg.ark.online/1684047518628-8.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/872dcafb5bc94c34868d15732a7caecd_359025342.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/7b8ecdc3bfcf4f558d51416fd192e143_359025343.webp)|
 
 ```TypeScript
 // 通过scale属性设置禁行区大小
@@ -105,7 +122,9 @@ if(SystemUtil.isServer()) {
 
 1. 选中【禁行区】对象后右键点击【复制对象ID】获取它的gameObjectId。此处注意区分【禁行区】资源的ID和【禁行区】对象的gameObjectId。
 
-![img](https://arkimg.ark.online/1684047518628-9.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/a18732a1f9304fc2b7b87321d1538f55_359025344.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/15460146a5aa4ea9a81819bdfa234648_359025345.webp)|
 
 2. 将脚本拖入对象管理器下，用下列代码替换脚本中的`onStart`方法：代码将异步查找ID对应的对象以【禁行区】对象进行接收。
 
@@ -122,7 +141,9 @@ protected async onStart(): Promise<void> {
 
 1. 选中【禁行区】对象，将脚本挂载到【禁行区】对象下方
 
-![img](https://arkimg.ark.online/1684047518629-10.webp)
+| 中文示例    | 英文示例                                                         |
+| ----------- | ------------------------------------------------------------ |
+|![img](https://qn-cdn.233leyuan.com/athena/online/9ad9fffe007e4fd3a111e127bbe62c9f_359025346.webp)|![img](https://qn-cdn.233leyuan.com/athena/online/153c4f367dea4e93859129ffddceef6f_359025347.webp)|
 
 2. 在脚本的onStart方法中添加下列代码：代码获取脚本挂载的对象并以【禁行区】对象进行接收
 

@@ -46,7 +46,7 @@
     }
 ```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnkyGNLzh4cbMWzFkIwtsNSe.png)
+![](https://qn-cdn.233leyuan.com/online/bvTntL57wmY21724137351003.jpg)
 
 ### onDestroy(): void
 
@@ -69,8 +69,6 @@
         console.log("destroy")
     }
 ```
-
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnguNorGpn9ekkuIPqgC9MNd.png)
 
 ## UI 脚本中其他的生命周期事件
 
@@ -160,7 +158,7 @@
 
 下图调用顺序为 UIService.instance 内函数方法： onAwake-创建 UI -> OnShow-使用 showUI 函数 ->OnHide-使用 hideUI 函数 >OnShow-使用 showUI 函数
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn1CJWQvaOQORO1sLthmMWQe.png)
+![](https://qn-cdn.233leyuan.com/online/BvENIUx4ecIT1724137352084.jpg)
 
 ## 输入事件
 
@@ -216,11 +214,11 @@
     }
 ```
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGJdGQiUw0VFs7NULLBIKvH.png)
+![](https://qn-cdn.233leyuan.com/online/BjU4HbZbtfJK1724138267308.png)
 
 下图调用顺序为 ： onTouchStarted-手指或鼠标按下 -> onTouchMoved-手指或鼠标滑动 ->onTouchEnded-手指或鼠标释放
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn22706nIk2m1wCI9UyMZQ5d.png)
+![](https://qn-cdn.233leyuan.com/online/sGEkuXvNlfZd1724137352528.jpg)
 
 ### onMouseEnter(InGemotry :Geometry,InPointerEvent:PointerEvent) :EventReply
 
@@ -272,4 +270,4 @@
 
 下图调用顺序为 ： onMouseEnter-鼠标进入此 UI 范围内 -> onMouseWheel-滑动鼠标滚轮 ->onMouseLeave-鼠标离开此 UI 范围内
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnrmYbmJ6GMIyhzrK8iSIx4c.png)
+![](https://qn-cdn.233leyuan.com/online/1Etx8maPjJuw1724137352976.jpg)

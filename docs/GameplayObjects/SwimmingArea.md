@@ -10,7 +10,6 @@
 
 水体区域在编辑器中以功能对象的形式存在，打开编辑器后在左侧资源栏中的“逻辑资源”中，选取“游戏功能对象”，红框中就是水体区域，资源ID为WaterVolume。
 
-![](https://cdn.233xyx.com/online/VivmQMfn6sZL1709714874837.PNG)
 
 ## 水体区域使用
 
@@ -18,19 +17,25 @@
 
 在【资源库】-【游戏功能对象】列表中找到【水体区域】的对象。
 
-![](https://cdn.233xyx.com/online/OPklW5OYrX331709714874837.PNG)
+| 中文示例   | 英文示例                         |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/IZf5a16KK9QL1723785888559.png)|![](https://qn-cdn.233leyuan.com/online/0FTrpmSp4g3Z1723785892905.png)|
 
 ### 使用水体区域
 
 我们在找到水体区域后，可以根据需求手动拖入场景内，修改其属性来实现相应的效果，也可以通过代码动态生成水体区域。
 
-![](https://cdn.233xyx.com/online/pFrIJPWhnvkQ1709714874837.PNG)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/6Y7qBO2uoPnL1723785897618.png)|![](https://qn-cdn.233leyuan.com/online/MVuQJLQacJRW1723785902794.png)|
 
 基础属性中包括了水体的物理属性和水体的表现效果。我们可以通过调节水体摩擦力，改变角色在水中的移动效果。我们也可以通过调节水体属性和水波效果调整水面的表现效果。
 
 ### 动态生成水体区域
 
-![](https://cdn.233xyx.com/online/oxnOOJl9y3mP1709714874837.PNG)
+| 中文示例   | 英文示例 |
+| ------ | ---------------------------- |
+|![](https://qn-cdn.233leyuan.com/online/f9A6PWTuzcdm1723785907064.png)|![](https://qn-cdn.233leyuan.com/online/JKfCOV45pz9h1723785910400.png)|
 
 也可以将鼠标悬停在要的的资源上方，查看资源的GUID；也可以通过右键，复制对象的GUID。然后通过GUID动态创建相应的资源。
 
@@ -53,17 +58,27 @@ let pool = GameObject.spawn("WaterVolume") as WaterVolume;
 :::
 
 
-## 游泳属性介绍
+## 游泳区属性介绍
 
 ### 水体摩擦力
 
-功能说明：角色在游泳区域内的摩擦力，影响角色移动的加速度和表现效果
+功能说明：角色在游泳区域内的摩擦力，影响角色移动的加速度和表现效果,角色在水中的制动力表现同时受角色属性中[游泳属性]-[游泳制动速度]的影响
 
 演示效果：
 
 | 水体摩擦力=1  | 水体摩擦力=100 |
 | ----- | ----- |
-| <video controls src="https://cdn.233xyx.com/online/UVIfDdUOjEWD1709714874837.mp4"></video> | <video controls src="https://cdn.233xyx.com/online/tPDy7Tw1KKQW1709714874837.mp4"></video> |
+| <video controls src="https://qn-cdn.233leyuan.com/online/H9c97bkQIZvt1723786623073.mp4"></video> | <video controls src="https://qn-cdn.233leyuan.com/online/oJ9rpZyTwB7J1723786640376.mp4"></video> |
+
+
+### 启用浮力
+
+功能说明：为水体区域添加浮力效果,可能将具有物理模拟属性的对象浮在水体中.
+
+演示效果：
+<video controls src="https://cdn.233xyx.com/online/3PyIlqBEpBPZ1721958692529.mp4"></video>
+
+
 
 ## 水体属性介绍
 

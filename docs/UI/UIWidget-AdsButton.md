@@ -10,6 +10,7 @@
 - 变换/对齐/通用/渲染属性请见 [UI 控件的基础属性](https://docs.ark.online/UI/UIWidget-BaseProperties.html)
 - 文本属性请见 [UI 控件-文本](https://docs.ark.online/UI/UIComponent-Text.html)
 ![](https://cdn.233xyx.com/online/jgWOpagPetoO1713506794210.png)
+
 <video controls src="https://cdn.233xyx.com/online/yPqG1S21pSa81713506793496.mp4"></video>
 
 ## 广告按钮的功能说明

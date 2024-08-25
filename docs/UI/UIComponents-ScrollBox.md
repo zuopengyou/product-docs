@@ -16,8 +16,6 @@
 
 ## 滚动框属性-滚动面板设置
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnFun5JvW35J1Hs85yIxcMhe.png)
-
 ### 滚动朝向
 
 - 水平滚动
@@ -100,17 +98,14 @@
 
 - 这里修改的是滚动条的图片及样式。图片属性请见 [UI 控件-图片](https://docs.ark.online/UI/UIComponent-Image.html)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn4QjLI6cVQzLHcMgsy9UHAf.png)
-
 ## 如何使用滚动框？
 
 ### 示例一：制作动态增加内容的无限滚动列表
 
-- 首先摆放一个空的滚动框，并在其内部放一个开启自动布局和自适应高度的容器
+- 首先摆放一个空的滚动框，并在其内部放一个开启自动布局和垂直方向自动大小的容器
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnGHdy0MOpktpGpRFgrU8MqK.png)
+![](https://qn-cdn.233leyuan.com/online/7yV6TK6xVp7m1724133630462.png)
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcnYp08CtOCzC0VcQJVk6cJmP.png)
 
 - 然后编写脚本，动态生成其他 UI 控件并添加为滚动框内容器的子级，这里生成一张图片控件作为示例；运行游戏后，点击按钮就能看到动态生成的 UI 控件出现在滚动框内部了
 
@@ -137,7 +132,7 @@ export default class DefaultUI extends UIScript {
 
 - 示意图：
 
-![](https://wstatic-a1.233leyuan.com/productdocs/static/boxcn8b9vo8R52rBLLp9iRw0ZLc.gif)
+![](https://qn-cdn.233leyuan.com/online/CyxZ2tTPaXaN1724133628299.mp4)
 
 - 工程文件：  [点击下载](https://cdn.233xyx.com/online/2mSGOZk4BjOJ1694916401072.7z)
 
@@ -147,7 +142,7 @@ export default class DefaultUI extends UIScript {
 这里相当于实例化后的自定义UI控件的对齐方式，如果这里选择的是左右对齐+上下对齐，或者自定义对齐，自定义UI控件的大小和位置跟随父级自适应变化
 详见产品手册【UI控件的基础属性】中的【UI文件（自定义UI）的整体属性——Root属性】部分
 :::
-![](https://cdn.233xyx.com/1681467996265_583.png)
+![](https://qn-cdn.233leyuan.com/online/C5LOG1yEZUMr1724134042120.jpg)
 
 ### 示例二：制作用于滚动框中的按钮，使其支持点击且拖拽时滑动滚动框
 
